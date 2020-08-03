@@ -1,1 +1,1 @@
-TEST
+ - [Python guidelines](./python) - guidelines for Google Fonts Python projects
