@@ -1,1 +1,2 @@
  - [Python guidelines](./python) - guidelines for Google Fonts Python projects
+ - [Fonts Engineering Guides](https://rsheeter.github.io) - guides for software engineers working with fonts
