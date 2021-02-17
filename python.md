@@ -32,7 +32,7 @@ pass successfully.
 
 ### Release config
 
-*.github/workflows/ci.yml* ([example](https://github.com/googlefonts/picosvg/blob/master/.github/workflows/ci.yml))
+*.github/workflows/ci.yml* ([example](https://github.com/googlefonts/picosvg/blob/main/.github/workflows/ci.yml))
 
 ```
 # In addition to the basic build/test this should
@@ -40,7 +40,7 @@ pass successfully.
 # - update GitHub releases on tag
 ```
 
-*setup.py*  ([example](https://github.com/googlefonts/picosvg/blob/master/setup.py)) indicates we want to use `setuptools_scm`:
+*setup.py*  ([example](https://github.com/googlefonts/picosvg/blob/main/setup.py)) indicates we want to use `setuptools_scm`:
 
 ```
     name="picosvg",
@@ -64,7 +64,7 @@ This enables the release automation to write to pypi.
 
 TODO
 
-*tox.ini* ([example](https://github.com/googlefonts/picosvg/blob/master/tox.ini))
+*tox.ini* ([example](https://github.com/googlefonts/picosvg/blob/main/tox.ini))
 
 
 ## pytype
