@@ -127,6 +127,10 @@ of the overflowing link:
    raising the priority of all children of the parent. Next time the topological sort is run the
    children will be ordered closer to the parent.
    
+# Test Cases
+
+The harfbuzz repacker has tests defined using generic graphs: https://github.com/harfbuzz/harfbuzz/blob/main/src/test-repacker.cc
+   
 # Future Improvments
 
 The above resolution strategies are not sufficient to resolve all overflows. For example consider
