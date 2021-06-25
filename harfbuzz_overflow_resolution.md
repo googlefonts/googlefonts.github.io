@@ -2,18 +2,20 @@
 
 Several tables in the opentype format are formed internally by a graph of subtables. Parent node's
 reference their children through the use of positive offsets, which are typically 16 bits wide.
-For storage in the font file the graph must be given a topological ordering and then the subtables
-packed in serial according to that ordering. Since 16 bit offsets have a maximum value of 65,535 if
-the distance between a parent subtable and a child is more then 65,535 bytes then it's not possible
-for the offset to encode that edge.
+Since offsets are always positive this forms a directed acyclic graph. For storage in the font file
+the graph must be given a topological ordering and then the subtables packed in serial according to
+that ordering. Since 16 bit offsets have a maximum value of 65,535 if the distance between a parent
+subtable and a child is more then 65,535 bytes then it's not possible for the offset to encode that
+edge.
 
-For many fonts with complex layouts it's not unusual for the GSUB/GPOS table to be larger than 65kb.
-As a result these types of fonts are susceptible to offset overflows when serializing to the binary
-font format.
+For many fonts with complex layout rules (such as Arabic) it's not unusual for the tables containing
+layout rules ([GSUB/GPOS](https://docs.microsoft.com/en-us/typography/opentype/spec/gsub)) to be
+larger than 65kb. As a result these types of fonts are susceptible to offset overflows when
+serializing to the binary font format.
 
-Offset overflows can be resolved through a variety of strategies:
-*  Often times a different topological ordering can avoid the overflows.
-*  In the graph subtables can have many parents. Which can result in the link from furthest parent(s)
+Offset overflows can happen for a variety of reasons and require different strategies to resolve:
+*  Simple overflows can often be resolved with a different topological ordering.
+*  If a subtable has many parents this can result in the link from furthest parent(s)
    being at risk for overflows. In these cases it's possible to duplicate the shared subtable which
    allows it to be placed closer to it's parent.
 *  If subtables exist which are themselves larger than 65kb it's not possible for any offsets to point
@@ -31,35 +33,40 @@ The harfbuzz subsetting library
 which is used to resolve offset overflows that are present in the subsetted tables it produces. This
 document provides a deep dive into how the harfbuzz repacking algorithm works.
 
+Other implementations exist, such as in
+[fontTools](https://github.com/fonttools/fonttools/blob/7af43123d49c188fcef4e540fa94796b3b44e858/Lib/fontTools/ttLib/tables/otBase.py#L72), however these are not covered in this document.
+
 # Foundations
 
-There's three key pieces to the harfbuzz approach:
+There's four key pieces to the harfbuzz approach:
 
-*  Graph representation: a table's internal structure is represented by a lightweight graph
-   representation where each subtable is a node and each offset forms an edge. The actual subtable
-   bytes are not stored in each node. Instead we just store start and end memory addresses for each.
-   This lightweight representation can be quickly modified as the repacking algorithm iterates.
+*  Subtable Graph: a table's internal structure is abstraced out into a lightweight graph
+   representation where each subtable is a node and each offset forms an edge. The nodes only need
+   to know how many bytes the corresponding subtable occupies. This lightweight representation can
+   be easily modified to test new ordering's and strategies as the repacking algorithm iterates.
 
-*  Topological sorting algorithm: an algorithm which given a graph produces a topological sorting
-   of the nodes.
+*  [Topological sorting algorithm](https://en.wikipedia.org/wiki/Topological_sorting): an algorithm
+   which given a graph gives a linear sorting of the nodes such that all offsets will be positive.
    
-*  Overflow check: given a graph and a topological sorting checks if there will be any overflows
-   in any of the offsets. If there are overflows returns a list of (parent, child) tuples that
+*  Overflow check: given a graph and a topological sorting it checks if there will be any overflows
+   in any of the offsets. If there are overflows it returns a list of (parent, child) tuples that
    will overflow. Since the graph has information on the size of each subtable it's straightforward
    to calculate the final position of each subtable and then check if any offsets to it will
    overflow.
    
+*  Offset resolution strategies: given a particular occurence of an overflow these strategies
+   modify the graph to attempt to resolve the overflow.
+   
 # High Level Algorithm
 
 ```
-var graph
-graph.topological_sort()
-
-while (overflows = graph.will_overflow()):
-  for overflow in overflows:
-    attempt_offset_resolution_strategy(overflow, graph)
+def repack(graph):
   graph.topological_sort()
 
+  while (overflows = graph.will_overflow()):
+    for overflow in overflows:
+      apply_offset_resolution_strategy (overflow, graph)
+    graph.topological_sort()
 ```
 
 The actual code for this processing loop can be found [here](https://github.com/harfbuzz/harfbuzz/blob/main/src/hb-repacker.hh#L682).
@@ -87,7 +94,8 @@ plus a priority modifier (used to change where nodes are placed by moving increa
 decreasing the effective distance). Ties between nodes with the same distance are broken based
 on the order of the offset in the sub table bytes.
 
-The shortest distance to each node is determined using Djikstra's algorithm. Then the topological
+The shortest distance to each node is determined using
+[Djikstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm). Then the topological
 ordering is produce by applying a modified version of Kahn's algorithm that uses a priority queue
 based on the shortest distance to each node.
 
