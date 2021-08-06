@@ -1,7 +1,7 @@
 # Google Fonts Documentation
 
 Documentation for things related to [github.com/google/fonts](http://github.com/google/fonts)
-This is a construction site, [old spec are here](http://github.com/googlefonts/gf-docs/Archive/Spec/README.md]
+This is a construction site, [old spec are here](http://github.com/googlefonts/gf-docs/Spec/README.md]
 
 ### Introduction
 
