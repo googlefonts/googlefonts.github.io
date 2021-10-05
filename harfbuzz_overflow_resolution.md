@@ -126,15 +126,15 @@ to the priority queue and filtering the older ones out when poppping off entries
 on the recommendations in
 [a study of the practical performance of priority queues in Dijkstra's algorithm](https://www3.cs.stonybrook.edu/~rezaul/papers/TR-07-54.pdf)
 
-## Providing Guidance to the Sort
+## Special Handling of 32 bit Offsets
 
-If a graph contains 32 bit offsets then the default sorting will be suboptimal. For example consider
-the case where a graph contains two 32 bit offsets that each point to a subgraph which are not
-connected to each other. The default sort will interleave the subtables of the two subgraphs,
-potentially resulting in overflows. Since each of these subgraphs are independent of each other,
-and 32 bit offsets can point extremely long distances a better strategy is to pack the first subgraph
-in it's entirety and then have the second subgraph packed after with the 32 bit offset point overtop
-of the first graph. For example given the graph:
+If a graph contains multiple 32 bit offsets then the shortest distance sorting will be likely be
+suboptimal. For example consider the case where a graph contains two 32 bit offsets that each point
+to a subgraph which are not connected to each other. The shortest distance sort will interleave the
+subtables of the two subgraphs, potentially resulting in overflows. Since each of these subgraphs are
+independent of each other, and 32 bit offsets can point extremely long distances a better strategy is
+to pack the first subgraph in it's entirety and then have the second subgraph packed after with the 32
+bit offset pointing over the first subgraph. For example given the graph:
 
 
 ```
@@ -143,7 +143,7 @@ a--- b -- d -- f
   \_ c -- e -- g
 ```
 
-Where the links from a -> b and a -> c are 32 bit offsets, the default topological sort would be:
+Where the links from a to b and a to c are 32 bit offsets, the shortest distance sort would be:
 
 ```
 a, b, c, d, e, f, g
@@ -157,38 +157,71 @@ A better ordering is:
 a, b, d, f, c, e, g
 ```
 
-Here the ability for 32 bit offsets to point long distances is utilized to jump over the subgraph of
+The ability for 32 bit offsets to point long distances is utilized to jump over the subgraph of
 b which gives the remaining 16 bit offsets a better chance of not overflowing.
 
 The above is an ideal situation where the subgraphs are disconnected from each other, in practice
-this is often not this case. This idea can be generalized as follows:
+this is often not this case. So this idea can be generalized as follows:
 
 If there is a subgraph that is only reachable from one or more 32 bit offsets, then:
 *  That subgraph can be treated as an indepedent unit and all nodes of the subgraph packed in isolation
    from the rest of the graph.
-*  In a table that is less than 4gb of space (in practice all fonts), that packed independent subgraph
-   can be placed anywhere in the topological sort without overflowing the 32 bit offsets.
+*  In a table that occupies less than 4gb of space (in practice all fonts), that packed independent
+   subgraph can be placed anywhere after the parent nodes without overflowing the 32 bit offsets from
+   the parent nodes.
 
 The sorting algorithm incorporates this via a "space" modifier that can be applied to nodes in the
-subgraph. By default all nodes are treated as being in space zero. If a node has a non-zero space, n,
-assigned to it, that will modify the computed distance to the node by adding `n * 2^32`. This
-will cause that node and it's descendants to be packed between all nodes in space n-1 and space n+1.
-Resulting in a topological sort:
+graph. By default all nodes are treated as being in space zero. If a node is given a non-zero space, n,
+then the computed distance to the node will be modified by adding `n * 2^32`. This will cause that
+node and it's descendants to be packed between all nodes in space n-1 and space n+1. Resulting in a
+topological sort like:
 
 ```
 | space 0 subtables | space 1 subtables | .... | space n subtables |
 ```
 
-The assign_spaces() step in the high level algorithm is responsible identifying independent subgraphs
-and assigning unique spaces to each one. More information on the space assignment can be found in the
-later section on it.
+The assign_spaces() step in the high level algorithm is responsible for identifying independent
+subgraphs and assigning unique spaces to each one. More information on the space assignment can be
+found in the next section.
 
 
 # Offset Resolution Strategies
 
+## Space Assignment
+
+The goal of space assignment is to find connected subgraphs that are only reachable via 32 bit offsets
+and then assign each such subgraph to a unique non-zero space. The algorithm is roughly:
+
+1.  Collect the set, `S`, of nodes that are children of 32 bit offsets.
+
+2.  Do a directed traversal from each node in `S` and collect all encountered nodes into set `T`.
+    Mark all nodes in the graph that are not in `T` as being in space 0.
+
+3.  Set `next_space = 1`.
+
+4.  While set `S` is not empty:
+
+    a.  Pick a node `n` in set `S` then perform an undirected graph traversal and find the set `Q` of
+        nodes that are reachable from `n`.
+       
+    b.  During traversal if a node, `m`, has a edge to a node in space 0 then `m` must be duplicated
+        to disconnect it from space 0.
+  
+    d.  Remove all nodes in `Q` from `S` and assign all nodes in `Q` to `next_space`.
+       
+       
+    c.  Increment `next_space` by one.
+
+
+## Manual Iterative Resolutions
+
 For each overflow in each iteration the algorithm will attempt to apply offset overflow resolution
 strategies to eliminate the overflow. The type of strategy applied is dependant on the characteristics
 of the overflowing link:
+
+*  If the overflowing offset is inside a space other than space 0 and the subgraph space has more
+   than one 32 bit offset pointing into the subgraph then subdivide the space by moving subgraph
+   from one of the 32 bit offsets into a new space via the duplication of shared nodes.
 
 *  If the overflowing offset is pointing to a subtable with more than one incoming edge: duplicate
    the node so that the overflowing offset is pointing at it's own copy of that node.
