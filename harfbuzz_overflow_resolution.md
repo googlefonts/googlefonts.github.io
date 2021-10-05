@@ -63,6 +63,10 @@ There's four key pieces to the harfbuzz approach:
 def repack(graph):
   graph.topological_sort()
 
+  if (graph.will_overflow())
+    assign_spaces(graph)
+    graph.topological_sort()
+
   while (overflows = graph.will_overflow()):
     for overflow in overflows:
       apply_offset_resolution_strategy (overflow, graph)
@@ -121,6 +125,64 @@ don't support fast priority decreases, but that can be worked around by just add
 to the priority queue and filtering the older ones out when poppping off entries. This is based
 on the recommendations in
 [a study of the practical performance of priority queues in Dijkstra's algorithm](https://www3.cs.stonybrook.edu/~rezaul/papers/TR-07-54.pdf)
+
+## Providing Guidance to the Sort
+
+If a graph contains 32 bit offsets then the default sorting will be suboptimal. For example consider
+the case where a graph contains two 32 bit offsets that each point to a subgraph which are not
+connected to each other. The default sort will interleave the subtables of the two subgraphs,
+potentially resulting in overflows. Since each of these subgraphs are independent of each other,
+and 32 bit offsets can point extremely long distances a better strategy is to pack the first subgraph
+in it's entirety and then have the second subgraph packed after with the 32 bit offset point overtop
+of the first graph. For example given the graph:
+
+
+```
+a--- b -- d -- f
+ \
+  \_ c -- e -- g
+```
+
+Where the links from a -> b and a -> c are 32 bit offsets, the default topological sort would be:
+
+```
+a, b, c, d, e, f, g
+
+```
+
+If nodes d and e have a combined size greater than 65kb then the offset from d to f will overflow.
+A better ordering is:
+
+```
+a, b, d, f, c, e, g
+```
+
+Here the ability for 32 bit offsets to point long distances is utilized to jump over the subgraph of
+b which gives the remaining 16 bit offsets a better chance of not overflowing.
+
+The above is an ideal situation where the subgraphs are disconnected from each other, in practice
+this is often not this case. This idea can be generalized as follows:
+
+If there is a subgraph that is only reachable from one or more 32 bit offsets, then:
+*  That subgraph can be treated as an indepedent unit and all nodes of the subgraph packed in isolation
+   from the rest of the graph.
+*  In a table that is less than 4gb of space (in practice all fonts), that packed independent subgraph
+   can be placed anywhere in the topological sort without overflowing the 32 bit offsets.
+
+The sorting algorithm incorporates this via a "space" modifier that can be applied to nodes in the
+subgraph. By default all nodes are treated as being in space zero. If a node has a non-zero space, n,
+assigned to it, that will modify the computed distance to the node by adding `n * 2^32`. This
+will cause that node and it's descendants to be packed between all nodes in space n-1 and space n+1.
+Resulting in a topological sort:
+
+```
+| space 0 subtables | space 1 subtables | .... | space n subtables |
+```
+
+The assign_spaces() step in the high level algorithm is responsible identifying independent subgraphs
+and assigning unique spaces to each one. More information on the space assignment can be found in the
+later section on it.
+
 
 # Offset Resolution Strategies
 
