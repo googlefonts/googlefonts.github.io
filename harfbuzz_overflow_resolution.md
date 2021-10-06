@@ -73,7 +73,8 @@ def repack(graph):
     graph.topological_sort()
 ```
 
-The actual code for this processing loop can be found [here](https://github.com/harfbuzz/harfbuzz/blob/main/src/hb-repacker.hh#L682).
+The actual code for this processing loop can be found in the function hb_resolve_overflows () of
+[hb-repacker.hh](https://github.com/harfbuzz/harfbuzz/blob/main/src/hb-repacker.hh).
 
 # Topological Sorting Algorithms
 
