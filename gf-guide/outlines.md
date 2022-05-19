@@ -1,18 +1,14 @@
-<div>
-
 # Outline Quality
-
-</div>
+{:.no_toc}
 
 > <span class="icon">🐸</span>  Make sure your font is ready for production by fulfilling the check-list below. Design is not particularly judged here, we are talking from the point of view of the technical quality aspect of a font, i.e: OS, browsers, apps and printers will be able to read the font file and display it as the designer intended.
+> Note that some font editors or export tools will partly do the job for you. Always test your exported fonts in different environments, open them in a font editor, or run a Fontbakery report on them, to make sure that everything looks like what you want.
+> This guide will give users a short introduction to font’s outline from a technical perspective. With that knowledge, we will see how to prepare them so they appear the best on screen.
 
-Note that some font editors or export tools will partly do the job for you. Always test your exported fonts in different environments, open them in a font editor, or run a Fontbakery report on them, to make sure that everything looks like what you want.
-
-This guide will give users a short introduction to font’s outline from a technical perspective. With that knowledge, we will see how to prepare them so they appear the best on screen.
-
-</div>
-
-**Table of content**
+## Table of contents
+{:.no_toc}
+* TOC goes here
+{:toc}
 
 ## Basic terminology
 
@@ -114,5 +110,3 @@ Unless absolutely necessary, avoid over-complicated outline drawing. One example
 -   [Apple’s article about digitizing letterforms](https://developer.apple.com/fonts/TrueType-Reference-Manual/RM01/Chap1.html#points)
 -   [About diacritics](https://glyphsapp.com/learn/diacritics), Glyphs tuto
 -   [How to draw with FontForge](http://designwithfontforge.com/en-US/Using_the_Fontforge_Drawing_Tools.html), FontForge tuto
-
-</div>

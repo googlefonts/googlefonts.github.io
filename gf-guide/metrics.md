@@ -1,18 +1,14 @@
-<div>
-
 # Vertical metrics
-
-</div>
+{:.no_toc}
 
 > <span class="icon">🐸</span>  Vertical metrics are used to determine the space between two lines of text. Some metrics are meant for Mac, other for Windows; and are interpreted differently according to web or desktop usage.
+> Throughout countless threads and discussions, GF decided to make the priority on cross-platform compatibility and therefore apply the following requirements. Read them carefully because once a family is onbaorded, vertical metrics are meant to remain always remain the same to avoid regression, as mentioned in [Adding & upgrading fonts to Google Fonts](onboarding.md).
+> Please note that CJK fonts (Chinese-Japanese-Korean scripts) are treated as special cases, and should follow the instructions at the end of the document.
 
-Throughout countless threads and discussions, GF decided to make the priority on cross-platform compatibility and therefore apply the following requirements. Read them carefully because once a family is onbaorded, vertical metrics are meant to remain always remain the same to avoid regression, as mentioned in [Adding & upgrading fonts to Google Fonts](onboarding.md).
-
-Please note that CJK fonts (Chinese-Japanese-Korean scripts) are treated as special cases, and should follow the instructions at the end of the document.
-
-</div>
-
-**Table of content**
+## Table of contents
+{:.no_toc}
+* TOC goes here
+{:toc}
 
 ## Requirements for all fonts (except CJK)
 
@@ -252,5 +248,3 @@ Our decision to follow the Adobe schema was based on Dr. Ken Lunde’s comments 
 -   Mekkablue’s [Vertical Metrics Manager](https://github.com/mekkablue/Glyphs-Scripts/blob/master/Font%20Info/Vertical%20Metrics%20Manager.py)
 -   [Impallari/testing](https://github.com/impallari/Font-Testing-Page): Font tester which has no css line-height property set ([live site](http://cyreal.org/Font-Testing-Page))
 -   [GF Regression](https://github.com/googlefonts/gfregression): Check local fonts against currently hosted versions on [fonts.google.com](http://fonts.google.com/)
-
-</div>

@@ -1,16 +1,13 @@
-<div>
-
 # Package the fonts
-
-</div>
+{:.no_toc}
 
 > <span class="icon">🦦</span>  [gftools packager](https://github.com/googlefonts/gftools/tree/main/docs/gftools-packager) is the tool team members use to package fonts from the upstream repo to ship then to [google/fonts](https://github.com/google/fonts) repo. It basically replaces [Making a PR to GF](making-pr.md) process. It saves a lot of time, and prevent lots of human mistakes.
+> Note that Packager will create a branch on `google/fonts` directly. However, this is possible only if the user has a special contribution permission to the repo. This is why this chapter is specifically for Google Fonts’ Team Members.
 
-Note that Packager will create a branch on `google/fonts` directly. However, this is possible only if the user has a special contribution permission to the repo. This is why this chapter is specifically for Google Fonts’ Team Members.
-
-</div>
-
-**Table of content**
+## Table of contents
+{:.no_toc}
+* TOC goes here
+{:toc}
 
 ## What the Packager does
 

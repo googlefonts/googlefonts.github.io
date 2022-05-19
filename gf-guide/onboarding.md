@@ -1,23 +1,18 @@
-<div>
-
 # Adding & upgrading fonts to Google Fonts
-
-</div>
+{:.no_toc}
 
 > <span class="icon">🐸</span>  Any contribution to Google Fonts should be first submitted through the [google/fonts issue tracker](https://github.com/google/fonts/issues).
+> Don't forget to search in the issue tracker (using keywords) if your issue has already been raised before opening a new one :) The following links can be used to create different kinds of issues:
+> -   [Submitting a new OFL Font](https://github.com/google/fonts/issues/new?assignees=&labels=II+New+Font%2C+%3E+Submission&template=1_add-font.md&title=Add+%5BFont+Name%5D)
+> -   [Submitting an upgrade to an existing font](https://github.com/google/fonts/issues/new?assignees=&labels=II+Font+Upgrade&template=2_update-font.md&title=Update+%5BFont+Name%5D)
+> -   [Reporting a problem with a font](https://github.com/google/fonts/issues/new?assignees=&labels=II+Font+Bug&template=3_font-bug.md&title=)
+> -   [Anything else](https://github.com/google/fonts/issues/new?assignees=&labels=II+API+%2F+Website+%2F+Platform%2C+II+Tools+%2F+workflow+%2F+repo&template=4_anything-else.md&title=)
+> From time to time, Google Fonts provides financial and design assistance for projects. If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your Github profile page.)
 
-Don't forget to search in the issue tracker (using keywords) if your issue has already been raised before opening a new one :) The following links can be used to create different kinds of issues:
-
--   [Submitting a new OFL Font](https://github.com/google/fonts/issues/new?assignees=&labels=II+New+Font%2C+%3E+Submission&template=1_add-font.md&title=Add+%5BFont+Name%5D)
--   [Submitting an upgrade to an existing font](https://github.com/google/fonts/issues/new?assignees=&labels=II+Font+Upgrade&template=2_update-font.md&title=Update+%5BFont+Name%5D)
--   [Reporting a problem with a font](https://github.com/google/fonts/issues/new?assignees=&labels=II+Font+Bug&template=3_font-bug.md&title=)
--   [Anything else](https://github.com/google/fonts/issues/new?assignees=&labels=II+API+%2F+Website+%2F+Platform%2C+II+Tools+%2F+workflow+%2F+repo&template=4_anything-else.md&title=)
-
-From time to time, Google Fonts provides financial and design assistance for projects. If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your Github profile page.)
-
-</div>
-
-**Table of content**
+## Table of contents
+{:.no_toc}
+* TOC goes here
+{:toc}
 
 ## New fonts
 
@@ -106,5 +101,3 @@ Each credited entity on Google Fonts should have a registered profile in [google
 You can request the addition or modification of your name, bio, and image using **[this form](https://docs.google.com/forms/d/e/1FAIpQLSeMwHN8J213ZaxHrr5lHCrX56HY_NjGrWB8o604g98YxuMrdA/viewform)**.
 
 You can find more about the technical aspect of adding a profile to google/fonts repo by reading the [Designer Profile chapter](profile.md).
-
-</div>

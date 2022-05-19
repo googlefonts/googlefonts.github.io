@@ -1,22 +1,17 @@
-<div>
-
 # Upstream repository structure
-
-</div>
+{:.no_toc}
 
 > <span class="icon">🐰</span>  Font projects must be hosted on GitHub (or another VCS), and the repositories must be public. Google Fonts accepts private repositories whilst the project is still in progress projects are private, but they must be public once completed.
+> This guide will help users understand what and why directories, files, and documents are needed in a Google Fonts project.
+> Before starting this reading, make sure that:
+> -   [You have become familiar with Libre Font culture](culture.md)
+> -   [You already know how to use Github](hosting.md)
+> -   [You have installed all the required tools](tools.md)
 
-This guide will help users understand what and why directories, files, and documents are needed in a Google Fonts project.
-
-Before starting this reading, make sure that:
-
--   [You have become familiar with Libre Font culture](culture.md)
--   [You already know how to use Github](hosting.md)
--   [You have installed all the required tools](tools.md)
-
-</div>
-
-**Table of content**
+## Table of contents
+{:.no_toc}
+* TOC goes here
+{:toc}
 
 ## The Google Fonts Project Template repo
 
@@ -117,5 +112,3 @@ The files and directories listed above are mandatory. However, we don't mind if 
 
 -   [Github release explained](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 -   [How to use requirements.txt files](https://pip.pypa.io/en/stable/user_guide/#requirements-files)
-
-</div>
