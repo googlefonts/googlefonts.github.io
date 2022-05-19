@@ -4,13 +4,13 @@
 
 ## Introduction
 
-<details open>
+<details>
   <summary>Libre Fonts Culture</summary>
 
   You are contributing to an open-source based platform. It’s important for you to get familiar at least with the basics about [Libre Fonts Culture](culture.md)
 </details>
 
-<details open>
+<details>
     <summary>Typography & Fonts</summary>
 
     Google Fonts expect font developers to understand the following:
@@ -20,7 +20,7 @@
     3.  Proficiency in a fully featured font editor such as [Fontlab 7](https://www.fontlab.com/font-editor/fontlab/), [Glyphsapp](https://glyphsapp.com/), [Robofont](https://robofont.com/), or [Fontforge](https://fontforge.org/en-US/); not a toy editor like a "handwriting page scan to font" tool fix.
 </details>
 
-<details open>
+<details>
     <summary>Tools & Dependencies needed</summary>
     -   [Setting up a working environment](tools.md)
         Includes:
@@ -39,7 +39,7 @@
         4.  The `bash_profile` file
 </details>
 
-<details open>
+<details>
     <summary>GitHub the required Version Control System (VCS)</summary>
 
     Since we only release Open Source fonts, we expect projects to be kept in a VSC like [GitHub](hosting.md). Every family we release must have its own upstream GitHub repository (or similar).
