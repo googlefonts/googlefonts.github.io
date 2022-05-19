@@ -20,7 +20,7 @@ Before starting this reading, make sure that:
 
 ## The Google Fonts Project Template repo
 
-If you read this before you have created your project Github repo, you would like to use the [Google Fonts project template](https://github.com/googlefonts/googlefontsproject-template) repo to start with everything set up for you.
+If you read this before you have created your project Github repo, you would like to use the [Google Fonts project template](https://github.com/googlefonts/googlefonts-project-template) repo to start with everything set up for you.
 
 The template is based on [Raphael Bastide’s UFR](https://github.com/unified-font-repository/Unified-Font-Repository), and was adapted to meet Google Fonts' needs. Its only purpose is to help type designers set up their repo of open-source fonts — especially if they want to publish them on Google Fonts. A unified structure throughout all the repositories helps GF to automate the fonts' quality assurance and onboarding processes into the catalog.
 
