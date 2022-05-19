@@ -49,12 +49,12 @@ To improve rendering, Windows’ rasterizer reads `TrueType hinting`, Apple's bu
 -   **Open:** A contour can only be functional if it has a closed path, otherwise, it won't be rendered at all.
 
     <figure>
-    <img src="Outline%20Quality%20ea2c3853888c4667a7509c06d6ecf8b7/open-path.svg" style="width:276px" />
+    <img src="images/outlines/open-path.svg" style="width:276px" />
     </figure>
 -   **Overlaying:** It disturbs rendering, interpolation and variation.
 
     <figure>
-    <img src="Outline%20Quality%20ea2c3853888c4667a7509c06d6ecf8b7/overlaying.svg" style="width:276px" />
+    <img src="images/outlines/overlaying.svg" style="width:276px" />
     </figure>
 -   **Overlapping:** The crossing of two independent contours is not such a problem in variable fonts, and generally merged during the generation of static binaries. If you want to control the result of the merging, it is better to do it yourself. If not, try to keep not-too-small-not-too-big overlapped area. Also try not to overlap more than 2 contours in the same area (contour crossing a contour itself crossing another contour creates confusion during generation and rendering). In any case, try to avoid overlapping shapes which cross a plain shape and a closed counter-shape (typically, Oslash should be manually merged for example).
 -   **Self-crossing:** Often known as open-corners, it is very helpful while designing and recommended for nice interpolations. They will be preserved for VF fonts and merged during generation to static binaries. To better control the result, pay attention to the size of it (not too big, not too small) as well as not leaving portions of it outside the main shape like the stem, since it can cause unwanted rendering issues. If you want to control the result of the merging, do it yourself, if not, the same advice as above.
@@ -90,17 +90,17 @@ Unless absolutely necessary, avoid over-complicated outline drawing. One example
 </div>
 
 <figure>
-<img src="Outline%20Quality%20ea2c3853888c4667a7509c06d6ecf8b7/Bildschirmfoto_2022-04-22_um_12.15.44.png" style="width:336px" alt="This outline construction of the tilde is theoretically possible and looks acceptable in Glyphs but will break the responsible generator filter." />
+<img src="images/outlines/Bildschirmfoto_2022-04-22_um_12.15.44.png" style="width:336px" alt="This outline construction of the tilde is theoretically possible and looks acceptable in Glyphs but will break the responsible generator filter." />
 <figcaption aria-hidden="true">This outline construction of the <em>tilde</em> is theoretically possible and looks acceptable in Glyphs but will break the responsible generator filter.</figcaption>
 </figure>
 
 <figure>
-<img src="Outline%20Quality%20ea2c3853888c4667a7509c06d6ecf8b7/164423385-294c8aa1-910d-4502-b88a-8e54e795138b.png" style="width:528px" alt="What looks nice in Glyphs leads to this result in the generated fonts." />
+<img src="images/outlines/164423385-294c8aa1-910d-4502-b88a-8e54e795138b.png" style="width:528px" alt="What looks nice in Glyphs leads to this result in the generated fonts." />
 <figcaption aria-hidden="true">What looks nice in Glyphs leads to this result in the generated fonts.</figcaption>
 </figure>
 
 <figure>
-<img src="Outline%20Quality%20ea2c3853888c4667a7509c06d6ecf8b7/Bildschirmfoto_2022-04-22_um_12.08.50.png" style="width:336px" alt="Attempting to remove the overlaps manually in Glyphs leads to this appearance." />
+<img src="images/outlines/Bildschirmfoto_2022-04-22_um_12.08.50.png" style="width:336px" alt="Attempting to remove the overlaps manually in Glyphs leads to this appearance." />
 <figcaption aria-hidden="true">Attempting to remove the overlaps manually in Glyphs leads to this appearance.</figcaption>
 </figure>
 

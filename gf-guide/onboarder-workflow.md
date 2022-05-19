@@ -33,7 +33,7 @@ Since `google/fonts` only hosts binaries, and since we want these files to be in
 Example: <https://github.com/google/fonts/issues/3730>
 
 <figure>
-<img src="Onboarder%20workflow%20guide%201ee4c4f185e9405a9fc22f834502a8fc/Capture_decran_2022-02-23_a_13.47.57.png" style="width:2568px" alt="Screenshot of an issue from google/fonts issue tracker." />
+<img src="images/onboarder-workflow/Capture_decran_2022-02-23_a_13.47.57.png" style="width:2568px" alt="Screenshot of an issue from google/fonts issue tracker." />
 <figcaption aria-hidden="true">Screenshot of an issue from google/fonts issue tracker.</figcaption>
 </figure>
 
@@ -81,7 +81,7 @@ The issues should follow these rules:
 </div>
 
 <figure>
-<img src="Onboarder%20workflow%20guide%201ee4c4f185e9405a9fc22f834502a8fc/Capture_decran_2022-03-18_a_12.02.19.png" style="width:2450px" />
+<img src="images/onboarder-workflow/Capture_decran_2022-03-18_a_12.02.19.png" style="width:2450px" />
 </figure>
 
 ## Pull Requests
@@ -91,7 +91,7 @@ To make a change to the `google/fonts` repo, onboarders submit a [Pull Request](
 Example: <https://github.com/google/fonts/pull/4320>
 
 <figure>
-<img src="Onboarder%20workflow%20guide%201ee4c4f185e9405a9fc22f834502a8fc/Capture_decran_2022-02-23_a_14.15.22.png" style="width:2562px" alt="Screenshot of a Pull Request from google/fonts PR tab." />
+<img src="images/onboarder-workflow/Capture_decran_2022-02-23_a_14.15.22.png" style="width:2562px" alt="Screenshot of a Pull Request from google/fonts PR tab." />
 <figcaption aria-hidden="true">Screenshot of a Pull Request from google/fonts PR tab.</figcaption>
 </figure>
 
@@ -125,7 +125,7 @@ PRs and issues are monitored in separate Github project boards.
     Since PR and issues are linked, it is then easy for an onboarder to check the status of his PR. So no need to add PRs in one’s personal project board.
 
     <figure>
-    <img src="Onboarder%20workflow%20guide%201ee4c4f185e9405a9fc22f834502a8fc/Capture_decran_2022-02-23_a_14.39.16.png" style="width:2228px" alt="Screeshot of an onboarder’s project board" />
+    <img src="images/onboarder-workflow/Capture_decran_2022-02-23_a_14.39.16.png" style="width:2228px" alt="Screeshot of an onboarder’s project board" />
     <figcaption aria-hidden="true">Screeshot of an onboarder’s project board</figcaption>
     </figure>
 -   **PRs are added to the Traffic Jam project.**
@@ -136,7 +136,7 @@ PRs and issues are monitored in separate Github project boards.
     The combination of labels and project boards allow us to track progress, write the push lists, and build stats using different scripts. Therefore **the labels and Traffic Jam board should not change** name without also changing the [gftools gen-push-lists](https://github.com/googlefonts/gftools/blob/main/bin/gftools-gen-push-lists.py) script.
 
     <figure>
-    <img src="Onboarder%20workflow%20guide%201ee4c4f185e9405a9fc22f834502a8fc/Capture_decran_2022-02-23_a_14.40.21.png" style="width:2968px" alt="Screenshot of the Traffic Jam project board that monitors PRs" />
+    <img src="images/onboarder-workflow/Capture_decran_2022-02-23_a_14.40.21.png" style="width:2968px" alt="Screenshot of the Traffic Jam project board that monitors PRs" />
     <figcaption aria-hidden="true">Screenshot of the Traffic Jam project board that monitors PRs</figcaption>
     </figure>
 

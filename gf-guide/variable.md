@@ -223,7 +223,7 @@ For custom axes of your own invention, you can do whatever makes sense to you. A
 The axis mapping is set up in Glyphs using the `Axis Location` parameter (has to be set in all masters and intermediate instances). Although Google Fonts Tools decided not to support it, to the benefit of the `Axis Mapping` parameter that is less redundant and more visual.
 
 <figure>
-<img src="Variable%20fonts%20specifics%20f11a55fad9ca4df48fa506855909337e/Capture_decran_2022-04-22_a_12.20.05.png" style="width:1982px" alt="Since all .glyphs files is converted to UFO by fontmake in order to export font binaries, the way gftools supports that parameter mimics how it is rendered in a .designspacefile: the user values (input) on the left column, and the design coordinates (output) on the right." />
+<img src="images/variable/Capture_decran_2022-04-22_a_12.20.05.png" style="width:1982px" alt="Since all .glyphs files is converted to UFO by fontmake in order to export font binaries, the way gftools supports that parameter mimics how it is rendered in a .designspacefile: the user values (input) on the left column, and the design coordinates (output) on the right." />
 <figcaption aria-hidden="true">Since all .glyphs files is converted to <code>UFO</code> by fontmake in order to export font binaries, the way <code>gftools</code> supports that parameter mimics how it is rendered in a <code>.designspacefile</code>: the user values (input) on the <em>left</em> column, and the design coordinates (output) on the <em>right</em>.</figcaption>
 </figure>
 
@@ -255,7 +255,7 @@ In the case of a linear interpolation, normalised design and user values on a `-
 <div id="3a9c8f51-9d2b-4cb5-900d-806de71eecee" class="column" style="width:37.5%">
 
 <figure>
-<img src="Variable%20fonts%20specifics%20f11a55fad9ca4df48fa506855909337e/Capture_decran_2022-03-24_a_17.04.01.png" style="width:1318px" />
+<img src="images/variable/Capture_decran_2022-03-24_a_17.04.01.png" style="width:1318px" />
 </figure>
 
 </div>
@@ -287,7 +287,7 @@ In the case of a linear interpolation, normalised design and user values on a `-
 A consequence of this interpolation is that you may not be happy with the pace of it. For example the interpolation pace could feel “faster” at the beginning, and “slower” at the end of the axis range. This depends greatly on your design: in general there is a larger optical weight difference between Thin and Medium, than between Medium and Black. Some instance could benefit from not being located “regularly” on the weight axis; maybe Regular could be located closer to light, and Black further away from ExtraBold, like this:
 
 <figure>
-<img src="Variable%20fonts%20specifics%20f11a55fad9ca4df48fa506855909337e/Capture_decran_2022-04-22_a_12.46.40.png" style="width:1972px" alt="This is what we call a non-linear interpolation." />
+<img src="images/variable/Capture_decran_2022-04-22_a_12.46.40.png" style="width:1972px" alt="This is what we call a non-linear interpolation." />
 <figcaption aria-hidden="true">This is what we call a non-linear interpolation.</figcaption>
 </figure>
 
@@ -300,7 +300,7 @@ Now let’s pretend that you want your Medium style actually thinner that what t
 <div id="1d5b28b6-3aaa-4133-90da-738971f605dd" class="column" style="width:43.75%">
 
 <figure>
-<img src="Variable%20fonts%20specifics%20f11a55fad9ca4df48fa506855909337e/Capture_decran_2022-03-24_a_17.03.33.png" style="width:288px" />
+<img src="images/variable/Capture_decran_2022-03-24_a_17.03.33.png" style="width:288px" />
 </figure>
 
 </div>
