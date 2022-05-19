@@ -4,17 +4,24 @@
 
 ## Introduction
 
--   **Libre Fonts Culture**
+<details open>
+  <summary>Libre Fonts Culture</summary>
 
-    You are contributing to an open-source based platform. It’s important for you to get familiar at least with the basics about [Libre Fonts Culture](culture.md)
--   **Typography & Fonts**
+  You are contributing to an open-source based platform. It’s important for you to get familiar at least with the basics about [Libre Fonts Culture](culture.md)
+</details>
+
+<details open>
+    <summary>Typography & Fonts</summary>
 
     Google Fonts expect font developers to understand the following:
 
     1.  Overall type design knowledge.
     2.  Basic understanding of how [fonts](https://simoncozens.github.io/fonts-and-layout/) and [OpenType Specification](https://docs.microsoft.com/en-us/typography/opentype/spec/) works (skim read! focus on what each table does).
     3.  Proficiency in a fully featured font editor such as [Fontlab 7](https://www.fontlab.com/font-editor/fontlab/), [Glyphsapp](https://glyphsapp.com/), [Robofont](https://robofont.com/), or [Fontforge](https://fontforge.org/en-US/); not a toy editor like a "handwriting page scan to font" tool fix.
--   **Tools & Dependencies needed**
+</details>
+
+<details open>
+    <summary>Tools & Dependencies needed</summary>
     -   [Setting up a working environment](tools.md)
         Includes:
 
@@ -30,8 +37,10 @@
         2.  Google Fonts Tools (known as gftools)
         3.  gftools qa
         4.  The `bash_profile` file
+</details>
 
--   **GitHub the required Version Control System (VCS)**
+<details open>
+    <summary>GitHub the required Version Control System (VCS)</summary>
 
     Since we only release Open Source fonts, we expect projects to be kept in a VSC like [GitHub](hosting.md). Every family we release must have its own upstream GitHub repository (or similar).
 
@@ -75,6 +84,7 @@
         4.  Axis Registry
         5.  Lang directory
         6.  Push Lists
+</details>
 
 ## Production Requirements
 
