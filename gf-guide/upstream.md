@@ -72,7 +72,7 @@ Each file or dir has the following purpose:
 -   [OFL.txt](https://www.notion.so/0a589f36247844b98dd11b8f2635ed0c)
 
     The OFL license file. The first line of the license file must contain the font family's copyright string.
--   [README.md](readme.md)
+-   [README.md](readmefile.md)
 
     Contains information about the font family and instructions on how to build the family. You should take particular care over this file, and you also must add at least one image and a short description of your font project.
 -   **[documentation](https://github.com/googlefonts/Unified-Font-Repository/tree/main/documentation)**

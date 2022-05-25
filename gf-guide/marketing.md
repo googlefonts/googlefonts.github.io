@@ -2,7 +2,7 @@
 {:.no_toc}
 
 > <span class="icon">🦕</span>  When a font is released for the first time on Google Fonts, or if it benefited from a major upgrade, we will tweet to promote it from [@googlefonts](https://twitter.com/googlefonts).
-> In order to tweet about a new release, Google Fonts requires 2-3 expressive images different from the ones used in the [README file](readme.md), which usually correspond to a sample image with a different size. If the Family is variable, an animation is welcome. See [this tweet](https://twitter.com/googlefonts/status/1487038395918565377) as an example.
+> In order to tweet about a new release, Google Fonts requires 2-3 expressive images different from the ones used in the [README file](readmefile.md), which usually correspond to a sample image with a different size. If the Family is variable, an animation is welcome. See [this tweet](https://twitter.com/googlefonts/status/1487038395918565377) as an example.
 
 ## Table of contents
 {:.no_toc}

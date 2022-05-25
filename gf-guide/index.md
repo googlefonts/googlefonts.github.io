@@ -26,7 +26,7 @@ If you are **onboarding** fonts to Google Fonts, or for very advanced users, the
 ## The Upstream Repo
 
 * [Upstream repository structure](upstream.md)
-* [README file](readme.md)
+* [README file](readmefile.md)
 * [Authors and Contributors](authors.md)
 * [License file](license.md)
 * [Maintaining your font repo](maintaining.md)
