@@ -61,20 +61,19 @@ The informations you provide in your font project’s `README.md` is key for GF 
 
 You may get inspire by these examples to build up your `README.md`. Please note that none is actually perfect, and ideally, you should combine the best part of them all if relevant to your project.
 
--   <https://github.com/floriankarsten/montagu-slab>
-
+-   [Montagu Slab](https://github.com/floriankarsten/montagu-slab)
     Has a detailed non-standard building process.
--   <https://github.com/Omnibus-Type/Texturina>
-
+    
+-   [Texturina](https://github.com/Omnibus-Type/Texturina)
     Has a changelog (aka “Fontlog”) and an extensive language support description.
--   <https://github.com/JetBrains/JetBrainsMono>
-
+    
+-   [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
     Has a comprehensive description of special font features.
--   <https://github.com/kosmynkab/Brygada-1918>
-
+    
+-   [Brygada 1918](https://github.com/kosmynkab/Brygada-1918)
     Has a short description, and a development about the research and process.
--   <https://github.com/cbcrc/radiocanadafonts>
-
+    
+-   [Radio Canada](<https://github.com/cbcrc/radiocanadafonts>)
     Has image building automation and a comprehensive axes description.
 
 ------------------------------------------------------------------------
