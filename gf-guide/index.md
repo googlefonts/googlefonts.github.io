@@ -7,48 +7,47 @@ If you are **onboarding** fonts to Google Fonts, or for very advanced users, the
 
 ## Introduction
 
-* [Google Fonts Guide TL;DR](tldr.md) (*Starting Point*, *2.0*)
-* [Libre Font Culture](culture.md) (*Learn*, *2.0*)
-* [Tools and Dependencies](tools.md) (*Starting Point*, *2.0*)
-* [Hosting projects on Github](hosting.md) (*Learn*, *2.0*)
-* [google/fonts repository explained](googlefonts.md) (*Nerd*, *2.0*)
+* [Google Fonts Guide TL;DR](tldr.md) `Starting Point`
+* [Libre Font Culture](culture.md) `Learn`
+* [Tools and Dependencies](tools.md) `Starting Point`
+* [Hosting projects on Github](hosting.md) `Learn`
+* [google/fonts repository explained](googlefonts.md) `Nerd`
 
 ## Onboarding Fonts to GF
-* [Production requirements](production.md)
-* [Adding & upgrading fonts to Google Fonts](onboarding.md)
-* [Making a PR to Google Fonts](making-pr.md)
-* [Onboarder workflow guide](onboarder-workflow.md)
-* [METADATA file](metadata.md)
-* [Description file](description.md)
-* [Designer Profile](profile.md)
-* [Promo / Marketing](marketing.md)
+* [Production requirements](production.md) `Starting Point`
+* [Adding & upgrading fonts to Google Fonts](onboarding.md) `Starting Point`
+* [Making a PR to Google Fonts](making-pr.md) `Nerd`
+* [Onboarder workflow guide](onboarder-workflow.md) `Team Member`
+* [METADATA file](metadata.md) `Team Member`
+* [Description file](description.md) `Team Member`
+* [Designer Profile](profile.md) `Template`
+* [Promo / Marketing](marketing.md) `Template`
 
 ## The Upstream Repo
 
-* [Upstream repository structure](upstream.md)
-* [README file](readmefile.md)
-* [Authors and Contributors](authors.md)
-* [License file](license.md)
-* [Maintaining your font repo](maintaining.md)
+* [Upstream repository structure](upstream.md) `Must Read`
+* [README file](readmefile.md) `Must Read`
+* [Authors and Contributors](authors.md) `Template`
+* [License file](license.md) `Template`
+* [Maintaining your font repo](maintaining.md) `Learn`
 
 ## Pre-production: Getting your fonts ready for GF
 
-* [Overall font files requirements](requirements.md)
-* [Static fonts specifics](statics.md)
-* [Variable fonts specifics](variable.md)
-* [Vertical metrics](metrics.md)
-* [Refining your typeface](refining.md)
-* [Outline Quality](outlines.md)
-* [Color fonts specifics](colorfonts.md)
+* [Overall font files requirements](requirements.md) `Must Read`
+* [Static fonts specifics](statics.md) `Must Read`
+* [Variable fonts specifics](variable.md) `Must Read`
+* [Vertical metrics](metrics.md) `Must Read`
+* [Refining your typeface](refining.md) `Learn`
+* [Outline Quality](outlines.md) `Learn`
 
 ## More about tools, build, and QA
 
-* [Build the fonts](build.md)
-* [QA tools](qa.md)
-* [Local testing](testing.md)
-* [Package the fonts](package.md)
+* [Build the fonts](build.md) `Nerd`
+* [QA tools](qa.md) `Nerd`
+* [Local testing](testing.md) `Learn`
+* [Package the fonts](package.md) `Team Member`
 
 ## More info
 
-* [The font tables explained](fonttables.md)
+* [The font tables explained](fonttables.md) `Learn`
 
