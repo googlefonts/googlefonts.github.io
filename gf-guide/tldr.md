@@ -7,7 +7,7 @@
 <details>
   <summary>Libre Fonts Culture</summary>
 
-  You are contributing to an open-source based platform. It’s important for you to get familiar at least with the basics about [Libre Fonts Culture](culture.md)
+Now that you are contributing to an open-source based platform, it is important for you to get familiar at least with the basics about [Libre Fonts Culture](culture.md)
 </details>
 
 <details>
