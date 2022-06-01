@@ -54,10 +54,10 @@ Know the particularities about mastering your font project to meet the Google Fo
 * <b>[Variable fonts specifics](variable.md)</b>
   <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-family:'Andale Mono'; font-size:0.9em">Must Read</span>
 * <b>[Vertical metrics](metrics.md)</b>
-  <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-family:'Andale Mono'; font-size:0.9em">Must Read</span>
+  <span style="background-color:#ffd7f1; color:#926b85; padding:1px">`Must Read`</span>
 <br><br>
 * [Refining your typeface](refining.md)
-  <span style="background-color:#efefff; color:#74758b; padding:1px; font-family:'Andale Mono'; font-size:0.9em">Learn</span>
+  <span style="background-color:#efefff; color:#74758b; padding:1px; font-family:'Andale Mono'; font-size:0.9em">`Learn`</span>
 * [Outline Quality](outlines.md) 
   <span style="background-color:#efefff; color:#74758b; padding:1px; font-family:'Andale Mono'; font-size:0.9em">Learn</span>
 
