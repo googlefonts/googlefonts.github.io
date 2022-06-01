@@ -61,7 +61,7 @@ Know the particularities about mastering your font project to meet the Google Fo
 
 ## Production: compiling your fonts for GF
 
-Context on the requirements to produce the fonts and get them ready for publishing.
+Context, requirements, and tools to produce the fonts and get them ready for publishing.
 
 * <b>[Massively distribution implications](https://googlefonts.github.io/gf-guide/production.html#fonts-are-massively-distributed)</b>
    <span style="background-color:#dee0ff; color:#5f6dd1; padding:1px; font-size:0.9em">`Starting Point`</span>
@@ -77,7 +77,7 @@ Context on the requirements to produce the fonts and get them ready for publishi
 
 ## The google/fonts repository 
 
-Details on the Google Fonts `Fonts` repository that host the fonts already included in the Catalogue.
+Details on the `Google Fonts` repository that hosts the fonts projects already included in the Catalogue.
 
 * [google/fonts repository explained](googlefonts.md)
    <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Nerd`</span>
@@ -85,7 +85,7 @@ Details on the Google Fonts `Fonts` repository that host the fonts already inclu
 
 ## Onboarding Fonts to GF
 
-Advanced content for experienced contributors or Team member with the details on the publishing process.
+Advanced content for experienced contributors or Team Members with the details on the publishing process.
 
 * [Making a PR to Google Fonts](making-pr.md)
    <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Nerd`</span>
