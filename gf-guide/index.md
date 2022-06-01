@@ -23,9 +23,9 @@ The most basic concepts, tools, or knowledge you will need to cover to begin con
 * <b>[Hosting projects on Github](hosting.md)</b>
   <span style="background-color:#dee0ff; color:#5f6dd1; padding:1px; font-family:'Andale Mono'; font-size:0.9em">Starting Point</span>
 
-## The Upstream Repo: allocate and administrate your project files
+## The Upstream Repo: administrate your project files
 
-To improve and facilitate the open collaborative process as well as the publishing process, we require an specific structure for your files on the GitHub repository.
+To improve and facilitate the open collaboration as well as the publishing process, we require a specific structure for your files on the GitHub repository.
 
 * <b>[Upstream repository structure](upstream.md)</b>
   <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-family:'Andale Mono'; font-size:0.9em">Must Read</span>
