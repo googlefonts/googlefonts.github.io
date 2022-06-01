@@ -31,7 +31,6 @@ To improve and facilitate the open collaboration as well as the publishing proce
   <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
 * <b>[README file](readmefile.md)</b>
   <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
-<br><br>
 * [Maintaining your font repo](maintaining.md) 
   <span style="background-color:#efefff; color:#74758b; padding:1px; font-size:0.9em">`Learn`</span>
 * [Authors and Contributors](authors.md)
@@ -55,7 +54,6 @@ Know the particularities about mastering your font project to meet the Google Fo
    <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
 * <b>[Vertical metrics](metrics.md)</b>
    <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
-<br><br>
 * [Refining your typeface](refining.md)
    <span style="background-color:#efefff; color:#74758b; padding:1px; font-size:0.9em">`Learn`</span>
 * [Outline Quality](outlines.md) 
@@ -69,7 +67,6 @@ Context on the requirements to produce the fonts and get them ready for publishi
    <span style="background-color:#dee0ff; color:#5f6dd1; padding:1px; font-size:0.9em">`Starting Point`</span>
 * <b>[Scalable font production](https://googlefonts.github.io/gf-guide/production.html#scalable-font-production)</b>
    <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
-<br><br>
 * [Build the fonts](build.md) 
    <span style="background-color:#efefff; color:#74758b; padding:1px; font-size:0.9em">`Learn`</span>
 * [QA tools](qa.md) 
