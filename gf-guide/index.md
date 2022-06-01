@@ -7,7 +7,7 @@ If you are **onboarding** fonts to Google Fonts, or for very advanced users, the
 
 ## Introduction
 
-* [Google Fonts Guide TL;DR](tldr.md) `Starting Point`
+<!-- TO DO * [Google Fonts Guide TL;DR](tldr.md) `Starting Point`-->
 * [Libre Font Culture](culture.md) `Learn`
 * [Tools and Dependencies](tools.md) `Starting Point`
 * [Hosting projects on Github](hosting.md) `Learn`
@@ -37,8 +37,8 @@ If you are **onboarding** fonts to Google Fonts, or for very advanced users, the
 * [Static fonts specifics](statics.md) `Must Read`
 * [Variable fonts specifics](variable.md) `Must Read`
 * [Vertical metrics](metrics.md) `Must Read`
-* [Refining your typeface](refining.md) `Learn`
 * [Outline Quality](outlines.md) `Learn`
+<!-- TO DO * [Refining your typeface](refining.md) `Learn`-->
 
 ## More about tools, build, and QA
 
@@ -47,7 +47,9 @@ If you are **onboarding** fonts to Google Fonts, or for very advanced users, the
 * [Local testing](testing.md) `Learn`
 * [Package the fonts](package.md) `Team Member`
 
+<!-- TO DO 
 ## More info
 
 * [The font tables explained](fonttables.md) `Learn`
+-->
 
