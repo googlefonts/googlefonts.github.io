@@ -1,55 +1,111 @@
 # Google Fonts Guide
 
-> 🦜 This guide aims to help people to navigate requirements and recommendations to contribute to [Google Fonts](https://fonts.google.com).
-This documentation is not meant to be read at once. For example, some people are more empowered with the use of Github and can skip some chapters, or you are only interested in how to make better outlines. The guidelines have been separated into small bits to facilitate the search of specific informations that you would need at a specific stage of the font production.
-If you’re a **type designer** and you want to **contribute** fonts to Google Fonts, whether commissioned or as a voluntary contribution, you should read the chapters marked with `Starting point` and `Must read`. Additional resources are available under the `Learn` label.
-If you are **onboarding** fonts to Google Fonts, or for very advanced users, the chapters marked with `Team Member` and `Nerd` are for you.
+> 🦜 This guide aims to help people to navigate requirements and recommendations to contribute to [Google Fonts](https://fonts.google.com). The contents covered here range from general knowledge to contextualize the _what_ and _why_ of some of the requirements as well as the specifics regarding technical aspects with some suggestions on how to comply with them. It covers different levels of information for both newcomers and more experienced contributors.
+>
+> Therefore, **this documentation is not meant to be read at once**. If you are already familiar with some of the concepts, for example, some people are more empowered with the use of Github please you can skip some chapters and jump to the other bits that you may be looking for. The guidelines have been separated into small bits to facilitate the search of specific informations that you would need at a specific stage of the font production.
+>
+> If you’re a **newcomer** and you want to **contribute** fonts to Google Fonts, whether commissioned or as a voluntary contribution, you should read the chapters marked with `Starting Point` and `Must read`. Additional resources are available under the `Learn` label.
+> 
+> If you are an **experienced** user or are **onboarding** fonts to Google Fonts, the chapters marked with `Team Member` and `Nerd` are for you.
 
-## Introduction
+## Introduction: getting familiar with the basics
 
-<!-- TO DO * [Google Fonts Guide TL;DR](tldr.md) `Starting Point`-->
-* [Libre Font Culture](culture.md) `Learn`
-* [Tools and Dependencies](tools.md) `Starting Point`
-* [Hosting projects on Github](hosting.md) `Learn`
-* [google/fonts repository explained](googlefonts.md) `Nerd`
+The most basic concepts, tools, or knowledge you will need to cover to begin contributing with Google Fonts.
 
-## Onboarding Fonts to GF
-* [Production requirements](production.md) `Starting Point`
-* [Adding & upgrading fonts to Google Fonts](onboarding.md) `Starting Point`
-* [Making a PR to Google Fonts](making-pr.md) `Nerd`
-* [Onboarder workflow guide](onboarder-workflow.md) `Team Member`
-* [METADATA file](metadata.md) `Team Member`
-* [Description file](description.md) `Team Member`
-* [Designer Profile](profile.md) `Template`
-* [Promo / Marketing](marketing.md) `Template`
+* <b>[Libre Font Culture](culture.md)</b>
+  <span style="background-color:#dee0ff; color:#5f6dd1; padding:1px; font-size:0.9em">`Starting Point`</span>
+* <b>[Required Knowledge](https://googlefonts.github.io/gf-guide/tools.html#required-knowledge)</b>
+  <span style="background-color:#dee0ff; color:#5f6dd1; padding:1px; font-size:0.9em">`Starting Point`</span>
+* <b>[Setting up a working environment](https://googlefonts.github.io/gf-guide/tools.</b>html#setting-up-a-working-environment)</b>
+  <span style="background-color:#dee0ff; color:#5f6dd1; padding:1px; font-size:0.9em">`Starting Point`</span>
+* <b>[Installing the required tools](https://googlefonts.github.io/gf-guide/tools.html#installing-the-required-tools)</b>
+  <span style="background-color:#dee0ff; color:#5f6dd1; padding:1px; font-size:0.9em">`Starting Point`</span>
+* <b>[Hosting projects on Github](hosting.md)</b>
+  <span style="background-color:#dee0ff; color:#5f6dd1; padding:1px; font-size:0.9em">`Starting Point`</span>
 
-## The Upstream Repo
+## The Upstream Repo: administrate your project files
 
-* [Upstream repository structure](upstream.md) `Must Read`
-* [README file](readmefile.md) `Must Read`
-* [Authors and Contributors](authors.md) `Template`
-* [License file](license.md) `Template`
-* [Maintaining your font repo](maintaining.md) `Learn`
+To improve and facilitate the open collaboration as well as the publishing process, we require a specific structure for your files on the GitHub repository.
+
+* <b>[Upstream repository structure](upstream.md)</b>
+  <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
+* <b>[README file](readmefile.md)</b>
+  <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
+* [Maintaining your font repo](maintaining.md) 
+  <span style="background-color:#efefff; color:#74758b; padding:1px; font-size:0.9em">`Learn`</span>
+* [Authors and Contributors](authors.md)
+  <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Template`</span>
+* [License file](license.md)
+  <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Template`</span>
 
 ## Pre-production: Getting your fonts ready for GF
 
-* [Overall font files requirements](requirements.md) `Must Read`
-* [Static fonts specifics](statics.md) `Must Read`
-* [Variable fonts specifics](variable.md) `Must Read`
-* [Vertical metrics](metrics.md) `Must Read`
-* [Outline Quality](outlines.md) `Learn`
-<!-- TO DO * [Refining your typeface](refining.md) `Learn`-->
+Know the particularities about mastering your font project to meet the Google Fonts specifications and get them ready for production.
 
-## More about tools, build, and QA
+* <b>[New fonts specifics](https://googlefonts.github.io/gf-guide/onboarding.html#new-fonts)</b>
+   <span style="background-color:#dee0ff; color:#5f6dd1; padding:1px; font-size:0.9em">`Starting Point`</span>
+* <b>[Upgrading fonts specifics](https://googlefonts.github.io/gf-guide/onboarding.html#font-upgrades)</b>
+   <span style="background-color:#dee0ff; color:#5f6dd1; padding:1px; font-size:0.9em">`Starting Point`</span>
+* <b>[Overall font files requirements](requirements.md)</b>
+   <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
+* <b>[Static fonts specifics](statics.md)</b>
+   <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
+* <b>[Variable fonts specifics](variable.md)</b>
+   <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
+* <b>[Vertical metrics](metrics.md)</b>
+   <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
+* [Refining your typeface](refining.md)
+   <span style="background-color:#efefff; color:#74758b; padding:1px; font-size:0.9em">`Learn`</span>
+* [Outline Quality](outlines.md) 
+   <span style="background-color:#efefff; color:#74758b; padding:1px; font-size:0.9em">`Learn`</span>
 
-* [Build the fonts](build.md) `Nerd`
-* [QA tools](qa.md) `Nerd`
-* [Local testing](testing.md) `Learn`
-* [Package the fonts](package.md) `Team Member`
+## Production: compiling your fonts for GF
 
-<!-- TO DO 
-## More info
+Context, requirements, and tools to produce the fonts and get them ready for publishing.
 
-* [The font tables explained](fonttables.md) `Learn`
--->
+* <b>[Massively distribution implications](https://googlefonts.github.io/gf-guide/production.html#fonts-are-massively-distributed)</b>
+   <span style="background-color:#dee0ff; color:#5f6dd1; padding:1px; font-size:0.9em">`Starting Point`</span>
+* <b>[Scalable font production](https://googlefonts.github.io/gf-guide/production.html#scalable-font-production)</b>
+   <span style="background-color:#ffd7f1; color:#926b85; padding:1px; font-size:0.9em">`Must Read`</span>
+* [Build the fonts](build.md) 
+   <span style="background-color:#efefff; color:#74758b; padding:1px; font-size:0.9em">`Learn`</span>
+* [QA tools](qa.md) 
+   <span style="background-color:#efefff; color:#74758b; padding:1px; font-size:0.9em">`Learn`</span>
+* [Local testing](testing.md) 
+   <span style="background-color:#efefff; color:#74758b; padding:1px; font-size:0.9em">`Learn`</span>
+
+
+## The google/fonts repository 
+
+Details on the `Google Fonts` repository that hosts the fonts projects already included in the Catalogue.
+
+* [google/fonts repository explained](googlefonts.md)
+   <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Nerd`</span>
+
+
+## Onboarding Fonts to GF
+
+Advanced content for experienced contributors or Team Members with the details on the publishing process.
+
+* [Making a PR to Google Fonts](making-pr.md)
+   <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Nerd`</span>
+* [Package the fonts](package.md) 
+   <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Team Member`</span>
+* [Onboarder workflow guide](onboarder-workflow.md) 
+   <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Team Member`</span>
+* [METADATA file](metadata.md) 
+   <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Team Member`</span>
+* [Description file](description.md)
+   <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Team Member`</span>
+* [Designer Profile](profile.md) 
+   <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Template`</span>
+* [Promo / Marketing](marketing.md) 
+   <span style="background-color:#f5f5f5; color:#8e8fa5; padding:1px; font-size:0.9em">`Template`</span>
+
+<!-- ## More info
+
+Overall knowledge 
+
+* [The font tables explained](fonttables.md) 
+   <span style="background-color:#efefff; color:#74758b; padding:1px; font-size:0.9em">`Learn`</span> -->
 
