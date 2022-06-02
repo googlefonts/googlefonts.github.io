@@ -42,12 +42,12 @@ You can find a template in [GFPT](https://github.com/googlefonts/googlefonts-pro
 
 ``` code
 # This is the list of people who have contributed to this project,
-# and includes those not listed in `<mark style="background-color:#D4D4D4; padding:0.1em 0.3em; border-radius:0.2em; font-size:0.9em;">AUTHORS.txt</mark>` because they are not
+# and includes those not listed in `AUTHORS.txt` because they are not
 # copyright authors. For example, company employees may be listed
 # here because their company holds the copyright and is listed there.
 #
 # When adding J Random Contributor's name to this file, either J's
-# name or J's organization's name should be added to `<mark style="background-color:#D4D4D4; padding:0.1em 0.3em; border-radius:0.2em; font-size:0.9em;">AUTHORS.txt</mark>`
+# name or J's organization's name should be added to `AUTHORS.txt`
 #
 # Names should be added to this file as:
 # Name <email address
