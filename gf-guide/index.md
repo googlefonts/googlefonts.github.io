@@ -1,6 +1,6 @@
 # Google Fonts Guide
 
-<div style="background-color:#F6F6F6; color:#121212; padding:1.2em 1.6em; border-radius: 10px; border-radius: 18px; font-size:1em">
+<div style="background-color:#F6F6F6; color:#121212; padding:1.2em 1.6em; border-radius: 1em; font-size:1em">
   🦜 This guide aims to help people to navigate requirements and recommendations to contribute to <a href="https://fonts.google.com">Google Fonts</a>. The contents covered here range from general knowledge to contextualize the <i>what</i> and <i>why</i> of some of the requirements as well as the specifics regarding technical aspects with some suggestions on how to comply with them. It covers different levels of information for both newcomers and more experienced contributors.
 
   Therefore, <b>this documentation is not meant to be read at once</b>. If you are already familiar with some of the concepts, for example, some people are more empowered with the use of Github please you can skip some chapters and jump to the other bits that you may be looking for. The guidelines have been separated into small bits to facilitate the search of specific informations that you would need at a specific stage of the font production.
