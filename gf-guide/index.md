@@ -73,10 +73,12 @@ Know the particularities about mastering your font project to meet the Google Fo
 * <span style="background-color:#FFAA89; color:#D83C00; padding:2px; border-radius: 2px; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;">must_</span>
   <b>[Vertical metrics](metrics.md)</b>
 * <span style="background-color:#FFEE99; color:#B28B00; padding:2px; border-radius: 2px; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;">learn</span>
-  [Refining your typeface](refining.md) 
-* <span style="background-color:#FFEE99; color:#B28B00; padding:2px; border-radius: 2px; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;">learn</span>
   [Outline Quality](outlines.md) 
-   
+<!--
+* <span style="background-color:#FFEE99; color:#B28B00; padding:2px; border-radius: 2px; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;">learn</span>
+  [Refining your typeface](refining.md) 
+-->
+
 ## Production: compiling your fonts for GF
 
 Context, requirements, and tools to produce the fonts and get them ready for publishing.
