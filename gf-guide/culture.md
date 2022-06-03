@@ -1,17 +1,6 @@
 # Libre Font Culture
 {:.no_toc}
 
-<<<<<<< HEAD
-<div style="background-color:#F6F8Fa; color:#121212; padding:1.2em 1.6em; border-radius: 1em; font-size:1em">
-
-🦉 The design community and the tech community traditionally have very different cultures. Designer culture often involves the work of a single artist-designer that usually prefers to protect their artwork, while software developers generally cannot operate in such a solitary fashion: their work, even if it is copyrighted, is often based on the work of others and more subject to fragmented authorship.
-
-Since fonts are software, Google Fonts works at the intersection of the two communities and, for many reasons, has embraced the Libre software culture to promote the creation, development, and distribution of typefaces. This culture encourages participation and learning while facilitating sharing and collaboration through the openness of the work and a more flexible licensing schema. 
-
-It is helpful for type designers to understand the typical operation of a software project. This page aims to help type designers involved in starting or participating in Libre Font projects to know how libre software projects operate.
-
-</div>
-=======
 <div style="background-color:#F6F6F6; color:#121212; padding:1.2em 1.6em; border-radius: 1em; font-size:1em">
 
     <span class="icon">🦉</span>  The design community and the tech community traditionally have very different cultures. Designer culture often involves the work of a single artist-designer that usually prefers to protect their artwork, while software developers generally cannot operate in such a solitary fashion: their work, even if it is copyrighted, is often based on the work of others and more subject to fragmented authorship.
@@ -25,7 +14,6 @@ It is helpful for type designers to understand the typical operation of a softwa
 {:.no_toc}
 * TOC goes here
 {:toc}
->>>>>>> origin/main
 
 ## Four Freedoms
 
