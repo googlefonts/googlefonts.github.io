@@ -39,7 +39,7 @@ The most basic concepts, tools, or knowledge you will need to cover to begin con
 * <span style="background-color:#B3E7FF; color:#2568B3; padding:0.2em 0.4em 0.4em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.8em">start</span>
   <b>[Required Knowledge](https://googlefonts.github.io/gf-guide/tools.html#required-knowledge)</b>
 * <span style="background-color:#B3E7FF; color:#2568B3; padding:0.2em 0.4em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.8em">start</span>
-  <b>[Setting up a working environment](https://googlefonts.github.io/gf-guide/tools.</b>html#setting-up-a-working-environment)</b> 
+  <b>[Setting up a working environment](https://googlefonts.github.io/gf-guide/tools.html#setting-up-a-working-environment)</b> 
 * <span style="background-color:#B3E7FF; color:#2568B3; padding:0.2em 0.4em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.8em">start</span>
   <b>[Installing the required tools](https://googlefonts.github.io/gf-guide/tools.html#installing-the-required-tools)</b> 
 * <span style="background-color:#FFF5C7; color:#A68330; padding:0.2em 0.4em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.8em">learn</span>
