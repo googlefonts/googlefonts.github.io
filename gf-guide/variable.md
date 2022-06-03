@@ -24,7 +24,6 @@ Before proceeding, make sure:
 
 ### The family doesn't exist on Google Fonts:
 
--   Fonts should be unhinted and have `gftools fix-nonhinting` applied to them. The [builder tool](https://googlefonts.github.io/gf-guide/build.html#gftools-builder) does it by default.
 -   The `wght` axis range must include `400`. For example: `100-900`, `400-900`, `100-400`.
 -   Other than the above, fonts must conform to the requirements below, like pre-existing fonts.
 
@@ -484,7 +483,7 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 ### Family does not exist on Google Fonts
 
--   Release unhinted (default setting of `gftools builder`).
+-   RFonts should be unhinted (default setting of [gftools builder](https://googlefonts.github.io/gf-guide/build.html#gftools-builder).
 -   Run fonts through `gftools fix-nonhinting` if you don’t use `gftools builder`.
 
 ### Family already exists on Google Fonts and has manual TT hinting
@@ -499,7 +498,7 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 **How to use variable fonts:**
 
--   [Google Fonts Knowledge](https://fonts.google.com/knowledge/introducing_type/introducing_variable_fonts)
+-   [Google Fonts Knowledge - variable fonts](https://fonts.google.com/knowledge/introducing_type/introducing_variable_fonts)
 -   [variablefonts.io](https://variablefonts.io/)
 -   [v-fonts.com](https://v-fonts.com/)
 -   [Developer Mozilla VF guide](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
@@ -514,7 +513,7 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 -   [Font Table Viewer](https://glyphsapp.com/tools/fonttableviewer)
 -   [DTL OT Master](https://www.fontmaster.nl/otmaster.html)
--   [ttx](https://fonttools.readthedocs.io/en/latest/ttx.html), a practical command line tool of [fonttools](https://github.com/fonttools/fonttools).
+-   [ttx](https://fonttools.readthedocs.io/en/latest/ttx.html), a practical command line tool of [fonttools](https://github.com/fonttools/fonttools)
 
 **Some font testing web pages allow you to view a selection of tables:**
 
