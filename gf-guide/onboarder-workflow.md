@@ -51,11 +51,13 @@ The issues should follow these rules:
 
 -   **They have labels**.
 
-    At least a *primary category label* (start with `I`). E.g <mark class=grey>I Font bug</mark>. Further information below.
+    At least a *primary category label* (start with `I`). Further information about labels below.
+    
+    E.g <mark class=grey>I Font bug</mark>.
 
--   **There should be a new issue for any new project commissioned** even before delivery from the designer
+-   **There should be a new issue for any new project commissioned** 
 
-    These should have the label <mark class="green">commissioned</mark> and **should be into a milestone**. A non-commisioned project’s issue is assigned to a milestone if we plan to take care of it.
+    And that even before delivery from the designer. These should have the label <mark class="green">commissioned</mark> and **should be into a milestone**. A non-commisioned project’s issue is assigned to a milestone if we plan to take care of it.
 
 -   **Issues in milestones should be assigned to an onboarder.**
 
@@ -80,13 +82,21 @@ The issues should follow these rules:
 
 -   **They are divided into quarters.**
 
--   **They should contain every issue about commissioned projects**, and also non-commissioned projects that we intend to onboard that quarter.
+-   **They should contain every issue about commissioned projects**, 
 
--   [**Important projects to be commissioned and milestoned**](https://github.com/google/fonts/milestone/23) **is the milestones for issues posted by users that we consider worth taking care of.** They should be placed into a Quarter milestone when commissioned or assigned.
+    Same for non-commissioned projects (<mark class="green">accepted</mark>) that we intend to onboard that quarter.
 
--   **We assess the milestones at the end of each quarter** and close them when the due date is passed. The issues that were not completed before the end of the milestones get moved to the next milestone.
+-   [**Important projects to be commissioned and milestoned**](https://github.com/google/fonts/milestone/23) **is the milestones for issues posted by users that we consider worth taking care of.** 
 
--   **Issues in milestones should be assigned to an onboarder** and placed into their respective project board.
+    They should be placed into a Quarter milestone when commissioned or assigned.
+
+-   **We assess the milestones at the end of each quarter**
+    
+    We close them when the due date is passed. The issues that were not completed before the end of the milestones get moved to the next milestone.
+
+-   **Issues in milestones should be assigned to an onboarder** 
+
+    They should be placed into their respective project board.
 
 -   **Milestones are for issues only; there are no PRs in milestones.**
 
@@ -111,9 +121,15 @@ PRs should follow these rules:
 
 -   **They should be added to Traffic Jam** if the changes they bring should be carried out to the API.
 
--   **They should have labels.** At least 2: a *status label* (start with `-` ) and a *category label* (start with `I`). E.g <mark class="yellow">- Ready for review</mark> <mark class="grey">I New font</mark>. More info about the labels in the section below.
+-   **They should have labels.** 
 
--   **The issue is closed when the linked PR is merged.** If the PR has been properly linked to an issue, then this action is automated. This can cause confusion in the sense that the users will think that when the issue is closed, then the issue is fixed. But the fix carried out by the PR only gets mirrored on the API after validation in the sandbox server and push to production (cf Pull Request Review below). Therefore a few weeks can pass in between. This system is not ideal, but it saves us from manually closing multiple issues when the changes are live.
+    At least 2: a *status label* (start with `-` ) and a *category label* (start with `I`). More info about the labels in the section below. 
+    
+    E.g <mark class="yellow">- Ready for review</mark> <mark class="grey">I New font</mark>.
+
+-   **The issue is closed when the linked PR is merged.** 
+
+    If the PR has been properly linked to an issue, then this action is automated. This can cause confusion in the sense that the users will think that when the issue is closed, then the issue is fixed. But the fix carried out by the PR only gets mirrored on the API after validation in the sandbox server and push to production (cf Pull Request Review below). Therefore a few weeks can pass in between. This system is not ideal, but it saves us from manually closing multiple issues when the changes are live.
 
 -   **If the PR gets “blocked” after merging, the issue should be manually reopened** and fixed with another PR.
 
