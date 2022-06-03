@@ -1,10 +1,19 @@
+<link href="style.css" rel="stylesheet">
+
 # Variable fonts specifics
 {:.no_toc}
 
-> <span class="icon">🦥</span>  The variable font technology has existed for a long time, but the format is actually quite recent (2014? 2016?). It took time for OS and Apps to support this format, and some still didn’t make the step. In general, GF doesn’t quite recommend the use of variable fonts in documents made to be printed.
-> Before proceeding, make sure:
-> -   you read the [requirements for all font files](requirements.md)
-> -   you read the specific [requirements for static fonts](https://www.notion.so/Static-fonts-specifics-a5e23e14cea8482e9594a40948b2c30b)
+<div class="callout">
+
+🦥 The variable font technology has existed for a long time, but the format is actually quite recent (2016). It took time for OS and Apps to support this format, and some still didn’t make the step. In general, GF doesn’t quite recommend the use of variable fonts in documents made to be printed.
+
+Before proceeding, make sure:
+<ul>
+  <li>you read the <a href="https://googlefonts.github.io/gf-guide/requirements.html">requirements for all font files</a></li>
+  <li>you read the specific <a href="https://googlefonts.github.io/gf-guide/statics.html">requirements for static fonts</a></li>
+</ul>
+
+</div>
 
 ## Table of contents
 {:.no_toc}
@@ -15,7 +24,6 @@
 
 ### The family doesn't exist on Google Fonts:
 
--   Fonts should be unhinted and have `gftools fix-nonhinting` applied to them. The `builder` tool does it by default.
 -   The `wght` axis range must include `400`. For example: `100-900`, `400-900`, `100-400`.
 -   Other than the above, fonts must conform to the requirements below, like pre-existing fonts.
 
@@ -32,12 +40,16 @@ In addition to complying with the requirements listed in the [**New additions & 
 
 Font file names must be based on the following schema:
 
--   `VF` or `VAR` or any other suffix *must not* be appended to the file name. Instead the axes are appended in between brackets:
+-   Suffixes like `VF` or `VAR` or any other *must not* be appended to the file name. Instead the axes are appended in between brackets:
 
-    `FamilyName[axis1,axis2].ttf` e.g `Montserrat[wdth,wght].ttf`
+    `FamilyName[axis1,axis2].ttf` e.g. `Montserrat[wdth,wght].ttf`
 -   Axes should be listed in alphabetical order (but `wght` always last).
--   If your font contains unregistered axes not found in the [Microsoft registered axes](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg), they should be capitalized and be listed first (alphabetically). E.g.: `Montserrat[GOOF,VEST,wdth,wght].ttf`
--   If the family consists of two VFs, one for Italic, the other for Roman, the fonts should be named: `Montserrat[axis1,axis2...].ttf Montserrat-Italic[axis1,axis2...].ttf`
+-   If your font contains unregistered axes not found in the [Microsoft registered axes](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg), they should be capitalized and be listed first (alphabetically). 
+ 
+    e.g. `Montserrat[GOOF,VEST,wdth,wght].ttf`
+-   If the family consists of two VFs, one for Italic, the other for Roman, the fonts should be named: 
+  
+    e.g. `Montserrat[axis1,axis2...].ttf` and `Montserrat-Italic[axis1,axis2...].ttf`
 
 ## Font (zero) origin
 
@@ -126,9 +138,9 @@ Any new variable font with a weight or width axes will need the instance’s coo
 |------|-----------------------|
 | Xpt  | X                     |
 
-X can be any **integer number value** registered in the [Google Fonts Axis Registry](https://github.com/google/fonts/tree/main/axisregistry) for the [Optical Size](https://github.com/google/fonts/blob/main/axisregistry/optical_size.textproto) axis. The default value should not be elided in the STAT table (#83).
+X can be any **integer number value** registered in the [Google Fonts Axis Registry](https://github.com/google/fonts/tree/main/axisregistry) for the [Optical Size](https://github.com/google/fonts/blob/main/axisregistry/Lib/axisregistry/data/optical_size.textproto) axis. The default value should not be elided in the STAT table (#83).
 
-"Display", "Text", "Micro" etc are not allowed.
+Name components like "Display", "Text", "Micro" etc are not allowed.
 
 ### `ital` **/** `slnt`
 
@@ -138,7 +150,7 @@ GF only supports the `ital` axis as a boolean (`0`/`1`) value to link two separa
 
 So if you have one VF with `slant` or `ital` axis, it won’t have italics served by GF API. If you want italic instances served by the GF API, then you will have to deliver **two variable font files**.
 
-E.g `Texturina[wght].ttf` and `Texturina-Italic[wght].ttf`
+e.g. `Texturina[wght].ttf` and `Texturina-Italic[wght].ttf`
 
 Style linking between these two files will be preserved by:
 
@@ -166,7 +178,7 @@ As an example, you could choose stem thicknesses to map your styles on the weigh
 | Style name | Design coordinates |
 |------------|--------------------|
 | Light      | 30                 |
-| Regular    | 44                 |
+| Regular    | 40                 |
 | Bold       | 70                 |
 
 The font file though should display values that make sense to *users and softwares*, these are the **user(space) values**. A user shouldn’t have to dig into a font binary file to find the location of common styles, so for example, on the weight and the width axis, these values are *standardized.* They should refer to the [usWeightClass](https://docs.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass) (”us” as in “user”) and the [usWidthClass](https://docs.microsoft.com/en-us/typography/opentype/spec/os2#uswidthclass) of the [OS/2 table](https://docs.microsoft.com/en-us/typography/opentype/spec/os2). Indeed these values are the ones used on the web and in desktop app to select styles. Be also aware that most foundries will rip out the name tables from webfonts to make them unusable on desktop app. The only values remaining to select a style would then be the user values.
@@ -174,12 +186,12 @@ The font file though should display values that make sense to *users and softwar
 See some [CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#introducing_the_variation_axis) that a developer would use, whatever the actual style name you gave to your instance:
 
 <div class="indented">
-
--   `font-style: normal;` → will select the style at `400`
--   `font-weight: bold;` → will select the style at `700`
--   `font-weight: 500` → a “Medium” weight style is expected.
--   `font-variation-settings: 'wght' 300 'wdth' 75` → Condensed Light instance expected.
-
+  <ul>
+    <li><span class="code-text">font-style: normal;</span> → will select the style at <span class="code-text">400</span</li>
+    <li><span class="code-text">font-weight: bold;</span> → will select the style at <span class="code-text">700</span></li>
+    <li><span class="code-text">font-weight: 500</span> → a “Medium” weight style is expected.</li>
+    <li><span class="code-text">font-variation-settings: 'wght' 300 'wdth' 75</span> → Condensed Light instance expected.</li>
+  </ul>
 </div>
 
 This is known by developers and software engineers who are supposed to have read the [OT Spec](https://docs.microsoft.com/en-us/typography/opentype/spec/) (which are rules for machines to support the OpenType font format) to know how to implement font support (or some guidelines summarizing them).
@@ -201,7 +213,7 @@ For example, if a user enter `400` to get a `Regular` style, the font file shoul
 | Style name | User values / input | Design coordinates / output |
 |------------|---------------------|-----------------------------|
 | Light      | 300                 | 30                          |
-| Regular    | 400                 | 44                          |
+| Regular    | 400                 | 40                          |
 | Bold       | 700                 | 70                          |
 
 This is what it would look like in a `.designspace` file:
@@ -210,8 +222,8 @@ This is what it would look like in a `.designspace` file:
 <axes>
     <axis tag="wght" name="Weight" minimum="300" maximum="500" default="400">
       <map input="300" output="30"/>
-      <map input="400" output="44"/>
-            <map input="700" output="70"/>
+      <map input="400" output="40"/>
+      <map input="700" output="70"/>
     </axis>
   </axes>
 ```
@@ -224,14 +236,15 @@ The axis mapping is set up in Glyphs using the `Axis Location` parameter (has to
 
 <figure>
 <img src="images/variable/Capture_decran_2022-04-22_a_12.20.05.png" style="width:1982px" alt="Since all .glyphs files is converted to UFO by fontmake in order to export font binaries, the way gftools supports that parameter mimics how it is rendered in a .designspacefile: the user values (input) on the left column, and the design coordinates (output) on the right." />
-<figcaption aria-hidden="true">Since all .glyphs files is converted to <code>UFO</code> by fontmake in order to export font binaries, the way <code>gftools</code> supports that parameter mimics how it is rendered in a <code>.designspacefile</code>: the user values (input) on the <em>left</em> column, and the design coordinates (output) on the <em>right</em>.</figcaption>
+
+<figcaption aria-hidden="true">Since all `.glyphs` files is converted to <code>UFO</code> by Fontmake in order to export font binaries, the way <code>gftools</code> supports that parameter mimics how it is rendered in a <code>.designspacefile</code>: the user values (input) on the <em>left</em> column, and the design coordinates (output) on the <em>right</em>.</figcaption>
 </figure>
 
 Now that we have a better understanding of the axis mapping concept, let’s see the three tables linked to the axis mapping that are particularly important to translate correctly the design space: the `AVAR`, the `STAT`, the `FVAR` tables.
 
 ### The `AVAR` table
 
-<https://docs.microsoft.com/en-us/typography/opentype/spec/avar>
+[MA Spec avar table info](https://docs.microsoft.com/en-us/typography/opentype/spec/avar)
 
 This table normalizes the progression of the interpolation of one axis on a scale `-1:1`, the location of the font-origin being `0` (zero-origin). Basically, it takes the axis mapping and convert it so `max location = 1`, `default location = 0`, `min location = -1`.
 
@@ -373,9 +386,9 @@ We have imposed this restriction for the following reasons:
 
 ## STAT Table
 
-All variable fonts must contain a `STAT` table (style attributes table). This table has several features but a key benefit is that it will enable desktop applications to have better font menus. Currently, most font menus only offer a single drop down menu to select a font style. A `STAT` table enables us to have a drop down menu for each variable font axis.
+All variable fonts must contain a `STAT` table (Style Attributes Table). This table has several features but a key benefit is that it will enable desktop applications to have better font menus. Currently, most font menus only offer a single drop down menu to select a font style. A `STAT` table enables us to have a drop down menu for each variable font axis.
 
-We recommend reading the [MS STAT table spec](https://docs.microsoft.com/en-us/typography/opentype/spec/stat) to know more about this table.
+We recommend reading the [MS Spec STAT table info](https://docs.microsoft.com/en-us/typography/opentype/spec/stat) to know more about this table.
 
 Creating good STAT tables is complex. Fortunately, GF has created a `gftools` script called [gftools gen-stat](https://github.com/googlefonts/gftools/blob/main/bin/gftools-gen-stat.py) which can generate a `STAT` table for a family automatically based on GF [Axis Registry](https://github.com/google/fonts/tree/main/axisregistry). [The Builder](build.md) is wrapping that script, which means that you can set up the `STAT` table directly with this tools.
 
@@ -389,7 +402,7 @@ A `STAT` table is defined by these fields:
     This value will refer to a `name ID` in the `name` table. The axis name should be full string with first letter in capital, for eg. “Weight”.
 -   **Axis tag**
 
-    Four-letter ID of the axis. In lowercases for MS registered axes, and in capitals for MS unregistered axes (cf. paragraph above). For eg. “wght” and “JUMP”.
+    Four-letter ID of the axis. In lowercases for MS registered axes, and in capitals for MS unregistered axes (cf. paragraph above). E.g. “wght” and “JUMP”.
 
 ``` code
 <!-- DesignAxisCount=3 -->
@@ -458,7 +471,11 @@ In 2021, only one desktop application use the STAT table: Microsoft Office for M
 
 The fonts API is a system used by millions of people, with lots of different software, and so the system tries to support them all as best as it can - especially with 'backwards compatible' changes that do not "break" existing usage.
 
-As we are in a transition period where some software is VF capable and others are not, or, the old versions of the newly VF capable software remains in use, according to that principle of backwards compatibility, when a variable font is onboarded to Google Fonts, the API provides "fallbacks", static fonts derived from the variable font, for legacy software. And, according to the systematization principle, the system goes along the axis, and derives a static font at each of the nine 100 values, if the axis covers that value (whether or not they are included in the designer's original design space), and names it accordingly. Those static font files are included in the download ZIP file alongside the VF font file, and they are served as web fonts to web browsers not capable of using VFs.
+As we are in a transition period where some software is VF capable and others are not, or, the old versions of the newly VF capable software remains in use, according to that principle of backwards compatibility, when a variable font is onboarded to Google Fonts, the API provides "fallbacks", static fonts derived from the variable font, for legacy software. And, according to the systematization principle, the system goes along the axis, and derives a static font at each of the nine 100 values, if the axis covers that value (whether or not they are included in the designer's original design space), and names it accordingly. 
+
+For example, if a font design space includes a `wght` axis ranging from `300` to `700` but only includes the `Light` `Regular` and `Bold` instances, the API will also generate the `Medium` and `SemiBold` static fonts by default.
+
+Those static font files are included in the download ZIP file alongside the VF font file, and they are served as web fonts to web browsers not capable of using VFs.
 
 ## VF Hinting
 
@@ -466,7 +483,7 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 ### Family does not exist on Google Fonts
 
--   Release unhinted (default setting of `gftools builder`).
+-   RFonts should be unhinted (default setting of [gftools builder](https://googlefonts.github.io/gf-guide/build.html#gftools-builder).
 -   Run fonts through `gftools fix-nonhinting` if you don’t use `gftools builder`.
 
 ### Family already exists on Google Fonts and has manual TT hinting
@@ -481,10 +498,14 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 **How to use variable fonts:**
 
--   <https://fonts.google.com/knowledge/topics/variable_fonts>
--   [https://variablefonts.io](https://variablefonts.io/)
--   [https://v-fonts.com](https://v-fonts.com/)
--   <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide>
+<<<<<<< HEAD
+-   [Google Fonts Knowledge - variable fonts](https://fonts.google.com/knowledge/introducing_type/introducing_variable_fonts)
+=======
+-   [Google Fonts Knowledge](https://fonts.google.com/knowledge/introducing_type/introducing_variable_fonts)
+>>>>>>> 974c55b (Useful links fixes)
+-   [variablefonts.io](https://variablefonts.io/)
+-   [v-fonts.com](https://v-fonts.com/)
+-   [Developer Mozilla VF guide](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
 
 **Testing web pages dedicated to variable fonts:**
 
@@ -492,19 +513,13 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 -   [Dinamo](https://fontgauntlet.com)
 -   [TN type tool](https://typetools.typenetwork.com)
 
-<div>
-
 **You can view the name tables using these tools:**
 
 -   [Font Table Viewer](https://glyphsapp.com/tools/fonttableviewer)
 -   [DTL OT Master](https://www.fontmaster.nl/otmaster.html)
--   [ttx](https://fonttools.readthedocs.io/en/latest/ttx.html), a practical command line tool of [fonttools](https://github.com/fonttools/fonttools).
+-   [ttx](https://fonttools.readthedocs.io/en/latest/ttx.html), a practical command line tool of [fonttools](https://github.com/fonttools/fonttools)
 
 **Some font testing web pages allow you to view a selection of tables:**
 
--   <https://fontdrop.info/#/> → in the “data” tab
--   [https://fontgauntlet.com](https://fontgauntlet.com/) → if you click on the small search icon next to the font name
-
-</div>
-
-</div>
+-   [FontDrop](https://fontdrop.info/#/) → in the “data” tab
+-   [fontgauntlet](https://fontgauntlet.com/) → if you click on the small search icon next to the font name
