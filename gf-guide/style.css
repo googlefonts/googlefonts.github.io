@@ -15,6 +15,10 @@ mark {
     background-color:#D6F6C1; 
     color:#39803E;
 }
+.darkgreen{
+    background-color:#39803E; 
+    color:#D6F6C1;
+}
 .blue{
     background-color:#B3E7FF; 
     color:#2568B3;
@@ -32,10 +36,15 @@ mark {
     background-color:#E5E5E5; 
     color:#6B6B6B;
 }
+.black{
+    background-color:#6B6B6B; 
+    color:#E5E5E5;
+}
 .purple{
-    background-color:#E9E7F3; 
+    background-color:#FBFBFB; 
     color:#65458F;
 }
+<<<<<<< HEAD
 .code-text {
     padding:0.2em 0.4em; 
     border-radius:0.4em; 
@@ -44,3 +53,13 @@ mark {
     background-color:#f3f4f4; 
     color:#1d2227;
 }
+=======
+.red{
+    background-color:#FFE6E6; 
+    color:#DB3335;
+}
+.orange{
+    background-color:#FFEBE0; 
+    color:#EB7A38;
+}
+>>>>>>> 277f47c (added colours in style.css and updated Onboarder chapter)
