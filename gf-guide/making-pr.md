@@ -1,17 +1,25 @@
+<link href="style.css" rel="stylesheet">
+
 # Making a PR to Google Fonts
 {:.no_toc}
 
-> <span class="icon">🐸</span>  In order to submit a new family or an upgrade of an existing family on [fonts.google.com](https://fonts.google.com/), we must add or update the files held in the [google/fonts](https://github.com/google/fonts) repository. This guide will help users submit Pull Requests (PR) which can then be reviewed and merged by a team member.
->
-> Before submitting your pull request, make sure you have read the following documentations:
->
-> -   [Contributing to GF](production.md)
-> -   [Main contribution cases](onboarding.md)
-> -   [Font files requirements](requirements.md)
->
-> The PR process requires a good understanding of GitHub and command line tools. If this isn’t you, we suggest simply opening an issue using the `Add Font` or the `Update Font` template in the [issue tracker](https://github.com/google/fonts/issues), and waiting for a team member to ship the font for you.
->
-> As a general rule, **GF requires users to open an issue before submitting anything through a PR**. The PR is the formality that achieve a project, not its starting point. GF uses the issue tracker to define an agenda, generate statistics to estimate the work done, but also to archive decisions. Anything that is going out of GF standards, needs to be documented somewhere, and the issue tracker is here for that purpose. If your font isn’t submitted through an issue first, your PR may never be merged.
+<div class="callout">
+
+🐸 In order to submit a new family or an upgrade of an existing family on <a href="https://fonts.google.com/">fonts.google.com</a>, we must add or update the files held in the <a href="https://github.com/google/fonts">google/fonts</a> repository. This guide will help users submit Pull Requests (PR) which can then be reviewed and merged by a team member.
+
+Before submitting your pull request, make sure you have read the following documentations:
+
+<ul>
+    <li> <a href="./production.md">Contributing to GF</a></li>
+    <li> <a href="./onboarding.md">Main contribution cases</a></li>
+    <li> <a href="./requirements.md">Font files requirements</a></li>
+</ul>
+
+The PR process requires a good understanding of GitHub and command line tools. If this isn’t you, we suggest simply opening an issue using the <a href="https://github.com/google/fonts/issues/new?assignees=&labels=I+New+Font%2C+II+Submission&template=1_add-font.md&title=Add+%5BFont+Name%5D">Add Font</a> or the <a href="https://github.com/google/fonts/issues/new?assignees=&labels=I+Font+Upgrade&template=2_update-font.md&title=Update+%5BFont+Name%5D">Update Font</a> template in the <a href="https://github.com/google/fonts/issues">issue tracker</a>, and waiting for a team member to ship the font for you.
+
+As a general rule, **GF requires users to open an issue before submitting anything through a PR**. The PR is the formality that achieve a project, not its starting point. GF uses the issue tracker to define an agenda, generate statistics to estimate the work done, but also to archive decisions. Anything that is going out of GF standards, needs to be documented somewhere, and the issue tracker is here for that purpose. If your font isn’t submitted through an issue first, your PR may never be merged.
+
+</div>
 
 ## Table of contents
 {:.no_toc}

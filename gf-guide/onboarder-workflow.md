@@ -1,16 +1,28 @@
+<link href="style.css" rel="stylesheet">
+
 # Onboarder workflow guide
 {:.no_toc}
 
-> <span class="icon">🐝</span>  Google Fonts has become too big to be maintained as a simple community repository. The platform is now an API distributing and serving more than a thousand fonts families, and GF has started to see itself as a proper open-source foundry.
->
-> This means several things:
-> 1.  While in the past spontaneous contributions were still possible, today the specifics of the requirements and the security in place have made it complicated for a random user to make such a contribution. As an example, the continuous integration (CI) can only get triggered if a pull request (PR) has been made by someone with permission to the repo. If a user makes a PR, it will definitely draw some attention, but the PR often needs to be re-done by a team member. So while contribution to the repo is not in theory exclusive to the “onboarders” (paid contractors), it tends to be in practice.
-> 2.  GF has commissioned hundreds of fonts from professional type designers. To onboard these projects (from the moment the font family is “ready”), GF needs a toolchain that automates most of the repetitive tasks such as packaging the fonts (`gftools packager`) and generating QA proofs (`gftools qa`).
-> 3.  The workflow must leave no place to doubt about the status of the project. Indeed, once merged into the `google/fonts` repo, the font actually still travels through different servers before appearing on the API. It has often happened that fonts have never got into production — because they have been forgotten in the sandbox server or somewhere else.
-> This workflow described below was designed so that GF do not lose products during the validation process, to facilitate the validation process, and to keep people updated about the status of different projects. It requires active maintenance and regular updates from team members.
-> It seemed also important to keep the whole status of the repository in one place, mostly to avoid copy-pasting PR links all the time. GF, therefore, chose a complete Github-based workflow, making extensive use of the [issue tracker](https://github.com/google/fonts/issues), the [milestones](https://github.com/google/fonts/milestones) feature, the [project boards](https://github.com/google/fonts/projects), and the [continuous integration system](https://github.com/google/fonts/actions).
-> This guide will help team members to understand the validation process of a font family and the actions required from them to help that process.
-> → <https://google.github.io/fonts/> is a page updated weekly that reports on activity in the [google/fonts](https://github.com/google/fonts) repo.
+<div class="callout">
+
+🐝 Google Fonts has become too big to be maintained as a simple community repository. The platform is now an API distributing and serving more than a thousand fonts families, and GF has started to see itself as a proper open-source foundry.
+
+This means several things:
+
+1.  While in the past spontaneous contributions were still possible, today the specifics of the requirements and the security in place have made it complicated for a random user to make such a contribution. As an example, the continuous integration (CI) can only get triggered if a pull request (PR) has been made by someone with permission to the repo. If a user makes a PR, it will definitely draw some attention, but the PR often needs to be re-done by a team member. So while contribution to the repo is not in theory exclusive to the “onboarders” (paid contractors), it tends to be in practice.
+
+2.  GF has commissioned hundreds of fonts from professional type designers. To onboard these projects (from the moment the font family is “ready”), GF needs a toolchain that automates most of the repetitive tasks such as packaging the fonts (`gftools packager`) and generating QA proofs (`gftools qa`).
+
+3.  The workflow must leave no place to doubt about the status of the project. Indeed, once merged into the `google/fonts` repo, the font actually still travels through different servers before appearing on the API. It has often happened that fonts have never got into production — because they have been forgotten in the sandbox server or somewhere else.
+This workflow described below was designed so that GF do not lose products during the validation process, to facilitate the validation process, and to keep people updated about the status of different projects. It requires active maintenance and regular updates from team members.
+
+It seemed also important to keep the whole status of the repository in one place, mostly to avoid copy-pasting PR links all the time. GF, therefore, chose a complete Github-based workflow, making extensive use of the [issue tracker](https://github.com/google/fonts/issues), the [milestones](https://github.com/google/fonts/milestones) feature, the [project boards](https://github.com/google/fonts/projects), and the [continuous integration system](https://github.com/google/fonts/actions).
+
+This guide will help team members to understand the validation process of a font family and the actions required from them to help that process.
+
+→ <https://google.github.io/fonts/> is a page updated weekly that reports on activity in the [google/fonts](https://github.com/google/fonts) repo.
+
+</div>
 
 ## Table of contents
 {:.no_toc}

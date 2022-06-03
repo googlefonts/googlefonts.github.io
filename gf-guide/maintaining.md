@@ -1,8 +1,14 @@
+<link href="style.css" rel="stylesheet">
+
 # Maintaining your font repo
 {:.no_toc}
 
-> <span class="icon">🐰</span>  A font is not finished just because it has been released. From time to time, you may want to update your design; users may find and report issues with the font that need to be addressed, or Google may commission you to update your own or someone else’s font.
-> This guide will help designers to adopt good habits while maintaining their work within a GitHub repository.
+<div class="callout">
+
+🐰 A font is not finished just because it has been released. From time to time, you may want to update your design; users may find and report issues with the font that need to be addressed, or Google may commission you to update your own or someone else’s font.
+
+This guide will help designers to adopt good habits while maintaining their work within a GitHub repository.
+
 </div>
 
 ## Table of contents
