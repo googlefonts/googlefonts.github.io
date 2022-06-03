@@ -1,7 +1,9 @@
+<link href="style.css" rel="stylesheet">
+
 # Build the fonts
 {:.no_toc}
 
-<div style="background-color:#F6F8Fa; color:#121212; padding:1.2em 1.6em; border-radius: 1em; font-size:1em">
+<div class="callout">
 
 🦕 This chapter aims to guide designers in the building of their font binaries using open-source tools. Everything related to font file settings is detailed in these three chapters:
 <ul>
@@ -9,6 +11,7 @@
   <li><a href="./statics.md">Specifics to static fonts</a></li>
   <li><a href="./variable.md">Specifics to variable fonts</a></li>
 </ul>
+
 For practicality, the above information won’t be repeated in this chapter. If you read “you should follow the recommendation” or “respect the requirements” etc, please refer to the three chapters above. You will also understand this chapter better if you have read those first. 
 
 We recommend you install all the tools in a virtual environment, to avoid conflict between packages. Further information is detailed in this chapter:
