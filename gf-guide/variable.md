@@ -8,11 +8,11 @@
 🦥 The variable font technology has existed for a long time, but the format is actually quite recent (2016). It took time for OS and Apps to support this format, and some still didn’t make the step. In general, GF doesn’t quite recommend the use of variable fonts in documents made to be printed.
 
 Before proceeding, make sure:
+
 <ul>
   <li>you read the <a href="https://googlefonts.github.io/gf-guide/requirements.html">requirements for all font files</a></li>
   <li>you read the specific <a href="https://googlefonts.github.io/gf-guide/statics.html">requirements for static fonts</a></li>
 </ul>
-
 </div>
 
 ## Table of contents
@@ -185,7 +185,7 @@ The font file though should display values that make sense to *users and softwar
 
 See some [CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#introducing_the_variation_axis) that a developer would use, whatever the actual style name you gave to your instance:
 
-<div class="indented">
+<div>
   <ul>
     <li><span class="code-text">font-style: normal;</span> → will select the style at <span class="code-text">400</span</li>
     <li><span class="code-text">font-weight: bold;</span> → will select the style at <span class="code-text">700</span></li>
