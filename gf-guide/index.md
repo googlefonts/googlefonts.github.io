@@ -5,24 +5,28 @@
   🦜 This guide aims to help people to navigate requirements and recommendations to contribute to <a href="https://fonts.google.com">Google Fonts</a>. The contents covered here range from general knowledge to contextualize the <i>what</i> and <i>why</i> of some of the requirements as well as the specifics regarding technical aspects with some suggestions on how to comply with them. It covers different levels of information for both newcomers and more experienced contributors.
   <br><br>
   Therefore, <b>this documentation is not meant to be read at once</b>. If you are already familiar with some of the concepts, for example, some people are more empowered with the use of Github please you can skip some chapters and jump to the other bits that you may be looking for. The guidelines have been separated into small bits to facilitate the search of specific informations that you would need at a specific stage of the font production.
-  <br><br>
-  If you’re a <b>newcomer</b> and you want to <b>contribute</b> fonts to Google Fonts, whether commissioned or as a voluntary contribution, you should read the chapters marked with 
-  <span style="background-color:#B3E7FF; color:#2568B3; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.8">start</span> 
-  and 
-  <span style="background-color:#D6F6C1; color:#39803E; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.9">must&rarr;</span>. 
-  Additional resources are available under the 
-  <span style="background-color:#FFF5C7; color:#A68330; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.7">learn</span>
-  label.
-  <br><br>
-  If you are an <b>experienced</b> user or are <b>onboarding</b> fonts to Google Fonts, the chapters marked with 
-  <span style="background-color:#F7EBDC; color:#7E5424; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.8">team&nbsp;</span> 
-  and 
-  <span style="background-color:#E9E7F3; color:#65458F; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.8">nerd&nbsp;</span> 
-  are for you.
-  <br><br>
-  This guide also provide useful template documents to copy paste in your repository, these are marked with the 
-  <span style="background-color:#E5E5E5; color:#6B6B6B; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.7">templ</span>
-  label.
+  <ul>
+    <li>If you are a <b>newcomer</b> and you want to <b>contribute</b> fonts to Google Fonts, whether commissioned or as a voluntary contribution, you should read the chapters marked with 
+    <span style="background-color:#B3E7FF; color:#2568B3; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.8">start</span> 
+    and 
+    <span style="background-color:#D6F6C1; color:#39803E; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.9">must&rarr;</span>. 
+    Additional resources are available under the 
+    <span style="background-color:#FFF5C7; color:#A68330; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.7">learn</span>
+    label.
+    </li>
+    <li>
+    If you are an <b>experienced</b> user or are <b>onboarding</b> fonts to Google Fonts, the chapters marked with 
+    <span style="background-color:#F7EBDC; color:#7E5424; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.8">team&nbsp;</span> 
+    and 
+    <span style="background-color:#E9E7F3; color:#65458F; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.8">nerd&nbsp;</span> 
+    are for you.
+    </li>
+    <li>
+    The guide also provide details on required documents, some of them as templates you could copy paste in your repository, these are marked with the 
+    <span style="background-color:#E5E5E5; color:#6B6B6B; padding:0.2em; border-radius:0.4em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; font-size:0.7">templ</span>
+    label.
+    </li>
+    </ul>
 </div>
 
 
