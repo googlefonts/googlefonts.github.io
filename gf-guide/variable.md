@@ -186,12 +186,14 @@ The font file though should display values that make sense to *users and softwar
 See some [CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#introducing_the_variation_axis) that a developer would use, whatever the actual style name you gave to your instance:
 
 <div>
+
   <ul>
     <li><span class="code-text">font-style: normal;</span> → will select the style at <span class="code-text">400</span</li>
     <li><span class="code-text">font-weight: bold;</span> → will select the style at <span class="code-text">700</span></li>
     <li><span class="code-text">font-weight: 500</span> → a “Medium” weight style is expected.</li>
     <li><span class="code-text">font-variation-settings: 'wght' 300 'wdth' 75</span> → Condensed Light instance expected.</li>
   </ul>
+  
 </div>
 
 This is known by developers and software engineers who are supposed to have read the [OT Spec](https://docs.microsoft.com/en-us/typography/opentype/spec/) (which are rules for machines to support the OpenType font format) to know how to implement font support (or some guidelines summarizing them).
@@ -236,8 +238,7 @@ The axis mapping is set up in Glyphs using the `Axis Location` parameter (has to
 
 <figure>
 <img src="images/variable/Capture_decran_2022-04-22_a_12.20.05.png" style="width:1982px" alt="Since all .glyphs files is converted to UFO by fontmake in order to export font binaries, the way gftools supports that parameter mimics how it is rendered in a .designspacefile: the user values (input) on the left column, and the design coordinates (output) on the right." />
-
-<figcaption aria-hidden="true">Since all `.glyphs` files is converted to <code>UFO</code> by Fontmake in order to export font binaries, the way <code>gftools</code> supports that parameter mimics how it is rendered in a <code>.designspacefile</code>: the user values (input) on the <em>left</em> column, and the design coordinates (output) on the <em>right</em>.</figcaption>
+<figcaption aria-hidden="true">Since all <code>.glyphs</code> files is converted to <code>UFO</code> by Fontmake in order to export font binaries, the way <code>gftools</code> supports that parameter mimics how it is rendered in a <code>.designspacefile</code>: the user values (input) on the <em>left</em> column, and the design coordinates (output) on the <em>right</em>.</figcaption>
 </figure>
 
 Now that we have a better understanding of the axis mapping concept, let’s see the three tables linked to the axis mapping that are particularly important to translate correctly the design space: the `AVAR`, the `STAT`, the `FVAR` tables.
@@ -265,27 +266,27 @@ In the case of a linear interpolation, normalised design and user values on a `-
 
 <div id="58670f19-9bef-4b47-806e-bdbb85be6cc7" class="column-list">
 
-<div id="3a9c8f51-9d2b-4cb5-900d-806de71eecee" class="column" style="width:37.5%">
+  <div id="3a9c8f51-9d2b-4cb5-900d-806de71eecee" class="column" style="width:37.5%">
 
-<figure>
-<img src="images/variable/Capture_decran_2022-03-24_a_17.04.01.png" style="width:1318px" />
-</figure>
+    <figure>
+    <img src="images/variable/Capture_decran_2022-03-24_a_17.04.01.png" style="width:1318px" />
+    </figure>
 
-</div>
+  </div>
 
-<div id="d747a9da-7e84-46a2-ad46-5966ea20522c" class="column" style="width:62.5%">
+  <div id="d747a9da-7e84-46a2-ad46-5966ea20522c" class="column" style="width:62.5%">
 
-``` code
-<axes>
-   <axis tag="wght" name="Weight" minimum="300" maximum="700" default="400">
-     <map input="300" output="30"/>
-     <map input="400" output="40"/>
-     <map input="700" output="70"/>
-   </axis>
-</axes>
-```
+  ``` code
+  <axes>
+    <axis tag="wght" name="Weight" minimum="300" maximum="700" default="400">
+      <map input="300" output="30"/>
+      <map input="400" output="40"/>
+      <map input="700" output="70"/>
+    </axis>
+  </axes>
+  ```
 
-</div>
+  </div>
 
 </div>
 
@@ -310,29 +311,29 @@ Now let’s pretend that you want your Medium style actually thinner that what t
 
 <div id="4b113fbc-b8d6-4fe7-8801-582d3eb0d1d9" class="column-list">
 
-<div id="1d5b28b6-3aaa-4133-90da-738971f605dd" class="column" style="width:43.75%">
+  <div id="1d5b28b6-3aaa-4133-90da-738971f605dd" class="column" style="width:43.75%">
 
-<figure>
-<img src="images/variable/Capture_decran_2022-03-24_a_17.03.33.png" style="width:288px" />
-</figure>
+    <figure>
+    <img src="images/variable/Capture_decran_2022-03-24_a_17.03.33.png" style="width:288px" />
+    </figure>
 
-</div>
+  </div>
 
-<div id="47ca15ce-c4c0-4247-a490-9d33dec0a2fc" class="column" style="width:56.25%">
+  <div id="47ca15ce-c4c0-4247-a490-9d33dec0a2fc" class="column" style="width:56.25%">
 
-``` code
-<axes>
-    <axis tag="wght" name="Weight" minimum="300" maximum="700" default="400">
-      <map input="300" output="30"/>
-      <map input="400" output="40"/>
-      <map input="500" output="45"/>
-      <map input="600" output="62"/>
-      <map input="700" output="70"/>
-    </axis>
-  </axes>
-```
+  ``` code
+  <axes>
+      <axis tag="wght" name="Weight" minimum="300" maximum="700" default="400">
+        <map input="300" output="30"/>
+        <map input="400" output="40"/>
+        <map input="500" output="45"/>
+        <map input="600" output="62"/>
+        <map input="700" output="70"/>
+      </axis>
+    </axes>
+  ```
 
-</div>
+  </div>
 
 </div>
 
@@ -483,7 +484,7 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 ### Family does not exist on Google Fonts
 
--   RFonts should be unhinted (default setting of [gftools builder](https://googlefonts.github.io/gf-guide/build.html#gftools-builder).
+-   RFonts should be unhinted (default setting of [gftools builder](https://googlefonts.github.io/gf-guide/build.html#gftools-builder)).
 -   Run fonts through `gftools fix-nonhinting` if you don’t use `gftools builder`.
 
 ### Family already exists on Google Fonts and has manual TT hinting
@@ -498,11 +499,7 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 **How to use variable fonts:**
 
-<<<<<<< HEAD
 -   [Google Fonts Knowledge - variable fonts](https://fonts.google.com/knowledge/introducing_type/introducing_variable_fonts)
-=======
--   [Google Fonts Knowledge](https://fonts.google.com/knowledge/introducing_type/introducing_variable_fonts)
->>>>>>> 974c55b (Useful links fixes)
 -   [variablefonts.io](https://variablefonts.io/)
 -   [v-fonts.com](https://v-fonts.com/)
 -   [Developer Mozilla VF guide](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
