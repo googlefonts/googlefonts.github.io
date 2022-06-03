@@ -474,7 +474,7 @@ The fonts API is a system used by millions of people, with lots of different sof
 
 As we are in a transition period where some software is VF capable and others are not, or, the old versions of the newly VF capable software remains in use, according to that principle of backwards compatibility, when a variable font is onboarded to Google Fonts, the API provides "fallbacks", static fonts derived from the variable font, for legacy software. And, according to the systematization principle, the system goes along the axis, and derives a static font at each of the nine 100 values, if the axis covers that value (whether or not they are included in the designer's original design space), and names it accordingly. 
 
-For example if a font design space includes a `wght` axis ranging from `300` to `700` but only includes the `Light` `Regular` and `Bold` instances, the API will also generate the `Medium` and `SemiBold` static fonts by default.
+For example, if a font design space includes a `wght` axis ranging from `300` to `700` but only includes the `Light` `Regular` and `Bold` instances, the API will also generate the `Medium` and `SemiBold` static fonts by default.
 
 Those static font files are included in the download ZIP file alongside the VF font file, and they are served as web fonts to web browsers not capable of using VFs.
 
@@ -499,18 +499,16 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 **How to use variable fonts:**
 
--   <https://fonts.google.com/knowledge/topics/variable_fonts>
--   [https://variablefonts.io](https://variablefonts.io/)
--   [https://v-fonts.com](https://v-fonts.com/)
--   <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide>
+-   [Google Fonts Knowledge](https://fonts.google.com/knowledge/introducing_type/introducing_variable_fonts)
+-   [variablefonts.io](https://variablefonts.io/)
+-   [v-fonts.com](https://v-fonts.com/)
+-   [Developer Mozilla VF guide](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
 
 **Testing web pages dedicated to variable fonts:**
 
 -   [Samsa](https://www.axis-praxis.org/samsa/)
 -   [Dinamo](https://fontgauntlet.com)
 -   [TN type tool](https://typetools.typenetwork.com)
-
-<div>
 
 **You can view the name tables using these tools:**
 
@@ -520,9 +518,6 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 **Some font testing web pages allow you to view a selection of tables:**
 
--   <https://fontdrop.info/#/> → in the “data” tab
--   [https://fontgauntlet.com](https://fontgauntlet.com/) → if you click on the small search icon next to the font name
+-   [FontDrop](https://fontdrop.info/#/) → in the “data” tab
+-   [fontgauntlet](https://fontgauntlet.com/) → if you click on the small search icon next to the font name
 
-</div>
-
-</div>
