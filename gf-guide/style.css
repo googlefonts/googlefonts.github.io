@@ -44,16 +44,6 @@ mark {
     background-color:#FBFBFB; 
     color:#65458F;
 }
-<<<<<<< HEAD
-.code-text {
-    padding:0.2em 0.4em; 
-    border-radius:0.4em; 
-    font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; 
-    font-size:0.8em;
-    background-color:#f3f4f4; 
-    color:#1d2227;
-}
-=======
 .red{
     background-color:#FFE6E6; 
     color:#DB3335;
@@ -62,4 +52,11 @@ mark {
     background-color:#FFEBE0; 
     color:#EB7A38;
 }
->>>>>>> 277f47c (added colours in style.css and updated Onboarder chapter)
+.code-text {
+    padding:0.2em 0.4em; 
+    border-radius:0.4em; 
+    font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; 
+    font-size:0.8em;
+    background-color:#f3f4f4; 
+    color:#1d2227;
+}
