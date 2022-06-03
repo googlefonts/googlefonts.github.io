@@ -51,11 +51,11 @@ The issues should follow these rules:
 
 -   **They have labels**.
 
-    At least a *primary category label* (start with `I`). E.g `I Font bug`. Further information below.
+    At least a *primary category label* (start with `I`). E.g <mark class=grey>I Font bug</mark>. Further information below.
 
 -   **There should be a new issue for any new project commissioned** even before delivery from the designer
 
-    These should have the label `commissioned` and **should be into a milestone**. A non-commisioned project’s issue is assigned to a milestone if we plan to take care of it.
+    These should have the label <mark class="green">commissioned</mark> and **should be into a milestone**. A non-commisioned project’s issue is assigned to a milestone if we plan to take care of it.
 
 -   **Issues in milestones should be assigned to an onboarder.**
 
@@ -92,7 +92,7 @@ The issues should follow these rules:
 
 
 <figure>
-<img src="images/onboarder-workflow/Capture_decran_2022-03-18_a_12.02.19.png" style="width:2450px" />
+<img src="images/onboarder-workflow/Capture_decran_2022-03-18_a_12.02.19.png" style="width:2450px" alt="Screenshot of a quarter Milestone."/>
 </figure>
 
 ## Pull Requests
@@ -103,7 +103,6 @@ Example: <https://github.com/google/fonts/pull/4320>
 
 <figure>
 <img src="images/onboarder-workflow/Capture_decran_2022-02-23_a_14.15.22.png" style="width:2562px" alt="Screenshot of a Pull Request from google/fonts PR tab." />
-<figcaption aria-hidden="true">Screenshot of a Pull Request from google/fonts PR tab.</figcaption>
 </figure>
 
 PRs should follow these rules:
@@ -112,7 +111,7 @@ PRs should follow these rules:
 
 -   **They should be added to Traffic Jam** if the changes they bring should be carried out to the API.
 
--   **They should have labels.** At least 2: a *status label* (start with `-` ) and a *category label* (start with `I`). E.g `- Ready for review` `I New font`. More info about the labels in the section below.
+-   **They should have labels.** At least 2: a *status label* (start with `-` ) and a *category label* (start with `I`). E.g <mark class="yellow">- Ready for review</mark> <mark class="grey">I New font</mark>. More info about the labels in the section below.
 
 -   **The issue is closed when the linked PR is merged.** If the PR has been properly linked to an issue, then this action is automated. This can cause confusion in the sense that the users will think that when the issue is closed, then the issue is fixed. But the fix carried out by the PR only gets mirrored on the API after validation in the sandbox server and push to production (cf Pull Request Review below). Therefore a few weeks can pass in between. This system is not ideal, but it saves us from manually closing multiple issues when the changes are live.
 
@@ -120,11 +119,11 @@ PRs should follow these rules:
 
 -   **A reviewer should be assigned if the PR needs to be reviewed by someone in particular.**
 
-    Otherwise no need to do it, and the current reviewer will do it if your PR is `Ready for review`.
+    Otherwise no need to do it, and the current reviewer will do it if your PR is <mark class="yellow">Ready for review</mark>.
 
 -   **If the PR was made by a user or non-contributor to the repo, it could be assigned to a team member to take care of it.**
 
-    Most of the time, the “official” onboarder will have to re-do it because of credentials activating the CI, and general workflow and requirements that are often not respected by non-usual contributors.
+    Most of the time, a team member will have to re-do it because of credentials activating the CI, and general workflow and requirements that are often not respected by non-usual contributors.
 
 ## Project boards
 
@@ -140,7 +139,6 @@ PRs and issues are monitored in separate Github project boards.
 
     <figure>
     <img src="images/onboarder-workflow/Capture_decran_2022-02-23_a_14.39.16.png" style="width:2228px" alt="Screeshot of an onboarder’s project board" />
-    <figcaption aria-hidden="true">Screeshot of an onboarder’s project board</figcaption>
     </figure>
 
 -   **PRs are added to the Traffic Jam project.**
@@ -153,7 +151,6 @@ PRs and issues are monitored in separate Github project boards.
 
     <figure>
     <img src="images/onboarder-workflow/Capture_decran_2022-02-23_a_14.40.21.png" style="width:2968px" alt="Screenshot of the Traffic Jam project board that monitors PRs" />
-    <figcaption aria-hidden="true">Screenshot of the Traffic Jam project board that monitors PRs</figcaption>
     </figure>
 
 ## Labels
@@ -162,67 +159,105 @@ PRs and issues are monitored in separate Github project boards.
 
 ### Category
 
--   `I` Primary: Issue and PR \[grey\]
+**`I` Primary: Issue and PR** [grey]
     
-    -   `New font`, `Font upgrade`, `Designer profile`, `Description/Metadata/OFL`, `Font bug`, `Request`, `Axis Registry`, `API/Website/Platform`, `Tools/workflow/repo`, `Knowledge`
+<mark class ="grey">New font</mark> 
+<mark class ="grey">Font upgrade</mark> 
+<mark class ="grey">Designer profile</mark> 
+<mark class ="grey">Description/Metadata/OFL</mark> 
+<mark class ="grey">Font bug</mark> 
+<mark class ="grey">Request</mark> 
+<mark class ="grey">Axis Registry</mark> 
+<mark class ="grey">API/Website/Platform</mark> 
+<mark class ="grey">Tools/workflow/repo</mark> 
+<mark class ="grey">Knowledge</mark>
 
--   `II` Secondary:
+**`II` Secondary:**
     
-    -   prioritisation for new fonts \[light green\]: 1. <span class="mark highlight-teal_background">`Commissioned`</span>, 2. <span class="mark highlight-teal_background">`Accepted`</span>, 3. <span class="mark highlight-teal_background">`Submission`</span>
+- prioritisation for new fonts [light green]: 
+<mark class="green">Commissioned</mark> 
+<mark class="green">Accepted</mark> 
+<mark class="green">Submission</mark> 
 
-    -   primary script \[dark green\]: <span class="mark highlight-teal_background">`CJK`</span>, <span class="mark highlight-teal_background">`Indic`</span>, <span class="mark highlight-teal_background">`Arabic`</span>, <span class="mark highlight-teal_background">`Icon`</span> *→ you can create new label if the script is not there*
+-   primary script [dark green]: 
+<mark class="darkgreen">CJK</mark> 
+<mark class="darkgreen">Indic</mark> 
+<mark class="darkgreen">Arabic</mark> 
+<mark class="darkgreen">Icon</mark> 
+*→ you can create new label if the script is not there*
 
--   `III` Additional: to specify the type of upgrade \[light orange\]
+**`III` Additional: to specify the type of upgrade** [light orange]
     
-    -   <span class="mark highlight-orange_background">`Expand glyphset`</span>, <span class="mark highlight-orange_background">`Expand styles`</span>, <span class="mark highlight-orange_background">`Improve rendering`</span>, <span class="mark highlight-orange_background">`Small Fix`</span>, <span class="mark highlight-orange_background">`VF Replacement`</span>
+<mark class="orange">Expand glyphset</mark> 
+<mark class="orange">Expand styles</mark> 
+<mark class="orange">Improve rendering</mark> 
+<mark class="orange">Small Fix</mark> 
+<mark class="orange">VF Replacement</mark>
 
 ### Status
 
 Status labels are having meaningful colours:
 
--   `YELLOW | Process can continue to next step`<span class="mark highlight-yellow"> </span>
--   `ORANGE | Process in progress`<span class="mark highlight-orange"> </span>
--   `BLUE | Process pending until more information`<span class="mark highlight-blue"> </span>
--   `RED | Process is on hold, fixes required before proceeding`<span class="mark highlight-red"> </span>
--   <span class="mark highlight-gray">`BLACK | Process is blocked and should begin again`</span>
+<mark class="yellow">YELLOW | Process can continue to next step</mark>
+
+<mark class="orange">ORANGE | Process in progress`</mark>
+
+<mark class="blue">BLUE | Process pending until more information</mark>
+
+<mark class="red">RED | Process is on hold, fixes required before proceeding</mark>
+
+<mark class="black">BLACK | Process is blocked and should begin again`</mark>
 
 Labels also have meaningful prefixes:
 
 -   `-` **Submissions:** (Issues and PRs)
 
-    <span class="mark highlight-yellow_background">`Ready for review`</span>,<span class="mark highlight-yellow"> </span><span class="mark highlight-orange_background">`In progress`</span>, <span class="mark highlight-orange_background">`Upstream is working on it`</span>.
+    <mark class="yellow">Ready for review</mark>, 
+    <mark class="orange">In progress</mark>, 
+    <mark class="orange">Upstream is working on it</mark>.
 
 -   `—-` **Result of review:** (Issues and PRs)
     
     -   Usually for font bugs
 
-        <span class="mark highlight-red_background">`Bad rendering`</span>,<span class="mark highlight-red"> </span><span class="mark highlight-red_background">`Glyphset Issues`</span>,<span class="mark highlight-red"> </span><span class="mark highlight-red_background">`Needs design work`</span>,<span class="mark highlight-red"> </span><span class="mark highlight-red_background">`Requires axis registration`</span>
+        <mark class="red">Bad rendering</mark> 
+        <mark class="red">Glyphset Issues</mark> 
+        <mark class="red">Needs design work</mark> 
+        <mark class="red">Requires axis registration</mark>
 
     -   Usually after reviewing repo/PR:
 
-        `Needs Meta/Desc/License changes`, <span class="mark highlight-red_background">`Needs upstream resolution`</span>, <span class="mark highlight-red_background">`Regression`</span>, `Missing sources`, <span class="mark highlight-red_background">`Has RFN`</span>
+        <mark class="red">Needs Meta/Desc/License changes</mark> 
+        <mark class="red">Needs upstream resolution</mark> 
+        <mark class="red">Regression</mark> 
+        <mark class="red">Missing sources</mark> 
+        <mark class="red">Has RFN</mark>
 
     -   Needs more info:
 
-        <span class="mark highlight-blue_background">`Needs confirmation`</span>, <span class="mark highlight-blue_background">`Needs Dave’s opinion`</span>
+        <mark class="blue">Needs confirmation</mark> 
+        <mark class="blue">Needs Dave’s opinion</mark>
 
--   `—--` **Servers status:** (Only *merged* PRs)
+-   —-- **Servers status:** (Only *merged* PRs)
     
     -   Lists:
 
-        <span class="mark highlight-blue_background">`to sandbox`</span>, <span class="mark highlight-brown_background">`to production`</span>
+        <mark class="blue">to sandbox</mark> 
+        <mark class="orange">to production</mark>
 
     -   Servers:
 
-        <span class="mark highlight-yellow_background">`In sandbox`</span>, <span class="mark highlight-teal_background">`Live`</span>
+        <mark class="yellow">In sandbox</mark> 
+        <mark class="green">Live</mark>
 
     -   Problem after merging:
 
-        <span class="mark highlight-gray_background">`Blocked`</span>, <span class="mark highlight-red_background">`API Tofu`</span>
+        <mark class="black">Blocked</mark> 
+        <mark class="red">API Tofu</mark>
 
 ## The servers validation process
 
-1.  The `google/fonts` repo is linked to a `dev-sandbox`. A few hours after a change to the repo (once a PR gets merged for example), this change is reflected on that server.
+1.  The google/fonts repo is linked to a dev-sandbox. A few hours after a change to the repo (once a PR gets merged for example), this change is reflected on that server.
 
     → These servers act like steps in a pipeline: the change must be uploaded into the `dev-sandbox` before it can be be pushed in the `sandbox`. Similarly, a change can’t be pushed to `production` (live server) if it hasn’t been pushed to `sandbox` first.
 
@@ -234,35 +269,35 @@ Labels also have meaningful prefixes:
 
 3.  When the changes are pushed, they get reviewed again. If validated in `sandbox`, they can be pushed to `production`.
 
-    → The status label can be changed to `to production`.
+    → The status label can be changed to <mark class="brown">to production</mark>.
 
     → The push to sandbox and production are staggered biweekly, so each week should happen at least on push to one of the server
 
-    → When the changes are pushed to production, the label can be changed to `Live`
+    → When the changes are pushed to production, the label can be changed to <mark class="green">Live</mark>
 
 ## Example of workflow
 
 1.  An issue is opened by a user to request the addition of a new font family: “My New Font”. The font is ready to be onboarded upstream, and the user has complied with all the requirements.
     -  **Title:** `Add My New Font` 
-    -  **labels:** `New font`, `Submission`
+    -  **labels:** <mark class="grey">New font</mark>, <mark class="green">Submission</mark>
 
-2.  A team member inspects the font files and sees good potential. They add the label `Need's Dave opinion` to check with Dave Crossland (Program manager) if the font is worth being onboarded.
+2.  A team member inspects the font files and sees good potential. They add the label <mark class="blue">Need's Dave opinion</mark> to check with Dave Crossland (Program manager) if the font is worth being onboarded.
 
-3.  Dave is thrilled, he loves the font and wants it in the library. He removes the label `Need's Dave opinion` and adds the label `Accepted`. He adds the issue to a convenient milestone, and during a quarterly meeting where milestones are assessed, he will assign the issue to an onboarder and it gets added to their project board.
+3.  Dave is thrilled, he loves the font and wants it in the library. He removes the label <mark class="blue">Need's Dave opinion</mark> and adds the label <mark class="green">Accepted</mark>. He adds the issue to a convenient milestone, and during a quarterly meeting where milestones are assessed, he will assign the issue to an onboarder and it gets added to their project board.
 
-4.  The onboarder starts to work on the project upstream. They add the label `In progress`. While doing QA on the font, they notice some design issues that need to be addressed by the designer. They add the label `Needs upstream resolution` to the issue to notify that this project is on hold until the issues are resolved by the designer.
+4.  The onboarder starts to work on the project upstream. They add the label <mark class="orange">In progress</mark>. While doing QA on the font, they notice some design issues that need to be addressed by the designer. They add the label <mark class="red">Needs upstream resolution</mark> to the issue to notify that this project is on hold until the issues are resolved by the designer.
 
 5.  The designer makes the requested changes and notifies the onboarder by commenting on the issue. *Et cetera*.
 
 6.  When the font is built and the QA is good, the onboarder ships the font to `google/fonts` by making a Pull Request.
     -  They add the PR into the` Traffic Jam` project.
-    -  They add at least 2 labels to the PR: a *category* (`new`, `upgrade`, `designer`…) and a *status* (`in progress`, `ready for review`…).
+    -  They add at least 2 labels to the PR: a *category* (<mark class="grey">new</mark>, <mark class="grey">upgrade</mark>, <mark class="grey">designer</mark>…) and a *status* (<mark class="orange">in progress</mark>, <mark class="yellow">ready for review</mark>…).
 
-7.  Then, the PR gets reviewed by a team member. The status label is updated according to the result of that review. This time, the reviewer spotted a regression in the spacing, and needs to know if it is a mistake or an improvement. They post an image of the issue and add the label `Needs confirmation`.
+7.  Then, the PR gets reviewed by a team member. The status label is updated according to the result of that review. This time, the reviewer spotted a regression in the spacing, and needs to know if it is a mistake or an improvement. They post an image of the issue and add the label <mark class="blue">Needs confirmation</mark>.
 
-8.  The onboarder checks with the designer, who decides that the regression is a mistake. They change the PR label to `Needs upstream resolution`.
+8.  The onboarder checks with the designer, who decides that the regression is a mistake. They change the PR label to <mark class="red">Needs upstream resolution</mark>.
 
-9.  Once the mistake is fixed, the onboarder updates the PR with the newly build fonts, and changes the status label to `Ready for review`. Now we go back to the same process as before, but this time the reviewer approves the PR and merge it.
+9.  Once the mistake is fixed, the onboarder updates the PR with the newly build fonts, and changes the status label to <mark class="yellow">Ready for review</mark>. Now we go back to the same process as before, but this time the reviewer approves the PR and merge it.
 
 10. When the PR gets merged, it goes automatically in the the column `Just merged / in transit` of the `Traffic Jam` project. A few hours later, the new font will appear in the `dev-sandbox`, and if it looks good, the label `to sandbox` can be added to signify that this font can be pushed to sandbox.
 
