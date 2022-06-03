@@ -4,23 +4,22 @@
 
 <div class="callout">
 
-  🦜 This guide aims to help people to navigate requirements and recommendations to contribute to <a href="https://fonts.google.com">Google Fonts</a>. The contents covered here range from general knowledge to contextualize the <i>what</i> and <i>why</i> of some of the requirements as well as the specifics regarding technical aspects with some suggestions on how to comply with them. It covers different levels of information for both newcomers and more experienced contributors.
-  <br><br>
-  Therefore, <b>this documentation is not meant to be read at once</b>. If you are already familiar with some of the concepts, for example, some people are more empowered with the use of Github please you can skip some chapters and jump to the other bits that you may be looking for. The guidelines have been separated into small bits to facilitate the search of specific informations that you would need at a specific stage of the font production.
-  <ul>
-    <li>If you are a <b>newcomer</b> and you want to <b>contribute</b> fonts to Google Fonts, whether commissioned or as a voluntary contribution, you should read the chapters marked with 
-    <mark class="blue">start</mark> and <mark class="green"><b>must&rarr;</b></mark>. Additional resources are available under the <mark class="yellow">learn</mark> label.
-    </li>
-    <li>
-    If you are an <b>experienced</b> user or are <b>onboarding</b> fonts to Google Fonts, the chapters marked with 
-    <mark class="brown">team&nbsp;</mark> and <mark class="purple">nerd&nbsp;</mark> are for you.
-    </li>
-    <li>
-    The guide also provide details on required documents, some of them as templates you could copy paste in your repository, these are marked with the 
-    <mark class="grey">templ</mark>
-    label.
-    </li>
-    </ul>
+🦜 This guide aims to help people to navigate requirements and recommendations to contribute to <a href="https://fonts.google.com">Google Fonts</a>. The contents covered here range from general knowledge to contextualize the <i>what</i> and <i>why</i> of some of the requirements as well as the specifics regarding technical aspects with some suggestions on how to comply with them. It covers different levels of information for both newcomers and more experienced contributors.
+
+Therefore, <b>this documentation is not meant to be read at once</b>. If you are already familiar with some of the concepts, for example, some people are more empowered with the use of Github please you can skip some chapters and jump to the other bits that you may be looking for. The guidelines have been separated into small bits to facilitate the search of specific informations that you would need at a specific stage of the font production.
+
+<ul>
+  <li>If you are a <b>newcomer</b> and you want to <b>contribute</b> fonts to Google Fonts, whether commissioned or as a voluntary contribution, you should read the chapters marked with 
+  <mark class="blue">start</mark> and <mark class="green"><b>must&rarr;</b></mark>. Additional resources are available under the <mark class="yellow">learn</mark> label.
+  </li>
+  <li>
+  If you are an <b>experienced</b> user or are <b>onboarding</b> fonts to Google Fonts, the chapters marked with <mark class="brown">team&nbsp;</mark> and <mark class="purple">nerd&nbsp;</mark> are for you.
+  </li>
+  <li>
+  The guide also provide details on required documents, some of them as templates you could copy paste in your repository, these are marked with the <mark class="grey">templ</mark>label.
+  </li>
+</ul>
+
 </div>
 
 
