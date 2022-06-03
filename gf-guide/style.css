@@ -1,0 +1,38 @@
+.callout {
+    background-color:#F6F6F6; 
+    color:#121212; 
+    padding:1.2em 1.6em; 
+    border-radius: 1em; 
+    font-size:1em
+}
+mark {
+    padding:0.2em 0.4em; 
+    border-radius:0.4em; 
+    font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; 
+    font-size:0.8em
+}
+.green{
+    background-color:#D6F6C1; 
+    color:#39803E;
+}
+.blue{
+    background-color:#B3E7FF; 
+    color:#2568B3;
+}
+.yellow{
+    background-color:#FFF5C7; 
+    color:#A68330;
+}
+.brown
+{
+    background-color:#F7EBDC; 
+    color:#7E5424;
+}
+.grey{
+    background-color:#E5E5E5; 
+    color:#6B6B6B;
+}
+.purple{
+    background-color:#E9E7F3; 
+    color:#65458F;
+}
