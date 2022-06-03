@@ -1,8 +1,15 @@
+<link href="style.css" rel="stylesheet">
+
 # Promo / Marketing
 {:.no_toc}
 
-> <span class="icon">🦕</span>  When a font is released for the first time on Google Fonts, or if it benefited from a major upgrade, we will tweet to promote it from [@googlefonts](https://twitter.com/googlefonts).
-> In order to tweet about a new release, Google Fonts requires 2-3 expressive images different from the ones used in the [README file](readmefile.md), which usually correspond to a sample image with a different size. If the Family is variable, an animation is welcome. See [this tweet](https://twitter.com/googlefonts/status/1487038395918565377) as an example.
+<div class="callout">
+
+🦕 When a font is released for the first time on Google Fonts, or if it benefited from a major upgrade, we will tweet to promote it from <a href="https://twitter.com/googlefonts">@googlefonts</a>.
+
+In order to tweet about a new release, Google Fonts requires 2-3 expressive images different from the ones used in the <a href="./readmefile.md">README file</a>, which usually correspond to a sample image with a different size. If the Family is variable, an animation is welcome. See <a href="https://twitter.com/googlefonts/status/1487038395918565377">this tweet</a> as an example.
+
+</div>
 
 ## Table of contents
 {:.no_toc}

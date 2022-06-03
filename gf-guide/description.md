@@ -1,9 +1,11 @@
+<link href="style.css" rel="stylesheet">
+
 # Description file
 {:.no_toc}
 
-<div style="background-color:#F6F8Fa; color:#121212; padding:1.2em 1.6em; border-radius: 1em; font-size:1em">
+<div class="callout">
 
-🦉 The <mark style="background-color:#D4D4D4; padding:0.1em 0.3em; border-radius:0.2em; font-size:0.9em; font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;">DESCRIPTION.en_us.html</mark> file contains the information that appears in the `#About` section on any specimen page of <a href="https://fonts.google.com">Google Fonts</a> in order to give further information about the font family.
+🦉 The <mark class="grey">DESCRIPTION.en_us.html</mark> file contains the information that appears in the `#About` section on any specimen page of <a href="https://fonts.google.com">Google Fonts</a> in order to give further information about the font family.
 
 This file will be created by the team member who will be onboarding the font. Thus the actual file a designer should write carefully would be the <a href="./readmefile.md">README.md</a> file as the information provided in it is crucial to building a good <a href="https://fonts.google.com/specimen/Brygada+1918#about">#About</a> section.
 
