@@ -185,14 +185,12 @@ The font file though should display values that make sense to *users and softwar
 
 See some [CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#introducing_the_variation_axis) that a developer would use, whatever the actual style name you gave to your instance:
 
-<div>
+<div class="indented">
 
-  <ul>
-    <li><span class="code-text">font-style: normal;</span> → will select the style at <span class="code-text">400</span</li>
-    <li><span class="code-text">font-weight: bold;</span> → will select the style at <span class="code-text">700</span></li>
-    <li><span class="code-text">font-weight: 500</span> → a “Medium” weight style is expected.</li>
-    <li><span class="code-text">font-variation-settings: 'wght' 300 'wdth' 75</span> → Condensed Light instance expected.</li>
-  </ul>
+-   <code>font-style: normal;</code> → will select the style at <code>400</code><br>
+-   <code>font-weight: bold;</code> → will select the style at <code>700</code><br>
+-   <code>font-weight: 500</code> → a “Medium” weight style is expected.<br>
+-   <code>font-variation-settings: 'wght' 300 'wdth' 75</code> → Condensed Light instance expected.<br>
   
 </div>
 
