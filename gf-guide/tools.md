@@ -1,8 +1,14 @@
+<link href="style.css" rel="stylesheet">
+
 # **Tools and Dependencies**
 
-> <span class="icon">🐰</span>  Fonts published to Google Fonts comply with Libre Fonts standards, so Google Fonts requires that fonts can be produced with open source tools. This ensures at least the first three [freedoms](culture.md). Before starting your project, you should set up a working environment with all the tools you will need in development.
+<div class="callout">
 
-This guide will help users set up their environment to build the fonts with open source tools that Google Fonts is helping to develop.
+🐰 Fonts published to Google Fonts comply with Libre Fonts standards, so Google Fonts requires that fonts can be produced in one step with open source tools. This ensures at least the first <a href="./culture.md">freedom</a> of the four on which the Movement is sustained. 
+<br><br>
+Before starting your project, you should set up a working environment with all the tools you will need in development. This guide will help users set up their environment to build the fonts with open source tools that Google Fonts is helping to develop.
+
+</div>
 
 ## Required knowledge
 
@@ -12,7 +18,7 @@ Font developers are expected to understand the following:
 -   How to manage Python packages/tools using `pip`.
 -   A basic understanding of the command-line. Users should be able to traverse directories and understand the commands `cd`, `ls`, `mv`, `cp`.
 
-See the [useful links](tools.md) section at the bottom of the page to bring you up to speed.
+See the useful links section at the bottom of this page to bring you up to speed.
 
 ## Setting up a working environment
 
@@ -20,7 +26,7 @@ Most of these tools are Python-based, but you may need to install some other too
 
 To work with Google Fonts, you would need to install at least:
 
--   <span class="mark highlight-blue_background">[**Python 3.10**](https://www.python.org/downloads/)</span> or above — to be able to run all the other tools
+-   [**Python 3.10**](https://www.python.org/downloads/) or above — to be able to run all the other tools
 -   <span class="mark highlight-blue_background">[**gftools**](https://github.com/googlefonts/gftools)</span> — a set of tools used for working with the Google Fonts collection
 -   <span class="mark highlight-blue_background">[**Fontbakery**](https://github.com/googlefonts/fontbakery)</span> — a command-line tool for checking the quality of font projects.
 
