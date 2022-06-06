@@ -1,6 +1,7 @@
 <link href="style.css" rel="stylesheet">
 
 # **Tools and Dependencies**
+{:.no_toc}
 
 <div class="callout">
 
@@ -9,6 +10,11 @@
 Before starting your project, you should set up a working environment with all the tools you will need in development. This guide will help users set up their environment to build the fonts with open source tools that Google Fonts is helping to develop.
 
 </div>
+
+## Table of contents
+{:.no_toc}
+* TOC goes here
+{:toc}
 
 ## Required knowledge
 
