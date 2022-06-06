@@ -1,18 +1,30 @@
+<link href="style.css" rel="stylesheet">
+
 # **Tools and Dependencies**
+{:.no_toc}
 
-> <span class="icon">🐰</span>  Fonts published to Google Fonts comply with Libre Fonts standards, so Google Fonts requires that fonts can be produced with open source tools. This ensures at least the first three [freedoms](culture.md). Before starting your project, you should set up a working environment with all the tools you will need in development.
+<div class="callout">
 
-This guide will help users set up their environment to build the fonts with open source tools that Google Fonts is helping to develop.
+🐰 Fonts published in Google Fonts comply with the Libre Fonts standards. Therefore, it is required that the fonts can be produced in a single step with open source tools. This ensures compliance with at least the first of the four <a href="./culture.md">freedoms</a> on which the Movement is based.
+<br><br>
+Before starting your project, you should set up a working environment with all the tools you will need in development. This guide will help users set up their environment to build the fonts with open source tools that Google Fonts is helping to develop.
+
+</div>
+
+## Table of contents
+{:.no_toc}
+* TOC goes here
+{:toc}
 
 ## Required knowledge
 
 Font developers are expected to understand the following:
 
--   Shell scripting (usually bash).
+-   Shell scripting (usually `bash`).
 -   How to manage Python packages/tools using `pip`.
 -   A basic understanding of the command-line. Users should be able to traverse directories and understand the commands `cd`, `ls`, `mv`, `cp`.
 
-See the [useful links](tools.md) section at the bottom of the page to bring you up to speed.
+See the useful links section at the bottom of this page to bring you up to speed.
 
 ## Setting up a working environment
 
@@ -20,9 +32,9 @@ Most of these tools are Python-based, but you may need to install some other too
 
 To work with Google Fonts, you would need to install at least:
 
--   <span class="mark highlight-blue_background">[**Python 3.10**](https://www.python.org/downloads/)</span> or above — to be able to run all the other tools
--   <span class="mark highlight-blue_background">[**gftools**](https://github.com/googlefonts/gftools)</span> — a set of tools used for working with the Google Fonts collection
--   <span class="mark highlight-blue_background">[**Fontbakery**](https://github.com/googlefonts/fontbakery)</span> — a command-line tool for checking the quality of font projects.
+-   [**Python 3.10**](https://www.python.org/downloads/) or above — to be able to run all the other tools
+-   [**gftools**](https://github.com/googlefonts/gftools) — a set of tools used for working with the Google Fonts collection
+-   [**Fontbakery**](https://github.com/googlefonts/fontbakery) — a command-line tool for checking the quality of font projects.
 
 ### Shell and command-line
 
@@ -123,7 +135,7 @@ pip install -r requirements.txt
 
 ### Fontbakery
 
-Fontbakery is a quality assurance (QA, testing) tool. It runs a series of checks on the technical correctness of the exported fonts based on a vendor’s profile. You can find more documentation about it in the GitHub repository [googlefonts/fontbakery](https://github.com/googlefonts/fontbakery).
+Fontbakery is a quality assurance (QA) testing tool. It runs a series of checks on the technical correctness of the exported fonts based on a vendor’s profile. You can find more documentation about it in the GitHub repository [googlefonts/fontbakery](https://github.com/googlefonts/fontbakery).
 
 To install Fontbakery run the command:
 

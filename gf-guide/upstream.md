@@ -1,12 +1,22 @@
+<link href="style.css" rel="stylesheet">
+
 # Upstream repository structure
 {:.no_toc}
 
-> <span class="icon">🐰</span>  Font projects must be hosted on GitHub (or another VCS), and the repositories must be public. Google Fonts accepts private repositories whilst the project is still in progress projects are private, but they must be public once completed.
-> This guide will help users understand what and why directories, files, and documents are needed in a Google Fonts project.
-> Before starting this reading, make sure that:
-> -   [You have become familiar with Libre Font culture](culture.md)
-> -   [You already know how to use Github](hosting.md)
-> -   [You have installed all the required tools](tools.md)
+<div class="callout">
+
+🐰 Font projects must be hosted on GitHub (or another VCS), and the repositories must be public. Google Fonts accepts private repositories whilst the project is still in progress projects are private, but they must be public once completed.
+
+This guide will help users understand what and why directories, files, and documents are needed in a Google Fonts project.
+
+Before starting this reading, make sure that:
+<ul>
+    <li><a href="./culture.md">You have become familiar with Libre Font culture</a></li>
+    <li><a href="./hosting.md">You already know how to use Github</a></li>
+    <li><a href="./tools.md">You have installed all the required tools</a></li>
+</ul>
+
+</div>
 
 ## Table of contents
 {:.no_toc}
@@ -82,7 +92,7 @@ Each file or dir has the following purpose:
 
     A directory containing the design source files and scripts used to build the fonts. Sources must not be kept in another directory.
 
-    There must be either a `config.yaml` or `build.sh` file that allows building the fonts in one command.
+    There must be either a `config.yaml` or `build.sh` file that allows building the fonts in one command. For more context you could read about the [Scalable font production](https://googlefonts.github.io/gf-guide/production.html#scalable-font-production) principle.
 
     -   **[config.yaml](https://github.com/googlefonts/Unified-Font-Repository/blob/main/sources/config.yaml)**
 
@@ -93,6 +103,7 @@ Each file or dir has the following purpose:
     -   **[build.sh](https://github.com/googlefonts/lexend/blob/main/sources/build.sh)**
 
         A Bash script to build the fonts in one command if the build process requires more than the single config.yaml file to build the font families of this repo.
+        
 -   [**fonts**](requirements.md)
 
     A directory containing font binaries or subdirectories for each font format. If your project provides multiple formats, do not include them all in one folder. Create a folder for each format e.g `fonts/otf`, `fonts/ttf`, `fonts/webfonts`. The [Builder](build.md) told does that by default.
