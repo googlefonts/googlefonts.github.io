@@ -1,12 +1,22 @@
+<link href="style.css" rel="stylesheet">
+
 # Upstream repository structure
 {:.no_toc}
 
-> <span class="icon">🐰</span>  Font projects must be hosted on GitHub (or another VCS), and the repositories must be public. Google Fonts accepts private repositories whilst the project is still in progress projects are private, but they must be public once completed.
-> This guide will help users understand what and why directories, files, and documents are needed in a Google Fonts project.
-> Before starting this reading, make sure that:
-> -   [You have become familiar with Libre Font culture](culture.md)
-> -   [You already know how to use Github](hosting.md)
-> -   [You have installed all the required tools](tools.md)
+<div class="callout">
+
+🐰 Font projects must be hosted on GitHub (or another VCS), and the repositories must be public. Google Fonts accepts private repositories whilst the project is still in progress projects are private, but they must be public once completed.
+
+This guide will help users understand what and why directories, files, and documents are needed in a Google Fonts project.
+
+Before starting this reading, make sure that:
+<ul>
+    <li><a href="./culture.md">You have become familiar with Libre Font culture</a></li>
+    <li><a href="./hosting.md">You already know how to use Github</a></li>
+    <li><a href="./tools.md">You have installed all the required tools</a></li>
+</ul>
+
+</div>
 
 ## Table of contents
 {:.no_toc}
