@@ -6,7 +6,7 @@
 <div class="callout">
 
 🐸 In order to submit a new family or an upgrade of an existing family on <a href="https://fonts.google.com/">fonts.google.com</a>, we must add or update the files held in the <a href="https://github.com/google/fonts">google/fonts</a> repository. This guide will help users submit Pull Requests (PR) which can then be reviewed and merged by a team member.
-
+<br><br>
 Before submitting your pull request, make sure you have read the following documentations:
 
 <ul>
@@ -16,8 +16,8 @@ Before submitting your pull request, make sure you have read the following docum
 </ul>
 
 The PR process requires a good understanding of GitHub and command line tools. If this isn’t you, we suggest simply opening an issue using the <a href="https://github.com/google/fonts/issues/new?assignees=&labels=I+New+Font%2C+II+Submission&template=1_add-font.md&title=Add+%5BFont+Name%5D">Add Font</a> or the <a href="https://github.com/google/fonts/issues/new?assignees=&labels=I+Font+Upgrade&template=2_update-font.md&title=Update+%5BFont+Name%5D">Update Font</a> template in the <a href="https://github.com/google/fonts/issues">issue tracker</a>, and waiting for a team member to ship the font for you.
-
-As a general rule, **GF requires users to open an issue before submitting anything through a PR**. The PR is the formality that achieve a project, not its starting point. GF uses the issue tracker to define an agenda, generate statistics to estimate the work done, but also to archive decisions. Anything that is going out of GF standards, needs to be documented somewhere, and the issue tracker is here for that purpose. If your font isn’t submitted through an issue first, your PR may never be merged.
+<br><br>
+As a general rule, <b>GF requires users to open an issue before submitting anything through a PR</b>. The PR is the formality that achieve a project, not its starting point. GF uses the issue tracker to define an agenda, generate statistics to estimate the work done, but also to archive decisions. Anything that is going out of GF standards, needs to be documented somewhere, and the issue tracker is here for that purpose. If your font isn’t submitted through an issue first, your PR may never be merged.
 
 </div>
 
@@ -95,7 +95,7 @@ Now that you have the general scheme in mind, let’s dive into more details. Yo
 >    **Note:**
 >     -   If you add a font, this will create 2 files: a dummy description for the font in HTML format, and a `METADATA.pb` file which gives instructions to the API.
 >    -   If you upgrade the font, it will simply update `METADATA.pb`.
-6.  Open [DESCRIPTION.en_us.html](description.md) and update it.
+6.  Open the [DESCRIPTION.en_us.html](description.md) and update it.
 7.  Open and check if [METADATA.pb](metadata.md) is not saying anything absurd.
 8.  When you are happy with everything, commit and push to the origin’s branch (same branch name you already created) with this message: `<FontName> : <font-version> added`.
 

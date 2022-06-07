@@ -13,7 +13,7 @@
 </ul>
 
 For practicality, the above information won’t be repeated in this chapter. If you read “you should follow the recommendation” or “respect the requirements” etc, please refer to the three chapters above. You will also understand this chapter better if you have read those first. 
-
+<br><br>
 We recommend you install all the tools in a virtual environment, to avoid conflict between packages. Further information is detailed in this chapter:
 <ul>
   <li><a href="./tools.md">Tools and Dependencies</a></li>
