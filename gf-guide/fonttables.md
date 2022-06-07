@@ -1,14 +1,25 @@
+<link href="style.css" rel="stylesheet">
+
 # The font tables explained
 {:.no_toc}
 
-> <span class="icon">🦦</span>  Understanding the what are the font tables and what they do is a core skill in font engineering.
-> **You can view the name tables using these tools:**
-> -   [Font Table Viewer](https://glyphsapp.com/tools/fonttableviewer)
-> -   [DTL OT Master](https://www.fontmaster.nl/otmaster.html)
-> -   [ttx](https://fonttools.readthedocs.io/en/latest/ttx.html), a practical command line tool of [fonttools](https://github.com/fonttools/fonttools).
-> **Some font testing web pages allow you to view a selection of tables:**
-> -   <https://fontdrop.info/#/> → in the “data” tab
-> -   [https://fontgauntlet.com](https://fontgauntlet.com/) → if you click on the small search icon next to the font name
+<div class="callout">
+
+🦦 Understanding the what are the font tables and what they do is a core skill in font engineering.
+<br><br>
+<b>You can view the name tables using these tools:</b>
+<ul>
+    <li><a href="https://glyphsapp.com/tools/fonttableviewer" target="_blank">Font Table Viewer</a></li>
+    <li><a href="https://www.fontmaster.nl/otmaster.html" target="_blank">DTL OT Master</a></li>
+    <li><a href="https://fonttools.readthedocs.io/en/latest/ttx.html" target="_blank">ttx</a>, a practical command line tool of <a href="https://github.com/fonttools/fonttools" target="_blank">fonttools</a></li>.
+</ul>
+<b>Some font testing web pages allow you to view a selection of tables:</b>
+<ul>
+    <li><a href="https://fontdrop.info/#">fontdrop</a> → in the “data” tab</li>
+    <li><a href="https://fontgauntlet.com">fontgauntlet</a> → if you click on the small search icon next to the font name</li>
+</ul>
+
+</div>
 
 ## Table of contents
 {:.no_toc}
