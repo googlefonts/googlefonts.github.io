@@ -1,10 +1,17 @@
+<link href="style.css" rel="stylesheet">
+
 # Designer Profile
 {:.no_toc}
 
-> <span class="icon">🦥</span>  This guide is a technical review of the different requirements related to the [catalog/designers](https://github.com/google/fonts/tree/main/catalog/designers) directory in the [google/fonts](https://github.com/google/fonts) repo.
-> Each credited entity on Google Fonts should have a registered profile in [google/fonts/catalog/designers](https://github.com/google/fonts/tree/main/catalog/designers). This profile appears in the [about](https://fonts.google.com/specimen/Praise?sort=date#about) section of the specimen page.
-> You can request the addition or modification of your name, bio, and image using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeMwHN8J213ZaxHrr5lHCrX56HY_NjGrWB8o604g98YxuMrdA/viewform).
+<div>
 
+🦥  This guide is a technical review of the different requirements related to the <a href="https://github.com/google/fonts/tree/main/catalog/designers">catalog/designers</a> directory in the <a href="https://github.com/google/fonts">google/fonts</a> repo.
+<br><br>
+Each credited entity on Google Fonts should have a registered profile in <a href="https://github.com/google/fonts/tree/main/catalog/designers">google/fonts/catalog/designers</a>. This profile appears in the <code>Designer</code> subsection in the <a href="https://fonts.google.com/specimen/Praise?sort=date#about">about</a> section of the specimen page.
+<br><br>
+You can request the addition or modification of your name, bio, and image using <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMwHN8J213ZaxHrr5lHCrX56HY_NjGrWB8o604g98YxuMrdA/viewform">this form</a>.
+
+</div>
 
 ## Table of contents
 {:.no_toc}
@@ -17,12 +24,14 @@
 
     All the names present in [AUTHORS.txt](authors.md) will be credited in the font’s specimen page on Google Fonts. The names should be written with all necessary signs and marks to be considered correct.
 -   **There is one bio per designer and per foundry mentioned.**
--   **The text should be around 100 words.**
+-   **The text should be around 100 words** (so it should be more than 200 characters and less than 1000 characters).
 -   **The text must be written in the 3rd person.**
 -   **We recommend one or two links directing to a webpage or social media.**
 -   **Bio must be written in English and names translated in Latin script.**
 
-### About section - Foundry information
+### Designer section &rarr; Foundry information
+
+The Foundry information is not mandatory for every project, but for those that list one as part of the Authors, e.g. <a href="https://fonts.google.com/specimen/Castoro" target="_blank">Castoro</a>.
 
 **What to include:**
 
@@ -35,7 +44,7 @@
 
 > *Based in New York and London, Commercial Type is a joint venture between Paul Barnes and Christian Schwartz, who have collaborated since 2004 on various typeface projects, beginning with the award-winning Guardian Egyptian, through to typefaces for clients worldwide including Vanity Fair; Helsingin Sanomat; T, The New York Times Style Magazine; MoMA; Visa; and Chobani. Commercial Type has also published typefaces that have helped to define the look of the last 10 years, including Graphik, Druk, and Dala Floda.* [*commercialtype.com*](https://commercialtype.com)
 
-### About section - Designer information
+### Designer section &rarr; Designer information
 
 **What to include:**
 
@@ -50,7 +59,7 @@
 
 ## Registering a designer profile
 
-You wrote a biography and you are happy with it. Now you want it to be added to Google Fonts so it appears in the `#About` section of the font family linked to that bio. As a designer or a foundry, you would just have [to submit it through this form](https://docs.google.com/forms/d/1HinKkdCPbHTaiXxakeaUpDo1qsW3P9ZFemK65yWkru0/edit), and a team member will register the profile for you.
+Once you wrote a biography and you are happy with it, you want it to be added to Google Fonts so that it appears in the `#About` section of the font family linked to that bio. As a designer or a foundry, you would just have [to submit it through this form](https://docs.google.com/forms/d/1HinKkdCPbHTaiXxakeaUpDo1qsW3P9ZFemK65yWkru0/edit), and a team member will register the profile for you.
 
 As a developer or a team member, you may want to know the process for registering or updating a new profile. You will find below all the necessary information to that effect.
 
@@ -69,7 +78,7 @@ As a developer or a team member, you may want to know the process for registerin
     ```
 -   **The directory is named correctly.**
 
-    The directory should use the designer or the company’s name using ascii characters only and no hyphen.
+    The directory should use the designer or the company’s name using ASCII characters only and no hyphen.
 
     E.g `José María Ribagorda` → `josemariaribagorda`
 -   `info.pb` **has proper name and file path.**
@@ -100,7 +109,7 @@ As a developer or a team member, you may want to know the process for registerin
 
     
 
-    -   The filename should be the same as the directory name (ascii characters only).
+    -   The filename should be the same as the directory name (ASCII characters only).
 -   `bio.html` **contains all necessary informations.**
 
     The bio.html file is an HTML snippet (similar to the description file) that contains a short bio of the designer.
@@ -137,18 +146,13 @@ As a developer or a team member, you may want to know the process for registerin
     gftools add-designer path/to/local/designer/dir "José María Ribagorda" --img_path path/to/josemariaribagorda.png --spreadsheet path/to/speadsheet.xls
     ```
 
-    1.  If you don’t use the `--spreadsheet` argument, then the script will insert a blank `bio.html` that you will have to update manually.
+    -  If you don’t use the `--spreadsheet` argument, then the script will insert a blank `bio.html` that you will have to update manually.
 
-    
+    -  If there are several links, make sure there are separated with a bar sign ` | `.
 
-    2.  If there are several links, make sure there are separated with a bar sign ` | `.
 3.  You will need to make a manual Pull Request to GF to add the profile to the main repo. Follow [the guideline to make PR to google/fonts](making-pr.md).
     -   Please create one PR per profile.
 
-    
-
     -   In your PR you should mention a font (one is sufficient) the profile is linked to.
 
-    
-
-    -   Don’t forget to add the labels `Designer profile` and `Ready for review`, and add the PR to Traffic Jam (cf [The onboarder workflow guide](onboarder-workflow.md)). A team member will review the PR and merge it. Once done, it should appear on the platform in 2-4 weeks.
+    -   Don’t forget to add the labels <mark class=grey>Designer profile</mark> and <mark class="yellow">Ready for review</mark>, and add the PR to Traffic Jam (cf [The onboarder workflow guide](onboarder-workflow.md)). A team member will review the PR and merge it. Once done, it should appear on the platform in 2-4 weeks.
