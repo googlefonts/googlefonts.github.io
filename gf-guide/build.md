@@ -250,8 +250,8 @@ For example: [Texturina](https://github.com/Omnibus-Type/Texturina/blob/master/s
             values:
             - name: Condensed
               rangeMinValue: 40
-                    nominalValue: 50
-                    rangeMaxValue: 75
+              nominalValue: 50
+              rangeMaxValue: 75
                 ...
     ```
 -   **If you want a STAT table format 4** (multi axes) you should add this after defining the axes, at the same level as the “normal” stat definition:
