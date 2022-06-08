@@ -23,11 +23,12 @@
 	.st17{fill:#2568B3;}
 	.st18{fill:#CCEFFF;}
 	.st19{fill:#5D5D5D;}
-	.st20{fill:#E5E5E5;}
-	.st21{fill:#66468F;}
-	.st22{fill:#E8E7F4;}
-	.st23{fill:#FF8700;}
-	.st24{fill:#FFEFD4;}
+	.st20{fill:#2E2E2E;}
+	.st21{fill:#E5E5E5;}
+	.st22{fill:#66468F;}
+	.st23{fill:#E8E7F4;}
+	.st24{fill:#FF8700;}
+	.st25{fill:#FFEFD4;}
 </style>
 <rect x="234.8" y="296.6" class="st0" width="78.6" height="78.6"/>
 <rect x="750.9" y="639.3" class="st1" width="41.1" height="78.6"/>
@@ -63,14 +64,15 @@
 </g>
 <g>
 	<rect x="422" y="313.6" class="st19" width="78.6" height="78.6"/>
-	<rect x="422" y="392.6" class="st20" width="78.6" height="78.6"/>
+	<rect x="422" y="313.6" class="st20" width="39.3" height="78.6"/>
+	<rect x="422" y="392.6" class="st21" width="78.6" height="78.6"/>
 </g>
 <g>
-	<rect x="606" y="313.5" class="st21" width="78.6" height="78.6"/>
-	<rect x="606" y="392.5" class="st22" width="78.6" height="78.6"/>
+	<rect x="606" y="313.5" class="st22" width="78.6" height="78.6"/>
+	<rect x="606" y="392.5" class="st23" width="78.6" height="78.6"/>
 </g>
 <g>
-	<rect x="698.3" y="313.5" class="st23" width="78.6" height="78.6"/>
-	<rect x="698.3" y="392.5" class="st24" width="78.6" height="78.6"/>
+	<rect x="698.3" y="313.5" class="st24" width="78.6" height="78.6"/>
+	<rect x="698.3" y="392.5" class="st25" width="78.6" height="78.6"/>
 </g>
 </svg>
