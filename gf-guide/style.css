@@ -16,16 +16,16 @@ mark {
     color:#39803E;
 }
 .darkgreen{
-    background-color:#39803E; 
+    background-color:#1c7322; 
     color:#D6F6C1;
 }
 .blue{
-    background-color:#CCEFFF; 
+    background-color:#ccefff; 
     color:#2568B3;
 }
 .yellow{
     background-color:#FFF5C7; 
-    color:#A68330;
+    color:#9C7D00;
 }
 .brown
 {
@@ -49,8 +49,8 @@ mark {
     color:#DB3335;
 }
 .orange{
-    background-color:#FFEBE0; 
-    color:#EB7A38;
+    background-color:#FFEFD4; 
+    color:#FF8700;
 }
 /* .code-text {
     padding:0.2em 0.4em; 

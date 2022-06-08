@@ -216,7 +216,7 @@ Status labels are having meaningful colours:
 
 <mark class="yellow">YELLOW | Process can continue to next step</mark>
 
-<mark class="orange">ORANGE | Process in progress`</mark>
+<mark class="orange">ORANGE | Process in progress</mark>
 
 <mark class="blue">BLUE | Process pending until more information</mark>
 
