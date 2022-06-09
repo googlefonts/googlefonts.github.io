@@ -1,4 +1,6 @@
-# Tools and Dependencies
+<link href="style.css" rel="stylesheet">
+
+# **Tools and Dependencies**
 {:.no_toc}
 
 <div class="callout">
