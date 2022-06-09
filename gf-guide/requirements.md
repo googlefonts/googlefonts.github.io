@@ -7,9 +7,9 @@
 
 🦥  The following are the guidelines that apply to all fonts, regardless of their format or whether you want to add or upgrade a font.
 <br><br>
-Then, depending on the format you are working on, we have different specifications for static and variable fonts. Please read the <a href="./statics.md">guidelines for static fonts</a> and the <a href="./variable.md">guidelines for variable fonts</a>.
+Then, depending on the format you are working on, we have different specifications for static and variable fonts. Please read the <a href="./statics">guidelines for static fonts</a> and the <a href="./variable">guidelines for variable fonts</a>.
 <br><br>
-It is also recommended to read the <a href="./onboarding.md">guidelines to add new fonts or upgrade them in Google Fonts</a> before continuing.
+It is also recommended to read the <a href="./onboarding">guidelines to add new fonts or upgrade them in Google Fonts</a> before continuing.
 
 </div>
 

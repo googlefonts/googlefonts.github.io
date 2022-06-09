@@ -7,7 +7,7 @@
 
 🐸 Vertical metrics are used to determine the space between two lines of text. Some metrics are meant for Mac, other for Windows; and are interpreted differently according to web or desktop usage.
 <br><br>
-Throughout countless threads and discussions, GF decided to make the priority on cross-platform compatibility and therefore apply the following requirements. Read them carefully because once a family is onbaorded, vertical metrics are meant to remain always the same to avoid regression, as mentioned in <a href="./onboarding.md">Adding & upgrading fonts to Google Fonts</a>.
+Throughout countless threads and discussions, GF decided to make the priority on cross-platform compatibility and therefore apply the following requirements. Read them carefully because once a family is onbaorded, vertical metrics are meant to remain always the same to avoid regression, as mentioned in <a href="./onboarding">Adding & upgrading fonts to Google Fonts</a>.
 <br><br>
 Please note that CJK fonts (Chinese-Japanese-Korean scripts) are treated as special cases, and should follow the instructions at the end of the document.
 

@@ -11,7 +11,7 @@ Bear in mind:
 <ul>
   <li>You can use virtual machines to test your fonts into different environments (practical for testing on older machine and therefore ensure backward compatibility).</li>
   <li> Installing consecutively different versions of a font family will lead to cache issues. So don’t forget to remove any remaining version of the font, restart the app, open the font menu and quit the app before installing any other version of the font. You may even need to clean the caches and then restart your computer. Another trick would be to append some kind of version number suffix to the family name until final version.</li>
-  <li>If you plan on having both `.otf` and `.ttf` fonts on the same machine, we recommend you use a different name (specifically name ID 1, 4 and 6) to avoid any potential conflict.</li>
+  <li>If you plan on having both <code>.otf</code> and <code>.ttf</code> fonts on the same machine, we recommend you use a different name (specifically name ID 1, 4 and 6) to avoid any potential conflict.</li>
 </ul>
 
 </div>

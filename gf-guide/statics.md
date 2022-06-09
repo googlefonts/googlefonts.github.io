@@ -7,13 +7,13 @@
 
 🐓  “Static” fonts is a way of saying traditional, *non-variable* fonts.
 <br><br>
-Before going further, make sure you read carefully the <a href="./requirements.md">overall fonts requirements</a>. And please refer to the <a href="./variable.md">requirements about Variable Fonts</a> if you are developping a VF.
+Before going further, make sure you read carefully the <a href="./requirements">overall fonts requirements</a>. And please refer to the <a href="./variable">requirements about Variable Fonts</a> if you are developping a VF.
 <br><br>
 Note that GF only onboards OTF-TTF files: <code>.ttf</code> — so TrueType fonts only! The upstream repo can of course contain OTF-CFF <code>.otf</code> fonts, as well as webfonts <code>.woff2</code>. GF redirects users to the upstream repo to find these files if they are not satisfied with the one served by the API.
 <br><br>
 Even if the statics are available in the upstream repository, GF may not onboard them:
 <ul>
-    <li>If a VF exists and the statics are autohinted, then only the variable font is onboarded. The API will generate statics fonts by instanciating the VF: they will be served to browsers which doesn’t support the variable font technology, and they will be available in a downloadable zip file (`download family` button in any specimen pages). Please read about the <a href="https://googlefonts.github.io/gf-guide/variable.html#instantiated-static-fonts">instantiated static fonts</a></li>
+    <li>If a VF exists and the statics are autohinted, then only the variable font is onboarded. The API will generate statics fonts by instanciating the VF: they will be served to browsers which doesn’t support the variable font technology, and they will be available in a downloadable zip file (<code>download family</code> button in any specimen pages). Please read about the <a href="https://googlefonts.github.io/gf-guide/variable.html#instantiated-static-fonts">instantiated static fonts</a></li>
     <li>If a VF exists and the statics are manually hinted, then both formats are onboarded.</li>
     <li>If there is no VF, then the statics available upstream will be onboarded.</li>
 </ul>

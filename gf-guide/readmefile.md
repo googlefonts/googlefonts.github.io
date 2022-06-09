@@ -8,7 +8,7 @@
 🦦  The README.md is a page you find at the root of any repository. It is the first readable text that a user can see when arriving in the repository on GitHub’s website.
 <ul>
     <li>GF wants to encourage you to share anything you think may be interesting or relevant about your typeface such as the inspiration, process, challenges you encountered, etc. So this is your moment. You can go wild and write a complete article if you feel like it.</li>
-    <li>Take into account that this file will be taken as the base information that would be used to create the <a href="./description.md">Description file</a> that feeds the <code>#About</code> section of the specimen page of your font(s) on <code>fonts.google.com/Family+Name#about</code>, e.g. <b>Roboto</b> <a href="https://fonts.google.com/specimen/Roboto#about" target="_blank">https://fonts.google.com/specimen/Roboto#about</a>
+    <li>Take into account that this file will be taken as the base information that would be used to create the <a href="./description">Description file</a> that feeds the <code>#About</code> section of the specimen page of your font(s) on <code>fonts.google.com/Family+Name#about</code>, e.g. <b>Roboto</b> <a href="https://fonts.google.com/specimen/Roboto#about" target="_blank">https://fonts.google.com/specimen/Roboto#about</a>
     <br>
     As a designer, you would need to care about the <code>README.md</code> rather than creating the description file, as the actual team member who will onboard the font will be able to create the latter if the first is well developed.</li>
 </ul>
