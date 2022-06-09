@@ -11,9 +11,9 @@ This guide will help users understand what and why directories, files, and docum
 
 Before starting this reading, make sure that:
 <ul>
-    <li><a href="./culture.md">You have become familiar with Libre Font culture</a></li>
-    <li><a href="./hosting.md">You already know how to use Github</a></li>
-    <li><a href="./tools.md">You have installed all the required tools</a></li>
+    <li><a href="./culture">You have become familiar with Libre Font culture</a></li>
+    <li><a href="./hosting">You already know how to use Github</a></li>
+    <li><a href="./tools">You have installed all the required tools</a></li>
 </ul>
 
 </div>

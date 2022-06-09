@@ -7,7 +7,7 @@
 
 🦉 The <mark class="grey">DESCRIPTION.en_us.html</mark> file contains the information that appears in the <code>#About</code> section on any specimen page of <a href="https://fonts.google.com">Google Fonts</a> in order to give further information about the font family.
 <br><br>
-This file will be created by the team member who will be onboarding the font. Thus the actual file a designer should write carefully would be the <a href="./readmefile.md">README.md</a> file as the information provided in it is crucial to building a good <a href="https://fonts.google.com/specimen/Brygada+1918#about">#About</a> section.
+This file will be created by the team member who will be onboarding the font. Thus the actual file a designer should write carefully would be the <a href="./readmefile">README.md</a> file as the information provided in it is crucial to building a good <a href="https://fonts.google.com/specimen/Brygada+1918#about">#About</a> section.
 
 </div>
 

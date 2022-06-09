@@ -5,7 +5,7 @@
 
 <div class="callout">
 
-🐰 Fonts published in Google Fonts comply with the Libre Fonts standards. Therefore, it is required that the fonts can be produced in a single step with open source tools. This ensures compliance with at least the first of the four <a href="./culture.md">freedoms</a> on which the Movement is based.
+🐰 Fonts published in Google Fonts comply with the Libre Fonts standards. Therefore, it is required that the fonts can be produced in a single step with open source tools. This ensures compliance with at least the first of the four <a href="./culture">freedoms</a> on which the Movement is based.
 <br><br>
 Before starting your project, you should set up a working environment with all the tools you will need in development. This guide will help users set up their environment to build the fonts with open source tools that Google Fonts is helping to develop.
 

@@ -10,9 +10,9 @@
 Before submitting your pull request, make sure you have read the following documentations:
 
 <ul>
-    <li> <a href="./production.md">Contributing to GF</a></li>
-    <li> <a href="./onboarding.md">Main contribution cases</a></li>
-    <li> <a href="./requirements.md">Font files requirements</a></li>
+    <li> <a href="./production">Contributing to GF</a></li>
+    <li> <a href="./onboarding">Main contribution cases</a></li>
+    <li> <a href="./requirements">Font files requirements</a></li>
 </ul>
 
 The PR process requires a good understanding of GitHub and command line tools. If this isn’t you, we suggest simply opening an issue using the <a href="https://github.com/google/fonts/issues/new?assignees=&labels=I+New+Font%2C+II+Submission&template=1_add-font.md&title=Add+%5BFont+Name%5D">Add Font</a> or the <a href="https://github.com/google/fonts/issues/new?assignees=&labels=I+Font+Upgrade&template=2_update-font.md&title=Update+%5BFont+Name%5D">Update Font</a> template in the <a href="https://github.com/google/fonts/issues">issue tracker</a>, and waiting for a team member to ship the font for you.
