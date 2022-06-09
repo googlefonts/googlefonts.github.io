@@ -16,12 +16,12 @@ This means several things:
 </ol>
 
 This workflow described below was designed so that GF do not lose products during the validation process, to facilitate the validation process, and to keep people updated about the status of different projects. It requires active maintenance and regular updates from team members.
-
+<br><br>
 It seemed also important to keep the whole status of the repository in one place, mostly to avoid copy-pasting PR links all the time. GF, therefore, chose a complete Github-based workflow, making extensive use of the <a href="https://github.com/google/fonts/issues">issue tracker</a>, the <a href="https://github.com/google/fonts/milestones">milestones</a> feature, the <a href="https://github.com/google/fonts/projects">project boards</a>, and the <a href="https://github.com/google/fonts/actions">continuous integration system</a>.
-
+<br><br>
 This guide will help team members to understand the validation process of a font family and the actions required from them to help that process.
-
-→ <https://google.github.io/fonts/> is a page updated weekly that reports on activity in the [google/fonts](https://github.com/google/fonts) repo.
+<br><br>
+→ <a href="https://google.github.io/fonts/">google.github.io/fonts</a> is a page updated weekly that reports on activity in the <a href="https://github.com/google/fonts">google/fonts</a> repo.
 
 </div>
 
@@ -216,7 +216,7 @@ Status labels are having meaningful colours:
 
 <mark class="yellow">YELLOW | Process can continue to next step</mark>
 
-<mark class="orange">ORANGE | Process in progress`</mark>
+<mark class="orange">ORANGE | Process in progress</mark>
 
 <mark class="blue">BLUE | Process pending until more information</mark>
 

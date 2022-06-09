@@ -12,26 +12,24 @@
 	.st6{fill:#BEBDBF;}
 	.st7{fill:#D6E5BD;}
 	.st8{fill:#39803E;}
-	.st9{fill:#A6832F;}
-	.st10{fill:#FFF1AB;}
-	.st11{fill:#65458F;}
-	.st12{fill:#E9E7F3;}
-	.st13{fill:#7E5424;}
-	.st14{fill:#F7EBDC;}
-	.st15{fill:#CC4127;}
-	.st16{fill:#FEE0CE;}
-	.st17{fill:#FFE6E6;}
-	.st18{fill:#2568B3;}
-	.st19{fill:#CCEFFF;}
-	.st20{fill:#5D5D5D;}
+	.st9{fill:#1C7322;}
+	.st10{fill:#9C7D00;}
+	.st11{fill:#FFF1AB;}
+	.st12{fill:#65458F;}
+	.st13{fill:#E9E7F3;}
+	.st14{fill:#7E5424;}
+	.st15{fill:#F7EBDC;}
+	.st16{fill:#FFE6E6;}
+	.st17{fill:#2568B3;}
+	.st18{fill:#CCEFFF;}
+	.st19{fill:#5D5D5D;}
+	.st20{fill:#2E2E2E;}
 	.st21{fill:#E5E5E5;}
 	.st22{fill:#66468F;}
 	.st23{fill:#E8E7F4;}
-	.st24{fill:#EB7A38;}
-	.st25{fill:#FFEBE0;}
+	.st24{fill:#FF8700;}
+	.st25{fill:#FFEFD4;}
 </style>
-<image style="overflow:visible;enable-background:new    ;" width="1504" height="429" xlink:href="76E281CD2136EB2C.png"  transform="matrix(0.3558 0 0 0.3558 29.0606 10.7871)">
-</image>
 <rect x="234.8" y="296.6" class="st0" width="78.6" height="78.6"/>
 <rect x="750.9" y="639.3" class="st1" width="41.1" height="78.6"/>
 <rect x="52.9" y="194.3" class="st2" width="78.6" height="78.6"/>
@@ -42,33 +40,31 @@
 <g>
 	<rect x="52.9" y="392.3" class="st7" width="78.6" height="78.6"/>
 	<rect x="52.9" y="313.3" class="st8" width="79.1" height="78.6"/>
+	<rect x="52.9" y="313.3" class="st9" width="39.3" height="78.6"/>
 </g>
 <g>
-	<rect x="145.2" y="313.6" class="st9" width="78.6" height="78.6"/>
-	<rect x="145.2" y="392.6" class="st10" width="78.6" height="78.6"/>
+	<rect x="145.2" y="313.6" class="st10" width="78.6" height="78.6"/>
+	<rect x="145.2" y="392.6" class="st11" width="78.6" height="78.6"/>
 </g>
 <g>
-	<rect x="329.8" y="313.6" class="st11" width="78.6" height="78.6"/>
-	<rect x="329.8" y="392.6" class="st12" width="78.6" height="78.6"/>
+	<rect x="329.8" y="313.6" class="st12" width="78.6" height="78.6"/>
+	<rect x="329.8" y="392.6" class="st13" width="78.6" height="78.6"/>
 </g>
 <g>
-	<rect x="513.8" y="313.6" class="st13" width="78.6" height="78.6"/>
-	<rect x="513.8" y="392.6" class="st14" width="78.6" height="78.6"/>
+	<rect x="513.8" y="313.6" class="st14" width="78.6" height="78.6"/>
+	<rect x="513.8" y="392.6" class="st15" width="78.6" height="78.6"/>
 </g>
 <g>
-	<rect x="237.5" y="313.6" class="st15" width="78.6" height="78.6"/>
+	<rect x="237.5" y="313.6" class="st4" width="78.6" height="78.6"/>
 	<rect x="237.5" y="392.6" class="st16" width="78.6" height="78.6"/>
 </g>
 <g>
-	<rect x="276.8" y="313.6" class="st4" width="39.3" height="78.6"/>
-	<rect x="276.8" y="392.6" class="st17" width="39.3" height="78.6"/>
+	<rect x="329.7" y="313.6" class="st17" width="78.6" height="78.6"/>
+	<rect x="329.9" y="392.6" class="st18" width="78.4" height="78.6"/>
 </g>
 <g>
-	<rect x="329.7" y="313.6" class="st18" width="78.6" height="78.6"/>
-	<rect x="329.9" y="392.6" class="st19" width="78.4" height="78.6"/>
-</g>
-<g>
-	<rect x="422" y="313.6" class="st20" width="78.6" height="78.6"/>
+	<rect x="422" y="313.6" class="st19" width="78.6" height="78.6"/>
+	<rect x="422" y="313.6" class="st20" width="39.3" height="78.6"/>
 	<rect x="422" y="392.6" class="st21" width="78.6" height="78.6"/>
 </g>
 <g>

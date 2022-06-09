@@ -6,9 +6,9 @@
 <div class="callout">
 
 🦉 The design community and the tech community traditionally have very different cultures. Designer culture often involves the work of a single artist-designer that usually prefers to protect their artwork, while software developers generally cannot operate in such a solitary fashion: their work, even if it is copyrighted, is often based on the work of others and more subject to fragmented authorship.
-
+<br><br>
 Since fonts are software, Google Fonts works at the intersection of the two communities and, for many reasons, has embraced the Libre software culture to promote the creation, development, and distribution of typefaces. This culture encourages participation and learning while facilitating sharing and collaboration through the openness of the work and a more flexible licensing schema.
-
+<br><br>
 It is helpful for type designers to understand the typical operation of a software project. This page aims to help type designers involved in starting or participating in Libre Font projects to know how libre software projects operate.
 
 </div>
@@ -20,7 +20,7 @@ It is helpful for type designers to understand the typical operation of a softwa
 
 ## Four Freedoms
 
-As part of the Open Source initiative, Libre Fonts Culture is rooted in the four freedoms of Free Software. The concept of *freedom* refers to more than just open availability and monetary cost but is at the core of the movement. This is the reason we use the term *libre*, rather than “free,” to avoid the unwanted associations with “free” as in “gratis.”
+As part of the Open Source initiative, Libre Fonts Movement is rooted in the four freedoms of Free Software. The concept of *freedom* refers to more than just open availability and monetary cost but is at the core of the movement. This is the reason we use the term *libre*, rather than “free,” to avoid the unwanted associations with “free” as in “gratis.”
 
 The Four Freedoms are intended to establish and preserve the aim of giving the users the power over tools such as software or, in this case, fonts, and they also help contextualize some of the requirements.
 

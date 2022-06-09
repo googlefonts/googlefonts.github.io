@@ -16,16 +16,16 @@ mark {
     color:#39803E;
 }
 .darkgreen{
-    background-color:#39803E; 
+    background-color:#1c7322; 
     color:#D6F6C1;
 }
 .blue{
-    background-color:#CCEFFF; 
+    background-color:#ccefff; 
     color:#2568B3;
 }
 .yellow{
     background-color:#FFF5C7; 
-    color:#A68330;
+    color:#9C7D00;
 }
 .brown
 {
@@ -37,11 +37,11 @@ mark {
     color:#6B6B6B;
 }
 .black{
-    background-color:#6B6B6B; 
+    background-color:#2E2E2E; 
     color:#E5E5E5;
 }
 .purple{
-    background-color:#FBFBFB; 
+    background-color:#e8e7f4; 
     color:#65458F;
 }
 .red{
@@ -49,14 +49,14 @@ mark {
     color:#DB3335;
 }
 .orange{
-    background-color:#FFEBE0; 
-    color:#EB7A38;
+    background-color:#FFEFD4; 
+    color:#FF8700;
 }
-.code-text {
+/* .code-text {
     padding:0.2em 0.4em; 
     border-radius:0.4em; 
     font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; 
     font-size:0.8em;
     background-color:#f3f4f4; 
     color:#1d2227;
-}
+} */
