@@ -7,7 +7,7 @@
 
 🐸 Vertical metrics are used to determine the space between two lines of text. Some metrics are meant for Mac, other for Windows; and are interpreted differently according to web or desktop usage.
 <br><br>
-Throughout countless threads and discussions, GF decided to make the priority on cross-platform compatibility and therefore apply the following requirements. Read them carefully because once a family is onbaorded, vertical metrics are meant to remain always remain the same to avoid regression, as mentioned in <a href="./onboarding">Adding & upgrading fonts to Google Fonts</a>.
+Throughout countless threads and discussions, GF decided to make the priority on cross-platform compatibility and therefore apply the following requirements. Read them carefully because once a family is onbaorded, vertical metrics are meant to remain always the same to avoid regression, as mentioned in <a href="./onboarding">Adding & upgrading fonts to Google Fonts</a>.
 <br><br>
 Please note that CJK fonts (Chinese-Japanese-Korean scripts) are treated as special cases, and should follow the instructions at the end of the document.
 
@@ -39,7 +39,7 @@ GF doesn't want this because they all do it differently.
 | \[OS/2\] usWinAscent    | winAscent                         | \[OS/2\] WinAscent     | openTypeOS2WinAscent     |
 | \[OS/2\] usWinDescent   | winDescent                        | \[OS/2\] WinDescent    | openTypeOS2WinDescent    |
 
-*For brevity, we'll refer to the 3 sets of metrics as* `Typo`*,* `Hhea`*,* `Win`*.*
+*For brevity, we will refer to the 3 sets of metrics as* `Typo`*,* `Hhea`*,* `Win`*.*
 
 **3. Vertical metrics must be consistent across a family.**
 
@@ -112,7 +112,7 @@ Please keep in mind that this calculation is to be set according to the specific
 -   Google Fonts is trying to push designers to include proper support of the mark-to-mark feature allowing combination of diacritics and display of non-encoded accented glyphs. Pay attention to your anchor placement so that, if you combine breve and acute for example, you don't end up with a severe interline glyph clashing. Or adapt your vertical metrics with a certain measure, to find the best compromise.
 -   Google Fonts wishes to update fonts to expand glyhpsets, and therefore language support, and therefore accessibility. If your intention is to have, for example, Vietnamese coverage or Thai script in a next update, you can already anticipate the vertical metrics to avoid regressions later.
 
-For more info about the relationship between diacritics and line height, you can read this document: (to do: link Viviana's doc).
+<!-- For more info about the relationship between diacritics and line height, you can read this document: (to do: link Viviana's doc). -->
 
 ## Concrete cases:
 

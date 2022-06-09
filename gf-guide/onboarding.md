@@ -1,13 +1,24 @@
+<link href="style.css" rel="stylesheet">
+
 # Adding & upgrading fonts to Google Fonts
 {:.no_toc}
 
-> <span class="icon">🐸</span>  Any contribution to Google Fonts should be first submitted through the [google/fonts issue tracker](https://github.com/google/fonts/issues).
-> Don't forget to search in the issue tracker (using keywords) if your issue has already been raised before opening a new one :) The following links can be used to create different kinds of issues:
-> -   [Submitting a new OFL Font](https://github.com/google/fonts/issues/new?assignees=&labels=II+New+Font%2C+%3E+Submission&template=1_add-font.md&title=Add+%5BFont+Name%5D)
-> -   [Submitting an upgrade to an existing font](https://github.com/google/fonts/issues/new?assignees=&labels=II+Font+Upgrade&template=2_update-font.md&title=Update+%5BFont+Name%5D)
-> -   [Reporting a problem with a font](https://github.com/google/fonts/issues/new?assignees=&labels=II+Font+Bug&template=3_font-bug.md&title=)
-> -   [Anything else](https://github.com/google/fonts/issues/new?assignees=&labels=II+API+%2F+Website+%2F+Platform%2C+II+Tools+%2F+workflow+%2F+repo&template=4_anything-else.md&title=)
-> From time to time, Google Fonts provides financial and design assistance for projects. If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your Github profile page.)
+<div class="callout">
+
+🐸  Any contribution to Google Fonts should be first submitted through the <a href="https://github.com/google/fonts/issues">google/fonts issue tracker</a>.
+<br><br>
+Don't forget to search in the issue tracker (using keywords) if your issue has already been raised before opening a new one :) The following links can be used to create different kinds of issues:
+
+<ul>
+    <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+New+Font%2C+%3E+Submission&template=1_add-font.md&title=Add+%5BFont+Name%5D">Submitting a new OFL Font</a></li>
+    <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+Font+Upgrade&template=2_update-font.md&title=Update+%5BFont+Name%5D">Submitting an upgrade to an existing font</a></li>
+    <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+Font+Bug&template=3_font-bug.md&title=">Reporting a problem with a font</a></li>
+    <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+API+%2F+Website+%2F+Platform%2C+II+Tools+%2F+workflow+%2F+repo&template=4_anything-else.md&title=">Anything else</a></li>
+</ul>
+
+From time to time, Google Fonts provides financial and design assistance for projects. If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your Github profile page.)
+
+</div>
 
 ## Table of contents
 {:.no_toc}
@@ -32,7 +43,7 @@ If you would like to include a new font family into the GF collection, we'll be 
 
     CamelCase names are not allowed except in some cases discussed and approved by a Google Fonts team member.
 
-    If you are making a libre version of your prior proprietary font or designing something in an established genre, add "Libre" or a local equivalent to that well-known name E.g., *Vesper Libre* or *Libre Baskerville.*
+    If you are making a libre version of your prior proprietary font or designing something in an established genre, add "Libre" or a local equivalent to that well-known name e.g. *Vesper Libre* or *Libre Baskerville.*
 
     A limited but easy way to test for uniqueness is [namecheck.fontdata.com](https://namecheck.fontdata.com/) along with a general web search for *name* + font.
 -   **The project must be developed on GitHub or similar platform.**
@@ -45,7 +56,7 @@ If you would like to include a new font family into the GF collection, we'll be 
 -   **All binary font files must be available in TTF format.**
 -   **All font files should support, at least, the** [**"GF Latin Core"**](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets/Latin) **glyph set.**
 -   **All font files should follow the** **[Overall font files requirements](requirements.md).**
--   **All font files should pass the** **[Font Bakery](https://github.com/googlefonts/fontbakery)** **checks for the** **[googlefonts profile](https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html).**
+-   **All font files should pass the** **[FontBakery](https://github.com/googlefonts/fontbakery)** **checks for the** **[googlefonts profile](https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html).**
 
     Under special circumstances, you can request an exception to these requirements.
 
