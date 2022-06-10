@@ -1,8 +1,15 @@
+<link href="style.css" rel="stylesheet">
+
 # License file
 {:.no_toc}
 
-> <span class="icon">🐰</span>  Google Fonts used to accept open-source licenses such as OFL, UFL and APACHE2. It has been a few years now that only OFL licenses are accepted.
-> This page will give users some important requirements about the OFL license, as well as a template to copy-paste into their repo.
+<div class="callout">
+
+🐰 Google Fonts used to accept open-source licenses such as <mark class="grey">OFL</mark>, <mark class="grey">UFL</mark> and <mark class="grey">APACHE2</mark>. It has been a few years now that only OFL licenses are accepted.
+<br><br>
+This page will give users some important requirements about the <mark class="grey">OFL</mark> license, as well as a template to copy-paste into their repo.
+
+</div>
 
 ## Table of contents
 {:.no_toc}

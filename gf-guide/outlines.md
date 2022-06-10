@@ -1,9 +1,17 @@
+<link href="style.css" rel="stylesheet">
+
 # Outline Quality
 {:.no_toc}
 
-> <span class="icon">🐸</span>  Make sure your font is ready for production by fulfilling the check-list below. Design is not particularly judged here, we are talking from the point of view of the technical quality aspect of a font, i.e: OS, browsers, apps and printers will be able to read the font file and display it as the designer intended.
-> Note that some font editors or export tools will partly do the job for you. Always test your exported fonts in different environments, open them in a font editor, or run a Fontbakery report on them, to make sure that everything looks like what you want.
-> This guide will give users a short introduction to font’s outline from a technical perspective. With that knowledge, we will see how to prepare them so they appear the best on screen.
+<div class="callout">
+
+🐸  Make sure your font is ready for production by fulfilling the check-list below. Design is not particularly judged here, we are talking from the point of view of the technical quality aspect of a font, i.e: OS, browsers, apps and printers will be able to read the font file and display it as the designer intended.
+<br><br>
+Note that some font editors or export tools will partly do the job for you. Always test your exported fonts in different environments, open them in a font editor, or run a Fontbakery report on them, to make sure that everything looks like what you want.
+<br><br>
+This guide will give users a short introduction to font’s outline from a technical perspective. With that knowledge, we will see how to prepare them so they appear the best on screen.
+
+</div>
 
 ## Table of contents
 {:.no_toc}
@@ -81,7 +89,7 @@ Unless absolutely necessary, avoid over-complicated outline drawing. One example
 
 <div style="font-size:1.5em">
 
-<span class="icon">👻</span>  If you do end up using special outline construction, pay extra attention to how those glyphs end up rendered in the final fonts.
+👻 If you do end up using special outline construction, pay extra attention to how those glyphs end up rendered in the final fonts.
 
 </div>
 
@@ -104,9 +112,9 @@ Unless absolutely necessary, avoid over-complicated outline drawing. One example
 
 ## Useful links
 
--   [Drawing good path](https://glyphsapp.com/learn/drawing-good-paths), Glyphs tuto
+-   [Drawing good paths](https://glyphsapp.com/learn/drawing-good-paths), Glyphs tutorial
 -   [Fontlab’s article about curve types](https://help.fontlab.com/fontlab-vi/Curve-Types/)
 -   [Fontlab’s article about contours](https://help.fontlab.com/fontlab-vi/Contours/#terminology)
 -   [Apple’s article about digitizing letterforms](https://developer.apple.com/fonts/TrueType-Reference-Manual/RM01/Chap1.html#points)
--   [About diacritics](https://glyphsapp.com/learn/diacritics), Glyphs tuto
--   [How to draw with FontForge](http://designwithfontforge.com/en-US/Using_the_Fontforge_Drawing_Tools.html), FontForge tuto
+-   [About diacritics](https://glyphsapp.com/learn/diacritics), Glyphs tutorial
+-   [How to draw with FontForge](http://designwithfontforge.com/en-US/Using_the_Fontforge_Drawing_Tools.html), FontForge tutorial

@@ -1,8 +1,15 @@
+<link href="style.css" rel="stylesheet">
+
 # Package the fonts
 {:.no_toc}
 
-> <span class="icon">🦦</span>  [gftools packager](https://github.com/googlefonts/gftools/tree/main/docs/gftools-packager) is the tool team members use to package fonts from the upstream repo to ship then to [google/fonts](https://github.com/google/fonts) repo. It basically replaces [Making a PR to GF](making-pr.md) process. It saves a lot of time, and prevent lots of human mistakes.
-> Note that Packager will create a branch on `google/fonts` directly. However, this is possible only if the user has a special contribution permission to the repo. This is why this chapter is specifically for Google Fonts’ Team Members.
+<div class="callout">
+
+🦦  <a href="https://github.com/googlefonts/gftools/tree/main/docs/gftools-packager">gftools packager</a> is the tool team members use to package fonts from the upstream repo to ship then to <a href="https://github.com/google/fonts">google/fonts</a> repo. It basically replaces <a href="./making-pr">Making a PR to GF</a> process. It saves a lot of time, and prevent lots of human mistakes.
+<br><br>
+Note that Packager will create a branch on <code>google/fonts</code> directly. However, this is possible only if the user has a special contribution permission to the repo. This is why this chapter is specifically for Google Fonts’ Team Members.
+
+</div>
 
 ## Table of contents
 {:.no_toc}
@@ -120,7 +127,7 @@ You will have to fill up all needed informations directly from the Terminal usin
     
 
     2.  If you upgrade an existing font, first check in the font directory in the `ofl` folder (of the main branch) if there is already an upstream.yaml with the correct information. If not, proceed as if it was a new font. If yes, run `gftools packager "Font Name" path/to/local/google-fonts-repo -p`. Then choose the correct options. If the upstream.yaml didn’t have correct information, you can do as if you were adding a new font.
-3.  Update [DESCRIPTION.en_us.html](https://www.notion.so/886ed42e143247b1b22c1ddd0bd4d19b) , check and eventually correct [METADATA.pb](https://www.notion.so/f218d09a5c1145aeb79592d568cf79cc) if needed. Commit and push to the branch that the Packager created. Everytime you commit and push something into the [google/fonts](https://github.com/google/fonts/pulls) repo, please specify `<Font Name> : <file> updated/added` in your commit message.
+3.  Update [DESCRIPTION.en_us.html](./description.md)) , check and eventually correct [METADATA.pb](./metadata.md) if needed. Commit and push to the branch that the Packager created. Everytime you commit and push something into the [google/fonts](https://github.com/google/fonts/pulls) repo, please specify `<Font Name> : <file> updated/added` in your commit message.
 
 ### Method that allows editing before PR
 

@@ -1,8 +1,22 @@
-# Overall font files requirements
+<link href="style.css" rel="stylesheet">
 
-> <span class="icon">🦥</span>  The following guidelines apply to all fonts, regardless of their format.
-Then, depending on the format, we have different specifications for static and variable fonts. Please [read the guidelines for static fonts](statics.md) and the [guidelines for variable fonts](variable.md).
-It is recommended to read [the guidelines to add or upgrade font in Google Fonts](onboarding.md) before continuing.
+# Overall font files requirements
+{:.no_toc}
+
+<div class="callout">
+
+🦥  The following are the guidelines that apply to all fonts, regardless of their format or whether you want to add or upgrade a font.
+<br><br>
+Then, depending on the format you are working on, we have different specifications for static and variable fonts. Please read the <a href="./statics">guidelines for static fonts</a> and the <a href="./variable">guidelines for variable fonts</a>.
+<br><br>
+It is also recommended to read the <a href="./onboarding">guidelines to add new fonts or upgrade them in Google Fonts</a> before continuing.
+
+</div>
+
+## Table of contents
+{:.no_toc}
+* TOC goes here
+{:toc}
 
 ## Font copyright and license
 
@@ -69,7 +83,7 @@ Typically libre fonts are not subject to any trademarks.
 
 ## Font versioning
 
-Every new version onboarded to GF should have an increased version number compared to the precedent. This is explained in the [Main contribution cases](onboarding.md).
+Every new version onboarded to GF should have an increased version number compared to the precedent. This is explained in the [Main contribution cases](onboarding.md) chapter under the Font Upgrades section.
 
 Versioning is based on [semver](https://semver.org/), apart from we use `MAJOR.SIGNIFICANTMINORPATCH`, instead of `MAJOR.MINOR.PATCH`.
 
@@ -126,7 +140,7 @@ This system aims to give enough flexibility to define the intended scope of each
 
 Currently, the most used ones are:
 
--   [**GF Latin Kernel**](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets/Latin/latin-kernel) is the minimum Latin set required to be included within fonts targeting non-latin scripts users. Since it matches the ASCII set, it only includes full support for the English language.
+-   [**GF Latin Kernel**](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets/Latin/latin-kernel) is the minimum Latin set required to be included within fonts targeting non-latin scripts users. *Please note that since it matches the ASCII set, it only includes full support for the English language*.
 -   [**GF Latin Core**](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets/Latin/latin-core) is the minimum set required to be included within any font family that addresses Latin based languages (*be it an open contribution or a commissioned font*). It includes the Latin Kernel plus additional glyphs to support the most widely used languages, including those encompassing Central and Western Latin based languages, among \~200 others.
 -   [**GF Latin Plus**](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets/Latin/latin-plus) includes additional numerals sets (like numerators, denominators, inferior and superior), expanded math and currency symbols, as well as arrows and bullets in use in Google Docs.
 -   [**Latin Vietnamese**](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets/Latin/latin-vietnamese) includes the extended marks and combined letters required to support the Vietnamese language. It requires to be combined with Latin Core for complete Latin + Vietnamese support.

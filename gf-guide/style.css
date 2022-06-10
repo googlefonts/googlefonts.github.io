@@ -1,0 +1,62 @@
+.callout {
+    background-color:#F6F6F6; 
+    color:#121212; 
+    padding:1.2em 1.6em; 
+    border-radius: 1em; 
+    font-size:1em
+}
+mark {
+    padding:0.2em 0.4em; 
+    border-radius:0.4em; 
+    font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; 
+    font-size:0.8em
+}
+.green{
+    background-color:#D6F6C1; 
+    color:#39803E;
+}
+.darkgreen{
+    background-color:#1c7322; 
+    color:#D6F6C1;
+}
+.blue{
+    background-color:#ccefff; 
+    color:#2568B3;
+}
+.yellow{
+    background-color:#FFF5C7; 
+    color:#9C7D00;
+}
+.brown
+{
+    background-color:#F7EBDC; 
+    color:#7E5424;
+}
+.grey{
+    background-color:#E5E5E5; 
+    color:#6B6B6B;
+}
+.black{
+    background-color:#2E2E2E; 
+    color:#E5E5E5;
+}
+.purple{
+    background-color:#e8e7f4; 
+    color:#65458F;
+}
+.red{
+    background-color:#FFE6E6; 
+    color:#DB3335;
+}
+.orange{
+    background-color:#FFEFD4; 
+    color:#FF8700;
+}
+/* .code-text {
+    padding:0.2em 0.4em; 
+    border-radius:0.4em; 
+    font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; 
+    font-size:0.8em;
+    background-color:#f3f4f4; 
+    color:#1d2227;
+} */

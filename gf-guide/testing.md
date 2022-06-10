@@ -1,11 +1,20 @@
+<link href="style.css" rel="stylesheet">
+
 # Local testing
 {:.no_toc}
 
-> <span class="icon">🐸</span>  This guide will help user to test their font locally to confirm quality-assurance. We recommend to test your font on the latest stable version of your OS and apps.
-> Bear in mind:
-> -   You can use virtual machines to test your fonts into different environments (practical for testing on older machine and therefore ensure backward compatibility).
-> -   Installing consecutively different versions of a font family will lead to cache issues. So don’t forget to remove any remaining version of the font, restart the app, open the font menu and quit the app before installing any other version of the font. You may even need to clean the caches and then restart your computer. Another trick would be to append some kind of version number suffix to the family name until final version.
-> -   If you plan on having both `.otf` and `.ttf` fonts on the same machine, we recommend you use a different name (specifically name ID 1, 4 and 6) to avoid any potential conflict.
+<div class="callout">
+
+🐸  This guide will help user to test their font locally to confirm quality-assurance. We recommend to test your font on the latest stable version of your OS and apps.
+<br><br>
+Bear in mind:
+<ul>
+  <li>You can use virtual machines to test your fonts into different environments (practical for testing on older machine and therefore ensure backward compatibility).</li>
+  <li> Installing consecutively different versions of a font family will lead to cache issues. So don’t forget to remove any remaining version of the font, restart the app, open the font menu and quit the app before installing any other version of the font. You may even need to clean the caches and then restart your computer. Another trick would be to append some kind of version number suffix to the family name until final version.</li>
+  <li>If you plan on having both <code>.otf</code> and <code>.ttf</code> fonts on the same machine, we recommend you use a different name (specifically name ID 1, 4 and 6) to avoid any potential conflict.</li>
+</ul>
+
+</div>
 
 ## Table of contents
 {:.no_toc}
@@ -149,32 +158,28 @@ What to check:
 
 <div id="7dc7c317-aea1-431b-bbd2-1c444c0f7b68" class="column-list">
 
-<div id="f3825586-3bd5-4763-8618-28818f95f083" class="column" style="width:50%">
+  <div id="f3825586-3bd5-4763-8618-28818f95f083" class="column" style="width:50%">
+    <b>Testing web pages:</b>
+    <ul>
+      <li><a href="https://wakamaifondue.com/" target="_blank">Wakamai Fondue</a></li>
+      <li><a href="https://fontdrop.info/" target="_blank">FontDrop</a></li>
+      <li><a href="https://fontgoggles.org/" target="_blank">FontGoggles</a></li>
+      <li><a href="https://www.axis-praxis.org/specimens/__DEFAULT__" target="_blank">Axis-Praxis</a> 
+      and <a href="https://www.axis-praxis.org/samsa/" target="_blank">Samsa</a></li>
+      <li><a href="http://www.rosaliewagner.com/font-testing/index.php" target="_blank">Impallari Testing Pages</a></li>
+      <li><a href="https://dinamodarkroom.com/gauntlet/" target="_blank">Dinamo Font Gautlet</a></li>
+      <li><a href="https://typetools.typenetwork.com" target="_blank">Type Network’s Tools</a></li>
+      <li><a href="https://idiotproofed.com/" target="_blank">Idiot Proof</a></li>
+      <li><a href="https://www.fontspecimen.com/" target="_blank">Monotype’s interactive font specimen</a></li>
+    </ul>
+  </div>
 
-**Testing web pages:**
-
--   [Wakamai Fondue](https://wakamaifondue.com/)
--   [FontDrop](https://fontdrop.info/)
--   [Impallari Testing Pages](http://www.rosaliewagner.com/font-testing/index.php)
--   [Axis-Praxis](https://www.axis-praxis.org/specimens/__DEFAULT__) and [Samsa](https://www.axis-praxis.org/samsa/)
--   [Dinamo Font Gautlet](https://dinamodarkroom.com/gauntlet/)
--   [Type Network’s Tools](https://typetools.typenetwork.com)
--   [Idiot Proof](https://idiotproofed.com/)
--   [Monotype’s interactive font specimen](https://www.fontspecimen.com/)
--   [FontGoggles](https://fontgoggles.org/)
-
-</div>
-
-<div id="b394bcd5-dd88-4c98-838b-335883397a54" class="column" style="width:50%">
-
-**Testing apps:**
-
--   [DTL OT Master](https://www.fontmaster.nl/index.php/otmaster/)
--   [Font table viewer](https://glyphsapp.com/tools/fonttableviewer)
--   [Fontproof](https://github.com/silnrsi/fontproof) (still in development)
-
-</div>
-
-</div>
-
+  <div id="b394bcd5-dd88-4c98-838b-335883397a54" class="column" style="width:50%">
+    <b>Testing apps:</b>
+    <ul>
+      <li><a href="https://www.fontmaster.nl/otmaster.html" target="_blank">DTL OT Master</a></li>
+      <li><a href="https://glyphsapp.com/tools/fonttableviewer" target="_blank">Font table viewer</a></li>
+      <li><a href="https://github.com/silnrsi/fontproof" target="_blank">Fontproof</a> (still in development)</li>
+    </ul>
+  </div>
 </div>
