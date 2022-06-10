@@ -3,7 +3,7 @@
 # Designer Profile
 {:.no_toc}
 
-<div>
+<div class="callout">
 
 🦥  This guide is a technical review of the different requirements related to the <a href="https://github.com/google/fonts/tree/main/catalog/designers">catalog/designers</a> directory in the <a href="https://github.com/google/fonts">google/fonts</a> repo.
 <br><br>
