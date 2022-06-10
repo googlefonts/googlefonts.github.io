@@ -163,25 +163,23 @@ What to check:
     <ul>
       <li><a href="https://wakamaifondue.com/" target="_blank">Wakamai Fondue</a></li>
       <li><a href="https://fontdrop.info/" target="_blank">FontDrop</a></li>
-      <li><a href="http://www.rosaliewagner.com/font-testing/index.php" target="_blank">Impallari Testing Pages</a></li>
+      <li><a href="https://fontgoggles.org/" target="_blank">FontGoggles</a></li>
       <li><a href="https://www.axis-praxis.org/specimens/__DEFAULT__" target="_blank">Axis-Praxis</a> and <a href="https://www.axis-praxis.org/samsa/" target="_blank">Samsa</a></li>
+      <li><a href="http://www.rosaliewagner.com/font-testing/index.php" target="_blank">Impallari Testing Pages</a></li>
       <li><a href="https://dinamodarkroom.com/gauntlet/" target="_blank">Dinamo Font Gautlet</a></li>
       <li><a href="https://typetools.typenetwork.com" target="_blank">Type Network’s Tools</a></li>
       <li><a href="https://idiotproofed.com/" target="_blank">Idiot Proof</a></li>
       <li><a href="https://www.fontspecimen.com/" target="_blank">Monotype’s interactive font specimen</a></li>
-      <li><a href="https://fontgoggles.org/" target="_blank">FontGoggles</a></li>
     </ul>
   </div>
 
   <div id="b394bcd5-dd88-4c98-838b-335883397a54" class="column" style="width:50%">
     <b>Testing apps:</b>
     <ul>
-      <li><a href="https://www.fontmaster.nl/index.php/otmaster/" target="_blank">DTL OT Master</a></li>
+      <li><a href="https://www.fontmaster.nl/otmaster.html" target="_blank">DTL OT Master</a></li>
       <li><a href="https://glyphsapp.com/tools/fonttableviewer" target="_blank">Font table viewer</a></li>
       <li><a href="https://github.com/silnrsi/fontproof" target="_blank">Fontproof</a> (still in development)</li>
     </ul>
   </div>
-
-</div>
 
 </div>
