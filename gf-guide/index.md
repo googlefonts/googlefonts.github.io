@@ -51,7 +51,7 @@ To improve and facilitate the open collaboration as well as the publishing proce
 * <mark class="grey">templ</mark>
   [Authors and Contributors](authors.md)  
 * <mark class="grey">templ</mark>
-   [License file](license.md)
+   [License file](license-file.md)
   
 
 ## Pre-production: Getting your fonts ready for GF
