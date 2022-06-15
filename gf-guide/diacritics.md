@@ -10,7 +10,6 @@ A diacritic is a mark used in combination with a base letter for many purposes, 
 Many diacritics are separated from the base letter and can be placed above, below, aside, or through it, while others connect to the base. 
 <br><br>
 
-
 </div>
 
 ## Desing considerations 
@@ -25,14 +24,44 @@ Many diacritics are separated from the base letter and can be placed above, belo
 - You would need to create all the combining marks required for the language you are giving support to, as well as the so-called Legacy marks. Google Fonts requires at least the GF Latin Core as the minimum set for a font addressing the Latin script. Please read more about our <a herf="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets">Glyphsets</a>.
 - Usually, the design of the diacritics needs to be adjusted in size or slope to work better with the uppercase letters. So, ideally, there should be at least two sets: lowercase and uppercase marks. E.g. `acutecomb` and `acutecomb.case`
 
-## Legacy – spacing marks
+## Legacy – Spacing marks
 
-The spacing diacritical marks are required mainly for historical reasons (they were included in the first ASCII encoding) and therefore backwards compatibility, which is why they are also known as Legacy marks.
+The spacing diacritical marks are required mainly for historical reasons and, therefore, for backward compatibility, which is why they are also known as Legacy marks.
 
-They are used as placeholder when you type for a combination of keys to add an accent to a base letter e.g. `´` + `a` to obtain a `á`.
+They are only used as placeholder when typing for a combination of keys to add an accent to a base letter e.g. `´` + `a` to obtain a `á`. 
 
-##
+**Conditions:**
 
+- **They must have a positive width value.** Due to this function, they are expected to have an advanced width value with positive sidebearings, that is, they should not be 0 width glyphs. 
+- They should share the design of the `combining marks` for consistency reasons. To ensure this in a practical way, it is suggested to create them by using the combining marks as components in the source file.
+- They use the simple name of the mark, e.g. `acute` or `grave`
+- They must have the right Unicode codepoint in your source file to work properly.
+
+## Combining diacritical marks - Nonspacing
+
+As the name suggests, the combined diacritics are the marks actually used to construct the accented letters, which would be done either by:
+
+- Creating the [precomposed characters](https://en.wikipedia.org/wiki/Precomposed_character), which are the accented letters already included in the font source file, e.g. `00C1 Á LATIN CAPITAL LETTER A WITH ACUTE`
+- Or to allow the character composition of the accented letters by using the mark + base glyphs as the user types, e.g. `0041 LATIN CAPITAL LETTER A` followed by the combining diacritical mark `0301 COMBINING ACUTE ACCENT`, which would be the decomposition or [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence) of the above.
+
+**Anchors**
+
+For both of the above cases, the glyphs involved in the generation of accented letters use *Anchors* which are special points that allow the attachment of glyphs to one another, and that play a key role in the identification of the glyph definition as well as the generation of the [`mark`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#tag-mark) and [`mkmk`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#mkmk) fetures.
+
+They are commonly represented as red rombous in the source files and are identified with a name. 
+
+
+**Conditions:**
+
+- Combining marks name should use the *comb* sufix, e.g. `acutecomb`, `gravecomb`. 
+- The outlines desing should follow the design considerations detailed above.
+- Anchors are required
+
+
+The text shaping process depends on the input string given, the inclusion of Open Type Layout required tables in the font, the writing system (script), and the language of the text. For non-complex scripts (such as Latin, Cyrillic, Greek, Armenian, Georgian, among others) at least `GSUB` and `GPOS` tables would be required in the font.
+
+
+The name should include a suffix `comb`, e.g `tildecomb` and the right unicode. 
 
 <!-- Legacy marks are required mainly for historical reasons and therefore backwards compatibility -->
 
@@ -42,14 +71,19 @@ They are used as placeholder when you type for a combination of keys to add an a
 ## Useful links
 
 Design related
-[Problems of diacritic design](https://gaultney.org/jvgtype/typedesign/diacritics/)
-http://diacritics.typo.cz/index.php?id=12
-https://ilovetypography.com/2009/01/24/on-diacritics/
-http://www.twardoch.com/download/polishhowto/intro.html
-http://diacritics.typo.cz/index.php?id=12
-https://vietnamesetypography.com/tone-marks/
-[Context of Diacritics](https://www.setuptype.com/x/cod/)
-[The insects project](http://theinsectsproject.eu/)
+
+- [Problems of diacritic design](https://gaultney.org/jvgtype/typedesign/diacritics/)
+- [Diacritics](http://diacritics.typo.cz/index.php?id=12)
+- [On diacritics](https://ilovetypography.com/2009/01/24/on-diacritics/)
+- [The insects project](http://theinsectsproject.eu/)
+- [Polish diacritics how to](http://www.twardoch.com/download/polishhowto/intro.html)
+- [Vietnamese Typography](https://vietnamesetypography.com/tone-marks/)
+- [Context of Diacritics](https://www.setuptype.com/x/cod/)
+
+
+Production related
+
+- [Substitution and Positioning Rules](https://simoncozens.github.io/fonts-and-layout//features-2.html) - advanced reading
 
 List of contents
 
