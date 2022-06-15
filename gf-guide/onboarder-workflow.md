@@ -214,15 +214,11 @@ PRs and issues are monitored in separate Github project boards.
 
 Status labels are having meaningful colours:
 
-<mark class="yellow">YELLOW | Process can continue to next step</mark>
-
-<mark class="orange">ORANGE | Process in progress</mark>
-
-<mark class="blue">BLUE | Process pending until more information</mark>
-
-<mark class="red">RED | Process is on hold, fixes required before proceeding</mark>
-
-<mark class="black">BLACK | Process is blocked and should begin again`</mark>
+- <mark class="yellow">**YELLOW** | Process can continue to next step</mark>
+- <mark class="orange">**ORANGE** | Process in progress</mark>
+- <mark class="blue">**BLUE** | Process pending until more information</mark>
+- <mark class="red">**RED** | Process is on hold, fixes required before proceeding</mark>
+- <mark class="black">**BLACK** | Process is blocked and should begin again</mark>
 
 Labels also have meaningful prefixes:
 
