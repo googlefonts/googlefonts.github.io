@@ -87,7 +87,7 @@ Now that you have the general scheme in mind, let’s dive into more details. Yo
 >  -   If you have, for example, MyFont and MyFontCondensed, this is 2 families: remember that GF only accepts weight styles. So this is also 2 font directories, and **2** separate PRs. Read more about the [Font Files requirements](requirements.md) to know more about the [supported styles for static](https://www.notion.so/Static-font-files-requirements-71d00ce1fbd44d72bf4e24b430abf2a2) and [variable fonts](variable.md).
 > -   If you upgrade a font, then simply go to the existing directory of said font.
 3.  Add (or replace) the font files inside the font directory.
-4.  Add (or replace) the [license OFL.txt](license.md).
+4.  Add (or replace) the [license OFL.txt](license-file.md).
 5.  Run `gftools add-font`. You can do that from the root directory of your local clone of the Google Fonts repository. The argument expected is the path of the font family directory:
     ``` code
     gftools add-font ofl/fontname

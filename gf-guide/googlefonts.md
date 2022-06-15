@@ -58,7 +58,7 @@ Each file has the following purpose:
 
 -   [DESCRIPTION.en_us.html](description.md): describes the font family
 -   [METADATA.pb](metadata.md): contains metadata related to the family
--   [License](license.md): License for the font family. Valid choices are OFL.txt, UFL.txt, License.txt. If you're unsure what license to use, we recommend OFL.txt
+-   [License](license-file.md): License for the font family. Valid choices are OFL.txt, UFL.txt, License.txt. If you're unsure what license to use, we recommend OFL.txt
 -   [.ttf](requirements.md): Family font files.
 -   [upstream.yaml](package.md): file linking the font files with the upstream. It is used by the [Packager](package.md) (our onbaording tool) to facilitate the font upgrading process.
 

@@ -31,7 +31,7 @@ These font info parameters are not optional and should follow the same scheme wi
     E.g. Copyright 2011 The Montserrat Project Authors (<https://github.com/JulietaUla/Montserrat>)
 
     If you are using the Glyphs font editor, add a “Copyright” entry under the “Font” tab of the Font Info panel.
--   **The first line of the** **[OFL.txt](license.md)** **file should be identical to the font copyright string** **detailed above**.
+-   **The first line of the** **[OFL.txt](license-file.md)** **file should be identical to the font copyright string** **detailed above**.
 -   **The license string must be the same for all GF font projects:**
 
     ``` code
