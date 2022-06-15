@@ -5,7 +5,7 @@
 
 <div class="callout">
 
-A diacritic is a mark used in combination with a base letter for many purposes, such as modifying the pronunciation by extending a basic alphabet to include more phonemes; adding stress to a word that could differentiate similar words (hence meanings), and in some languages to add or modify a vowel into a word.
+🐳 A diacritic is a mark used in combination with a base letter for many purposes, such as modifying the pronunciation by extending a basic alphabet to include more phonemes; adding stress to a word that could differentiate similar words (hence meanings), and in some languages to add or modify a vowel into a word.
 <br><br>
 Many diacritics are separated from the base letter and can be placed above, below, aside, or through it, while others connect to the base. 
 <br><br>
@@ -36,32 +36,42 @@ They are only used as placeholder when typing for a combination of keys to add a
 - They should share the design of the `combining marks` for consistency reasons. To ensure this in a practical way, it is suggested to create them by using the combining marks as components in the source file.
 - They use the simple name of the mark, e.g. `acute` or `grave`
 - They must have the right Unicode codepoint in your source file to work properly.
+- They belong to the mark-spacing category in the Glyphs Definiton of the `GDEF` table.
 
 ## Combining diacritical marks - Nonspacing
 
 As the name suggests, the combined diacritics are the marks actually used to construct the accented letters, which would be done either by:
 
-- Creating the [precomposed characters](https://en.wikipedia.org/wiki/Precomposed_character), which are the accented letters already included in the font source file, e.g. `00C1 Á LATIN CAPITAL LETTER A WITH ACUTE`
-- Or to allow the character composition of the accented letters by using the mark + base glyphs as the user types, e.g. `0041 LATIN CAPITAL LETTER A` followed by the combining diacritical mark `0301 COMBINING ACUTE ACCENT`, which would be the decomposition or [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence) of the above.
+- Creating the [precomposed characters](https://en.wikipedia.org/wiki/Precomposed_character), the accented letters already included in the font source file, e.g. `00C1 Á LATIN CAPITAL LETTER A WITH ACUTE`
+- Or to allow the character composition of the accented letters by using the mark + base glyphs on the fly as the user types, e.g. `0041 LATIN CAPITAL LETTER A` followed by the combining diacritical mark `0301 COMBINING ACUTE ACCENT`, which would be the decomposition or [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence) of the above.
 
 **Anchors**
 
-For both of the above cases, the glyphs involved in the generation of accented letters use *Anchors* which are special points that allow the attachment of glyphs to one another, and that play a key role in the identification of the glyph definition as well as the generation of the [`mark`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#tag-mark) and [`mkmk`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#mkmk) fetures.
+All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another, that play a key role in the identification of the glyph definition as well as the generation of the Mar to base positioning [`mark`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#tag-mark) and teh Mark to mark positioning [`mkmk`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#mkmk) fetures.
 
-They are commonly represented as red rombous in the source files and are identified with a name. 
+Anchors are commonly represented as red rhombus in the glyph view of the source file and are identified with a name. The name word should be shared among base and mark, but with a preceding underscore in the latter. E.g. `top` in the base letter and `_top` in the mark
+Anchors' name schema is crucial for the positioning to work as expected, for example if the underscore is ommited in the mark it would not be attached to the base letter, so you must pay special care and attention to them.  
 
 
-**Conditions:**
+**Conditions for combining marks:**
 
 - Combining marks name should use the *comb* sufix, e.g. `acutecomb`, `gravecomb`. 
 - The outlines desing should follow the design considerations detailed above.
-- Anchors are required
+- They must include anchors points named as explained above. To better administrate the positions to language requirements, like stacked diacritics in Vietnamese, it is useful to use custom names for them, e.g. `top_viet` and `_top_viet` accordingly.
+- The amount of combining marks and precomposed glyphs required will be determine to the language support your font is intended to. For Google Fonts see the [Glyphsets](https://googlefonts.github.io/gf-guide/requirements.html#glyphsets) definition.
+- They must have the right Unicode codepoint in your source file to work properly. See the [Combining diacritical marks](https://unicode.org/charts/PDF/U0300.pdf) Unicode chart, that ranges from 0300 to 036F codepoints.
+- They belong to the mark-nonspacing category in the Glyphs Definiton of the `GDEF` table.
 
 
-The text shaping process depends on the input string given, the inclusion of Open Type Layout required tables in the font, the writing system (script), and the language of the text. For non-complex scripts (such as Latin, Cyrillic, Greek, Armenian, Georgian, among others) at least `GSUB` and `GPOS` tables would be required in the font.
+## Text Shaping process and Open Type Layout
 
 
-The name should include a suffix `comb`, e.g `tildecomb` and the right unicode. 
+For a text to be displayed in a readable way on screens or desktop apps, there is a required process called [shaping](https://fonts.google.com/knowledge/glossary/shaping) which consist on translating a string of character codes into an ordered sequence of glyphs, and this process is performed by a engines like [Harfbuzz](https://harfbuzz.github.io/what-is-harfbuzz.html)
+
+For the text shaping to work, it depends on four factors: the input string given, the inclusion of [Open Type Layout required tables](https://docs.microsoft.com/en-us/typography/opentype/spec/chapter2) in the font, the writing system (script), and the language of the text. For non-complex scripts (such as Latin, Cyrillic, Greek, Armenian, Georgian, among others) at least the `GDEF`, `GSUB` and `GPOS` tables would be required in the font.
+
+
+
 
 <!-- Legacy marks are required mainly for historical reasons and therefore backwards compatibility -->
 
@@ -83,6 +93,7 @@ Design related
 
 Production related
 
+- [Harfbuzz, a text-shaping engine](https://harfbuzz.github.io/what-is-harfbuzz.html)
 - [Substitution and Positioning Rules](https://simoncozens.github.io/fonts-and-layout//features-2.html) - advanced reading
 
 List of contents
