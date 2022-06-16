@@ -32,7 +32,7 @@ They are only used as placeholder when typing for a combination of keys to add a
 
 **Conditions:**
 
-- **They must have a positive width value.** Due to this function, they are expected to have an advanced width value with positive sidebearings, that is, they should not be 0 width glyphs. 
+- **They must have a positive width value `≠0`** Due to this function, they are expected to have an advanced width value with positive sidebearings, that is, they should not be zero width glyphs. 
 - They should share the design of the `combining marks` for consistency reasons. To ensure this in a practical way, it is suggested to create them by using the combining marks as components in the source file.
 - They use the simple name of the mark, e.g. `acute` or `grave`
 - They must have the right Unicode codepoint in your source file to work properly.
@@ -45,19 +45,22 @@ As the name suggests, the combined diacritics are the marks actually used to con
 - Creating the [precomposed characters](https://en.wikipedia.org/wiki/Precomposed_character), the accented letters already included in the font source file, e.g. `00C1 Á LATIN CAPITAL LETTER A WITH ACUTE`
 - Or to allow the character composition of the accented letters by using the mark + base glyphs on the fly as the user types, e.g. `0041 LATIN CAPITAL LETTER A` followed by the combining diacritical mark `0301 COMBINING ACUTE ACCENT`, which would be the decomposition or [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence) of the above.
 
-**Anchors**
+### Anchors
 
 All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another, that play a key role in the identification of the glyph definition as well as the generation of the Mar to base positioning [`mark`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#tag-mark) and teh Mark to mark positioning [`mkmk`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#mkmk) fetures.
 
 Anchors are commonly represented as red rhombus in the glyph view of the source file and are identified with a name. The name word should be shared among base and mark, but with a preceding underscore in the latter. E.g. `top` in the base letter and `_top` in the mark
 Anchors' name schema is crucial for the positioning to work as expected, for example if the underscore is ommited in the mark it would not be attached to the base letter, so you must pay special care and attention to them.  
 
+<!-- Include information about stacked diacritics -->
+
 
 **Conditions for combining marks:**
 
+- **They must have a zero width value once in the font file `=0`**. During the designg process, you could use a 0 sidebearing value to facilitate the acces to the glyph while working on the source file. But once the fon binaries are complied Glyphs or Fontmake will remove the width value to coply with the requirement that they must be zero value width glyphs, hense **nonspacing**. 
 - Combining marks name should use the *comb* sufix, e.g. `acutecomb`, `gravecomb`. 
 - The outlines desing should follow the design considerations detailed above.
-- They must include anchors points named as explained above. To better administrate the positions to language requirements, like stacked diacritics in Vietnamese, it is useful to use custom names for them, e.g. `top_viet` and `_top_viet` accordingly.
+- They must include anchors named as explained above. To better administrate the positions to language requirements, like stacked diacritics in Vietnamese, it is useful to use custom names for them, e.g. `top_viet` and `_top_viet`, accordingly.
 - The amount of combining marks and precomposed glyphs required will be determine to the language support your font is intended to. For Google Fonts see the [Glyphsets](https://googlefonts.github.io/gf-guide/requirements.html#glyphsets) definition.
 - They must have the right Unicode codepoint in your source file to work properly. See the [Combining diacritical marks](https://unicode.org/charts/PDF/U0300.pdf) Unicode chart, that ranges from 0300 to 036F codepoints.
 - They belong to the mark-nonspacing category in the Glyphs Definiton of the `GDEF` table.
@@ -70,10 +73,32 @@ For a text to be displayed in a readable way on screens or desktop apps, there i
 
 For the text shaping to work, it depends on four factors: the input string given, the inclusion of [Open Type Layout required tables](https://docs.microsoft.com/en-us/typography/opentype/spec/chapter2) in the font, the writing system (script), and the language of the text. For non-complex scripts (such as Latin, Cyrillic, Greek, Armenian, Georgian, among others) at least the `GDEF`, `GSUB` and `GPOS` tables would be required in the font.
 
+### The Glyph Definition (GDEF) table
+
+The `GDEF` table provides various glyph properties used in OpenType Layout processing in six types of information provided in different subtables. One of them is the [*GlyphClassDef*](https://docs.microsoft.com/en-us/typography/opentype/spec/gdef#glyph-class-definition-table) that classifies the different types of glyphs in the font. This subtable will idetify each glyph in one of the following classes
+
+| Class | Description                                                   |
+|-------|---------------------------------------------------------------|
+| 1     | **Base glyph** (single character, spacing glyph)              |
+| 2     | **Ligature glyph** (multiple character, spacing glyph)        | 
+| 3     | **Mark glyph** (non-spacing combining glyph)                  |
+| 4     | **Component glyph** (part of single character, spacing glyph) | 
+
+Both the `GSUB` and `GPOS` tables relies on this information to identify which glyph classes to adjust with lookups.
+
+For any glyph to be classified into the right class, the following must be ensured on each one:
+
+- The glyph name must be correct. For more context please read the [Glyphs app name tutorial](https://glyphsapp.com/learn/getting-your-glyph-names-right)
+- Every `combining mark` must have anchors, as well as the letters intended to become a `base letter`.
+- The anchors must have the right name (depending on the the schema explained above).
 
 
+## The Glyph Positioning (GPOS) table
 
-<!-- Legacy marks are required mainly for historical reasons and therefore backwards compatibility -->
+> The `GPOS` table provides precise control over glyph placement for sophisticated text layout and rendering in each script and language system that a font supports.
+
+GPOS table will use the all the X and Y position values of the glyphs for placement operations
+
 
 
 ------------------------------------------------------------------------
@@ -96,7 +121,8 @@ Production related
 - [Harfbuzz, a text-shaping engine](https://harfbuzz.github.io/what-is-harfbuzz.html)
 - [Substitution and Positioning Rules](https://simoncozens.github.io/fonts-and-layout//features-2.html) - advanced reading
 
-List of contents
+
+<!-- List of contents
 
 What is a diacritic mark and why are they needed
 
@@ -121,4 +147,5 @@ Base letters
     Anchors _naming
 
 GDEF table Vs GPOS table differences
-Positions on 
+Positions on
+--> 
