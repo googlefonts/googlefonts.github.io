@@ -12,6 +12,11 @@ Many diacritics are separated from the base letter and can be placed above, belo
 
 </div>
 
+## Table of contents
+{:.no_toc}
+* TOC goes here
+{:toc}
+
 ## Desing considerations 
 
 - Diacritics must be coherent and harmonious with the general design of the font. Take care of details like construction, contrast, thickness, stroke terminal shapes, etc.
