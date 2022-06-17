@@ -16,7 +16,7 @@ Therefore, <b>this documentation is not meant to be read at once</b>. If you are
   If you are an <b>experienced</b> user or are <b>onboarding</b> fonts to Google Fonts, the chapters marked with <mark class="brown">team&nbsp;</mark> and <mark class="purple">nerd&nbsp;</mark> are for you.
   </li>
   <li>
-  The guide also provide details on required documents, some of them as templates you could copy paste in your repository, these are marked with the <mark class="grey">templ</mark>label.
+  The guide also provide details on required documents, some of them as templates you could copy paste in your repository, these are marked with the <mark class="grey">templ</mark> label.
   </li>
 </ul>
 
@@ -72,6 +72,8 @@ Know the particularities about mastering your font project to meet the Google Fo
   <b>[Vertical metrics](metrics.md)</b>
 * <mark class="yellow">learn</mark>
   [Outline Quality](outlines.md)
+* <mark class="yellow">learn</mark>
+  [Diacritics requirements](diacritics.md)
   
 <!--
 * <mark class="yellow">learn</mark>
