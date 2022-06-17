@@ -51,7 +51,7 @@ The spacing diacritical marks (for example, `U+00B4 ACUTE ACCENT`) are required 
 
 These marks are only used as placeholder when typing for a combination of keys to add an accent to a base letter e.g. `´` + `a` to obtain a `á`. 
    <figure>
-    <img src="images/diacritics/diac-legacy">
+    <img src="images/diacritics/diac-legacy.gif" style="width:250px">
     <figcaption style="font-size:0.8em"><i>Legacy marks in action</i></figcaption>
    </figure>
 
