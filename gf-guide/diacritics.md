@@ -32,13 +32,16 @@ Many diacritics are separated from the base letter, and can be placed above, bel
 
 **Examples of what to avoid** *- critical cases*
    <figure>
-    <img src="images/diacritics/diac-inconsistent-3.png" title="severe diacrits inconsisntecies"/>
+    <img src="images/diacritics/diac-inconsistent-3.png" title="severe diacrits inconsistencies"/>
+    <figcaption>Multiple diacrits inconsistencies</figcaption>
    </figure>
    <figure>
     <img src="images/diacritics/diac-convention-size.png" style="width:500px" title="size and convention issues" />
+    <figcaption>Size and convention issues</figcaption>
    </figure>
    <figure>
     <img src="images/diacritics/diac-h-position-2.gif" title="horizontal position comparison"/>
+    <figcaption>Horizontal position fixes comparison</figcaption>
    </figure>
 ## Legacy – Spacing marks
 
@@ -46,7 +49,7 @@ The spacing diacritical marks (for example, U+00B4 `ACUTE ACCENT`) are required 
 
 These marks are only used as placeholder when typing for a combination of keys to add an accent to a base letter e.g. `´` + `a` to obtain a `á`. 
 
-**Requirements::**
+**Requirements:**
 
 - **Legacy marks must have a positive advance width value `≠0`** Due to their function as displaying the accent as a standalone character, they are expected to have an advance width value with positive sidebearings, that is, they should not be zero width glyphs. 
 - They should share the design of the `combining marks` for consistency reasons. To ensure this in a practical way, it is suggested to create them by using the combining marks as components in the source file.
@@ -54,7 +57,7 @@ These marks are only used as placeholder when typing for a combination of keys t
 - They must have the correct Unicode codepoint in your source file to work properly.
 - Although they represent marks, they need to behave as though they are base glyphs; that is, in the GDEF table their "Glyph Class" should be 1. ("Base glyph") In the Glyphs "Font View" under the List mode, they should have `Category=Mark` and `Subcategory=Spacing`.
 
-**Legacy Marks list**
+**Latin legacy Marks list**
 
 ````
  Name         | Unicode | Catgory | Subcategory  
@@ -119,7 +122,7 @@ Combining marks would be listed like this in the GDEF table:
 
 **Stacked diacritics**
 
-In some languages like Vietnamese, some marks are made of the combination of two other marks known as *stacked diacritics*. In such cases, a combining mark could also act as the 'base' glyph of another mark, and therefore, it would need more than one anchor. For example, in the `brevecom_acutecomb`, the `brevecomb` mark would have one `_top` anchor to be attached to a base letter, plus a `top` one to attach other marks to it; in this case, the `acutecomb`.
+In some languages like Vietnamese, some marks are made of the combination of two other marks known as *stacked diacritics*. In such cases, a combining mark could also act as the 'base' glyph of another mark, and therefore, it would need more than one anchor. For example, in the `brevecomb_acutecomb`, the `brevecomb` mark would have one `_top` anchor to be attached to a base letter, plus a `top` one to attach other marks to it; in this case, the `acutecomb`.
 
 - Distance between marks should also be consistent with the font. The stacked diacritic should be perceived as a unity that forms a whole with the base letter.
 - Again, by ensuring to include right anchor with consistent names will contribute to the correct setting and functioning of the `mkmk` feature in the `GPOS` table.
