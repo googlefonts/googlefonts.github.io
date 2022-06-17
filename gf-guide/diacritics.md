@@ -19,16 +19,27 @@ Many diacritics are separated from the base letter, and can be placed above, bel
 
 ## Design considerations
 
-- Diacritics must be coherent and harmonious with the general design of the font. Take care of details like construction, contrast, thickness, stroke terminal shapes, etc.
-- It is suggested that you design the diacritical marks with the most strict users in mind. This means respecting conventional contemporary shapes and sizes, and not reusing or interchanging the forms of different diacritics. (For example, a `breve` should not be reused as a `caron`.)
-- Pay attention to the proportion requirements. There are some marks (for example, the `horn`) which, once combined with the base letter, will blend into the base and resemble an integral part of it.
-- Compound letters must be perceived as a whole. The distance to the base letter is crucial and can affect legibility. If the mark glyph is too close to the base font, it could appear to collide with the base letter, adding darker spots to the line of text, especially at small sizes. If the mark is too far from the base letter, they would appear separate, making the reading process difficult.
-- The horizontal position is also essential for readability. In Latin script, the symmetric marks are placed in the optical center of the base letter while the asymmetric ones follow other rules. (Note that the optical center is often distinct from the mathematical center.) But remember, they must be seen as a unity, so they must not be separated or detached from the base letter.
-- In Latin script, it is expected that all marks share the same distance to the base letter. For particular cases like script fonts where the x-height could vary, marks should at least appear to be at the same optical distance to the base letter.
-- Idiosyncratic or decorative brands have given way to more universal or neutral forms.
-- You also need to create all the combining marks required for the language you are supporting, as well as the so-called "Legacy Marks". (See below.) Google Fonts requires at least the GF Latin Core as the minimum set for a font addressing the Latin script. Please read more about our <a herf="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets">Glyphsets</a>.
-- Usually, the design of the diacritics needs to be adjusted in size or slope to work better with the uppercase letters. So ideally there should be at least two sets of diacritics: lowercase and uppercase marks. (e.g. `acutecomb` and `acutecomb.case`)
+- **Diacritics must be coherent and harmonious with the general design of the font.** Take care of details like construction, contrast, thickness, stroke terminal shapes, slope, etc.
+- **The marks should also be consistent among themselves.** Related forms like `acute`, `grave` and `circumflex` should share the design decisions as per the above.
+- **It is suggested that you design the diacritical marks with the most strict users in mind.** This means respecting conventional contemporary shapes and sizes, and not reusing or interchanging the forms of different diacritics. (For example, a `breve` should not be reused as a `caron`.)
+- **Pay attention to the proportion requirements.** There are some marks (for example, the `horn`) which, once combined with the base letter, will blend into the base and resemble an integral part of it.
+- **Compound letters must be perceived as a whole.** The distance to the base letter is crucial and can affect legibility. If the mark glyph is too close to the base font, it could appear to collide with the base letter, adding darker spots to the line of text, especially at small sizes. If the mark is too far from the base letter, they would appear separate, making the reading process difficult.
+- **The horizontal position is also essential for readability.** In Latin script, the symmetric marks are placed in the optical center of the base letter while the asymmetric ones follow other rules. (Note that the optical center is often distinct from the mathematical center.) But remember, they must be seen as a unity, so they must not be separated or detached from the base letter.
+- **In Latin script, it is expected that all marks share the same distance to the base letter.** For particular cases like script fonts where the x-height could vary, marks should at least appear to be at the same optical distance to the base letter.
+- **Idiosyncratic or decorative brands have given way to more universal or neutral forms.**
+- **Ensure creating all the combining marks required for the languages the font are supporting**, as well as the so-called "Legacy Marks". (See below.) Google Fonts requires at least the GF Latin Core as the minimum set for a font addressing the Latin script. Please read more about our <a herf="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets">Glyphsets</a>.
+- **Usually, the design of the diacritics needs to be adjusted in size or slope to work better with the uppercase letters**. So ideally there should be at least two sets of diacritics: lowercase and uppercase marks. (e.g. `acutecomb` and `acutecomb.case`)
 
+**Examples of what to avoid** *- critical cases*
+   <figure>
+    <img src="images/diacritics/diac-inconsistent-3.png" title="severe diacrits inconsisntecies"/>
+   </figure>
+   <figure>
+    <img src="images/diacritics/diac-convention-size.png" style="width:500px" title="size and convention issues" />
+   </figure>
+   <figure>
+    <img src="images/diacritics/diac-h-position-2.gif" title="horizontal position comparison"/>
+   </figure>
 ## Legacy – Spacing marks
 
 The spacing diacritical marks (for example, U+00B4 `ACUTE ACCENT`) are required mainly for historical reasons and for backward compatibility. This is why they are also known as "Legacy marks".
@@ -109,9 +120,10 @@ Combining marks would be listed like this in the GDEF table:
 **Stacked diacritics**
 
 In some languages like Vietnamese, some marks are made of the combination of two other marks known as *stacked diacritics*. In such cases, a combining mark could also act as the 'base' glyph of another mark, and therefore, it would need more than one anchor. For example, in the `brevecom_acutecomb`, the `brevecomb` mark would have one `_top` anchor to be attached to a base letter, plus a `top` one to attach other marks to it; in this case, the `acutecomb`.
-Again, by ensuring to include right anchor with consistent names will contribute to the correct setting and functioning of the `mkmk` feature in the `GPOS` table.
 
-Automatic aligment enabled would also be recommended here to avoid placing stacked diacritics manually in the accented glyphs.
+- Distance between marks should also be consistent with the font. The stacked diacritic should be perceived as a unity that forms a whole with the base letter.
+- Again, by ensuring to include right anchor with consistent names will contribute to the correct setting and functioning of the `mkmk` feature in the `GPOS` table.
+- Automatic aligment enabled would also be recommended here to avoid placing stacked diacritics manually in the accented glyphs.
 
 ## Text Shaping process and Open Type Layout
 
@@ -140,6 +152,28 @@ For any glyph to be classified into the right class, the following must be ensur
 
 If a glyph is not in the correct class, this may be corrected by using the "Glyph Info" pane in Glyphs and setting the Category and Subcategory fields as described above.
 
+## The Glyph Positioning (GPOS) table
+
+As stated in the OpenType Specification:
+
+> The `GPOS` table provides precise control over glyph placement for sophisticated text layout and rendering in each script and language system that a font supports.
+
+GPOS table will use the all the X and Y position values of the glyphs for placement operations conditioned by the script and language the font is supporting plus advanced typographic composition tasks as kerning or superscripts.
+
+From the eight type of positioning actions that the table support, at least two are essential for the functioning of diacritic marks:
+
+- **Mark-to-base attachment** Controled by the `mark` feature. *Positions combining marks with respect to base glyphs, as when positioning vowels, diacritical marks, or tone marks in Arabic, Hebrew, and Vietnamese.*
+- **Mark-to-mark attachment** Controled by the `mkmk` feature. *Positions one mark relative to another, as when positioning tone marks with respect to vowel diacritical marks in Vietnamese.*
+Contextual positioning
+
+GPOS uses four lists included in the table to administrate and support the necessities of each particular font as stated in the  Opentype Specification.
+
+- The ScriptList identifies all the scripts and language systems in the font that use glyph positioning.
+- The FeatureList defines all the glyph positioning features required to render these scripts and language systems.
+- The LookupList contains all the lookup data needed to implement each glyph positioning feature.
+- The FeatureVariations table can be used to substitute an alternate set of lookup tables to use for any given feature under specified conditions. This is currently used only in variable fonts.
+
+You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/opentype/spec/gpos) entry in the OT Spec the for more context and details.
 
 
 ------------------------------------------------------------------------
@@ -167,37 +201,11 @@ If a glyph is not in the correct class, this may be corrected by using the "Glyp
 
   <b>Production related</b>
   <ul>
+  <li><a href="https://glyphsapp.com/learn/mark-to-mark-positioning">Mark to mark positioning Glyphs ttorial</a></li>
+  <li><a href="https://help.fontlab.com/fontlab-vi/Anchors-and-Pins/">Anchors in Fontlab</a></li>
   <li><a href="https://harfbuzz.github.io/what-is-harfbuzz.html" target="_blank">Harfbuzz, a text-shaping engine</a></li>
   <li><a href="https://simoncozens.github.io/fonts-and-layout//features-2.html" target="_blank">Substitution and Positioning Rules</a> - advanced reading</li>
   </ul>
   </div>
 
 </div>
-
-<!-- List of contents
-
-What is a diacritic mark and why are they needed
-
-Common design recomendations
-    - style coherence - consider weight
-    - size
-    - v-position
-    - h-position
-    - lowercase
-    - uppercase
-    - needed kerning
-
-Legacy Marks
-    Which
-    Purpose/use
-Combining marks
-    Which
-    Purpose
-    Anchors _naming / Viet
-    Encodings
-Base letters
-    Anchors _naming
-
-GDEF table Vs GPOS table differences
-Positions on
---> 
