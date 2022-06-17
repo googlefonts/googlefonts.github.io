@@ -190,9 +190,7 @@ You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/ope
 ## Useful links
 
 <div class="column-list">
-
   <div class="column" style="width:50%">
-
   <b>Design</b>
   <ul>
   <li><a href="https://gaultney.org/jvgtype/typedesign/diacritics/" target="_blank">Problems of diacritic design</a></li>
@@ -207,14 +205,12 @@ You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/ope
   </div>
 
   <div class="column" style="width:50%">
-
   <b>Production related</b>
   <ul>
-  <li><a href="https://glyphsapp.com/learn/mark-to-mark-positioning">Mark to mark positioning Glyphs ttorial</a></li>
+  <li><a href="https://glyphsapp.com/learn/mark-to-mark-positioning">Mark to mark positioning Glyphs tutorial</a></li>
   <li><a href="https://help.fontlab.com/fontlab-vi/Anchors-and-Pins/">Anchors in Fontlab</a></li>
   <li><a href="https://harfbuzz.github.io/what-is-harfbuzz.html" target="_blank">Harfbuzz, a text-shaping engine</a></li>
   <li><a href="https://simoncozens.github.io/fonts-and-layout//features-2.html" target="_blank">Substitution and Positioning Rules</a> - advanced reading</li>
   </ul>
   </div>
-
 </div>
