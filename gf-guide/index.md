@@ -72,6 +72,8 @@ Know the particularities about mastering your font project to meet the Google Fo
   <b>[Vertical metrics](metrics.md)</b>
 * <mark class="yellow">learn</mark>
   [Outline Quality](outlines.md)
+* <mark class="yellow">learn</mark>
+  [Diacritics requirements](diacritics.md)
   
 <!--
 * <mark class="yellow">learn</mark>
