@@ -33,31 +33,37 @@ This guide will give users an overview introduction to diacritics both from a de
 
 **Examples of what to avoid** *- critical cases*
    <figure>
-    <img src="images/diacritics/diac-inconsistent-3.png" title="severe diacrits inconsistencies"/>
-    <figcaption style="font-size:0.9em"><i>Multiple diacrits inconsistencies</i></figcaption>
+    <img src="images/diacritics/diac-inconsistent-3.png">
+    <figcaption style="font-size:0.8em"><i>Multiple diacrits inconsistencies</i></figcaption>
    </figure>
    <figure>
-    <img src="images/diacritics/diac-convention-size.png" style="width:500px" title="size and convention issues" />
-    <figcaption>Size and convention issues</figcaption>
+    <img src="images/diacritics/diac-convention-size.png" style="width:500px">
+    <figcaption style="font-size:0.8em"><i>Size and convention issues</i></figcaption>
    </figure>
    <figure>
-    <img src="images/diacritics/diac-h-position-2.gif" title="horizontal position comparison"/>
-    <figcaption>Horizontal position fixes comparison</figcaption>
+    <img src="images/diacritics/diac-h-position-2.gif">
+    <figcaption style="font-size:0.8em"><i>Horizontal position fixes comparison</i></figcaption>
    </figure>
+
 ## Legacy – Spacing marks
 
-The spacing diacritical marks (for example, U+00B4 `ACUTE ACCENT`) are required mainly for historical reasons and for backward compatibility. This is why they are also known as "Legacy marks".
+The spacing diacritical marks (for example, `U+00B4 ACUTE ACCENT`) are required mainly for historical reasons and for backward compatibility. This is why they are also known as "Legacy marks".
 
 These marks are only used as placeholder when typing for a combination of keys to add an accent to a base letter e.g. `´` + `a` to obtain a `á`. 
+   <figure>
+    <img src="images/diacritics/diac-legacy">
+    <figcaption style="font-size:0.8em"><i>Legacy marks in action</i></figcaption>
+   </figure>
 
 **Requirements:**
 
 - **Legacy marks must have a positive advance width value `≠0`** Due to their function as displaying the accent as a standalone character, they are expected to have an advance width value with positive sidebearings, that is, they should not be zero width glyphs. 
-- They should share the design of the `combining marks` for consistency reasons. To ensure this in a practical way, it is suggested to create them by using the combining marks as components in the source file.
-- They use the simple name of the mark, e.g. `acute` or `grave`
+- They should share the design of the `combining marks` (see below) for consistency reasons. To ensure this in a practical way, it is suggested to create them by using the combining marks as components in the source file.
+- They use the simple name of the mark, e.g. `acute` or `grave`.
 - They must have the correct Unicode codepoint in your source file to work properly.
 - Although they represent marks, they need to behave as though they are base glyphs; that is, in the GDEF table their "Glyph Class" should be 1. ("Base glyph") In the Glyphs "Font View" under the List mode, they should have `Category=Mark` and `Subcategory=Spacing`.
-
+<br>
+<br>
 **Latin legacy Marks list**
 
 ````
@@ -92,11 +98,11 @@ As the name suggests, the combining diacritics are the marks actually used to co
 
 When creating the precomposed characters in the source file, ideally, automatic alignment should be enabled consistently in the composite glyphs. This way they would get authomatically updated after any change on any of the components is performed.
 
-*Tip: When using `ufo2glyphs` to convert source files, use this argument to preserve alignments: `--enable-automatic-alignment`
+*Tip: When using `ufo2glyphs` to convert source files, use this argument to preserve alignments: `--enable-automatic-alignment`*
 
 ### Anchors
 
-All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another, that play a key role in the identification of the glyph definition as well as the generation of the "Mark to base positioning" ([`mark`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#tag-mark)) and the "Mark to mark positioning" ([`mkmk`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#mkmk)) features.
+All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another and play a key role in the identification of the glyph definition as well as the generation of the "Mark to base positioning" ([`mark`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#tag-mark)) and the "Mark to mark positioning" ([`mkmk`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#mkmk)) features.
 
 Anchors are commonly represented as a red rhombus in the glyph view of the source file and are identified with a name. The name part should be shared among the base glyph and the mark glyph, but in the mark glyph there should be a preceding underscore. For example, there should be a `top` anchor in the base glyph and a corresponding `_top` anchor in the mark.
 This name schema is crucial for the positioning to work as expected - for example if the underscore is omitted in the mark glyph, it would not be attached to the base letter - so you must pay special care and attention to them.  
@@ -156,7 +162,7 @@ For any glyph to be classified into the right class, the following must be ensur
 
 If a glyph is not in the correct class, this may be corrected by using the "Glyph Info" pane in Glyphs and setting the Category and Subcategory fields as described above.
 
-## The Glyph Positioning (GPOS) table
+### The Glyph Positioning (GPOS) table
 
 As stated in the OpenType Specification:
 
@@ -168,7 +174,6 @@ From the eight type of positioning actions that the table support, at least two 
 
 - **Mark-to-base attachment** Controled by the `mark` feature. *Positions combining marks with respect to base glyphs, as when positioning vowels, diacritical marks, or tone marks in Arabic, Hebrew, and Vietnamese.*
 - **Mark-to-mark attachment** Controled by the `mkmk` feature. *Positions one mark relative to another, as when positioning tone marks with respect to vowel diacritical marks in Vietnamese.*
-Contextual positioning
 
 GPOS uses four lists included in the table to administrate and support the necessities of each particular font as stated in the  Opentype Specification.
 
