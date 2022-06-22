@@ -1,5 +1,9 @@
 <link href="style.css" rel="stylesheet">
 
+<button class="index.button"><a href=index.md>GF Guide Index</a></button>
+
+------------------------------------------------------------------------
+
 # Libre Font Culture
 {:.no_toc}
 

@@ -52,11 +52,16 @@ mark {
     background-color:#FFEFD4; 
     color:#FF8700;
 }
-/* .code-text {
-    padding:0.2em 0.4em; 
-    border-radius:0.4em; 
-    font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; 
-    font-size:0.8em;
-    background-color:#f3f4f4; 
-    color:#1d2227;
-} */
+.index-button {
+    background-color: #2568B3;
+    color: white;
+    border: none;
+    border-radius: 0.5em; 
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
