@@ -9,10 +9,15 @@
 
 🦉 <a href="https://github.com/google/fonts">google/fonts</a> is the GitHub repository that is used as a staging area to upload font families to <a href="https://fonts.google.com/">Google Fonts</a>. 
 <br><br>
-The first step to contributing your font to Google Fonts is to submit your contribution as a Pull Request to google/fonts.
+Once your project is ready, and you are sure it meets all the font and production requirements; as well as you have located your files in a GitHub repository that follows the required structure, then the definitive step to contributing your font to Google Fonts is to submit it as a Pull Request to google/fonts repository.
 <br><br>
 This section will help users understand which are the directories, files, and python modules included in the Google/Fonts repository and how they are related.
 
+</div>
+
+<div class="context-reading">
+    Background reading:<br>
+    - <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
 </div>
 
 ## Table of contents
@@ -109,3 +114,12 @@ As with the axis registry, [the Lang directory](https://github.com/googlefonts/l
 
 -   `to_sandbox.txt` is a list of font directories or designer directories to be pushed to sandbox.
 -   `to_production.txt` is a list of fonts directories or designer directories to be pushed to production. Once the elements (fonts, bio, etc) have been checked and validated in sandbox, they can be sent to the API so users can have access to them. We can only push to production something that was first pushed to sandbox.
+
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="brown">team&nbsp;</mark> <a href="./description">Description file</a>
+  <br>
+    - <mark class="brown">team&nbsp;</mark> <a href="./profile">Designer profile</a>
+  <br>
+    - <mark class="brown">team&nbsp;</mark> <a href="./metadata">METADATA file</a>
+</div>

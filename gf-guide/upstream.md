@@ -139,7 +139,7 @@ The files and directories listed above are mandatory. However, we don't mind if 
 
 <div class="next-reading">
     Further reading:<br>
-    - <mark class="green"><b>must&rarr;</b></mark> <a href="./readme.md" style="font-weight:bold">README file</a>
+    - <mark class="green"><b>must&rarr;</b></mark> <a href="./readme" style="font-weight:bold">README file</a>
   <br>
     - <mark class="yellow">learn</mark> <a href="./maintaining">Maintaining your font repo</a>
 </div>

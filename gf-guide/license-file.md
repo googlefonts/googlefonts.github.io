@@ -148,3 +148,11 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 ```
+
+
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="grey">templ</mark> <a href="./authors" style="font-weight:bold">Authors and Contributors</a>
+  <br>
+    - <mark class="green"><b>must&rarr;</b></mark> <a href="./readme" style="font-weight:bold">README file</a>
+</div>

@@ -18,7 +18,7 @@ For practicality, the above information won’t be repeated in this chapter. If 
 <br><br>
 We recommend you install all the tools in a virtual environment, to avoid conflict between packages. Further information is detailed in this chapter:
 <ul>
-  <li><a href="./tools">Tools and Dependencies</a></li>
+  <li><a href="./tools">Tools and dependencies required</a></li>
 </ul>
 
 For the rest of this chapter, it would be better if you have basic knowledge of:
@@ -27,6 +27,11 @@ For the rest of this chapter, it would be better if you have basic knowledge of:
   <li>Command line tools</li>
 </ul>
 
+</div>
+
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="blue">start</mark> <a href="./tools" style="font-weight:bold">Tools and Dependencies</a>
 </div>
 
 ## Table of contents

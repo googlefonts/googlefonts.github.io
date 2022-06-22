@@ -2,11 +2,6 @@
 
 <a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
 
-<div class="context-reading">
-    Background reading:<br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
-</div>
-
 # Authors and Contributors
 {:.no_toc}
 
@@ -26,6 +21,11 @@ The <mark class="grey">AUTHORS.txt</mark> file is mandatory for font’s reposit
     <li> Google Fonts uses the <mark class="grey">AUTHORS.txt</mark> file to know who to credit in the <a href="https://fonts.google.com/specimen/Brygada+1918#about">#About section</a> of the specimen page. Without this file, the font may be wrongly attributed.</li>
 </ul>
 
+</div>
+
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
 </div>
 
 ## Table of contents
@@ -72,3 +72,10 @@ You can find a template in [GFPT](https://github.com/googlefonts/googlefonts-pro
 Bob Tester <hello@bobtester.com>
 Maggie Techno <maggietechno@company.com>
 ```
+
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="grey">templ</mark> <a href="./license" style="font-weight:bold">License file</a>
+  <br>
+    - <mark class="green"><b>must&rarr;</b></mark> <a href="./readme" style="font-weight:bold">README file</a>
+</div>

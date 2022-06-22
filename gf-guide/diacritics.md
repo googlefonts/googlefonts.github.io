@@ -15,6 +15,11 @@ This guide will give users an overview introduction to diacritics both from a de
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets)" style="font-weight:bold">Overall font files requirements/Glyphsets</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -170,7 +175,7 @@ As stated in the OpenType Specification:
 
 > The `GPOS` table provides precise control over glyph placement for sophisticated text layout and rendering in each script and language system that a font supports.
 
-GPOS table will use the all the X and Y position values of the glyphs for placement operations conditioned by the script and language the font is supporting plus advanced typographic composition tasks as kerning or superscripts.
+GPOS table will use all the glyphs'  X and Y position values for placement operations conditioned by the script and language the font supports, plus advanced typographic composition tasks such as kerning or superscripts.
 
 From the eight type of positioning actions that the table support, at least two are essential for the functioning of diacritic marks:
 
@@ -207,7 +212,7 @@ You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/ope
   </div>
 
   <div class="column" style="width:50%">
-  <b>Production related</b>
+  <b>Production</b>
   <ul>
   <li><a href="https://glyphsapp.com/learn/mark-to-mark-positioning">Mark to mark positioning Glyphs tutorial</a></li>
   <li><a href="https://help.fontlab.com/fontlab-vi/Anchors-and-Pins/">Anchors in Fontlab</a></li>
@@ -215,4 +220,9 @@ You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/ope
   <li><a href="https://simoncozens.github.io/fonts-and-layout//features-2.html" target="_blank">Substitution and Positioning Rules</a> - advanced reading</li>
   </ul>
   </div>
+</div>
+
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="yellow">learn</mark> <a href="./outlines">Outline Quality</a>
 </div>

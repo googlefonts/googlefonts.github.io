@@ -13,6 +13,11 @@ This file will be created by the team member who will be onboarding the font. Th
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./readmefile" style="font-weight:bold">README file</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
