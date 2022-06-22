@@ -75,3 +75,12 @@ These are some links where you could find more detailed information about this C
 -   [Open Source Guide](https://opensource.guide/how-to-contribute/)
 -   SIL's [Font Development Best Practices](http://silnrsi.github.io/FDBP/en-US/index.html) with Technical Guidance Regarding Font Development And Production
 -   The [Open Source Initiative](https://opensource.org/docs/osd)
+
+<div class="next-reading">
+    Next readings &rarr;<br>
+    - <mark class="blue">start</mark> <a href="./required-knowledge" style="font-weight:bold">Knowledge, tools and dependencies required</a></mark>
+  <br>
+    - <mark class="yellow">learn</mark> <a href="./hosting.md">Hosting projects on Github</a></mark>
+  <br>
+    - <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a></mark>
+</div>
