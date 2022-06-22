@@ -1,6 +1,6 @@
 <link href="style.css" rel="stylesheet">
 
-<button class="button button-i"><a href="./index">&larr; GF Guide Index</a></button>
+<a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
 
 # Authors and Contributors
 {:.no_toc}
