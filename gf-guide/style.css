@@ -53,15 +53,20 @@ mark {
     color:#FF8700;
 }
 .index-button {
-    background-color: #2568B3;
-    color: white;
+    background-color: #ccefff;
     border: none;
-    border-radius: 0.5em; 
+    color: #2568B3;
     padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1em;
+    font-size: 0.9em;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 1.5em;
+    transition-duration: 0.4s;
+  }
+  .index-button:hover {
+    background-color: #2568B3;
+    color: #ccefff;
   }
