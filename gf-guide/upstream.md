@@ -22,7 +22,7 @@ Before starting this reading, make sure that:
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a></mark>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
 </div>
 
 ## Table of contents
