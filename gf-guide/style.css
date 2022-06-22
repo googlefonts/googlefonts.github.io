@@ -52,21 +52,23 @@ mark {
     background-color:#FFEFD4; 
     color:#FF8700;
 }
-.index-button {
-    background-color: #ccefff;
-    border: none;
-    color: #2568B3;
-    padding: 10px 15px;
+.button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 0.9em;
+    padding: 10px 15px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 1.5em;
+    border: none;
+    border-radius: 2em;
     transition-duration: 0.4s;
   }
-  .index-button:hover {
+  .button-i {
+    background-color: #ccefff;
+    color: #2568B3;
+  }
+  .button-i:hover {
     background-color: #2568B3;
     color: #ccefff;
   }
