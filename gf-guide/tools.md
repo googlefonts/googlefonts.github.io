@@ -13,6 +13,11 @@ Before starting your project, you should set up a working environment with all t
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="blue">start</mark> <a href="./culture" style="font-weight:bold">Libre Font Culture</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -230,3 +235,9 @@ export BSTACK_ACCESS_KEY="key"
 -   [Terminal command shortcuts in Mac](https://support.apple.com/fr-fr/guide/terminal/trmlshtcts/mac)
 -   [Python Tutorials](https://realpython.com)
 
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="yellow">learn</mark> <a href="./hosting.md">Hosting projects on Github</a>
+  <br>
+    - <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
+</div>
