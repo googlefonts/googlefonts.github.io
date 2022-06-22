@@ -18,6 +18,11 @@ This page will help designers to write a good README file.
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here

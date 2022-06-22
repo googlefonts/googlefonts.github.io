@@ -2,6 +2,11 @@
 
 <a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
+</div>
+
 # Authors and Contributors
 {:.no_toc}
 
