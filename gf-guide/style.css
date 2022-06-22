@@ -9,15 +9,13 @@
     background-color:#F6F6F6; 
     color:#5D5D5D; 
     padding:1.2em 1.6em; 
-    /* border-radius: 1em;  */
-    font-size:0.9em;
-    /* margin: 2em 0em; */
+    font-size:0.9em
+    /* margin: 20px 0px; */
 }
 .context-reading {
     color:#5D5D5D; 
     padding:1.2em 1.6em; 
-    /* border-radius: 1em;  */
-    font-size:0.9em;
+    font-size:0.9em
     /* margin: 20px 0px; */
 }
 mark {
