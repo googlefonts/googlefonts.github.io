@@ -58,11 +58,11 @@ mark {
     display: inline-block;
     font-size: 0.9em;
     padding: 10px 15px;
-    margin: 4px 2px;
+    margin: 4px 2px 4px 0px;
     cursor: pointer;
     border: none;
     border-radius: 2em;
-    transition-duration: 0.4s;
+    transition-duration: 0.3s;
   }
   .button-i {
     background-color: #ccefff;
@@ -70,5 +70,5 @@ mark {
   }
   .button-i:hover {
     background-color: #2568B3;
-    color: #ccefff;
+    color: #fff;
   }
