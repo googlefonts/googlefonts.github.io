@@ -40,3 +40,8 @@ In order to tweet about a new release, Google Fonts requires 2-3 expressive imag
 -   Link to a mini website if available.
 
 The person onboarding the project will collect images from the documentation directory, include them in a drive folder, write a little tweet according to a simple template, and then it will be reviewed and published when the font is released on the live server.
+
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="brown">templ</mark> <a href="./profile">Designer profile</a>
+</div>
