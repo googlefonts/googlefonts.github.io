@@ -1,6 +1,6 @@
 <link href="style.css" rel="stylesheet">
 
-<button class="button button-i"><a href="./index">&larr; GF Guide Index</a></button>
+<a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
 
 # Upstream repository structure
 {:.no_toc}
@@ -125,7 +125,7 @@ Each file or dir has the following purpose:
 -   **[.gitignore](https://github.com/googlefonts/Unified-Font-Repository/blob/main/.gitignore)**
     <br>
     File specifying untracked files that Git should ignore. Since [the tools](tools.md) should be installed under a virtual environment dedicated to this repository, the `.gitignore` should include the env (or the name of your virtual environment you are using, for example, `venv` or `env`). Indeed it is better not to push your virtual environment to Github and keep it local. To keep collaboration between Mac and Windows users, you can add `.DS_Store` to the list of untracked files. If you use `.glyphs` sources, `*(Autosave)*` and is also a relevant addition.
-    
+
 -   **Releases should be tagged**; [Montserrat does this well](https://github.com/JulietaUla/Montserrat/releases).
 
 The files and directories listed above are mandatory. However, we don't mind if you include further doc and dirs, but they should have a clear purpose (such as a `scripts` directory for example).
