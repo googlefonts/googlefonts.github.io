@@ -1,5 +1,7 @@
 <link href="style.css" rel="stylesheet">
 
+<button class="button button-i"><a href="./index">&larr; GF Guide Index</a></button>
+
 # README file
 {:.no_toc}
 

@@ -1,5 +1,7 @@
 # Refining your typeface
 
+<button class="button button-i"><a href="./index">&larr; GF Guide Index</a></button>
+
 <div class="page-body">
 
 -   outlines compatibility + interpolation

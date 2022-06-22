@@ -1,5 +1,7 @@
 <link href="style.css" rel="stylesheet">
 
+<button class="button button-i"><a href="./index">&larr; GF Guide Index</a></button>
+
 # Upstream repository structure
 {:.no_toc}
 
