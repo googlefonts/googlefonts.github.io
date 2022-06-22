@@ -65,10 +65,11 @@ mark {
     transition-duration: 0.3s;
   }
   .button-i {
-    background-color: #ccefff;
+    background-color: white;
     color: #2568B3;
+    border: 2px solid #ccefff;
   }
   .button-i:hover {
-    background-color: #2568B3;
-    color: #fff;
+    background-color: #ccefff;
+    color: #2568B3;
   }
