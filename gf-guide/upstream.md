@@ -20,6 +20,11 @@ Before starting this reading, make sure that:
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a></mark>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -75,47 +80,53 @@ Each file or dir has the following purpose:
 
 *An example is provided for each file (from this Guide or other repositories). Please use these templates and modify what you need.*
 
--   [AUTHORS.txt](authors.md)
-
+-   **[AUTHORS.txt](authors.md)**
+    <br>
     Includes contact information for the project's authors. Contributors must not be included in this file.
--   [CONTRIBUTORS.txt](authors.md)
 
+-   **[CONTRIBUTORS.txt](authors.md)**
+    <br>
     Includes contact information for the project's contributors.
--   [OFL.txt](https://www.notion.so/0a589f36247844b98dd11b8f2635ed0c)
 
+-   **[OFL.txt](license-file.md)**
+    <br>
     The OFL license file. The first line of the license file must contain the font family's copyright string.
--   [README.md](readmefile.md)
 
+-   **[README.md](readmefile.md)**
+    <br>
     Contains information about the font family and instructions on how to build the family. You should take particular care over this file, and you also must add at least one image and a short description of your font project.
+
 -   **[documentation](https://github.com/googlefonts/Unified-Font-Repository/tree/main/documentation)**
-
+    <br>
     A directory that contains expanded information about the Family. You can eventually store in it your PDF specimen, screenshots or process definition, the pictures you use for the README.md, and [**promo**](marketing.md)[**tional assets**](marketing.md) for twitter.
--   **[sources](https://github.com/Omnibus-Type/Texturina/tree/master/sources)**
 
+-   **[sources](https://github.com/Omnibus-Type/Texturina/tree/master/sources)**
+    <br>
     A directory containing the design source files and scripts used to build the fonts. Sources must not be kept in another directory.
 
     There must be either a `config.yaml` or `build.sh` file that allows building the fonts in one command. For more context you could read about the [Scalable font production](https://googlefonts.github.io/gf-guide/production.html#scalable-font-production) principle.
 
-    -   **[config.yaml](https://github.com/googlefonts/Unified-Font-Repository/blob/main/sources/config.yaml)**
-
+    -   [config.yaml](https://github.com/googlefonts/Unified-Font-Repository/blob/main/sources/config.yaml)
+        <br>
         A configuration file that includes all the relevant information of a project for the Builder to build the font files.
 
-    
-
-    -   **[build.sh](https://github.com/googlefonts/lexend/blob/main/sources/build.sh)**
-
+    -   [build.sh](https://github.com/googlefonts/lexend/blob/main/sources/build.sh)
+        <br>
         A Bash script to build the fonts in one command if the build process requires more than the single config.yaml file to build the font families of this repo.
         
 -   [**fonts**](requirements.md)
-
+    <br>
     A directory containing font binaries or subdirectories for each font format. If your project provides multiple formats, do not include them all in one folder. Create a folder for each format e.g `fonts/otf`, `fonts/ttf`, `fonts/webfonts`. The [Builder](build.md) told does that by default.
+
 -   **[requirements.txt](https://github.com/googlefonts/Unified-Font-Repository/blob/main/requirements.txt)**
-
+    <br>
     File listing the python packages (and their version if necessary) used for a project, so that any user can install easily the necessary packages and replicate the production process.
--   **[.gitignore](https://github.com/googlefonts/Unified-Font-Repository/blob/main/.gitignore)**
 
+-   **[.gitignore](https://github.com/googlefonts/Unified-Font-Repository/blob/main/.gitignore)**
+    <br>
     File specifying untracked files that Git should ignore. Since [the tools](tools.md) should be installed under a virtual environment dedicated to this repository, the `.gitignore` should include the env (or the name of your virtual environment you are using, for example, `venv` or `env`). Indeed it is better not to push your virtual environment to Github and keep it local. To keep collaboration between Mac and Windows users, you can add `.DS_Store` to the list of untracked files. If you use `.glyphs` sources, `*(Autosave)*` and is also a relevant addition.
--   Releases should be tagged; [Montserrat does this well](https://github.com/JulietaUla/Montserrat/releases).
+    
+-   **Releases should be tagged**; [Montserrat does this well](https://github.com/JulietaUla/Montserrat/releases).
 
 The files and directories listed above are mandatory. However, we don't mind if you include further doc and dirs, but they should have a clear purpose (such as a `scripts` directory for example).
 
@@ -125,3 +136,10 @@ The files and directories listed above are mandatory. However, we don't mind if 
 
 -   [Github release explained](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 -   [How to use requirements.txt files](https://pip.pypa.io/en/stable/user_guide/#requirements-files)
+
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="green"><b>must&rarr;</b></mark> <a href="./readme.md" style="font-weight:bold">README file</a>
+  <br>
+    - <mark class="yellow">learn</mark> <a href="./maintaining">Maintaining your font repo</a>
+</div>
