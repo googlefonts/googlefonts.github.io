@@ -7,18 +7,64 @@
 
 <div class="callout">
 
-🦥  The following are the guidelines that apply to all fonts, regardless of their format or whether you want to add or upgrade a font.
+🦥  The following guidelines apply to all fonts, regardless of their format (static or variable fonts) or if you want to add a new font or update one already included in the catalog.
 <br><br>
-Then, depending on the format you are working on, we have different specifications for static and variable fonts. Please read the <a href="./statics">guidelines for static fonts</a> and the <a href="./variable">guidelines for variable fonts</a>.
-<br><br>
-It is also recommended to read the <a href="./onboarding">guidelines to add new fonts or upgrade them in Google Fonts</a> before continuing.
+For specific information on any of those cases, please read the pages with the requirements on them. before continuing.
 
+</div>
+
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="blue">start</mark> <a href="./culture" style="font-weight:bold">Libre Font Culture</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./onboarding" style="font-weight:bold">Adding & upgrading fonts to Google Fonts</a> 
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./static" style="font-weight:bold">Static fonts specifics</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
 </div>
 
 ## Table of contents
 {:.no_toc}
 * TOC goes here
 {:toc}
+
+
+## Font versioning
+
+**Every new version onboarded to GF should have an increased version number compared to the precedent.** This is explained in the [Main contribution cases](onboarding.md) chapter under the Font Upgrades section.
+
+Versioning is based on [semver](https://semver.org/), apart from we use `MAJOR.SIGNIFICANTMINORPATCH`, instead of `MAJOR.MINOR.PATCH`.
+
+**Examples:**
+
+If a breaking change is made e.g. converting a static font family to a variable font family, the **MAJOR** must be incremented by 1, and the others reset, e.g.:
+
+Current `1.230`, new `2.000`
+
+If a new character set is inserted, **SIGNIFICANT** should be incremented, e.g.:
+
+Current `1.230`, new `1.330`
+
+If a few new glyphs are added, **MINOR** should be incremented, e.g.:
+
+Current `1.230`, new `1.240`
+
+If a name table record is updated such as the copyright string, **PATCH** should be incremented, e.g.:
+
+Current `1.230`, new `1.231`
+
+## Font Embedding (fsType)
+
+[fsType](https://docs.microsoft.com/en-us/typography/opentype/spec/os2#fstype) is one of the parameters of the `OS/2` table in which the embeding permissions of a font are declared. For Libre Fonts it should be set to bit `0` (Installable embedding).
+
+This is how it should look like in the OS/2 table: `<fsType value="00000000 00000000"/>`
+
+If you are using the Glyphs font editor, create a new custom parameter called “fsType” in the “Font” tab of the Font Info pane. Change the Embedding drop-down to “Installable” and leave the “Subsetting Forbidden” checkbox unchecked.
+
+## Font Vertical Metrics
+
+Please read the [following pages about vertical metrics](metrics.md) for setting vertical metrics.
 
 ## Font copyright and license
 
@@ -33,7 +79,9 @@ These font info parameters are not optional and should follow the same scheme wi
     E.g. Copyright 2011 The Montserrat Project Authors (<https://github.com/JulietaUla/Montserrat>)
 
     If you are using the Glyphs font editor, add a “Copyright” entry under the “Font” tab of the Font Info panel.
--   **The first line of the** **[OFL.txt](license-file.md)** **file should be identical to the font copyright string** **detailed above**.
+
+-   **The first line of the [OFL.txt](license-file.md) file should be identical to the font copyright string detailed above**.
+  
 -   **The license string must be the same for all GF font projects:**
 
     ``` code
@@ -41,6 +89,7 @@ These font info parameters are not optional and should follow the same scheme wi
     ```
 
     If you are using the Glyphs font editor, add this string to a “License” entry in the “Font” tab of the Font Info panel.
+
 -   **The license URL must be the same for all GF fonts projects:**
 
     ``` code
@@ -54,11 +103,11 @@ These font info parameters are not optional and should follow the same scheme wi
 Typically libre fonts are not subject to any trademarks.
 
 **If you do not trademark your project name:**
-
+<br>
 -   Do not declare trademarks in font info metadata.
 
 **If you do trademark your project name:**
-
+<br>
 -   Declare trademarks in font info metadata.
 -   License your trademarks for redistribution in a `TRADEMARKS.md` file.
 
@@ -82,42 +131,6 @@ Typically libre fonts are not subject to any trademarks.
     > *Firstname Othername*
     >
     > *Job Title, Organization*
-
-## Font versioning
-
-Every new version onboarded to GF should have an increased version number compared to the precedent. This is explained in the [Main contribution cases](onboarding.md) chapter under the Font Upgrades section.
-
-Versioning is based on [semver](https://semver.org/), apart from we use `MAJOR.SIGNIFICANTMINORPATCH`, instead of `MAJOR.MINOR.PATCH`.
-
-**Examples:**
-
-If a breaking change is made e.g. converting a static font family to a variable font family, the MAJOR must be incremented by 1, and the others reset, e.g.:
-
-Current `1.230`, new `2.000`
-
-If a new character set is inserted, SIGNIFICANT should be incremented, e.g.:
-
-Current `1.230`, new `1.330`
-
-If a few new glyphs are added, MINOR should be incremented, e.g.:
-
-Current `1.230`, new `1.240`
-
-If a name table record is updated such as the copyright string, PATCH should be incremented, e.g.:
-
-Current `1.230`, new `1.231`
-
-## Font Embedding (fsType)
-
-[fsType](https://docs.microsoft.com/en-us/typography/opentype/spec/os2#fstype) parameter should be set to `0` (Installable embedding).
-
-This is how it should look like in the OS/2 table: `<fsType value="00000000 00000000"/>`
-
-If you are using the Glyphs font editor, create a new custom parameter called “fsType” in the “Font” tab of the Font Info pane. Change the Embedding drop-down to “Installable” and leave the “Subsetting Forbidden” checkbox unchecked.
-
-## Font Vertical Metrics
-
-Please read the [following pages about vertical metrics](metrics.md) for setting vertical metrics.
 
 ## Monospace fonts
 
@@ -151,4 +164,15 @@ Find all the glyphsets definition and filter lists in the [Glyphsets repository]
 
 ## Stylistic Sets
 
-The Google Fonts API currently does not support the inclusion of OpenType *Stylistic Set* features. Fonts that absolutely need them need to be published as a separate family with the stylistic feature added to the family name.
+The Google Fonts API does not support the inclusion of OpenType Stylistic Set features. Fonts that absolutely need them, need to be published as a separate family with the stylistic feature added to the family name. 
+
+Currently (by June 2022) the API engineer team is working on the support for them. If you would like to publish the font in any case, it is required to assign a name to each stylistic set. If you are using Glyphs font editor, please check the instructions on how to add the names under the [Stylistic Sets Tutorial](https://glyphsapp.com/learn/stylistic-sets)
+
+
+<div class="next-reading">
+    Further reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a>
+    <br>
+</div>
