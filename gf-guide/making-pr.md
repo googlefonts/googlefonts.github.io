@@ -9,18 +9,31 @@
 
 🐸 In order to submit a new family or an upgrade of an existing family on <a href="https://fonts.google.com/">fonts.google.com</a>, we must add or update the files held in the <a href="https://github.com/google/fonts">google/fonts</a> repository. This guide will help users submit Pull Requests (PR) which can then be reviewed and merged by a team member.
 <br><br>
-Before submitting your pull request, make sure you have read the following documentations:
+
+<!-- Before submitting your pull request, make sure you have read the following documentations:
 
 <ul>
     <li> <a href="./production">Contributing to GF</a></li>
     <li> <a href="./onboarding">Main contribution cases</a></li>
     <li> <a href="./requirements">Font files requirements</a></li>
-</ul>
+</ul> 
+-->
 
 The PR process requires a good understanding of GitHub and command line tools. If this isn’t you, we suggest simply opening an issue using the <a href="https://github.com/google/fonts/issues/new?assignees=&labels=I+New+Font%2C+II+Submission&template=1_add-font.md&title=Add+%5BFont+Name%5D">Add Font</a> or the <a href="https://github.com/google/fonts/issues/new?assignees=&labels=I+Font+Upgrade&template=2_update-font.md&title=Update+%5BFont+Name%5D">Update Font</a> template in the <a href="https://github.com/google/fonts/issues">issue tracker</a>, and waiting for a team member to ship the font for you.
 <br><br>
 As a general rule, <b>GF requires users to open an issue before submitting anything through a PR</b>. The PR is the formality that achieve a project, not its starting point. GF uses the issue tracker to define an agenda, generate statistics to estimate the work done, but also to archive decisions. Anything that is going out of GF standards, needs to be documented somewhere, and the issue tracker is here for that purpose. If your font isn’t submitted through an issue first, your PR may never be merged.
 
+</div>
+
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <br>
+    <mark class="blue">start</mark> <a href="./required-knowledge" style="font-weight:bold">Knowledge, tools and dependencies required</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./onboarding" style="font-weight:bold">Adding & upgrading fonts to Google Fonts</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overall font files requirements</a>
 </div>
 
 ## Table of contents
@@ -114,3 +127,12 @@ Now that you have the general scheme in mind, let’s dive into more details. Yo
 ### Make a PR with the Packager
 
 Good news! Google Fonts also has a tool that packages the font and makes the pull request to google/fonts repo for users with *contributor access* (team members). It uses the SSH protocol, which is why you would need to set up Git with an SSH key if you are a team member. For more info about `gftools packager` and its usage, read [this documentation](package.md).
+
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="purple">nerd&nbsp;</mark> <a href="./googlefonts">google/fonts repository explained</a>
+    <br>
+    - <mark class="brown">team&nbsp;</mark> <a href="./package">Package the fonts</a>
+  <br>
+    - <mark class="brown">team&nbsp;</mark> <a href="./onboarder-workflow">Onboarder workflow guide</a>
+</div>
