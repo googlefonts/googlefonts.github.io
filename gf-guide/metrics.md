@@ -15,6 +15,13 @@ Please note that CJK fonts (Chinese-Japanese-Korean scripts) are treated as spec
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./onboarding" style="font-weight:bold">Adding & upgrading fonts to Google Fonts</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overall font files requirements</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -258,3 +265,8 @@ Our decision to follow the Adobe schema was based on Dr. Ken Lunde’s comments 
 -   Mekkablue’s [Vertical Metrics Manager](https://github.com/mekkablue/Glyphs-Scripts/blob/master/Font%20Info/Vertical%20Metrics%20Manager.py)
 -   [Impallari/testing](https://github.com/impallari/Font-Testing-Page): Font tester which has no css line-height property set ([live site](http://cyreal.org/Font-Testing-Page))
 -   [GF Regression](https://github.com/googlefonts/gfregression): Check local fonts against currently hosted versions on [fonts.google.com](http://fonts.google.com/)
+
+<!-- <div class="next-reading">
+    Further reading:<br>
+    - <mark class="green"><b>must&rarr;</b></mark> <a href="./qa">QA process & tools</a>
+</div> -->
