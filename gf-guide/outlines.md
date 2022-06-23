@@ -15,6 +15,11 @@ This guide will give users a short introduction to font’s outline from a techn
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets)" style="font-weight:bold">Overall font files requirements/Glyphsets</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -120,3 +125,11 @@ Unless absolutely necessary, avoid over-complicated outline drawing. One example
 -   [Apple’s article about digitizing letterforms](https://developer.apple.com/fonts/TrueType-Reference-Manual/RM01/Chap1.html#points)
 -   [About diacritics](https://glyphsapp.com/learn/diacritics), Glyphs tutorial
 -   [How to draw with FontForge](http://designwithfontforge.com/en-US/Using_the_Fontforge_Drawing_Tools.html), FontForge tutorial
+
+
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="yellow">learn</mark> <a href="./diacritics">Diacritics</a>
+    <br>
+    - <mark class="yellow">learn</mark> <a href="./testing">Local testing</a>
+</div>
