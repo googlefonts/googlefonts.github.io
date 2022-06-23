@@ -28,7 +28,7 @@ You can request the addition or modification of your name, bio, and image using 
 ## How to write the biography
 
 -   **Fill up the** **[AUTHORS.txt](authors.md)** **file carefully.**
-
+    <br>
     All the names present in [AUTHORS.txt](authors.md) will be credited in the font’s specimen page on Google Fonts. The names should be written with all necessary signs and marks to be considered correct.
 -   **There is one bio per designer and per foundry mentioned.**
 -   **The text should be around 100 words** (so it should be more than 200 characters and less than 1000 characters).
@@ -74,7 +74,7 @@ As a developer or a team member, you may want to know the process for registerin
 
 -   **There is a directory per (moral/physical) person added.**
 -   **There are all the necessary elements.**
-
+    <br>
     Each designer directories should have these 3 elements:
 
     ``` code
@@ -84,12 +84,12 @@ As a developer or a team member, you may want to know the process for registerin
     └── image.png
     ```
 -   **The directory is named correctly.**
-
+    <br>
     The directory should use the designer or the company’s name using ASCII characters only and no hyphen.
 
     E.g `José María Ribagorda` → `josemariaribagorda`
 -   `info.pb` **has proper name and file path.**
-
+    <br>
     The info.pb is a file made to link a designer’s name to an image, and to a font.
 
     -   The name should be spelled exactly the same as in a related [METADATA.pb](metadata.md) of a font (with all the necessary characters event accented letters). If not, the platform won’t be able to display the right profile on the right specimen page.
@@ -109,11 +109,10 @@ As a developer or a team member, you may want to know the process for registerin
 -   **The image is formatted ready to use.**
     -   Should be a `PNG` or `JPEG` image between 100px and 300px. It will be cropped as a circle, so the image must be submitted as a square (1:1).
 
-    
-
     -   The filename should be the same as the directory name (ASCII characters only).
--   `bio.html` **contains all necessary informations.**
 
+-   `bio.html` **contains all necessary informations.**
+    <br>
     The bio.html file is an HTML snippet (similar to the description file) that contains a short bio of the designer.
 
     -   Should contain a link to a webpage and/or social media profile: social media links are referenced as “Twitter”, “Instagram” etc, not as a name tag. Other web pages are displayed truncated from the protocol prefix.
@@ -138,8 +137,9 @@ As a developer or a team member, you may want to know the process for registerin
 ### Process for adding a designer
 
 1.  Before adding the profile, make sure you have [cloned the google/fonts repo](making-pr.md) into your machine and [installed gftools in a virtual environment](tools.md).
+   
 2.  To simplify adding a new profile, we use `gftools add-designer` script that is part of `gftools`. It takes the different pieces of information and create a new directory in your local clone
-
+    <br>
     Team members have access to a spreadsheet linked to [this form](https://docs.google.com/forms/d/e/1FAIpQLSeMwHN8J213ZaxHrr5lHCrX56HY_NjGrWB8o604g98YxuMrdA/viewform). They can download the spreadsheet to add it as an argument; it will take the description and the link and format it correctly in `bio.html`.
 
     This is a common usage:
@@ -159,7 +159,8 @@ As a developer or a team member, you may want to know the process for registerin
 
     -   Don’t forget to add the labels <mark class=grey>Designer profile</mark> and <mark class="yellow">Ready for review</mark>, and add the PR to Traffic Jam (cf [The onboarder workflow guide](onboarder-workflow.md)). A team member will review the PR and merge it. Once done, it should appear on the platform in 2-4 weeks.
 
-<!-- <div class="next-reading">
+
+<div class="next-reading">
     Further reading:<br>
-    - <mark class="grey">templ</mark> <a href="./authors">Authors and Contributors</a>
-</div> -->
+    <mark class="purple">nerd&nbsp;</mark> <a href="./googlefonts">google/fonts repository explained</a>
+</div>
