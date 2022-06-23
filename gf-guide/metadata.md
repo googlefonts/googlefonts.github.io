@@ -11,6 +11,11 @@
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="purple">nerd&nbsp;</mark> <a href="./googlefonts">google/fonts repository explained</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -144,7 +149,7 @@ Example: `date_added: "2021-09-30"`
 
 ### designer
 
-Full name of the type designers or foundries who designed the fonts. Each value typically matches a string in the `designer` key of `info.pb` files in the library repo [/catalog/designers](https://github.com/google/fonts/tree/main/catalog/designers) tree.
+Full name of the type designers or foundries who designed the fonts. Each value typically matches a string in the `designer` key of `info.pb` files in the library repo [/catalog/designers](https://github.com/google/fonts/tree/main/catalog/designers) tree. The order in which the names are listed here will determine the order of appareance in the About section in the font specimen page. (See below.) 
 
 Examples:
 
@@ -152,7 +157,7 @@ Examples:
 -   `designer: "TypeTogether"` — Sometimes a formal organization designs a family and no individual there can be attributed as the principle designer
 -   `designer: "Huerta Tipográfica"` — Non-ascii characters are supported as UTF-8
 -   `designer: "Multiple Designers"` — This was used 2011 to 2016, when several people are involved in the design of a project, but are not working in a formal organization, or listing all their names would be too long to work well in the catalog UI as it was from 2011 to 2016. Many of these values persist, but should be updated as follows
--   `designer: "Principal Designer, Contributor, Contributor"` — In 2016 the catalog UI added a feature to show several named contributors on each font family specimen page, where the value of this key is a comma separated list, and the first item in the list is shown the the credit "Principal Design" (Examples: [Rubik](https://fonts.google.com/specimen/Rubik), [Pacifico](https://fonts.google.com/specimen/Pacifico))
+-   `designer: "Principal Designer, Contributor, Contributor"` — In 2016 the catalog UI added a feature to show several named contributors on each font family specimen page, where the value of this key is a comma separated list, and the first item in the list is shown the the credit "Principal Design" (Examples: [Rubik](https://fonts.google.com/specimen/Rubik), [Castoro](https://fonts.google.com/specimen/Castoro), [Pacifico](https://fonts.google.com/specimen/Pacifico))
 
 ### license
 
@@ -345,3 +350,12 @@ repository_url: "https://github.com/username/projectname"
 archive_url: "https://github.com/username/projectname/releases/download/v2.200/projectname-2.200.zip"
 }
 ```
+
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="grey">templ</mark> <a href="./license">Designer profile</a>
+    <br>
+    - <mark class="grey">templ</mark> <a href="./license">License file</a>
+    <br>
+    - <mark class="grey">templ</mark> <a href="./authors">Authors and Contributors</a>
+</div>
