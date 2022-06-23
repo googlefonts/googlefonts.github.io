@@ -15,6 +15,11 @@ You can request the addition or modification of your name, bio, and image using 
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="grey">templ</mark> <a href="./authors">Authors and Contributors</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -87,11 +92,7 @@ As a developer or a team member, you may want to know the process for registerin
 
     The info.pb is a file made to link a designer’s name to an image, and to a font.
 
-    <div class="indented">
-
     -   The name should be spelled exactly the same as in a related [METADATA.pb](metadata.md) of a font (with all the necessary characters event accented letters). If not, the platform won’t be able to display the right profile on the right specimen page.
-
-    
 
     -   The image file path should be the same as the one within the same directory.
 
@@ -105,7 +106,6 @@ As a developer or a team member, you may want to know the process for registerin
     }
     ```
 
-    </div>
 -   **The image is formatted ready to use.**
     -   Should be a `PNG` or `JPEG` image between 100px and 300px. It will be cropped as a circle, so the image must be submitted as a square (1:1).
 
@@ -158,3 +158,8 @@ As a developer or a team member, you may want to know the process for registerin
     -   In your PR you should mention a font (one is sufficient) the profile is linked to.
 
     -   Don’t forget to add the labels <mark class=grey>Designer profile</mark> and <mark class="yellow">Ready for review</mark>, and add the PR to Traffic Jam (cf [The onboarder workflow guide](onboarder-workflow.md)). A team member will review the PR and merge it. Once done, it should appear on the platform in 2-4 weeks.
+
+<!-- <div class="next-reading">
+    Further reading:<br>
+    - <mark class="grey">templ</mark> <a href="./authors">Authors and Contributors</a>
+</div> -->

@@ -43,5 +43,5 @@ The person onboarding the project will collect images from the documentation dir
 
 <div class="next-reading">
     Further reading:<br>
-    - <mark class="brown">templ</mark> <a href="./profile">Designer profile</a>
+    - <mark class="grey">templ</mark> <a href="./profile">Designer profile</a>
 </div>
