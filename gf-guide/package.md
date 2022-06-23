@@ -13,6 +13,13 @@ Note that Packager will create a branch on <code>google/fonts</code> directly. H
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="purple">nerd&nbsp;</mark> <a href="./googlefonts">google/fonts repository explained</a>
+    <br>
+    <mark class="purple">nerd&nbsp;</mark> <a href="./making-pr">Making a PR to Google Fonts</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -171,4 +178,7 @@ If all is in good place, team members would only have to run:
 gftools packager "Family Name" path/to/google/fonts -p
 ```
 
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="brown">team&nbsp;</mark> <a href="./onboarder-workflow">Onboarder workflow guide</a>
 </div>
