@@ -13,6 +13,15 @@ This guide will help designers to adopt good habits while maintaining their work
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/onboarding.html#font-upgrades" style="font-weight:bold">Upgrading fonts specifics</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
