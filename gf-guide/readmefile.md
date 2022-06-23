@@ -33,43 +33,46 @@ This page will help designers to write a good README file.
 The informations you provide in your font project’s `README.md` is key for GF and for users. It is therefore mandatory to apply the following instructions. Whilst only you can judge what makes sense or not for your font project description in term of detail and length, we can only recommend you to be generous with them:
 
 -   **The name of your font as the title**
+  
 -   **A concise description that resumes the key points:**
 
     -   One or two key descriptor(s) (e.g. variable, minimal, grotesque, etc).
 
-    
-
     -   Why it was created and what it’s designed to do.
-
-    
 
     -   Notable characteristics and features.
 
-    
-
     -   Anything extra you want people to know.
-
-    
 
     -   Scripts (e.g. Latin, Cyrillic, etc).
 
     Example:
 
     > *Roboto Serif is a variable typeface family designed to create a comfortable and frictionless reading experience. Minimal and highly functional, it is useful anywhere (even for app interfaces) due to the extensive set of weights and widths across a broad range of optical sizes. While it was carefully crafted to work well in digital media, across the full scope of sizes and resolutions we have today, it is just as comfortable to read and work in print media.*
--   **At least one image displaying the font (name, glyphset, notable features).**
 
-    Typefaces are a visual product, images are therefore mandatory for the `README.md`. GF also may use them for the `#about` section of your font family specimen page on Google Fonts.
+-   **At least one image displaying the font (its name, the glyphset, or notable features).**
+    <br>
+    Typefaces are visual products, images are therefore mandatory for the `README.md`. You could use of the `image.py` tool (provided in the [Google Fonts Project Template repo](https://github.com/googlefonts/googlefonts-project-template/tree/main/documentation)) that you could customize at will and generate at least a black and white image showcasing your font. E.g. [Luxurious Script](https://github.com/googlefonts/luxurious#luxurious-script).
+    
+    However, bear in mind that GF also could use the images you include in the README section of your repository for the `#about` section of your font family specimen page on Google Fonts
+
 -   **Further research and process definition.**
+  
 -   **Further development on special features and language support.**
+  
 -   **A Build section with detailed instructions on how to build the fonts.**
+  
 -   **A Changelog**
-
+    <br>
     List all the changes of the relevant upgrades indicating dates of release and font version numbers.
+
 -   **Acknowledgements and credits**
-
+    <br>
     List of all the authors and contributors to the project, the role they played, and additional information such as profession, email, website.
--   **A mention to the licence**
 
+-   **A mention to the licence**
+    <br>
+    It could be the same string required for the nameID 13, that you provide as "License description" from the Font Info pane in your source file:
     > *This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is in this repo* <span style="border-bottom:0.05em solid">*OFL.txt*</span> *and is also available with a FAQ at:* *<https://scripts.sil.org/OFL>.*
 
 ## Concrete examples
@@ -97,3 +100,8 @@ You may get inspire by these examples to build up your `README.md`. Please note 
 
 -   [About Readmes](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 
+
+<div class="next-reading">
+    Further reading:<br>
+    <mark class="brown">team&nbsp;</mark> <a href="./description" style="font-weight:bold">Description file</a>
+</div>
