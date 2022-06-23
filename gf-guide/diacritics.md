@@ -204,7 +204,7 @@ You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/ope
   <li><a href="http://diacritics.typo.cz/index.php?id=12" target="_blank">Diacritics</a></li>
   <li><a href="https://ilovetypography.com/2009/01/24/on-diacritics/" target="_blank">On diacritics</a></li>
   <li><a href="http://theinsectsproject.eu/" target="_blank">The insects project</a></li>
-  <li><a href="https://irenevl.github.io/Polytonic-tutorial/" target="_blank">Polytonic diacritics</a></li>
+  <li><a href="https://irenevl.github.io/Polytonic-tutorial/" target="_blank">Polytonic Greek: a guide for type designers</a></li>
   <li><a href="http://www.twardoch.com/download/polishhowto/intro.html" target="_blank">Polish diacritics how to</a></li>
   <li><a href="https://vietnamesetypography.com/tone-marks/" target="_blank">Vietnamese Typography</a></li>
   <li><a href="https://www.setuptype.com/x/cod/" target="_blank">Context of Diacritics</a></li>
