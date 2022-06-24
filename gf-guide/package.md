@@ -180,5 +180,5 @@ gftools packager "Family Name" path/to/google/fonts -p
 
 <div class="next-reading">
     Further reading:<br>
-    - <mark class="brown">team&nbsp;</mark> <a href="./onboarder-workflow">Onboarder workflow guide</a>
+    <mark class="brown">team&nbsp;</mark> <a href="./onboarder-workflow">Onboarder workflow guide</a>
 </div>

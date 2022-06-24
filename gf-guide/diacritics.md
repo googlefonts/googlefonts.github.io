@@ -224,5 +224,5 @@ You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/ope
 
 <div class="next-reading">
     Further reading:<br>
-    - <mark class="yellow">learn</mark> <a href="./outlines">Outline Quality</a>
+    <mark class="yellow">learn</mark> <a href="./outlines">Outline Quality</a>
 </div>

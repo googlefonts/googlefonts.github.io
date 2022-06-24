@@ -237,7 +237,7 @@ export BSTACK_ACCESS_KEY="key"
 
 <div class="next-reading">
     Further reading:<br>
-    - <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
   <br>
-    - <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
 </div>

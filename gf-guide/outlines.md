@@ -129,7 +129,7 @@ Unless absolutely necessary, avoid over-complicated outline drawing. One example
 
 <div class="next-reading">
     Further reading:<br>
-    - <mark class="yellow">learn</mark> <a href="./diacritics">Diacritics</a>
+    <mark class="yellow">learn</mark> <a href="./diacritics">Diacritics</a>
     <br>
-    - <mark class="yellow">learn</mark> <a href="./testing">Local testing</a>
+    <mark class="yellow">learn</mark> <a href="./testing">Local testing</a>
 </div>

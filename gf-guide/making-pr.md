@@ -130,9 +130,9 @@ Good news! Google Fonts also has a tool that packages the font and makes the pul
 
 <div class="next-reading">
     Further reading:<br>
-    - <mark class="purple">nerd&nbsp;</mark> <a href="./googlefonts">google/fonts repository explained</a>
+    <mark class="purple">nerd&nbsp;</mark> <a href="./googlefonts">google/fonts repository explained</a>
     <br>
-    - <mark class="brown">team&nbsp;</mark> <a href="./package">Package the fonts</a>
+    <mark class="brown">team&nbsp;</mark> <a href="./package">Package the fonts</a>
   <br>
-    - <mark class="brown">team&nbsp;</mark> <a href="./onboarder-workflow">Onboarder workflow guide</a>
+    <mark class="brown">team&nbsp;</mark> <a href="./onboarder-workflow">Onboarder workflow guide</a>
 </div>

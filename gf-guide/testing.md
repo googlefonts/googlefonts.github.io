@@ -195,7 +195,7 @@ What to check:
 
 <div class="next-reading">
     Further reading:<br>
-    - <mark class="yellow">learn</mark> <a href="./diacritics">Diacritics</a>
+    <mark class="yellow">learn</mark> <a href="./diacritics">Diacritics</a>
     <br>
-    - <mark class="yellow">learn</mark> <a href="./outlines">Outlines quality</a>
+    <mark class="yellow">learn</mark> <a href="./outlines">Outlines quality</a>
 </div>

@@ -268,5 +268,5 @@ Our decision to follow the Adobe schema was based on Dr. Ken Lunde’s comments 
 
 <!-- <div class="next-reading">
     Further reading:<br>
-    - <mark class="green"><b>must&rarr;</b></mark> <a href="./qa">QA process & tools</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./qa">QA process & tools</a>
 </div> -->

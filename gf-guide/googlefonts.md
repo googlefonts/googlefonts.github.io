@@ -17,7 +17,7 @@ This section will help users understand which are the directories, files, and py
 
 <div class="context-reading">
     Background reading:<br>
-    - <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
 </div>
 
 ## Table of contents
@@ -117,9 +117,9 @@ As with the axis registry, [the Lang directory](https://github.com/googlefonts/l
 
 <div class="next-reading">
     Further reading:<br>
-    - <mark class="brown">team&nbsp;</mark> <a href="./description">Description file</a>
+    <mark class="brown">team&nbsp;</mark> <a href="./description">Description file</a>
   <br>
-    - <mark class="brown">team&nbsp;</mark> <a href="./profile">Designer profile</a>
+    <mark class="brown">team&nbsp;</mark> <a href="./profile">Designer profile</a>
   <br>
-    - <mark class="brown">team&nbsp;</mark> <a href="./metadata">METADATA file</a>
+    <mark class="brown">team&nbsp;</mark> <a href="./metadata">METADATA file</a>
 </div>
