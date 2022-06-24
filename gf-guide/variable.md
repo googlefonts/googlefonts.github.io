@@ -7,14 +7,21 @@
 
 <div class="callout">
 
-🦥 The variable font technology has existed for a long time, but the format is actually quite recent (2016). It took time for OS and Apps to support this format, and some still didn’t make the step. In general, GF doesn’t quite recommend the use of variable fonts in documents made to be printed.
+🦥 The variable font technology has existed for a long time, but the format is actually quite recent (2016). It took time for OS and Apps to support this format, and some still did not make the step. In general, GF does not quite recommend the use of variable fonts in documents made to be printed.
+<br><br>
+This guide will give users all the detailed information related to Variable fonts GF requirements. If you are developing a <em>Static</em> font project, please refere to the specifics on statics section.
 
-Before proceeding, make sure:
+<!-- Before proceeding, make sure:
 
 <ul>
   <li>you read the <a href="https://googlefonts.github.io/gf-guide/requirements.html">requirements for all font files</a></li>
   <li>you read the specific <a href="https://googlefonts.github.io/gf-guide/statics.html">requirements for static fonts</a></li>
-</ul>
+</ul> -->
+</div>
+
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overal font requirements</a>
 </div>
 
 ## Table of contents
@@ -148,7 +155,7 @@ Name components like "Display", "Text", "Micro" etc are not allowed.
 
 GF only supports the `ital` axis as a boolean (`0`/`1`) value to link two separate VFs (Roman/Italic) in the STAT table. And slant axis if the font is not meant to have italic instances.
 
-**→** ***GF doesn’t support the ital axis within one VF as a variation axis.***
+**→ GF doesn’t support the ital axis within one VF as a variation axis.***
 
 So if you have one VF with `slant` or `ital` axis, it won’t have italics served by GF API. If you want italic instances served by the GF API, then you will have to deliver **two variable font files**.
 
@@ -432,21 +439,13 @@ A `STAT` table is defined by these fields:
 
         → GF doesn’t recommend format 2 which allows ranges.
 
-    
-
     -   Axis Index that refers to a name ID in the `name table`
 
-    
-
     -   Value that refers to the **user value**.
-
-    
 
     -   Linked value for style linking:
 
         → `700` for link to Bold on the wght axis, `1` for link to Italic on the ital axis.
-
-    
 
     -   Flags
 
@@ -520,3 +519,14 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 -   [FontDrop](https://fontdrop.info/#/) → in the “data” tab
 -   [fontgauntlet](https://fontgauntlet.com/) → if you click on the small search icon next to the font name
+
+<div class="next-reading">
+    Further reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./statics" style="font-weight:bold">Static fonts specifics</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
+    <br>
+    <mark class="yellow">learn</mark> <a href="./build">Build the fonts</a>
+    <br>
+    <mark class="yellow">learn</mark> <a href="./testing">Local testing</a>
+</div>
