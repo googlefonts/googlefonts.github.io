@@ -5,21 +5,25 @@
 # Static fonts specifics
 {:.no_toc}
 
-<div>
+<div class="callout">
 
-🐓  “Static” fonts is a way of saying traditional, *non-variable* fonts.
+🐓  “Static” fonts is a way of saying traditional, <em>non-variable</em> fonts.
 <br><br>
 Before going further, make sure you read carefully the <a href="./requirements">overall fonts requirements</a>. And please refer to the <a href="./variable">requirements about Variable Fonts</a> if you are developping a VF.
 <br><br>
 Note that GF only onboards OTF-TTF files: <code>.ttf</code> — so TrueType fonts only! The upstream repo can of course contain OTF-CFF <code>.otf</code> fonts, as well as webfonts <code>.woff2</code>. GF redirects users to the upstream repo to find these files if they are not satisfied with the one served by the API.
 <br><br>
-Even if the statics are available in the upstream repository, GF may not onboard them:
+If the font project consists only of static fonts (and does not include any VF whatsoever), then the statics available upstream will be the main font binaries and will be onboarded. In other cases, statics available in the upstream repository may not get onboarded by GF when:
 <ul>
     <li>If a VF exists and the statics are autohinted, then only the variable font is onboarded. The API will generate statics fonts by instanciating the VF: they will be served to browsers which doesn’t support the variable font technology, and they will be available in a downloadable zip file (<code>download family</code> button in any specimen pages). Please read about the <a href="https://googlefonts.github.io/gf-guide/variable.html#instantiated-static-fonts">instantiated static fonts</a></li>
     <li>If a VF exists and the statics are manually hinted, then both formats are onboarded.</li>
-    <li>If there is no VF, then the statics available upstream will be onboarded.</li>
 </ul>
 
+</div>
+
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overal font requirements</a>
 </div>
 
 ## Table of contents
@@ -158,6 +162,7 @@ Fontmake does not support manual hinting from Glyphs. You can use use [VTT](htt
 
 -   [OpenType Spec about the name table](https://docs.microsoft.com/en-us/typography/opentype/spec/name)
 -   [Glyphs.app naming tutorial](https://glyphsapp.com/learn/naming)
+-   [Glyphs PostScript hinting tutorial](https://glyphsapp.com/learn/hinting-postscript-autohinting)
 
 **You can view the name tables using these tools:**
 
@@ -169,3 +174,10 @@ Fontmake does not support manual hinting from Glyphs. You can use use [VTT](htt
 
 -   [FontDrop](https://fontdrop.info/#/) → in the “data” tab
 -   [fontgauntlet](https://fontgauntlet.com/) → if you click on the small search icon next to the font name
+
+<div class="next-reading">
+    Further reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
+</div>
