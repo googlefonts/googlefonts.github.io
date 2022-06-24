@@ -162,11 +162,26 @@ Currently, the most used ones are:
 
 Find all the glyphsets definition and filter lists in the [Glyphsets repository](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets). Be aware that these glyphsets are still a work in progress and any advise or recommendation can be submitted using the [Glyphsets’ issue tracker](https://github.com/googlefonts/glyphsets/issues).
 
-## Stylistic Sets
+## Open Type features support
 
-The Google Fonts API does not support the inclusion of OpenType Stylistic Set features. Fonts that absolutely need them, need to be published as a separate family with the stylistic feature added to the family name. 
+The Google Fonts API currently does not support the inclusion of OpenType features such as Stylistic Sets (`salt`) or Small Caps (`smcp`, `c2sc`). Fonts that absolutely need them will need to be published as a separate family with the following schema:
 
-Currently (by June 2022) the API engineer team is working on the support for them. If you would like to publish the font in any case, it is required to assign a name to each stylistic set. If you are using Glyphs font editor, please check the instructions on how to add the names under the [Stylistic Sets Tutorial](https://glyphsapp.com/learn/stylistic-sets)
+The vertical metrics should be the same in each sibling family, and the Use of Typo Metrics should be enabled. Please refer to the Vertical Metrics section for further details.
+
+- **Small Caps**
+  - If the subfamily covers the Small Caps component of the project, then the SC suffix must be appended to the family name
+  
+  `FamilyNameSC-Style.ttf` E.g. `CormorantSC-Regular.ttf`
+
+  - The variant glyphs from the Small Caps should substitute the base glyph from the original family in the new family.
+
+- **Stylistic Sets**
+  - If the subfamily covers a Stylistic Set variant instead of original base glyphs, then the SS feature name is appended to the family name
+  
+  `FamilyNameSC-StyleName.ttf` E.g. `CormorantSC-Infant.ttf`
+
+  - The variant glyphs from the stylistic sets should substitute the base glyph from the original family in the new family, for the user to receive the intended Stylistic Set behavior.
+  -  The stylistic sets could be available in the downloadable version of the main font, but they are subsetted from the version served by the API. Thus, for a user experience matter, it is required to name each of the stylistic sets to match the name of the sibling family published. If you are using Glyphs font editor, please check the instructions on adding the names under the [Stylistic Sets Tutorial](https://glyphsapp.com/learn/stylistic-sets). 
 
 
 <div class="next-reading">
