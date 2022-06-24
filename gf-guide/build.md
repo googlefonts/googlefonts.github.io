@@ -7,20 +7,12 @@
 
 <div class="callout">
 
-🦕 This chapter aims to guide designers in the building of their font binaries using open-source tools. Everything related to font file settings is detailed in these three chapters:
-<ul>
-  <li><a href="./requirements">Overall font file requirements</a></li>
-  <li><a href="./statics">Specifics to static fonts</a></li>
-  <li><a href="./variable">Specifics to variable fonts</a></li>
-</ul>
-
-For practicality, the above information won’t be repeated in this chapter. If you read “you should follow the recommendation” or “respect the requirements” etc, please refer to the three chapters above. You will also understand this chapter better if you have read those first. 
+🦕 This chapter aims to guide designers in the building of their font binaries using open-source tools as per our production requirements. Everything related to font file settings is detailed in the <b>Pre-production</b> part of the guide, and for practicality, that information will not be repeated here.
 <br><br>
-We recommend you install all the tools in a virtual environment, to avoid conflict between packages. Further information is detailed in this chapter:
-<ul>
-  <li><a href="./tools">Tools and dependencies required</a></li>
-</ul>
-
+ If you read “you should follow the recommendation” or “respect the requirements” etc, please refer to the chapters labeled as <mark class="blue">start</mark> and <mark class="green"><b>must&rarr;</b></mark> under the Pre-production contents. You will have a better understanding of the following guidelines if you have read them first.
+<br><br>
+We recommend you install all the tools in a virtual environment, to avoid conflict between packages. Further information is detailed in the Tools and Dependencies section. 
+<br><br>
 For the rest of this chapter, it would be better if you have basic knowledge of:
 <ul>
   <li>Font tables and font formats</li>
@@ -32,6 +24,11 @@ For the rest of this chapter, it would be better if you have basic knowledge of:
 <div class="context-reading">
     Background reading:<br>
     <mark class="blue">start</mark> <a href="./tools" style="font-weight:bold">Tools and Dependencies</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/index#pre-production-getting-your-fonts-ready-for-gf" style="font-weight:bold">Pre-production: Getting your fonts ready for GF</a> -  chapter.
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a>
+
 </div>
 
 ## Table of contents
@@ -311,3 +308,12 @@ Unfortunately, the Builder yet can’t do everything. You will have to use a ext
 -   To hint OTF: use **[AFDKO](https://github.com/adobe-type-tools/afdko)**.
 -   To subset the font: use **[Fonttools’ subsetter](https://fonttools.readthedocs.io/en/latest/subset/index.html)**.
 -   If you are using any other font format than `.glyphs` and `.ufo`: the build script should contain a step that converts the sources to UFO. Use **[Fontlab to UFO](https://pypi.org/project/vfb2ufo3/)** or **[FontForge to UFO](https://github.com/fontforge/sfd2ufo)** for example.
+
+<div class="next-reading">
+    Further reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./statics" style="font-weight:bold">Static fonts specifics</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
+    <br>
+    <mark class="yellow">learn</mark> <a href="./testing">Local testing</a>
+</div>
