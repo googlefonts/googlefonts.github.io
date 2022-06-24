@@ -10,12 +10,14 @@
     color:#5D5D5D; 
     padding:1.2em 1.6em; 
     font-size:0.9em;
-    margin: 20px 0px
+    line-height: 1.8;
+    margin: 3em 0em;
 }
 .context-reading {
     color:#5D5D5D; 
     padding:1.2em 1.6em; 
     font-size:0.9em;
+    line-height: 1.8;
     margin: 2em 0em;
 }
 mark {

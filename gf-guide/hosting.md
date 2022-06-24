@@ -17,6 +17,11 @@ Is one of the various web providers of Git services (Bitbucket, GitLab, to name 
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="blue">start</mark> <a href="./culture" style="font-weight:bold">Libre Fonts Culture</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -216,3 +221,8 @@ git config core.ignorecase false
 -   [Git for type designers by Dave Crossland](https://github.com/davelab6/git-for-type-designers)
 -   [A short and friendly introduction book to git](https://abookapart.com/products/git-for-humans)
 -   [Best practices for managing issues](https://blog.zenhub.com/best-practices-for-github-issues/)
+
+<div class="next-reading">
+    Further reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./readme" style="font-weight:bold">Upstream repository structure</a>
+</div>

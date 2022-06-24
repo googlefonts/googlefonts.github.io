@@ -13,6 +13,11 @@ This page will give users some important requirements about the <mark class="gre
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -143,3 +148,11 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 ```
+
+
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="grey">templ</mark> <a href="./authors">Authors and Contributors</a>
+    <br>
+    - <mark class="green"><b>must&rarr;</b></mark> <a href="./readme" style="font-weight:bold">README file</a>
+</div>

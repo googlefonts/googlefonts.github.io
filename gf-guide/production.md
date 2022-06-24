@@ -13,6 +13,13 @@ This section will help users to understand the implications of publishing fonts 
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="blue">start</mark> <a href="./culture" style="font-weight:bold">Libre Font Culture</a>
+    <br>
+    <mark class="blue">start</mark> <a href="./required-knowledge" style="font-weight:bold">Knowledge, tools and dependencies required</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -35,14 +42,30 @@ Google Fonts is doing its best to ensure that publishing or updating fonts are u
 Fonts to be onboarded to Google Fonts are expected to abide by the following requisites:
 
 -   **The design source files (plus scripts) are available** in your preferred font editor format.
-
+    <br>
     The file formats most used are `UFO`, `.glyphs`, `fontforge` or `fontlab 7`. `Fontlab V` files must be converted to another format because the software runs only on older OS versions.
--   **Fonts should be built** [**using open-source tools**](build.md)**.** This ensures that they can be built under the same conditions on any platform.
--   **Fonts should be built in one step.** All GF font production tools can be run from the command line. This allows to use them to generate font families by running a single command.
 
+-   **Fonts should be built using open-source tools**.** This ensures that they can be built under the same conditions on any platform.
+
+-   **Fonts should be built in one step.** All GF font production tools can be run from the command line. This allows to use them to generate font families by running a single command.
+    <br>
     If the build process necessitates more than one step / one command, then every step needed to build the fonts should be included in a single build script. See [the chapter about building fonts](build.md) for more information.
+
 -   **Font builds must be repeatable.** Given all of GF tools are written in Python and distributed using [pypi/pip](https://pypi.org/), this allows to use specific versions of each package, ensuring the same conditions for each build with the same quality of results.
+
 -   **Projects are kept in a version control system.** Since GF only releases Open Source fonts, each released family is expected to be [hosted in GitHub](./hosting) and have its own [upstream repository](./upstream).
+
 -   **CI ([Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)) should be used for build and testing purposes,** **[applied to fonts](https://simoncozens.github.io/tdd-for-otl/).** GF main repository [github.com/google/fonts](https://github.com/google/fonts) uses CI. When new fonts are pushed, the CI will run a test suite (`gftools qa`, which is a wrapper around [Fontbakery](https://github.com/googlefonts/fontbakery) and various other proofing scripts), and the results will be reviewed.
+
 -   **Issues and reported Fails should be fixed before publishing or upgrading.**
--   **Reviewers of the PRs should have knowledge about typography and font software.**
+
+-   **Reviewers of the [Pull Request](making-pr.md) should have knowledge about typography and font software.**
+
+<div class="next-reading">
+    Further reading:<br>
+    - <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <br>
+    - <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
+    <br>
+    - <mark class="yellow">learn</mark> <a href="./build">Build the fonts</a>
+</div>

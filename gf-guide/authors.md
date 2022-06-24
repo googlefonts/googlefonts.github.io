@@ -23,6 +23,11 @@ The <mark class="grey">AUTHORS.txt</mark> file is mandatory for font’s reposit
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -67,3 +72,10 @@ You can find a template in [GFPT](https://github.com/googlefonts/googlefonts-pro
 Bob Tester <hello@bobtester.com>
 Maggie Techno <maggietechno@company.com>
 ```
+
+<div class="next-reading">
+    Further reading:<br>
+    <mark class="grey">templ</mark> <a href="./license" style="font-weight:bold">License file</a>
+  <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./readme" style="font-weight:bold">README file</a>
+</div>

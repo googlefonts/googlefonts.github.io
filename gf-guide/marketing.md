@@ -13,6 +13,11 @@ In order to tweet about a new release, Google Fonts requires 2-3 expressive imag
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -35,3 +40,8 @@ In order to tweet about a new release, Google Fonts requires 2-3 expressive imag
 -   Link to a mini website if available.
 
 The person onboarding the project will collect images from the documentation directory, include them in a drive folder, write a little tweet according to a simple template, and then it will be reviewed and published when the font is released on the live server.
+
+<div class="next-reading">
+    Further reading:<br>
+    <mark class="grey">templ</mark> <a href="./profile">Designer profile</a>
+</div>
