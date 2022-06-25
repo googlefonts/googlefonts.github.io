@@ -5,6 +5,12 @@
     border-radius: 1em; 
     font-size:1em
 }
+.useful {
+    background-color:#fff; 
+    color:#121212; 
+    padding:1.2em 1.6em; 
+    /* font-size:1em */
+}
 .next-reading {
     background-color:#F6F6F6; 
     color:#5D5D5D; 

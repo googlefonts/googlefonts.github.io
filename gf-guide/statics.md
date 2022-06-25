@@ -181,7 +181,7 @@ Fontmake does not support manual hinting from Glyphs. You can use use [VTT](htt
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
     <br>
-    <mark class="yellow">learn</mark> <a href="./build">Build the fonts</a>s
+    <mark class="yellow">learn</mark> <a href="./build">Build the fonts</a>
     <br>
     <mark class="yellow">learn</mark> <a href="./testing">Local testing</a>
 </div>
