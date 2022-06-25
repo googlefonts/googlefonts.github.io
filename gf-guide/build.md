@@ -7,9 +7,9 @@
 
 <div class="callout">
 
-🦕 This chapter aims to guide designers in the building of their font binaries using open-source tools as per our production requirements. Everything related to font file settings is detailed in the <b>Pre-production</b> part of the guide, and for practicality, that information will not be repeated here.
+🦕 This chapter aims to guide designers in the building of their font binaries using open-source tools as per our production requirements. Everything related to font file settings is detailed in the Pre-production part of the guide, and for practicality, that information will not be repeated here.
 <br><br>
- If you read “you should follow the recommendation” or “respect the requirements” etc, please refer to the chapters labeled as <mark class="blue">start</mark> and <mark class="green"><b>must&rarr;</b></mark> under the Pre-production contents. You will have a better understanding of the following guidelines if you have read them first.
+ If you read “you should follow the recommendation” or “respect the requirements” etc, please refer to the chapters labeled as <mark class="blue">start</mark> and <mark class="green"><b>must&rarr;</b></mark> under the <b>Pre-production: Getting your fonts ready for GF</b> contents. You will have a better understanding of the following guidelines if you have read them first.
 <br><br>
 We recommend you install all the tools in a virtual environment, to avoid conflict between packages. Further information is detailed in the Tools and Dependencies section. 
 <br><br>
@@ -25,7 +25,7 @@ For the rest of this chapter, it would be better if you have basic knowledge of:
     Background reading:<br>
     <mark class="blue">start</mark> <a href="./tools" style="font-weight:bold">Tools and Dependencies</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/index#pre-production-getting-your-fonts-ready-for-gf" style="font-weight:bold">Pre-production: Getting your fonts ready for GF</a> -  chapter.
+    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/index#pre-production-getting-your-fonts-ready-for-gf" style="font-weight:bold">Pre-production: Getting your fonts ready for GF</a> 
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a>
 
