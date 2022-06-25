@@ -196,8 +196,8 @@ You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/ope
 
 ## Useful links
 
-<div class="column-list">
-  <div class="column" style="width:50%">
+<div class="useful">
+  <div id="col1">
   <b>Design</b>
   <ul>
   <li><a href="https://gaultney.org/jvgtype/typedesign/diacritics/" target="_blank">Problems of diacritic design</a></li>
@@ -211,7 +211,7 @@ You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/ope
   </ul>
   </div>
 
-  <div class="column" style="width:50%">
+  <div id="col2">
   <b>Production</b>
   <ul>
   <li><a href="https://glyphsapp.com/learn/mark-to-mark-positioning">Mark to mark positioning Glyphs tutorial</a></li>
