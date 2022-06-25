@@ -6,6 +6,10 @@
     font-size:1em
 }
 .useful {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 1em;
+    padding: 1em;
     background-color:#fff; 
     color:#121212; 
     padding:1.2em 1.6em; 

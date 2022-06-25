@@ -165,9 +165,9 @@ What to check:
 
 ## Useful Links
 
-<div id="7dc7c317-aea1-431b-bbd2-1c444c0f7b68" class="useful">
+<div class="useful">
 
-  <div id="f3825586-3bd5-4763-8618-28818f95f083" style="width:50%">
+  <div id="col1">
     <b>Testing web pages:</b>
     <ul>
       <li><a href="https://wakamaifondue.com/" target="_blank">Wakamai Fondue</a></li>
@@ -183,7 +183,7 @@ What to check:
     </ul>
   </div>
 
-  <div id="b394bcd5-dd88-4c98-838b-335883397a54" style="width:50%">
+  <div id="col2">
     <b>Testing apps:</b>
     <ul>
       <li><a href="https://www.fontmaster.nl/otmaster.html" target="_blank">DTL OT Master</a></li>
