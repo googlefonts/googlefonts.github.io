@@ -7,7 +7,7 @@
 }
 .useful {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto;
     grid-gap: 1em;
     padding: 1em;
     background-color:#fff; 
