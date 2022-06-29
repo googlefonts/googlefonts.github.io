@@ -163,11 +163,12 @@ Both the `GSUB` and `GPOS` tables rely on this information to identify which gly
 
 For any glyph to be classified into the right class, the following must be ensured on each one:
 
-- The glyph name must be correct. For more context please read the [Glyphs app name tutorial](https://glyphsapp.com/learn/getting-your-glyph-names-right)
+- The glyph name must be correct. For more context please read the [Glyphs app name tutorial](https://glyphsapp.com/learn/getting-your-glyph-names-right).
 - Every `combining mark` must have anchors, as well as the letters intended to become a `base letter`.
 - The anchors must have the right name (depending on the the schema explained above).
 
-If a glyph is not in the correct class, this may be corrected by using the "Glyph Info" pane in Glyphs and setting the Category and Subcategory fields as described above.
+This identification is critical for the font compilers like Fontmake to process the correct glyph category and export functional fonts. If a glyph is not in the suitable class, you could correct it in the Glyphs font editor by using the “Glyph Info” pane and setting the Category and Subcategory fields described above. In Fontlab editor, you could inspect the "Glyph Panel" in the [OT Class](https://help.fontlab.com/fontlab-vi/Glyph-panel/#ot-class).
+
 
 ### The Glyph Positioning (GPOS) table
 
@@ -191,8 +192,9 @@ GPOS uses four lists included in the table to administrate and support the neces
 
 You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/opentype/spec/gpos) entry in the OT Spec the for more context and details.
 
+### The Glyph Substitution (GSUB) Table
 
-
+Sometimes the correct positioning of a mark will need first to use different shapes of a base letter, that is to *substitute* it for another form that will allow the mark to be rightly placed.
 
 ------------------------------------------------------------------------
 
