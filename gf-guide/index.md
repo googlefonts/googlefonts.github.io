@@ -88,12 +88,12 @@ Context, requirements, and tools to produce the fonts and get them ready for pub
   <b>[Massively distribution implications](https://googlefonts.github.io/gf-guide/production.html#fonts-are-massively-distributed)</b>
 * <mark class="green"><b>must&rarr;</b></mark>
   <b>[Scalable font production](https://googlefonts.github.io/gf-guide/production.html#scalable-font-production)</b>
+* <mark class="green"><b>must&rarr;</b></mark>
+  [QA - Local testing](testing.md) 
 * <mark class="yellow">learn</mark>
   [Build the fonts](build.md) 
 * <mark class="yellow">learn</mark>
   [QA tools](qa.md)  
-* <mark class="yellow">learn</mark>
-  [Local testing](testing.md) 
 
 
 ## The google/fonts repository 
