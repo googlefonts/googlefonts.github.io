@@ -526,7 +526,7 @@ The manual hinting of variable font is a complicated process and the auto-hintin
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
     <br>
-    <mark class="yellow">learn</mark> <a href="./build">Build the fonts</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing">QA - Local testing</a>
     <br>
-    <mark class="yellow">learn</mark> <a href="./testing">Local testing</a>
+    <mark class="yellow">learn</mark> <a href="./build">Build the fonts</a>
 </div>
