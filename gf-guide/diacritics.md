@@ -34,7 +34,7 @@ This guide will give users an overview introduction to diacritics both from a de
 - **Compound letters must be perceived as a whole.** The distance to the base letter is crucial and can affect legibility. If the mark glyph is too close to the base font, it could appear to collide with the base letter, adding darker spots to the line of text, especially at small sizes. If the mark is too far from the base letter, they would appear separate, making the reading process difficult.
 - **The horizontal position is also essential for readability.** In Latin script, the symmetric marks are placed in the optical center of the base letter while the asymmetric ones follow other rules. (Note that the optical center is often distinct from the mathematical center.) But remember, they must be seen as a unity, so they must not be separated or detached from the base letter.
 - **In Latin script, it is expected that all marks share the same distance to the base letter.** For particular cases like script fonts where the x-height could vary, marks should at least appear to be at the same optical distance to the base letter.
-- **Idiosyncratic or decorative brands have given way to more universal or neutral forms.**
+- **Idiosyncratic or decorative diacritics have given way to more universal or neutral forms.**
 - **Ensure creating all the combining marks required for the languages the font are supporting**, as well as the so-called "Legacy Marks". (See below.) Google Fonts requires at least the GF Latin Core as the minimum set for a font addressing the Latin script. Please read more about our <a herf="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets">Glyphsets</a>.
 - **Usually, the design of the diacritics needs to be adjusted in size or slope to work better with the uppercase letters**. So ideally there should be at least two sets of diacritics: lowercase and uppercase marks. (e.g. `acutecomb` and `acutecomb.case`)
 
@@ -190,6 +190,8 @@ GPOS uses four lists included in the table to administrate and support the neces
 - The FeatureVariations table can be used to substitute an alternate set of lookup tables to use for any given feature under specified conditions. This is currently used only in variable fonts.
 
 You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/opentype/spec/gpos) entry in the OT Spec the for more context and details.
+
+
 
 
 ------------------------------------------------------------------------
