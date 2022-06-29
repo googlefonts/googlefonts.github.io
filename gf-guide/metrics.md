@@ -11,7 +11,7 @@
 <br><br>
 Throughout countless threads and discussions, GF decided to make the priority on cross-platform compatibility and therefore apply the following requirements. Read them carefully because once a family is onbaorded, vertical metrics are meant to remain always the same to avoid regression, as mentioned in <a href="./onboarding">Adding & upgrading fonts to Google Fonts</a>.
 <br><br>
-Please note that CJK fonts (Chinese-Japanese-Korean scripts) are treated as special cases, and should follow the instructions at the end of the document.
+Please note that the first metrics guides referred to in this guide are Latin focused and probably will not fully work for other complex scripts such as Burmese and Devanagari among others. CJK fonts (Chinese-Japanese-Korean scripts) are treated as special cases and should follow the instructions at the end of the document.
 
 </div>
 
@@ -68,7 +68,7 @@ By changing these values, the line height will be increased in MS applications. 
 
 **5.** **[Use_Typo_Metrics](https://www.microsoft.com/typography/otspec/os2.htm#fss)** **must be enabled.**
 
-This will force MS Applications to use the `Typo` values instead of the `Win` values. By doing this, we can freely set the `Win` values to avoid clipping and control the line height with the `Typo` values. It has the added benefit of future line height compatibility. When a new script is added, we simply change the `Win` values to the new `yMin` and `yMax`, without needing to worry if the line height have changed. Note that the `Use_Typo_Metric` flag is also called `fsSelection bit 7 `(related to how it is set in the OS/2 table).
+This will force MS Applications to use the `Typo` values instead of the `Win` values for line spacing. By doing this, we can freely set the `Win` values to avoid clipping and control the line height with the `Typo` values. It has the added benefit of future line height compatibility. When a new script is added, we simply change the `Win` values to the new `yMin` and `yMax`, without needing to worry if the line height have changed. Note that the `Use_Typo_Metric` flag is also called `fsSelection bit 7 `(related to how it is set in the OS/2 table).
 
 -   In Glyphs.app, set `Use_Typo_Metrics` custom parameter to `true` in the **Font** tab of **Font Info**.
 -   In RoboFont, this is under **Font Info \> OpenType \> OS/2 Table \> fsSelection \> USE_TYPO_METRICS**.
