@@ -138,14 +138,13 @@ You can find more about the technical aspect of adding a profile to google/fonts
 
 <div class="next-reading">
     Further reading:<br>
-    - <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overal font requirements</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overal font requirements</a>
     <br>
-    - <mark class="green"><b>must&rarr;</b></mark> <a href="./static" style="font-weight:bold">Static fonts specifics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./static" style="font-weight:bold">Static fonts specifics</a>
     <br>
-    - <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
     <br>
-    - <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
     <br>
-    - <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a>
-    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a>
 </div>
