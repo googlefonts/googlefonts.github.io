@@ -139,7 +139,7 @@ In some languages like Vietnamese, marks are made of the combination of two othe
 - Again, by ensuring to include right anchor with consistent names will contribute to the correct setting and functioning of the `mkmk` feature in the `GPOS` table.
 - Automatic aligment enabled would also be recommended here to avoid placing stacked diacritics manually in the accented glyphs.
 
-### Alternate marks
+### Special glyphs
 
 **Vertical caron**
 
@@ -151,6 +151,17 @@ For historical and thus convention reasons, in languages like Czech and Slovak, 
 - Preferably it should be named `caroncomb.alt` (or caron.alt), and eventually, depending on the design, `caroncomb.alt.case` for `Lcaron`.
 
 Please refer to the "Useful links" section below for more information.
+
+**Dotted circle**
+
+When an accented glyph requires a specific base glyph that is not present in a font, the OT Spec requires the (U+25CC) dotted circle as a valid generic base glyph to replace the missing one and display the expected mark sequence.
+
+Since U+25CC is often used with marks for descriptive/pedagogical purposes, Google Fonts expect all the fonts to include the Dotted circle, regardless of the script it is addressing.
+
+Therefore:
+- Dotted circle should be included in all fonts.
+- It should have an average glyph width.
+- It should include all the anchors used by the base glyphs present in the font so that all marks should be able to attach to it.
 
 
 ## Text Shaping process and Open Type Layout
