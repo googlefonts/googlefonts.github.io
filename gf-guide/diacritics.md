@@ -172,29 +172,34 @@ This identification is critical for the font compilers like Fontmake to process 
 
 ### The Glyph Positioning (GPOS) table
 
-As stated in the OpenType Specification:
-
-> The `GPOS` table provides precise control over glyph placement for sophisticated text layout and rendering in each script and language system that a font supports.
-
-GPOS table will use all the glyphs'  X and Y position values for placement operations conditioned by the script and language the font supports, plus advanced typographic composition tasks such as kerning or superscripts.
+GPOS table will use all the glyphs' X and Y position values to precisely control placement operations conditioned by the script and language the font supports, plus advanced typographic composition tasks such as kerning or superscripts.
 
 From the eight type of positioning actions that the table support, at least two are essential for the functioning of diacritic marks:
 
 - **Mark-to-base attachment** Controled by the `mark` feature. *Positions combining marks with respect to base glyphs, as when positioning vowels, diacritical marks, or tone marks in Arabic, Hebrew, and Vietnamese.*
 - **Mark-to-mark attachment** Controled by the `mkmk` feature. *Positions one mark relative to another, as when positioning tone marks with respect to vowel diacritical marks in Vietnamese.*
 
-GPOS uses four lists included in the table to administrate and support the necessities of each particular font as stated in the  Opentype Specification.
+Key factors for these GPOS features to work are:
 
-- The ScriptList identifies all the scripts and language systems in the font that use glyph positioning.
-- The FeatureList defines all the glyph positioning features required to render these scripts and language systems.
-- The LookupList contains all the lookup data needed to implement each glyph positioning feature.
-- The FeatureVariations table can be used to substitute an alternate set of lookup tables to use for any given feature under specified conditions. This is currently used only in variable fonts.
-
-You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/opentype/spec/gpos) entry in the OT Spec the for more context and details.
+- Having base and diacritics identified with the proper OT class.
+- Anchors on each needed glyph well placed and with the right name.
+ 
+For more context and details, please read the entire [GPOS](https://docs.microsoft.com/en-us/typography/opentype/spec/gpos) entry in the OT Spec.
 
 ### The Glyph Substitution (GSUB) Table
 
-Sometimes the correct positioning of a mark will need first to use different shapes of a base letter, that is to *substitute* it for another form that will allow the mark to be rightly placed.
+Sometimes the correct positioning of a mark will need first to use a different glyph shape for a given base letter, that is, to *substitute* it for another form that will allow the mark to be rightly placed.
+
+A typical case in Latin script is the necessity of using an `i` without the dot to receive any other mark like the `macron`. The GSUB table makes it possible for such substitutions through the Glyph Composition/Decomposition `ccmp` feature that will substitute for example, the glyph `i` by `idotless` when it is combined with any `combiningAccent`
+
+Key factors for the `ccmp` feature to work are:
+
+- Ensure your font includes all the required substitute glyphs. From the above example the `dotlessi` and `dotlessj` in Latin script. (it should be named `idotless` if you are working on Glyphs font editor.)
+- Ensure the `ccmp` feature is included with all the necessary Lookups.
+- The `ccmp` feature need to be at the top of features list so that it gets processed prior to any other feature.
+
+For more context and details, please read the entire [GSUB](https://docs.microsoft.com/en-us/typography/opentype/spec/gsub) entry in the OT Spec.
+
 
 ------------------------------------------------------------------------
 
