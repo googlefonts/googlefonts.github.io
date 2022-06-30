@@ -154,9 +154,11 @@ Please refer to the "Useful links" section below for more information.
 
 **Dotted circle**
 
-When an accented glyph requires a specific base glyph that is not present in a font, the OT Spec requires the (U+25CC) dotted circle as a valid generic base glyph to replace the missing one and display the expected mark sequence.
+The dotted circle character (U+25CC) is inserted by shaping engines before mark glyphs which do not have an associated base, especially in the context of broken syllabic clusters.
 
-Since U+25CC is often used with marks for descriptive/pedagogical purposes, Google Fonts expect all the fonts to include the Dotted circle, regardless of the script it is addressing.
+For fonts containing combining marks, it is recommended that the dotted circle character is included so that these isolated marks can be displayed properly; for fonts supporting complex scripts, this should be considered mandatory.
+
+Since when a dotted circle glyph is present, it should be able to display all marks correctly, Google Fonts expect all the fonts to include it, regardless of the script it is addressing.
 
 Therefore:
 - Dotted circle should be included in all fonts.
