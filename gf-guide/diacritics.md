@@ -101,6 +101,11 @@ As the name suggests, the combining diacritics are the marks actually used to co
 - Creating the [precomposed characters](https://en.wikipedia.org/wiki/Precomposed_character), the accented letters already included in the font source file, e.g. `00C1 Á LATIN CAPITAL LETTER A WITH ACUTE`
 - Or to allow the character composition of the accented letters by using the mark + base glyphs on the fly as the user types, e.g. `0041 LATIN CAPITAL LETTER A` followed by the combining diacritical mark `0301 COMBINING ACUTE ACCENT`, which would be the decomposition or [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence) of the above.
 
+   <figure>
+    <img src="images/diacritics/diac-comb.gif" style="width:250px">
+    <figcaption style="font-size:0.8em"><i>Legacy marks in action. They can be combined in any way the anchors allow to.</i></figcaption>
+   </figure>
+
 **Automatic alignment**
 
 When creating the precomposed characters in the source file, ideally, automatic alignment should be enabled consistently in the composite glyphs. This way they would get authomatically updated after any change on any of the components is performed.
