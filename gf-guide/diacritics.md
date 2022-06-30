@@ -109,13 +109,10 @@ When creating the precomposed characters in the source file, ideally, automatic 
 
 ### Anchors
 
-All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another and play a key role in the identification of the glyph definition as well as the generation of the "Mark to base positioning" ([`mark`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#tag-mark)) and the "Mark to mark positioning" ([`mkmk`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#mkmk)) features.
+All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another and play a key role in the identification of the glyph definition as well as the generation of the "Mark to base positioning" `mark` and the "Mark to mark positioning" `mkmk` GPOS features (See below.)
 
 Anchors are commonly represented as a red rhombus in the glyph view of the source file and are identified with a name. The name part should be shared among the base glyph and the mark glyph, but in the mark glyph there should be a preceding underscore. For example, there should be a `top` anchor in the base glyph and a corresponding `_top` anchor in the mark.
 This name schema is crucial for the positioning to work as expected - for example if the underscore is omitted in the mark glyph, it would not be attached to the base letter - so you must pay special care and attention to them.  
-
-<!-- Include information about stacked diacritics -->
-
 
 **Requirements for combining marks:**
 
@@ -134,13 +131,27 @@ Combining marks would be listed like this in the GDEF table:
   <ClassDef glyph="acutecomb.case" class="3"/>
 ````
 
-**Stacked diacritics**
+### Stacked diacritics
 
-In some languages like Vietnamese, some marks are made of the combination of two other marks known as *stacked diacritics*. In such cases, a combining mark could also act as the 'base' glyph of another mark, and therefore, it would need more than one anchor. For example, in the `brevecomb_acutecomb`, the `brevecomb` mark would have one `_top` anchor to be attached to a base letter, plus a `top` one to attach other marks to it; in this case, the `acutecomb`.
+In some languages like Vietnamese, marks are made of the combination of two other marks known as *stacked diacritics*. In such cases, a combining mark could also act as the 'base' glyph of another mark, and therefore, it would need more than one anchor. For example, in the `brevecomb_acutecomb`, the `brevecomb` mark would have one `_top` anchor to be attached to a base letter, plus a `top` one to attach other marks to it; in this case, the `acutecomb`.
 
 - Distance between marks should also be consistent with the font. The stacked diacritic should be perceived as a unity that forms a whole with the base letter.
 - Again, by ensuring to include right anchor with consistent names will contribute to the correct setting and functioning of the `mkmk` feature in the `GPOS` table.
 - Automatic aligment enabled would also be recommended here to avoid placing stacked diacritics manually in the accented glyphs.
+
+### Alternate marks
+
+**Vertical caron**
+
+For historical and thus convention reasons, in languages like Czech and Slovak, the caron should have a vertical form when used on characters such as `Lcaron`, `lcaron`, `dcaron`, `tcaron`. But, be aware that it must not be composed with any other "lookalike" form like any quote, comma, and let alone apostrophe. In fact, it should distinguish particularly from the latter to avoid possible meaning confusion for some words. 
+
+- It is more of a simple vertical wedge instead of a curvy comma or apostrophe shape.
+- It should not be too wide or large and could have only a subtle inclination.
+- It should create as little white space as possible.
+- Preferably it should be named `caroncomb.alt` (or caron.alt), and eventually, depending on the design, `caroncomb.alt.case` for `Lcaron`.
+
+Please refer to the "Useful links" section below for more information.
+
 
 ## Text Shaping process and Open Type Layout
 
@@ -210,9 +221,9 @@ For more context and details, please read the entire [GSUB](https://docs.microso
   <b>Design</b>
   <ul>
   <li><a href="https://gaultney.org/jvgtype/typedesign/diacritics/" target="_blank">Problems of diacritic design</a></li>
-  <li><a href="http://diacritics.typo.cz/index.php?id=12" target="_blank">Diacritics</a></li>
   <li><a href="https://ilovetypography.com/2009/01/24/on-diacritics/" target="_blank">On diacritics</a></li>
   <li><a href="http://theinsectsproject.eu/" target="_blank">The insects project</a></li>
+  <li><a href="http://diacritics.typo.cz/index.php?id=12" target="_blank">Diacritics. All you need to know to design a font with correct accents</a></li>
   <li><a href="https://irenevl.github.io/Polytonic-tutorial/" target="_blank">Polytonic Greek: a guide for type designers</a></li>
   <li><a href="http://www.twardoch.com/download/polishhowto/intro.html" target="_blank">Polish diacritics how to</a></li>
   <li><a href="https://vietnamesetypography.com/tone-marks/" target="_blank">Vietnamese Typography</a></li>
