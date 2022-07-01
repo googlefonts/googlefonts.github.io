@@ -127,7 +127,7 @@ This name schema is crucial for the positioning to work as expected - for exampl
 - They must include anchors named as explained above. To better manage the positions for specific language requirements, such as constructing stacked diacritics in Vietnamese, it maybe useful to use custom names: for example, `top_viet` and `_top_viet`, accordingly.
 - The amount of combining marks and precomposed glyphs required will be determined by the language support your font is intended. For Google Fonts see the [Glyphsets](https://googlefonts.github.io/gf-guide/requirements.html#glyphsets) definition.
 - They must be assigned the right Unicode codepoint in your source file to work properly. See the [Combining diacritical marks](https://unicode.org/charts/PDF/U0300.pdf) Unicode chart, that ranges from 0300 to 036F codepoints.
-- In the GDEF table, their "Glyph Class" should be 3. ("Mark glyph") In the Glyphs "Glyph info" pane, they should have `Category=Mark` and `Subcategory=Nonspacing`.
+- In the GDEF table, their "Glyph Class" should be 3 ("Mark glyph".) In the Glyphs "Glyph info" pane, they should have `Category=Mark` and `Subcategory=Nonspacing`.
 
 Combining marks would be listed like this in the GDEF table:
 
@@ -219,9 +219,9 @@ For more context and details, please read the entire [GPOS](https://docs.microso
 
 Sometimes the correct positioning of a mark will need first to use a different glyph shape for a given base letter, that is, to *substitute* it for another form that will allow the mark to be rightly placed.
 
-A typical case in Latin script is the necessity of using an `i` without the dot to receive any other mark like the `macron`. The GSUB table makes it possible for such substitutions through the Glyph Composition/Decomposition `ccmp` feature that will substitute for example, the glyph `i` by `idotless` when it is combined with any `combiningAccent`
+A typical case in Latin script is the necessity of using an `i` without the dot to receive any other mark like the `macron`. The `GSUB` table makes it possible for such substitutions through the *Glyph Composition/Decomposition* `ccmp` feature that will substitute for example, the glyph `i` by `idotless` when it is combined with any `comb` accent.
 
-Key factors for the `ccmp` feature to work are:
+Key factors for the [ccmp](https://simoncozens.github.io/feature-tags/#abvf) feature to work are:
 
 - Ensure your font includes all the required substitute glyphs. From the above example the `dotlessi` and `dotlessj` in Latin script. (it should be named `idotless` if you are working on Glyphs font editor.)
 - Ensure the `ccmp` feature is included with all the necessary Lookups.
