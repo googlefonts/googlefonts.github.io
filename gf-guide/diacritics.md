@@ -59,7 +59,7 @@ The spacing diacritical marks (for example, `U+00B4 ACUTE ACCENT`) are required 
 These marks are only used as placeholder when typing for a combination of keys to add an accent to a base letter e.g. `´` + `a` to obtain a `á`. 
    <figure>
     <img src="images/diacritics/diac-legacy.gif" style="width:250px">
-    <figcaption style="font-size:0.8em"><i>Legacy marks in action</i></figcaption>
+    <figcaption style="font-size:0.8em"><i>Legacy marks in action. Once the sequence of accent + letter is typed it is replaced by the composite glyph in the font, and so gets deleted as a unique glyph.</i></figcaption>
    </figure>
 
 **Requirements:**
@@ -71,7 +71,7 @@ These marks are only used as placeholder when typing for a combination of keys t
 - Although they represent marks, they need to behave as though they are base glyphs; that is, in the GDEF table their "Glyph Class" should be 1. ("Base glyph") In the Glyphs "Font View" under the List mode, they should have `Category=Mark` and `Subcategory=Spacing`.
 <br>
 <br>
-**Latin legacy Marks list**
+**Latin legacy marks list**
 
 ````
  Name         | Unicode | Catgory | Subcategory  
@@ -99,11 +99,11 @@ These marks are only used as placeholder when typing for a combination of keys t
 As the name suggests, the combining diacritics are the marks actually used to construct the accented letters, which would be done either by:
 
 - Creating the [precomposed characters](https://en.wikipedia.org/wiki/Precomposed_character), the accented letters already included in the font source file, e.g. `00C1 Á LATIN CAPITAL LETTER A WITH ACUTE`
-- Or to allow the character composition of the accented letters by using the mark + base glyphs on the fly as the user types, e.g. `0041 LATIN CAPITAL LETTER A` followed by the combining diacritical mark `0301 COMBINING ACUTE ACCENT`, which would be the decomposition or [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence) of the above.
+- Or to allow the character composition of the accented letters by using the mark + base glyphs on the fly as the user types, e.g. `0041 LATIN CAPITAL LETTER A` followed by the combining diacritical mark `0301 COMBINING ACUTE ACCENT`, which would be the decomposition or [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence) of the above. This makes it possible for the combination of diacritics and display of non-encoded accented glyphs.
 
    <figure>
     <img src="images/diacritics/diac-comb.gif" style="width:250px">
-    <figcaption style="font-size:0.8em"><i>Legacy marks in action. They can be combined in any way the anchors allow to.</i></figcaption>
+    <figcaption style="font-size:0.8em"><i>Combined marks in action. They can be combined in any way the anchors allow to.</i></figcaption>
    </figure>
 
 **Automatic alignment**
