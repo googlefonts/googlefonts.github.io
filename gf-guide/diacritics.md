@@ -101,6 +101,11 @@ As the name suggests, the combining diacritics are the marks actually used to co
 - Creating the [precomposed characters](https://en.wikipedia.org/wiki/Precomposed_character), the accented letters already included in the font source file, e.g. `00C1 Á LATIN CAPITAL LETTER A WITH ACUTE`
 - Or to allow the character composition of the accented letters by using the mark + base glyphs on the fly as the user types, e.g. `0041 LATIN CAPITAL LETTER A` followed by the combining diacritical mark `0301 COMBINING ACUTE ACCENT`, which would be the decomposition or [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence) of the above.
 
+   <figure>
+    <img src="images/diacritics/diac-comb.gif" style="width:250px">
+    <figcaption style="font-size:0.8em"><i>Legacy marks in action. They can be combined in any way the anchors allow to.</i></figcaption>
+   </figure>
+
 **Automatic alignment**
 
 When creating the precomposed characters in the source file, ideally, automatic alignment should be enabled consistently in the composite glyphs. This way they would get authomatically updated after any change on any of the components is performed.
@@ -109,13 +114,10 @@ When creating the precomposed characters in the source file, ideally, automatic 
 
 ### Anchors
 
-All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another and play a key role in the identification of the glyph definition as well as the generation of the "Mark to base positioning" ([`mark`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#tag-mark)) and the "Mark to mark positioning" ([`mkmk`](https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#mkmk)) features.
+All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another and play a key role in the identification of the glyph definition as well as the generation of the "Mark to base positioning" `mark` and the "Mark to mark positioning" `mkmk` GPOS features (See below.)
 
 Anchors are commonly represented as a red rhombus in the glyph view of the source file and are identified with a name. The name part should be shared among the base glyph and the mark glyph, but in the mark glyph there should be a preceding underscore. For example, there should be a `top` anchor in the base glyph and a corresponding `_top` anchor in the mark.
 This name schema is crucial for the positioning to work as expected - for example if the underscore is omitted in the mark glyph, it would not be attached to the base letter - so you must pay special care and attention to them.  
-
-<!-- Include information about stacked diacritics -->
-
 
 **Requirements for combining marks:**
 
@@ -134,13 +136,40 @@ Combining marks would be listed like this in the GDEF table:
   <ClassDef glyph="acutecomb.case" class="3"/>
 ````
 
-**Stacked diacritics**
+### Stacked diacritics
 
-In some languages like Vietnamese, some marks are made of the combination of two other marks known as *stacked diacritics*. In such cases, a combining mark could also act as the 'base' glyph of another mark, and therefore, it would need more than one anchor. For example, in the `brevecomb_acutecomb`, the `brevecomb` mark would have one `_top` anchor to be attached to a base letter, plus a `top` one to attach other marks to it; in this case, the `acutecomb`.
+In some languages like Vietnamese, marks are made of the combination of two other marks known as *stacked diacritics*. In such cases, a combining mark could also act as the 'base' glyph of another mark, and therefore, it would need more than one anchor. For example, in the `brevecomb_acutecomb`, the `brevecomb` mark would have one `_top` anchor to be attached to a base letter, plus a `top` one to attach other marks to it; in this case, the `acutecomb`.
 
 - Distance between marks should also be consistent with the font. The stacked diacritic should be perceived as a unity that forms a whole with the base letter.
 - Again, by ensuring to include right anchor with consistent names will contribute to the correct setting and functioning of the `mkmk` feature in the `GPOS` table.
 - Automatic aligment enabled would also be recommended here to avoid placing stacked diacritics manually in the accented glyphs.
+
+### Special glyphs
+
+**Vertical caron**
+
+For historical and thus convention reasons, in languages like Czech and Slovak, the caron should have a vertical form when used on characters such as `Lcaron`, `lcaron`, `dcaron`, `tcaron`. But, be aware that it must not be composed with any other "lookalike" form like any quote, comma, and let alone apostrophe. In fact, it should distinguish particularly from the latter to avoid possible meaning confusion for some words. 
+
+- It is more of a simple vertical wedge instead of a curvy comma or apostrophe shape.
+- It should not be too wide or large and could have only a subtle inclination.
+- It should create as little white space as possible.
+- Preferably it should be named `caroncomb.alt` (or caron.alt), and eventually, depending on the design, `caroncomb.alt.case` for `Lcaron`.
+
+Please refer to the "Useful links" section below for more information.
+
+**Dotted circle**
+
+The dotted circle character (U+25CC) is inserted by shaping engines before mark glyphs which do not have an associated base, especially in the context of broken syllabic clusters.
+
+For fonts containing combining marks, it is recommended that the dotted circle character is included so that these isolated marks can be displayed properly; for fonts supporting complex scripts, this should be considered mandatory.
+
+Since when a dotted circle glyph is present, it should be able to display all marks correctly, Google Fonts expect all the fonts to include it, regardless of the script it is addressing.
+
+Therefore:
+- Dotted circle should be included in all fonts.
+- It should have an average glyph width.
+- It should include all the anchors used by the base glyphs present in the font so that all marks should be able to attach to it.
+
 
 ## Text Shaping process and Open Type Layout
 
@@ -163,35 +192,42 @@ Both the `GSUB` and `GPOS` tables rely on this information to identify which gly
 
 For any glyph to be classified into the right class, the following must be ensured on each one:
 
-- The glyph name must be correct. For more context please read the [Glyphs app name tutorial](https://glyphsapp.com/learn/getting-your-glyph-names-right)
+- The glyph name must be correct. For more context please read the [Glyphs app name tutorial](https://glyphsapp.com/learn/getting-your-glyph-names-right).
 - Every `combining mark` must have anchors, as well as the letters intended to become a `base letter`.
 - The anchors must have the right name (depending on the the schema explained above).
 
-If a glyph is not in the correct class, this may be corrected by using the "Glyph Info" pane in Glyphs and setting the Category and Subcategory fields as described above.
+This identification is critical for the font compilers like Fontmake to process the correct glyph category and export functional fonts. If a glyph is not in the suitable class, you could correct it in the Glyphs font editor by using the “Glyph Info” pane and setting the Category and Subcategory fields described above. In Fontlab editor, you could inspect the "Glyph Panel" in the [OT Class](https://help.fontlab.com/fontlab-vi/Glyph-panel/#ot-class).
+
 
 ### The Glyph Positioning (GPOS) table
 
-As stated in the OpenType Specification:
-
-> The `GPOS` table provides precise control over glyph placement for sophisticated text layout and rendering in each script and language system that a font supports.
-
-GPOS table will use all the glyphs'  X and Y position values for placement operations conditioned by the script and language the font supports, plus advanced typographic composition tasks such as kerning or superscripts.
+GPOS table will use all the glyphs' X and Y position values to precisely control placement operations conditioned by the script and language the font supports, plus advanced typographic composition tasks such as kerning or superscripts.
 
 From the eight type of positioning actions that the table support, at least two are essential for the functioning of diacritic marks:
 
 - **Mark-to-base attachment** Controled by the `mark` feature. *Positions combining marks with respect to base glyphs, as when positioning vowels, diacritical marks, or tone marks in Arabic, Hebrew, and Vietnamese.*
 - **Mark-to-mark attachment** Controled by the `mkmk` feature. *Positions one mark relative to another, as when positioning tone marks with respect to vowel diacritical marks in Vietnamese.*
 
-GPOS uses four lists included in the table to administrate and support the necessities of each particular font as stated in the  Opentype Specification.
+Key factors for these GPOS features to work are:
 
-- The ScriptList identifies all the scripts and language systems in the font that use glyph positioning.
-- The FeatureList defines all the glyph positioning features required to render these scripts and language systems.
-- The LookupList contains all the lookup data needed to implement each glyph positioning feature.
-- The FeatureVariations table can be used to substitute an alternate set of lookup tables to use for any given feature under specified conditions. This is currently used only in variable fonts.
+- Having base and diacritics identified with the proper OT class.
+- Anchors on each needed glyph well placed and with the right name.
+ 
+For more context and details, please read the entire [GPOS](https://docs.microsoft.com/en-us/typography/opentype/spec/gpos) entry in the OT Spec.
 
-You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/opentype/spec/gpos) entry in the OT Spec the for more context and details.
+### The Glyph Substitution (GSUB) Table
 
+Sometimes the correct positioning of a mark will need first to use a different glyph shape for a given base letter, that is, to *substitute* it for another form that will allow the mark to be rightly placed.
 
+A typical case in Latin script is the necessity of using an `i` without the dot to receive any other mark like the `macron`. The GSUB table makes it possible for such substitutions through the Glyph Composition/Decomposition `ccmp` feature that will substitute for example, the glyph `i` by `idotless` when it is combined with any `combiningAccent`
+
+Key factors for the `ccmp` feature to work are:
+
+- Ensure your font includes all the required substitute glyphs. From the above example the `dotlessi` and `dotlessj` in Latin script. (it should be named `idotless` if you are working on Glyphs font editor.)
+- Ensure the `ccmp` feature is included with all the necessary Lookups.
+- The `ccmp` feature need to be at the top of features list so that it gets processed prior to any other feature.
+
+For more context and details, please read the entire [GSUB](https://docs.microsoft.com/en-us/typography/opentype/spec/gsub) entry in the OT Spec.
 
 
 ------------------------------------------------------------------------
@@ -203,9 +239,9 @@ You could read the entire [GPOS](https://docs.microsoft.com/en-us/typography/ope
   <b>Design</b>
   <ul>
   <li><a href="https://gaultney.org/jvgtype/typedesign/diacritics/" target="_blank">Problems of diacritic design</a></li>
-  <li><a href="http://diacritics.typo.cz/index.php?id=12" target="_blank">Diacritics</a></li>
   <li><a href="https://ilovetypography.com/2009/01/24/on-diacritics/" target="_blank">On diacritics</a></li>
   <li><a href="http://theinsectsproject.eu/" target="_blank">The insects project</a></li>
+  <li><a href="http://diacritics.typo.cz/index.php?id=12" target="_blank">Diacritics. All you need to know to design a font with correct accents</a></li>
   <li><a href="https://irenevl.github.io/Polytonic-tutorial/" target="_blank">Polytonic Greek: a guide for type designers</a></li>
   <li><a href="http://www.twardoch.com/download/polishhowto/intro.html" target="_blank">Polish diacritics how to</a></li>
   <li><a href="https://vietnamesetypography.com/tone-marks/" target="_blank">Vietnamese Typography</a></li>
