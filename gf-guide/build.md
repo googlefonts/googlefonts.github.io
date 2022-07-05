@@ -285,16 +285,16 @@ For example: [Texturina](https://github.com/Omnibus-Type/Texturina/blob/master/s
     ``` code
     instances:
       FontName[opsz,wght].ttf:
-      - familyName: "FontName 8pt"
-            styleName: "Regular"
-            coordinates:
-                opsz: 8
-                wght: 400
         - familyName: "FontName 8pt"
-            styleName: "Medium"
-            coordinates:
-                opsz: 8
-                wght: 500
+          styleName: "Regular"
+          coordinates:
+            opsz: 8
+            wght: 400
+        - familyName: "FontName 8pt"
+          styleName: "Medium"
+          coordinates:
+            opsz: 8
+            wght: 500
     ```
 
 ------------------------------------------------------------------------
