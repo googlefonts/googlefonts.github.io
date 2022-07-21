@@ -35,7 +35,7 @@ The <mark class="grey">AUTHORS.txt</mark> file is mandatory for font’s reposit
 
 ## Crediting authors
 
-Usually the foundry and the designers are mentioned. It can happen that the company is the only copyright holder (for example because the designers signed a contract giving up all rights with his company), or that there is so many authors that only the collective name is mentioned. In such a case, the names of the individual creators should be moved to the CONTRIBUTORS.txt file.
+Usually the foundry and the designers are mentioned. It can happen that the company is the only copyright holder (for example because the designers signed a contract giving up all rights with their company), or that there is so many authors that only the collective name is mentioned. In such a case, the names of the individual creators should be moved to the CONTRIBUTORS.txt file.
 
 You can find a template in the [Google Fonts Project Template](https://github.com/googlefonts/googlefonts-project-template), or copy-paste the text below into a `.txt` file that you add at the root of your repository. Don’t forget to replace our example “Supercompany” and “Laura Artist” by the actual copyright holders of the project.
 

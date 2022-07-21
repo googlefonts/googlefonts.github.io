@@ -205,7 +205,7 @@ See some [CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_F
 
 This is known by developers and software engineers who are supposed to have read the [OT Spec](https://docs.microsoft.com/en-us/typography/opentype/spec/) (which are rules for machines to support the OpenType font format) to know how to implement font support (or some guidelines summarizing them).
 
-If an axis of the [MS Registered Axis](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg) doesn’t follow the values and names, then the font is considered as invalid, and a user may not be able to use it on his machine.
+If an axis of the [MS Registered Axis](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg) doesn’t follow the values and names, then the font is considered as invalid, and a user may not be able to use it on their machine.
 
 To follow our previous example, we then should have these user values:
 
