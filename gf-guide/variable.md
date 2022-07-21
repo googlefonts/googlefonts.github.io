@@ -252,7 +252,7 @@ Now that we have a better understanding of the axis mapping concept, let’s see
 
 ### The `AVAR` table
 
-[MA Spec avar table info](https://docs.microsoft.com/en-us/typography/opentype/spec/avar)
+[MS Spec avar table info](https://docs.microsoft.com/en-us/typography/opentype/spec/avar)
 
 This table normalizes the progression of the interpolation of one axis on a scale `-1:1`, the location of the font-origin being `0` (zero-origin). Basically, it takes the axis mapping and convert it so `max location = 1`, `default location = 0`, `min location = -1`.
 
