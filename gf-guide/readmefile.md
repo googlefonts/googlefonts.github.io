@@ -7,9 +7,9 @@
 
 <div class="callout">
 
-🦦  The README.md is a page you find at the root of any repository. It is the first readable text that a user can see when arriving in the repository on GitHub’s website.
+🦦  The README.md is a page you find at the root of any repository. It is the first readable text that a user can see when arriving in the repository on GitHub’s website.<br>
 <ul>
-    <li>GF wants to encourage you to share anything you think may be interesting or relevant about your typeface such as the inspiration, process, challenges you encountered, etc. So this is your moment. You can go wild and write a complete article if you feel like it.</li>
+    <li>GF wants to encourage you to share anything you think may be interesting or relevant about your typeface such as the inspiration, process, challenges you encountered, etc. So this is your moment. You can go wild and write a complete article if you feel like it. You can even include imagery to help illustrate the story.</li>
     <li>Take into account that this file will be taken as the base information that would be used to create the <a href="./description">Description file</a> that feeds the <code>#About</code> section of the specimen page of your font(s) on <code>fonts.google.com/Family+Name#about</code>, e.g. <b>Roboto</b> <a href="https://fonts.google.com/specimen/Roboto#about" target="_blank">https://fonts.google.com/specimen/Roboto#about</a>
     <br>
     As a designer, you would need to care about the <code>README.md</code> rather than creating the description file, as the actual team member who will onboard the font will be able to create the latter if the first is well developed.</li>
@@ -53,8 +53,10 @@ The informations you provide in your font project’s `README.md` is key for GF 
 -   **At least one image displaying the font (its name, the glyphset, or notable features).**
     <br>
     Typefaces are visual products, images are therefore mandatory for the `README.md`. You could use of the `image.py` tool (provided in the [Google Fonts Project Template repo](https://github.com/googlefonts/googlefonts-project-template/tree/main/documentation)) that you could customize at will and generate at least a black and white image showcasing your font. E.g. [Luxurious Script](https://github.com/googlefonts/luxurious#luxurious-script).
-    
-    However, bear in mind that GF also could use the images you include in the README section of your repository for the `#about` section of your font family specimen page on Google Fonts
+    <br><br>
+    However, bear in mind that GF also could use the images you include in the README for the `#about` section of your font family specimen page on Google Fonts, so you would probably like to include more expressive images.
+    <br><br>
+    You should include at least one at 760 x 506. Additional optional images at 760 x 506 or 360 x 202.
 
 -   **Further research and process definition.**
   
