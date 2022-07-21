@@ -74,7 +74,7 @@ The issues should follow these rules:
 
 -   **The original authors of the font should be tagged in the related issue.**
 
-    The issue become then the place for the designer update us about his progress and notify onboarders that the font is ready for review. If they have a problem, they can also report it there and link to the specific issue; this way we have a good track of the different events that stop us from onboarding a font.
+    The issue become then the place for the designer update us about their progress and notify onboarders that the font is ready for review. If they have a problem, they can also report it there and link to the specific issue; this way we have a good track of the different events that stop us from onboarding a font.
 
 -   **An issue should be linked to the PR that fixes it.**
 
@@ -160,7 +160,7 @@ PRs and issues are monitored in separate Github project boards.
 
 -   **There are only issues in an onboarder’s board.**
 
-    Since PR and issues are linked, it is then easy for an onboarder to check the status of his PR. So no need to add PRs in one’s personal project board.
+    Since PR and issues are linked, it is then easy for an onboarder to check the status of their PR. So no need to add PRs in one’s personal project board.
 
     <figure>
     <img src="images/onboarder-workflow/Capture_decran_2022-02-23_a_14.39.16.png" style="width:2228px" alt="Screeshot of an onboarder’s project board" />
