@@ -171,7 +171,7 @@ sources:
 axisOrder:
     - wght
     - ital
-FamilyName: "Font Name"
+familyName: "Font Name"
 ```
 
 GF only needs `TTF` fonts, so you can avoid building OTF as well by adding:
