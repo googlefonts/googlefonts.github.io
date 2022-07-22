@@ -77,5 +77,5 @@ Maggie Techno <maggietechno@company.com>
     Further reading:<br>
     <mark class="grey">templ</mark> <a href="./license" style="font-weight:bold">License file</a>
   <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./readme" style="font-weight:bold">README file</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./readmefile" style="font-weight:bold">README file</a>
 </div>
