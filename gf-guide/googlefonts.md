@@ -102,13 +102,33 @@ Find more information about the requirements for these files in [the designer pr
 
 ### Axis registry
 
-Google Fonts supports all the [Microsoft registered axes](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg) for variable fonts, but it has its own [Axis Registry](https://github.com/googlefonts/axisregistry), which defines the names and ranges of additional axes supported by the API. This registry is used to generate the static instances of each variable family (which you can find in the downloadable zip file); the API will generate only those locations registered in the registry.
+```code
+.
+├── axisregistry
+```
+
+Google Fonts supports all the [Microsoft registered axes](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg) for variable fonts, but it has its own [Axis Registry](https://github.com/googlefonts/axisregistry), which defines the names, ranges, and defaults of additional axes supported by the API. This registry is used to generate the static instances of each variable family (which you can find in the downloadable zip file); the API will generate only those locations registered in the registry.
+
+This directory is a git subtree that is automatically updated with changes in the [googlefonts/axisregistry](https://github.com/googlefonts/axisregistry) repository.  The contents of this directory should not be changed in commits that are pushed to the [google/fonts](https://github.com/google/fonts) repository.  Rather, make edits in a pull request on the [googlefonts/axisregistry](https://github.com/googlefonts/axisregistry) repository.  [google/fonts](https://github.com/google/fonts) repository maintainers can then pull the git subtree changes in to the `axisregistry` directory by executing the following command from the root of [google/fonts](https://github.com/google/fonts):
+
+```code
+git subtree pull --prefix=axisregistry https://github.com/googlefonts/axisregistry.git main
+```
 
 ### Lang directory
 
-This python module provides the API with data about [languages](https://github.com/felipesanches/gflanguages/tree/main/Lib/gflanguages/data/languages)/[regions](https://github.com/felipesanches/gflanguages/tree/main/Lib/gflanguages/data/regions)/[scripts](https://github.com/felipesanches/gflanguages/tree/main/Lib/gflanguages/data/scripts) for use in the language-support categorization of the font families in the Google Fonts collection.
+```code
+.
+├── lang
+```
 
-As with the axis registry, [the Lang directory](https://github.com/googlefonts/lang) also has its own repository, and all issues related to language data should be opened there.
+This Python module provides the API with data about [languages](https://github.com/felipesanches/gflanguages/tree/main/Lib/gflanguages/data/languages)/[regions](https://github.com/felipesanches/gflanguages/tree/main/Lib/gflanguages/data/regions)/[scripts](https://github.com/felipesanches/gflanguages/tree/main/Lib/gflanguages/data/scripts) for use in the language-support categorization of the font families in the Google Fonts collection.
+
+This directory is a git subtree that is automatically updated with changes in the [googlefonts/lang](https://github.com/googlefonts/lang) repository.  The contents of this directory should not be changed in commits that are pushed to the [google/fonts](https://github.com/google/fonts) repository.  Rather, make edits in a pull request on the [googlefonts/lang](https://github.com/googlefonts/lang) repository.  [google/fonts](https://github.com/google/fonts) repository maintainers can then pull the git subtree changes in to the `lang` directory by executing the following command from the root of [google/fonts](https://github.com/google/fonts):
+
+```code
+git subtree pull --prefix=lang https://github.com/googlefonts/lang.git main
+```
 
 ### Push lists
 
