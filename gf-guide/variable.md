@@ -374,9 +374,9 @@ GF only allows weight and italic particles for the instances in the `fvar` table
 
 Google Fonts only allows the following named instances:
 
-| Thin       | Thin Italic       |
+| Roman      | Italic            |
 |------------|-------------------|
-| ExtraLight | ExtraLight Italic |
+| Thin       | Thin Italic       |
 | Light      | Light Italic      |
 | Regular    | Italic            |
 | Medium     | Medium Italic     |
