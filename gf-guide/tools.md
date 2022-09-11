@@ -73,7 +73,7 @@ You can verify which Python version is installed by running: `python --version`.
 
 If you already find a Python 3 version installed, you could first confirm its location by running `which python`. The resulting path will help identify whether it was installed using Homebrew or from the package downloaded from the Python site and thus consult the best way to update it if needed.
 
-There are many implementations of Python. CPython is the reference one written in C, which provides a high level of compatibility with Python packages. PyPy is an interpreter focused on optimization as it runs generally faster, although it does not guarantee compatibility with all Python packages.
+There are many implementations of Python. CPython is the reference one written in C, which provides a high level of compatibility with Python packages. PyPy is an interpreter focused on optimization as it runs generally faster, but it does not guarantee compatibility with all Python packages, so we recomend using the former.
 
 To install the **CPython** implementation:
 
@@ -86,14 +86,6 @@ brew install python
 -   Or you can use the latest release package from [python downloads](https://www.python.org/downloads/). Don’t forget to double click on `Install Certificates.command` and `Update Shell Profile.command` to add the python path to your bash profile.
 
 Installing python usually comes with `pip` (the standard package manager for Python), allowing you to install and uninstall or freeze the packages. If you work on Mac with an Apple M1 chip, you must first upgrade `pip` to the latest version using `pip install -U pip`.
-
-If you would rather use Python with **PyPy**, run:
-
-``` code
-brew install pypy3
-```
-
-You can find more information about working with this implementation on [doc.pypy.org](https://doc.pypy.org/en/latest/introduction.html)
 
 ### Virtual Environments
 
