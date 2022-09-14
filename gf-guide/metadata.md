@@ -66,10 +66,12 @@ fonts {
   full_name: "Example Sans Italic"
   copyright: "Copyright 2021 The Example Sans Project Authors (github.com/username/example-sans)"
 }
+subsets: "arabic"
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
 subsets: "vietnamese"
+primary_script: "Arab"
 source {
   repository_url: "https://github.com/username/example-sans"
   commit: "d9098c0a72125d411dbb225a2e5a61dc15265ffc"
@@ -315,6 +317,17 @@ The menu subset is the characters of the font family name (defined above) and is
 -   `thai`
 -   `tibetan`
 -   `vietnamese`
+
+### primary script
+
+This key aims to indicate which script the specimen page on Google Fonts should display in priority.
+The possible values to enter here must refer to the **ID** of the specified script's textprotos from the [lang directory](https://github.com/google/fonts/tree/main/lang/Lib/gflanguages/data/scripts) in `google/fonts` repo.
+
+Example:
+
+```code
+primary_script: "Arab"
+```
 
 ### registry_default_overrides
 
