@@ -75,6 +75,7 @@ These are some links where you could find more detailed information about this C
 -   [Open Source Guide](https://opensource.guide/how-to-contribute/)
 -   SIL's [Font Development Best Practices](http://silnrsi.github.io/FDBP/en-US/index.html) with Technical Guidance Regarding Font Development And Production
 -   The [Open Source Initiative](https://opensource.org/docs/osd)
+-   [Libre Type as a Veblen Good](https://www.nan.xyz/txt/libre-type-as-a-veblen-good/) (A business model for funding libre font projects)
 
 <div class="next-reading">
     Further reading:<br>
