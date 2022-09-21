@@ -34,9 +34,9 @@ Before starting this reading, make sure that:
 
 If you read this before you have created your project Github repo, you would like to use the [Google Fonts project template](https://github.com/googlefonts/googlefonts-project-template) repo to start with everything set up for you.
 
-The template is based on [Raphael Bastide’s UFR](https://github.com/unified-font-repository/Unified-Font-Repository), and was adapted to meet Google Fonts' needs. Its only purpose is to help type designers set up their repo of open-source fonts — especially if they want to publish them on Google Fonts. A unified structure throughout all the repositories helps GF to automate the fonts' quality assurance and onboarding processes into the catalog.
+The template is based on [Raphael Bastide’s UFR](https://github.com/unified-font-repository/Unified-Font-Repository), and was adapted to meet Google Fonts' needs. Its purpose is to help type designers set up their repo of open-source fonts — especially if they want to publish them on Google Fonts. A unified structure throughout all the repositories helps GF to automate the fonts' quality assurance and onboarding processes into the catalog.
 
-But there is more: the project template incorporates [GitHub Actions](https://docs.github.com/en/actions) to provide users with many automation.
+But there is more: the project template incorporates [GitHub Actions](https://docs.github.com/en/actions) to provide users with many automations.
 
 -   The actions will build the font files from the source, use Fontbakery for the Quality Analysis test of the fonts, generate HTML proof sheets, publish them with the test results to HTML files, and generate an *artifact* containing all the files that it has built.
 -   You can download the latest artifact (produced fonts) by visiting the Actions tab of your repository.
