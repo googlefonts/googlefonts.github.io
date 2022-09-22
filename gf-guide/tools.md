@@ -176,7 +176,7 @@ brew install cairo freetype harfbuzz pkg-config
 Finally, you can install `gftools qa`:
 
 ``` code
-pip install gftools[qa]
+pip install 'gftools[qa]'
 ```
 
 Run `gftools qa --help` to have an overview of the usage of the tool.
