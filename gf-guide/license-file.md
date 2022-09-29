@@ -47,7 +47,21 @@ This page will give users some important requirements about the <mark class="gre
 
     
 
-    -   In other cases, a legal agreement needs to be made between Google Fonts and the copyright holders. This is the case for all Adobe’s and SIL’s fonts for example. In that case you should get in contact with your Google Fonts point of contact to start the legal process of allowing GF to use the font name despite the RFN.
+    -   In other cases, a legal agreement needs to be made between Google Fonts and the copyright holders. This is the case for all Adobe’s and SIL’s fonts for example. In that case you should get in contact with your Google Fonts point of contact to start the legal process of allowing GF to use the font name despite the RFN. This is usually done by email from an authorized representative of the rfn holder:
+
+> To: fonts@google.com
+> Subject: Permission to use Reserved Font Name 
+>
+> Hi,
+>
+> I hereby grant permission in perpetuity to Google LLC and affiliates to use the following trademarks and Reserved Font Names declared in my SIL Open Font Licence notices for fonts served via Google Fonts:
+>
+>     Company Name
+>
+> Best Regards,
+> Firstname Last-name 
+
+
 -   **All info between the font, the source, and the license should match.**
 -   **The OFL.txt file must use the same template as the rest of the Google Fonts Library.**
 
