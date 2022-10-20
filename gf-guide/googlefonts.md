@@ -115,6 +115,9 @@ This directory is a git subtree that is automatically updated with changes in th
 git subtree pull --prefix=axisregistry https://github.com/googlefonts/axisregistry.git main
 ```
 
+**Very important note:** the PR landing the gitsubtree into google/fonts repo should be merged in the main branch using **merge commits** (and _not_ squash and merge).
+
+
 ### Lang directory
 
 ```code
@@ -129,6 +132,8 @@ This directory is a git subtree that is automatically updated with changes in th
 ```code
 git subtree pull --prefix=lang https://github.com/googlefonts/lang.git main
 ```
+
+**Very important note:** the PR landing the gitsubtree into google/fonts repo should be merged in the main branch using **merge commits** (and _not_ squash and merge).
 
 ### Push lists
 
