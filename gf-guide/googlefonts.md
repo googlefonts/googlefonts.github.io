@@ -115,6 +115,9 @@ This directory is a git subtree that is automatically updated with changes in th
 git subtree pull --prefix=axisregistry https://github.com/googlefonts/axisregistry.git main
 ```
 
+**Important:** When merging a pull request in the google/fonts repo which contains a subtree pull, merge it using the "Create a merge commit" button and not the "Squash and merge" button. If we squash and merge, the subtree's history is squashed into a single commit which will cause merge conflicts for the next person who has to do a subtree pull. 
+
+
 ### Lang directory
 
 ```code
@@ -129,6 +132,8 @@ This directory is a git subtree that is automatically updated with changes in th
 ```code
 git subtree pull --prefix=lang https://github.com/googlefonts/lang.git main
 ```
+
+**Important:** When merging a pull request in the google/fonts repo which contains a subtree pull, merge it using the "Create a merge commit" button and not the "Squash and merge" button. If we squash and merge, the subtree's history is squashed into a single commit which will cause merge conflicts for the next person who has to do a subtree pull. 
 
 ### Push lists
 
