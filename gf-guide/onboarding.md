@@ -42,7 +42,9 @@ If you would like to include a new font family into the GF collection, we'll be 
     
 - **The project must be wholly licensed under the** **[SIL Open Font License v1.1](http://scripts.sil.org/OFL).**
     <br>
-    There must also be no proprietary/restricted-license versions of the project available elsewhere (such as additional weights/styles). Refer to the dedicated chapter to know more about the [license file requirements](license-file.md).
+    There must also be no proprietary/restricted-license versions of the project available elsewhere (such as additional weights/styles). Agreeing to publishing a font on Google Fonts means that you agree on licensing under OFL all the existing styles of a same family, and the ones to come. For example, Mono, Proportional, Display, Text, Serif, Sans-Serif… are considered styles (or subfamilies) of the same font family, and should therefore be open source as well.
+    <br>
+    Refer to the dedicated chapter to know more about the [license file requirements](license-file.md).
     
 - **The Open Font License should not have any Reserved Font Names ([why](https://github.com/simoncozens/silson/issues/1)).**
   
