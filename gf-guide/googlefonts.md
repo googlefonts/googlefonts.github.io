@@ -112,8 +112,10 @@ Google Fonts supports all the [Microsoft registered axes](https://docs.microsof
 This directory is a git subtree that is automatically updated with changes in the [googlefonts/axisregistry](https://github.com/googlefonts/axisregistry) repository.  The contents of this directory should not be changed in commits that are pushed to the [google/fonts](https://github.com/google/fonts) repository.  Rather, make edits in a pull request on the [googlefonts/axisregistry](https://github.com/googlefonts/axisregistry) repository.  [google/fonts](https://github.com/google/fonts) repository maintainers can then pull the git subtree changes in to the `axisregistry` directory by executing the following command from the root of [google/fonts](https://github.com/google/fonts):
 
 ```code
-git subtree pull --prefix=axisregistry https://github.com/googlefonts/axisregistry.git [new branch name]
+git subtree pull --prefix=axisregistry https://github.com/googlefonts/axisregistry.git main
 ```
+
+Once the main branch from the submodule is pulled, you will need to push in a new branch upstream.
 
 **Important:** When merging a pull request in the google/fonts repo which contains a subtree pull, merge it using the "Create a merge commit" button and not the "Squash and merge" button. If we squash and merge, the subtree's history is squashed into a single commit which will cause merge conflicts for the next person who has to do a subtree pull. 
 
@@ -130,8 +132,10 @@ This Python module provides the API with data about [languages](https://github.c
 This directory is a git subtree that is automatically updated with changes in the [googlefonts/lang](https://github.com/googlefonts/lang) repository.  The contents of this directory should not be changed in commits that are pushed to the [google/fonts](https://github.com/google/fonts) repository.  Rather, make edits in a pull request on the [googlefonts/lang](https://github.com/googlefonts/lang) repository.  [google/fonts](https://github.com/google/fonts) repository maintainers can then pull the git subtree changes in to the `lang` directory by executing the following command from the root of [google/fonts](https://github.com/google/fonts):
 
 ```code
-git subtree pull --prefix=lang https://github.com/googlefonts/lang.git [new branch name]
+git subtree pull --prefix=lang https://github.com/googlefonts/lang.git main
 ```
+
+Once the main branch from the submodule is pulled, you will need to push in a new branch upstream.
 
 **Important:** When merging a pull request in the google/fonts repo which contains a subtree pull, merge it using the "Create a merge commit" button and not the "Squash and merge" button. If we squash and merge, the subtree's history is squashed into a single commit which will cause merge conflicts for the next person who has to do a subtree pull. 
 
