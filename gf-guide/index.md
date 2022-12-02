@@ -59,7 +59,7 @@ To improve and facilitate the open collaboration as well as the publishing proce
 Know the particularities about mastering your font project to meet the Google Fonts specifications and get them ready for production.
 
 * <mark class="blue">start</mark>
-  <b>[New fonts specifics](https://googlefonts.github.io/gf-guide/onboarding.html#new-fonts)</b> 
+  <b>[New fonts specifics](https://googlefonts.github.io/gf-guide/onboarding.html)</b> 
 * <mark class="blue">start</mark>
   <b>[Upgrading fonts specifics](https://googlefonts.github.io/gf-guide/onboarding.html#font-upgrades)</b> 
 * <mark class="green"><b>must&rarr;</b></mark>
