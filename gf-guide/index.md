@@ -121,7 +121,9 @@ Advanced content for experienced contributors or team members with the details o
 * <mark class="grey">templ</mark>
   [Designer Profile](profile.md) 
 * <mark class="grey">templ</mark>
-  [Promo / Marketing](marketing.md) 
+  [Promo / Marketing](marketing.md)
+* <mark class="brown">team&nbsp;</mark>
+  [Lang repo](lang.md)
    
 
 <!-- ## More info
