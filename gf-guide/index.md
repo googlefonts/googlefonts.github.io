@@ -122,7 +122,7 @@ Advanced content for experienced contributors or team members with the details o
   [Designer Profile](profile.md) 
 * <mark class="grey">templ</mark>
   [Promo / Marketing](marketing.md)
-* <mark class="brown">team&nbsp;</mark>
+* <mark class="purple">nerd&nbsp;</mark>
   [Lang repo](lang.md)
    
 
