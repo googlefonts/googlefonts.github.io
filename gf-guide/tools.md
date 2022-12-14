@@ -28,10 +28,12 @@ Before starting your project, you should set up a working environment with all t
 Font developers are expected to understand the following:
 
 -   Shell scripting (usually `bash`).
--   How to manage Python packages/tools using `pip`.
+-   How to manage Python packages/tools using `pip`, and virtual environments.
 -   A basic understanding of the command-line. Users should be able to traverse directories and understand the commands `cd`, `ls`, `mv`, `cp`.
 
 See the useful links section at the bottom of this page to bring you up to speed.
+
+**Note:** If you are not familiar with the concepts listed above, and do not wish to learn about them; we recommend you to try following the [github repository requirements](./upstream.html) as close as possible, as well as the [font file requirements](./requirements.html), and a GF Team Member will help you with the tooling and building process of your font.
 
 ## Setting up a working environment
 
@@ -85,7 +87,7 @@ brew install python
 
 -   Or you can use the latest release package from [python downloads](https://www.python.org/downloads/). Don’t forget to double click on `Install Certificates.command` and `Update Shell Profile.command` to add the python path to your bash profile.
 
-Installing python usually comes with `pip` (the standard package manager for Python), allowing you to install and uninstall or freeze the packages. If you work on Mac with an Apple M1 chip, you must first upgrade `pip` to the latest version using `pip install -U pip`.
+Installing python usually comes with `pip` (the standard package manager for Python), allowing you to install and uninstall or freeze the packages. If you work on Mac with an Apple M1 chip, you must first upgrade `pip` to the latest version using `pip install --upgrade pip`.
 
 ### Virtual Environments
 
@@ -220,7 +222,8 @@ export BSTACK_ACCESS_KEY="key"
 ## Useful Links
 
 -   [Bash shell comands cheat-sheet](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
--   [What is CLI](https://www.w3schools.com/whatis/whatis_cli.asp)
+-   [What is a virtual environment](https://realpython.com/python-virtual-environments-a-primer/)
+-   [What is a CLI](https://www.w3schools.com/whatis/whatis_cli.asp)
 -   [What is shell](https://www.tutorialspoint.com/unix/unix-what-is-shell.htm)
 -   [What is Pip](https://realpython.com/what-is-pip/)
 -   [Where is my bash profile](https://www.codecademy.com/courses/learn-the-command-line/lessons/learn-command-line-environment/exercises/configuring-environment-bash-profile)
