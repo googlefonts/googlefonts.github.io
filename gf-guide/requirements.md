@@ -19,9 +19,6 @@ For specific information on any of those cases, please read the pages with the r
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./onboarding" style="font-weight:bold">Adding & upgrading fonts to Google Fonts</a> 
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./statics" style="font-weight:bold">Static fonts specifics</a>
-    <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
 </div>
 
 ## Table of contents
@@ -186,6 +183,9 @@ The vertical metrics should be the same in each sibling family, and the Use of T
 
 <div class="next-reading">
     Further reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./statics" style="font-weight:bold">Static fonts specifics</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a>
