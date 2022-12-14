@@ -35,6 +35,8 @@ The most basic concepts, tools, or knowledge you will need to cover to begin con
   <b>[Installing the required tools](https://googlefonts.github.io/gf-guide/tools.html#installing-the-required-tools)</b> 
 * <mark class="yellow">learn</mark>
   [Hosting projects on Github](hosting.md)
+* <mark class="blue">start</mark>
+  <b>[Impact of mass distribution on font production](https://googlefonts.github.io/gf-guide/production.html)</b>
 
 ## The Upstream Repo: administrate your project files
 
@@ -82,8 +84,6 @@ Know the particularities about mastering your font project to meet the Google Fo
 
 Context, requirements, and tools to produce the fonts and get them ready for publishing.
 
-* <mark class="blue">start</mark>
-  <b>[Massively distribution implications](https://googlefonts.github.io/gf-guide/production.html#fonts-are-massively-distributed)</b>
 * <mark class="green"><b>must&rarr;</b></mark>
   <b>[Scalable font production](https://googlefonts.github.io/gf-guide/production.html#scalable-font-production)</b>
 * <mark class="yellow">learn</mark>
