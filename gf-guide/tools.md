@@ -33,7 +33,7 @@ Font developers are expected to understand the following:
 
 See the useful links section at the bottom of this page to bring you up to speed.
 
-**Note:** If you are not familiar with the concepts listed above, and do not wish to learn about them; we recommend you to try following the [github repository requirements](./upstream.html) as close as possible, as well as the [font file requirements](./requirements.html), and a GF Team Member will help you with the tooling and building process of your font.
+**Note:** If you are not familiar with the concepts listed above, and do not wish to learn about them; we recommend you to try following the [github repository requirements](https://googlefonts.github.io/gf-guide/upstream.html) as close as possible, as well as the [font file requirements](https://googlefonts.github.io/gf-guide/requirements.html), and a GF Team Member will help you with the tooling and building process of your font.
 
 ## Setting up a working environment
 
