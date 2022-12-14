@@ -105,7 +105,7 @@ It is strongly suggested to create and work under a [Python Virtual Environment]
     On Unix or macOS run:
 
     ``` code
-    source env/bin/activate
+    source myenv/bin/activate
     ```
 
     On Windows:
