@@ -30,13 +30,13 @@ The most basic concepts, tools, or knowledge you will need to cover to begin con
 * <mark class="blue">start</mark>
   <b>[Libre Font Culture](culture.md)</b>
 * <mark class="blue">start</mark>
+  <b>[Impact of mass distribution on font production](https://googlefonts.github.io/gf-guide/production.html)</b>
+* <mark class="blue">start</mark>
   <b>[Setting up a working environment](https://googlefonts.github.io/gf-guide/tools.html)</b> 
 * <mark class="blue">start</mark>
   <b>[Installing the required tools](https://googlefonts.github.io/gf-guide/tools.html#installing-the-required-tools)</b> 
 * <mark class="yellow">learn</mark>
   [Hosting projects on Github](hosting.md)
-* <mark class="blue">start</mark>
-  <b>[Impact of mass distribution on font production](https://googlefonts.github.io/gf-guide/production.html)</b>
 
 ## The Upstream Repo: administrate your project files
 
