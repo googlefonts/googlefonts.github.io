@@ -87,7 +87,7 @@ These are some links where you could find more detailed information about this C
 
 <div class="next-reading">
     Further reading:<br>
-    <mark class="blue">start</mark> <a href="./required-knowledge" style="font-weight:bold">Knowledge, tools and dependencies required</a>
+    <mark class="blue">start</mark> <a href="./tools" style="font-weight:bold">Tools, dependencies and knowledge required</a>
   <br>
     <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
   <br>
