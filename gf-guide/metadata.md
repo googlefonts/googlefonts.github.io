@@ -371,4 +371,6 @@ archive_url: "https://github.com/username/projectname/releases/download/v2.200/p
     <mark class="grey">templ</mark> <a href="./license">License file</a>
     <br>
     <mark class="grey">templ</mark> <a href="./authors">Authors and Contributors</a>
+    <br>
+    <mark class="purple">nerd&nbsp;</mark> <a href="./lang">Lang repo</a>
 </div>

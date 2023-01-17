@@ -3,8 +3,23 @@
 <a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
 
 # Lang Metadata System
+{:.no_toc}
 
-The foundation for the *lang metadata system* is defined in the [`googlefonts/lang`](https://github.com/googlefonts/lang) repo
+<div class="callout">
+🦜 <a href="https://github.com/googlefonts/lang" target="_blank">googlefonts/lang</a> is the GitHub repository that defines the foundation for the *lang metadata system* 
+<br><br>
+This section specifies the main concepts of the system and provides information on how if influences the displaying of the font in the Catalog.
+</div>
+
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="brown">team&nbsp;</mark> <a href="./metadata">METADATA file</a>
+</div>
+
+## Table of contents
+{:.no_toc}
+* TOC goes here
+{:toc}
 
 ## Constructs
 
