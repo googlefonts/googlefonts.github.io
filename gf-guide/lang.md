@@ -1,5 +1,7 @@
 # Lang Metadata System
 
+<a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
+
 The foundation for the *lang metadata system* is defined in the [`googlefonts/lang`](https://github.com/googlefonts/lang) repo
 
 ## Constructs
