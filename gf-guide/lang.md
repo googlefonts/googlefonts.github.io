@@ -1,6 +1,8 @@
-# Lang Metadata System
+<link href="style.css" rel="stylesheet">
 
 <a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
+
+# Lang Metadata System
 
 The foundation for the *lang metadata system* is defined in the [`googlefonts/lang`](https://github.com/googlefonts/lang) repo
 
