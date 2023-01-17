@@ -317,5 +317,5 @@ Unfortunately, the Builder yet can’t do everything. You will have to use a ext
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing">QA - Local testing</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing" style="font-weight:bold">QA - Local testing</a>
 </div>
