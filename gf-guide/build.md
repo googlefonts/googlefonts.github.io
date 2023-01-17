@@ -7,7 +7,9 @@
 
 <div class="callout">
 
-🦕 This chapter aims to guide designers in the building of their font binaries using open-source tools as per our production requirements. Everything related to font file settings is detailed in the Pre-production part of the guide, and for practicality, that information will not be repeated here.
+🦕 Because of our commitment to <a href="./cuture">Libre font culture</a>, all Google Fonts projects must be built using a reproducible, libre toolchain. We do not onboard binaries exported from font editors.
+
+This chapter aims to guide designers in the building of their font binaries using open-source tools as per our production requirements. Everything related to font file settings is detailed in the Pre-production part of the guide, and for practicality, that information will not be repeated here.
 <br><br>
  If you read “you should follow the recommendation” or “respect the requirements” etc, please refer to the chapters labeled as <mark class="blue">start</mark> and <mark class="green"><b>must&rarr;</b></mark> under the <b>Pre-production: Getting your fonts ready for GF</b> contents. You will have a better understanding of the following guidelines if you have read them first.
 <br><br>

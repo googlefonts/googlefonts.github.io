@@ -62,6 +62,15 @@ However:
 -   You are encouraged to work with free software to develop your project.
 -   Ideally, you would incorporate the practices of *Continuous Integration* testing and proofing.
 
+### Expectations
+
+What does this mean for you?
+
+- You should expect that there will be future contributions to your font, and that these contributions may come from other users. Your sense of “ownership” over the font may differ from that of other projects you have been involved with.
+- We expect your font development to take place in a GitHub repository from the earliest stages. In general, this repository should be public; if you wish to keep the repository private until launch, we expect you to invite members of the Google Fonts team as collaborators.
+- We expect you to check in and publish your in-progress work incrementally - for a commissioned project, we expect to see check-ins at least at the end of each working day, if not after each substantive change - rather than as one final deliverable.
+- All Google Fonts projects must be built using a reproducible, libre toolchain. We do not onboard binaries exported from font editors. See the <a href="./build">Build the fonts</a> chapter to learn more about how we expect fonts to be built.
+
 ------------------------------------------------------------------------
 
 ## Useful links
