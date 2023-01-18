@@ -198,7 +198,7 @@ Similarly, eventually, *Stylistic Sets* could become a variation axis since for 
 Knowledge Illustrator
 Knowledge Content Editor -->
 
-## Named positions
+## Named and fallback positions
 
 Some fonts provide named positions on a custom axis.  For example, the Element Shape in Handjet defines different shapes at each integer value along the axis (Triangle, Square, Lozengue, etc) and Kablammo’s design is centered around four named positions on a custom axis. 
 <!-- Without named positions, Kablammo’s design center "gets lost". Ideally, the named positions would be available to the fonts.google.com Type Tester as a dropdown.  It may also make sense to use the named positions when creating a download zip. -->
@@ -207,7 +207,7 @@ Named positions are similar to, but different than, fallback positions. Fallback
 
 Additionally, fallback positions are defined on the axis and not on the font with the expectation that all fonts that support an axis will want the same fallback positions (very reasonable for legacy support). 
 
-All this makes fallback positions unsuitable for named positions.
+All this makes fallback positions unsuitable for named positions, and have been reserved to the Microsoft OpenType registered axis (and will remain for the custom axis already registered in GF registry)
 
 Named positions are not yet supported. For the time being, fonts will be published and delivered only in VF format without Named Positions and therefore without static companions on the downloadable zip file.
 
