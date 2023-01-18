@@ -53,13 +53,13 @@ The first step required is to inspect the current <a href="github.com/googlefont
 
 -   **1.2 A registered axis matches the function and name but not the range values of the incoming axis** ⇒ Additional range values could be added (see 2.)
   
--   **1.3 A registered axis matches the function and name but not the type of values or fallbacks of the incoming axis** ⇒ Register a new axis (see 3.). 
+-   **1.3 A registered axis matches the function and name but not the type of values or fallbacks of the incoming axis** ⇒ Register a new axis (See Axis Requirements below.) 
 <br><br>
 However, this option is strongly discouraged and should be the last case scenario. A good example could be the *Casual* axis. Although its name, description, and range could fit in many other cases, it was originally registered with fallbacks called *Linear* and *Casual*, which the API will use to generate those static fonts for every font using the axis, even if does not make sense for those projects. Here lies the importance of point 3.1.4.
 <br>
 > Note: Casual is among the first axes included in the registry when the support of the custom axis was being implemented. This document would be the right place to offer apologies for the first axes registered in ways we know now they bring this type of inconvenience.
 
--   **1.4 The incoming axis doesn't match any currently registered axes** ⇒ Register the new axis (see 3.).
+-   **1.4 The incoming axis doesn't match any currently registered axes** ⇒ Register the new axis (See Axis Requirements below.)
 
 
 ### 2. Modify the current axis registry to cover the needs of the incoming font. 
@@ -68,7 +68,7 @@ Derived from case 1.2. If a registered axis matches the function and name but no
 
 - The axis range can be increased if a family requires wider range values. 
 - The type of value can’t be changed (e.g. boolean to ranges.)
-- If the default value of the new font does not match the registered axis default it can be overridden on the family `METADATA.pb` file. It must not be modified in the axis registry. See 3.1.5
+- If the default value of the new font does not match the registered axis default it can be overridden on the family `METADATA.pb` file, it must not be modified in the axis registry. Refer to the `default_value` in the *Axis Requirements* section of this document.
 
 
 ### 3. Registering a new custom axis 
@@ -108,13 +108,9 @@ The following are the requirements for a new custom axis to be registered, with 
 
 Identifying and selecting the accurate type of the axis is crucial for the axis definition. The type of range and its values play a key role in communicating a better sense of the purpose and use as well as the reusability of the axis.
 
-Two main types of axes have been identified.
-
 ### Continuous Range axes 
 
-Commonly percent (0..100) or “per mille of em” (0..1,000). 
-
-Within ranges, two subcategories could be defined: Relative and Absolute.
+Commonly percent (0..100) or “per mille of em” (0..1,000). Within ranges, two subcategories could be defined: Relative and Absolute.
 
 #### Relative range axes
 
@@ -124,7 +120,7 @@ For new expressive axes, the default range for these is likely to be a percent r
   - **Binary, pseudo boolean** (0, 1 but with a range 0.00..1.00)
 Few binary axes have been registered as pseudo boolean behavior with off and on positions but with two or three decimal places allowing a range. The difference with a percent (0 to 100) range would be semantical, related to the amplitude of variation that an axis expresses. Going from 0 to 1 with decimals could be interpreted as how much of the completeness of a single unity/entity it represents. In contrast, the percentage understanding implies the possibility of defining many stops that suggest different concepts within the range.
 <br><br>
-<a href="https://fonts.google.com/knowledge/glossary/fill_axis" target="_blank">Fill</a> is a good example of this axis where the numbers indicate proportion filled, from 0 (no treatment) to 1 (completely filled). Another pseudo boolean case Cursive,an axis with the same binary definition of on and off but with an intermediate point "auto" at 0.5 that would add a third behavior option allowing it to change automatically according to another axis that conditions it.
+<a href="https://fonts.google.com/knowledge/glossary/fill_axis" target="_blank">Fill</a> is a good example of this axis where the numbers indicate proportion filled, from 0 (no treatment) to 1 (completely filled). Another pseudo boolean case <a href="https://fonts.google.com/knowledge/glossary/cursive_axis" target="_blank">Cursive</a>, an axis with the same binary definition of on and off but with an intermediate point "auto" at 0.5 that would add a third behavior option allowing it to change automatically according to another axis that conditions it.
 
 
 Going forwards, we would like to see the registry more consistent. Most of the upcoming axes are likely to be Relative ones with a percent range since users are more accustomed to thinking about things in terms of percentages (particularly for technical stuff) and more comfortable with integers than decimals. Hence, **pseudo-boolean axes are expected to be avoided or rather exceptions**.
@@ -136,9 +132,9 @@ When the value corresponds to some measurement of the font, often a specific len
 <br><br>
 The default range of these axes is typically "per mille of em", 0..1000. Most fonts use a UPM of 1000, so there is a 1:1 map between the "font units" the type designer draws with and the "slider units" the design app user interacts with. If the font uses another UPM, say 2048, which is the original default for TrueType fonts, the font units can be easily scaled/normalized.
 <br><br>
-*Per mille* values not only have 100s of years of history in typography, but also the (mental) arithmetic is more straightforward. For example, if you want to make a 2pt rule and adjust the typeface so that at 36pt size the bar of the H is 2pt and the size of the extrusion is also 2pt, with the axes mentioned above.
+*Per mille* values not only have 100s of years of history in typography, but also the (mental) arithmetic is more straightforward. For example, if you want to make a 2pt rule and adjust the typeface so that at 36pt size the bar of the 'H' is 2pt and the size of the extrusion is also 2pt, with the axes mentioned above.
 <br><br>
-Absolute axes, by their nature, have no meaningful per registry/library default because the default value is unique to each font's default instance's reference glyph shape's measurement. In these cases, the default value required could be set to zero, and it will always need a per family default override.
+Absolute axes, by their nature, have no meaningful per registry/library default because the default value is unique to each font's default instance's reference glyph shape's measurement. In these cases, the default value required could be set to zero, and it will always need a per family default override. Refer to the `default_value` in the *Axis Requirements* section of this document.
 
 ### Creating an Axis Proposal issue. 
 
@@ -147,20 +143,19 @@ Absolute axes, by their nature, have no meaningful per registry/library default 
     - An expected case of use from the user’s point of view. It would be a “Why do we need this” section, reasoning on why or how the users might use it. This explanation would help to discern the validity of the axis itself and its definitions such as the ranges, a concern that has arisen when reviewing new axes (e.g. discussing Year, HEXP/ TRACK). 
     <br>
     This information will also help to create the additional educational content required (detailed below.) 
-    - An image showing the effect of the axis in the font.
-- The reviewing process (discussion and decisions) of the proposed axis and its metadata fields should happen on the issue before creating the PR for the axis inclusion. Do not create PR simultaneously as the proposal issue to avoid having the discussion take place in two different places making the process slower and harder to follow and conclude.
+    - An image (gif or video) showing the effect of the axis in the font.
+- The reviewing process (discussion and decisions) of the proposed axis and its metadata fields should happen on the issue before creating the PR for the axis inclusion. Do not create a PR simultaneously as the proposal issue to avoid having the discussion take place in two different places making the process slower and harder to follow and conclude.
 
 
 ### Creating a Pull Request for the new axis
 
-- Create a PR on the <a href="https://github.com/googlefonts/axisregistry" target="_blank">googlefont/axisregistry</a> repository with a new `.textproto` file for the axis, including all parameters as defined in Section 3.2 above. 
+- After creating the Issue proposal and all the metadata fields have been reviewed/discussed/agreed upon, you could create a PR on the <a href="https://github.com/googlefonts/axisregistry" target="_blank">googlefont/axisregistry</a> repository with a new `.textproto` file for the axis, including all parameters as defined in the *Axis Requirements* and agreed in the proposal issue. 
 <br>
-The <a href="https://github.com/googlefonts/gftools/blob/main/bin/gftools-add-axis.py" target="_blank">add-axis</a> from gftools will help create the .textproto file taking the font that introduces the axis as an argument. 
-<br>
-The PR for the new axis should be merged and reach the Production server at least one week before the PR for the font is merged.  
-The additional educational assets needed for the axis (see point 4.) could be included following the font publishing.
+    - The <a href="https://github.com/googlefonts/gftools/blob/main/bin/gftools-add-axis.py" target="_blank">add-axis</a> from gftools will help create the `.textproto` file taking the font that introduces the axis as an argument. 
+    - Process the PR for the new axis as done with fonts: merging ⇒ Dev server ⇒ Sandbox server ⇒ Production server. The PR should reach the Production server at least one week before the font's PR is merged. For details on this process please refer to the <a href="./onboarder-workflow.html">Onboarder Workflow Guide</a>.
+    - The additional educational assets needed for the axis (see below) could be included following the font publishing.
 - Once the final PR is merged into `googlefont/axisregistry` then pull the subtree on `google/fonts` to incorporate the newly added Axis. Please refer to the <a href="https://googlefonts.github.io/gf-guide/googlefonts.html#axis-registry">Axis Registry</a> entry under the *google/fonts Repository Explained* section for details on this process.
-- Process the Pull PR as done with fonts: merging ⇒ Dev server ⇒ Sandbox server ⇒ Production server. For details on this process please refer to the <a href="./onboarder-workflow.html">Onboarder Workflow Guide</a>.
+
 
 
 ### Creating educational assets
@@ -174,9 +169,6 @@ Additional educational information should be created to communicate more details
     - The type of axis and how big the range is (small, medium, large)
     - The word to be displayed (it should be either a random word or illustrative word, not the axis name and not the font family name).
  - A glossary entry that provides details about the metadata fields and their CSS applicability. The onboarder in charge of the axis inclusion should provide a bullet list of ideas for the Knowledge Content Editor to write it. If the onboarder can’t provide the details Dave Crossland would do it. 
-
-
-
 
 
 ## Foreseeable scenarios
@@ -197,9 +189,10 @@ Knowledge Content Editor -->
 
 ## Named positions
 
-<!-- Some fonts provide named positions on a custom axis.  For example, the Element Shape in Handjet defines different shapes at each integer value along the axis (Triangle, Square, Lozengue, etc) and Kablammo’s design is centered around four named positions on a custom axis. Without named positions, Kablammo’s design center  "gets lost".  Ideally, the named positions would be available to the fonts.google.com Type Tester as a dropdown.  It may also make sense to use the named positions when creating a download zip.  -->
+Some fonts provide named positions on a custom axis.  For example, the Element Shape in Handjet defines different shapes at each integer value along the axis (Triangle, Square, Lozengue, etc) and Kablammo’s design is centered around four named positions on a custom axis. 
+<!-- Without named positions, Kablammo’s design center "gets lost". Ideally, the named positions would be available to the fonts.google.com Type Tester as a dropdown.  It may also make sense to use the named positions when creating a download zip. -->
 
-Named positions are similar to, but different than, fallback positions. Fallback positions were originally defined for the legacy axes, width and weight, to cover the axis values that matched the pre-VF world.  Google Fonts creates static instances at each of the fallback positions and delivers them when a requestor does not support VFs.  For example, when wght=451 is requested by a non-VF client, Google Fonts could deliver weight 500.
+Named positions are similar to, but different than, fallback positions. Fallback positions were originally defined for the legacy axes, width and weight, to cover the axis values that matched the pre-VF world. Google Fonts creates static instances at each of the fallback positions and delivers them when a requestor does not support VFs.  For example, when wght=451 is requested by a non-VF client, Google Fonts could deliver weight 500.
 
 Additionally, fallback positions are defined on the axis and not on the font with the expectation that all fonts that support an axis will want the same fallback positions (very reasonable for legacy support). 
 
