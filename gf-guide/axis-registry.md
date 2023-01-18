@@ -88,7 +88,7 @@ The following are the requirements for a new custom axis to be registered, with 
     - Nouns are often preferred to adjectives as they are words that commonly define larger concepts that allow related ideas to be defined under adjectives as instances. For example a hypothetical "Happiness" axis could have *Charming, Amused, Glad, Cheerful* instances. However, the rule of thumb when deciding on a name should be the one that makes the most sense to communicate effectively to end users. 
     - The spelling should follow the Title Case. <a href="https://m3.material.io/" target="_blank">M3 Material Design</a> uses Title Case for axis names as they are proper nouns, we should be consistent.
   
-- **Axis tag is also essential.** The `tag` is used to specify an axis in font-variation-settings, CSS API requests, and in font file names to specify which axes are included in the font. 
+- **Axis tag is also essential.** The `tag` is used to specify an axis in font-variation-settings, CSS API requests, and in font file names to specify which axes are included in the font, e.g. `Fraunces[SOFT,WONK,opsz,wght].ttf`
   - They are conditioned to four letters in length; ideally, they should work as an abbreviation or an acronym, trying to transmit the meaning of the axis as much as possible. However, sometimes the letter limitation makes it hard to comply.
   - It is suggested to use two letters per word for two-word axis names, and already used abbreviations should be consistent across axes. For example, if 'SH' was selected to abbreviate 'Shape,' it should be used only whenever possible.
   - The spelling should be in all CAPS.
@@ -99,10 +99,16 @@ The following are the requirements for a new custom axis to be registered, with 
 
 - **The `default_value` in the axis registry should work as a reference.** It is possible to override it in the family `METADATA.pb` file so that the axes keep their reusable purpose. Please refer to the <a href="https://googlefonts.github.io/gf-guide/metadata.html#registry_default_overrides" target=_blank>registry_default_overrides</a> entry under the Metadata file section for details on this process.
 
-- **Describing the axis to help convey its functionality in a broad sense.** A short description of the axis is used on the Type Tester tab of the font specimen page, under the info button (i) next to the axis name to give users more context about what the axis does or how it can be used. It should be written in a general way allowing it to make sense for other cases, not pointing too specifically to the font introducing the axis, and including a clarification of the range. It should be a maximum of 350 characters.
+- **Describing the axis to help convey its functionality in a broad sense.** A short description of the axis is used on the Type Tester tab of the font specimen page, under the tooltip (i) next to the axis name to give users more context about what the axis does or how it can be used. It should be written in a general way allowing it to make sense for other cases, not pointing too specifically to the font introducing the axis, and including a clarification of the range. It should be a maximum of 350 characters.
 
 - **A fallback at the axis default value is required.** For server implementation reasons, new custom axis registries require to include one single fallback. It must be called `Default` (reserving the use of  “Regular” for Weight and “Normal” for Width axes) and the value should match the axis *default_value*.  
 
+    <figure>
+    <img src="images/axis/TypeTester-tootip.gif" style="width:300px" />
+    <figcaption>Axis description and image are displayed under the tooltip (i)
+    <br>in the Type Tester tab of the font's specimen page</figcaption>
+    </figure>
+<br><br>
 
 ## Types of axis
 
