@@ -13,6 +13,11 @@ The requirements and principles of axis definition have been established mainly 
 
 </div>
 
+<div class="context-reading">
+    Background reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
+</div>
+
 ## Table of contents
 {:.no_toc}
 * TOC goes here
@@ -47,7 +52,7 @@ The following are the required steps to register a new custom Axis into Google F
 
 ### 1. Validate the incoming custom axes against the Axis Registry. 
     
-The first step required is to inspect the current <a href="github.com/googlefonts/axisregistry" target=_blank> GF Axis Registry</a> and determine if there is already a custom axis that could be used for the variation purpose on the font. We should ensure it is not a duplicated concept. Then according to the findings:
+The first step required is to inspect the current [GF Axis Registry](https://github.com/googlefonts/axisregistry/tree/main/Lib/axisregistry/data) and the [Knowledge/Glossary](https://fonts.google.com/knowledge/glossary#a-d) page (search for "axis") to determine if there is already a custom axis that could be used for the variation purpose on the font. We should ensure it is not a duplicated concept. Then according to the findings:
 
 -   **1.1. A registered axis matches the function but not the name of the incoming Axis** ⇒ Change the name and values of the custom axis in the project’s source file to match the already registered axis.
 
@@ -213,19 +218,14 @@ Named positions are not yet supported. For the time being, fonts will be publish
 
 These are some links where you could find more detailed information about this Culture:
 
--   Dave Crossland's MATD Dissertation, [The Free Font Movement](https://davelab6.github.io/matd-dissertation)
--   [Open Source Culture](https://google.github.io/gsocguides/mentor/open-source-culture#openness-and-sharing) (Google Summer of Code Guide)
--   [Contributing to the Commons: What, Why, and How?](https://www.youtube.com/watch?v=1YKAJSV5c00&t=1961s) \| Dave Crossland \| ATypI 2020 All Over
--   ATypI 2014: [David Lemon on Adobe Type's Approach to Libre Fonts](https://www.youtube.com/watch?v=DBz0rVUYNPA)
--   [Open Source Guide](https://opensource.guide/how-to-contribute/)
--   SIL's [Font Development Best Practices](http://silnrsi.github.io/FDBP/en-US/index.html) with Technical Guidance Regarding Font Development And Production
--   The [Open Source Initiative](https://opensource.org/docs/osd)
+-   OpenType Specification [Registered axis tags](https://learn.microsoft.com/en-us/typography/opentype/otspec191alpha/dvaraxisreg_delta#registered-axis-tags)
+-   Font Bureau OpenType 1.8 [Variations Axes Proposal](https://variationsguide.typenetwork.com/)
+-   [fonts.google.com/variablefonts](https://fonts.google.com/variablefonts)
+-   Axis Registry [active issues in the repository](https://github.com/googlefonts/axisregistry/issues)
+-   2017 [MS guide to axis registration](https://github.com/microsoft/OpenTypeDesignVariationAxisTags)
+-   Font Bureau [Proposal summary for Grade axis](https://github.com/FontBureau/Opentype-1.8-Axis-Proposal/blob/gh-pages/proposal/Grade/ProposalSummary.md) 
 
 <div class="next-reading">
     Further reading:<br>
-    <mark class="blue">start</mark> <a href="./tools" style="font-weight:bold">Tools, dependencies and knowledge required</a>
-  <br>
-    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
-  <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
+    <mark class="brown">team&nbsp;</mark> <a href="./metadata">METADATA file</a>
 </div>
