@@ -171,7 +171,9 @@ Absolute axes, by their nature, have no meaningful per registry/library default 
 
 ### Creating educational assets
 
-Additional educational information should be created to communicate more details on the axis concept and use. These assets could be added after the font family introducing the axis is pushed to Production.
+Every custom axis included in the GF Axis Registry should have an entry in the [Knowledge/Glossary](https://fonts.google.com/knowledge/glossary#a-d) page to provide more expanded information on the axis.
+
+Therefore, additional educational information should be created to communicate more details on the axis concept and use. These assets could be added after the font family introducing the axis is pushed to Production.
 
 - Illustration of the axis behavior following the <a href="https://www.figma.com/file/I4dDT3xB25t0kEK4YgWzP7/GFK-illustration-template-%2B-style-guide?node-id=103%3A2" target="_blank">GF Knowledge Illustration style guide specifications</a>. This image shows up in the tooltip *information* (i) next to the axis name in the Type Tester tab of the Specimen page of the font and will be also used for axis entry in `Knowledge/Glossary`.
   - For the image to be produced by the Knowledge Illustrator, the onboarder in charge of the axis inclusion should provide:
