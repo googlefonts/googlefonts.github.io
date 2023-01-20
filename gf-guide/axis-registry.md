@@ -147,7 +147,7 @@ The default range of these axes is typically "per mille of em", 0..1000. Most fo
 <br><br>
 Absolute axes, by their nature, have no meaningful per registry/library default because the default value is unique to each font's default instance's reference glyph shape's measurement. In these cases, the default value required could be set to zero, and it will always need a per family default override. Refer to the `default_value` in the *Axis Requirements* section of this document.
 
-### Creating an Axis Proposal issue. 
+## Creating an Axis Proposal issue. 
 
 - Create an issue using the Add-Axis template in <a href="https://github.com/googlefonts/axisregistry/issues/new/choose" target="_blank">googlefont/axisregistry</a> repository providing the required the axis information including:
     - All the axis metadata fields drafted taking the above *Axis Requirements* into account.
@@ -158,7 +158,7 @@ Absolute axes, by their nature, have no meaningful per registry/library default 
 - The reviewing process (discussion and decisions) of the proposed axis and its metadata fields should happen on the issue before creating the PR for the axis inclusion. Do not create a PR simultaneously as the proposal issue to avoid having the discussion take place in two different places making the process slower and harder to follow and conclude.
 
 
-### Creating a Pull Request for the new axis
+## Creating a Pull Request for the new axis
 
 - After creating the Issue proposal and all the metadata fields have been reviewed/discussed/agreed upon, you could create a PR on the <a href="https://github.com/googlefonts/axisregistry" target="_blank">googlefont/axisregistry</a> repository with a new `.textproto` file for the axis, including all parameters as defined in the *Axis Requirements* and agreed in the proposal issue. 
 <br>
@@ -169,7 +169,7 @@ Absolute axes, by their nature, have no meaningful per registry/library default 
 
 
 
-### Creating educational assets
+## Creating educational assets
 
 Every custom axis included in the GF Axis Registry should have an entry in the [Knowledge/Glossary](https://fonts.google.com/knowledge/glossary#a-d) page to provide more expanded information on the axis.
 
