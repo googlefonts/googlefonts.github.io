@@ -88,11 +88,13 @@ For example, if your VF has a `JUMP[0-100]` axis, which is supposed to fall back
 
 ### Unsupported Axes
 
-To provide a consistent user experience, GF cannot publish fonts with unsupported axes. Too great is the chance of a similar axis being accepted later under a different name with live fonts being subject to regressions.
+To provide a consistent user experience, GF cannot publish fonts with unsupported custom axes. Too great is the chance of a similar axis being accepted later under a different name with live fonts being subject to regressions.
 
-If you want to see an axis of yours added, you can use the `gftools add-axis` script to generate a template of axis definition and submit it to GF through the issue tracker.
+The requirements and principles of axis definition have been established mainly by a cross-functional group of fonts team members by Q3 2022 and have been documented in the [Axis Registry Protocol](./axis-registry.md). If you want to see a custom axis of yours added, please refer to the protocol for detailed information on the requirements and process.
 
-Meanwhile, you can submit your fonts without the unsupported custom axis simply by stripping it of the axis at the binary font level rather than removing it in the sources, using *fonttools*’ instancer.
+<!-- If you want to see an axis of yours added, you can use the `gftools add-axis` script to generate a template of axis definition and submit it to GF through the issue tracker. -->
+
+You can submit your fonts without the unsupported custom axis simply by stripping it of the axis at the binary font level rather than removing it in the sources, using *fonttools*’ instancer.
 
 This example removes the `CNTR` axis:
 
@@ -527,6 +529,8 @@ The manual hinting of variable font is a complicated process and the auto-hintin
     <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./testing">QA - Local testing</a>
+    <br>
+    <mark class="yellow">learn</mark><a href="./axis-registry">Axis Registry Protocol</a> 
     <br>
     <mark class="yellow">learn</mark> <a href="./build">Build the fonts</a>
 </div>

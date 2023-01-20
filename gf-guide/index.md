@@ -87,6 +87,8 @@ Context, requirements, and tools to produce the fonts and get them ready for pub
 * <mark class="green"><b>must&rarr;</b></mark>
   <b>[Scalable font production](https://googlefonts.github.io/gf-guide/production.html#scalable-font-production)</b>
 * <mark class="yellow">learn</mark>
+  [Axis Registry Protocol](axis-registry.md) 
+* <mark class="yellow">learn</mark>
   [Build the fonts](build.md) 
 * <mark class="yellow">learn</mark>
   [QA tools](qa.md)

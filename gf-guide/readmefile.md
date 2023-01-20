@@ -105,5 +105,5 @@ You may get inspire by these examples to build up your `README.md`. Please note 
 
 <div class="next-reading">
     Further reading:<br>
-    <mark class="brown">team&nbsp;</mark> <a href="./description" style="font-weight:bold">Description file</a>
+    <mark class="brown">team&nbsp;</mark> <a href="./description">Description file</a>
 </div>
