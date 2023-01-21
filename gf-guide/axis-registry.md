@@ -171,8 +171,7 @@ Absolute axes, by their nature, have no meaningful per registry/library default 
 - Once the final PR is merged into `googlefont/axisregistry` then pull the subtree on `google/fonts` to incorporate the newly added Axis. Please refer to the <a href="https://googlefonts.github.io/gf-guide/googlefonts.html#axis-registry">Axis Registry</a> entry under the *google/fonts Repository Explained* section for details on this process.
 
 
-
-## Creating educational assets
+### Creating educational assets
 
 Every custom axis included in the GF Axis Registry should have an entry in the [Knowledge/Glossary](https://fonts.google.com/knowledge/glossary#a-d) page to provide more expanded information on the axis.
 
