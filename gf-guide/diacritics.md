@@ -149,7 +149,16 @@ In some languages like Vietnamese, marks are made of the combination of two othe
 Some Latin and Cyrillic glyphs like i or j lose their dot when combined with marks that replace the dot. For example, in Dutch when stress is marked for emphasis `j` can be combined with `acutecomb` in the digraph ij spelled with two acute marks, in Navajo the `iogonek` can be combined with `acutecomb`, or in Ukrainian when stress is marked `i-cy` can be combined with `acutecomb`.
 In such cases, a glyph substitution should make the dot disappear for example by substituting the soft dotted glyphs when combined with at least one top mark by dotless variants with a `ccmp` feature in the `GSUB` table.
 
-In a font with a Latin Core set the `ccmp` feature code can have the following lookup:
+   <figure>
+    <img src="images/diacritics/diac-softdotted-fail.gif" style="width:60px">
+    <figcaption style="font-size:0.8em"><i>Incorrect behavior of <tt>i-cy</tt> with <tt>acutecomb</tt> (і́), without the appropriate glyph substition.</i></figcaption>
+   </figure>
+   <figure>
+    <img src="images/diacritics/diac-softdotted.gif" style="width:60px">
+    <figcaption style="font-size:0.8em"><i>Expected behavior of <tt>i-cy</tt> with <tt>acutecomb</tt> (і́), with the appropriate glyph substition.</i></figcaption>
+   </figure>
+
+In a font with a small Latin set the `ccmp` feature code can have the following lookup:
 ```code
 lookup ccmp_soft_dotted {
     @CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb dieresiscomb dotaccentcomb gravecomb macroncomb ringcomb tildecomb];
