@@ -144,6 +144,36 @@ In some languages like Vietnamese, marks are made of the combination of two othe
 - Again, by ensuring to include right anchor with consistent names will contribute to the correct setting and functioning of the `mkmk` feature in the `GPOS` table.
 - Automatic aligment enabled would also be recommended here to avoid placing stacked diacritics manually in the accented glyphs.
 
+### Soft dotted glyphs
+
+Some Latin and Cyrillic glyphs like i or j lose their dot when combined with marks that replace the dot. For example, in Dutch when stress is marked for emphasis `j` can be combined with `acutecomb` in the digraph ij spelled with two acute marks, in Navajo the `iogonek` can be combined with `acutecomb`, or in Ukrainian when stress is marked `i-cy` can be combined with `acutecomb`.
+In such cases, a glyph substitution should make the dot disappear for example by substituting the soft dotted glyphs when combined with at least one top mark by dotless variants with a `ccmp` feature in the `GSUB` table.
+
+In a font with a Latin Core set the `ccmp` feature code can have the following lookup:
+```code
+lookup ccmp_soft_dotted {
+    @CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb dieresiscomb dotaccentcomb gravecomb macroncomb ringcomb tildecomb];
+    @CombiningNonTopAccents = [cedillacomb ogonekcomb];
+    sub [i j]' @CombiningTopAccents by [idotless jdotless];
+    sub [i j]' @CombiningNonTopAccents @CombiningTopAccents by [idotless jdotless];
+} ccmp_soft_dotted;
+```
+
+In Glyphs, the automatically generated `ccmp` feature adds a similar lookup but does not update it with larger glyph sets.
+
+In a font with a larger Latin glyph set and Cyrillic glyph set, after creating the dotless forms of other soft dotted glyphs with glyph construction recipes like `idotless+dotbelowcomb=idotbelow.dotless idotless+ogonekcomb=iogonek.dotless idotless+tildebelowcomb=itildebelow.dotless` or after creating `istroke.dotless` and `jstroke.dotless`, the `ccmp` feature can have a lookup similiar to the following:
+
+```code
+lookup ccmp_soft_dotted {
+    @CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb dieresiscomb dotaccentcomb gravecomb macroncomb ringcomb tildecomb];
+    @CombiningNonTopAccents = [cedillacomb ogonekcomb];
+    sub [i j idotbelow iogonek istroke itildebelow jstroke i-cy je-cy]' @CombiningTopAccents by [idotless jdotless iogonek.dotless itildebelow.dotless istroke.dotless jstroke.dotless idotless jdotless];
+    sub [i j idotbelow iogonek istroke itildebelow jstroke i-cy je-cy]' @CombiningNonTopAccents @CombiningTopAccents by [idotless jdotless iogonek.dotless itildebelow.dotless istroke.dotless jstroke.dotless idotless jdotless];
+} ccmp_soft_dotted;
+```
+
+One should ensure these substitution do not break when combined with other substitutions, for example the small capitals `smcp` feature should produce small capitals for the soft dotted glyph combined with top marks.
+
 ### Special glyphs
 
 **Vertical caron**
