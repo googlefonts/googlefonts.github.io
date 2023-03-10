@@ -282,7 +282,7 @@ For more context and details, please read the entire [GPOS](https://docs.microso
 
 Sometimes the correct positioning of a mark will need first to use a different glyph shape for a given base letter, that is, to *substitute* it for another form that will allow the mark to be rightly placed.
 
-A typical case in Latin script is the necessity of using an `i` without the dot to receive any other mark like the `macron`. The `GSUB` table makes it possible for such substitutions through the *Glyph Composition/Decomposition* `ccmp` feature that will substitute for example, the glyph `i` by `idotless` when it is combined with any `comb` accent.
+A typical case in Latin script is the necessity of using an `i` without the dot to receive any other mark like the `macron`. The `GSUB` table makes it possible for such substitutions through the *Glyph Composition/Decomposition* `ccmp` feature that will substitute for example, the glyph `i` by `idotless` when it is combined with any `comb` accent — this is the soft dotted glyphs case explained above.
 
 Key factors for the [ccmp](https://simoncozens.github.io/feature-tags/#abvf) feature to work are:
 
