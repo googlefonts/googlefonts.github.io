@@ -150,17 +150,20 @@ Some Latin and Cyrillic glyphs like i or j lose their dot when combined with mar
 In such cases, a glyph substitution should make the dot disappear for example by substituting the soft dotted glyphs when combined with at least one top mark by dotless variants with a `ccmp` feature in the `GSUB` table.
 
 <table>
-<tr>
-<td>
-<figure>
- <img src="images/diacritics/diac-softdotted-fail.gif" style="width:60px">
- <figcaption style="font-size:0.8em"><i>Incorrect behavior of <tt>i-cy</tt> with <tt>acutecomb</tt> (і́), without the appropriate glyph substition.</i></figcaption>
-</figure>
-<td>
-<figure>
- <img src="images/diacritics/diac-softdotted.gif" style="width:60px">
- <figcaption style="font-size:0.8em"><i>Expected behavior of <tt>i-cy</tt> with <tt>acutecomb</tt> (і́), with the appropriate glyph substition.</i></figcaption>
-</figure>
+    <tr>
+        <td>
+            <figure>
+                <img src="images/diacritics/diac-softdotted-fail.gif" style="width:60px">
+                <figcaption style="font-size:0.8em"><i>Incorrect behavior of <tt>i-cy</tt> with <tt>acutecomb</tt> (і́), without the appropriate glyph substition.</i></figcaption>
+            </figure>
+        </td>
+        <td>
+            <figure>
+                 <img src="images/diacritics/diac-softdotted.gif" style="width:60px">
+                 <figcaption style="font-size:0.8em"><i>Expected behavior of <tt>i-cy</tt> with <tt>acutecomb</tt> (і́), with the appropriate glyph substition.</i></figcaption>
+            </figure>
+        </td>
+    </tr>
 </table>
 
 A `top` anchor is needed in the dotless variants of the glyphs for correct positioning of the top mark glyphs. A `_top` anchor is needed in the top mark glyphs.
