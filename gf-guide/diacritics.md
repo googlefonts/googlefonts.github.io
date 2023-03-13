@@ -185,14 +185,14 @@ lookup ccmp_soft_dotted {
 
 In Glyphs, the automatically generated `ccmp` feature adds a similar lookup but does not update it with larger glyph sets.
 
-In a font with a larger Latin glyph set and Cyrillic glyph set, after creating the dotless forms of other soft dotted glyphs with glyph construction recipes like `idotless+dotbelowcomb=idotbelow.dotless idotless+ogonekcomb=iogonek.dotless idotless+tildebelowcomb=itildebelow.dotless` or after creating `istroke.dotless` and `jstroke.dotless`, the `ccmp` feature can have a lookup similiar to the following:
+In a font with a larger Latin glyph set and Cyrillic glyph set, after creating the dotless forms of other soft dotted glyphs with glyph construction recipes like `idotless+dotbelowcomb=idotless_dotbelowcomb idotless+ogonekcomb=idotless_ogonekcomb idotless+tildebelowcomb=idotless_tildebelowcomb` or after creating `istroke.dotless` and `jstroke.dotless`, the `ccmp` feature can have a lookup similiar to the following:
 
 ```code
 lookup ccmp_soft_dotted {
     @CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb dieresiscomb dotaccentcomb gravecomb macroncomb ringcomb tildecomb];
-    @CombiningNonTopAccents = [cedillacomb ogonekcomb];
-    sub [i j idotbelow iogonek istroke itildebelow jstroke i-cy je-cy]' @CombiningTopAccents by [idotless jdotless iogonek.dotless itildebelow.dotless istroke.dotless jstroke.dotless idotless jdotless];
-    sub [i j idotbelow iogonek istroke itildebelow jstroke i-cy je-cy]' @CombiningNonTopAccents @CombiningTopAccents by [idotless jdotless iogonek.dotless itildebelow.dotless istroke.dotless jstroke.dotless idotless jdotless];
+    @CombiningNonTopAccents = [cedillacomb dotbelowcomb ogonekcomb tildebelowcomb];
+    sub [i j idotbelow iogonek itildebelow istroke jstroke i-cy je-cy]' @CombiningTopAccents by [idotless jdotless idotless_dotbelowcomb idotless_ogonekcomb idotless_tildebelowcomb istroke.dotless jstroke.dotless idotless jdotless];
+    sub [i j idotbelow iogonek itildebelow istroke jstroke i-cy je-cy]' @CombiningNonTopAccents @CombiningTopAccents by [idotless jdotless idotless_dotbelowcomb idotless_ogonekcomb idotless_tildebelowcomb istroke.dotless jstroke.dotless idotless jdotless];
 } ccmp_soft_dotted;
 ```
 
