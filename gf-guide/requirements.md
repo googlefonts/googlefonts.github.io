@@ -37,7 +37,7 @@ For example, the hyphen is used to separate family name from style name in file 
 - no camelCase, use spaces instead
 - no abbeviation/accronyms
 - no all caps
-- only basic ASCII glyphs (A-Z, a-z, 0-9), ie no hyphens, underscores not accented letters.
+- only basic ASCII glyphs (A-Z, a-z, 0-9), ie no hyphens, underscores nor accented letters.
 - union of family name and style name shall no go over 31 characters.
 
 Any exception to these rules shall be discussed and validated prior to onboarding, and listed in [Fontbakery's exceptions lists](https://github.com/googlefonts/fontbakery/tree/main/Lib/fontbakery/data/googlefonts) to avoid FAILS.
