@@ -28,6 +28,20 @@ For specific information on any of those cases, please read the pages with the r
 {:toc}
 
 
+## Font name
+
+Naming a font is pretty difficult, and not only because of the need of originalty and creativity. Google Fonts expects font names to comply with basic SEO and tooling limitations. 
+
+For example, the hyphen is used to separate family name from style name in file path; adding an hyphen to your family name may cause the QA tool to think that your style name is unconventional, and therefore fail the font. It will also break the file naming convention put in place across the entire collection (no foundy likes that). And finally, he user searching for the font in Google Font may not find it if they forget about the hyphen.
+
+- no camelCase, use spaces instead
+- no abbeviation/accronyms
+- no all caps
+- only basic ASCII glyphs (A-Z, a-z, 0-9), ie no hyphens, underscores not accented letters.
+- union of family name and style name shall no go over 31 characters.
+
+Any exception to these rules shall be discussed and validated prior to onboarding, and listed in [Fontbakery's exceptions lists](https://github.com/googlefonts/fontbakery/tree/main/Lib/fontbakery/data/googlefonts) to avoid FAILS.
+
 ## Font versioning
 
 **Every new version onboarded to GF should have an increased version number compared to the precedent.** This is explained in the [Main contribution cases](onboarding.md) chapter under the Font Upgrades section.
