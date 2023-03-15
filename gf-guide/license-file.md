@@ -49,21 +49,23 @@ This page will give users some important requirements about the <mark class="gre
     
     -   In other cases, a legal agreement needs to be made between Google Fonts and the copyright holders. This is the case for all Adobe’s and SIL’s fonts for example. In that case you should get in contact with your Google Fonts point of contact to start the legal process of allowing GF to use the font name despite the RFN. This is usually done by email from an authorized representative of the rfn holder:
 
-> To: fonts@google.com
-> Subject: Permission to use Reserved Font Name 
->
-> Hi,
->
-> I hereby grant permission in perpetuity to Google LLC and affiliates to use the following trademarks and Reserved Font Names declared in my SIL Open Font Licence notices for fonts served via Google Fonts:
-> 
->   - Font Name 1
->   - Font Name 2
->
-> Best Regards,
-> 
-> Firstname Last-name
-> 
-> Company Name 
+``` code
+To: fonts@google.com
+Subject: Permission to use Reserved Font Name 
+
+Hi,
+
+I hereby grant permission in perpetuity to Google LLC and affiliates to use the following 
+trademarks and Reserved Font Names declared in my SIL Open Font Licence notices 
+for fonts served via Google Fonts:
+
+- Font Name 1
+- Font Name 2
+
+Best Regards,
+Firstname Last-name
+Company Name 
+```
 
 Once the authorisation has been given, the font names should be added to [Fontbakery's exception list](https://github.com/googlefonts/fontbakery/blob/main/Lib/fontbakery/data/googlefonts/reserved_font_name_exceptions.txt) to avoid to fail the font.
 
