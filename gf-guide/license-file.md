@@ -28,6 +28,7 @@ This page will give users some important requirements about the <mark class="gre
 -   **The projects submitted must be wholly licensed under the [SIL Open Font License v1.1](http://scripts.sil.org/OFL).**
 
     This means that there are no proprietary/restricted-license versions of the project available elsewhere (such as additional weights/styles).
+
 -   **First line is the copyright string**
 
     It must follow this scheme:
@@ -35,6 +36,7 @@ This page will give users some important requirements about the <mark class="gre
     `Copyright { year } The { family } Project Authors ({ git_url })`
 
     [Project Authors](authors.md) links to a `.txt` file at the root of the repository, which lists all the copyright holders.
+
 -   **There is no Reserved Font Name (RFN) mention.**
 
     The RFN is an optional element of the Open Font License that forbids a user to fork and modify an open-source font under the *same name*. Only the original version of the font can bear this name. This apply to the design as well as the metadata or the glyphset.
@@ -44,9 +46,7 @@ This page will give users some important requirements about the <mark class="gre
     Sometimes an RFN is necessary:
 
     -   Typically when the original RFN is respected; the font is itself based on a previous open source font, which had an RFN, and had to be renamed to start with—even though its new name is not under RFN license terms. In that case, the OFL text should mention the original RFN. See the [Lexend](https://github.com/googlefonts/lexend/blob/main/OFL.txt) project as an example.
-
     
-
     -   In other cases, a legal agreement needs to be made between Google Fonts and the copyright holders. This is the case for all Adobe’s and SIL’s fonts for example. In that case you should get in contact with your Google Fonts point of contact to start the legal process of allowing GF to use the font name despite the RFN. This is usually done by email from an authorized representative of the rfn holder:
 
 > To: fonts@google.com
@@ -55,12 +55,17 @@ This page will give users some important requirements about the <mark class="gre
 > Hi,
 >
 > I hereby grant permission in perpetuity to Google LLC and affiliates to use the following trademarks and Reserved Font Names declared in my SIL Open Font Licence notices for fonts served via Google Fonts:
->
->     Company Name
+> 
+>   - Font Name 1
+>   - Font Name 2
 >
 > Best Regards,
-> Firstname Last-name 
+> 
+> Firstname Last-name
+> 
+> Company Name 
 
+Once the authorisation has been given, the font names should be added to [Fontbakery's exception list](https://github.com/googlefonts/fontbakery/blob/main/Lib/fontbakery/data/googlefonts/reserved_font_name_exceptions.txt) to avoid to fail the font.
 
 -   **All info between the font, the source, and the license should match.**
 -   **The OFL.txt file must use the same template as the rest of the Google Fonts Library.**
