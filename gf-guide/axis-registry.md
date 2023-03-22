@@ -110,10 +110,9 @@ As with the name definition, the axis' type of value should be reusable. It shou
     - **`min_value`** The lower bound of the axis. Inclusive.
     - **`max_value`** The upper bound of the axis. Inclusive. 
     - **`default_value`** Default position of the aixs.
-    The default value should work as a reference. It is possible to override it in the family `METADATA.pb` file so that the axes keep their reusable purpose. Please refer to the <a href="https://googlefonts.github.io/gf-guide/metadata.html#registry_default_overrides" target=_blank>registry_default_overrides</a> entry under the Metadata file section for details on this process.
-    - **`precision`** Describes the specificity at which an axis position can be specified. For example, 0 means values must be specified as whole numbers while -1 means values can be as precise as one decimal place. 
-    <br>
-    A percentage axis going from 0 -- 100 with a precision value `0` allows one hundred accessible intermediate positions, while a value `-1` would determine one thousand positions 0.0 -- 100.0.
+        The default value should work as a reference. It is possible to override it in the family `METADATA.pb` file so that the axes keep their reusable purpose. Please refer to the <a href="https://googlefonts.github.io/gf-guide/metadata.html#registry_default_overrides" target=_blank>registry_default_overrides</a> entry under the Metadata file section for details on this process.
+    - **`precision`** Describes the specificity at which an axis position can be specified. 
+        For example, 0 means values must be specified as whole numbers while -1 means values can be as precise as one decimal place. A percentage axis going from 0 -- 100 with a precision value `0` allows one hundred accessible intermediate positions, while a value `-1` would determine one thousand positions 0.0 -- 100.0.
 
 - #### A `fallback` at the axis default value
 For server implementation reasons, new custom axis registries require to include one single fallback. It must be called `Default` (reserving the use of  “Regular” for Weight and “Normal” for Width axes) and the value should match the axis `default_value`.
