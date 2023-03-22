@@ -117,18 +117,27 @@ As with the name definition, the axis' type of value should be reusable. It shou
     A percentage axis going from 0 -- 100 with a precision value `0`, stipulates one hundred accessible intermediate positions, while a value `-1` would determine one thousand positions 0.0 -- 100.0.
 
 - #### A `fallback` at the axis default value
-For server implementation reasons, new custom axis registries require to include one single fallback. It must be called `Default` (reserving the use of  “Regular” for Weight and “Normal” for Width axes) and the value should match the axis `default_value`.  
+For server implementation reasons, new custom axis registries require to include one single fallback. It must be called `Default` (reserving the use of  “Regular” for Weight and “Normal” for Width axes) and the value should match the axis `default_value`.
+
+- #### The `fallback_only` field affects the way the type tester surfaces the axis control.
+It determines whether only the fallback positions should be used. 
+  - `false` value is used for a continuous range axis displaying a slider to reach all the intermediate points
+  - `true` value would be used in cases like `Italic` boolean axis to display an "on/off" toggle, or `Cursive`, a pseudo boolean which was registered with three fallbacks positions, and so it uses radio buttons to give access to those positions. However, as stated in the *Type of Axis* section, binary and pseudo-boolean axes are expected to be avoided or rather exceptions.
+
+    <figure>
+    <img src="images/axis/TypeTester-radio-buttons.png" style="width:300px" />
+    <figcaption>The slider and radio buttons used on the type tester page.</figcaption>
+    </figure>
 
 - #### The axis `description` helps to define its functionality in a broad sense
 A short description of the axis is used on the Type Tester tab of the font specimen page, under the tooltip (i) next to the axis name to give users more context about what the axis does or how it can be used. It should be written in a general way allowing it to make sense for other cases, not pointing too specifically to the font introducing the axis, and including a clarification of the range. It should be a maximum of 350 characters.
-
     <figure>
     <img src="images/axis/TypeTester-tootip.gif" style="width:300px" />
     <figcaption>Axis description and image are displayed under the tooltip (i)
     <br>in the Type Tester tab of the font's specimen page</figcaption>
     </figure>
 
-<br><br>
+<br>
 
 ## Types of axis
 
