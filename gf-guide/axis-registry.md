@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🕷 Type designers are familiar with the 5 axes already defined by Microsoft in the OpenType specification. However, for each new variable font that type designer develops, it often introduces new axes. In order for a family to be actually added to the Google Fonts API and Catalog, each axis it offers must be “registered” – it must have a definition in the <a href="github.com/googlefonts/axisregistry" target=_blank> GF Axis Registry</a>. 
+🕷 Type designers are familiar with the five axes already defined by Microsoft in the OpenType specification. However, for each new variable font that type designer develops, it often introduces new axes. In order for a family introducing new custom axes to be added to the Google Fonts API and Catalog, each axis it offers must be “registered” – it must have a definition in the <a href="github.com/googlefonts/axisregistry" target=_blank> GF Axis Registry</a>. 
 <br><br>
 The requirements and principles of axis definition have been established mainly by a cross-functional group of fonts team members by Q3 2022. This protocol provides a guide to handling it within the font project as part of the onboarding process to Google Fonts. It offers detailed information on the required information, how to define it, and the required steps.
 
