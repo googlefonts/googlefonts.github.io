@@ -85,42 +85,47 @@ Derived from 1.3 and 1.4. If there is no other registered axis that matches the 
 
 The following are the requirements for a new custom axis to be registered, with expanded details about the <a haref="https://github.com/googlefonts/axisregistry#axis-metadata-fields" taget=_blank>Axis Metadata Fields</a> that should be included in the `.textproto` file for the axis.
 
-- ##### Existing font project
+- #### An existing font project introducing the axis
 There should be a production-ready VF project with the new axis. Axes can't be defined up front without a variable font family that requires the axis.
 
-- ##### Naming the axis, semantics matter
-Axes should represent intuitive reusable concepts that can (and do) appear in many families. 
+- #### Axis `display_name` should be readable
+When choosing a name for the axis the semantics matter. Axes should represent intuitive reusable concepts that can (and do) appear in many families. 
   - There should be a balance to be found between over-general to the point you can't predict what will happen, and over-specific to the point every family has unique axes. 
   - The `display_name` should be precise and descriptive enough to convey its effect on the font while avoiding use of highly technical terms. All the parametric axes would be a good example of this. The technical name *Y Transparent Ascender* is abbreviated with the *YTAS* tag, but the display name is `Ascender Height`, which is a familiar term for end-users. 
   - Nouns are often preferred to adjectives as they are words that commonly define larger concepts that allow related ideas to be defined under adjectives as instances. For example a hypothetical "Happiness" axis could have *Charming, Amused, Glad, Cheerful* instances. However, the rule of thumb when deciding on a name should be the one that makes the most sense to communicate effectively to end users.
   - No misspellings, no puns, or the other DEI (Diversiti, Equity and Inclusion) banned word list should be used.
   - The spelling should follow the Title Case. <a href="https://m3.material.io/" target="_blank">M3 Material Design</a> uses Title Case for axis names as they are proper nouns, we should be consistent.
   
-- #### Axis tag is also essential
+- #### Axis `tag` is key in the font file name.
 The `tag` is used to specify an axis in font-variation-settings, CSS API requests, and in font file names to specify which axes are included in the font, e.g. `Fraunces[SOFT,WONK,opsz,wght].ttf`
   - They are conditioned to four letters in length; ideally, they should work as an abbreviation or an acronym, trying to transmit the meaning of the axis as much as possible. However, sometimes the letter limitation makes it hard to comply.
   - It is suggested to use two letters per word for two-word axis names, and already used abbreviations should be consistent across axes. For example, if 'SH' was selected to abbreviate 'Shape,' it should be used only whenever possible.
   - The spelling should be in all CAPS.
 
 - #### Defining the type of axis and values wisely
-As with the name definition, the axis' type of value should be reusable. It should both serve the particular needs or uses of the project submitting the axis and try to anticipate the possible ways it could be used for other projects (See *Type of axis* below.)
+As with the name definition, the axis' type of value should be reusable. It should both serve the particular needs or uses of the project submitting the axis and try to anticipate the possible ways it could be used for other projects (See [Type of axis](https://googlefonts.github.io/gf-guide/axis-registry.html#types-of-axis))
   - Defining an axis as a boolean might not be valid for further font project needs, as is happening now with Wonky axis.
   - Ranges that are overly narrow or too wide would leave either insufficient room for the inclusion of other steps or too much to create meaningless intermediate steps. As an example, YEAR axis original range was including only the period covered by the original project (1979-2050). The range was redefined to a broad scope that could support other projects using the axis (-4000 — 4000).
+  - The following values must be included
+    - `min_value` The lower bound of the axis. Inclusive.
+    - `default_value` Default position of the aixs.
+    - `max_value` The upper bound of the axis. Inclusive. 
 
 - #### The `default_value` in the axis registry should work as a reference
 It is possible to override it in the family `METADATA.pb` file so that the axes keep their reusable purpose. Please refer to the <a href="https://googlefonts.github.io/gf-guide/metadata.html#registry_default_overrides" target=_blank>registry_default_overrides</a> entry under the Metadata file section for details on this process.
 
-- #### Describing the axis to help convey its functionality in a broad sense
+- #### The axis `description` helps to define its functionality in a broad sense
 A short description of the axis is used on the Type Tester tab of the font specimen page, under the tooltip (i) next to the axis name to give users more context about what the axis does or how it can be used. It should be written in a general way allowing it to make sense for other cases, not pointing too specifically to the font introducing the axis, and including a clarification of the range. It should be a maximum of 350 characters.
-
-- #### A fallback at the axis default value is required
-For server implementation reasons, new custom axis registries require to include one single fallback. It must be called `Default` (reserving the use of  “Regular” for Weight and “Normal” for Width axes) and the value should match the axis *default_value*.  
 
     <figure>
     <img src="images/axis/TypeTester-tootip.gif" style="width:300px" />
     <figcaption>Axis description and image are displayed under the tooltip (i)
     <br>in the Type Tester tab of the font's specimen page</figcaption>
     </figure>
+
+- #### A `fallback` at the axis default value
+For server implementation reasons, new custom axis registries require to include one single fallback. It must be called `Default` (reserving the use of  “Regular” for Weight and “Normal” for Width axes) and the value should match the axis `default_value`.  
+
 <br><br>
 
 ## Types of axis
