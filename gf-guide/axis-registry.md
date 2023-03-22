@@ -116,6 +116,9 @@ As with the name definition, the axis' type of value should be reusable. It shou
     <br>
     A percentage axis going from 0 -- 100 with a precision value `0`, stipulates one hundred accessible intermediate positions, while a value `-1` would determine one thousand positions 0.0 -- 100.0.
 
+- #### A `fallback` at the axis default value
+For server implementation reasons, new custom axis registries require to include one single fallback. It must be called `Default` (reserving the use of  “Regular” for Weight and “Normal” for Width axes) and the value should match the axis `default_value`.  
+
 - #### The axis `description` helps to define its functionality in a broad sense
 A short description of the axis is used on the Type Tester tab of the font specimen page, under the tooltip (i) next to the axis name to give users more context about what the axis does or how it can be used. It should be written in a general way allowing it to make sense for other cases, not pointing too specifically to the font introducing the axis, and including a clarification of the range. It should be a maximum of 350 characters.
 
@@ -124,9 +127,6 @@ A short description of the axis is used on the Type Tester tab of the font speci
     <figcaption>Axis description and image are displayed under the tooltip (i)
     <br>in the Type Tester tab of the font's specimen page</figcaption>
     </figure>
-
-- #### A `fallback` at the axis default value
-For server implementation reasons, new custom axis registries require to include one single fallback. It must be called `Default` (reserving the use of  “Regular” for Weight and “Normal” for Width axes) and the value should match the axis `default_value`.  
 
 <br><br>
 
