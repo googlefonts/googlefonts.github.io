@@ -32,7 +32,7 @@ For specific information on any of those cases, please read the pages with the r
 
 Naming a font is pretty difficult, and not only because of the need of originalty and creativity. Google Fonts expects font names to comply with basic SEO and tooling limitations. 
 
-For example, the hyphen is used to separate family name from style name in file path; adding an hyphen to your family name may cause the QA tool to think that your style name is unconventional, and therefore fail the font. It will also break the file naming convention put in place across the entire collection (no foundy likes that). And finally, a user searching for the font in Google Font may not find it if they forget about the hyphen.
+For example, the hyphen is used to separate the family name from the style name in the file path; adding a hyphen to your family name may cause the QA tool to think that your style name is unconventional, and therefore fail the font. It will also break the file naming convention put in place across the entire collection (no foundy likes that). And finally, a user searching for the font in Google Fonts may not find it if they forget about the hyphen.
 
 - no camelCase, use spaces instead
 - no abbeviation/accronyms
