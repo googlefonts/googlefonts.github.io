@@ -112,6 +112,9 @@ As with the name definition, the axis' type of value should be reusable. It shou
     - **`default_value`** Default position of the aixs.
     <br>
     The default value should work as a reference. It is possible to override it in the family `METADATA.pb` file so that the axes keep their reusable purpose. Please refer to the <a href="https://googlefonts.github.io/gf-guide/metadata.html#registry_default_overrides" target=_blank>registry_default_overrides</a> entry under the Metadata file section for details on this process.
+    - **`precision`** Describes the specificity at which an axis position can be specified. For example, 0 means values must be specified as whole numbers while -1 means values can be as precise as one decimal place. 
+    <br>
+    A percentage axis going from 0 -- 100 with a precision value `0`, stipulates one hundred accessible intermediate positions, while a value `-1` would determine one thousand positions 0.0 -- 100.0.
 
 - #### The axis `description` helps to define its functionality in a broad sense
 A short description of the axis is used on the Type Tester tab of the font specimen page, under the tooltip (i) next to the axis name to give users more context about what the axis does or how it can be used. It should be written in a general way allowing it to make sense for other cases, not pointing too specifically to the font introducing the axis, and including a clarification of the range. It should be a maximum of 350 characters.
