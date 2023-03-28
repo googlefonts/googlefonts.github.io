@@ -243,12 +243,13 @@ Note that style names are not even mentioned.
 
 For custom axes of your own invention, you can do whatever makes sense to you. Although you are never safe from a new axis being registered, or becoming conventional. You should always make further research to see if there is already some common practices ([see GRAD axis](https://fonts.google.com/knowledge/glossary/grade_axis)).
 
-The axis mapping is set up in Glyphs using the `Axis Location` parameter (has to be set in all masters and intermediate instances). Although Google Fonts Tools decided not to support it, to the benefit of the `Axis Mapping` parameter that is less redundant and more visual.
+The axis mapping is set up in Glyphs using the `Axis Location` parameter (has to be set in all masters and intermediate instances). Although Google Fonts Tools decided not go with it, to the benefit of the `Axis Mapping` parameter that is less redundant and oblige to a consistent approach.
 
 <figure>
-<img src="images/variable/Capture_decran_2022-04-22_a_12.20.05.png" style="width:1982px" alt="Since all .glyphs files is converted to UFO by fontmake in order to export font binaries, the way gftools supports that parameter mimics how it is rendered in a .designspacefile: the user values (input) on the left column, and the design coordinates (output) on the right." />
-<figcaption aria-hidden="true">Since all <code>.glyphs</code> files is converted to <code>UFO</code> by Fontmake in order to export font binaries, the way <code>gftools</code> supports that parameter mimics how it is rendered in a <code>.designspacefile</code>: the user values (input) on the <em>left</em> column, and the design coordinates (output) on the <em>right</em>.</figcaption>
+<img src="images/variable/Capture_d_ecran_2023-03-28.png" style="width:1982px" alt="Axis Mapping parameter in GlyphsApp 3.2"/>
 </figure>
+
+Since version 3.2, GlyphsApp has been using **internal coordinates** as **design values** (output), and **external coordinates** as **user values** (input). Which is the opposite of how they were handling it before; designer may need to reverse there Axis Mapping when they upgrade.
 
 Now that we have a better understanding of the axis mapping concept, let’s see the three tables linked to the axis mapping that are particularly important to translate correctly the design space: the `AVAR`, the `STAT`, the `FVAR` tables.
 
