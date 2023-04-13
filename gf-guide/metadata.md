@@ -379,7 +379,7 @@ archive_url: "https://github.com/username/projectname/releases/download/v2.200/p
 
 ### Minisite url
 
-This key allows to linked a mini website to the font specimen page. It will appear on top of the page, under the font name, next to the designer's name.
+This key allows to link a mini website to the font's specimen page. It will appear on top of the page, under the font name, next to the designer's name.
 
 Example:
 
