@@ -76,6 +76,7 @@ source {
   repository_url: "https://github.com/username/example-sans"
   commit: "d9098c0a72125d411dbb225a2e5a61dc15265ffc"
 }
+minisite_url: "https://myfontwebsite.com"
 ```
 
 ### Example Variable Fonts Family
@@ -127,6 +128,7 @@ source {
   repository_url: "https://github.com/username/example-sans"
   commit: "d9098c0a72125d411dbb225a2e5a61dc15265ffc"
 }
+minisite_url: "https://myfontwebsite.com"
 ```
 
 ## Description of Keys
@@ -374,3 +376,13 @@ archive_url: "https://github.com/username/projectname/releases/download/v2.200/p
     <br>
     <mark class="purple">nerd&nbsp;</mark> <a href="./lang">Lang repo</a>
 </div>
+
+### Minisite url
+
+This key allows to linked a mini website to the font specimen page. It will appear on top of the page, under the font name, next to the designer's name.
+
+Example:
+
+``` code
+minisite_url: "https://myfontwebsite.com"
+```
