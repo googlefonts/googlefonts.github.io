@@ -212,7 +212,12 @@ Value of the CSS `font-style` property served by Google Fonts. One of 2 possible
 -   `style: "normal"`
 -   `style: "italic"`
 
-The Bit 1 in the `macStyle` bitmask of the font file's [`HEAD`](https://www.microsoft.com/typography/otspec/head.htm) table should be zero if normal and one if italic. The value of `italicAngle` in the font file's [`POST`](https://www.microsoft.com/typography/otspec/post.htm) table should be 0 if normal and a negative value if italic.
+Four things should be set in an Italic font:
+
+1. The value of `italicAngle` in the font file's [`POST`](https://www.microsoft.com/typography/otspec/post.htm) table should be 0 if normal and a negative value if italic.
+2. Bit `1` in the `macStyle` bitmask of the font file's [`HEAD`](https://www.microsoft.com/typography/otspec/head.htm) table should be zero if normal and one if italic. 
+3. Bit `0` of `fsSelection` of the font file's [`OS/2`](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fsselection) table should be zero if normal and one if italic.
+4. Name ID `2` of the font file's [`NAME`](https://learn.microsoft.com/en-us/typography/opentype/spec/name#name-ids) table should be `Italic` (or `Bold Italic` for the Bold Italic style, if applicable).
 
 ### fonts — weight
 
