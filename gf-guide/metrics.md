@@ -195,9 +195,9 @@ There are two cases which can occur.
 **I.** `Use_Typo_Metrics` **was already enabled in the v1.000 release.**
 
 - The `Win` values needs to reflect the new `yMin` and `yMax` values.
-- The `LineGap` needs to chnage to `0` for better cross-platform compatibility.
-- Since browsers would dipslayed the `LineGap` evenly above the Ascender and below the Descender, the old `LineGap` value needs to be evenly added to the old `typoAscender` and `typoDescender` values.
-- the `hhea` values then needs to reflects the new `typo` values for better cross-platform compatibility.
+- The `LineGap` needs to change to `0` for better cross-platform compatibility.
+- Since browsers would display the `LineGap` evenly above the Ascender and below the Descender, the old `LineGap` value needs to be evenly distributed between the old `typoAscender` and `typoDescender` values.
+- The `hhea` values then needs to reflects the new `typo` values for better cross-platform compatibility.
 
 1.  v2.000 vertical metrics:
 
