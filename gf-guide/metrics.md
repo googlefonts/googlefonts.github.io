@@ -156,14 +156,14 @@ A new Latin family has the following qualities:
 1.  Set the default values, following the schema above:
 
 ``` code
-typoAscender = 965 #(UPM * 1.2 - CapsHeight) / 2 + CapsHeight which is greater than Agrave, perfect.)
-typoDescender = -235 #(UPM * 1.2 - CapsHeight) / 2 which is equal to deepest letterform)
+typoAscender = 965 # UPM * 1.2 - CapsHeight) / 2 + CapsHeight which is greater than Agrave, perfect.
+typoDescender = -235 # UPM * 1.2 - CapsHeight) / 2 which is equal to deepest letterform
 typoLineGap = 0
-hheaAscender = 965 #(typoAscender)
-hheaDescender = -235 #(typoDescender)
-hheaLineGap = 0 #(typoLineGap)
-winAscent = 1116 #(Font bbox yMax)
-winDescent = 320 #(*absolute value* of Font bbox yMin ie. a positive integer)
+hheaAscender = 965 # typoAscender
+hheaDescender = -235 # typoDescender
+hheaLineGap = 0 # typoLineGap
+winAscent = 1116 # Font bbox yMax
+winDescent = 320 # *absolute value* of Font bbox yMin ie. a positive integer
 ```
 
 1.  Be sure to copy these same metric values to all of the masters in the family
@@ -173,7 +173,7 @@ winDescent = 320 #(*absolute value* of Font bbox yMin ie. a positive integer)
 
 Many font families receive upgrades, either by the original author or a 3rd party. When character extensions occur which modify the font's bounding box, the vertical metrics will need to be recalculated.
 
-Imagine we have a previous v1.000 release. We're now adding Vietnamese. The version number has been bumped to V2.000. The font's bbox `yMax` has changed from `1000` to `1100` and `yMin` from `-200` to `-300`.
+Imagine we have a previous v1.000 release. We're now adding Vietnamese. The version number has been bumped to V2.000. The font's bbox `yMax` has changed from `1000` to `1102` and `yMin` from `-200` to `-314`.
 
 v1.000 had the following family vertical metrics:
 
@@ -194,19 +194,22 @@ There are two cases which can occur.
 
 **I.** `Use_Typo_Metrics` **was already enabled in the v1.000 release.**
 
-The Win values simply need to reflect the new `yMin` and `yMax` values.
+- The `Win` values needs to reflect the new `yMin` and `yMax` values.
+- The `LineGap` needs to chnage to `0` for better cross-platform compatibility.
+- Since browsers would dipslayed the `LineGap` evenly above the Ascender and below the Descender, the old `LineGap` value needs to be evenly added to the old `typoAscender` and `typoDescender` values.
+- the `hhea` values then needs to reflects the new `typo` values for better cross-platform compatibility.
 
 1.  v2.000 vertical metrics:
 
     ``` code
-    typoAscender = 800
-    typoDescender = -200
-    typoLineGap = 200
-    hheaAscender = 800
-    hheaDescender = -200
-    hheaLineGap = 200
-    WinAscent = 1100. # Font bbox yMax
-    WinDescent = 300. # Font bbox yMin (positive integer)
+    typoAscender = 900 # Old typoAscender + typoLineGap/2
+    typoDescender = -300 # Old typoDescender + typoLineGap/2
+    typoLineGap = 0 
+    hheaAscender = 900 # typoAsender
+    hheaDescender = -300 # typoDescender
+    hheaLineGap = 0 # typoLineGap
+    WinAscent = 1102 # Font bbox yMax
+    WinDescent = 314 # Font bbox yMin (positive integer)
     ```
 2.  Repeat process for each weight/style if values are not unique in v1.000
 
@@ -217,14 +220,14 @@ The Typo Metrics need to inherit the v1.000 Win values. The WinAscent and WinDes
 1.  v2.000 vertical metrics:
 
     ``` code
-    typoAscender = 1000. #Old WinAscent
-    typoDescender = -200. #Old negative WinAscent
-    typoLineGap = 0 #Win Metrics has no LineGap parameter so we set this to 0
-    hheaAscender = 1000 #set as new TypoAscender)
+    typoAscender = 1000 # Old WinAscent
+    typoDescender = -200 # Old negative WinAscent
+    typoLineGap = 0 # Win Metrics has no LineGap parameter so we set this to 0
+    hheaAscender = 1000 # typoAscender
     Hhea Descender = -200
-    hheaLineGap = 0 #consistent with typoLineGap
-    winAscent = 1100 #Font bbox yMax
-    winDescent = 300 #Font bbox yMin positive integer
+    hheaLineGap = 0 # typoLineGap
+    winAscent = 1102 # Font bbox yMax
+    winDescent = 314 # Font bbox yMin positive integer
     ```
 2.  Repeat process for each weight/style if values are not unique in v1.000
 3.  Enable Use_Typo_Metrics
