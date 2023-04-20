@@ -177,7 +177,7 @@ In a font with a small Latin set the `ccmp` feature code can have the following 
 ```code
 lookup ccmp_soft_dotted {
     @CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb dieresiscomb dotaccentcomb gravecomb macroncomb ringcomb tildecomb];
-    lookupflag UseMarkFilteringSet @CombiningTopAccents
+    lookupflag UseMarkFilteringSet @CombiningTopAccents;
     sub [i j]' @CombiningTopAccents by [idotless jdotless];
 } ccmp_soft_dotted;
 ```
@@ -189,7 +189,7 @@ In a font with a larger Latin glyph set and Cyrillic glyph set, after creating t
 ```code
 lookup ccmp_soft_dotted {
     @CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb dieresiscomb dotaccentcomb gravecomb macroncomb ringcomb tildecomb];
-    lookupflag UseMarkFilteringSet @CombiningTopAccents
+    lookupflag UseMarkFilteringSet @CombiningTopAccents;
     sub [i j idotbelow iogonek itildebelow istroke jstroke i-cy je-cy]' @CombiningTopAccents by [idotless jdotless idotless_dotbelowcomb idotless_ogonekcomb idotless_tildebelowcomb istroke.dotless jstroke.dotless idotless jdotless];
 } ccmp_soft_dotted;
 ```
