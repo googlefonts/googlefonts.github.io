@@ -69,6 +69,8 @@ Know the particularities about mastering your font project to meet the Google Fo
 * <mark class="green"><b>must&rarr;</b></mark>
   <b>[Variable fonts specifics](variable.md)</b>
 * <mark class="green"><b>must&rarr;</b></mark>
+  <b>[Color fonts specifics](color.md)</b>
+* <mark class="green"><b>must&rarr;</b></mark>
   <b>[Vertical metrics](metrics.md)</b>
 * <mark class="yellow">learn</mark>
   [Outline Quality](outlines.md)
