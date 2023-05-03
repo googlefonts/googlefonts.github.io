@@ -6,15 +6,12 @@
 {:.no_toc}
 
 <div class="callout">
-
-<br><br>
 This guide will give users all the detailed information related to Color fonts GF requirements.
 </div>
 
 <div class="context-reading">
     Background reading:<br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overall font requirements</a><br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="https://developer.chrome.com/blog/colrv1-fonts/" style="font-weight:bold">https://developer.chrome.com/blog/colrv1-fonts/</a>
 </div>
 
 ## Table of contents
@@ -33,6 +30,6 @@ This guide will give users all the detailed information related to Color fonts G
 
 ## Useful links
 
-* https://developer.chrome.com/blog/colrv1-fonts/ - introduces COLRv1
-* https://fonts.google.com/?coloronly=true - open source color fonts
-* https://github.com/googlefonts/nanoemoji - compiles SVGs to color fonts
+* [Introduction to COLRv1](https://developer.chrome.com/blog/colrv1-fonts/)
+* [Open source color fonts on GF](https://fonts.google.com/?coloronly=true)
+* [Nano Emoji](https://github.com/googlefonts/nanoemoji) (compiles SVGs to color font)
