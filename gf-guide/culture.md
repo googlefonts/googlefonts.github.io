@@ -1,4 +1,4 @@
-<link href="style.css" rel="stylesheet">
+Production<link href="style.css" rel="stylesheet">
 
 <a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
 
@@ -81,7 +81,7 @@ These are some links where you could find more detailed information about this C
 -   [Open Source Culture](https://google.github.io/gsocguides/mentor/open-source-culture#openness-and-sharing) (Google Summer of Code Guide)
 -   [Contributing to the Commons: What, Why, and How?](https://www.youtube.com/watch?v=1YKAJSV5c00&t=1961s) \| Dave Crossland \| ATypI 2020 All Over
 -   ATypI 2014: [David Lemon on Adobe Type's Approach to Libre Fonts](https://www.youtube.com/watch?v=DBz0rVUYNPA)
--   [Open Source Guide](https://opensource.guide/how-to-contribute/)
+-   [Open Source Guide](https://opensource.guide/how-to-contributeProduction/)
 -   SIL's [Font Development Best Practices](http://silnrsi.github.io/FDBP/en-US/index.html) with Technical Guidance Regarding Font Development And Production
 -   The [Open Source Initiative](https://opensource.org/docs/osd)
 
