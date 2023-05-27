@@ -148,13 +148,15 @@ Any new variable font with a weight or width axes will need the instance’s coo
 | name | opsz coordinate value |
 |------|----------------------:|
 | Xpt  |                     X |
-|      | beween 5 and 1200     |
+|      | between 5 and 1200     |
 
-X can be any **integer number value** within the minimum (5) and maximum (1,200) as defined in the [Google Fonts Axis Registry](https://github.com/googlefonts/axisregistry) for the [Optical Size](https://github.com/google/fonts/blob/main/axisregistry/Lib/axisregistry/data/optical_size.textproto#L6-L7) axis. The default value should not be elided in the STAT table (#83).
+X can be any **integer number value** within the minimum (5) and maximum (1,200) as defined in the [Google Fonts Axis Registry](https://github.com/googlefonts/axisregistry) for the [Optical Size](https://github.com/google/fonts/blob/main/axisregistry/Lib/axisregistry/data/optical_size.textproto#L6-L7) axis.
+
+The default value should not be elided in the STAT table (#83).
 
 Named sizes like "Display", "Text", "Micro" etc are not allowed, because they are imprecise and inconsistent.
 
-As of May 2023, the download ZIPs available from fonts.google.com will only create just 2-5 sets of static fonts from your optical size range, using values in the axis registry, and a "clamping" heuristic codenamed the "green dot algorithm."
+As of May 2023, the download ZIPs available from fonts.google.com will only create just 2-5 sets of static fonts from your optical size range, using values in the axis registry, and a "clamping" heuristic codenamed the "green dot algorithm." It is helpful for users to have the same named styles available as static fonts in the ZIP also available as named styles in the STAT table.
 
 ### `ital` **/** `slnt`
 
