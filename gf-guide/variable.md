@@ -113,16 +113,16 @@ Any new variable font with a weight or width axes will need the instance’s coo
 [MS Spec wght info](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_wght)
 
 | name       | wght coordinate value |
-|------------|-----------------------|
-| Thin       | 100                   |
-| ExtraLight | 200                   |
-| Light      | 300                   |
-| Regular    | 400                   |
-| Medium     | 500                   |
-| SemiBold   | 600                   |
-| Bold       | 700                   |
-| ExtraBold  | 800                   |
-| Black      | 900                   |
+|------------|----------------------:|
+| Thin       |  100                  |
+| ExtraLight |  200                  |
+| Light      |  300                  |
+| Regular    |  400                  |
+| Medium     |  500                  |
+| SemiBold   |  600                  |
+| Bold       |  700                  |
+| ExtraBold  |  800                  |
+| Black      |  900                  |
 | ExtraBlack | 1000                  |
 
 ### `wdth`
@@ -130,28 +130,31 @@ Any new variable font with a weight or width axes will need the instance’s coo
 [MS Spec wdth info](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_wdth)
 
 | name           | wdth coordinate value |
-|----------------|-----------------------|
-| UltraCondensed | 50                    |
-| ExtraCondensed | 62.5                  |
-| Condensed      | 75                    |
-| SemiCondensed  | 87.5                  |
-| Normal         | 100                   |
+|----------------|----------------------:|
+| UltraCondensed |  50.0                 |
+| ExtraCondensed |  62.5                 |
+| Condensed      |  75.0                 |
+| SemiCondensed  |  87.5                 |
+| Normal         | 100.0                 |
 | SemiExpanded   | 112.5                 |
-| Expanded       | 125                   |
-| ExtraExpanded  | 150                   |
-| UltraExpanded  | 200                   |
+| Expanded       | 125.0                 |
+| ExtraExpanded  | 150.0                 |
+| UltraExpanded  | 200.0                 |
 
 ### `opsz`
 
 [MS Spec opsz info](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_opsz)
 
 | name | opsz coordinate value |
-|------|-----------------------|
-| Xpt  | X                     |
+|------|----------------------:|
+| Xpt  |                     X |
+|      | beween 5 and 1200     |
 
-X can be any **integer number value** registered in the [Google Fonts Axis Registry](https://github.com/google/fonts/tree/main/axisregistry) for the [Optical Size](https://github.com/google/fonts/blob/main/axisregistry/Lib/axisregistry/data/optical_size.textproto) axis. The default value should not be elided in the STAT table (#83).
+X can be any **integer number value** within the minimum (5) and maximum (1,200) as defined in the [Google Fonts Axis Registry](https://github.com/googlefonts/axisregistry) for the [Optical Size](https://github.com/google/fonts/blob/main/axisregistry/Lib/axisregistry/data/optical_size.textproto#L6-L7) axis. The default value should not be elided in the STAT table (#83).
 
-Name components like "Display", "Text", "Micro" etc are not allowed.
+Named sizes like "Display", "Text", "Micro" etc are not allowed, because they are imprecise and inconsistent.
+
+As of May 2023, the download ZIPs available from fonts.google.com will only create just 2-5 sets of static fonts from your optical size range, using values in the axis registry, and a "clamping" heuristic codenamed the "green dot algorithm."
 
 ### `ital` **/** `slnt`
 
