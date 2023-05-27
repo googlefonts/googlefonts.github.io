@@ -2,3 +2,4 @@
  - [Python guidelines](./python.md) - guidelines for Google Fonts Python projects
  - [Fonts Engineering Guides](https://rsheeter.github.io) - guides for software engineers working with fonts
  - [Harfbuzz Offset Overflow Resolution Algorithm](./harfbuzz_overflow_resolution.md)
+ - [Google Fonts Onboarding Dashboard](https://google.github.io/fonts)
