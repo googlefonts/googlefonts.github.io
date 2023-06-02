@@ -74,13 +74,14 @@ To improve rendering, Windows’ rasterizer reads `TrueType hinting`, Apple's bu
 
 -   **Overlaying:** Also called “empty segments” because they don't have a length. They are often useless and sometimes confusing for hinting and rendering — except for some rare cases of variations.
 -   **Missing extrema:** Hints are either vertical or horizontal, so they can only get hooked on nodes at the extremum of one curve. Also, by having them you could control better the curves and probably reduce the need for extra nodes.
--   **Fractional coordinates:** Hints can only be applied to integer coordinates.
+-   **Fractional coordinates:** For example `3.14159`, also called “floating point coordinates” or “floats”. It is a generally accepted best practice and Google Fonts requirement to only use integers. Hints can only be applied to integer coordinates.
 -   **Broken smooth connection:** Ensure the right type of node according to the connection, smooth (between to curve segments) or sharp (between a curve and a line segment; or two line segments)
 
 ### Off-curve points (handles)
 
 -   **Almost straight:** When a handle is off the node alignment from one or two units, it is most likely a mistake from the designer. The curve may appear weird when scaled down because of some coordinate rounding, nothing really bad, but that is why QA tools often report this.
 -   **At same coordinate as node:** So called “zero handles” or “zero-length handles” because of their coordinates is 0 (from the node).
+-   **Fractional coordinates:** For example `3.14159`, also called “floating point coordinates” or “floats”. It is a generally accepted best practice and Google Fonts requirement to only use integers.
 
 ### Components
 
