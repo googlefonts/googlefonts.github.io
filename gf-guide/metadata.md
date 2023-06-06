@@ -201,7 +201,10 @@ fonts {
 
 ### fonts — name
 
-Family name used to call the font from the Google Fonts API. This must match the `name` key used at the top level. This typically matches the font file's [`name`](https://www.microsoft.com/typography/otspec/name.htm) table ID 16, or if that does not exist, the ID 1. If multiple ID 16s or 1s exist, they must match.
+Family name used to call the font from the Google Fonts API.
+This must match the `name` key used at the top level.
+This typically matches the font file's [`name`](https://www.microsoft.com/typography/otspec/name.htm) table ID 16, or if that does not exist, the ID 1.
+If multiple ID 16s or 1s exist, they must match.
 
 Example: `name: "ABeeZee"`
 
@@ -212,12 +215,19 @@ Value of the CSS `font-style` property served by Google Fonts. One of 2 possible
 -   `style: "normal"`
 -   `style: "italic"`
 
-Four things should be set in an Italic font:
+For font styles marked as `normal` in the family METADATA file, four things should be set in the font file:
 
-1. The value of `italicAngle` in the font file's [`POST`](https://www.microsoft.com/typography/otspec/post.htm) table should be 0 if normal and a negative value if italic.
-2. Bit `1` in the `macStyle` bitmask of the font file's [`HEAD`](https://www.microsoft.com/typography/otspec/head.htm) table should be zero if normal and one if italic. 
-3. Bit `0` of `fsSelection` of the font file's [`OS/2`](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fsselection) table should be zero if normal and one if italic.
-4. Name ID `2` of the font file's [`NAME`](https://learn.microsoft.com/en-us/typography/opentype/spec/name#name-ids) table should be `Italic` (or `Bold Italic` for the Bold Italic style, if applicable).
+1. The value of `italicAngle` in the font file's [`POST`](https://www.microsoft.com/typography/otspec/post.htm) table should be `0`.
+2. Bit `1` in the `macStyle` bitmask of the font file's [`HEAD`](https://www.microsoft.com/typography/otspec/head.htm) table should be `0`.
+3. Bit `0` of `fsSelection` of the font file's [`OS/2`](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fsselection) table should be `0`.
+4. Name ID `2` of the font file's [`NAME`](https://learn.microsoft.com/en-us/typography/opentype/spec/name#name-ids) table should be `Regular` (or `Bold` if the style is the Bold).
+
+For font styles marked as `italic` in the family METADATA file, four things should be set in the font file:
+
+1. The value of `italicAngle` in the font file's [`POST`](https://www.microsoft.com/typography/otspec/post.htm) table should be a negative value.
+2. Bit `1` in the `macStyle` bitmask of the font file's [`HEAD`](https://www.microsoft.com/typography/otspec/head.htm) table should be `1`. 
+3. Bit `0` of `fsSelection` of the font file's [`OS/2`](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fsselection) table should be `1`.
+4. Name ID `2` of the font file's [`NAME`](https://learn.microsoft.com/en-us/typography/opentype/spec/name#name-ids) table should be `Italic` (or `Bold Italic` if the style is the Bold Italic).
 
 ### fonts — weight
 
