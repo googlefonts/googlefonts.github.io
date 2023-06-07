@@ -72,7 +72,7 @@ In Glyphs.app, the `Family Name` in font info (or the `Localised Family Name` in
 
 ## Style linking
 
-As mentioned above, we strictly follow the RIBBI convention for nameID2 (such as required in the OpenType spec), to allow functional style linking in most environments (button Bold and Italic in desktop apps for example). This means that you can’t have another style name than Regular, Italic, Bold, Bold Italic in `name ID 2` (for any platform). Other style name should be appended to `name ID 1`. The “real” font family name that is impacting how a family is grouped in font menu is handles by the `name ID 16` and the “real” style names are in `name ID 17`.
+As mentioned above, we strictly follow the RIBBI convention for nameID2 (such as required in the [OpenType spec](https://learn.microsoft.com/en-us/typography/opentype/spec/name#name-ids)), to allow functional style linking in most environments (button Bold and Italic in desktop apps for example). This means that you can’t have another style name than `Regular`, `Italic`, `Bold`, `Bold Italic` in `name ID 2` (for any platform). Other style name should be appended to `name ID 1`. The “real” font family name that is impacting how a family is grouped in font menu is handled by the `name ID 16` and the “real” style names are in `name ID 17`.
 
 In Glyphs.app, the `Style Name` field in the set instances will be the one used for the `name ID 17`. The `name ID 2` will be set according to the style linking case and if the style name matches RIBBI. So don’t forget to tick the proper cases: `This instance is the [ ] Bold, [ ] Italic of: ___________`. You can leave the last field blank which suggests “Regular”, but all other styles need to be mentioned, for example: ExtraLight Italic is `[ ] Bold, [X] Italic of: ExtraLight`.
 
@@ -84,6 +84,8 @@ Setting up the Italic Angle and ticking the style linking case described above i
 
 In Glyphs.app: `This instance is the [ ] Bold, [ ] Italic of: ___________`
 
+- **name table:** `nameID2` is `Regular`.
+- 
 - **`post` table:** `<italicAngle value="0"/>`
 
 - **`OS/2` table:** 
@@ -97,12 +99,12 @@ In Glyphs.app: `This instance is the [ ] Bold, [ ] Italic of: ___________`
   - `macStyle` bit `1` [is ITALIC] should be `0`
   - Eg. `<macStyle value="00000000 00000000"/>`
 
-- **name table:** `nameID2` is `Regular`.
-
 ### Italic
 
 In Glyphs.app: `This instance is the [ ] Bold, [X] Italic of: ___________`
 
+- **name table:** `nameID2` is `Italic`.
+- 
 - **`post` table:** `italic angle` should be a negative value for a right leaning slope. Eg. `<italicAngle value="-12"/>`
 
 - **`OS/2` table:** 
@@ -120,6 +122,8 @@ In Glyphs.app: `This instance is the [ ] Bold, [X] Italic of: ___________`
 
 In Glyphs.app: `This instance is the [X] Bold, [ ] Italic of: ___________`
 
+- **name table:** `nameID2` is `Bold`.
+- 
 - **`post` table:** `<italicAngle value="0"/>`
 
 - **`OS/2` table:** 
@@ -138,6 +142,8 @@ In Glyphs.app: `This instance is the [X] Bold, [ ] Italic of: ___________`
 
 In Glyphs.app: `This instance is the [X] Bold, [X] Italic of: ___________`
 
+- **name table:** `nameID2` is `Bold Italic`.
+  
 - **`post` table:** `italic angle` should be a negative value for a right leaning slope. Eg. `<italicAngle value="-12"/>`
 
 - **`OS/2` table:** 
