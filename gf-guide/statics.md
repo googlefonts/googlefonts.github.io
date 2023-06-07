@@ -74,39 +74,83 @@ In Glyphs.app, the `Family Name` in font info (or the `Localised Family Name` in
 
 As mentioned above, we strictly follow the RIBBI convention for nameID2 (such as required in the OpenType spec), to allow functional style linking in most environments (button Bold and Italic in desktop apps for example). This means that you can’t have another style name than Regular, Italic, Bold, Bold Italic in `name ID 2` (for any platform). Other style name should be appended to `name ID 1`. The “real” font family name that is impacting how a family is grouped in font menu is handles by the `name ID 16` and the “real” style names are in `name ID 17`.
 
-In Glyphs.app, the `Style Name` field in the set instances will be the one used for the `name ID 17`. The `name ID 2` will be set according to the style linking bits and if the style name matches RIBBI. So don’t forget to tick the proper cases: `This instance is the [ ] Bold, [ ] Italic of: ___________`. You can leave the last field blank which suggests “Regular”.
+In Glyphs.app, the `Style Name` field in the set instances will be the one used for the `name ID 17`. The `name ID 2` will be set according to the style linking case and if the style name matches RIBBI. So don’t forget to tick the proper cases: `This instance is the [ ] Bold, [ ] Italic of: ___________`. You can leave the last field blank which suggests “Regular”, but all other styles need to be mentioned, for example: ExtraLight Italic is `[ ] Bold, [X] Italic of: ExtraLight`.
 
-**Regular**
+Several tables in font files need to be set to enable proper style linking between Upright/Italic and Regular/Bold. You can look at the the Open Type spec for more info about the [`post` table `italic angle` value](https://learn.microsoft.com/en-us/typography/opentype/spec/post), [the `OS/2` table `fsSelection` values](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fss), and the [`head` table `macStyle` values](https://learn.microsoft.com/en-us/typography/opentype/spec/head). 
+
+Setting up the Italic Angle and ticking the style linking case described above in GlyphsApp should be enough to allow a compiler to set these values correctly. Find below a summary of the expected values for each style.
+
+### Regular
 
 In Glyphs.app: `This instance is the [ ] Bold, [ ] Italic of: ___________`
 
-OS/2 table: `<fsSelection value="00000000 01000000"/>`
+- **`post` table:** `<italicAngle value="0"/>`
 
-head table: `<macStyle value="00000000 00000000"/>`
+- **`OS/2` table:** 
+    - `fsSelection` bit `0` [is ITALIC] should be `0`
+    - `fsSelection` bit `5` [is BOLD] should be `0`
+    - `fsSelection` bit `6` [is REGULAR] should be `1`
+    - Eg. `<fsSelection value="00000000 01000000"/>`
 
-**Italic**
+- **`head` table:** 
+  - `macStyle` bit `0` [is BOLD] should be `0`
+  - `macStyle` bit `1` [is ITALIC] should be `0`
+  - Eg. `<macStyle value="00000000 00000000"/>`
+
+- **name table:** `nameID2` is `Regular`.
+
+### Italic
 
 In Glyphs.app: `This instance is the [ ] Bold, [X] Italic of: ___________`
 
-OS/2 table: `<fsSelection value="00000000 00000001"/>`
+- **`post` table:** `italic angle` should be a negative value for a right leaning slope. Eg. `<italicAngle value="-12"/>`
 
-head table: `<macStyle value="00000000 00000010"/>`
+- **`OS/2` table:** 
+    - `fsSelection` bit `0` [is ITALIC] should be `1`
+    - `fsSelection` bit `5` [is BOLD] should be `0`
+    - `fsSelection` bit `6` [is REGULAR] should be `0`
+    - Eg. `<fsSelection value="00000000 00000001"/>`
 
-**Bold**
+- **`head` table:** 
+  - `macStyle` bit `0` [is BOLD] should be `0`
+  - `macStyle` bit `1` [is ITALIC] should be `1`
+  - Eg. `<macStyle value="00000000 00000010"/>`
+
+### Bold
 
 In Glyphs.app: `This instance is the [X] Bold, [ ] Italic of: ___________`
 
-OS/2 table: `<fsSelection value="00000000 00100000"/>`
+- **`post` table:** `<italicAngle value="0"/>`
 
-head table: `<macStyle value="00000000 00000001"/>`
+- **`OS/2` table:** 
+    - `fsSelection` bit `0` [is ITALIC] should be `0`
+    - `fsSelection` bit `5` [is BOLD] should be `1`
+    - `fsSelection` bit `6` [is REGULAR] should be `0`
+    - Eg. `<fsSelection value="00000000 00100000"/>`
 
-**Bold Italic**
+- **`head` table:** 
+  - `macStyle` bit `0` [is BOLD] should be `1`
+  - `macStyle` bit `1` [is ITALIC] should be `0`
+  - Eg. `<macStyle value="00000000 00000001"/>`
+
+
+### Bold Italic
 
 In Glyphs.app: `This instance is the [X] Bold, [X] Italic of: ___________`
 
-OS/2 table: `<fsSelection value="00000000 00100001"/>`
+- **`post` table:** `italic angle` should be a negative value for a right leaning slope. Eg. `<italicAngle value="-12"/>`
 
-head table: `<macStyle value="00000000 00000011"/>`
+- **`OS/2` table:** 
+    - `fsSelection` bit `0` [is ITALIC] should be `1`
+    - `fsSelection` bit `5` [is BOLD] should be `1`
+    - `fsSelection` bit `6` [is REGULAR] should be `0`
+    - Eg. `<fsSelection value="00000000 00100001"/>`
+
+- **`head` table:** 
+  - `macStyle` bit `0` [is BOLD] should be `1`
+  - `macStyle` bit `1` [is ITALIC] should be `1`
+  - Eg. `<macStyle value="00000000 00000011"/>`
+
 
 ## Unsupported styles
 
