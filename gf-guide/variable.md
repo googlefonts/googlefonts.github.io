@@ -162,7 +162,7 @@ As of May 2023, the download ZIPs available from fonts.google.com will only crea
 
 GF only supports the `ital` axis as a boolean (`0`/`1`) value to link two separate VFs (Roman/Italic) in the STAT table. And slant axis if the font is not meant to have italic instances.
 
-**→ GF doesn’t support the ital axis within one VF as a variation axis.***
+**→ GF doesn’t support the ital axis within one VF as a variation axis.**
 
 So if you have one VF with `slant` or `ital` axis, it won’t have italics served by GF API. If you want italic instances served by the GF API, then you will have to deliver **two variable font files**.
 
@@ -172,6 +172,8 @@ Style linking between these two files will be preserved by:
 
 -   The [post-script name ID 25](https://adobe-type-tools.github.io/font-tech-notes/pdfs/5902.AdobePSNameGeneration.pdf) for Adobe Indesign, which (for now) requires this scheme: `FontName` for the Roman font, and `FontNameItalic` for the Italic font. The [Builder](build.md) will set that up for you using default settings and/or your STAT table values.
 -   The `ital` axis in the `STAT` table.
+
+As well as the style-linking bits used to link static fonts explained in [this section](./statics#style-linking):
 -   The italic style bits in the `head` and `OS/2` table
 -   The italic angle value in the `post` table.
 
