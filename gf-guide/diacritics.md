@@ -35,7 +35,7 @@ This guide will give users an overview introduction to diacritics both from a de
 - **The horizontal position is also essential for readability.** In Latin script, the symmetric marks are placed in the optical center of the base letter while the asymmetric ones follow other rules. (Note that the optical center is often distinct from the mathematical center.) But remember, they must be seen as a unity, so they must not be separated or detached from the base letter.
 - **In Latin script, it is expected that all marks share the same distance to the base letter.** For particular cases like script fonts where the x-height could vary, marks should at least appear to be at the same optical distance to the base letter.
 - **Idiosyncratic or decorative diacritics have given way to more universal or neutral forms.**
-- **Ensure creating all the combining marks required for the languages the font are supporting**, as well as the so-called "Legacy Marks". (See below.) Google Fonts requires at least the GF Latin Core as the minimum set for a font addressing the Latin script. Please read more about our <a href="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets">Glyphsets</a>.
+- **Ensure creating all the combining marks required for the languages the font are supporting**, as well as the so-called "Legacy Marks". ([See below](#legacy--spacing-marks).) Google Fonts requires at least the GF Latin Core as the minimum set for a font addressing the Latin script. Please read more about our <a href="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets">Glyphsets</a>.
 - **Usually, the design of the diacritics needs to be adjusted in size or slope to work better with the uppercase letters**. So ideally there should be at least two sets of diacritics: lowercase and uppercase marks. (e.g. `acutecomb` and `acutecomb.case`)
 
 **Examples of what to avoid** *- critical cases*
@@ -65,7 +65,7 @@ These marks are only used as placeholder when typing for a combination of keys t
 **Requirements:**
 
 - **Legacy marks must have a positive advance width value `≠0`** Due to their function as displaying the accent as a standalone character, they are expected to have an advance width value with positive sidebearings, that is, they should not be zero width glyphs. 
-- They should share the design of the `combining marks` (see below) for consistency reasons. To ensure this in a practical way, it is suggested to create them by using the combining marks as components in the source file.
+- They should share the design of the `combining marks` ([see below](#combining-diacritical-marks---nonspacing)) for consistency reasons. To ensure this in a practical way, it is suggested to create them by using the combining marks as components in the source file.
 - They use the simple name of the mark, e.g. `acute` or `grave`.
 - They must have the correct Unicode codepoint in your source file to work properly.
 - Although they represent marks, they need to behave as though they are base glyphs; that is, in the GDEF table their "Glyph Class" should be 1. ("Base glyph") In the Glyphs "Font View" under the List mode, they should have `Category=Mark` and `Subcategory=Spacing`.
@@ -114,7 +114,7 @@ When creating the precomposed characters in the source file, ideally, automatic 
 
 ### Anchors
 
-All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another and play a key role in the identification of the glyph definition as well as the generation of the "Mark to base positioning" `mark` and the "Mark to mark positioning" `mkmk` GPOS features (See below.)
+All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another and play a key role in the identification of the glyph definition as well as the generation of the "Mark to base positioning" `mark` and the "Mark to mark positioning" `mkmk` GPOS features ([see below](#the-glyph-positioning-gpos-table)).
 
 Anchors are commonly represented as a red rhombus in the glyph view of the source file and are identified with a name. The name part should be shared among the base glyph and the mark glyph, but in the mark glyph there should be a preceding underscore. For example, there should be a `top` anchor in the base glyph and a corresponding `_top` anchor in the mark.
 This name schema is crucial for the positioning to work as expected - for example if the underscore is omitted in the mark glyph, it would not be attached to the base letter - so you must pay special care and attention to them.  
@@ -216,7 +216,7 @@ For historical and thus convention reasons, in languages like Czech and Slovak, 
 - It should create as little white space as possible.
 - Preferably it should be named `caroncomb.alt` (or caron.alt), and eventually, depending on the design, `caroncomb.alt.case` for `Lcaron`.
 
-Please refer to the "Useful links" section below for more information.
+Please refer to the ["Useful links"](#useful-links) section below for more information.
 
 **Dotted circle**
 
