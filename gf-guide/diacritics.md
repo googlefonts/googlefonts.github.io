@@ -41,7 +41,7 @@ This guide will give users an overview introduction to diacritics both from a de
 **Examples of what to avoid** *- critical cases*
    <figure>
     <img src="images/diacritics/diac-inconsistent-3.png">
-    <figcaption style="font-size:0.8em"><i>Multiple diacrits inconsistencies</i></figcaption>
+    <figcaption style="font-size:0.8em"><i>Multiple diacritics inconsistencies</i></figcaption>
    </figure>
    <figure>
     <img src="images/diacritics/diac-convention-size.png" style="width:500px">
