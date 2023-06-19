@@ -73,24 +73,22 @@ These marks are only used as placeholder when typing for a combination of keys t
 <br>
 **Latin legacy marks list**
 
-````
- Name         | Unicode | Catgory | Subcategory  
---------------|---------|---------|-------------
- acute        | 00B4    | Mark    | Spacing      
- breve        | 02D8    | Mark    | Spacing      
- caron        | 02C7    | Mark    | Spacing      
- cedilla      | 00B8    | Mark    | Spacing      
- circumflex   | 02C6    | Mark    | Spacing      
- dieresis     | 00A8    | Mark    | Spacing      
- dotaccent    | 02D9    | Mark    | Spacing      
- grave        | 0060    | Mark    | Spacing      
- hungarumlaut | 02DD    | Mark    | Spacing      
- macron       | 00AF    | Mark    | Spacing      
- ogonek       | 02DB    | Mark    | Spacing      
- ring         | 02DA    | Mark    | Spacing      
- tilde        | 02DC    | Mark    | Spacing      
+| Name         | Unicode | Catgory | Subcategory
+| --------------|---------|---------|-------------
+|  acute        | 00B4    | Mark    | Spacing
+|  breve        | 02D8    | Mark    | Spacing
+|  caron        | 02C7    | Mark    | Spacing
+|  cedilla      | 00B8    | Mark    | Spacing
+|  circumflex   | 02C6    | Mark    | Spacing
+|  dieresis     | 00A8    | Mark    | Spacing
+|  dotaccent    | 02D9    | Mark    | Spacing
+|  grave        | 0060    | Mark    | Spacing
+|  hungarumlaut | 02DD    | Mark    | Spacing
+|  macron       | 00AF    | Mark    | Spacing
+|  ogonek       | 02DB    | Mark    | Spacing
+|  ring         | 02DA    | Mark    | Spacing
+|  tilde        | 02DC    | Mark    | Spacing
 
-````
 *Note that any other accent in the font exists only as combining mark*
 
 
