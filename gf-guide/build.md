@@ -7,13 +7,13 @@
 
 <div class="callout">
 
-🦕 Because of our commitment to <a href="./cuture">Libre font culture</a>, all Google Fonts projects must be built using a reproducible, libre toolchain. We do not onboard binaries exported from font editors.
+🦕 Because of our commitment to <a href="./cuture">Libre font culture</a>, all Google Fonts projects must be built using a reproducible, open-source toolchain. We do not onboard binaries exported from font editors.
 
-This chapter aims to guide designers in the building of their font binaries using open-source tools as per our production requirements. Everything related to font file settings is detailed in the Pre-production part of the guide, and for practicality, that information will not be repeated here.
+This chapter aims to guide designers in building their font binaries using open-source tools as per our production requirements. Everything related to font file settings is detailed in the <a href="https://googlefonts.github.io/gf-guide/index#pre-production-getting-your-fonts-ready-for-gf">Pre-production</a> section of this guide, and for practicality, that information will not be repeated here.
 <br><br>
- If you read “you should follow the recommendation” or “respect the requirements” etc, please refer to the chapters labeled as <mark class="blue">start</mark> and <mark class="green"><b>must&rarr;</b></mark> under the <b>Pre-production: Getting your fonts ready for GF</b> contents. You will have a better understanding of the following guidelines if you have read them first.
+ If you read “you should follow the recommendation” or “respect the requirements” etc, please refer to the chapters labeled <mark class="blue">start</mark> and <mark class="green"><b>must&rarr;</b></mark> in the <b>Pre-production: Getting your fonts ready for GF</b> section of this guide. You will have a better understanding of the following guidelines if you have read them first.
 <br><br>
-We recommend you install all the tools in a virtual environment, to avoid conflict between packages. Further information is detailed in the Tools and Dependencies section. 
+We recommend you install all the tools in a virtual environment, to avoid conflict between packages. Further information is detailed in the <a href="./tools">Tools and Dependencies</a> section. 
 <br><br>
 For the rest of this chapter, it would be better if you have basic knowledge of:
 <ul>
@@ -46,13 +46,13 @@ Fontmake makes use of a variety of Python libraries to build TTF fonts from UFO 
 
 -   [glyphsLib](https://github.com/googlefonts/glyphsLib) to convert `.glyphs` files into UFO format;
 -   [ufo2ft](https://github.com/googlefonts/ufo2ft) to turn the UFOs into FontTools objects;
--   [FontTools](https://github.com/fonttools/fonttools) is responsible for exporting the actual font binaries.
+-   [fonttools](https://github.com/fonttools/fonttools) is responsible for exporting the actual font binaries.
 
 You don’t have to understand this very well to start working with the tools, but it can come in handy if you have a bug to report, or if you want to understand the relationship between the different libraries. See “[What happens when you build a variable font (using the open source tool chain)](https://simoncozens.github.io/compiling-variable-fonts/)” for more details.
 
 ## gftools
 
-Unfortunately, Fontmake is not enough to generate fonts that can be onboarded to Google Fonts. Some post-processing is needed to meet GF requirements. The `gftools` scripts are an enhanced collection of helpers to do that post-processing.
+Unfortunately, Fontmake is not enough to generate fonts that can be onboarded to Google Fonts. Some post-processing is needed to meet Google Fonts requirements. The `gftools` scripts are an enhanced collection of helpers to do that post-processing.
 
 Run `gftools --help` to see the available scripts.
 
@@ -63,7 +63,7 @@ These scripts are extremely useful to batch patch binaries (as well as UFO).
 You can use for example `gftools gen-stat` to easily patch a `STAT` table to your variable font:
 
 ``` code
-gftools gen-stat path/to/*.ttf --src stat.yaml --in-place
+gftools gen-stat path/to/*.ttf --src stat.yaml --inplace
 ```
 
 `--inplace` would be to override the font files, `--src` would be to use an external `yaml` file with axis values instructions, for example:
@@ -88,7 +88,7 @@ gftools gen-stat path/to/*.ttf --src stat.yaml --in-place
     value: 700
 ```
 
-If you need to patch a different STAT table on separated fonts of the same family—for example in the case of Italic—you can add file name informations, such as:
+If you need to patch a different STAT table on separated fonts of the same family—for example in the case of Italic—you can add file name information, such as:
 
 ``` code
 # stat.yaml
@@ -127,7 +127,7 @@ As you can see in the example, these build scripts were extremely long and redun
 
 ## gftools builder
 
-[gftools builder](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/builder/__init__.py) is a command line tool that wraps [Fontmake](https://github.com/googlefonts/fontmake) to generate efficiently several font formats in one command, as well as several `gftools fix-*` and `gftools gen-stat` scripts to post-process the generated fonts following Google Fonts’ specifications.
+[gftools builder](https://github.com/googlefonts/gftools/blob/main/Lib/gftools/builder/__init__.py) is a command line tool that wraps [Fontmake](https://github.com/googlefonts/fontmake) to efficiently generate several font formats in one command, as well as several `gftools fix-*` and `gftools gen-stat` scripts to post-process the generated fonts following Google Fonts’ specifications.
 
 Run `gftools builder --help` to see all the options.
 
@@ -138,7 +138,7 @@ The Builder can take source files (`.glyphs`, `.ufo`, `.designspace`) as direct 
 You can do that if:
 
 -   Any variable axes in your font are registered in the [GF Axis Registry](https://github.com/googlefonts/axisregistry).
--   The axis values are matching with the [GF Axis Registry](https://github.com/googlefonts/axisregistry)’s axis definition.
+-   The axis values match with the [GF Axis Registry](https://github.com/googlefonts/axisregistry)’s axis definition.
 -   The instances are set up as recommended.
 -   The file name follows Google recommendations.
 
@@ -150,7 +150,7 @@ gftools builder FontName.glyphs FontName-italic.glyphs
 
 This will generate Static `OTF`, `TTF`, `WOFF2` and `Variable TTF`, using the Axis Registry to set up the `STAT` table.
 
-Setting a `yaml` with more detailed instruction file is a preferred option to have more control over the outcome. Once this “config” file set up, you would just have to run, for example:
+Using a `yaml` file with more detailed instructions is a preferred option to have more control over the outcome. Once this “config” file is set up, you would just have to run, for example:
 
 ``` code
 gftools builder config.yaml
@@ -176,19 +176,19 @@ axisOrder:
 familyName: "Font Name"
 ```
 
-GF only needs `TTF` fonts, so you can avoid building OTF as well by adding:
+Google Fonts only needs `TTF` fonts, so you can avoid building OTF as well by adding:
 
 ``` code
 buildOTF: false
 ```
 
-→ Note that the `ital` axis shouldn’t be in the source files if the Roman is separated for from the Italic. Although, the axis order is here to describe the entire design space of the family, so the `ital` should be mentioned to set up properly the style linking between the two files, as well as a complete `STAT` table.
+→ Note that the `ital` axis shouldn’t be in the source files if the Roman is separated for from the Italic. Although, the axis order is here to describe the entire design space of the family, so the `ital` should be mentioned to properly set up the style linking between the two files, as well as a complete `STAT` table.
 
 ### Config file for complex font
 
 For example: [Texturina](https://github.com/Omnibus-Type/Texturina/blob/master/sources/config.yaml), [Montserrat](https://github.com/googlefonts/Montserrat/blob/master/sources/config.yml), [Roboto Serif](https://github.com/googlefonts/roboto-serif/blob/main/sources/config.yml).
 
--   **If there is a non-registered axis or there is an Optical Size axis**, you would have to detail the STAT table informations because, in that case, the Axis Registry can’t be used:
+-   **If there is a non-registered axis or there is an Optical Size axis**, you would have to detail the STAT table information because, in that case, the Axis Registry can’t be used:
 
     ``` code
     sources:
@@ -282,7 +282,7 @@ For example: [Texturina](https://github.com/Omnibus-Type/Texturina/blob/master/s
       FontName[opsz,wght].ttf: VTT/roman-hinting.ttx
       FontName-Italic[opsz,wght].ttf: VTT/italic-hinting.ttx
     ```
--   **If you want to set up static instances**, different from the one set up in your `.designspace file` or in your `.glyphs` sources:
+-   **If you want to set up static instances**, different from the one set up in your `.designspace` file or in your `.glyphs` sources:
 
     ``` code
     instances:
@@ -303,7 +303,7 @@ For example: [Texturina](https://github.com/Omnibus-Type/Texturina/blob/master/s
 
 ## Useful tools
 
-Unfortunately, the Builder yet can’t do everything. You will have to use a external bash script in these cases:
+Unfortunately, the Builder can’t do everything yet. You will have to use an external bash script in these cases:
 
 -   To slice a variable font. use **[Fonttools’ varLib instancer](https://fonttools.readthedocs.io/en/latest/varLib/instancer.html)**.
 -   To generate `WOFF`. use **[homebrew webfont tools](https://github.com/bramstein/homebrew-webfonttools)**.
