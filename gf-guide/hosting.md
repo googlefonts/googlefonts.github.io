@@ -217,10 +217,11 @@ git config core.ignorecase false
 ## Useful links
 
 -   [Github Docs](https://docs.github.com/en)
+-   [Github First Contributions](https://github.com/firstcontributions/first-contributions)
+-   [Git for type designers by Frank Grießhammer](https://github.com/davelab6/git-for-type-designers)
 -   [Learn the workings of Git, not just the commands](https://developer.ibm.com/technologies/web-development/tutorials/d-learn-workings-git/)
--   [Git for type designers by Dave Crossland](https://github.com/davelab6/git-for-type-designers)
--   [A short and friendly introduction book to git](https://abookapart.com/products/git-for-humans)
 -   [Best practices for managing issues](https://blog.zenhub.com/best-practices-for-github-issues/)
+-   [A short and friendly introduction book to git](https://abookapart.com/products/git-for-humans) by one-time Google Fonts Product Manager, David Demaree
 
 <div class="next-reading">
     Further reading:<br>
