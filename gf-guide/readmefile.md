@@ -101,6 +101,7 @@ You may get inspire by these examples to build up your `README.md`. Please note 
 ## Useful links
 
 -   [About Readmes](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+-   [How to use markdown](https://www.markdownguide.org/getting-started/)
 
 
 <div class="next-reading">
