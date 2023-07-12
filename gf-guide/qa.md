@@ -122,9 +122,18 @@ add `-gfb` if you want to have a diff with previous published version on Google 
 
 Add note that images are only available to team members. -->
 
-## Outlines & type design
+## Outlines and type design
 
-There are many standards and conventions established over centuries around the design and drawing of fonts. Providing a comprehensive list of them goes out of the scope of the current Guide. However, you could start by giving the [How typefaces are designed & fonts are made](https://fonts.google.com/knowledge/introducing_type/how_typefaces_are_designed_and_fonts_are_made) section on the Font Knowledge page which includes some bibliography is listed. Also find some helpful links to many resources at the bottom of this page.
+There are many standards and conventions established over centuries around the design and drawing of fonts. Providing a comprehensive list of them goes out of the scope of the current Guide. 
+
+However, you could:
+
+- Start by reading the [How typefaces are designed & fonts are made](https://fonts.google.com/knowledge/introducing_type/how_typefaces_are_designed_and_fonts_are_made) section on the Font Knowledge page which includes some bibliography listed. 
+
+- Read the <a href="./outlines">Outline Quality Checklist</a> and the <a href="./diacritics">Diacritic Marks</a> sections of this Guide.
+
+- And check some helpful links to many resources at the bottom of this page.
+
 
 
 ------------------------------------------------------------------------
@@ -136,7 +145,7 @@ There are many standards and conventions established over centuries around the d
       <li><a href="https://font-bakery.readthedocs.io/en/stable/" target="_blanck">Fontbakery's documentation</a></li>
       <li><a hfer="https://github.com/microsoft/Font-Validator" target="_blank">Microsoft's font validator</a> is the official font checking tools for Microsoft environement.</li>
     </ul>
-  <b>Type Design resources</b>
+  <b>Type Design</b>
     <ul>
       <li><a href="https://typedesignresources.com/" target="_blank">Type Design Resources</a></li>
       <li><a href="https://typedesignschool.com/" target="_blank">Foundations of Type Design</a></li>
@@ -152,7 +161,7 @@ There are many standards and conventions established over centuries around the d
       <li><a href="https://dinamodarkroom.com/gauntlet/" target="_blank">Dinamo Font Gautlet</a></li>
       <li><a href="https://typetools.typenetwork.com" target="_blank">Type Network’s Tools</a></li>
       <li><a href="https://idiotproofed.com/" target="_blank">Idiot Proof</a></li>
-      <li><a href="https://www.fontspecimen.com/" target="_blank">Monotype’s interactive font specimen</a></li>
+      <!-- BROKEN LINK <li><a href="https://www.fontspecimen.com/" target="_blank">Monotype’s interactive font specimen</a></li> -->
     </ul>
 </div>
 
