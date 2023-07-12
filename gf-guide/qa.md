@@ -2,14 +2,14 @@
 
 <a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
 
-# Quality Assurance Tools
+# Quality Assurance
 {:.no_toc}
 
 <div class="callout">
 
-🐯 This chapter aims to guide designers to have a more automated approach of their binaries quality assurance.
+🐯 Quality Assurance is an essential factor in Google Fonts. On the one hand, we expect the submitted fonts to follow the best standards and conventions of type design. On the other hand, committed to the understanding of fonts as software, we need to ensure that they fulfill the technical requirements of the major OS, applications, and browsers.
 <br><br>
-We recommend you install all the tools in a virtual environment, to avoid conflict between packages. Further information is detailed in the <a href="./tools">Tools and Dependencies section</a>. 
+This chapter aims to guide designers to have a more automated approach of their binaries quality assurance. We recommend you install all the tools in a virtual environment, to avoid conflict between packages. Further information is detailed in the <a href="./tools">Tools and Dependencies section</a>. 
 <br><br>
 For the rest of this chapter, it would be better if you have basic knowledge of:
 <ul>
@@ -35,65 +35,114 @@ For the rest of this chapter, it would be better if you have basic knowledge of:
 * TOC goes here
 {:toc}
 
-## Checking the font tabes
 
-Sentence that explain why you would want to check font tables.
+## Tools 
 
--   [TTX]() open xml file, a human readible version of the font tables;
--   [Font table viewer]() to turn the UFOs into FontTools objects;
--   [DTL OT Master]() to aslo edit them.
+### Checking the font tabes
+
+Beyond the visible outlines of a typeface, each font binary is composed of an ensemble of [required tables](https://learn.microsoft.com/en-us/typography/opentype/spec/otff#font-tables). These tables store fundamental metadata for the font to transmit operating information to the different environments (OS, applications, browsers) and, therefore, for it to function properly in all of them.
+
+Hence, it is important to inspect them to verify all the information is as expected. You can make use of the following 
+
+-   [TTX](https://fonttools.readthedocs.io/en/latest/ttx.html) open xml file, a human readible version of the font tables;
+-   [Font table viewer](https://glyphsapp.com/tools/fonttableviewer) to turn the UFOs into FontTools objects;
+-   [DTL OT Master](https://www.fontmaster.nl/otmaster.html) to also edit them.
+
+### Checking with Fontbakery
+
+Fontbakery is our primary quality assurance testing tool to make it easier to check that font projects are optimal, making sure that the fonts **are reliable** before they are submitted to the users.
+
+#### Log levels results
+
+The check results are categorised according to levels of relevance, ranging from ERROR to SKIP. The icons are helpers to identify the severity. Be calm! There-could be many of them. Get comfortable with receiving them and embrace them as a way to improve your font.
+
+- 💔 **ERROR** Is a problem with the program itself, not the fonts. For example a bug or a check that requires an internet connection. 
+If you get an Error, please give it a quick look to see which case it is. If it’s not an internet connection issue, please help us to improve the tool by reporting it in the [issue tracker of the Fontbakery repository](github.com/googlefonts/fontbakery/issues).
+
+- 🔥 **FAIL** Is a problem with the font that **must be fixed**. 
+
+- ⚠️ **WARN** Is something worth warning about the font but requires human judgment. It might be something expected by design decision but needs to be considered.
+
+- 💤 **SKIP** Happens when the check does not apply to the given font (for example a static font check will not run when you give it a variable font - like it happens with the overlapping contours check)
+
+- ℹ️ **INFO** Simply prints something useful for information purposes. For example, there is an INFO check that tells you what is the file size impact of hinting on a font.
+
+- 🍞 **PASS** Means the font looks-good for the given checking routine.
 
 
-## Proofing with `gftools gen-html`
+#### Profiles
 
-Sentence that explains that gftools allows to proof your binaries + generate screenshots from different browsers
+Checks are separated into different collections called profiles (and a profile can include all or some checks from other profiles).
 
-Run `gftools gen-html proof --help` or `gftools gen-html diff --help` to see the available options.
+Main profiles are:
 
-Explain here how it is customisable.
+- **OpenType Specification.** Checking routines are directly mapped to the requirements of the OpenType specification table by table.
 
-## Checking with Fontbakery
+- **Universal.** Collects checks for good practices not formalized by the Open Type spec, but broadly accepted among the type-design community.
 
-Brief description of fontbakery
-Explain the different profiles and the log levels.
+- **Vendor Specific.** Requirements that are not useful for everyone but something that is a specific vendor need. 
 
-Log levels:
-- PASS
-- INFO
-- WARN
-- FAIL
+    - **Google Fonts Profile** is currently the largest one, which includes also the checks from the Open Type, Universal, and other vendor-specific checks (such Adobe). 
 
-Main profiles:
-- Universal
-- Adobe
-- Google Fonts
+    To onboard fonts to Google Fonts they must pass the checks of this profile. Sometimes users consider a reported fail inapropriate, but remember that a FAIL for the googlefonts profile may be only specific to Google Fonts API, not all environments.
 
-`check-googlefonts` contains all the check from Universal and Adobe, in addition to vendore specific checks that would only apply to fonts which gets published on Google Fonts. Often users complain of inapropriate fails, but remember that a FAIL for the googlefonts profile may be only specific to Google Fonts API, not all environments.
+    The command to run this profiles is:
 
-`fontbakery check-googlefonts -l WARN --succinct --ghmarkdown report.md`
+    `fontbakery check-googlefonts path/fonts/Family-*.ttf` 
 
-Run `fontbakery [profile] --help` to see all the commands.
+    There is also an option to filter the check result by log-level. For a font to be published in GF it should be at least from Warn level. There is also an option to generate a output file of the report in Markdown format:
+    
+    `fontbakery check-googlefonts -l WARN --ghmarkdown report.md`
+
+  To see all the commands available in a profile run:
+  
+   `fontbakery [profile] --help` 
 
 Some foundries created their own profile to have vendor-specific checks. This is the case of Fontwerk and Font Bureau, and you could do it too with a little bit of python skill!
 
-### gftools qa
+
+
+### Proofing with Diffenator2
+
+Diffenator2 is a tool allows you to generate html with real words to proof the font functioning, and also to compare two different versions of a font.
+
+To see the available options run one of the following commands:
+
+ `diffenator2 proof --help` or `diffenator2 diff --help`
+
+You can also check for install instructions and more options in its [GitHub repository](https://github.com/googlefonts/diffenator2).
+
+
+<!-- #### gftools qa
 
 `gftools qa` wraps `gftools gen-html` and `fontbakery`.
 
 `gftools qa -f *.ttf -a -o ~/Desktop/font_QA`
 add `-gfb` if you want to have a diff with previous published version on Google Fonts. 
 
-Add note that images are only available to team members.
+Add note that images are only available to team members. -->
+
+## Outlines & type design
+
+There are many standards and conventions established over centuries around the design and drawing of fonts. Providing a comprehensive list of them goes out of the scope of the current Guide. However, you could start by giving the [How typefaces are designed & fonts are made](https://fonts.google.com/knowledge/introducing_type/how_typefaces_are_designed_and_fonts_are_made) section on the Font Knowledge page which includes some bibliography is listed. Also find some helpful links to many resources at the bottom of this page.
+
 
 ------------------------------------------------------------------------
 
 ## Useful links
 
-- [Fontbakery's documentation](https://font-bakery.readthedocs.io/en/stable/)
-- [Microsoft's font validator](https://github.com/microsoft/Font-Validator) is the official font checking tools for Microsoft environement.
-
 <div id="col1">
-    <b>Testing web pages:</b>
+    <ul>
+      <li><a href="https://font-bakery.readthedocs.io/en/stable/" target="_blanck">Fontbakery's documentation</a></li>
+      <li><a hfer="https://github.com/microsoft/Font-Validator" target="_blank">Microsoft's font validator</a> is the official font checking tools for Microsoft environement.</li>
+    </ul>
+  <b>Type Design resources</b>
+    <ul>
+      <li><a href="https://typedesignresources.com/" target="_blank">Type Design Resources</a></li>
+      <li><a href="https://typedesignschool.com/" target="_blank">Foundations of Type Design</a></li>
+      <li><a href="https://ohnotype.co/blog/tagged/teaching" taget="_blank">OH no Type Teaching</a></li>
+    </ul>
+  <b>Testing web pages:</b>
     <ul>
       <li><a href="https://wakamaifondue.com/" target="_blank">Wakamai Fondue</a></li>
       <li><a href="https://fontdrop.info/" target="_blank">FontDrop</a></li>
