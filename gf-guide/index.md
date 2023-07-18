@@ -93,7 +93,7 @@ Context, requirements, and tools to produce the fonts and get them ready for pub
 * <mark class="yellow">learn</mark>
   [Build the fonts](build.md) 
 * <mark class="yellow">learn</mark>
-  [QA tools](qa.md)
+  [Quality Aassurance tools and resources](qa.md)
 * <mark class="yellow">learn</mark>
   [Local testing](testing.md)   
 
