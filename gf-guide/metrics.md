@@ -121,12 +121,10 @@ Exceptions are usually made if the font’s primary script isn’t Latin, Greek 
 
 Please keep in mind that this calculation is to be set according to the specificities of each font.
 
--   The 120% suggested above is for compatibility with DTP apps. Still, it can often be too tight if your font covers more languages than basic Latin, Greek, and Cyrillic, or if you have a particular design with short ascenders.
--   The choice of the `Agrave` is purely based on the behaviour of some applications, it is not based on some general rules of design.
--   Google Fonts is trying to push designers to include proper support of the mark-to-mark feature allowing combination of diacritics and display of non-encoded accented glyphs. Pay attention to your anchor placement so that, if you combine breve and acute for example, you don't end up with a severe interline glyph clashing. Or adapt your vertical metrics with a certain measure, to find the best compromise.
--   Google Fonts wishes to update fonts to expand glyhpsets, and therefore language support, and therefore accessibility. If your intention is to have, for example, Vietnamese coverage or Thai script in a next update, you can already anticipate the vertical metrics to avoid regressions later.
+-   The 120% suggested above is for compatibility with DTP apps. Still, it can often be too tight if your font covers more languages than basic Latin, Greek, and Cyrillic, or if you have a particular design with short ascenders.  
+-   Please pay careful attention to the overall design of diacritic marks, especially the [stacked diacritics](https://googlefonts.github.io/gf-guide/diacritics.html#stacked-diacritics). This way you ensure the ascenders value is not unnecessarily high. 
+-   Google Fonts is trying to push designers to include proper support of the mark-to-mark feature allowing combination of diacritics and display of non-encoded accented glyphs. Pay attention to your anchor placement so that, if you combine breve and acute for example, you don't end up with a severe interline glyph clashing. 
 
-<!-- For more info about the relationship between diacritics and line height, you can read this document: (to do: link Viviana's doc). -->
 
 ## Concrete cases:
 
@@ -139,20 +137,20 @@ Setting vertical metrics usually falls into the following two categories:
 
 Set these values to be the same across all masters to ensure that output instances have equal vertical metrics:
 
--   `typoAscender` and `hheaAscender` set higher than `À`
+-   `typoAscender` and `hheaAscender` set higher than `Ắ`
 -   `typoLineGap` and `hheaLineGap` set to `0`
--   `typoDescender` and `hheaDescender` set lower than the deepest descender of the primary script.
+-   `typoDescender` and `hheaDescender` set to visually leave Caps height centered in the line, but lower than the deepest descender of the primary script.
 -   `winAscent` and `winDecent` set to `yMax` and `yMin` (absolute highest and lowest point in the font)
 -   `use_typo_metrics` is enabled
 
-Expected result: vertical metrics should be around 120-130% of UPM. Anything greater, and the metrics may look too loose.
+Expected result: vertical metrics should be around 130% of UPM. Anything greater, and the metrics may look too loose.
 
 **Example**
 
 A new Latin family has the following qualities:
 
 -   UPM is `1000`
--   `yMax` of tallest `A grave` in the familly (bold for this example) = `940`
+-   `yMax` of tallest `A breve acute` in the familly (bold for this example) = `940`
 -   `yMin` of deepest a-z letter (`g` bold in this family) = `235`
 -   Caps height (`H`or `Z` bbox height) = `730`
 -   Family's `yMax = 1116` (Bold `A breve hookabove` for this family)
