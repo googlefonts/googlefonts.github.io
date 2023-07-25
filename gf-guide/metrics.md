@@ -33,7 +33,7 @@ The following rules apply to all new font families, and should be enforced to up
 
 #### 1. Vertical metrics must not be calculated by the font editor automatically
 
-GF doesn't want this because they all do it differently.
+It is an overall best practice. But also, since in GF we have settled out our specific schema that prioritizes optimal performance in different usage scenarios, while also allowing for the possibility of future upgrades, such as expanded language support, avoiding regressions.
 
 #### 2. Vertical metrics must be consistent across a family.
 
