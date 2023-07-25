@@ -150,27 +150,27 @@ Expected result: vertical metrics should be around 130% of UPM. Anything greater
 A new Latin family has the following qualities:
 
 -   UPM is `1000`
--   `yMax` of tallest `A breve acute` in the familly (bold for this example) = `940`
--   `yMin` of deepest a-z letter (`g` bold in this family) = `235`
--   Caps height (`H`or `Z` bbox height) = `730`
--   Family's `yMax = 1116` (Bold `A breve hookabove` for this family)
--   Family's `yMin = 320` (ExtraLight `c cedilla` for this family)
+-   `yMax` of tallest `A breve acute` in the familly (bold for this example) = `1000`
+-   `yMin` of deepest a-z letter (`g` bold in this family) = `210`
+-   Caps height (`H`or `Z` bbox height) = `697`
+-   Family's `yMax = 1000` (Black `A breve hookabove` for this family)
+-   Family's `yMin = -260` (ExtraLight `c cedilla` for this family)
 
 1.  Set the default values, following the schema above:
 
 ``` code
-typoAscender = 965 # (UPM * 1.2 - CapsHeight) / 2 + CapsHeight which is greater than Agrave, perfect.
-typoDescender = -235 # (UPM * 1.2 - CapsHeight) / 2 which is equal to deepest letterform
+typoAscender = 1000 # which is matches tallets `A breve acute` in the family.
+typoDescender = -303 # an equal or similar value added to the Caps Height which is greater than deepest letterform.
 typoLineGap = 0
-hheaAscender = 965 # typoAscender
-hheaDescender = -235 # typoDescender
+hheaAscender = 1000 # typoAscender
+hheaDescender = -303 # typoDescender
 hheaLineGap = 0 # typoLineGap
 winAscent = 1116 # Font bbox yMax
 winDescent = 320 # *absolute value* of Font bbox yMin ie. a positive integer
 ```
 
 1.  Be sure to copy these same metric values to all of the masters in the family
-2.  Enable `Use_Typo_Metrics`
+2.  Be sure to enable `Use_Typo_Metrics`
 
 ### 2. Recalculating the vertical metrics for an upgraded family
 
@@ -235,7 +235,7 @@ The Typo Metrics need to inherit the v1.000 Win values. The WinAscent and WinDes
 2.  Repeat process for each weight/style if values are not unique in v1.000
 3.  Enable Use_Typo_Metrics
 
-If the font was previously hosted on [fonts.google.com](http://fonts.google.com/), you can test the upgraded vertical metrics visually match by using [GF Regression](https://github.com/googlefonts/gfregression). You can also use gftools gen-html with the command `gftools gen-html diff --font-before font1.ttf --font-after font2.ttf` if you want to compare two fonts locally.
+If the font is already hosted on [fonts.google.com](http://fonts.google.com/), you can test the upgraded vertical metrics visually match by using [diffenator2](https://github.com/googlefonts/diffenator2) with the command `diffenator2 diff -fb font1.ttf -fa font2.ttf -o out_dir` where `-fb` stands for `--fonts-before` and `-fa` for `--fonts-after`.
 
 ## CJK Vertical Metrics
 
@@ -270,7 +270,7 @@ Our decision to follow the Adobe schema was based on Dr. Ken Lunde’s comments 
 -   [Show Vertical Metrics](https://github.com/mekkablue/ShowVerticalMetrics) plug-in in GlyphsApp
 -   Mekkablue’s [Vertical Metrics Manager](https://github.com/mekkablue/Glyphs-Scripts/blob/master/Font%20Info/Vertical%20Metrics%20Manager.py)
 -   [Impallari/testing](https://github.com/impallari/Font-Testing-Page): Font tester which has no css line-height property set ([live site](http://cyreal.org/Font-Testing-Page))
--   [GF Regression](https://github.com/googlefonts/gfregression): Check local fonts against currently hosted versions on [fonts.google.com](http://fonts.google.com/)
+-   [Diffenator2](https://github.com/googlefonts/diffenator2): Create diffing docs to compare local updated fonts against currently hosted versions on [fonts.google.com](http://fonts.google.com/)
 
 <!-- <div class="next-reading">
     Further reading:<br>
