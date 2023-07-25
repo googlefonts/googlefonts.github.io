@@ -31,11 +31,21 @@ Please note that the first metrics guidelines referred to in this guide are Lati
 
 The following rules apply to all new font families, and should be enforced to upgraded font families when possible.
 
-**1. Vertical metrics must not be calculated by the font editor automatically.**
+#### 1. Vertical metrics must not be calculated by the font editor automatically
 
 GF doesn't want this because they all do it differently.
 
-**2. The following vertical metric parameters must be set for each font in a family.**
+#### 2. Vertical metrics must be consistent across a family.
+
+Each font in a family must share the same vertical metric values.
+
+This rule can be avoided if a font is being upgraded and previously had inconsistent family metrics. If this is the case, the aim should be to visually match the line spacing of each font, but fix any clipping issues caused by incorrect `WinAscent`, `WinDescent` values.
+
+#### 3. If the family is being updated, the line height must visually match the previous release
+
+Some applications do not allow users to control the line height/leading of their fonts. Word processors and text editors are common culprits. It is essential their documents do not reflow.
+
+##### 4. The following vertical metric parameters must be set for each font in a family
 
 | Ms Spec ttf spec        | Glyphs.app Master customParameter | FontLab                | ufo3 fontinfo.plist      |
 |-------------------------|-----------------------------------|------------------------|--------------------------|
@@ -50,13 +60,15 @@ GF doesn't want this because they all do it differently.
 
 *For brevity, we will refer to the 3 sets of metrics as* `Typo`*,* `Hhea`*,* `Win`*.*
 
-**3. Vertical metrics must be consistent across a family.**
+##### 5. [Use_Typo_Metrics](https://www.microsoft.com/typography/otspec/os2.htm#fss)** **must be enabled
 
-Each font in a family must share the same vertical metric values.
+This will force MS Applications to use the `Typo` values instead of the `Win` values for line spacing. By doing this, we can freely set the `Win` values to avoid clipping and control the line height with the `Typo` values. It has the added benefit of future line height compatibility. When a new script is added, we simply change the `Win` values to the new `yMin` and `yMax`, without needing to worry if the line height have changed. Note that the `Use_Typo_Metric` flag is also called `fsSelection bit 7 `(related to how it is set in the OS/2 table).
 
-This rule can be avoided if a font is being upgraded and previously had inconsistent family metrics. If this is the case, the aim should be to visually match the line spacing of each font, but fix any clipping issues caused by incorrect `WinAscent`, `WinDescent` values.
+-   In Glyphs.app, set `Use_Typo_Metrics` custom parameter to `true` in the **Font** tab of **Font Info**.
+-   In RoboFont, this is under **Font Info \> OpenType \> OS/2 Table \> fsSelection \> USE_TYPO_METRICS**.
+-   In the OS/2 table: `<fsSelection value="00000000 10000000"/>`
 
-**4. WinAscent and WinDescent values must be the same as the family's tallest/deepest yMin and yMax bounding box values.**
+#### 6. WinAscent and WinDescent values must be the same as the family's tallest/deepest yMin and yMax bounding box values
 
 The Microsoft [OpenType specification](https://www.microsoft.com/typography/otspec/os2.htm#wa). Recommends the following:
 
@@ -66,37 +78,25 @@ The Microsoft [OpenType specification](https://www.microsoft.com/typography/otsp
 
 By changing these values, the line height will be increased in MS applications. This is can lead to very loose line heights if the bounding box is exceedingly tall. This mainly occurs in families featuring Vietnamese, Devanagari and Arabic or other tall scripts. To counteract this, we enable the [Use Typo Metrics](https://www.microsoft.com/typography/otspec/os2.htm#fss) flag and set the `Typo` values to match the previous `Win` values. By swapping the sets, we should retain the previous line heights in Windows as well as remove the clipping.
 
-**5.** **[Use_Typo_Metrics](https://www.microsoft.com/typography/otspec/os2.htm#fss)** **must be enabled.**
-
-This will force MS Applications to use the `Typo` values instead of the `Win` values for line spacing. By doing this, we can freely set the `Win` values to avoid clipping and control the line height with the `Typo` values. It has the added benefit of future line height compatibility. When a new script is added, we simply change the `Win` values to the new `yMin` and `yMax`, without needing to worry if the line height have changed. Note that the `Use_Typo_Metric` flag is also called `fsSelection bit 7 `(related to how it is set in the OS/2 table).
-
--   In Glyphs.app, set `Use_Typo_Metrics` custom parameter to `true` in the **Font** tab of **Font Info**.
--   In RoboFont, this is under **Font Info \> OpenType \> OS/2 Table \> fsSelection \> USE_TYPO_METRICS**.
--   In the OS/2 table: `<fsSelection value="00000000 10000000"/>`
-
-**6. If the family is being updated, the line height must visually match the previous release.**
-
-Some applications do not allow users to control the line height/leading of their fonts. Word processors and text editors are common culprits. It is essential their documents do not reflow.
-
-**7. Hhea and Typo metrics should be equal.**
+#### 7. Hhea and Typo metrics should be equal
 
 `Hhea` metrics are used in macOS, whilst Microsoft uses `Typo` when `Use_Typo_Metrics` is enabled. They should ideally be identical.
 
 This rule can be avoided if a font is being upgraded and previously had inconsistent values.
 
-**8. LineGap values must be 0.**
+## 8. LineGap values must be 0
 
 The `LineGap` value is a space added to the line height created by the union of the `(typo/hhea)Ascender` and `(typo/hhea)Descender`. It is handled differently according to the environment. This leading value will be added above the text line in most desktop apps. It will be shared above *and* under in web browsers, and ignored in Windows if `Use_Typo_Metrics` is disabled. For better linespacing consistency across platforms, `(typo/hhea)LineGap` values must be `0`.
 
-**9. Uppercases should be centered if the font’s primary script has uppercases letterforms such as Latin, Greek and Cyrillic.**
+#### 9. Uppercases should be centered if the font’s primary script has uppercases letterforms such as Latin, Greek and Cyrillic
 
 Web designers will thank you if you managed to have the same space above and under capitals: `typoAscender - CapsHeight = abs(typoDescender)`. It will make easier for them the setting of padding in buttons for example.
 
-**10. typo/hheaAscender value should be greater than Agrave's yMax when it makes sense.**
+#### 10. typo/hheaAscender value should be greater than Agrave's yMax when it makes sense
 
 Some Mac applications such as TextEdit will position the first line of text by, either, using the height of the `A grave`, or by using the font’s `hheaAscender` (whichever is taller). To keep the positioning consistent across a family, we require that the `hheaAscender` is greater than the tallest `A grave` in the family. See this issue for further info, <https://github.com/googlefonts/fontbakery/issues/3170>.
 
-**11. The sum of the font’s vertical metric values (absolute) should be 20-30% greater than the font’s UPM.**
+#### 11. The sum of the font’s vertical metric values (absolute) should be 20-30% greater than the font’s UPM
 
 By default, DTP applications such as Indesign will set the line height to be 20% greater than the font’s size (10pt size / 12pt leading). For consistency, we recommend setting the vertical metric values so their sum is in a similar range, for example:
 
