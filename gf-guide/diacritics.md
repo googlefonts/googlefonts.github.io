@@ -138,8 +138,8 @@ Combining marks would be listed like this in the GDEF table:
 
 In some languages like Vietnamese, marks are made of the combination of two other marks known as *stacked diacritics*. In such cases, a combining mark could also act as the 'base' glyph of another mark, and therefore, it would need more than one anchor. For example, in the `brevecomb_acutecomb`, the `brevecomb` mark would have one `_top` anchor to be attached to a base letter, plus a `top` one to attach other marks to it; in this case, the `acutecomb`.
 
-- Distance between marks should also be consistent with the font. The stacked diacritic should be perceived as a unity that forms a whole with the base letter.
-- Again, by ensuring to include right anchor with consistent names will contribute to the correct setting and functioning of the `mkmk` feature in the `GPOS` table.
+- The distance between marks is usually tight and should be consistent with the font. The stacked diacritic should be seen as a unit with the base letter. Smaller shapes than the stand-alone marks can be used to ensure visual balance, especially in capital letters. It is crucial to make sure that these marks are not too high or heavy.
+- Again, by ensuring to include the right anchors with consistent names will contribute to the correct setting and functioning of the `mkmk` feature in the `GPOS` table.
 - Automatic aligment enabled would also be recommended here to avoid placing stacked diacritics manually in the accented glyphs.
 
 ### Soft dotted glyphs
