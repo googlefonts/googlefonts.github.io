@@ -92,9 +92,14 @@ The `LineGap` value is a space added to the line height created by the union of 
 
 Web designers will thank you if you managed to have the same space above and under capitals: `typoAscender - CapsHeight = abs(typoDescender)`. It will make easier for them the setting of padding in buttons for example.
 
-#### 10. typo/hheaAscender value should be greater than Agrave's yMax when it makes sense
+#### 10. typo/hheaAscender value should leave open room for stacked diacritics.
 
-Some Mac applications such as TextEdit will position the first line of text by, either, using the height of the `A grave`, or by using the font’s `hheaAscender` (whichever is taller). To keep the positioning consistent across a family, we require that the `hheaAscender` is greater than the tallest `A grave` in the family. See this issue for further info, <https://github.com/googlefonts/fontbakery/issues/3170>.
+Our minimal required Glyphset for any new family is GF Latin Core, which includes Vietnamese support. Following recent tests to confirm our VM policies, we now require that the typo/hheaAscender be equal to or slightly higher than `A breve acute`. To guarantee uniform positioning across the entire font family, you must use the tallest `A breve acute` as the reference point.
+
+Even if, for any particular reason, the font does not currently support Vietnamese yet, we strongly suggest estimating the ascenders value foreseeing this glyph height for two main reasons
+
+- Once the font is published, it is not possible to modify the vertical metric values. By implementing the above approach, we can keep the option of updating the font in the future to support additional languages.
+- Certain Mac applications, including TextEdit, determine the height of the first line of text by either the `A grave` height or the font's `hheaAscender`, whichever is taller (for additional information on this topic, please refer to this issue: <https://github.com/googlefonts/fontbakery/issues/3170>). So using the suggested `A breve acute` glyph height will prevent clipping in such applications.
 
 #### 11. The sum of the font’s vertical metric values (absolute) should be 20-30% greater than the font’s UPM
 
