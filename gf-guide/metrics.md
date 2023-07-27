@@ -171,6 +171,7 @@ winDescent = 315 # *absolute value* of Font bbox yMin ie. a positive integer
 
 1.  Be sure to copy these same metric values to all of the masters in the family
 2.  Be sure to enable `Use_Typo_Metrics`
+3.  If working on GlyphsApp, you can add the "EditView Line Height" parameter in font info and set it up to UPM*1.3 (so 1300 if your UPM value is 1000). This allows you to view your line spacing at the glyph view window.
 
 ### 2. Recalculating the vertical metrics for an upgraded family
 
