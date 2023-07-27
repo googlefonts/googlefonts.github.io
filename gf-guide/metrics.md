@@ -33,7 +33,7 @@ The following rules apply to all new font families, and should be enforced to up
 
 #### 1. Vertical metrics must not be calculated by the font editor automatically
 
-It is an overall best practice. But also, since in GF we have settled out our specific schema that prioritizes optimal performance in different usage scenarios, while also allowing for the possibility of future upgrades, such as expanded language support, avoiding regressions.
+This is an overall best practice in design. When defining line spacing, it's important to strike a balance between legibility and avoiding overlapping letters. At GF, we have established a specific system that prioritizes optimal performance for various situations, while still leaving room for future update improvements like adding more languages without causing regressions. 
 
 #### 2. Vertical metrics must be consistent across a family.
 
@@ -94,12 +94,12 @@ Web designers will thank you if you managed to have the same space above and und
 
 #### 10. typo/hheaAscender value should leave open room for stacked diacritics.
 
-Our minimal required Glyphset for any new family is GF Latin Core, which includes Vietnamese support. Following recent tests to confirm our VM policies, we now require that the typo/hheaAscender be equal to or slightly higher than `A breve acute`. To guarantee uniform positioning across the entire font family, you must use the tallest `A breve acute` as the reference point.
+Following recent tests to confirm our VM policies, we now require that the typo/hheaAscender be equal to `A breve acute`. For families with multiple weights you must use the tallest `A breve acute` (in e.g., the Black master) as the reference point to guarantee uniform positioning across the entire font family.
 
-Even if, for any particular reason, the font does not currently support Vietnamese yet, we strongly suggest estimating the ascenders value foreseeing this glyph height for two main reasons
+Even if the font does not support Vietnamese yet, we strongly suggest estimating the ascenders value foreseeing the `A breve acute` height based two main reasons:
 
-- Once the font is published, it is not possible to modify the vertical metric values. By implementing the above approach, we can keep the option of updating the font in the future to support additional languages.
-- Certain Mac applications, including TextEdit, determine the height of the first line of text by either the `A grave` height or the font's `hheaAscender`, whichever is taller (for additional information on this topic, please refer to this issue: <https://github.com/googlefonts/fontbakery/issues/3170>). So using the suggested `A breve acute` glyph height will prevent clipping in such applications.
+- Once the font is published, it is not possible to modify the vertical metric values. By implementing the above approach, we can keep the option of updating the font in the future to support additional languages like Vietnamese.
+- Certain Mac applications, including TextEdit, determine the height of the first line of text by either the `A grave` height or the font's `hheaAscender`, whichever is taller (for additional information on this topic, please refer to this issue: <https://github.com/googlefonts/fontbakery/issues/3170>). So `Agrave` is a required minimum, and `Abreveacute` is a strongly recommended minimum.
 
 #### 11. The sum of the font’s vertical metric values (absolute) should be 20-30% greater than the font’s UPM
 
@@ -121,9 +121,9 @@ Exceptions are usually made if the font’s primary script isn’t Latin, Greek 
 
 Please keep in mind that this calculation is to be set according to the specificities of each font.
 
--   The 120% suggested above is for compatibility with DTP apps. Still, it can often be too tight if your font covers more languages than basic Latin, Greek, and Cyrillic, or if you have a particular design with short ascenders.  
--   Please pay careful attention to the overall design of diacritic marks, especially the [stacked diacritics](https://googlefonts.github.io/gf-guide/diacritics.html#stacked-diacritics). This way you ensure the ascenders value is not unnecessarily high. 
--   Google Fonts is trying to push designers to include proper support of the mark-to-mark feature allowing combination of diacritics and display of non-encoded accented glyphs. Pay attention to your anchor placement so that, if you combine breve and acute for example, you don't end up with a severe interline glyph clashing. 
+-   The 120% suggested above is for compatibility with DTP apps (like InDesign automatic alignment ratio). Still, it can often be too tight if your font covers more languages than basic Latin, Greek, and Cyrillic, or if you have a particular design with short ascenders.  
+-   Please pay careful attention to the overall design of diacritic marks, especially the [stacked diacritics](https://googlefonts.github.io/gf-guide/diacritics.html#stacked-diacritics). This way you ensure the ascenders value is not unnecessarily high. You could also determine an ideal line spacing and then draw the diacritics accordingly or adapt them to it.
+-   Google Fonts is trying to push designers to include proper support of the [mark-to-mark](https://googlefonts.github.io/gf-guide/diacritics.html#the-glyph-positioning-gpos-table) feature allowing combination of diacritics and display of non-encoded accented glyphs. Pay attention to your anchor placement so that, if you combine breve and acute for example, you don't end up with a severe interline glyph clashing. 
 
 
 ## Concrete cases:
@@ -150,23 +150,23 @@ Expected result: vertical metrics should be around 130% of UPM. Anything greater
 A new Latin family has the following qualities:
 
 -   UPM is `1000`
--   `yMax` of tallest `A breve acute` in the familly (bold for this example) = `1000`
+-   `yMax` of tallest `A breve acute` in the familly (black for this example) = `1015`
 -   `yMin` of deepest a-z letter (`g` bold in this family) = `210`
--   Caps height (`H`or `Z` bbox height) = `697`
--   Family's `yMax = 1000` (Black `A breve hookabove` for this family)
--   Family's `yMin = -260` (ExtraLight `c cedilla` for this family)
+-   Caps height (`H`or `Z` bbox height) = `700`
+-   Family's `yMax = 1116` (Black `A breve hookabove` for this family)
+-   Family's `yMin = -260` (Black `c cedilla` for this family)
 
 1.  Set the default values, following the schema above:
 
 ``` code
-typoAscender = 1000 # which is matches tallets `A breve acute` in the family.
-typoDescender = -303 # an equal or similar value added to the Caps Height which is greater than deepest letterform.
+typoAscender = 1015 # which matches tallets `A breve acute` in the family and is ≈ [(UPM * 1.3 - CapsHeight) / 2] + CapsHeight
+typoDescender = -315 # an equal or similar value added to the Caps Height to leave them centeered in the line, and is greater than deepest letterform.
 typoLineGap = 0
-hheaAscender = 1000 # typoAscender
-hheaDescender = -303 # typoDescender
+hheaAscender = 1015 # typoAscender
+hheaDescender = -315 # typoDescender
 hheaLineGap = 0 # typoLineGap
 winAscent = 1116 # Font bbox yMax
-winDescent = 320 # *absolute value* of Font bbox yMin ie. a positive integer
+winDescent = 315 # *absolute value* of Font bbox yMin ie. a positive integer
 ```
 
 1.  Be sure to copy these same metric values to all of the masters in the family
