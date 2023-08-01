@@ -33,11 +33,11 @@ The following rules apply to all new font families, and should be enforced to up
 
 #### 1. Vertical metrics must not be calculated by the font editor automatically
 
-This is an overall best practice in design. When defining line spacing, it's important to strike a balance between legibility and avoiding overlapping letters. At GF, we have established a specific system that prioritizes optimal performance for various situations, while still leaving room for future update improvements like adding more languages without causing regressions. 
+This is an overall best practice in design. When defining line spacing, it's important to strike a balance between legibility and avoiding overlapping letters. At Google Fonts, we have established a specific system that prioritizes optimal performance for various situations while still leaving room for future update improvements, like adding more languages without causing regressions. 
 
 #### 2. Vertical metrics must be consistent across a family.
 
-Each font in a family must share the same vertical metric values.
+Each font in a family must share the same vertical metrics values.
 
 This rule can be avoided if a font is being upgraded and previously had inconsistent family metrics. If this is the case, the aim should be to visually match the line spacing of each font, but fix any clipping issues caused by incorrect `WinAscent`, `WinDescent` values.
 
@@ -62,7 +62,7 @@ Some applications do not allow users to control the line height/leading of their
 
 ##### 5. [Use_Typo_Metrics](https://www.microsoft.com/typography/otspec/os2.htm#fss)** **must be enabled
 
-This will force MS Applications to use the `Typo` values instead of the `Win` values for line spacing. By doing this, we can freely set the `Win` values to avoid clipping and control the line height with the `Typo` values. It has the added benefit of future line height compatibility. When a new script is added, we simply change the `Win` values to the new `yMin` and `yMax`, without needing to worry if the line height have changed. Note that the `Use_Typo_Metric` flag is also called `fsSelection bit 7 `(related to how it is set in the OS/2 table).
+This will force Microsoft Applications to use the `Typo` values instead of the `Win` values for line spacing. By doing this, we can freely set the `Win` values to avoid clipping and control the line height with the `Typo` values. It has the added benefit of future line height compatibility. When a new script is added, we simply change the `Win` values to the new `yMin` and `yMax`, without needing to worry if the line height have changed. Note that the `Use_Typo_Metric` flag is also called `fsSelection bit 7 `(related to how it is set in the OS/2 table).
 
 -   In Glyphs.app, set `Use_Typo_Metrics` custom parameter to `true` in the **Font** tab of **Font Info**.
 -   In RoboFont, this is under **Font Info \> OpenType \> OS/2 Table \> fsSelection \> USE_TYPO_METRICS**.
@@ -94,7 +94,7 @@ Web designers will thank you if you managed to have the same space above and und
 
 #### 10. typo/hheaAscender value should leave open room for stacked diacritics.
 
-Following recent tests to confirm our VM policies, we now require that the typo/hheaAscender be equal to `A breve acute`. For families with multiple weights you must use the tallest `A breve acute` (in e.g., the Black master) as the reference point to guarantee uniform positioning across the entire font family.
+Following recent tests to confirm our vertical metrics policies, we now require that the typo/hheaAscender be equal to `A breve acute`. For families with multiple weights you must use the tallest `A breve acute` (in e.g., the Black master) as the reference point to guarantee uniform positioning across the entire font family.
 
 Even if the font does not support Vietnamese yet, we strongly suggest estimating the ascenders value foreseeing the `A breve acute` height based two main reasons:
 
@@ -121,7 +121,7 @@ Exceptions are usually made if the font’s primary script isn’t Latin, Greek 
 
 Please keep in mind that this calculation is to be set according to the specificities of each font.
 
--   The 120% suggested above is for compatibility with DTP apps (like InDesign automatic alignment ratio). Still, it can often be too tight if your font covers more languages than basic Latin, Greek, and Cyrillic, or if you have a particular design with short ascenders.  
+-   The 120% suggested above is for compatibility with desktop publishing apps (like InDesign automatic alignment ratio). Still, it can often be too tight if your font covers more languages than basic Latin, Greek, and Cyrillic, or if you have a particular design with short ascenders.  
 -   Please pay careful attention to the overall design of diacritic marks, especially the [stacked diacritics](https://googlefonts.github.io/gf-guide/diacritics.html#stacked-diacritics). This way you ensure the ascenders value is not unnecessarily high. You could also determine an ideal line spacing and then draw the diacritics accordingly or adapt them to it.
 -   Google Fonts is trying to push designers to include proper support of the [mark-to-mark](https://googlefonts.github.io/gf-guide/diacritics.html#the-glyph-positioning-gpos-table) feature allowing combination of diacritics and display of non-encoded accented glyphs. Pay attention to your anchor placement so that, if you combine breve and acute for example, you don't end up with a severe interline glyph clashing. 
 
