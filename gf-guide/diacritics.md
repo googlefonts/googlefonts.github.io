@@ -36,7 +36,7 @@ This guide will give users an overview introduction to diacritics both from a de
 - **In Latin script, it is expected that all marks share the same distance to the base letter.** For particular cases like script fonts where the x-height could vary, marks should at least appear to be at the same optical distance to the base letter.
 - **Idiosyncratic or decorative diacritics have given way to more universal or neutral forms.**
 - **Ensure creating all the combining marks required for the languages the font are supporting**, as well as the so-called "Legacy Marks". ([See below](#legacy--spacing-marks).) Google Fonts requires at least the GF Latin Core as the minimum set for a font addressing the Latin script. Please read more about our <a href="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets">Glyphsets</a>.
-- **Usually, the design of the diacritics needs to be adjusted in size or slope to work better with the uppercase letters**. So ideally there should be at least two sets of diacritics: lowercase and uppercase marks. (e.g. `acutecomb` and `acutecomb.case`)
+- **Create a set of marks for capital letters** to properly display uppercase letters with diacritics, a separate set of `.case` marks should be created. These marks should be designed with adjustments to size, height, or slope and are typically wider, shorter, and flatter than their lowercase counterparts so they use less vertical space, avoiding collisions with above text lines. These adjustments are particularly relevant for languages like Vietnamese that require stacked diacritics.
 
 **Examples of what to avoid** *- critical cases*
    <figure>
@@ -138,8 +138,8 @@ Combining marks would be listed like this in the GDEF table:
 
 In some languages like Vietnamese, marks are made of the combination of two other marks known as *stacked diacritics*. In such cases, a combining mark could also act as the 'base' glyph of another mark, and therefore, it would need more than one anchor. For example, in the `brevecomb_acutecomb`, the `brevecomb` mark would have one `_top` anchor to be attached to a base letter, plus a `top` one to attach other marks to it; in this case, the `acutecomb`.
 
-- Distance between marks should also be consistent with the font. The stacked diacritic should be perceived as a unity that forms a whole with the base letter.
-- Again, by ensuring to include right anchor with consistent names will contribute to the correct setting and functioning of the `mkmk` feature in the `GPOS` table.
+- The distance between marks is usually tight and should be consistent with the font. The stacked diacritic should be seen as a unit with the base letter. Smaller shapes than the stand-alone marks can be used to ensure visual balance, especially in capital letters. It is crucial to make sure that these marks are not too high or heavy.
+- Again, including the correct anchors with consistent names will ensure the `mkmk` feature in the `GPOS` table.
 - Automatic aligment enabled would also be recommended here to avoid placing stacked diacritics manually in the accented glyphs.
 
 ### Soft dotted glyphs
