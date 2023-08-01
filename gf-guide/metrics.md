@@ -159,8 +159,8 @@ A new Latin family has the following qualities:
 1.  Set the default values, following the schema above:
 
 ``` code
-typoAscender = 1015 # which matches tallets `A breve acute` in the family and is ≈ [(UPM * 1.3 - CapsHeight) / 2] + CapsHeight
-typoDescender = -315 # an equal or similar value added to the Caps Height to leave them centeered in the line, and is greater than deepest letterform.
+typoAscender = 1015 # which matches tallest `A breve acute` in the family and is ≈ [(UPM * 1.3 - CapsHeight) / 2] + CapsHeight
+typoDescender = -315 # an equal or similar value added to the Caps Height to leave them centered in the line, and is greater than deepest letterform.
 typoLineGap = 0
 hheaAscender = 1015 # typoAscender
 hheaDescender = -315 # typoDescender
