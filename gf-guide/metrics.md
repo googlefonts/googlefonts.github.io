@@ -27,9 +27,10 @@ Please note that the first metrics guidelines referred to in this guide are Lati
 * TOC goes here
 {:toc}
 
-## Requirements for all fonts (except CJK)
+## Requirements for all fonts **(except CJK)**
 
-The following rules apply to all new font families, and should be enforced to upgraded font families when possible.
+The following rules apply to all new font families, and should be enforced to upgraded font families when possible. 
+For font families designed for Chinese, Japan and Korean (CJK), please refer to the ([CJK Vertical Metrics section below](#CJK-vertical-metrics).)
 
 #### 1. Vertical metrics must not be calculated by the font editor automatically
 
@@ -45,7 +46,7 @@ This rule can be avoided if a font is being upgraded and previously had inconsis
 
 Some applications do not allow users to control the line height/leading of their fonts. Word processors and text editors are common culprits. It is essential their documents do not reflow.
 
-##### 4. The following vertical metric parameters must be set for each font in a family
+#### 4. The following vertical metric parameters must be set for each font in a family
 
 | Ms Spec ttf spec        | Glyphs.app Master customParameter | FontLab                | ufo3 fontinfo.plist      |
 |-------------------------|-----------------------------------|------------------------|--------------------------|
@@ -60,7 +61,7 @@ Some applications do not allow users to control the line height/leading of their
 
 *For brevity, we will refer to the 3 sets of metrics as* `Typo`*,* `Hhea`*,* `Win`*.*
 
-##### 5. [Use_Typo_Metrics](https://www.microsoft.com/typography/otspec/os2.htm#fss)** **must be enabled
+#### 5. [Use_Typo_Metrics](https://www.microsoft.com/typography/otspec/os2.htm#fss) must be enabled
 
 This will force Microsoft Applications to use the `Typo` values instead of the `Win` values for line spacing. By doing this, we can freely set the `Win` values to avoid clipping and control the line height with the `Typo` values. It has the added benefit of future line height compatibility. When a new script is added, we simply change the `Win` values to the new `yMin` and `yMax`, without needing to worry if the line height have changed. Note that the `Use_Typo_Metric` flag is also called `fsSelection bit 7 `(related to how it is set in the OS/2 table).
 
@@ -84,13 +85,13 @@ By changing these values, the line height will be increased in MS applications. 
 
 This rule can be avoided if a font is being upgraded and previously had inconsistent values.
 
-## 8. LineGap values must be 0
+#### 8. LineGap values must be 0
 
 The `LineGap` value is a space added to the line height created by the union of the `(typo/hhea)Ascender` and `(typo/hhea)Descender`. It is handled differently according to the environment. This leading value will be added above the text line in most desktop apps. It will be shared above *and* under in web browsers, and ignored in Windows if `Use_Typo_Metrics` is disabled. For better linespacing consistency across platforms, `(typo/hhea)LineGap` values must be `0`.
 
-#### 9. Uppercases should be centered if the font’s primary script has uppercases letterforms such as Latin, Greek and Cyrillic
+#### 9. Uppercases should be centered in the text line 
 
-Web designers will thank you if you managed to have the same space above and under capitals: `typoAscender - CapsHeight = abs(typoDescender)`. It will make easier for them the setting of padding in buttons for example.
+For fonts which primary script has uppercases letterforms such as Latin, Greek and Cyrillic. Web designers will thank you if you managed to have the same space above and under capitals: `typoAscender - CapsHeight = abs(typoDescender)`. It will make easier for them the setting of padding in buttons for example.
 
 #### 10. typo/hheaAscender value should leave open room for stacked diacritics.
 
