@@ -121,6 +121,7 @@ Unless absolutely necessary, avoid over-complicated outline drawing. One example
 ## Useful links
 
 -   [Drawing good paths](https://glyphsapp.com/learn/drawing-good-paths), Glyphs tutorial
+-   [Drawing Vectors for Type & Lettering](https://ohnotype.co/blog/drawing-vectors), Blog post by James Edmondson
 -   [Fontlab’s article about curve types](https://help.fontlab.com/fontlab-vi/Curve-Types/)
 -   [Fontlab’s article about contours](https://help.fontlab.com/fontlab-vi/Contours/#terminology)
 -   [Apple’s article about digitizing letterforms](https://developer.apple.com/fonts/TrueType-Reference-Manual/RM01/Chap1.html#points)
