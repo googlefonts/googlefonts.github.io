@@ -141,7 +141,7 @@ Fontbakery is a quality assurance (QA) testing tool. It runs a series of checks 
 To install Fontbakery run the command:
 
 ``` code
-pip install fontbakery
+pip3 install -U fontbakery'[freetype]'
 ```
 
 Run `fontbakery --help` to get an overview of the usage of the fontbakery tool.
