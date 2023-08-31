@@ -2,14 +2,14 @@
 
 <a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
 
-# Adding & upgrading fonts to Google Fonts
+# Adding & Upgrading Fonts to Google Fonts
 {:.no_toc}
 
 <div class="callout">
 
-🐸  Any contribution to Google Fonts should be first submitted through the <a href="https://github.com/google/fonts/issues">google/fonts issue tracker</a>.
+🐸  Any contributions to Google Fonts should be first submitted through the <a href="https://github.com/google/fonts/issues">Google Fonts issue tracker</a>.
 <br><br>
-Don't forget to search in the issue tracker (using keywords) if your issue has already been raised before opening a new one :) The following links can be used to create different kinds of issues:
+Don't forget to search the issue tracker (using keywords) to see if your issue has already been raised before opening a new one. The following links can be used to create different kinds of issues:
 
 <ul>
     <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+New+Font%2C+%3E+Submission&template=1_add-font.md&title=Add+%5BFont+Name%5D">Submitting a new OFL Font</a></li>
@@ -32,17 +32,18 @@ From time to time, Google Fonts provides financial and design assistance for pro
 * TOC goes here
 {:toc}
 
-## New fonts
+## New Fonts
 
-If you would like to include a new font family into the GF collection, we'll be happy to include it if it meets the following criteria:
+If you would like to include a new font family in the Google Fonts collection, we'll be happy to include it if it meets the following criteria and passes a review process:
 
 - **The typeface design must be original, or a legitimate revival of a design in the public domain, and of good quality.**
     <br>
-    The Google Design team curates the overall Google Fonts collection and decides if fonts are of good quality. GF may reject families if they fail to meet their criteria. You can get general reviews of your project from the wider international type community during development by posting review requests in the [googlefonts-discuss](https://groups.google.com/forum/#!forum/googlefonts-discuss) group, and the [typedrawers](http://typedrawers.com/categories/critiques%E2%80%94type-design) review forum.
+    The Google Design team curates the overall Google Fonts collection and decides if fonts are of good quality. Google Fonts may reject families if they fail to meet their criteria. You can get general reviews of your project from the wider international type community during development by posting review requests in the [googlefonts-discuss](https://groups.google.com/forum/#!forum/googlefonts-discuss) group, and the [typedrawers](http://typedrawers.com/categories/critiques%E2%80%94type-design) review forum.
     
 - **The project must be wholly licensed under the** **[SIL Open Font License v1.1](http://scripts.sil.org/OFL).**
     <br>
-    There must also be no proprietary/restricted-license versions of the project available elsewhere (such as additional weights/styles). Agreeing to publishing a font on Google Fonts means that you agree on licensing under OFL all the existing styles of a same family, and the ones to come. For example, Mono, Proportional, Display, Text, Serif, Sans-Serif… are considered styles (or subfamilies) of the same font family, and should therefore be open source as well.
+    There must also be no proprietary/restricted-license versions of the project available elsewhere (such as additional weights/styles). Agreeing to publishing a font on Google Fonts means that you agree to licensing under the OFL all the existing styles of a same family, and the ones to come. For example, Mono, Proportional, Display, Text, Serif, Sans-Serif… are considered styles (or subfamilies) of the same font family, and should therefore be open source as well.
+    <br>
     <br>
     Refer to the dedicated chapter to know more about the [license file requirements](license-file.md).
     
@@ -72,7 +73,7 @@ If you would like to include a new font family into the GF collection, we'll be 
     
 -   **The build should follow the [Scalable Font Production principle](production.md).**
     <br>
-    Fonts are built using [Fontmake](https://github.com/googlefonts/fontmake), which can generate binaries from `UFO`. Fontmake can also convert `.glyphs` files to UFO, but if your are using any other font format, your build process should contain a step that converts the sources to UFO. Read the chapter about [building fonts](build.md) to know more about the build process.
+    Fonts are built using [Fontmake](https://github.com/googlefonts/fontmake), which can generate binaries from `UFO`. Fontmake can also convert `.glyphs` files to UFO, but if you are using any other font format, your build process should contain a step that converts the sources to UFO. Read the chapter about [building fonts](build.md) to know more about the build process.
 
 -   **All binary font files must be available in TTF format.**
  
@@ -80,19 +81,21 @@ If you would like to include a new font family into the GF collection, we'll be 
 
 -   **All font files should follow the [Overall font files requirements](requirements.md).**
 
--   **All font files should pass the [FontBakery](https://github.com/googlefonts/fontbakery) checks for the [googlefonts profile](https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html).**
+-   **All font files should pass the [FontBakery](https://github.com/googlefonts/fontbakery) checks for the [googlefonts profile](https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html).** Please read the [QA section](qa.md) of the Google Fonts guide for more information on quality assurance requirements.
+
+-   **All font source files should follow the [outline quality guide](outlines.md).**
 
 Under special circumstances, you can request an exception to these requirements.
 
-## Font upgrades
+## Font Upgrades
 
-Remember that, following the informations given in the [production requirements](production.md), the fonts used on websites via HTTP request to Google Fonts are served from the actual fonts contained in the API. In fact, GF contains more than a thousand fonts, and serves them to billions of websites. A very important detail to remember is that GF *does not* serve more than one version of the same font. This means that once a font is upgraded and in production, the *upgrade is served everywhere*.
+Remember, following the information given in the [production requirements](production.md), the fonts used on websites via HTTP request to Google Fonts are served from the actual fonts contained in the API. In fact, Google Fonts contains more than a thousand fonts, and serves them to billions of websites. A very important detail to remember is that Google Fonts *does not* serve more than one version of the same font. This means that once a font is upgraded and in production, the *upgrade is served everywhere*.
 
 To make sure users are correctly served the upgraded font:
 
 -   **The family name and style names should be the same.**
 
--   **The version number should be incremented from the previous version** following the [specified criteria](requirements.md) for it.
+-   **The version number should be incremented from the previous version** following the [specified versioning criteria](requirements.md).
 
 -   **We must avoid visual regression between the new version and the previous version**:
     -   No previously encoded glyphs should be removed.
