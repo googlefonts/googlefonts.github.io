@@ -69,8 +69,7 @@ If you would like to include a new font family in the Google Fonts collection, w
     
 -   **The source files are available** in your preferred font editor format.
     <br>
-    The file formats most used are `UFO`, `.glyphs`, `fontforge` or `fontlab 7`. `Fontlab V` files must be converted to another format because the software runs only on older OS versions. 
-    
+    The file formats most used are `UFO`, `.glyphs`, `fontforge` or `fontlab 7`. `Fontlab V` files must be converted to another format because the software runs only on older OS versions. If you are using any font format other than `.glyphs` and `.ufo`, include a build script that converts the sources to UFO, and include the UFO sources in the Git repository. Use **[Fontlab to UFO](https://pypi.org/project/vfb2ufo3/)** or **[FontForge to UFO](https://github.com/fontforge/sfd2ufo)** for example.    
 -   **The build should follow the [Scalable Font Production principle](production.md).**
     <br>
     Fonts are built using [Fontmake](https://github.com/googlefonts/fontmake), which can generate binaries from `UFO`. Fontmake can also convert `.glyphs` files to UFO, but if you are using any other font format, your build process should contain a step that converts the sources to UFO. Read the chapter about [building fonts](build.md) to know more about the build process.
