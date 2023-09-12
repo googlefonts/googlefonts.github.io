@@ -309,7 +309,7 @@ Unfortunately, the Builder can’t do everything yet. You will have to use an ex
 -   To generate `WOFF`. use **[homebrew webfont tools](https://github.com/bramstein/homebrew-webfonttools)**.
 -   To hint OTF: use **[AFDKO](https://github.com/adobe-type-tools/afdko)**.
 -   To subset the font: use **[Fonttools’ subsetter](https://fonttools.readthedocs.io/en/latest/subset/index.html)**.
--   If you are using any other font format than `.glyphs` and `.ufo`: the build script should contain a step that converts the sources to UFO. Use **[Fontlab to UFO](https://pypi.org/project/vfb2ufo3/)** or **[FontForge to UFO](https://github.com/fontforge/sfd2ufo)** for example.
+-   If you are using any other font format than `.glyphs`, `.glyphspackage`, and `.ufo`: the build script should contain a step that converts the sources to UFO. Use **[Fontlab to UFO](https://pypi.org/project/vfb2ufo3/)** or **[FontForge to UFO](https://github.com/fontforge/sfd2ufo)** for example.
 
 <div class="next-reading">
     Further reading:<br>
