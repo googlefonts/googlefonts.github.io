@@ -66,3 +66,5 @@ The primary consumer of *lang* metadata is Catalog. There are a couple areas whe
 - Specimen – Glyphs
   - Shows the sample glyphs
   - We believe we have systematically eliminated the possibility of displaying tofu here
+
+For information about how to update the lang metadata repository, see <a href="./googlefonts#lang-directory">google/fonts repository explained</a>.
