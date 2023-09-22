@@ -48,16 +48,16 @@ Some applications do not allow users to control the line height/leading of their
 
 #### 4. The following vertical metric parameters must be set for each font in a family
 
-| Ms Spec ttf spec        | Glyphs.app Master customParameter | FontLab                | ufo3 fontinfo.plist      |
-|-------------------------|-----------------------------------|------------------------|--------------------------|
-| \[OS/2\] sTypoAscender  | typoAscender                      | \[OS/2\] TypoAscender  | openTypeOS2TypoAscender  |
-| \[OS/2\] sTypoDescender | typoDescender                     | \[OS/2\] TypoDescender | openTypeOS2TypoDescender |
-| \[OS/2\] sTypoLineGap   | typoLineGap                       | \[OS/2\] TypoLineGap   | openTypeOS2TypoLineGap   |
-| \[hhea\] Ascender       | hheaAscender                      | \[hhea\] Ascender      | openTypeHheaAscender     |
-| \[hhea\] Descender      | hheaDescender                     | \[hhea\] Descender     | openTypeHheaDescender    |
-| \[hhea\] LineGap        | hheaLineGap                       | \[hhea\] LineGap       | openTypeHheaLineGap      |
-| \[OS/2\] usWinAscent    | winAscent                         | \[OS/2\] WinAscent     | openTypeOS2WinAscent     |
-| \[OS/2\] usWinDescent   | winDescent                        | \[OS/2\] WinDescent    | openTypeOS2WinDescent    |
+| OpenType spec (font binaries) | Glyphs.app Master customParameter | FontLab                | ufo3 fontinfo.plist      |
+|-------------------------------|-----------------------------------|------------------------|--------------------------|
+| \[OS/2\] sTypoAscender        | typoAscender                      | \[OS/2\] TypoAscender  | openTypeOS2TypoAscender  |
+| \[OS/2\] sTypoDescender       | typoDescender                     | \[OS/2\] TypoDescender | openTypeOS2TypoDescender |
+| \[OS/2\] sTypoLineGap         | typoLineGap                       | \[OS/2\] TypoLineGap   | openTypeOS2TypoLineGap   |
+| \[hhea\] Ascender             | hheaAscender                      | \[hhea\] Ascender      | openTypeHheaAscender     |
+| \[hhea\] Descender            | hheaDescender                     | \[hhea\] Descender     | openTypeHheaDescender    |
+| \[hhea\] LineGap              | hheaLineGap                       | \[hhea\] LineGap       | openTypeHheaLineGap      |
+| \[OS/2\] usWinAscent          | winAscent                         | \[OS/2\] WinAscent     | openTypeOS2WinAscent     |
+| \[OS/2\] usWinDescent         | winDescent                        | \[OS/2\] WinDescent    | openTypeOS2WinDescent    |
 
 *For brevity, we will refer to the 3 sets of metrics as* `Typo`*,* `Hhea`*,* `Win`*.*
 
@@ -71,7 +71,7 @@ This will force Microsoft Applications to use the `Typo` values instead of the `
 
 #### 6. WinAscent and WinDescent values must be the same as the family's tallest/deepest yMin and yMax bounding box values
 
-The Microsoft [OpenType specification](https://www.microsoft.com/typography/otspec/os2.htm#wa). Recommends the following:
+Microsoft's [OpenType specification](https://www.microsoft.com/typography/otspec/os2.htm#wa) recommends the following:
 
 > If any clipping is unacceptable, then the value should be set to `yMax`.
 
