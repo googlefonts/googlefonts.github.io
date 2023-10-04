@@ -33,11 +33,11 @@ Font developers are expected to understand the following:
 
 See the useful links section at the bottom of this page to bring you up to speed.
 
-**Note:** If you are not familiar with the concepts listed above, and do not wish to learn about them; we recommend you to try following the [github repository requirements](https://googlefonts.github.io/gf-guide/upstream.html) as close as possible, as well as the [font file requirements](https://googlefonts.github.io/gf-guide/requirements.html), and a GF Team Member will help you with the tooling and building process of your font.
+**Note:** If you are not familiar with the concepts listed above, and do not wish to learn about them, we recommend you to try following the [github repository requirements](https://googlefonts.github.io/gf-guide/upstream.html) as closely as possible, as well as the [font file requirements](https://googlefonts.github.io/gf-guide/requirements.html), and a GF Team Member will help you with the tooling and building process of your font.
 
 ## Setting up a working environment
 
-Most of these tools are Python-based, but you may need to install some other tools before to install them. *Each OS's specificities* *can’t be detailed here; therefore, it is your responsibility to search the Internet to find the right way to install and use these tools according to your own environment.*
+Most of these tools are Python-based, but you may need to install some other tools before. *Each OS's specificities* *can’t be detailed here; therefore, it is your responsibility to search the Internet to find the right way to install and use these tools according to your own environment.*
 
 To work with Google Fonts, you would need to install at least:
 
@@ -61,7 +61,7 @@ YourUserName:~$
 
 ### Homebrew
 
-Homebrew is a package manager for Unix utilities that has to be installed in macOS so you can install some utilities safely. It uses its own directory to install the packages without messing with the native files of the operative system.
+Homebrew is a package manager for Unix utilities that you can use in macOS so you can install some utilities safely. It uses its own directory to install the packages without messing with the native files of the operative system.
 
 [Install Homebrew](https://brew.sh/#install), and don’t forget to run the two commands at the end of the installation, which will set your PATH environment variable.
 
@@ -73,9 +73,9 @@ Typically, a version of Python is already installed with the Operating System. H
 
 You can verify which Python version is installed by running: `python --version`. You may find Python 3 under `python3 --version`. (Same applies for `pip`/`pip3`)
 
-If you already find a Python 3 version installed, you could first confirm its location by running `which python`. The resulting path will help identify whether it was installed using Homebrew or from the package downloaded from the Python site and thus consult the best way to update it if needed.
+If you already find a Python 3 version installed, you could first confirm its location by running `which python`. The resulting path will help identify whether it was installed using Homebrew or from the package downloaded from the Python site and so you can consult the best way to update it if needed.
 
-There are many implementations of Python. CPython is the reference one written in C, which provides a high level of compatibility with Python packages. PyPy is an interpreter focused on optimization as it runs generally faster, but it does not guarantee compatibility with all Python packages, so we recomend using the former.
+There are many implementations of Python. CPython is the reference one written in C, which provides a high level of compatibility with Python packages. PyPy is an interpreter focused on optimization as it runs generally faster, but it does not guarantee compatibility with all Python packages, so we recommend using the former.
 
 To install the **CPython** implementation:
 
@@ -99,7 +99,7 @@ It is strongly suggested to create and work under a [Python Virtual Environment]
     python3 -m venv myenv
     ```
 
-    The last part of the command is the name you would like to give to the virtual environment. Usually, it is only `venv`, or `myenv` if you specifically want to differentiate it from the Python Module "venv" name.
+    The last part of the command is the name you want to give to the virtual environment. Usually, it is only `venv`, or `myenv` if you specifically want to differentiate it from the Python Module "venv" name.
 2.  Once you have created your virtual environment, you need to **activate** it.
 
     On Unix or macOS run:
@@ -118,17 +118,17 @@ It is strongly suggested to create and work under a [Python Virtual Environment]
     ``` code
     (myenv) userName directoryName $
     ```
-3.  To deactivate the virtual environment, just type `deactivate`. Note that closing the Terminal window will also deactivate the environment, and you will have to reactivate it every time you want to work on your project.
+3.  To deactivate the virtual environment, just type `deactivate`. Just so you know, closing the Terminal window will also deactivate the environment, and you will have to reactivate it every time you want to work on your project.
 
 You can install as many virtual environments as you want; in each project directory or your user home directory if you intend to use the same virtual environment for all your projects. Command-line tools often have settings to run a command automatically when a new window opens; you could activate one virtual environment this way and avoid having to type it every time.
 
-It is *not* recommended to instal virtual environments in clouds, drives, dropbox, etc.
+It is *not* recommended to install virtual environments in clouds, drives, dropbox, etc.
 
 ## Installing the required tools
 
 Once you have installed Python, and created and activated your virtual environment, you can install the required tools to produce and test your fonts for Google Fonts.
 
-A [requirements.txt](upstream.md) file listing all the needed tools and dependencies to run a project is required for each project. If you already have one, you could install all the listed tools in it by running one command:
+A [requirements.txt](upstream.md) file listing all the needed tools and dependencies to run a project is required for each project. If you already have one, you can install all the listed tools in it by running one command:
 
 ``` code
 pip install -r requirements.txt
@@ -138,10 +138,10 @@ pip install -r requirements.txt
 
 Fontbakery is a quality assurance (QA) testing tool. It runs a series of checks on the technical correctness of the exported fonts based on a vendor’s profile. You can find more documentation about it in the GitHub repository [googlefonts/fontbakery](https://github.com/googlefonts/fontbakery).
 
-To install Fontbakery run the command:
+To install Fontbakery, run the command:
 
 ``` code
-pip3 install -U fontbakery'[freetype]'
+pip3 install -U fontbakery'[googlefonts]'
 ```
 
 Run `fontbakery --help` to get an overview of the usage of the fontbakery tool.
