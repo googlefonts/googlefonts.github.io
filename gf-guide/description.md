@@ -108,20 +108,3 @@ while Katakana and Kanji are slightly heavier, which gives the unique rhythm and
 > *Zen Antique* には、古風な雰囲気の二種類の漢字を含む日本語書体があります。 文字によって画線の太さに変化があり、ひらがなと欧文は細め、カタカナと漢字は太めで、フォントに独特のリズムと味わいを与えています。 また、*[Zen Antique Soft](https://fonts.google.com/specimen/Zen+Antique+Soft?subset=japanese)* では、角が少し丸くなっています。
 >
 > このプロジェクトに参加して貢献したい方は、次の URL をご参照ください。*[github.com/googlefonts/zen-antique](https://github.com/googlefonts/zen-antique)*
-
-## The Article
-
-- ARTICLE.en_us.html file and images should live in an `article/` directory alongside the `METDATA.pb` file
-- Strong preference for JPG/SVG. 
-- JPEGs are optimized in the sense that a lower resolution will be downloaded on smaller viewport sizes. 
-- Supported image formats: JPG, PNG, SVG
-- Max image size for SVG is 800 KB; for other formats is 1.75 MB (enforced by knowledge_graph.py GitHub workflow)
-- Allowed elements: same as description with the addition of `<img>`
-- width recomended: at least 1000px
-- resolution: 72ppm
-- no particular proportion needed, it will be resized by the container
-- Article dir should be added at onboarding time
-- Noto are combining description file + article
-- Other font would have the description overritten by the artile, 
-    - therefore we can shift all the description content into the article content
-    - and we can remove the description file from the font directory once an article is integrated
