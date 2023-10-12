@@ -561,8 +561,13 @@ Two tools are needed to prepare these lists.
 #### The push module
 
 The push module is used to organise the Traffic Jam board, ie. update the PR status and tag the proper list in order to prepare the generation of the push lists text files. 
+Everything that the push module does, you can do it manually from the Traffic Jam board —but it take ages.
 
-** TO DO MARC**
+- It updates the server status automatically by comparing the font versions in the different servers.
+- ** TO DO MARC**
+- ** TO DO MARC**
+- ** TO DO MARC**
+
 
 #### `gftools gen-push-lists` script
 
