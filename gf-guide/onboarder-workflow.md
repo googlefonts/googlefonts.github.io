@@ -7,21 +7,21 @@
 
 <div class="callout">
 
-🐝 Google Fonts has become too big to be maintained as a simple community repository. The platform is now an API distributing and serving more than a thousand fonts families, and GF has started to see itself as a proper open-source foundry.
+🐝 Google Fonts has become too big to be maintained as a simple community repository. The platform is now an API distributing and serving more than a thousand font families, and GF has started to see itself as a proper open-source foundry.
 
 This means several things:
 
 <ol>
-    <li> While in the past spontaneous contributions were still possible, today the specifics of the requirements and the security in place have made it complicated for a random user to make such a contribution. If a user makes a PR, it will definitely draw some attention, but the PR often needs to be re-done by a team member. So while contribution to the repo is not in theory exclusive to the “onboarders” (paid contractors), it tends to be in practice.</li>
-    <li> GF has commissioned hundreds of fonts from professional type designers. To onboard these projects (from the moment the font family is “ready”), GF needs a toolchain that automates most of the repetitive tasks such as packaging the fonts (<mark class=grey>gftools packager</mark>) and generating QA proofs (<mark class=grey>gftools qa</mark>).</li>
-    <li>The workflow must leave no place to doubt about the status of the project. Indeed, once merged into the <mark class=grey>google/fonts</mark> repo, the font actually still travels through different servers before appearing on the API. It has often happened that fonts have never got into production — because they have been forgotten in the sandbox server or somewhere else.</li>
+    <li> While in the past spontaneous contributions were still possible, today, the specifics of the requirements and the security in place have made it complicated for a random user to make such a contribution. If a user makes a PR, it will definitely draw some attention, but the PR often needs to be redone by a team member. So, while contribution to the repo is not, in theory, exclusive to the “onboarders” (contracted team members), it tends to be in practice.</li>
+    <li> Google Fonts has commissioned hundreds of fonts from professional type designers. To onboard these projects (from the moment the font family is considered “ready”), we need a toolchain that automates most of the repetitive tasks such as packaging the fonts (<mark class=grey>gftools packager</mark>) and generating QA proofs (<mark class=grey>gftools qa</mark>).</li>
+    <li>The workflow must leave no place to doubt about the status of the project. Indeed, once merged into the <mark class=grey>google/fonts</mark> repo, the font still travels through different servers before appearing on the API. It has often happened that fonts never got into production — because they have been forgotten in the sandbox server or elsewhere.</li>
 </ol>
 
-This workflow described below was designed so that GF do not lose products during the validation process, to facilitate the validation process, and to keep people updated about the status of different projects. It requires active maintenance and regular updates from team members.
+The workflow described below was designed to ensure no lost products during the validation process, to facilitate the latter, and to keep people updated about the status of different projects. It requires active maintenance and regular updates from team members.
 <br><br>
-It seemed also important to keep the whole status of the repository in one place, mostly to avoid copy-pasting PR links all the time. GF, therefore, chose a complete Github-based workflow, making extensive use of the <a href="https://github.com/google/fonts/issues">issue tracker</a>, the <a href="https://github.com/google/fonts/milestones">milestones</a> feature, the <a href="https://github.com/google/fonts/projects">project boards</a>, and the <a href="https://github.com/google/fonts/actions">continuous integration system</a>.
+It also seemed important to keep the whole status of the repository in one place, mostly to avoid copy-pasting PR links all the time. Therefore, a complete Github-based workflow was chosen, making extensive use of the <a href="https://github.com/google/fonts/issues">issue tracker</a>, the <a href="https://github.com/google/fonts/milestones">milestones</a> feature, the <a href="https://github.com/google/fonts/projects">project boards</a>, and the <a href="https://github.com/google/fonts/actions">continuous integration system</a>.
 <br><br>
-This guide will help team members to understand the validation process of a font family and the actions required from them to help that process.
+This guide will help team members understand the validation process of a font family and the actions required from them to help that process.
 <br><br>
 → <a href="https://google.github.io/fonts/">google.github.io/fonts</a> is a page updated weekly that reports on activity in the <a href="https://github.com/google/fonts">google/fonts</a> repo.
 
@@ -41,61 +41,67 @@ This guide will help team members to understand the validation process of a font
 
 ## The onboarding process
 
-To preserve the synchronisation of source files, the [google/fonts repository](https://github.com/google/fonts) doesn't host font *sources* —only font *binaries*.
+To preserve the synchronization of source files, the [google/fonts repository](https://github.com/google/fonts) doesn't host font *sources* —only font *binaries*.
 
 <figure>
 <img src="./images/onboarder-workflow/upstream-downstream.png" style="width:2568px" alt="Screenshot of an issue from google/fonts issue tracker." />
 <figcaption aria-hidden="true">Upstream to Downstream.</figcaption>
 </figure>
 
-"Upstream" is the further we can go to the original files; since [google/fonts](https://github.com/google/fonts) is only hosting a copy of the font files —pulled from that original designer's repository— we can say that google/fonts is somewhere *down* the stream. The API processes that file and serves a subsetted version of it, but the original font file can be found in the downloadable zip file from the platform. 
+<br><br>
 
-None of these three instances are directly linked though. At least three persons, at each instance, will interact with that font file before it is available on [fonts.google.com](https://fonts.google.com). Let's got briefly through the process step by step:
+"Upstream" is the further we can go to the original files; since [google/fonts](https://github.com/google/fonts) is only hosting a copy of the font files —pulled from that original designer's repository— we can say that google/fonts is somewhere *down* the stream. The API processes that file and serves a subsetted version, but the original font file can be found in the downloadable zip file from the platform. 
+
+None of these three instances are directly linked, though. At least three persons, at each instance, will interact with that font file before it is available on [fonts.google.com](https://fonts.google.com). Let's go briefly through the process step by step:
 
 1. After a font has been commissioned or submitted to Google Fonts through the google/fonts issue tracker. An onboarder will be assigned to that project.
-2. The fonts will be reviewed, corrected and built in the upstream repository. They will then be packaged and sent through a [Pull Request (PR) to the google fonts repository](./package.md).
+2. The fonts will be reviewed, corrected, and built in the upstream repository. They will then be packaged and sent through a [Pull Request (PR) to the google/fonts repository](./package.md).
 3. From there, another onboarder should [QA the font](./qa.md) and the overall package before merging it into the google/fonts repository.
-4. An on-call engineer will have push the font file to the API. 
+4. An on-call engineer must push the font file to the API. 
 
-The font doesn't go directly to the live API; it has to travel through intermediate servers where it is going be reviewed and validated again to make sure the API is showing the font correctly.
+The font doesn't go directly to the live API; it has to travel through intermediate servers, where it will be reviewed and validated again to ensure the API is showing the font correctly.
 
 <figure>
 <img src="./images/onboarder-workflow/workflow.png" style="width:2568px" alt="Graphic showing the onboarding process from the issue in google/fonts repository, to a public release on fonts.google.com" />
 <figcaption aria-hidden="true">From the issue to fonts.google.com</figcaption>
 </figure>
 
-This graphic shows how a project travels from the google/fonts github repository to [fonts.google.com](https://fonts.google.com).
+<br><br>
 
-- The [google/fonts repository](https://github.com/google/fonts) is linked to the `dev-sandbox` server. Each PR that are merged will appear few minutes or more after on the `dev-sandbox` (if it works correctly).
-- Once a PR is merged, the linked issue gets automatically closed, but it doesn't mean that the issue is completed, because the fonts are not live yet.
+This graphic shows how a project travels from the google/fonts GitHub repository to [fonts.google.com](https://fonts.google.com).
+
+- The [google/fonts repository](https://github.com/google/fonts) is linked to the `dev-sandbox` server. Each merged PR will appear a few or more minutes later on the `dev-sandbox` (if it works correctly).
+- Once a PR is merged, the linked issue gets automatically closed, but it doesn't mean the issue is completed because the fonts still need to be live.
 - Once the fonts are in the `dev-sandbox`, we can add them to the [to_sandbox.txt list](https://github.com/google/fonts/blob/main/to_sandbox.txt). The API engineers then push the list of families in `sandbox`. 
-- From there an onboarder can check if the fonts look alright in `sandbox`, and if it is the case, they can add them to the [to_production.txt list](https://github.com/google/fonts/blob/main/to_production.txt). The API engineers can then push the families onto the [fonts.google.com](https://fonts.google.com), availabe to the public.
+- From there an onboarder can check if the fonts look alright in `sandbox`, and if that is the case, they can add them to the [to_production.txt list](https://github.com/google/fonts/blob/main/to_production.txt). The API engineers can then push the families onto the [fonts.google.com](https://fonts.google.com), available to the public.
 
 This process takes 2 to 4 weeks, because the push to sandbox or production only happens in alternance once a week — if not less.
 
-You see in the graphic the importance of the issues and the pull requests (PR). We try to keep connected the issue and PR that fixes it but we do track them in different boards. The **Google Fonts board tracks the issues** (that are our link to the upstream repos), the **Traffic Jam board tracks the PRs** (that are our link to the servers and the API).
+You see the importance of the issues and the pull requests (PR) in the graphic. We try to keep connected the issue and the PR that fixes it, but we do track them on different boards. The **Google Fonts board tracks the issues** (that are our link to the upstream repos), and the **Traffic Jam board tracks the PRs** (that are our link to the servers and the API).
 
-Finally, it is important to note that the **API is the primary space for the users**, the **google/fonts repo is primary space of the onboarders**, the **upstream font repo is the primary space of the author**. Since it is impossible to satisfy everyone in all spaces, these priorities are to take seriously into consideration when facing a problem: 
+Finally, it is important to note that while the **API is the primary space for the users**, the **google/fonts repo is the primary space of the onboarders**, and the **upstream font repo is the primary space of the author**. Since it is impossible to satisfy everyone in all spaces, these priorities are to be taken seriously into consideration when facing a problem: 
 - All fonts sent to the users should be tailored for the best user experience.
-- GF shouldn't force anything onto the designer's repository. A consensual collaboration is key. In case of disagreement, GF would need permission to migrate the upstream repo into the `googlefonts` org.
+- Google Fonts shouldn't force anything onto the designer's repository. A consensual collaboration is key. In case of disagreement, Google Fonts would need permission to migrate the upstream repo into the `googlefonts` org.
 - The google/fonts issue tracker can harvest users' feedback and reports, but this repository is primarily the workspace of an entire team. A cordial and respectful communication is necessary, but the user is not king there: the mental health of the team members is.
 
 ## The Google Fonts project board
 
-The project board is just a way to sort all the font project issues that are contained in it. There is usually no pull request in this project board (they are tracked in the Traffic Jam board). Each tab has specific filters to be able to focus on one aspect of the issue.
+The project board is a way to sort all the font project issues that are contained in it. There is usually no pull request in this project board (they are tracked in the Traffic Jam board). Each tab has specific filters to be able to focus on one aspect of the issue.
 
 ## The milestones
 
-Each issues that we intend to care for should be added to the Google Fonts project board, but also to a milestone. This allow to divide and anticipate the workload in time.
+Each issue that we intend to care for should be added to the Google Fonts project board, but also to a milestone. This allows us to divide and anticipate the workload in time.
 
 <figure>
 <img src="./images/onboarder-workflow/milestones-tab.png" style="width:2568px" alt="How the Milestone tab looks into the Google Fonts project board."/>
 <figcaption aria-hidden="true">Miletones</figcaption>
 </figure>
 
+<br><br>
+
 To preserve a clean workflow, the Milestone needs to be assessed at the end of the quarter so we can move the still-open issues to the next Milestone to be able to close this one. 
 
-To have a proper overview of the milestones, the `Milestones` tab in the GF board allows to see all *open* issues (triaged by quarter). We can see all the necessary informations linked to an issue: the onboarder assigned, the priority level, the progress status and the labels.
+To have a proper overview of the milestones, the `Milestones` tab in the GF board allows to see all *open* issues (triaged by quarter). We can see all the necessary information linked to an issue: the onboarder assigned, the priority level, the progress status, and the labels.
 
 <figure>
 <img src="./images/onboarder-workflow/issue-gfboard.png" style="width:2568px" alt="When clicking on a issue, a window opened with more details about that issue"/>
@@ -106,7 +112,7 @@ To have a proper overview of the milestones, the `Milestones` tab in the GF boar
 
 [Issues](https://github.com/google/fonts/issues) in the `google/fonts` repository are used to define the Google Fonts production pipeline for team members, collaborating designers, and for users to report bugs or suggest new submission ideas.
 
-For the project manager and the onboarder, the bridge between what happens upstream and what is reported downstream is made through the issues. In order to track the project appropriately, the issue must contain a certain number of informations, and for that we use the github API extensively.
+For the project manager and the onboarder, the bridge between what happens upstream and what is reported downstream is made through the issues. In order to track the project appropriately, the issue must contain a certain number of information, and for that, we use the GitHub API extensively.
 
 <figure>
 <img src="./images/onboarder-workflow/issue.png" style="width:2568px" alt="What do you see when looking into an issue from google/fonts issue tracker." />
@@ -115,11 +121,11 @@ For the project manager and the onboarder, the bridge between what happens upstr
 
 ###  One issue per font project
 
-What do we mean by font project? "Adding a new family", "upgrading a family" are font projects. We consider the project *completed* once that version of the font hits *production*. Upgrading a font after its release on [fonts.google.com](https://github.com/google/fonts) would be considered as a new project, and therefore a new issue.
+What do we mean by font project? "Adding a new family", and "upgrading a family" are font projects. We consider the project *completed* once that version of the font hits *production*. Upgrading a font after its release on [fonts.google.com](https://github.com/google/fonts) would be considered as a new project and therefore a new issue for it is required.
 
-Issues can be used to communicate with the designer, and should be updated regularly with a comment about the progress status. It is recommended to use the [template issues](https://github.com/google/fonts/issues/new/choose) in order to have all the informations we need to start a project. 
+Issues can be used to communicate with the designer and should be updated regularly with a comment about the progress status. It is recommended to use the [template issues](https://github.com/google/fonts/issues/new/choose) in order to have all the information we need to start a project. 
     
-We want one issue per font project because we allow a PR to make changes to one font directory *only*. Therefore the issue can be closed by the PR that makes these changes. As we say above, it doesn't mean that the project is completed though. It happens that we see a problem in sandbox; in this case we re-open the issue to fix it with another PR. Therefore several PRs can be linked to the same issue. <figure>
+We want one issue per font project because we allow a PR to change one font directory *only*. Therefore, the issue can be closed by the PR that makes these changes. As we say above, it doesn't mean that the project is completed, though. It happens that we see a problem in sandbox; in this case, we re-open the issue to fix it with another PR. Therefore several PRs can be linked to the same issue. <figure>
 <img src="./images/onboarder-workflow/severalPRs.png" style="width:2568px" alt="Several linked PRs for one issue" />
 <figcaption aria-hidden="true">An example of project that needed several edits after merging.</figcaption>
 </figure>
@@ -127,23 +133,23 @@ We want one issue per font project because we allow a PR to make changes to one 
     
 ###  Labels
 
-1. All issues should be labelled at least with a *primary category label* (startwith `I`). These labels are **grey** and inform about the **type of project**, typically: <mark class=grey>I New font</mark>, <mark class=grey>I Font upgrade</mark>, <mark class=grey>I Font bug</mark>.
+1. All issues should be labeled at least with a *primary category label* (start with `I`). These labels are **grey** and inform about the **type of project**, typically: <mark class=grey>I New font</mark>, <mark class=grey>I Font upgrade</mark>, <mark class=grey>I Font bug</mark>.
 
-2. The *secondary category labels* (start with `II`) are **green** and allow to add **mandatory additional informations**. 
+2. The *secondary category labels* (start with `II`) are **green** and allow to add **mandatory additional information**. 
     
     Every <mark class=grey>new fonts</mark> issues should be labelled with a light-green label: 
 
     - <mark class=green>II Commissioned</mark>: any project Google financed partly or fully.
-    - <mark class=green>II Submitted</mark> or <mark class=green>II Accepted</mark>: commissioned projects have priority over accepted submitted projects.
+    - <mark class=green>II Submitted</mark> or <mark class=green>II Accepted</mark>. Commissioned projects have priority over accepted submitted projects.
         
-    When the primary language supported is a complex script (usually not Latin-Cyrillic-Greek), a dark-green label must inform us about it. Indeed, the world languages need a special care for the API to display the script appropriately, they also need onboarders with expertise to take care of them. We divided them into script categories: 
+    When the primary language supported is a complex script (usually not Latin-Cyrillic-Greek), a dark-green label must inform us about it. Indeed, the world languages need special care for the API to display the script appropriately, they also need onboarders with expertise to take care of them. We divided them into script categories: 
     
     - <mark class=darkgreen>II African</mark>
     - <mark class=darkgreen>II Arabic / Hebrew / Semitic / RTL</mark>
     - <mark class=darkgreen>II CJK</mark>
     - <mark class=darkgreen>II Indic / Brahmic / Thai / Tai</mark>
     
-    We also use a dark-green labels to precise certain conditions/technologies that requires special attention such as:
+    We also use dark-green labels to precise certain conditions/technologies that require special attention such as:
     
     - <mark class=darkgreen>II Color font</mark>
     - <mark class=darkgreen>II Custom axes</mark>
@@ -157,9 +163,9 @@ We want one issue per font project because we allow a PR to make changes to one 
     - <mark class=orange>III VF Replacement</mark>  
 
 4. When in doubt, **call on someone else** with these **blue** labels:
-    - <mark class=blue>-- Needs manager's opinion</mark>: This is to apply when Chris and/or Dave are the only one to make a decision about the issue. It is better to list these in the "Pipeline meeting" doc to be sure they don't remained unnotinced.
-    - <mark class=blue>-- Needs Eng team opinion</mark>: typically issues/bug related to the API. Better to list these in the "technical pipeline meeting" doc to be sure they don't remained unnotinced.
-    - <mark class=blue>-- Needs expertise</mark>: for example if the primary script is a complex script, applying this label allow us to know that an expert in this script should be assigned to review this issue.
+    - <mark class=blue>-- Needs manager's opinion</mark>: This is to apply when Chris and/or Dave are the only ones to make a decision about the issue. It is better to list these in the "Pipeline meeting" doc to be sure they don't remain unnoticed.
+    - <mark class=blue>-- Needs Eng team opinion</mark>: typically issues/bug related to the API. Better to list these in the "technical pipeline meeting" doc to be sure they don't remain unnoticed.
+    - <mark class=blue>-- Needs expertise</mark>: for example, if the primary script is a complex script, applying this label allows us to know that an expert in this script should be assigned to review this issue.
 
 
 ### Progress status
@@ -171,21 +177,22 @@ The progress status exists through the Project Board. Like the Priorities, they 
 <figcaption aria-hidden="true">Three dot menu > settings > Custom fields<figcaption>
 </figure>
 
+<br><br>
 
 - <mark class=yellow>To do</mark>: default status when an issue is raised.
 
 **Manual status:**
 - <mark class=orange>In progress</mark>: the onboarder has started to work upstream on the project.
 - <mark class=grey>Blocked</mark>: something is blocking the onboarding process.
-- <mark class=grey>Won't happen</mark>: after discussion it has been decided to not proceed with the onboarding.
+- <mark class=grey>Won't happen</mark>: after discussion, it has been decided to not proceed with the onboarding.
 
 **Automatic status:**
 - <mark class=purple>PR GF</mark>: the font is packaged in a PR to google/fonts repo.
-- <mark class=pink>In Dev</mark>: the PR has been merged, the font is in the dev-sandbox.
+- <mark class=pink>In Dev</mark>: the PR has been merged, and the font is in the dev-sandbox.
 - <mark class=yellow>In Sandbox</mark>: the font is now in Sandbox.
 - <mark class=green>Live</mark>: the font is in production.
 
-The progress status from <mark class=orange>In progress</mark> to <mark class=purple>PR GF</mark> are set manually by the onboarder managing that project. The ones form <mark class=pink>In Dev</mark> to <mark class=green>Live</mark> should be automated thanks to `gftools push module` (see below for more information). 
+The progress status from <mark class=orange>In progress</mark> to <mark class=purple>PR GF</mark> is set manually by the onboarder managing that project. The ones from <mark class=pink>In Dev</mark> to <mark class=green>Live</mark> should be automated thanks to `gftools push module` (see below for more information). 
 
 This is how to set the progress status manually:
 
@@ -194,10 +201,14 @@ This is how to set the progress status manually:
 <figcaption aria-hidden="true">How to set the progress status in an issue.<figcaption>
 </figure>
 
+<br><br>
+
 <figure>
 <img src="./images/onboarder-workflow/status-milestone.png" style="width:2568px"alt="Progress status from teh milestone tab" />
 <figcaption aria-hidden="true">How to set a status from the Milestone tab.<figcaption>
 </figure>
+
+<br><br>
 
 <figure>
 <img src="./images/onboarder-workflow/status-onboarder.png" style="width:2568px"alt="Progress status from the onboarder's tab" />
@@ -209,9 +220,9 @@ This is how to set the progress status manually:
 
 - **The original designer should be tagged when possible.** 
 
-    The issue become then the place for the designer to update us about their progress and notify onboarders that the font is ready for review. If they have a problem, they can also report it there and link to a specific issue; this way we have a good track of the different events that block us from onboarding a font.
+    The issue becomes then the place for the designer to update us about their progress and notify onboarders that the font is ready for review. If they have a problem, they can also report it there and link to a specific issue; this way we have a good track of the different events that block us from onboarding a font.
 
-- **The upstream repo must be linked in the issue.**
+- **The upstream repo must be linked to the issue.**
 
     Sometimes, multiple sources of a font can exist on GitHub, or a source may be difficult to find. To make life easier for onboarders, a link to the source repo must be included. We try to ensure that the upstream is the original source of the font (typically, the repo was made by the font's designer), and not using some fork as a source. When an author is unresponding after giving consent to collaborate with Google Font, we may need to fork the project in the [googlefonts repository](https://github.com/googlefonts) so we can maintain it ourselves.
 
