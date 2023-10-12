@@ -119,15 +119,15 @@ Advanced content for experienced contributors or team members with the details o
 * <mark class="brown">team&nbsp;</mark>
   [Description file](description.md)
 * <mark class="brown">team&nbsp;</mark>
-  [Onboarder workflow guide](onboarder-workflow.md)
-* <mark class="brown">team&nbsp;</mark>
-  [Reviewing PRs and sandbox](sandbox.md)  
+  [Onboarder workflow guide](onboarder-workflow.md) 
 * <mark class="grey">templ</mark>
   [Designer Profile](profile.md) 
 * <mark class="grey">templ</mark>
   [Promo / Marketing](marketing.md)
 * <mark class="purple">nerd&nbsp;</mark>
   [Lang repo](lang.md)
+* <mark class="brown">team&nbsp;</mark>
+  [Axis Registry repo](axis-registry.md)
    
 
 <!-- ## More info
