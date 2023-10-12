@@ -46,7 +46,6 @@ name: "Example Sans"
 designer: "Firstname Lastname, Person Two, Person Three"
 license: "OFL"
 category: "SANS_SERIF"
-category: "MONOSPACE"
 date_added: "2021-09-30"
 fonts {
   name: "Example Sans"
@@ -77,6 +76,7 @@ source {
   commit: "d9098c0a72125d411dbb225a2e5a61dc15265ffc"
 }
 minisite_url: "https://myfontwebsite.com"
+stroke: "SANS_SERIF"
 ```
 
 ### Example Variable Fonts Family
@@ -85,7 +85,6 @@ minisite_url: "https://myfontwebsite.com"
 name: "Example Serif"
 designer: "Firstname Lastname, Person Two, Person Three"
 license: "OFL"
-category: "SERIF"
 category: "MONOSPACE"
 date_added: "2021-09-30"
 fonts {
@@ -129,6 +128,8 @@ source {
   commit: "d9098c0a72125d411dbb225a2e5a61dc15265ffc"
 }
 minisite_url: "https://myfontwebsite.com"
+stroke: "SERIF"
+classification: "MONOSPACE"
 ```
 
 ## Description of Keys
@@ -160,8 +161,7 @@ Examples:
 -   `designer: "Anja Meiners"` — An individual's name is preferred; typically there is an individual who is the principle designer of the typeface family, even if they are no longer the primary maintainer of the project
 -   `designer: "TypeTogether"` — Sometimes a formal organization designs a family and no individual there can be attributed as the principle designer
 -   `designer: "Huerta Tipográfica"` — Non-ascii characters are supported as UTF-8
--   `designer: "Multiple Designers"` — This was used 2011 to 2016, when several people are involved in the design of a project, but are not working in a formal organization, or listing all their names would be too long to work well in the catalog UI as it was from 2011 to 2016. Many of these values persist, but should be updated as follows
--   `designer: "Principal Designer, Contributor, Contributor"` — In 2016 the catalog UI added a feature to show several named contributors on each font family specimen page, where the value of this key is a comma separated list, and the first item in the list is shown the the credit "Principal Design" (Examples: [Rubik](https://fonts.google.com/specimen/Rubik), [Castoro](https://fonts.google.com/specimen/Castoro), [Pacifico](https://fonts.google.com/specimen/Pacifico))
+-   `designer: "Principal Designer, Contributor, Contributor"` — In 2016 the catalog UI added a feature to show several named contributors on each font family specimen page, where the value of this key is a comma separated list, and the first item in the list is shown the credit "Principal Design" (Examples: [Rubik](https://fonts.google.com/specimen/Rubik), [Castoro](https://fonts.google.com/specimen/Castoro), [Pacifico](https://fonts.google.com/specimen/Pacifico))
 
 ### license
 
@@ -181,7 +181,7 @@ Typographic classification, one of 5 possible values:
 -   `category: "HANDWRITING"`
 -   `category: "MONOSPACE"`
 
-Since 2022, it is possible to assign a family with multiple categories (usually two). The second one assigned in the METADATA.pb would be the main one.
+This key is deprecated in the API (cf. below Stroke and Classification), but still mandatory to fill up in METADATA.pb
 
 ### fonts
 
@@ -281,47 +281,17 @@ Value of the font file's [`name`](https://www.microsoft.com/typography/otspec/na
 
 Copyright notice. Example: `copyright: "Copyright 2011 The ABeeZee Project Authors (github.com/username/example-serif)"`
 
-Typically this matches the value of the copyright notice in the first lines of the license file. Typically this matches the font file [`name`](https://www.microsoft.com/typography/otspec/name.htm) table ID 0. If multiple ID 0s exist, they must match.
+Typically this matches the value of the copyright notice in the first lines of the license file. It also matches the font file [`name`](https://www.microsoft.com/typography/otspec/name.htm) table ID 0. If multiple ID 0s exist, they must match.
 
 ### subsets
 
 List of all character subsets available in Google Fonts API for the given font family. They are described as languages, but they are actually script sets.
 
-These subsets are defined in [GF Glyphsets repo](https://github.com/googlefonts/glyphsets/tree/main/Lib/glyphsets/encodings) —with the exception of the `menu` subset.
+These subsets are defined in [GF Glyphsets repo](https://github.com/googlefonts/glyphsets/tree/main/Lib/glyphsets/encodings) —with the exception of the `menu` subset. 
 
-The menu subset is the characters of the font family name (defined above) and is used in font picker UIs to render the font name in itself. They must be sorted in alphabetical order.
+The `menu` subset is the characters of the font family name (defined above) and is used in font picker UIs to render the font name in itself. 
 
-29 possible values:
-
--   `arabic`
--   `bengali`
--   `chinese-simplified`
--   `cyrillic`
--   `cyrillic-ext`
--   `devanagari`
--   `ethiopic`
--   `greek`
--   `greek-ext`
--   `gujarati`
--   `gurmukhi`
--   `hebrew`
--   `japanese`
--   `kannada`
--   `khmer`
--   `korean`
--   `lao`
--   `latin`
--   `latin-ext`
--   `malayalam`
--   `menu`
--   `myanmar`
--   `oriya`
--   `sinhala`
--   `tamil`
--   `telugu`
--   `thai`
--   `tibetan`
--   `vietnamese`
+The subsets must be sorted in alphabetical order. The possible values are the same the available `nam` files. For example, if a `nam` file is named `chorasmian_unique-glyphs.nam` the key in `METADATA.pb` would be `subsets: "chorasmian"` (the `nam` file path without "_unique-glyphs.nam")
 
 ### primary script
 
@@ -332,6 +302,16 @@ Example:
 
 ```code
 primary_script: "Arab"
+```
+
+### Languages
+
+This key aims to restrict the number of languages shown in a specimen page. It is mandatory in all Noto fonts but not recommended in non-Nono fonts. It can be useful though when a font support the glyphs of a specific language only.
+
+Example:
+
+```code
+languages: "gu_Gujr"  # Gujarati
 ```
 
 ### registry_default_overrides
@@ -388,4 +368,63 @@ Example:
 
 ``` code
 minisite_url: "https://myfontwebsite.com"
+```
+
+
+### Classification
+
+TO DO
+
+### Stroke
+
+TO DO
+
+### Sample text
+
+This key overrides the sample texts provided in the languages texprotos (that you can find in the [Lang](https://github.com/googlefonts/lang/tree/main/Lib/gflanguages/data/languages) repository).
+
+If sample text is given within a sample text group (e.g. poster, specimen), all fields within that group must be provided.
+
+- `masthead_full` is a 4 glyphs string (e.g. AaBb) used in a single-script masthead. It is used in specimen masthead component.
+- `masthead_partial` is a 2 glyphs string (e.g. AaBb) that contributes in building a multi-script masthead. It is used in specimen masthead component.
+- `styles` is a phrase that has 40-60 chars. Used in presenting the font in different styles in specimen styles component.
+- `tester` is a phrase that has 60-90 chars. It is used in presenting the font in GF catalog specimen type tester component.
+
+Poster samples are used in presenting the font in GF catalog specimen poster component. The poster module has 3 different strings shown in 3 different styles. A `sm`, `md`, and `lg` string is needed for each of the three rows in the poster. The poster group is only used in Noto fonts.
+
+- `poster_sm` is a phrase that has 10-15 chars.
+- `poster_md` is a phrase that has 8-12 chars.
+- `poster_lg` is a word that has 3-8 chars.
+
+Specimen samples are used as type ramp samples. The <nn> indicates the rendering size.
+
+- `specimen_48` is a sentence that has 60-70 chars.
+- `specimen_36` is a paragraph that has 100-120 chars.
+- `specimen_32` is a paragraph that has 140-180 chars.
+- `specimen_21` is a passage that has 300-500 chars.
+- `specimen_16` is a passage that has 550-750 chars.
+
+Example:
+
+```code
+sample_text {
+  masthead_full: "🎶🎷🐛"
+  masthead_partial: "🍪"
+  styles: "🥰💀✌️🌴🐢🐐🍄⚽🍻👑📸😬👀🚨🏡🐦‍🔥🍋‍🟩🍄‍🟫🙂‍↕️🕊️🏆😻🌟🧿🍀🎨🍜"
+  tester: "🥰💀✌️🌴🐢🐐🍄⚽🍻👑📸😬👀🚨🏡🐦‍🔥🍋‍🟩🍄‍🟫🙂‍↕️🕊️🏆😻🌟🧿🍀🎨🍜"
+  poster_sm: "😂❤️😍🤣😊🥺🙏💕😭😘👍😅👏😁🔥💖"
+  poster_md: "🥳🧁🍰🎁🎂🎈🎺🎉🎊"
+  poster_lg: "📧〽️🧿🌶️🔋"
+}
+```
+
+### Ordered sample glyphs
+
+This key overrides the Glyphs page on the UI. Example: [Noto Emoji](https://fonts.google.com/noto/specimen/Noto+Emoji/glyphs). Not recommended to use in other fonts than icon/symbols one.
+
+``````
+ordered_sample_glyphs {
+  name: "Smileys and emotions"
+  glyphs: "😀 😃 😄 😁 😆 😅 😂 🤣 😭 😉 😗 😙 😚 😘 🥰 😍 🤩 🥳 🙃 🙂 🥲 🥹 😋 😛 😝 😜 🤪 😇 😊 ☺️ 😏 😌 😔 😑 😐 😶 🫡 🤔 🤫 🫢 🤭 🥱 🤗 🫣 😱 🤨 🧐 😒 🙄 😮‍💨 😤 😠 😡 🤬 🥺 😟 😥 😢 ☹️ 🙁 🫤 😕 🤐 😰 😨 😧 😦 😮 😯 😲 😳 🤯 😬 😓 😞 😖 😣 😩 😫 😵 😵‍💫 🙂‍↔️ 🙂‍↕️ 🫥 😴 😪 🤤 🌛 🌜 🌚 🌝 🌞 🫠 😶‍🌫️ 🥴 🥵 🥶 🤢 🤮 🤧 🤒 🤕 😷 🤠 🤑 😎 🤓 🥸 🤥 🤡 👻 💩 👽 🤖 🎃 😈 👿 👹 👺 🔥 💫 ⭐ 🌟 ✨ 💥 💯 💢 💨 💦 🫧 💤 🕳️ 🎉 🎊 🙈 🙉 🙊 😺 😸 😹 😻 😼 😽 🙀 😿 😾 ❤️ 🧡 💛 💚 💙 💜 🤎 🖤 🤍 ♥️ 💘 💝 💖 💗 💓 💞 💕 💌 💟 ❣️ ❤️‍🩹 💔 ❤️‍🔥 💋 🫂 👥 👤 🗣️ 👣 🧠 🫀 🫁 🩸 🦠 🦷 🦴 ☠️ 💀 👀 👁️ 👄 🫦 👅 👃 👂 🦻 🦶 🦵 🦿 🦾 💪 👍 👎 👏 🫶 🙌 👐 🤲 🤝 🤜 🤛 ✊ 👊 🫳 🫴 🫱 🫲 🤚 👋 🖐️ ✋ 🖖 🤟 🤘 ✌️ 🤞 🫰 🤙 🤌 🤏 👌 🖕 ☝️ 👆 👇 👉 👈 🫵 ✍️ 🤳 🙏 💅"
+}
 ```
