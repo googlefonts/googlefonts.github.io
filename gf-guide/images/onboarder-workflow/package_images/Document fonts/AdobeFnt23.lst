@@ -1,0 +1,71 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/rosalie/Google/repo/googlefonts/gf-guide/images/onboarder-workflow/package_images/Document fonts/.DS_Store
+FileLength:6148
+FileModTime:716224679
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/rosalie/Google/repo/googlefonts/gf-guide/images/onboarder-workflow/package_images/Document fonts/AdobeFnt23.lst
+FileLength:1751
+FileModTime:716308904
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Commissioner-Thin
+FamilyName:Commissioner
+StyleName:Thin
+MenuName:Commissioner Thin
+FamilyPrefix:Commissioner
+StyleBits:0
+WeightClass:100
+WidthClass:5
+AngleClass:0
+FullName:Commissioner Thin
+WritingScript:Roman
+OutlineFileName:/Users/rosalie/Google/repo/googlefonts/gf-guide/images/onboarder-workflow/package_images/Document fonts/Commissioner-VariableFont_FLAR,VOLM,slnt,wght.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:TrueTypeVariableFont
+FileLength:739544
+FileModTime:704764782
+NameArray:0,Win,1,Commissioner Thin
+NameArray:0,Win,16,Commissioner
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:/Users/rosalie/Google/repo/googlefonts/gf-guide/images/onboarder-workflow/package_images/Document fonts/MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:714242532
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
