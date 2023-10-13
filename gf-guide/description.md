@@ -111,17 +111,19 @@ while Katakana and Kanji are slightly heavier, which gives the unique rhythm and
 
 ## The Article
 
-- ARTICLE.en_us.html file and images should live in an `article/` directory alongside the `METDATA.pb` file
+The Article is a new expanded version of the `DESCRIPTION.en_us.html` file. It can include images and longer-form information and content. It shows up on the Google Fonts site as the main content in the About & License section. For example, see the About page for [Gulzar](https://fonts.google.com/specimen/Gulzar/about), and then view the `ofl/gulzar` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/gulzar](https://github.com/google/fonts/tree/main/ofl/gulzar). Here are some guidelines for how to prepare the `article/` directory and files:
+
+- `ARTICLE.en_us.html` file and images should live in an `article/` directory alongside the `METDATA.pb` file in the root of the `ofl/fontname` directory (replace `fontname` with whatever font you are working on).
 - Strong preference for JPG/SVG. 
-- JPEGs are optimized in the sense that a lower resolution will be downloaded on smaller viewport sizes. 
+- JPEGs are optimized so that a lower resolution images will be downloaded on smaller viewport sizes.
 - Supported image formats: JPG, PNG, SVG
 - Max image size for SVG is 800 KB; for other formats is 1.75 MB (enforced by knowledge_graph.py GitHub workflow)
 - Allowed elements: same as description with the addition of `<img>`
-- width recomended: at least 1000px
-- resolution: 72ppm
-- no particular proportion needed, it will be resized by the container
-- Article dir should be added at onboarding time
-- Noto are combining description file + article
-- Other font would have the description overritten by the artile, 
-    - therefore we can shift all the description content into the article content
-    - and we can remove the description file from the font directory once an article is integrated
+- Width recommended: at least 1000px
+- Resolution: 72dpi
+- No particular proportion is needed, it will be resized by the container
+- The Article directory should be added at onboarding time
+- Noto projects are combining Description file + Article
+- Other fonts will have the Description overwritten by the Artile,
+    - Therefore we can shift all the Description content into the Article content
+    - And we can remove the Description file from the font directory once an Article is integrated
