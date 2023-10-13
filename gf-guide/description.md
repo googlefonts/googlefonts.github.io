@@ -113,7 +113,7 @@ while Katakana and Kanji are slightly heavier, which gives the unique rhythm and
 
 The Article is a new expanded version of the `DESCRIPTION.en_us.html` file that can include images and longer-form information and content. It appears on the Google Fonts site as the main content in the About & License section. For example, see the About page for [Gulzar](https://fonts.google.com/specimen/Gulzar/about), and then view the `ofl/gulzar` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/gulzar](https://github.com/google/fonts/tree/main/ofl/gulzar). 
 
-The `ARTICLE.en_us.html` file and images should live in an `article/` directory alongside the `METDATA.pb` file in the root of the `ofl/fontname` directory. It is expected that only the Noto fonts combine the `DESCRIPTION.en_us.html` and `ARTICLE.en_us.html` files. All the other families (non-Noto) will have their descriptions overwritten by Article. This means we can shift all the Description content into the Article content and delete the `DESCRIPTION.en_us.html` from the font directory.
+The `ARTICLE.en_us.html` file and images should live in an `article/` directory alongside the `METDATA.pb` file in the root of the `ofl/fontname` directory. Typically, only the Noto fonts are expected to combine the `DESCRIPTION.en_us.html` and `ARTICLE.en_us.html` files. For all the other families (non-Noto), if an article with images is added, the description should be overwritten by the Article. This means we should shift all the Description content into the Article and delete the `DESCRIPTION.en_us.html` from the font directory.
 
 Here are some guidelines for how to prepare the `article/` directory and files:
 
