@@ -111,19 +111,14 @@ while Katakana and Kanji are slightly heavier, which gives the unique rhythm and
 
 ## The Article
 
-The Article is a new expanded version of the `DESCRIPTION.en_us.html` file. It can include images and longer-form information and content. It shows up on the Google Fonts site as the main content in the About & License section. For example, see the About page for [Gulzar](https://fonts.google.com/specimen/Gulzar/about), and then view the `ofl/gulzar` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/gulzar](https://github.com/google/fonts/tree/main/ofl/gulzar). Here are some guidelines for how to prepare the `article/` directory and files:
+The Article is a new expanded version of the `DESCRIPTION.en_us.html` file. It can include images and longer-form information and content. It shows up on the Google Fonts site as the main content in the About & License section. For example, see the About page for [Gulzar](https://fonts.google.com/specimen/Gulzar/about), and then view the `ofl/gulzar` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/gulzar](https://github.com/google/fonts/tree/main/ofl/gulzar). 
 
-- `ARTICLE.en_us.html` file and images should live in an `article/` directory alongside the `METDATA.pb` file in the root of the `ofl/fontname` directory (replace `fontname` with whatever font you are working on).
-- Strong preference for JPG/SVG. 
-- JPEGs are optimized so that a lower resolution images will be downloaded on smaller viewport sizes.
-- Supported image formats: JPG, PNG, SVG
+The `ARTICLE.en_us.html` file and images should live in an `article/` directory alongside the `METDATA.pb` file in the root of the `ofl/fontname` directory. The Noto fonts are combining the `DESCRIPTION.en_us.html` and `ARTICLE.en_us.html` files. Although, all the other families (non-Noto) will have their description overwritten by Article. This means that we can shift all the Description content into the Article content, and delete the `DESCRIPTION.en_us.html` from the font directory.
+
+Here are some guidelines for how to prepare the `article/` directory and files:
+
+- Supported image formats: JPG, PNG, SVG but there is a strong preference for JPG/SVG. JPEGs are optimized so that a lower resolution images will be downloaded on smaller viewport sizes.
 - Max image size for SVG is 800 KB; for other formats is 1.75 MB (enforced by knowledge_graph.py GitHub workflow)
 - Allowed elements: same as description with the addition of `<img>`
-- Width recommended: at least 1000px
-- Resolution: 72dpi
-- No particular proportion is needed, it will be resized by the container
-- The Article directory should be added at onboarding time
-- Noto projects are combining Description file + Article
-- Other fonts will have the Description overwritten by the Artile,
-    - Therefore we can shift all the Description content into the Article content
-    - And we can remove the Description file from the font directory once an Article is integrated
+- Width recommended: at least 1000px. No particular proportion are needed, the image will be resized by the container.
+- Resolution: 72dpi.
