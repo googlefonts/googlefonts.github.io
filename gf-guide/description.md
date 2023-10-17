@@ -123,4 +123,4 @@ Here are some guidelines for how to prepare the `article/` directory and files:
 - Width recommended: at least 1000px. No particular proportions are needed; the container will resize the image.
 - Resolution: 72dpi.
 
-**Allowed HTML elements:** Same as description with the addition of `<img>`
+**Allowed HTML elements:** Same as description with the addition of `<img>` and more elements including: `<a>`,`<b>`,`<blockquote>`,`<code>`,`<em>`,`<figcaption>`,`<figure>`,`hr`,`h3`,`h4`,`h5`,`i`,`img`,`li`,`p`,`pre`,`span`,`strong`,`ul`,`ol`,`sub`
