@@ -18,11 +18,11 @@ This means several things:
 </ol>
 
 The workflow described below was designed to ensure no lost products during the validation process, to facilitate the latter, and to keep people updated about the status of different projects. It requires active maintenance and regular updates from team members.
-<br><br>
+<br>
 It also seemed important to keep the whole status of the repository in one place, mostly to avoid copy-pasting PR links all the time. Therefore, a complete Github-based workflow was chosen, making extensive use of the <a href="https://github.com/google/fonts/issues">issue tracker</a>, the <a href="https://github.com/google/fonts/milestones">milestones</a> feature, the <a href="https://github.com/google/fonts/projects">project boards</a>, and the <a href="https://github.com/google/fonts/actions">continuous integration system</a>.
-<br><br>
+<br>
 This guide will help team members understand the validation process of a font family and the actions required from them to help that process.
-<br><br>
+<br>
 → <a href="https://google.github.io/fonts/">google.github.io/fonts</a> is a page updated weekly that reports on activity in the <a href="https://github.com/google/fonts">google/fonts</a> repo.
 
 </div>
@@ -43,12 +43,12 @@ This guide will help team members understand the validation process of a font fa
 
 To preserve the synchronization of source files, the [google/fonts repository](https://github.com/google/fonts) doesn't host font *sources* —only font *binaries*.
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/upstream-downstream.png" style="width:2568px" alt="Screenshot of an issue from google/fonts issue tracker." />
 <figcaption aria-hidden="true">Upstream to Downstream.</figcaption>
 </figure>
-
-<br><br>
+<br>
 
 "Upstream" is the further we can go to the original files; since [google/fonts](https://github.com/google/fonts) is only hosting a copy of the font files —pulled from that original designer's repository— we can say that google/fonts is somewhere *down* the stream. The API processes that file and serves a subsetted version, but the original font file can be found in the downloadable zip file from the platform. 
 
@@ -61,12 +61,12 @@ None of these three instances are directly linked, though. At least three person
 
 The font doesn't go directly to the live API; it has to travel through intermediate servers, where it will be reviewed and validated again to ensure the API is showing the font correctly.
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/workflow.png" style="width:2568px" alt="Graphic showing the onboarding process from the issue in google/fonts repository, to a public release on fonts.google.com" />
 <figcaption aria-hidden="true">From the issue to fonts.google.com</figcaption>
 </figure>
-
-<br><br>
+<br>
 
 This graphic shows how a project travels from the google/fonts GitHub repository to [fonts.google.com](https://fonts.google.com).
 
@@ -92,17 +92,17 @@ The project board is a way to sort all the font project issues that are containe
 
 Each issue that we intend to care for should be added to the Google Fonts project board, but also to a milestone. This allows us to divide and anticipate the workload in time.
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/milestones-tab.png" style="width:2568px" alt="How the Milestone tab looks into the Google Fonts project board."/>
 <figcaption aria-hidden="true">Miletones</figcaption>
 </figure>
-
-<br><br>
+<br>
 
 To preserve a clean workflow, the Milestone needs to be assessed at the end of the quarter so we can move the still-open issues to the next Milestone to be able to close this one. 
 
 To have a proper overview of the milestones, the `Milestones` tab in the GF board allows to see all *open* issues (triaged by quarter). We can see all the necessary information linked to an issue: the onboarder assigned, the priority level, the progress status, and the labels.
-
+<br>
 <figure>
 <img src="./images/onboarder-workflow/issue-gfboard.png" style="width:2568px" alt="When clicking on a issue, a window opened with more details about that issue"/>
 <figcaption aria-hidden="true">Issue viewed from the GF Board</figcaption>
@@ -114,6 +114,7 @@ To have a proper overview of the milestones, the `Milestones` tab in the GF boar
 
 For the project manager and the onboarder, the bridge between what happens upstream and what is reported downstream is made through the issues. In order to track the project appropriately, the issue must contain a certain number of information, and for that, we use the GitHub API extensively.
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/issue.png" style="width:2568px" alt="What do you see when looking into an issue from google/fonts issue tracker." />
 <figcaption aria-hidden="true">Issue viewed from the google/fonts issue tracker.</figcaption>
@@ -127,6 +128,7 @@ Issues can be used to communicate with the designer and should be updated regula
 
 We want one issue per font project because we allow a PR to change one font directory *only*. Therefore, the issue can be closed by the PR that makes these changes. As we say above, it doesn't mean that the project is completed, though. It happens that we see a problem in sandbox; in this case, we re-open the issue to fix it with another PR. Therefore several PRs can be linked to the same issue.
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/severalPRs.png" style="width:2568px" alt="Several linked PRs for one issue" />
 <figcaption aria-hidden="true">An example of project that needed several edits after merging.</figcaption>
@@ -174,12 +176,12 @@ We want one issue per font project because we allow a PR to change one font dire
 
 The progress status exists through the Project Board. Like the Priorities, they are not labels but a proper custom field displayed as a column in the project boards. It is possible to add more custom fields (and also modify them) in one project board's settings.
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/custom-fields.png" style="width:2568px"alt="Where to find these custom fields" />
 <figcaption aria-hidden="true">Three dot menu > settings > Custom fields</figcaption>
 </figure>
-
-<br><br>
+<br>
 
 - <mark class=yellow>To do</mark>: default status when an issue is raised.
 
@@ -198,20 +200,20 @@ The progress status from <mark class=orange>In progress</mark> to <mark class=pu
 
 This is how to set the progress status manually:
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/status.png" style="width:2568px"alt="Progress status from an issue" />
 <figcaption aria-hidden="true">How to set the progress status in an issue.</figcaption>
 </figure>
 
-<br><br>
+<br>
 
 <figure>
 <img src="./images/onboarder-workflow/status-milestone.png" style="width:2568px"alt="Progress status from teh milestone tab" />
 <figcaption aria-hidden="true">How to set a status from the Milestone tab.</figcaption>
 </figure>
 
-<br><br>
-
+<br>
 <figure>
 <img src="./images/onboarder-workflow/status-onboarder.png" style="width:2568px"alt="Progress status from the onboarder's tab" />
 <figcaption aria-hidden="true">How to set the progress status from the Onboarder's tab.</figcaption>
@@ -230,6 +232,7 @@ This is how to set the progress status manually:
 
 ## The closed issues
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/closedissues-tab.png" style="width:2568px" alt="The Closed Issues tab in the Google Fonts project board." />
 <figcaption aria-hidden="true">Closed Issues</figcaption>
@@ -240,10 +243,12 @@ The `Closed issues` tab allows to follow the status of each project once they ha
 
 ## Submissions to review
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/submission-tab.png" style="width:2568px" alt="The Submissions to review tab in the Google Fonts project board." />
 <figcaption aria-hidden="true">Submissions to review</figcaption>
 </figure>
+<br>
 
 The `Submissions to review` tab is filtered by the <mark class=green>submission</mark> label. The submission issues are typically divided into two milestones: the "submission to review" and the "icebox" milestones.
 
@@ -261,6 +266,7 @@ This is how we proceed once a new font is proposed through the issue tracker:
 
 - Sometimes the font is clearly not professional and needs several month of practice and work by the designer: in that case we close the issue "as not planned" with a small paragraph with suggestion on how to improve the quality of the font —in addition of links to tutorial or some relevant chapters sof the GF guide.
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/closed-as-not-planned.png"style="width:2568px" alt="The Submissions to review tab in the Google Fontsproject board." />
 <figcaption aria-hidden="true">How to answer a spam</figcaption>
@@ -316,6 +322,7 @@ So when to close an issue?
 
 The `Onboarders` tabs are the special project management spaces for each onboarder individually. They can see what is assigned to them, and update the status of each issue by dragging and dropping the issue from a column to another. They are also asked to update regularly the status of project in comment of the related issue.
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/rosalie-tab.png" style="width:2568px" alt="Example of an individual onboarder's tab" />
 <figcaption aria-hidden="true">Individual onboarder tab</figcaption>
@@ -328,27 +335,35 @@ The traffic Jam project board is the space where we track, sort and filter the P
 
 The first tab would group the PRs by `Servers` and sort them by `Lists`. It is particularly useful at the moment of preparing/generating the push lists. You can see everything that is in the dev-sandbox and decide to block and add to a list.
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/trafficjam-servers1.png" style="width:2568px" alt="" />
 <figcaption aria-hidden="true">Traffic Jam's first tab; folded; grouped by Servers</figcaption>
 </figure>
 
+<br>
+
 <figure>
 <img src="./images/onboarder-workflow/trafficjam-servers2.png" style="width:2568px" alt="" />
 <figcaption aria-hidden="true">Traffic Jam's first tab; unfolded; sorted by lists</figcaption>
 </figure>
+<br>
 
 The second tab would group the PRs by `Lists` and sort them by `Labels`. It is particularly useful at the moment of checking the fonts in the servers. You can see everything that belonged to a list by type of project and decide to block or to upgrade list.
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/trafficjam-lists1.png" style="width:2568px" alt="" />
 <figcaption aria-hidden="true">Traffic Jam's second tab; folded; grouped by lists</figcaption>
 </figure>
 
+<br>
+
 <figure>
 <img src="./images/onboarder-workflow/trafficjam-lists2.png" style="width:2568px" alt="" />
 <figcaption aria-hidden="true">Traffic Jam's second tab; unfolded; sorted by labels</figcaption>
 </figure>
+<br>
 
 The `status` column is updated thanks to the `gftools push module`. It checks the servers against the font families and output which server displays which version. The `lists` column on the other hand is updated manually.
 
@@ -371,6 +386,7 @@ Every new PRs will be automatically added to the Traffic Jam board, except for t
 - The PRs don't need to be put into a milestone because the issues are already tracked in the milestones (it would be duplicated data).
 - If the PR is still in progress and a review is not needed yet, it should be turned into a draft PR. But it is recommended to package the font only when the font files are ready and passed all the quality assurance tests. This stage is supposed to only be a second opinion.
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/PR.png" style="width:2568px" alt="" />
 <figcaption aria-hidden="true">How a Pull request looks like</figcaption>
@@ -462,20 +478,26 @@ Fontbakery has already some exception lists when it comes to [RFN](https://githu
 
 You can find the dowloadable artifacts under `checks > Google Fonts QA > qa`. This zip file consist in proof and diff images to ensure also a QA by a human eyes. 
 
+<br>
 <figure>
 <img src="./images/onboarder-workflow/checks.png" style="width:2568px" alt="" />
 <figcaption aria-hidden="true">Checks Tab</figcaption>
 </figure>
+
+<br>
 
 <figure>
 <img src="./images/onboarder-workflow/checks2.png" style="width:2568px" alt="" />
 <figcaption aria-hidden="true">Google Fonts QA action</figcaption>
 </figure>
 
+<br>
+
 <figure>
 <img src="./images/onboarder-workflow/checks3.png" style="width:2568px" alt="" />
 <figcaption aria-hidden="true">Zip file to download under the artifacts section</figcaption>
 </figure>
+<br>
 
 Check new fonts with the proof reports:
 - the design is consistent througout all styles
@@ -692,10 +714,12 @@ The lang repo contains textprotos to define [script](https://github.com/googlefo
 
     Eg. `primary_script: "Arab"`
 
+    <br>
     <figure>
     <img src="./images/onboarder-workflow/scheherazade.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Scheherazade New displaying arabic script by default instead of Latin (random language selection or user's country specific).</figcaption>
     </figure>
+    <br>
 
 - The **languages** directory contains textprotos which define several key entries for a specific language, but also the sample texts displayed in the specimen page. Each defined language uses the script ID to know to which script this language is linked to.
 
@@ -726,10 +750,12 @@ The lang repo contains textprotos to define [script](https://github.com/googlefo
 
     Therefore if a font's `METADATA.pb` has a defined primary script key, it should be possible to access all the language specific to that script in the specimen page of the API.
 
+    <br>
     <figure>
     <img src="./images/onboarder-workflow/egyptian.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Scheherazade New displaying Egyptian Arabic instead of Arabic from another language.</figcaption>
     </figure>
+    <br>
 
     It happens that a font contains only glyphs specific to a certain language of a script, and not all the languages of that script. It is the case for the Noto collection and some fonts from SIL. In this case, the languages are also defined in the font's `METADATA.pb` to avoid displaying tofu on the specimen page and prevent users from selecting a language that is not supported by the font.
 
@@ -746,10 +772,12 @@ The lang repo contains textprotos to define [script](https://github.com/googlefo
     region_group: "Africa"
     ```
 
+    <br>
     <figure>
     <img src="./images/onboarder-workflow/region.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Regions textprotos reflect on the continent selection menu on the API</figcaption>
     </figure>
+    <br>
 
 It happens that some languages don't have any sample text defined. We can either update the language textproto, or add a `sample_text` entry in `METADATA.pb` which would override any existing sample text. This absence of sample text for a script without the addition of a custom one in `METADATA.pb` would result in an empty specimen page.
 
@@ -762,10 +790,12 @@ It happens that some languages don't have any sample text defined. We can either
 
     These subsets are visually reflected on the UI through the filters, where we select "languages" (which are actually scripts).
 
+    <br>
     <figure>
     <img src="./images/onboarder-workflow/languages.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Scripts menu in Filters</figcaption>
     </figure>
+    <br>
 
     The problem is that this database is a copy of the internal one used by the API. Therefore it can be easy to not be in sync anymore. So when we notice an important glyph is missing from a `nam` file, we follow this process:
 
@@ -793,6 +823,7 @@ The Axis Registry defines:
     <img src="./images/onboarder-workflow/tester1.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Type tester page with sliders</figcaption>
     </figure>
+    <br>
 
 - The instances served by API.
 
@@ -800,6 +831,7 @@ The Axis Registry defines:
     <img src="./images/onboarder-workflow/tester2.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Axis information</figcaption>
     </figure>
+    <br>
 
 - The snippet-information about each axis.
 
@@ -807,6 +839,7 @@ The Axis Registry defines:
     <img src="./images/onboarder-workflow/tester3.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Available instances</figcaption>
     </figure>
+    <br>
 
 - The static instances that will be provided in the zip file:
 
@@ -814,6 +847,7 @@ The Axis Registry defines:
     <img src="./images/onboarder-workflow/zip.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Downloadable zip file</figcaption>
     </figure>
+    <br>
 
 You know if an axis was correctly implemented by checking [fonts.google.com/variablefonts](https://fonts.google.com/variablefonts).
 

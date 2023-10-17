@@ -101,3 +101,8 @@ mark {
     background-color: #ccefff;
     color: #2568B3;
   }
+  figure {
+    font-style: italic;
+    font-weight: bold;
+    font-size: smaller;
+  }
