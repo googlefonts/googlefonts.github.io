@@ -176,7 +176,7 @@ The progress status exists through the Project Board. Like the Priorities, they 
 
 <figure>
 <img src="./images/onboarder-workflow/custom-fields.png" style="width:2568px"alt="Where to find these custom fields" />
-<figcaption aria-hidden="true">Three dot menu > settings > Custom fields<figcaption>
+<figcaption aria-hidden="true">Three dot menu > settings > Custom fields</figcaption>
 </figure>
 
 <br><br>
@@ -200,21 +200,21 @@ This is how to set the progress status manually:
 
 <figure>
 <img src="./images/onboarder-workflow/status.png" style="width:2568px"alt="Progress status from an issue" />
-<figcaption aria-hidden="true">How to set the progress status in an issue.<figcaption>
+<figcaption aria-hidden="true">How to set the progress status in an issue.</figcaption>
 </figure>
 
 <br><br>
 
 <figure>
 <img src="./images/onboarder-workflow/status-milestone.png" style="width:2568px"alt="Progress status from teh milestone tab" />
-<figcaption aria-hidden="true">How to set a status from the Milestone tab.<figcaption>
+<figcaption aria-hidden="true">How to set a status from the Milestone tab.</figcaption>
 </figure>
 
 <br><br>
 
 <figure>
 <img src="./images/onboarder-workflow/status-onboarder.png" style="width:2568px"alt="Progress status from the onboarder's tab" />
-<figcaption aria-hidden="true">How to set the progress status from the Onboarder's tab.<figcaption>
+<figcaption aria-hidden="true">How to set the progress status from the Onboarder's tab.</figcaption>
 </figure>
 
 
