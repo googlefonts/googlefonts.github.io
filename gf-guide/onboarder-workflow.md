@@ -546,7 +546,7 @@ An onboarder on call is in charge of notifying the engineer on call about the ch
 
 A list looks like that:
 
-```
+```code
 # New
 ofl/notosanskawi # https://github.com/google/fonts/pull/6469
 ofl/playpensans # https://github.com/google/fonts/pull/6746
@@ -615,7 +615,7 @@ It is needed to check each pushed family to make sure that indeed the change was
 
     Example:
 
-    ``` 
+    ```code
     🐔 Google font news!
 
     🐣 New fonts this month
@@ -627,7 +627,6 @@ It is needed to check each pushed family to make sure that indeed the change was
     DM Sans, Joan, Sen, Figtree, Signika, Nuosu SIL, Bangers
 
     https://fonts.google.com/share?selection.family=DM+Sans|Joan|Sen|Figtree|Signika|Nuosu+SIL|Bangers
-
     ```
 
 #### Home page
@@ -664,7 +663,7 @@ It is needed to check each pushed family to make sure that indeed the change was
 #### Download button
 
 -   Package is downloadable
-- if new opsz axis: the static locations are consistent with the VF STAT table.
+-   if new opsz axis: the static locations are consistent with the VF STAT table.
 
 ### Relationship between GF / Lang / Glyphsets / Axis Registry
 
@@ -683,7 +682,8 @@ The lang repo contains textprotos to define [script](https://github.com/googlefo
 - The **scripts** directories contains textprotos which two keys, a script name to a script ID.
 
     Eg. `scripts/Arab.textproto`
-    ```
+
+    ```code
     id: "Arab"
     name: "Arabic"
     ```
@@ -701,7 +701,7 @@ The lang repo contains textprotos to define [script](https://github.com/googlefo
 
     Eg. `languages/arz_Arab.textproto`
 
-    ```
+    ```code
     id: "arz_Arab"
     language: "arz"
     script: "Arab"
@@ -739,7 +739,7 @@ The lang repo contains textprotos to define [script](https://github.com/googlefo
 
     Eg. `regions/EG.textproto`
 
-    ```
+    ```code
     id: "EG"
     name: "Egypt"
     population: 104124000
