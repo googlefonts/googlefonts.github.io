@@ -124,33 +124,35 @@ For the project manager and the onboarder, the bridge between what happens upstr
 What do we mean by font project? "Adding a new family", and "upgrading a family" are font projects. We consider the project *completed* once that version of the font hits *production*. Upgrading a font after its release on [fonts.google.com](https://github.com/google/fonts) would be considered as a new project and therefore a new issue for it is required.
 
 Issues can be used to communicate with the designer and should be updated regularly with a comment about the progress status. It is recommended to use the [template issues](https://github.com/google/fonts/issues/new/choose) in order to have all the information we need to start a project. 
-    
-We want one issue per font project because we allow a PR to change one font directory *only*. Therefore, the issue can be closed by the PR that makes these changes. As we say above, it doesn't mean that the project is completed, though. It happens that we see a problem in sandbox; in this case, we re-open the issue to fix it with another PR. Therefore several PRs can be linked to the same issue. <figure>
+
+We want one issue per font project because we allow a PR to change one font directory *only*. Therefore, the issue can be closed by the PR that makes these changes. As we say above, it doesn't mean that the project is completed, though. It happens that we see a problem in sandbox; in this case, we re-open the issue to fix it with another PR. Therefore several PRs can be linked to the same issue.
+
+<figure>
 <img src="./images/onboarder-workflow/severalPRs.png" style="width:2568px" alt="Several linked PRs for one issue" />
 <figcaption aria-hidden="true">An example of project that needed several edits after merging.</figcaption>
 </figure>
 
-    
+
 ###  Labels
 
 1. All issues should be labeled at least with a *primary category label* (start with `I`). These labels are **grey** and inform about the **type of project**, typically: <mark class=grey>I New font</mark>, <mark class=grey>I Font upgrade</mark>, <mark class=grey>I Font bug</mark>.
 
 2. The *secondary category labels* (start with `II`) are **green** and allow to add **mandatory additional information**. 
-    
+
     Every <mark class=grey>new fonts</mark> issues should be labelled with a light-green label: 
 
     - <mark class=green>II Commissioned</mark>: any project Google financed partly or fully.
     - <mark class=green>II Submitted</mark> or <mark class=green>II Accepted</mark>. Commissioned projects have priority over accepted submitted projects.
-        
+
     When the primary language supported is a complex script (usually not Latin-Cyrillic-Greek), a dark-green label must inform us about it. Indeed, the world languages need special care for the API to display the script appropriately, they also need onboarders with expertise to take care of them. We divided them into script categories: 
-    
+
     - <mark class=darkgreen>II African</mark>
     - <mark class=darkgreen>II Arabic / Hebrew / Semitic / RTL</mark>
     - <mark class=darkgreen>II CJK</mark>
     - <mark class=darkgreen>II Indic / Brahmic / Thai / Tai</mark>
-    
+
     We also use dark-green labels to precise certain conditions/technologies that require special attention such as:
-    
+
     - <mark class=darkgreen>II Color font</mark>
     - <mark class=darkgreen>II Custom axes</mark>
     - <mark class=darkgreen>II Icon / symbols / not text</mark>
@@ -258,6 +260,7 @@ This is how we proceed once a new font is proposed through the issue tracker:
 - Sometimes commercial fonts are submitted, or some user are spaming the repo: in this case we simply close the issue "as not planned" with a small cordial comment explaining why we consider this as spam. 
 
 - Sometimes the font is clearly not professional and needs several month of practice and work by the designer: in that case we close the issue "as not planned" with a small paragraph with suggestion on how to improve the quality of the font —in addition of links to tutorial or some relevant chapters sof the GF guide.
+
 <figure>
 <img src="./images/onboarder-workflow/closed-as-not-planned.png"style="width:2568px" alt="The Submissions to review tab in the Google Fontsproject board." />
 <figcaption aria-hidden="true">How to answer a spam</figcaption>
@@ -463,8 +466,8 @@ You can find the dowloadable artifacts under `checks > Google Fonts QA > qa`. Th
 <img src="./images/onboarder-workflow/checks.png" style="width:2568px" alt="" />
 <figcaption aria-hidden="true">Checks Tab</figcaption>
 </figure>
-<figure>
 
+<figure>
 <img src="./images/onboarder-workflow/checks2.png" style="width:2568px" alt="" />
 <figcaption aria-hidden="true">Google Fonts QA action</figcaption>
 </figure>
@@ -693,7 +696,6 @@ The lang repo contains textprotos to define [script](https://github.com/googlefo
     <img src="./images/onboarder-workflow/scheherazade.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Scheherazade New displaying arabic script by default instead of Latin (random language selection or user's country specific).</figcaption>
     </figure>
-    <figure>
 
 - The **languages** directory contains textprotos which define several key entries for a specific language, but also the sample texts displayed in the specimen page. Each defined language uses the script ID to know to which script this language is linked to.
 
@@ -728,7 +730,6 @@ The lang repo contains textprotos to define [script](https://github.com/googlefo
     <img src="./images/onboarder-workflow/egyptian.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Scheherazade New displaying Egyptian Arabic instead of Arabic from another language.</figcaption>
     </figure>
-    <figure>
 
     It happens that a font contains only glyphs specific to a certain language of a script, and not all the languages of that script. It is the case for the Noto collection and some fonts from SIL. In this case, the languages are also defined in the font's `METADATA.pb` to avoid displaying tofu on the specimen page and prevent users from selecting a language that is not supported by the font.
 
@@ -749,7 +750,6 @@ The lang repo contains textprotos to define [script](https://github.com/googlefo
     <img src="./images/onboarder-workflow/region.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Regions textprotos reflect on the continent selection menu on the API</figcaption>
     </figure>
-    <figure>
 
 It happens that some languages don't have any sample text defined. We can either update the language textproto, or add a `sample_text` entry in `METADATA.pb` which would override any existing sample text. This absence of sample text for a script without the addition of a custom one in `METADATA.pb` would result in an empty specimen page.
 
@@ -757,7 +757,7 @@ It happens that some languages don't have any sample text defined. We can either
 #### Glyphsets repo
 
 - **Subsets definition for the API**
-     
+
     The `subsets` keys in a font's `METADATA.pb` refers to the `nam` files in [Lib/encoding/glyphsets](https://github.com/googlefonts/glyphsets/tree/main/Lib/glyphsets/encodings). These files determine how a font will be subsetted, meaning that if a glyph is not in a defined subset, it won't be accessible in the API. In addition, if a certain subset is missing from `METADATA.pb`, all the glyphs of that subset will be removed from the font served by the API.
 
     These subsets are visually reflected on the UI through the filters, where we select "languages" (which are actually scripts).
@@ -766,8 +766,7 @@ It happens that some languages don't have any sample text defined. We can either
     <img src="./images/onboarder-workflow/languages.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Scripts menu in Filters</figcaption>
     </figure>
-    <figure>
-    
+
     The problem is that this database is a copy of the internal one used by the API. Therefore it can be easy to not be in sync anymore. So when we notice an important glyph is missing from a `nam` file, we follow this process:
 
     1. Add the codepoint to the file
@@ -794,7 +793,6 @@ The Axis Registry defines:
     <img src="./images/onboarder-workflow/tester1.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Type tester page with sliders</figcaption>
     </figure>
-    <figure>
 
 - The instances served by API.
 
@@ -802,7 +800,6 @@ The Axis Registry defines:
     <img src="./images/onboarder-workflow/tester2.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Axis information</figcaption>
     </figure>
-    <figure>
 
 - The snippet-information about each axis.
 
@@ -810,7 +807,6 @@ The Axis Registry defines:
     <img src="./images/onboarder-workflow/tester3.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Available instances</figcaption>
     </figure>
-    <figure>
 
 - The static instances that will be provided in the zip file:
 
@@ -818,7 +814,6 @@ The Axis Registry defines:
     <img src="./images/onboarder-workflow/zip.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Downloadable zip file</figcaption>
     </figure>
-    <figure>
 
 You know if an axis was correctly implemented by checking [fonts.google.com/variablefonts](https://fonts.google.com/variablefonts).
 
