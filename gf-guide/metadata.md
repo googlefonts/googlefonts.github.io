@@ -377,7 +377,7 @@ TO DO
 
 ### Stroke
 
-TO DO
+The stroke field has a single value that is one of `Sans Serif`, `Serif`, `Slab Serif`. It should always be set if one of those options accurately describes the design since some features in the UI only look at the stroke value for some things. Otherwise, if one of the options doesn't describe the design, it can not be set.
 
 ### Sample text
 
