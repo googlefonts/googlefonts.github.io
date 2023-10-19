@@ -173,13 +173,15 @@ Declares the license of the fonts in the family. Can contain one of 3 possible v
 
 ### category
 
-Typographic classification, one of 5 possible values:
+Typographic classifications, one of 5 possible values:
 
 -   `category: "SERIF"`
 -   `category: "SANS_SERIF"`
 -   `category: "DISPLAY"`
 -   `category: "HANDWRITING"`
 -   `category: "MONOSPACE"`
+
+In 2023 the `category` field was augmented with two new fields called `stroke` and `classification`, the category field will continue to exist with no changes to its semantics. We are keeping the `category` field as is because Google products like Workspace and Ads use them and we didn't want to affect those products.
 
 This key is deprecated in the API (cf. below Stroke and Classification), but still mandatory to fill up in METADATA.pb
 
@@ -373,11 +375,20 @@ minisite_url: "https://myfontwebsite.com"
 
 ### Classification
 
-TO DO
+The classification field is a repeated field that can be any combination of Handwriting, Display, Monospace, or Symbols, or it can not be set. So for example, if a font is Handwriting, Display and Monospace all at the same time, use all three. If it does not fit into any of those classifications, there is no need to use the field.
+
+-   `classification: "HANDWRITING"`
+-   `classification: "DISPLAY"`
+-   `classification: "MONOSPACE"`
+-   `classification: "SYMBOLS"`
 
 ### Stroke
 
-The stroke field has a single value that is one of `Sans Serif`, `Serif`, `Slab Serif`. It should always be set if one of those options accurately describes the design since some features in the UI only look at the stroke value for some things. Otherwise, if one of the options doesn't describe the design, it can not be set.
+The stroke field has a single value that is one of `SANS_SERIF`, `SERIF`, `SLAB_SERIF`. It should always be set if one of those options accurately describes the design since some features in the UI only look at the stroke value for some things. Otherwise, if one of the options doesn't describe the design, it can not be set. Google Fonts Search UI will present `stroke` and `classification` as separate search groups so users can combine them and search, say, for fonts that are Serif and Display.
+
+-   `stroke: "SANS_SERIF"`
+-   `stroke: "SERIF"`
+-   `stroke: "SLAB_SERIF"`
 
 ### Sample text
 
