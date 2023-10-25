@@ -102,11 +102,13 @@ Each issue that we intend to care for should be added to the Google Fonts projec
 To preserve a clean workflow, the Milestone needs to be assessed at the end of the quarter so we can move the still-open issues to the next Milestone to be able to close this one. 
 
 To have a proper overview of the milestones, the `Milestones` tab in the GF board allows to see all *open* issues (triaged by quarter). We can see all the necessary information linked to an issue: the onboarder assigned, the priority level, the progress status, and the labels.
+
 <br>
 <figure>
 <img src="./images/onboarder-workflow/issue-gfboard.png" style="width:2568px" alt="When clicking on a issue, a window opened with more details about that issue"/>
 <figcaption aria-hidden="true">Issue viewed from the GF Board</figcaption>
 </figure>
+<br>
 
 ## The open issues
 
@@ -119,6 +121,7 @@ For the project manager and the onboarder, the bridge between what happens upstr
 <img src="./images/onboarder-workflow/issue.png" style="width:2568px" alt="What do you see when looking into an issue from google/fonts issue tracker." />
 <figcaption aria-hidden="true">Issue viewed from the google/fonts issue tracker.</figcaption>
 </figure>
+<br>
 
 ###  One issue per font project
 
@@ -133,7 +136,7 @@ We want one issue per font project because we allow a PR to change one font dire
 <img src="./images/onboarder-workflow/severalPRs.png" style="width:2568px" alt="Several linked PRs for one issue" />
 <figcaption aria-hidden="true">An example of project that needed several edits after merging.</figcaption>
 </figure>
-
+<br>
 
 ###  Labels
 
@@ -178,7 +181,7 @@ The progress status exists through the Project Board. Like the Priorities, they 
 
 <br>
 <figure>
-<img src="./images/onboarder-workflow/custom-fields.png" style="width:2568px"alt="Where to find these custom fields" />
+<img src="./images/onboarder-workflow/custom-fields.png" style="width:2568px" alt="Where to find these custom fields" />
 <figcaption aria-hidden="true">Three dot menu > settings > Custom fields</figcaption>
 </figure>
 <br>
@@ -202,23 +205,23 @@ This is how to set the progress status manually:
 
 <br>
 <figure>
-<img src="./images/onboarder-workflow/status.png" style="width:2568px"alt="Progress status from an issue" />
+<img src="./images/onboarder-workflow/status.png" style="width:2568px" alt="Progress status from an issue" />
 <figcaption aria-hidden="true">How to set the progress status in an issue.</figcaption>
 </figure>
 
 <br>
 
 <figure>
-<img src="./images/onboarder-workflow/status-milestone.png" style="width:2568px"alt="Progress status from teh milestone tab" />
+<img src="./images/onboarder-workflow/status-milestone.png" style="width:2568px" alt="Progress status from teh milestone tab" />
 <figcaption aria-hidden="true">How to set a status from the Milestone tab.</figcaption>
 </figure>
 
 <br>
 <figure>
-<img src="./images/onboarder-workflow/status-onboarder.png" style="width:2568px"alt="Progress status from the onboarder's tab" />
+<img src="./images/onboarder-workflow/status-onboarder.png" style="width:2568px" alt="Progress status from the onboarder's tab" />
 <figcaption aria-hidden="true">How to set the progress status from the Onboarder's tab.</figcaption>
 </figure>
-
+<br>
 
 ###  Mandatory content
 
@@ -237,6 +240,7 @@ This is how to set the progress status manually:
 <img src="./images/onboarder-workflow/closedissues-tab.png" style="width:2568px" alt="The Closed Issues tab in the Google Fonts project board." />
 <figcaption aria-hidden="true">Closed Issues</figcaption>
 </figure>
+<br>
 
 The `Closed issues` tab allows to follow the status of each project once they have been merged and send to the `dev-sandbox`. Their status are: <mark class=pink>In Dev</mark>, <mark class=yellow>In Sanbox</mark> or <mark class=green>Live</mark>. If an issue occurs *before* it gets live, then the issue should be re-open and amended with a new PR.
 
@@ -271,6 +275,7 @@ This is how we proceed once a new font is proposed through the issue tracker:
 <img src="./images/onboarder-workflow/closed-as-not-planned.png"style="width:2568px" alt="The Submissions to review tab in the Google Fontsproject board." />
 <figcaption aria-hidden="true">How to answer a spam</figcaption>
 </figure>
+<br>
 
 #### If the font is worth reviewing but some elements are missing 
 
@@ -327,7 +332,7 @@ The `Onboarders` tabs are the special project management spaces for each onboard
 <img src="./images/onboarder-workflow/rosalie-tab.png" style="width:2568px" alt="Example of an individual onboarder's tab" />
 <figcaption aria-hidden="true">Individual onboarder tab</figcaption>
 </figure>
-
+<br>
 
 ## The Traffic Jam project board
 
@@ -367,17 +372,17 @@ The second tab would group the PRs by `Lists` and sort them by `Labels`. It is p
 
 The `status` column is updated thanks to the `gftools push module`. It checks the servers against the font families and output which server displays which version. The `lists` column on the other hand is updated manually.
 
-1. <mark class=pink>In Dev</mark> | `no list tag`: these PRs were merged recently and not added to a list yet. You can add them the tag <mark class=blue>to_sandbox</mark> at the moment of preparing the lists, or <mark class=red>blocked</mark> if something is wrong after merging.
-2. <mark class=pink>In Dev</mark> | <mark class=blue>to_sanbox</mark>: the font has not yet been pushed to Sandbox.
-3. <mark class=yellow>In Sandbox</mark> | <mark class=blue>to_sandbox</mark>: the font directory path has been effectively pushed to Sandbox. 
+1. <mark class=pink>In Dev</mark> / `no list tag`: these PRs were merged recently and not added to a list yet. You can add them the tag <mark class=blue>to_sandbox</mark> at the moment of preparing the lists, or <mark class=red>blocked</mark> if something is wrong after merging.
+2. <mark class=pink>In Dev</mark> / <mark class=blue>to_sanbox</mark>: the font has not yet been pushed to Sandbox.
+3. <mark class=yellow>In Sandbox</mark> / <mark class=blue>to_sandbox</mark>: the font directory path has been effectively pushed to Sandbox. 
     - Check each item in Sandbox (see later section to know how to check them). 
     - If they pass, they can be added into the <mark class=purple>to_production</mark> list. 
     - You can also check the item on the list that have not been pushed and investigate why.
     - If a PR had the label <mark class=grey>small fix</mark> it can mean that it is amending a blocked PR in Sanbox. We only need to track one PR per server, if two PRs for the same project are in the same server you can remove one from the project board (usually the one that amends the original one, or the one that contains the less files).
     - Check and update status and list of items that are not covered by the script (knowledge, language, etc)
-4. <mark class=yellow>In Sandbox</mark> | <mark class=purple>to_production</mark>, it has not been pushed to prod yet.
-5. <mark class=green>Live</mark> | <mark class=purple>to_production</mark>: it has been effectively pushed to prod. You can remove the list tag if nothing curious or abnormal occurs (such as something you know can't be live).
-6. `whatever` | <mark class=red>blocked</mark>: something is wrong and the PR should be amended to be able to get on a list. A comment should be written in the PR or the linked issue, and the issue re-open. The list of blocked project should be assessed regularly with a will of unblocking them.
+4. <mark class=yellow>In Sandbox</mark> / <mark class=purple>to_production</mark>, it has not been pushed to prod yet.
+5. <mark class=green>Live</mark> / <mark class=purple>to_production</mark>: it has been effectively pushed to prod. You can remove the list tag if nothing curious or abnormal occurs (such as something you know can't be live).
+6. `whatever` / <mark class=red>blocked</mark>: something is wrong and the PR should be amended to be able to get on a list. A comment should be written in the PR or the linked issue, and the issue re-open. The list of blocked project should be assessed regularly with a will of unblocking them.
 
 ### The Pull Request
 
@@ -391,6 +396,7 @@ Every new PRs will be automatically added to the Traffic Jam board, except for t
 <img src="./images/onboarder-workflow/PR.png" style="width:2568px" alt="" />
 <figcaption aria-hidden="true">How a Pull request looks like</figcaption>
 </figure>
+<br>
 
 #### Title and Comment section
 
@@ -819,6 +825,7 @@ The Axis Registry defines:
 
 - The supported axes by Google Fonts API.
 
+    <br>
     <figure>
     <img src="./images/onboarder-workflow/tester1.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Type tester page with sliders</figcaption>
@@ -827,6 +834,7 @@ The Axis Registry defines:
 
 - The instances served by API.
 
+    <br>
     <figure>
     <img src="./images/onboarder-workflow/tester2.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Axis information</figcaption>
@@ -835,6 +843,7 @@ The Axis Registry defines:
 
 - The snippet-information about each axis.
 
+    <br>
     <figure>
     <img src="./images/onboarder-workflow/tester3.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Available instances</figcaption>
@@ -843,6 +852,7 @@ The Axis Registry defines:
 
 - The static instances that will be provided in the zip file:
 
+    <br>
     <figure>
     <img src="./images/onboarder-workflow/zip.png" style="width:2568px" alt="" />
     <figcaption aria-hidden="true">Downloadable zip file</figcaption>
