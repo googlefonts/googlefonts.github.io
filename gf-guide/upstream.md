@@ -98,7 +98,7 @@ Each file or dir has the following purpose:
 
 -   **[documentation](https://github.com/googlefonts/Unified-Font-Repository/tree/main/documentation)**
     <br>
-    A directory that contains expanded information about the Family. You can eventually store in it your PDF specimen, screenshots or process definition, the pictures you use for the README.md, and [**promo**](marketing.md)[**tional assets**](marketing.md) for twitter.
+    A directory that contains expanded information about the Family. You can eventually store in it your PDF specimen, screenshots or process definition, the pictures you use for the README.md, and [**promotional assets**](marketing.md) for Twitter.
 
 -   **[sources](https://github.com/Omnibus-Type/Texturina/tree/master/sources)**
     <br>
