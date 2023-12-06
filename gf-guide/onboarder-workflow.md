@@ -832,7 +832,7 @@ The Axis Registry defines:
     </figure>
     <br>
 
-- The instances served by API.
+- The snippet-information about each axis.
 
     <br>
     <figure>
@@ -841,7 +841,7 @@ The Axis Registry defines:
     </figure>
     <br>
 
-- The snippet-information about each axis.
+- The instances served by API.
 
     <br>
     <figure>
