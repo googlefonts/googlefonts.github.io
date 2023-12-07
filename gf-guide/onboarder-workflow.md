@@ -272,7 +272,7 @@ This is how we proceed once a new font is proposed through the issue tracker:
 
 <br>
 <figure>
-<img src="./images/onboarder-workflow/closed-as-not-planned.png"style="width:2568px" alt="The Submissions to review tab in the Google Fontsproject board." />
+<img src="./images/onboarder-workflow/closed-as-not-planned.png" style="width:2568px" alt="The Submissions to review tab in the Google Fonts project board." />
 <figcaption aria-hidden="true">How to answer a spam</figcaption>
 </figure>
 <br>
