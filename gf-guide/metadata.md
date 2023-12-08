@@ -362,6 +362,25 @@ archive_url: "https://github.com/username/projectname/releases/download/v2.200/p
     <mark class="purple">nerd&nbsp;</mark> <a href="./lang">Lang repo</a>
 </div>
 
+### Display name
+
+The `display_name` key is used when the font name should appear differently on the API. The main use of this key is for the Noto CJK families which have abbreviated names as a convention. This is not necessarily clear for the user, so the `display_name` key is used to display an unabbreviated name on the specimen page.
+
+Example:
+```code
+font_name: "Noto Sans JP"
+display_name: "Noto Sans Japanese"
+```
+
+An other example of use of this key is when the font family name should be written with an hyphen. Indeed, the hyphen is only authorized to separate the family name from the style name; having a font family name with an hyphen would cause a bad file path and postscript name.
+
+Example:
+
+```code
+font_name: "Noto Sans PhagsPa"
+display_name: "Noto Sans Phags-pa"
+```
+
 ### Minisite url
 
 This key allows to link a mini website to the font's specimen page. It will appear on top of the page, under the font name, next to the designer's name.
