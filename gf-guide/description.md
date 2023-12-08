@@ -27,7 +27,7 @@ This file will be created by the team member onboarding the font. Thus the actua
 
 -   **The text length** should be around 500 words, and more than 100 characters.
 -   **Allowed HTML elements:** `a`, `em`, `i`, `strong`, `b`, `p`, `ol`, `ul`, `li`.
--   **Other HTML elements**, especially inline CSS, classes, or attributes, **are not allowed** and will be removed by the catalogue web app.
+-   **Other HTML elements**, other elements **are generally not allowed** and will be removed by the catalogue web app.
 -   **All links in it must be properly working.**
 -   **It must include a hypertext link to the upstream repository** — where the font project files are available (designer’s GitHub repository). You can copy the following line, and copy it at the bottom of the description file (don’t forget to adjust the URL):
 
@@ -43,6 +43,14 @@ To contribute, see <a href="https://github.com/owner/fontname">github.com/owner
 -   **We only accept** **`.en_us`** **extension**, but you can definitely add a translation to the description in the case when the font is primarily targeting an audience reading a non-latin script.
 
 See [Zen+Antique#about](https://fonts.google.com/specimen/Zen+Antique#about) as an example, provided by this file [DESCRIPTION.en_us.html](https://github.com/google/fonts/blob/main/ofl/zenantique/DESCRIPTION.en_us.html).
+
+## Format text with the font family
+
+You may format text with the font family by using HTML span tags with the `"autonym"` class.  This should not be used to style the entire document.  Use it sparingly to document available features in the font family.  For example, to style the text "THIS TEXT" with the font family, enter HTML like this:
+
+```html
+<span class="autonym">THIS TEXT</span>
+```
 
 ## Example
 
