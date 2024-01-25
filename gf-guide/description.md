@@ -26,8 +26,9 @@ This file will be created by the team member onboarding the font. Thus the actua
 ## Requirements
 
 -   **The text length** should be around 500 words, and more than 100 characters.
--   **Allowed HTML elements:** `a`, `em`, `i`, `strong`, `b`, `p`, `ol`, `ul`, `li`.
--   **Other HTML elements**, other elements **are generally not allowed** and will be removed by the catalogue web app.
+-   **Allowed HTML elements:** `<a>`, `<em>`, `<i>`, `<strong>`, `<b>`, `<p>`, `<ol>`, `<ul>`, `<li>`
+-   **Forbidden HTML elements:**  `<applet>`, `<base>`, `<embed>`, `<form>`, `<frame>`, `<frameset>`, `<head>`, `<iframe>`, `<link>`, `<math>`, `<meta>`, `<object>`, `<script>`, `<style>`, `<svg>`, `<template>`
+-   **Other HTML elements:** These are generally **not allowed** either, and will be removed by the catalog web app.
 -   **All links in it must be properly working.**
 -   **It must include a hypertext link to the upstream repository** — where the font project files are available (designer’s GitHub repository). You can copy the following line, and copy it at the bottom of the description file (don’t forget to adjust the URL):
 
@@ -131,4 +132,7 @@ Here are some guidelines for how to prepare the `article/` directory and files:
 - Width recommended: at least 1000px. No particular proportions are needed; the container will resize the image.
 - Resolution: 72dpi.
 
-**Allowed HTML elements:** Same as description with the addition of `<img>` and more elements including: `<a>`,`<b>`,`<blockquote>`,`<code>`,`<em>`,`<figcaption>`,`<figure>`,`hr`,`h3`,`h4`,`h5`,`i`,`img`,`li`,`p`,`pre`,`span`,`strong`,`ul`,`ol`,`sub`
+**Allowed HTML elements:** Same as description with the addition of `<img>` and more elements including: 
+`<a>`, `<b>`, `<blockquote>`, `<code>`, `<em>`, `<figcaption>`, `<figure>`, `<hr>`, `<h3>`, `<h4>`, `<h5>`, `<i>`, `<img>`, `<li>`, `<p>`, `<pre>`, `<span>`, `<strong>`, `<ul>`, `<ol>`, `<sub>`
+**Forbidden HTML elements:** Remain the same, including:
+`<applet>`, `<base>`, `<embed>`, `<form>`, `<frame>`, `<frameset>`, `<head>`, `<iframe>`, `<link>`, `<math>`, `<meta>`, `<object>`, `<script>`, `<style>`, `<svg>`, `<template>`
