@@ -402,6 +402,14 @@ We have imposed this restriction for the following reasons:
 -   We don't lock ourselves into an implementation we may want to change in the future. The specs are constantly evolving so it's best we wait for these to mature.
 -   DTP applications do not properly support variable fonts yet. Variable font support is [experimental in Adobe applications](https://community.adobe.com/t5/indesign/variable-fonts-in-indesign/td-p/10718647).
 
+### fvar instances for fonts with only custom axes
+
+When a font uses only custom axes and does not have a `wght` axis, you can now define named instances in the `fvar` table for at least one of the custom axes used. This allows users to easily access the named instances from the font drop-down menus. 
+
+However, please note that these instances will be accessible only in the Variable font and will not be included in the downloaded zip file for the font. Make sure that the named instances have a corresponding definition in the font's STAT table. [Kablammo](https://fonts.google.com/specimen/Kablammo) could work as a example of this case.
+
+
+
 ## STAT Table
 
 All variable fonts must contain a `STAT` table (Style Attributes Table). This table has several features but a key benefit is that it will enable desktop applications to have better font menus. Currently, most font menus only offer a single drop down menu to select a font style. A `STAT` table enables us to have a drop down menu for each variable font axis.
