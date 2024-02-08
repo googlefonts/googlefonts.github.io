@@ -477,6 +477,10 @@ A `STAT` table is defined by these fields:
 
 In 2021, only one desktop application use the STAT table: Microsoft Office for Mac (version 16.46, February 2021 update). However, Indesign, Sketch and other pro type setting applications provide sliders for users to select individual axis locations.
 
+According to the Google Fonts specification, every instance that is allowed to be a part of the `fvar` table should also be listed in the STAT table with equivalent values and names. However, the STAT table can also include axis values with string labels which can add extra style variants. This means that fonts with a `wght` axis range of 1 to 1000 can have named instances in the STAT table for the 1 (Hairline) and 1000 (ExtraBlack) positions for desktop applications that could make use of this table information.
+
+The above is particularly crucial for variable fonts that only include custom axes. The STAT table with a full set of style variants defined for all the custom axes will provide richer information about the axes of variation and individual styles within the family. You can inspect [Sixtyfour](https://fonts.google.com/specimen/Sixtyfour) as a reference. 
+
 ## Instantiated Static Fonts
 
 The fonts API is a system used by millions of people, with lots of different software, and so the system tries to support them all as best as it can - especially with 'backwards compatible' changes that do not "break" existing usage.
