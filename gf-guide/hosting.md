@@ -225,5 +225,5 @@ git config core.ignorecase false
 
 <div class="next-reading">
     Further reading:<br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./readme" style="font-weight:bold">Upstream repository structure</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream.html" style="font-weight:bold">Upstream repository structure</a>
 </div>
