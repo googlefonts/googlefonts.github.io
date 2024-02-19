@@ -91,7 +91,7 @@ These are some links where you could find more detailed information about this C
     Further reading:<br>
     <mark class="blue">start</mark> <a href="./tools" style="font-weight:bold">Tools, dependencies and knowledge required</a>
   <br>
-    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on GitHub</a>
   <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
 </div>

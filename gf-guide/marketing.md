@@ -25,10 +25,10 @@ In order to tweet about a new release, Google Fonts requires 2-3 expressive imag
 
 ## What the designer should provide
 
--   Both the images and the source files of the images should be included in the promo folder under the documentation dir.
+-   Both the images and the source files of the images should be included in the promo folder under the documentation directory.
 -   The promotional images should be following the [Google Assets Figma template](https://www.figma.com/file/RwEesMz0S2xXBp0uGi62ft/GF-Asset-template-for-external-partners?node-id=0%3A1). If the project is commissioned by Google Fonts, this is mandatory. Otherwise, it is a kind request for our preference.
 -   If the font was designed for a particular script or language, some localized text should be added addressing the respective script or language.
--   Authors’ names will be included, preferable by tagging them. Person tags can be provided in the README.md or a .txt file in documentation dir.
+-   Authors’ names will be included, preferable by tagging them. Person tags can be provided in the README.md or a .txt file in documentation directory.
 -   Please provide a compilation image plus one for each family when a project includes many sibling families. According to the project's complexity, we would decide on the strategy to promote them either as a set or independently.
 
 ## How the tweet will be written

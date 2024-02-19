@@ -41,7 +41,7 @@ To contribute, see <a href="https://github.com/owner/fontname">github.com/owner
     <span style="border-bottom:0.05em solid">Example:</span>
 
     > This font was upgraded in July 2021 to expand language coverage. It is now supporting Greek and Cyrillic.
--   **We only accept** **`.en_us`** **extension**, but you can definitely add a translation to the description in the case when the font is primarily targeting an audience reading a non-latin script.
+-   **We only accept** **`.en_us`** **extension**, but you can definitely add a translation to the description in the case when the font is primarily targeting an audience reading a non-Latin script.
 
 See [Zen+Antique#about](https://fonts.google.com/specimen/Zen+Antique#about) as an example, provided by this file [DESCRIPTION.en_us.html](https://github.com/google/fonts/blob/main/ofl/zenantique/DESCRIPTION.en_us.html).
 
@@ -59,7 +59,7 @@ You may format text with the font family by using HTML span tags with the `"auto
 
 See [Space+Grotesk#about](https://fonts.google.com/specimen/Space+Grotesk?query=Space+Grotesk#about) provided by [DESCRIPTION.en_us.html](https://github.com/floriankarsten/space-grotesk/blob/master/DESCRIPTION.en_us.html) as an example: it gives plenty of links (mini-website, original authors, referenced font published in GF), and follows all requirements.
 
-**Html snippet**
+**HTML snippet**
 
 ``` code
 <p>Space Grotesk is a proportional sans-serif typeface variant based on <a href="https://www.colophon-foundry.org">Colophon Foundry's</a> fixed-width <a href="https://fonts.google.com/specimen/Space+Mono">Space Mono</a> family (2016). 
@@ -86,11 +86,11 @@ Originally designed by <a href="https://fonts.floriankarsten.com">Florian Karste
 
 ### With localised text
 
-If the “first” script of your font is not Latin, we strongly recommend you to also provide a translation of the description using the actual main script. **This localised text must be in the same html snippet as the english text.**
+If the “first” script of your font is not Latin, we strongly recommend you to also provide a translation of the description using the actual main script. **This localised text must be in the same HTML snippet as the English text.**
 
 See [Zen+Antique#about](https://fonts.google.com/specimen/Zen+Antique#about) as an example, provided by this file [DESCRIPTION.en_us.html](https://github.com/google/fonts/blob/main/ofl/zenantique/DESCRIPTION.en_us.html).
 
-**Html snippet**
+**HTML snippet**
 
 ``` code
 <p>Zen Antique features two kinds of Antique Japanese with Kanji.

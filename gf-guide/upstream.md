@@ -14,7 +14,7 @@ This guide will help users understand what and why directories, files, and docum
 Before starting this reading, make sure that:
 <ul>
     <li><a href="./culture">You have become familiar with Libre Font culture</a></li>
-    <li><a href="./hosting">You already know how to use Github</a></li>
+    <li><a href="./hosting">You already know how to use GitHub</a></li>
     <li><a href="./tools">You have installed all the required tools</a></li>
 </ul>
 
@@ -22,7 +22,7 @@ Before starting this reading, make sure that:
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on GitHub</a>
 </div>
 
 ## Table of contents
@@ -32,7 +32,7 @@ Before starting this reading, make sure that:
 
 ## The Google Fonts Project Template repo
 
-If you read this before you have created your project Github repo, you would like to use the [Google Fonts project template](https://github.com/googlefonts/googlefonts-project-template) repo to start with everything set up for you.
+If you read this before you have created your project GitHub repo, you would like to use the [Google Fonts project template](https://github.com/googlefonts/googlefonts-project-template) repo to start with everything set up for you.
 
 The template is based on [Raphael Bastide’s UFR](https://github.com/unified-font-repository/Unified-Font-Repository), and was adapted to meet Google Fonts' needs. Its purpose is to help type designers set up their repo of open-source fonts — especially if they want to publish them on Google Fonts. A unified structure throughout all the repositories helps GF to automate the fonts' quality assurance and onboarding processes into the catalog.
 
@@ -76,7 +76,7 @@ Be aware that the scripts and automated actions provided by the Google Fonts pro
 └── .gitignore
 ```
 
-Each file or dir has the following purpose:
+Each file or directory has the following purpose:
 
 *An example is provided for each file (from this Guide or other repositories). Please use these templates and modify what you need.*
 
@@ -124,17 +124,17 @@ Each file or dir has the following purpose:
 
 -   **[.gitignore](https://github.com/googlefonts/Unified-Font-Repository/blob/main/.gitignore)**
     <br>
-    File specifying untracked files that Git should ignore. Since [the tools](tools.md) should be installed under a virtual environment dedicated to this repository, the `.gitignore` should include the env (or the name of your virtual environment you are using, for example, `venv` or `env`). Indeed it is better not to push your virtual environment to Github and keep it local. To keep collaboration between Mac and Windows users, you can add `.DS_Store` to the list of untracked files. If you use `.glyphs` sources, `*(Autosave)*` and is also a relevant addition.
+    File specifying untracked files that Git should ignore. Since [the tools](tools.md) should be installed under a virtual environment dedicated to this repository, the `.gitignore` should include the env (or the name of your virtual environment you are using, for example, `venv` or `env`). Indeed it is better not to push your virtual environment to GitHub and keep it local. To keep collaboration between Mac and Windows users, you can add `.DS_Store` to the list of untracked files. If you use `.glyphs` sources, `*(Autosave)*` and is also a relevant addition.
 
 -   **Releases should be tagged**; [Montserrat does this well](https://github.com/JulietaUla/Montserrat/releases).
 
-The files and directories listed above are mandatory. However, we don't mind if you include further doc and dirs, but they should have a clear purpose (such as a `scripts` directory for example).
+The files and directories listed above are mandatory. However, we don't mind if you include further documents and directories, but they should have a clear purpose (such as a `scripts` directory for example).
 
 ------------------------------------------------------------------------
 
 ## Useful links
 
--   [Github release explained](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+-   [GitHub release explained](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 -   [How to use requirements.txt files](https://pip.pypa.io/en/stable/user_guide/#requirements-files)
 
 <div class="next-reading">

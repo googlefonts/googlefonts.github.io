@@ -58,7 +58,7 @@ Add two secrets:
    * Token name should be something like `github_ci`
    * Token scope should be the single project
 
-This enables the release automation to write to pypi.
+This enables the release automation to write to PyPI.
 
 ## tox
 

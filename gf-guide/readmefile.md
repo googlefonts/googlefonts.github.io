@@ -30,7 +30,7 @@ This page will help designers to write a good README file.
 
 ## What to include
 
-The informations you provide in your font project’s `README.md` is key for GF and for users. It is therefore mandatory to apply the following instructions. Whilst only you can judge what makes sense or not for your font project description in term of detail and length, we can only recommend you to be generous with them:
+The information you provide in your font project’s `README.md` is key for GF and for users. It is therefore mandatory to apply the following instructions. Whilst only you can judge what makes sense or not for your font project description in term of detail and length, we can only recommend you to be generous with them:
 
 -   **The name of your font as the title**
   
@@ -68,11 +68,11 @@ The informations you provide in your font project’s `README.md` is key for GF 
     <br>
     List all the changes of the relevant upgrades indicating dates of release and font version numbers.
 
--   **Acknowledgements and credits**
+-   **Acknowledgments and credits**
     <br>
     List of all the authors and contributors to the project, the role they played, and additional information such as profession, email, website.
 
--   **A mention to the licence**
+-   **A mention to the license**
     <br>
     It could be the same string required for the nameID 13, that you provide as "License description" from the Font Info pane in your source file:
     > *This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is in this repo* <span style="border-bottom:0.05em solid">*OFL.txt*</span> *and is also available with a FAQ at:* *<https://scripts.sil.org/OFL>.*
@@ -100,7 +100,7 @@ You may get inspire by these examples to build up your `README.md`. Please note 
 
 ## Useful links
 
--   [About Readmes](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+-   [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 -   [How to use markdown](https://www.markdownguide.org/getting-started/)
 
 

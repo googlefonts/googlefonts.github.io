@@ -9,13 +9,13 @@
 
 🐓  “Static” fonts is a way of saying traditional, <em>non-variable</em> fonts.
 <br><br>
-Before going further, make sure you read carefully the <a href="./requirements">overall fonts requirements</a>. And please refer to the <a href="./variable">requirements about Variable Fonts</a> if you are developping a VF.
+Before going further, make sure you read carefully the <a href="./requirements">overall fonts requirements</a>. And please refer to the <a href="./variable">requirements about Variable Fonts</a> if you are developing a VF.
 <br><br>
 Note that GF only onboards OTF-TTF files: <code>.ttf</code> — so TrueType fonts only! The upstream repo can of course contain OTF-CFF <code>.otf</code> fonts, as well as webfonts <code>.woff2</code>. GF redirects users to the upstream repo to find these files if they are not satisfied with the one served by the API.
 <br><br>
 If the font project consists only of static fonts (and does not include any VF whatsoever), then the statics available upstream will be the main font binaries and will be onboarded. In other cases, statics available in the upstream repository may not get onboarded by GF when:
 <ul>
-    <li>If a VF exists and the statics are autohinted, then only the variable font is onboarded. The API will generate statics fonts by instanciating the VF: they will be served to browsers which doesn’t support the variable font technology, and they will be available in a downloadable zip file (<code>download family</code> button in any specimen pages). Please read about the <a href="https://googlefonts.github.io/gf-guide/variable.html#instantiated-static-fonts">instantiated static fonts</a></li>
+    <li>If a VF exists and the statics are autohinted, then only the variable font is onboarded. The API will generate statics fonts by instantiating the VF: they will be served to browsers which doesn’t support the variable font technology, and they will be available in a downloadable zip file (<code>download family</code> button in any specimen pages). Please read about the <a href="https://googlefonts.github.io/gf-guide/variable.html#instantiated-static-fonts">instantiated static fonts</a></li>
     <li>If a VF exists and the statics are manually hinted, then both formats are onboarded.</li>
 </ul>
 
@@ -23,7 +23,7 @@ If the font project consists only of static fonts (and does not include any VF w
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overal font requirements</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overall font requirements</a>
 </div>
 
 ## Table of contents
@@ -94,23 +94,23 @@ The following is a summary of the expected values for each style in all the tabl
 - **`post` table:** `<italicAngle value="0"/>`
 - **`OS/2` table:** 
     - `fsSelection` bit `6` [is REGULAR] should be `1`
-    - Eg. `<fsSelection value="00000000 01000000"/>`
+    - E.g. `<fsSelection value="00000000 01000000"/>`
 - **`head` table:** 
   - `macStyle` bit `1` [is ITALIC] should be `0`
-  - Eg. `<macStyle value="00000000 00000000"/>`
+  - E.g. `<macStyle value="00000000 00000000"/>`
 
 *In Glyphs.app: `This instance is the [ ] Bold, [ ] Italic of: ___________`*
 
 ### Italic
 
 - **name table:** `nameID2` is `Italic`.
-- **`post` table:** `italic angle` should be a negative value for a right leaning slope. Eg. `<italicAngle value="-12"/>`
+- **`post` table:** `italic angle` should be a negative value for a right leaning slope. E.g. `<italicAngle value="-12"/>`
 - **`OS/2` table:** 
     - `fsSelection` bit `0` [is ITALIC] should be `1`
-    - Eg. `<fsSelection value="00000000 00000001"/>`
+    - E.g. `<fsSelection value="00000000 00000001"/>`
 - **`head` table:** 
   - `macStyle` bit `1` [is ITALIC] should be `1`
-  - Eg. `<macStyle value="00000000 00000010"/>`
+  - E.g. `<macStyle value="00000000 00000010"/>`
 
 *In Glyphs.app: `This instance is the [ ] Bold, [X] Italic of: <Style Name>`*
 
@@ -120,25 +120,25 @@ The following is a summary of the expected values for each style in all the tabl
 - **`post` table:** `<italicAngle value="0"/>`
 - **`OS/2` table:** 
     - `fsSelection` bit `5` [is BOLD] should be `1`
-    - Eg. `<fsSelection value="00000000 00100000"/>`
+    - E.g. `<fsSelection value="00000000 00100000"/>`
 - **`head` table:** 
   - `macStyle` bit `0` [is BOLD] should be `1`
-  - Eg. `<macStyle value="00000000 00000001"/>`
+  - E.g. `<macStyle value="00000000 00000001"/>`
 
 *In Glyphs.app: `This instance is the [X] Bold, [ ] Italic of: ___________`*
 
 ### Bold Italic
 
 - **name table:** `nameID2` is `Bold Italic`.  
-- **`post` table:** `italic angle` should be a negative value for a right leaning slope. Eg. `<italicAngle value="-12"/>`
+- **`post` table:** `italic angle` should be a negative value for a right leaning slope. E.g. `<italicAngle value="-12"/>`
 - **`OS/2` table:** 
     - `fsSelection` bit `0` [is ITALIC] should be `1`
     - `fsSelection` bit `5` [is BOLD] should be `1`
-    - Eg. `<fsSelection value="00000000 00100001"/>`
+    - E.g. `<fsSelection value="00000000 00100001"/>`
 - **`head` table:** 
   - `macStyle` bit `0` [is BOLD] should be `1`
   - `macStyle` bit `1` [is ITALIC] should be `1`
-  - Eg. `<macStyle value="00000000 00000011"/>`
+  - E.g. `<macStyle value="00000000 00000011"/>`
 
 *In Glyphs.app: `This instance is the [X] Bold, [X] Italic of: <Style Name>`*
 

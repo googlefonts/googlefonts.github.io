@@ -73,7 +73,7 @@ These marks are only used as placeholder when typing for a combination of keys t
 <br>
 **Latin legacy marks list**
 
-| Name         | Unicode | Catgory | Subcategory
+| Name         | Unicode | Category | Subcategory
 | --------------|---------|---------|-------------
 |  acute        | 00B4    | Mark    | Spacing
 |  breve        | 02D8    | Mark    | Spacing
@@ -106,7 +106,7 @@ As the name suggests, the combining diacritics are the marks actually used to co
 
 **Automatic alignment**
 
-When creating the precomposed characters in the source file, ideally, automatic alignment should be enabled consistently in the composite glyphs. This way they would get authomatically updated after any change on any of the components is performed.
+When creating the precomposed characters in the source file, ideally, automatic alignment should be enabled consistently in the composite glyphs. This way they would get automatically updated after any change on any of the components is performed.
 
 *Tip: When using `ufo2glyphs` to convert source files, use this argument to preserve alignments: `--enable-automatic-alignment`*
 
@@ -140,7 +140,7 @@ In some languages like Vietnamese, marks are made of the combination of two othe
 
 - The distance between marks is usually tight and should be consistent with the font. The stacked diacritic should be seen as a unit with the base letter. Smaller shapes than the stand-alone marks can be used to ensure visual balance, especially in capital letters. It is crucial to make sure that these marks are not too high or heavy.
 - Again, including the correct anchors with consistent names will ensure the `mkmk` feature in the `GPOS` table.
-- Automatic aligment enabled would also be recommended here to avoid placing stacked diacritics manually in the accented glyphs.
+- Automatic alignment enabled would also be recommended here to avoid placing stacked diacritics manually in the accented glyphs.
 
 ### Soft dotted glyphs
 
@@ -182,7 +182,7 @@ lookup ccmp_soft_dotted {
 
 In Glyphs, the automatically generated `ccmp` feature adds a similar lookup but does not update it with larger glyph sets.
 
-In a font with a larger Latin glyph set and Cyrillic glyph set, after creating the dotless forms of other soft dotted glyphs with glyph construction recipes like `idotless+dotbelowcomb=idotless_dotbelowcomb idotless+ogonekcomb=idotless_ogonekcomb idotless+tildebelowcomb=idotless_tildebelowcomb` or after creating `istroke.dotless` and `jstroke.dotless`, the `ccmp` feature can have a lookup similiar to the following:
+In a font with a larger Latin glyph set and Cyrillic glyph set, after creating the dotless forms of other soft dotted glyphs with glyph construction recipes like `idotless+dotbelowcomb=idotless_dotbelowcomb idotless+ogonekcomb=idotless_ogonekcomb idotless+tildebelowcomb=idotless_tildebelowcomb` or after creating `istroke.dotless` and `jstroke.dotless`, the `ccmp` feature can have a lookup similar to the following:
 
 ```code
 lookup ccmp_soft_dotted {
@@ -196,7 +196,7 @@ One should ensure these substitutions do not break when combined with other subs
 
 <figure>
  <img src="images/diacritics/diac-softdotted-sample-fail.png" style="width:500px">
- <figcaption style="font-size:0.8em"><i>Without the soft dotted substition and the `top` anchor, the sample string i̊j́ị́į́ḭ́ɨ́ɉ́і́ј́ is incorrectly displayed.</i></figcaption>
+ <figcaption style="font-size:0.8em"><i>Without the soft dotted substitution and the `top` anchor, the sample string i̊j́ị́į́ḭ́ɨ́ɉ́і́ј́ is incorrectly displayed.</i></figcaption>
 </figure>
 <figure>
  <img src="images/diacritics/diac-softdotted-sample.png" style="width:500px">
@@ -232,7 +232,7 @@ Therefore:
 
 ## Text Shaping process and Open Type Layout
 
-For a text to be displayed in a readable way on screens or desktop apps, there is a required process called [shaping](https://fonts.google.com/knowledge/glossary/shaping) which consist on translating a string of character codes into an ordered sequence of glyphs, and this process is performed by a engines like [Harfbuzz](https://harfbuzz.github.io/what-is-harfbuzz.html)
+For a text to be displayed in a readable way on screens or desktop apps, there is a required process called [shaping](https://fonts.google.com/knowledge/glossary/shaping) which consist on translating a string of character codes into an ordered sequence of glyphs, and this process is performed by a engines like [HarfBuzz](https://harfbuzz.github.io/what-is-harfbuzz.html)
 
 For text shaping to work, it depends on four factors: the input string given, the inclusion of [Open Type Layout required tables](https://docs.microsoft.com/en-us/typography/opentype/spec/chapter2) in the font, the writing system (script), and the language of the text. For shaping to occur at all, the `GDEF`, `GSUB` and `GPOS` tables must be present in the font.
 
@@ -264,8 +264,8 @@ GPOS table will use all the glyphs' X and Y position values to precisely control
 
 From the eight type of positioning actions that the table support, at least two are essential for the functioning of diacritic marks:
 
-- **Mark-to-base attachment** Controled by the `mark` feature. *Positions combining marks with respect to base glyphs, as when positioning vowels, diacritical marks, or tone marks in Arabic, Hebrew, and Vietnamese.*
-- **Mark-to-mark attachment** Controled by the `mkmk` feature. *Positions one mark relative to another, as when positioning tone marks with respect to vowel diacritical marks in Vietnamese.*
+- **Mark-to-base attachment** Controlled by the `mark` feature. *Positions combining marks with respect to base glyphs, as when positioning vowels, diacritical marks, or tone marks in Arabic, Hebrew, and Vietnamese.*
+- **Mark-to-mark attachment** Controlled by the `mkmk` feature. *Positions one mark relative to another, as when positioning tone marks with respect to vowel diacritical marks in Vietnamese.*
 
 Key factors for these GPOS features to work are:
 
@@ -313,7 +313,7 @@ For more context and details, please read the entire [GSUB](https://docs.microso
   <ul>
   <li><a href="https://glyphsapp.com/learn/mark-to-mark-positioning">Mark to mark positioning Glyphs tutorial</a></li>
   <li><a href="https://help.fontlab.com/fontlab-vi/Anchors-and-Pins/">Anchors in Fontlab</a></li>
-  <li><a href="https://harfbuzz.github.io/what-is-harfbuzz.html" target="_blank">Harfbuzz, a text-shaping engine</a></li>
+  <li><a href="https://harfbuzz.github.io/what-is-harfbuzz.html" target="_blank">HarfBuzz, a text-shaping engine</a></li>
   <li><a href="https://simoncozens.github.io/fonts-and-layout//features-2.html" target="_blank">Substitution and Positioning Rules</a> - advanced reading</li>
   </ul>
   </div>

@@ -23,7 +23,7 @@
 
 ## History
 
-This documentation was initiated by [Adam Twardoch](https://github.com/twardoch) as a community contributor in 2015, and updated by [Dave Crossland](https://github.com/davelab6) as a member of the Google Fonts team in 2020. It is provided so that other font distributors (webfonts providers or font package maintainers) can better use the library repo repository structure.
+This documentation was initiated by [Adam Twardoch](https://github.com/twardoch) as a community contributor in 2015, and updated by [Dave Crossland](https://github.com/davelab6) as a member of the Google Fonts team in 2020. It is provided so that other font distributors (webfont providers or font package maintainers) can better use the library repo repository structure.
 
 This metadata is used specifically by Google Fonts for organization and display on the Google Fonts website. It may be useful for others to be able to make sense of the metadata files.
 
@@ -154,13 +154,13 @@ Example: `date_added: "2021-09-30"`
 
 ### designer
 
-Full name of the type designers or foundries who designed the fonts. Each value typically matches a string in the `designer` key of `info.pb` files in the library repo [/catalog/designers](https://github.com/google/fonts/tree/main/catalog/designers) tree. The order in which the names are listed here will determine the order of appareance in the About section in the font specimen page. (See below.) 
+Full name of the type designers or foundries who designed the fonts. Each value typically matches a string in the `designer` key of `info.pb` files in the library repo [/catalog/designers](https://github.com/google/fonts/tree/main/catalog/designers) tree. The order in which the names are listed here will determine the order of appearance in the About section in the font specimen page. (See below.) 
 
 Examples:
 
 -   `designer: "Anja Meiners"` — An individual's name is preferred; typically there is an individual who is the principle designer of the typeface family, even if they are no longer the primary maintainer of the project
 -   `designer: "TypeTogether"` — Sometimes a formal organization designs a family and no individual there can be attributed as the principle designer
--   `designer: "Huerta Tipográfica"` — Non-ascii characters are supported as UTF-8
+-   `designer: "Huerta Tipográfica"` — Non-ASCII characters are supported as UTF-8
 -   `designer: "Principal Designer, Contributor, Contributor"` — In 2016 the catalog UI added a feature to show several named contributors on each font family specimen page, where the value of this key is a comma separated list, and the first item in the list is shown the credit "Principal Design" (Examples: [Rubik](https://fonts.google.com/specimen/Rubik), [Castoro](https://fonts.google.com/specimen/Castoro), [Pacifico](https://fonts.google.com/specimen/Pacifico))
 
 ### license
@@ -289,7 +289,7 @@ Typically this matches the value of the copyright notice in the first lines of t
 
 List of all character subsets available in Google Fonts API for the given font family. They are described as languages, but they are actually script sets.
 
-These subsets are defined in [GF Glyphsets repo](https://github.com/googlefonts/glyphsets/tree/main/Lib/glyphsets/encodings) —with the exception of the `menu` subset. 
+These subsets are defined in [GF glyphsets repo](https://github.com/googlefonts/glyphsets/tree/main/Lib/glyphsets/encodings) —with the exception of the `menu` subset. 
 
 The `menu` subset is the characters of the font family name (defined above) and is used in font picker UIs to render the font name in itself. 
 
@@ -308,7 +308,7 @@ primary_script: "Arab"
 
 ### Languages
 
-This key aims to restrict the number of languages shown in a specimen page. It is mandatory in all Noto fonts but not recommended in non-Nono fonts. It can be useful though when a font support the glyphs of a specific language only.
+This key aims to restrict the number of languages shown in a specimen page. It is mandatory in all Noto fonts but not recommended in non-Noto fonts. It can be useful though when a font support the glyphs of a specific language only.
 
 Example:
 
@@ -381,7 +381,7 @@ font_name: "Noto Sans PhagsPa"
 display_name: "Noto Sans Phags-pa"
 ```
 
-### Minisite url
+### Minisite URL
 
 This key allows to link a mini website to the font's specimen page. It will appear on top of the page, under the font name, next to the designer's name.
 

@@ -15,7 +15,7 @@ This guide will help designers to adopt good habits while maintaining their work
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on GitHub</a>
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
     <br>
