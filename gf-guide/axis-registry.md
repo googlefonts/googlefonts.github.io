@@ -72,7 +72,7 @@ However, this option is strongly discouraged and should be the last case scenari
 Derived from case 1.2. If a registered axis matches the function and name but not the range values of the incoming axis, then the following could be applied.
 
 - The axis range can be increased if a family requires wider range values. 
-- The type of value can’t be changed (e.g. boolean to ranges.)
+- The type of value can’t be changed (e.g. Boolean to ranges.)
 - If the default value of the new font does not match the registered axis default it can be overridden on the family `METADATA.pb` file, it must not be modified in the axis registry. Refer to the `default_value` in the *Axis Requirements* section of this document.
 
 
@@ -104,12 +104,12 @@ The `tag` is used to specify an axis in font-variation-settings, CSS API request
 
 - #### Defining the type of axis and range values wisely
 As with the name definition, the axis' type of value should be reusable. It should both serve the particular needs or uses of the project submitting the axis and try to anticipate the possible ways it could be used for other projects (See [Type of axis](https://googlefonts.github.io/gf-guide/axis-registry.html#types-of-axis))
-  - Defining an axis as a boolean might not be valid for further font project needs, as is happening now with Wonky axis.
+  - Defining an axis as a Boolean might not be valid for further font project needs, as is happening now with Wonky axis.
   - Ranges that are overly narrow or too wide would leave either insufficient room for the inclusion of other steps or too much to create meaningless intermediate steps. As an example, YEAR axis original range was including only the period covered by the original project (1979-2050). The range was redefined to a broad scope that could support other projects using the axis (-4000 — 4000).
   - The following values must be included
     - **`min_value`** The lower bound of the axis. Inclusive.
     - **`max_value`** The upper bound of the axis. Inclusive. 
-    - **`default_value`** Default position of the aixs.
+    - **`default_value`** Default position of the axis.
         The default value should work as a reference. It is possible to override it in the family `METADATA.pb` file so that the axes keep their reusable purpose. Please refer to the <a href="https://googlefonts.github.io/gf-guide/metadata.html#registry_default_overrides" target=_blank>registry_default_overrides</a> entry under the Metadata file section for details on this process.
     - **`precision`** Describes the specificity at which an axis position can be specified. 
         For example, 0 means values must be specified as whole numbers while -1 means values can be as precise as one decimal place. A percentage axis going from 0 -- 100 with a precision value `0` allows one hundred accessible intermediate positions, while a value `-1` would determine one thousand positions 0.0 -- 100.0.
@@ -120,7 +120,7 @@ For server implementation reasons, new custom axis registries require to include
 - #### The `fallback_only` field affects the way the type tester surfaces the axis control.
 It determines whether only the fallback positions should be used. 
   - `false` value is used for a continuous range axis displaying a slider to reach all the intermediate points
-  - `true` value would be used in cases like `Italic` boolean axis to display an "on/off" toggle, or `Cursive`, a pseudo boolean which was registered with three fallbacks positions, and so it uses radio buttons to give access to those positions. However, as stated in the *Type of Axis* section, binary and pseudo-boolean axes are expected to be avoided or rather exceptions.
+  - `true` value would be used in cases like `Italic` Boolean axis to display an "on/off" toggle, or `Cursive`, a pseudo Boolean which was registered with three fallbacks positions, and so it uses radio buttons to give access to those positions. However, as stated in the *Type of Axis* section, binary and pseudo-Boolean axes are expected to be avoided or rather exceptions.
 
     <figure>
     <img src="images/axis/TypeTester-radio-buttons.png" style="width:300px" />
@@ -150,13 +150,13 @@ Commonly percent (0..100) or “per mille of em” (0..1,000). Within ranges, tw
 The default is usually always the same, e.g. 400 wght, 100 width, 0 mono. 
 For new expressive axes, the default range for these is likely to be a percent range 0..100, and probably with a 0 precision value (meaning no decimal places). The default might be 0, 50 or 100 depending on if the axis is adding something that usually isn't used, something that usually is used but can be turned up or down, or something usually used that can be removed. Width is unusual as a relative percent range, as it has 100 as default and goes up and down from there.
 
-  - **Binary, pseudo boolean** (0, 1 but with a range 0.00..1.00)
-Few binary axes have been registered as pseudo boolean behavior with off and on positions but with two or three decimal places allowing a range. The difference with a percent (0 to 100) range would be semantical, related to the amplitude of variation that an axis expresses. Going from 0 to 1 with decimals could be interpreted as how much of the completeness of a single unity/entity it represents. In contrast, the percentage understanding implies the possibility of defining many stops that suggest different concepts within the range.
+  - **Binary, pseudo Boolean** (0, 1 but with a range 0.00..1.00)
+Few binary axes have been registered as pseudo Boolean behavior with off and on positions but with two or three decimal places allowing a range. The difference with a percent (0 to 100) range would be semantic, related to the amplitude of variation that an axis expresses. Going from 0 to 1 with decimals could be interpreted as how much of the completeness of a single unity/entity it represents. In contrast, the percentage understanding implies the possibility of defining many stops that suggest different concepts within the range.
 <br><br>
-<a href="https://fonts.google.com/knowledge/glossary/fill_axis" target="_blank">Fill</a> is a good example of this axis where the numbers indicate proportion filled, from 0 (no treatment) to 1 (completely filled). Another pseudo boolean case <a href="https://fonts.google.com/knowledge/glossary/cursive_axis" target="_blank">Cursive</a>, an axis with the same binary definition of on and off but with an intermediate point "auto" at 0.5 that would add a third behavior option allowing it to change automatically according to another axis that conditions it.
+<a href="https://fonts.google.com/knowledge/glossary/fill_axis" target="_blank">Fill</a> is a good example of this axis where the numbers indicate proportion filled, from 0 (no treatment) to 1 (completely filled). Another pseudo Boolean case <a href="https://fonts.google.com/knowledge/glossary/cursive_axis" target="_blank">Cursive</a>, an axis with the same binary definition of on and off but with an intermediate point "auto" at 0.5 that would add a third behavior option allowing it to change automatically according to another axis that conditions it.
 
 
-Going forwards, we would like to see the registry more consistent. Most of the upcoming axes are likely to be Relative ones with a percent range since users are more accustomed to thinking about things in terms of percentages (particularly for technical stuff) and more comfortable with integers than decimals. Hence, **pseudo-boolean axes are expected to be avoided or rather exceptions**.
+Going forwards, we would like to see the registry more consistent. Most of the upcoming axes are likely to be Relative ones with a percent range since users are more accustomed to thinking about things in terms of percentages (particularly for technical stuff) and more comfortable with integers than decimals. Hence, **pseudo-Boolean axes are expected to be avoided or rather exceptions**.
 
 
 #### Absolute range axes
@@ -179,7 +179,7 @@ Absolute axes, by their nature, have no meaningful per registry/library default 
     - An expected case of use from the user’s point of view. It would be a “Why do we need this” section, reasoning on why or how the users might use it. This explanation would help to discern the validity of the axis itself and its definitions such as the ranges, a concern that has arisen when reviewing new axes (e.g. discussing Year, HEXP/ TRACK). 
     <br>
     This information will also help to create the additional educational content required (detailed below.) 
-    - An image (gif or video) showing the effect of the axis in the font.
+    - An image (GIF or video) showing the effect of the axis in the font.
 - The reviewing process (discussion and decisions) of the proposed axis and its metadata fields should happen on the issue before creating the PR for the axis inclusion. Do not create a PR simultaneously as the proposal issue to avoid having the discussion take place in two different places making the process slower and harder to follow and conclude.
 
 
@@ -210,13 +210,13 @@ Therefore, additional educational information should be created to communicate m
 
 ## Foreseeable scenarios
 
-Over time, following the AVAR 2 table development, it is expected type designers will combine the axes in many ways to create synthetic ones and make, for example, the OpenType features as variation axes.
+Over time, following the avar2 table development, it is expected type designers will combine the axes in many ways to create synthetic ones and make, for example, the OpenType features as variation axes.
 
 This would allow for the user to choose things like the size or thickness of features like Old Style Figures or Small Caps. This approach would also reduce the file size as the data for these axes does not exist; they are composed of the combination of other axes. Roboto Flex is 1.8 Mb, but Roboto Flex with avar2 Is approximately 300 Kb, an 80% file size savings.
 
 Eventually, the registry of those synthetic axes should follow the same protocol for their inclusion.
 
-Similarly, eventually, *Stylistic Sets* could become a variation axis since for them to interact with another axis, they had to be an axis on its own. That is the case of the Wonky axis, which is an axis controlling glyph substitutions, but being it an axis it can interact with the Optical Size axis to activate it at discresion.
+Similarly, eventually, *Stylistic Sets* could become a variation axis since for them to interact with another axis, they had to be an axis of their own. That is the case for the Wonky axis, which is an axis controlling glyph substitutions, but being it an axis it can interact with the Optical Size axis to activate it at its discretion.
 
 
 <!-- Glossary (to-do)
@@ -229,7 +229,7 @@ Knowledge Content Editor -->
 Some fonts provide named positions on a custom axis.  For example, the Element Shape in Handjet defines different shapes at each integer value along the axis (Triangle, Square, Lozengue, etc) and Kablammo’s design is centered around four named positions on a custom axis. 
 <!-- Without named positions, Kablammo’s design center "gets lost". Ideally, the named positions would be available to the fonts.google.com Type Tester as a dropdown.  It may also make sense to use the named positions when creating a download zip. -->
 
-Named positions are similar to, but different than, fallback positions. Fallback positions were originally defined for the legacy axes, width and weight, to cover the axis values that matched the pre-VF world. Google Fonts creates static instances at each of the fallback positions and delivers them when a requestor does not support VFs.  For example, when wght=451 is requested by a non-VF client, Google Fonts could deliver weight 500.
+Named positions are similar to, but different than, fallback positions. Fallback positions were originally defined for the legacy axes, width and weight, to cover the axis values that matched the pre-VF world. Google Fonts creates static instances at each of the fallback positions and delivers them when a requester does not support VFs.  For example, when wght=451 is requested by a non-VF client, Google Fonts could deliver weight 500.
 
 Additionally, fallback positions are defined on the axis and not on the font with the expectation that all fonts that support an axis will want the same fallback positions (very reasonable for legacy support). 
 

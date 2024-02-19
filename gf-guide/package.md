@@ -28,7 +28,7 @@ Note that Packager will create a branch on <code>google/fonts</code> directly.
 
 ### When used on a font family for the first time
 
-This is the process tha Packager allows to automate:
+This is the process the Packager allows to automate:
 
 1.  Takes elements from the upstream repo: fonts, OFL.txt, eventually Description file if available. It can also package fonts from a `tag release`, which is quite practical.
 2.  Creates a local branch of your local clone of google/fonts It should follow this scheme: `gftools_packager_ofl_fontname`.
@@ -59,11 +59,11 @@ files:
 
 ## Main usages explains
 
-`-u` creates a yaml file which will help packager to set up the links and the informations inside METADATA.pb
+`-u` creates a yaml file which will help packager to set up the links and the information inside METADATA.pb
 
 `-b` calls the branch on which you want to push commits or add the fonts
 
-`-g` packages the fonts on a new branch of googe/fonts without creating a PR
+`-g` packages the fonts on a new branch of google/fonts without creating a PR
 
 `-a` pushes commits (needs to indicate a branch then)
 
@@ -79,11 +79,11 @@ The shortest usage of the packager require to know how to use `vim`:
 gftools packager "Font Name" path/to/local/google/fonts -p
 ```
 
-You will have to fill up all needed informations directly from the Terminal using vim, it then will package the font, run some script, create a branch and PR all of that to google/fonts.
+You will have to fill up all needed information directly from the Terminal using vim, it then will package the font, run some script, create a branch and PR all of that to google/fonts.
 
 ### Method which doesn’t need vim
 
-1.  The Packager needs informations to know where to find the necessary files (fonts, OFL etc), so we need to create a `.yaml` file that will provide such info. Open your terminal and run:
+1.  The Packager needs information to know where to find the necessary files (fonts, OFL etc), so we need to create a `.yaml` file that will provide such info. Open your terminal and run:
 
     ``` code
     gftools packager -u ~/Desktop/fontname.yaml 
@@ -135,7 +135,7 @@ You will have to fill up all needed informations directly from the Terminal usin
     
 
     2.  If you upgrade an existing font, first check in the font directory in the `ofl` folder (of the main branch) if there is already an upstream.yaml with the correct information. If not, proceed as if it was a new font. If yes, run `gftools packager "Font Name" path/to/local/google-fonts-repo -p`. Then choose the correct options. If the upstream.yaml didn’t have correct information, you can do as if you were adding a new font.
-3.  Update [DESCRIPTION.en_us.html](./description.md)) , check and eventually correct [METADATA.pb](./metadata.md) if needed. Commit and push to the branch that the Packager created. Everytime you commit and push something into the [google/fonts](https://github.com/google/fonts/pulls) repo, please specify `<Font Name> : <file> updated/added` in your commit message.
+3.  Update [DESCRIPTION.en_us.html](./description.md)) , check and eventually correct [METADATA.pb](./metadata.md) if needed. Commit and push to the branch that the Packager created. Every time you commit and push something into the [google/fonts](https://github.com/google/fonts/pulls) repo, please specify `<Font Name> : <file> updated/added` in your commit message.
 
 ### Method that allows editing before PR
 
@@ -143,7 +143,7 @@ If you use the previous method, and if you want to modify your PR, every time yo
 
 To avoid that, you can first use `-g` to package and commit on a new branch (but no PR), and in a second step, use `-p` in conjunction with `-b` to push a branch. So instead of specifying a `yaml` file as source (or a font name) you will specify a branch — this way the packager won’t force-push the fonts, it will only PR the branch as-is (because it is the source and not the target).
 
-Also, keep in mind that every push you make on a google/fonts PR, will trigger the continuous integration which generate QA reports. If the CI is triggerred multiple times at once, it can happens that it breaks. It is therefore wise to make all modifications to [metadata.pb](metadata.md) and [Description_en.html](description.md) beforehand, and push all the changes at once.
+Also, keep in mind that every push you make on a google/fonts PR, will trigger the continuous integration which generate QA reports. If the CI is triggered multiple times at once, it can happens that it breaks. It is therefore wise to make all modifications to [metadata.pb](metadata.md) and [Description_en.html](description.md) beforehand, and push all the changes at once.
 
 To do so, follow this process:
 
@@ -168,7 +168,7 @@ The power of packager resides in its efficiency for upgrading families which wer
 Before doing so, check if:
 
 -   There is an upstream.yaml in the font family directory: if not you will have to do as if you were packaging the font for the first time.
--   The informations are correct: make sure the branch and file paths are still up to date.
+-   The information is correct: make sure the branch and file paths are still up to date.
 -   The source URL (or the archive URL) located in [METADATA.pb](metadata.md) is still correct.
 
 If all is in good place, team members would only have to run:

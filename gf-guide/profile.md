@@ -33,7 +33,7 @@ You can request the addition or modification of your name, bio, and image using 
 -   **There is one bio per designer and per foundry mentioned.**
 -   **The text should be around 100 words** (so it should be more than 200 characters and less than 1000 characters).
 -   **The text must be written in the 3rd person.**
--   **We recommend one or two links directing to a webpage or social media.**
+-   **We recommend one or two links directing to a web page or social media.**
 -   **Bio must be written in English and names translated in Latin script.**
 
 ### Designer section &rarr; Foundry information
@@ -111,11 +111,11 @@ As a developer or a team member, you may want to know the process for registerin
 
     -   The filename should be the same as the directory name (ASCII characters only).
 
--   `bio.html` **contains all necessary informations.**
+-   `bio.html` **contains all necessary information.**
     <br>
     The bio.html file is an HTML snippet (similar to the description file) that contains a short bio of the designer.
 
-    -   Should contain a link to a webpage and/or social media profile: social media links are referenced as “Twitter”, “Instagram” etc, not as a name tag. Other web pages are displayed truncated from the protocol prefix.
+    -   Should contain a link to a web page and/or social media profile: social media links are referenced as “Twitter”, “Instagram” etc, not as a name tag. Other web pages are displayed truncated from the protocol prefix.
 
     
 

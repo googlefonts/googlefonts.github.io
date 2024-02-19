@@ -18,7 +18,7 @@ Don't forget to search the issue tracker (using keywords) to see if your issue h
     <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+API+%2F+Website+%2F+Platform%2C+II+Tools+%2F+workflow+%2F+repo&template=4_anything-else.md&title=">Anything else</a></li>
 </ul>
 
-From time to time, Google Fonts provides financial and design assistance for projects. If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your Github profile page.)
+From time to time, Google Fonts provides financial and design assistance for projects. If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your GitHub profile page.)
 
 </div>
 
@@ -65,7 +65,7 @@ If you would like to include a new font family in the Google Fonts collection, w
     
 -   **The project must be developed on GitHub or similar platform.**
     <br>
-    A VCS open to public participation and actively maintained. Please read our [Github guide](hosting.md).
+    A VCS open to public participation and actively maintained. Please read our [GitHub guide](hosting.md).
     
 -   **The source files are available** in your preferred font editor format.
     <br>
