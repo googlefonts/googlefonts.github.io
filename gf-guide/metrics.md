@@ -151,7 +151,7 @@ Expected result: vertical metrics should be around 130% of UPM. Anything greater
 A new Latin family has the following qualities:
 
 -   UPM is `1000`
--   `yMax` of tallest `A breve acute` in the facially (black for this example) = `1015`
+-   `yMax` of tallest `A breve acute` in the family (black for this example) = `1015`
 -   `yMin` of deepest a-z letter (`g` bold in this family) = `210`
 -   Caps height (`H`or `Z` bounding-box height) = `700`
 -   Family's `yMax = 1116` (Black `A breve hookabove` for this family)
