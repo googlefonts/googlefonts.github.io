@@ -27,12 +27,12 @@ $ git push origin v0.4.3
 ```
 
 This will trigger the CI to build the distribution packages and upload them to the
-[Python Package Index](https://pypi.org/project/picosvg/) automatically, if all the tests
+[Python Package Index](https://pypi.org/project/gftools/) automatically, if all the tests
 pass successfully. 
 
 ### Release config
 
-*.github/workflows/ci.yml* ([example](https://github.com/googlefonts/picosvg/blob/main/.github/workflows/ci.yml))
+** .github/workflows/publish-release.yml ([example](https://github.com/googlefonts/gftools/blob/main/.github/workflows/publish-release.yml))
 
 ```
 # In addition to the basic build/test this should
@@ -40,25 +40,20 @@ pass successfully.
 # - update GitHub releases on tag
 ```
 
-*setup.py*  ([example](https://github.com/googlefonts/picosvg/blob/main/setup.py)) indicates we want to use `setuptools_scm`:
+*pyproject.toml*  ([example](https://github.com/googlefonts/gftools/blob/main/pyproject.toml)) indicates we want to use `setuptools_scm` with dynamic versioning
 
 ```
-    name="picosvg",
-    use_scm_version={"write_to": "src/picosvg/_version.py"},
-    ...
-    setup_requires=["setuptools_scm"],
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gftools"
+...
+dynamic = ["version"]
 ```
 
-*https://github.com/googlefonts/picosvg/settings/secrets/actions*
-
-Add two secrets:
-
-1. PYPI_USERNAME = `__token__`
-1. PYPI_PASSWORD = `token from https://pypi.org/manage/project/YOUR_PROJECT_NAME/settings/`
-   * Token name should be something like `github_ci`
-   * Token scope should be the single project
-
-This enables the release automation to write to pypi.
+In ([Pypi])(https://pypi.org/manage/projects/), enable "Trusted publishing" for the repository. This enables the release automation to write to pypi.
 
 ## tox
 
