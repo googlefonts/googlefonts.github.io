@@ -1,24 +1,92 @@
 This page is meant to capture guidelines for Google Fonts Python projects.
 
-It is written primarily based on the setup for https://github.com/googlefonts/picosvg and https://github.com/googlefonts/nanoemoji.
+It is written primarily based on the setup for [picosvg](https://github.com/googlefonts/picosvg), [nanoemoji](https://github.com/googlefonts/nanoemoji), [gftools](https://github.com/googlefonts/gftools), and other projects.
 
-The main capabilities are described along with the file(s) that control them:
+## pyproject.toml
 
-## Release automation
+We encourage the use of `pyproject.toml` files rather than `setup.py` to store project metadata, dependencies and tooling configuration. Become familiar with the [Writing your pyproject.toml](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/) section of the Python packaging guide.
 
-Automate releases, tied to tags using semver. Push to PyPI and make corresponding
-GitHub releases.
+Here is an example `pyproject.toml`, with reasoning for each section:
+
+
+```toml
+[build-system]
+requires = [
+   # We continue to use `setuptools` rather than any "fancy" alternative
+   # package building/installation library
+   "setuptools>=45",
+   # We also want to use dynamic versioning, so that git tags become
+   # package versions.
+   "setuptools_scm[toml]>=6.2"
+]
+build-backend = "setuptools.build_meta"
+
+# This section is optional; use it if you need to access the version number
+# in your package for some reason.
+[tool.setuptools_scm]
+write_to = "src/mypackage/version.py"
+
+[tool.setuptools.packages.find]
+# Package files should be stored in the `src` directory.
+# (Despite this recommendation, `Lib` is also commonly used.)
+where = ["src"]
+
+[project]
+# This picks up the version number from git.
+dynamic = ["version"]
+
+name = "mypackage"
+description = "Some clever fonts thing"
+
+# Packages should have a README.md, which should be used for the pypi
+# long description.
+readme = "README.md"
+
+authors = [ 
+   # { name = "You", email = "you@google.com" }
+]
+
+dependencies = [
+   # ... list runtime dependencies here ...
+]
+
+[project.optional-dependencies]
+dev = [
+   # ... list dev dependencies here
+]
+# And any other optional extras
+
+[project.scripts]
+mypackage = "mypackage.__main__:main"
+```
+
+## Releases and Versions
+
+Key points:
+
+1. Packages should use [semantic versioning](https://semver.org). This means: *Breaking API changes require a major version bump*. For packages which are still on version 0.x.y, breaking API changes should change the minor (`x`) version number. (But you should also think carefully about what it would take for you to release 1.0.0...)
+
+2. Releases should be automated through GitHub actions.
+
+3. When declaring dependencies on packages we control, use both inclusive and exclusive [ordered comparisons](https://packaging.python.org/en/latest/specifications/version-specifiers/#inclusive-ordered-comparison) to ensure that (a) the latest version is always compatible but (b) you do not install a version with a different API profile. For example, if `gftools` is currently at version `0.6.13`, declare a dependency on `gftools >= 0.6.13, < 0.7`.
+
+### Setting up for releases
+
+To automate the release with GitHub actions, use an action configuration
+called `.github/workflows/publish-release.yml`. (Copy the [example action](https://github.com/googlefonts/gftools/blob/main/.github/workflows/publish-release.yml) from `gftools` and modify as appropriate.) In addition to the basic build/test, this action will:
+
+* Create a new GitHub release every time a tag is pushed
+* Deploy the new release to Pypi.
+
+In order to make this work, you will need to enable "Trusted publishing" for the repository in [Pypi](https://pypi.org/manage/projects/). This enables the release automation to publish the package.
 
 ### Make a release
 
-Use `git tag -a` to make a new annotated tag, or `git tag -s` for a GPG-signed annotated tag,
-if you prefer.
+Use `git tag -a` to make a new annotated tag, or `git tag -s` for a GPG-signed annotated tag, if you prefer.
 
-Name the new tag with with a leading 'v' followed by three MAJOR.MINOR.PATCH digits, like in
-[semantic versioning](https://semver.org/). Look at the existing tags for examples.
+Name the new tag with with a leading 'v' followed by three MAJOR.MINOR.PATCH digits, using [semantic versioning](https://semver.org/). Look at the existing tags for examples.
 
-In the tag message write some short release notes describing the changes since the previous
-tag.
+In the tag message write some short release notes describing the changes since the previous tag.
 
 Finally, push the tag to the remote repository (e.g. assuming upstream is called `origin`):
 
@@ -26,81 +94,44 @@ Finally, push the tag to the remote repository (e.g. assuming upstream is called
 $ git push origin v0.4.3
 ```
 
-This will trigger the CI to build the distribution packages and upload them to the
-[Python Package Index](https://pypi.org/project/picosvg/) automatically, if all the tests
-pass successfully. 
+This will trigger the CI to build the distribution packages and upload them to the [Python Package Index](https://pypi.org/project/gftools/) automatically, if all the tests pass successfully. 
 
-### Release config
+## Code testing and standards
 
-*.github/workflows/ci.yml* ([example](https://github.com/googlefonts/picosvg/blob/main/.github/workflows/ci.yml))
+All projects should:
 
-```
-# In addition to the basic build/test this should
-# - deploy to PyPi on tag (see releases section)
-# - update GitHub releases on tag
-```
+* Be formatted with `black`; ideally this should be tested on PR/commit.
+* Follow the [Google Python style guide](https://google.github.io/styleguide/pyguide.html).
+* Pass (almost) all `pylint`/`ruff` checks.
+* Have a `pytest` test suite, tested by the CI. 
 
-*setup.py*  ([example](https://github.com/googlefonts/picosvg/blob/main/setup.py)) indicates we want to use `setuptools_scm`:
-
-```
-    name="picosvg",
-    use_scm_version={"write_to": "src/picosvg/_version.py"},
-    ...
-    setup_requires=["setuptools_scm"],
-```
-
-*https://github.com/googlefonts/picosvg/settings/secrets/actions*
-
-Add two secrets:
-
-1. PYPI_USERNAME = `__token__`
-1. PYPI_PASSWORD = `token from https://pypi.org/manage/project/YOUR_PROJECT_NAME/settings/`
-   * Token name should be something like `github_ci`
-   * Token scope should be the single project
-
-This enables the release automation to write to pypi.
-
-## tox
+### CI checks
 
 TODO
 
-*tox.ini* ([example](https://github.com/googlefonts/picosvg/blob/main/tox.ini))
-
-
-## pytype
+### pytype
 
 Type hints are your friend. Use them liberally. Fail CI when pytype fails.
 
-*setup.cfg* configures pytype. At least:
+`pyproject.toml` configures pytype. At least:
 
-```
-[pytype]
-inputs = src/SOME_MODULE
-```
-
-*setup.py* enables inline type hints:
-
-```
-    # this is for type checker to use our inline type hints:
-    # https://www.python.org/dev/peps/pep-0561/#id18
-    package_data={"picosvg": ["py.typed"]},
+```toml
+[tool.pytype]
+inputs = ['mypackage']
 ```
 
-## Formatting
+You should also enable inline type hints:
+
+```toml
+[tool.setuptools.package-data]
+mypackage = ["py.typed"]
+```
+
+### Formatting
 
 Use [Black](https://github.com/psf/black)
 
-## Dependencies
-
-Direct dependencies are configured in `setup.py`'s `setup()` parameter:
-
-1. `install_requires` specifies runtime dependencies;
-1. `extras_require` specifies development-only dependencies under the key called "dev"
-   (e.g. `pip install -e .[dev]` to quickly bootstrap a development environment).
-
-
 ## Source organization
-
 
 ```
 src/module_name/file.py
@@ -110,9 +141,5 @@ tests/module_name/file_tests.py
 
 .github/workflows/ci.yml  # CI config (see comments in picosvg's example)
 tox.ini                   # Config to tox test runner (TODO: why tox?)
-setup.cfg                 # pytype config
-setup.py                  # Establish CLI tools, declare direct dependencies
-                          # Do not declare transitive dependencies
-                          # Declare development-only dependencies in extras_require["dev"]
-                          # Use setuptools
+pyproject.toml
 ```
