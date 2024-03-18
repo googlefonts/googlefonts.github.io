@@ -241,9 +241,18 @@ If the font is already hosted on [fonts.google.com](http://fonts.google.com/), y
 
 ## CJK Vertical Metrics
 
-CJK vertical metrics are based on Source Han Sans and Noto CJK fonts.
+*The following CJK vertical metrics are based on Source Han and Noto CJK fonts.*
 
-The following vertical metric values must be applied to all CJK fonts
+The values for CJK vertical metrics are based on a few core concepts:
+
+1. The OS/2.sTypoAscender and OS/2.sTypoDescender values defines the ideographic em-box, such as CJK ideographs and full-width symbols. Thus, the value of OS/2.sTypoAscender - OS/2.sTypoDescender must equals UPM value, or in other words, the difference of the UPM factors for OS/2.sTypoAscender and OS/2.sTypoDescender should equals 1.
+    > Source Han/Noto CJK uses 880/-120 or 0.88/-0.12. Other usual pairs are 0.85/-0.15 and 0.8/-0.2. The factors may be modified to match the Latin part of the font.
+2. Line gaps should be set to 0 matching Latin font practice. See above [Requirement point 8](#8-linegap-values-must-be-0).
+3. hhea values should be set to look harmonized (excluding extreme vertical height symbols only used in vertical typesetting such as U+3031 and U+3032), including Latin parts (such as hanyu pinyin Ǚ). See above [Requirement point 10](#10-typohheaascender-value-should-leave-open-room-for-stacked-diacritics).
+    > Source Han Sans/Noto Sans CJK uses 1160/-288.
+4. Disable OS/2.fsSelection bit 7 (Use_Typo_Metrics) as both sType* and usWin* are same.
+
+The following vertical metric values may be applied to CJK fonts. 
 
 | Attrib                                    | Value                                    | Example using 1000upm font |
 |-------------------------------------------|------------------------------------------|----------------------------|
