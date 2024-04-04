@@ -95,12 +95,12 @@ For fonts which primary script has uppercases letterforms such as Latin, Greek a
 
 #### 10. typo/hheaAscender value should leave open room for stacked diacritics.
 
-Following recent tests to confirm our vertical metrics policies, we now require that the typo/hheaAscender be equal to `A breve acute`. For families with multiple weights you must use the tallest `A breve acute` (in e.g., the Black master) as the reference point to guarantee uniform positioning across the entire font family.
+Following recent tests to confirm our vertical metrics policies, we now require that the typo/hheaAscender be equal to `Abreveacute U+1EAE`. For families with multiple weights you must use the tallest `Abreveacute U+1EAE` (in e.g., the Black master) as the reference point to guarantee uniform positioning across the entire font family.
 
-Even if the font does not support Vietnamese yet, we strongly suggest estimating the ascenders value foreseeing the `A breve acute` height based two main reasons:
+Even if the font does not support Vietnamese yet, we strongly suggest estimating the ascenders value foreseeing the `Abreveacute U+1EAE` height based two main reasons:
 
 - Once the font is published, it is not possible to modify the vertical metric values. By implementing the above approach, we can keep the option of updating the font in the future to support additional languages like Vietnamese.
-- Certain Mac applications, including TextEdit, determine the height of the first line of text by either the `A grave` height or the font's `hheaAscender`, whichever is taller (for additional information on this topic, please refer to this issue: <https://github.com/googlefonts/fontbakery/issues/3170>). So `Agrave` is a required minimum, and `Abreveacute` is a strongly recommended minimum.
+- Certain Mac applications, including TextEdit, determine the height of the first line of text by either the `Agrave U+00C0` height or the font's `hheaAscender`, whichever is taller (for additional information on this topic, please refer to this issue: <https://github.com/googlefonts/fontbakery/issues/3170>). So `Agrave U+00C0` is a required minimum, and `Abreveacute U+1EAE` is a strongly recommended minimum.
 
 #### 11. The sum of the font’s vertical metric values (absolute) should be 20-30% greater than the font’s UPM
 
@@ -138,7 +138,7 @@ Setting vertical metrics usually falls into the following two categories:
 
 Set these values to be the same across all masters to ensure that output instances have equal vertical metrics:
 
--   `typoAscender` and `hheaAscender` set higher than `Ắ`
+-   `typoAscender` and `hheaAscender` set to equal or higher than `Ắ`
 -   `typoLineGap` and `hheaLineGap` set to `0`
 -   `typoDescender` and `hheaDescender` set to visually leave Caps height centered in the line, but lower than the deepest descender of the primary script.
 -   `winAscent` and `winDecent` set to `yMax` and `yMin` (absolute highest and lowest point in the font)
@@ -151,22 +151,22 @@ Expected result: vertical metrics should be around 130% of UPM. Anything greater
 A new Latin family has the following qualities:
 
 -   UPM is `1000`
--   `yMax` of tallest `A breve acute` in the familly (black for this example) = `1015`
--   `yMin` of deepest a-z letter (`g` bold in this family) = `210`
+-   `Abreveacute U+1EAE` glyph `yMax` value (taller in the family, Black font for this example) = `1015`
+-   Deepest a-z glyph in the family `yMin` value (`g` bold in this example) = `-210`
 -   Caps height (`H`or `Z` bbox height) = `700`
--   Family's `yMax = 1116` (Black `A breve hookabove` for this family)
--   Family's `yMin = -260` (Black `c cedilla` for this family)
+-   Family's `yMax = 1116` (Black `Abrevehookabove U+1EB2` for this family)
+-   Family's `yMin = -260` (Black `ccedilla U+00E7` for this family)
 
 1.  Set the default values, following the schema above:
 
 ``` code
-typoAscender = 1015 # which matches tallest `A breve acute` in the family and is ≈ [(UPM * 1.3 - CapsHeight) / 2] + CapsHeight
+typoAscender = 1015 # which matches the tallest `Abreveacute U+1EAE` in the family
 typoDescender = -315 # an equal or similar value added to the Caps Height to leave them centered in the line, and is greater than deepest letterform.
 typoLineGap = 0
-hheaAscender = 1015 # typoAscender
-hheaDescender = -315 # typoDescender
-hheaLineGap = 0 # typoLineGap
-winAscent = 1116 # Font bbox yMax
+hheaAscender = 1015 # ==typoAscender
+hheaDescender = -315 # ==typoDescender
+hheaLineGap = 0 # ==typoLineGap
+winAscent = 1116 # which matches Font bbox yMax, `Abrevehookabove U+1EB2` in the family 
 winDescent = 315 # *absolute value* of Font bbox yMin ie. a positive integer
 ```
 
