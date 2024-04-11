@@ -78,7 +78,7 @@ If you would like to include a new font family in the Google Fonts collection, w
 
 -   **All binary font files must be available in TTF format.**
  
--   **All font files should support, at least, the ["GF Latin Core"](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets/Latin) glyph set.**
+-   **All font files should support, at least, the ["GF Latin Core"](https://github.com/googlefonts/glyphsets/blob/main/data/results/nam/GF_Latin_Core.nam) glyph set.**
 
 -   **All font files should follow the [Overall font files requirements](requirements.md).**
 
