@@ -160,7 +160,7 @@ A new Latin family has the following qualities:
 1.  Set the default values, following the schema above:
 
 ``` code
-typoAscender = 1015 # which matches the tallest `Abreveacute U+1EAE` in the family
+typoAscender = 1015 # which matches the tallest `Abreveacute U+1EAE` in the family (see below)
 typoDescender = -315 # an equal or similar value added to the Caps Height to leave them centered in the line, and is greater than deepest letterform.
 typoLineGap = 0
 hheaAscender = 1015 # ==typoAscender
@@ -170,9 +170,16 @@ winAscent = 1116 # which matches Font bbox yMax, `Abrevehookabove U+1EB2` in the
 winDescent = 315 # *absolute value* of Font bbox yMin ie. a positive integer
 ```
 
-1.  Be sure to copy these same metric values to all of the masters in the family
-2.  Be sure to enable `Use_Typo_Metrics`
-3.  If working on GlyphsApp, you can add the "EditView Line Height" parameter in font info and set it up to UPM*1.3 (so 1300 if your UPM value is 1000). This allows you to view your line spacing at the glyph view window.
+2.  Be sure to copy these same metric values to all of the masters in the family
+3.  Be sure to enable `Use_Typo_Metrics`
+4.  If working in GlyphsApp, you can add the "EditView Line Height" parameter in Font Info and set it up to UPM*1.3 (so 1300 if your UPM value is 1000). This allows you to view your line spacing at the glyph view window.
+
+Note: In step 1, for determining the `typoAscender` value, matching the tallest `Abreveacute` in the family is not done with a rote mathematical formula (like `≈ [(UPM * 1.3 - CapsHeight) / 2] + CapsHeight`) - because almost nothing is mathematically calculated in typography, but rather it is about proportions, so absolute math may bring more confusion than clarity, even when dealing with a family's vertical metrics. 
+For instance, once the height of `Abreveacute` has been established, it can give a sense of how much is being added to the Cap Height.
+In this example, with a Caps height of `700`, according to the math formula, the value would have been `300`, but a better looking proportion is `+315`.
+
+People tend to think that math formulas are more precise and, hence, follow them blindly. 
+But if the `Abreveacute` height is very high, it will force the average vertical metrics to be absurbly high, way beyond the suggested 130% overall – and then the stacked mark positions would need changes to fit that percentage.
 
 ### 2. Recalculating the vertical metrics for an upgraded family
 
