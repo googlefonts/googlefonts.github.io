@@ -298,7 +298,7 @@ Some labels have been created to quickly see **what's blocking** the issue, they
 - <mark class=red>-- Has RFN</mark>: see [License chapter](./license-file.md)
 - <mark class=red>-- Missing sources</mark>
 - <mark class=red>-- Needs design work</mark>
-- <mark class=red>-- Needs upstream reoslution</mark>: if the repository is wrong or missing, see [Upstream repo chapter](./upstream.md)
+- <mark class=red>-- Needs upstream resolution</mark>: if the repository is wrong or missing, see [Upstream repo chapter](./upstream.md)
 - <mark class=red>-- Needs Meta/Desc/License changes</mark>: typically if the License is wrong or if the upstream's README doesn't mention something important like a fork, see [README file chapter](./readmefile.md)
 - <mark class=red>-- fontforge/fontlab/fontcreator</mark>: this is not a deal breaker, so the color is rather pink. But it is important to specify it because it might influence the time dedicated to onboard this project. 
 - <mark class=orange>-- Upstream is working on it</mark>: it is actually orange and means that the authors has not delivered the files, that the project is still in progress on their side. A lot of issues are stalled because of that.
