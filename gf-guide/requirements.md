@@ -175,11 +175,21 @@ Currently, the most used ones are:
 
 Find all the glyphsets definition and filter lists in the [Glyphsets repository](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets). Be aware that these glyphsets are still a work in progress and any advise or recommendation can be submitted using the [Glyphsets’ issue tracker](https://github.com/googlefonts/glyphsets/issues).
 
-## OpenType features support
+## OpenType Features support
 
-The Google Fonts API currently does not support the inclusion of OpenType features such as Stylistic Sets (`salt`) or Small Caps (`smcp`, `c2sc`). Fonts that absolutely need them will need to be published as a separate family with the following schema:
+### Required Features
 
-The vertical metrics should be the same in each sibling family, and the Use of Typo Metrics should be enabled. Please refer to the Vertical Metrics section for further details.
+The Google Fonts API currently has limited support for some "required" or "always on" OpenType features, such as number sets like Tabular Numbers (`tnum`).
+
+The default numerals (ASCII 0 to 9) should be proportional, and complemented by a Tabular Numbers (`tnum`) feature.
+
+### Optional/Discretionary Features
+
+The Google Fonts API currently does not support requesting the inclusion of optional (also known as discretionary, or opt-in) OpenType Features, such as Stylistic Sets (`salt`) or Small Caps (`smcp`, `c2sc`).
+Instead the glyphs contained in these features may be published as a separate family, as follows:
+
+The vertical metrics should be the same in each sibling family, and the "Use of Typo Metrics" flag should be set.
+Please refer to the [Vertical Metrics](metrics.md) section for further details.
 
 - **Small Caps**
   - If the subfamily covers the Small Caps component of the project, then the SC suffix must be appended to the family name
