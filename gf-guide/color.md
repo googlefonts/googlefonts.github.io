@@ -21,6 +21,12 @@ This guide will give users all the detailed information related to Color fonts G
 
 ## Requirements
 
+### Design
+
+* The default palette should be high contrast for white and black backgrounds, to pass accessibility color contrast requirements. Ideally there are at least 3 palettes, the default being general purpose, one for black ground and one for white ground, and those can have flags for dark mode and light mode.
+
+### Technical
+
 * The font must support the `COLR` table.
    * It can use COLR v0 or COLR v1.
 * If the font is static and uses COLR v1 it must have an SVG table equivalent to the COLR table
