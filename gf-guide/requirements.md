@@ -214,4 +214,6 @@ Please refer to the [Vertical Metrics](metrics.md) section for further details.
     <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./color" style="font-weight:bold">Color fonts</a>
 </div>
