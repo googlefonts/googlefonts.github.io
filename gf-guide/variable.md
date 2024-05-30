@@ -402,6 +402,14 @@ We have imposed this restriction for the following reasons:
 -   We don't lock ourselves into an implementation we may want to change in the future. The specs are constantly evolving so it's best we wait for these to mature.
 -   DTP applications do not properly support variable fonts yet. Variable font support is [experimental in Adobe applications](https://community.adobe.com/t5/indesign/variable-fonts-in-indesign/td-p/10718647).
 
+### fvar instances for fonts with only custom axes
+
+When a font uses only custom axes and does not have a `wght` axis, you can now define named instances in the `fvar` table for at least one of the custom axes used. This allows users to easily access the named instances from the font drop-down menus. 
+
+However, please note that these instances will be accessible only in the Variable font and will not be included in the downloaded zip file for the font. Make sure that the named instances have a corresponding definition in the font's STAT table. [Kablammo](https://fonts.google.com/specimen/Kablammo) could work as a example of this case.
+
+
+
 ## STAT Table
 
 All variable fonts must contain a `STAT` table (Style Attributes Table). This table has several features but a key benefit is that it will enable desktop applications to have better font menus. Currently, most font menus only offer a single drop down menu to select a font style. A `STAT` table enables us to have a drop down menu for each variable font axis.
@@ -476,6 +484,10 @@ A `STAT` table is defined by these fields:
 `gftools gen-stat` and the Builder allows you to have external config files which simplify the set up of the STAT table. Read the chapter about [how to build a font](build.md) to have a better understanding of this file.
 
 In 2021, only one desktop application use the STAT table: Microsoft Office for Mac (version 16.46, February 2021 update). However, Indesign, Sketch and other pro type setting applications provide sliders for users to select individual axis locations.
+
+According to the Google Fonts specification, every instance that is allowed to be a part of the `fvar` table should also be listed in the STAT table with equivalent values and names. However, the STAT table can also include axis values with string labels which can add extra style variants. This means that fonts with a `wght` axis range of 1 to 1000 can have named instances in the STAT table for the 1 (Hairline) and 1000 (ExtraBlack) positions for desktop applications that could make use of this table information.
+
+The above is particularly crucial for variable fonts that only include custom axes. The STAT table with a full set of style variants defined for all the custom axes will provide richer information about the axes of variation and individual styles within the family. You can inspect [Sixtyfour](https://fonts.google.com/specimen/Sixtyfour) as a reference. 
 
 ## Instantiated Static Fonts
 
