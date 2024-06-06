@@ -9,9 +9,9 @@
 
 🐸 Vertical metrics are used to determine the space between two lines of text. Some metrics are meant for Mac, others for Windows, and they are interpreted differently according to web or desktop usage.
 <br><br>
-Throughout countless threads and discussions, GF decided to prioritize cross-platform compatibility and, in consecuence, apply the following requirements. Read them carefully because once a family is onboarded, vertical metrics are meant to remain always the same to avoid regression, as mentioned in <a href="./onboarding">Adding & upgrading fonts to Google Fonts</a>.
+Throughout countless threads and discussions, GF decided to prioritize cross-platform compatibility and, in consequence, apply the following requirements. Read them carefully because once a family is onboarded, vertical metrics are meant to remain always the same to avoid regression, as mentioned in <a href="./onboarding">Adding & upgrading fonts to Google Fonts</a>.
 <br><br>
-Please note that the first metrics guidelines referred to in this guide are Latin-focused and probably will not fully work for other complex scripts such as Burmese or Devanagari, among others. CJK fonts (Chinese-Japanese-Korean scripts) are treated as special cases and should follow the instructions at the end of the document.
+Please note that the first metrics guidelines referred to in this guide are Latin-focused and probably will not fully work for other complex scripts, such as Burmese or Devanagari. CJK fonts (Chinese-Japanese-Korean scripts) are treated as special cases and should follow the instructions at the end of the document.
 
 </div>
 
@@ -30,7 +30,7 @@ Please note that the first metrics guidelines referred to in this guide are Lati
 ## Requirements for all fonts **(except CJK)**
 
 The following rules apply to all new font families and should be enforced for upgraded font families when possible. 
-For font families designed for Chinese, Japan, and Korean (CJK), please refer to the ([CJK Vertical Metrics section below](#CJK-vertical-metrics).)
+For font families designed for Chinese, Japanese, and Korean (CJK), please refer to the ([CJK Vertical Metrics section below](#CJK-vertical-metrics).)
 
 #### 1. Vertical metrics must not be calculated by the font editor automatically
 
@@ -151,7 +151,7 @@ Expected result: vertical metrics should be around 130% of UPM. Anything greater
 A new Latin family has the following qualities:
 
 -   UPM is `1000`
--   `Abreveacute U+1EAE` glyph `yMax` value (taller in the family, Black font for this example) = `1015`
+-   `Abreveacute U+1EAE` glyph `yMax` value (taller in the family, Black style for this example) = `1015`
 -   Deepest a-z glyph in the family `yMin` value (`g` bold in this example) = `-210`
 -   Caps height (`H`or `Z` bbox height) = `700`
 -   Family's `yMax = 1116` (Black `Abrevehookabove U+1EB2` for this family)
