@@ -293,7 +293,7 @@ These subsets are defined in [GF Glyphsets repo](https://github.com/googlefonts/
 
 The `menu` subset is the characters of the font family name (defined above) and is used in font picker UIs to render the font name in itself. 
 
-The subsets must be sorted in alphabetical order. The possible values are the same the available `nam` files. For example, if a `nam` file is named `chorasmian_unique-glyphs.nam` the key in `METADATA.pb` would be `subsets: "chorasmian"` (the `nam` file path without "_unique-glyphs.nam")
+The subsets must be sorted in alphabetical order. The possible values are the same as the available `nam` files. For example, if a `nam` file is named `chorasmian_unique-glyphs.nam`, the key in `METADATA.pb` would be `subsets: "chorasmian"` (the `nam` file path without "_unique-glyphs.nam")
 
 ### primary script
 
