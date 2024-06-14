@@ -2,14 +2,14 @@
 
 <a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
 
-# Description file
+# Article and Description files
 {:.no_toc}
 
 <div class="callout">
 
-🦉 The <mark class="grey">DESCRIPTION.en_us.html</mark> file contains the information that appears in the <code>#About</code> section on any specimen page of <a href="https://fonts.google.com">Google Fonts</a> to give further information about the font family.
+🦉 Both the <mark class="grey">ARTICLE.en_us.html</mark> and <mark class="grey">DESCRIPTION.en_us.html</mark> filea are used to bring the information that appears in the <code>#About</code> section on any specimen page of <a href="https://fonts.google.com">Google Fonts</a> to give further information about the font family.
 <br><br>
-This file will be created by the team member onboarding the font. Thus the actual file a designer should write carefully would be the <a href="./readmefile">README.md</a> file as the information provided in it is crucial to building a good <a href="https://fonts.google.com/specimen/Brygada+1918#about">#About</a> section.
+Any of these files will be created by the team member onboarding the font. Thus, the actual file a designer should write carefully would be the <a href="./readmefile">README.md</a> file as the information in it will be crucial create a good <a href="https://fonts.google.com/specimen/Brygada+1918#about">#About</a> section.
 
 </div>
 
@@ -23,14 +23,23 @@ This file will be created by the team member onboarding the font. Thus the actua
 * TOC goes here
 {:toc}
 
-## Requirements
+## The Article
+
+The Article is a new expanded version of the `DESCRIPTION.en_us.html` file that can include images and longer-form information and content. It appears on the Google Fonts site as the main content in the About & License section. For example, see the About page for [Playpen Sans](https://fonts.google.com/specimen/Playpen+Sans/about), and then view the `ofl/gulzar` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/playpensans](https://github.com/google/fonts/tree/main/ofl/playpensans). 
+
+The `ARTICLE.en_us.html` file and images should live in an `article/` directory alongside the `METDATA.pb` file in the root of the `ofl/fontname` directory. Typically, only the Noto fonts are expected to combine the `DESCRIPTION.en_us.html` and `ARTICLE.en_us.html` files. For all the other families (non-Noto), if an article with images is added, the description should be overwritten by the Article. This means we should shift all the Description content into the Article and delete the `DESCRIPTION.en_us.html`.
+
+Here are some guidelines for how to prepare the `article/` directory and files:
+
+### Requirements
 
 -   **The text length** should be around 500 words, and more than 100 characters.
--   **Allowed HTML elements:** `<a>`, `<em>`, `<i>`, `<strong>`, `<b>`, `<p>`, `<ol>`, `<ul>`, `<li>`
--   **Forbidden HTML elements:**  `<applet>`, `<base>`, `<embed>`, `<form>`, `<frame>`, `<frameset>`, `<head>`, `<iframe>`, `<link>`, `<math>`, `<meta>`, `<object>`, `<script>`, `<style>`, `<svg>`, `<template>`
--   **Other HTML elements:** These are generally **not allowed** either, and will be removed by the catalog web app.
 -   **All links in it must be properly working.**
--   **It must include a hypertext link to the upstream repository** — where the font project files are available (designer’s GitHub repository). You can copy the following line, and copy it at the bottom of the description file (don’t forget to adjust the URL):
+-   **It must include a hypertext link to the upstream repository** — where the font project files are available (designer’s GitHub repository). This usually goes at the end of the first paragraph, before the line that separates it from the added text when the article has a long text. 
+
+<br>
+
+You can copy the following line, and copy it at the bottom of the description file (don’t forget to adjust the URL):
 
 ``` code
 To contribute, see <a href="https://github.com/owner/fontname">github.com/owner/fontname</a>
@@ -45,7 +54,7 @@ To contribute, see <a href="https://github.com/owner/fontname">github.com/owner
 
 See [Zen+Antique#about](https://fonts.google.com/specimen/Zen+Antique#about) as an example, provided by this file [DESCRIPTION.en_us.html](https://github.com/google/fonts/blob/main/ofl/zenantique/DESCRIPTION.en_us.html).
 
-## Format text with the font family
+### Format text with the font family
 
 You may format text with the font family by using HTML span tags with the `"autonym"` class.  This should not be used to style the entire document.  Use it sparingly to document available features in the font family.  For example, to style the text "THIS TEXT" with the font family, enter HTML like this:
 
@@ -53,36 +62,31 @@ You may format text with the font family by using HTML span tags with the `"auto
 <span class="autonym">THIS TEXT</span>
 ```
 
-## Example
+### Images
+
+- Supported image formats: JPG, PNG, SVG, but there is a strong preference for JPG/SVG. JPEGs are optimized so that lower resolution images will be downloaded on smaller viewport sizes.
+- Max image size for SVG is 800 KB; for other formats, it is 1.75 MB (enforced by knowledge_graph.py GitHub workflow)
+- Width recommended: at least 1000px. No particular proportions are needed; the container will resize the image.
+- Resolution: 72dpi.
+
+### Allowed HTML elements
+
+-  `<a>`, `<blockquote>`, `<code>`, `<em>`, `<figcaption>`, `<figure>`, `<hr>`, `<h3>`, `<h4>`, `<h5>`, `<img>`, `<li>`, `<p>`, `<pre>`, `<span>`, `<strong>`, `<ul>`, `<ol>`, `<sub>`
+- The Article file can also include `<img>`
+
+ ### Forbidden HTML elements
+ 
+- `<applet>`, `<base>`, `<embed>`, `<form>`, `<frame>`, `<frameset>`, `<head>`, `<iframe>`, `<link>`, `<math>`, `<meta>`, `<object>`, `<script>`, `<style>`, `<svg>`, `<template>`
+- The Description file can't include `<img>`
+- **Other HTML elements:** These are generally **not allowed** either, and will be removed by the catalog web app.
+
+
+## Examples
 
 ### Without localised text
 
 See [Space+Grotesk#about](https://fonts.google.com/specimen/Space+Grotesk?query=Space+Grotesk#about) provided by [DESCRIPTION.en_us.html](https://github.com/floriankarsten/space-grotesk/blob/master/DESCRIPTION.en_us.html) as an example: it gives plenty of links (mini-website, original authors, referenced font published in GF), and follows all requirements.
 
-**Html snippet**
-
-``` code
-<p>Space Grotesk is a proportional sans-serif typeface variant based on <a href="https://www.colophon-foundry.org">Colophon Foundry's</a> fixed-width <a href="https://fonts.google.com/specimen/Space+Mono">Space Mono</a> family (2016). 
-Originally designed by <a href="https://fonts.floriankarsten.com">Florian Karsten</a> in 2018, Space Grotesk retains the monospace's idiosyncratic details while optimizing for improved readability at non-display sizes.</p>
-
-<p><a href=https://floriankarsten.github.io/space-grotesk/><b>→ floriankarsten.github.io/space-grotesk</b><a><p>
-
-<p>Space Grotesk includes Latin Vietnamese, Pinyin, and all Western, Central, and South-Eastern European language support, as well as several OpenType features (old-style and tabular figures, superscript and subscript numerals, fractions, stylistic alternates).</p>
-
-<p>To contribute, see <a href="https://github.com/floriankarsten/space-grotesk" target="_blank">github.com/floriankarsten/space-grotesk</a>.</p>
-```
-
-**Result on Google Fonts**
-
-> ***About Space Grotesk***
->
-> *Space Grotesk is a proportional sans-serif typeface variant based on* [*Colophon Foundry*](https://www.colophon-foundry.org)*'s fixed-width* [*Space Mono*](https://fonts.google.com/specimen/Space+Mono) *family (2016). Originally designed by* [*Florian Karsten*](https://fonts.floriankarsten.com) *in 2018, Space Grotesk retains the monospace's idiosyncratic details while optimizing for improved readability at non-display sizes.*
->
-> *[**→ floriankarsten.github.io/space-grotesk**](https://floriankarsten.github.io/space-grotesk)*
->
-> *Space Grotesk includes Latin Vietnamese, Pinyin, and all Western, Central, and South-Eastern European language support, as well as several OpenType features (old-style and tabular figures, superscript and subscript numerals, fractions, stylistic alternates).*
->
-> *To contribute, see [github.com/floriankarsten/space-grotesk](https://github.com/floriankarsten/space-grotesk).*
 
 ### With localised text
 
@@ -118,21 +122,3 @@ while Katakana and Kanji are slightly heavier, which gives the unique rhythm and
 >
 > このプロジェクトに参加して貢献したい方は、次の URL をご参照ください。*[github.com/googlefonts/zen-antique](https://github.com/googlefonts/zen-antique)*
 
-## The Article
-
-The Article is a new expanded version of the `DESCRIPTION.en_us.html` file that can include images and longer-form information and content. It appears on the Google Fonts site as the main content in the About & License section. For example, see the About page for [Gulzar](https://fonts.google.com/specimen/Gulzar/about), and then view the `ofl/gulzar` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/gulzar](https://github.com/google/fonts/tree/main/ofl/gulzar). 
-
-The `ARTICLE.en_us.html` file and images should live in an `article/` directory alongside the `METDATA.pb` file in the root of the `ofl/fontname` directory. Typically, only the Noto fonts are expected to combine the `DESCRIPTION.en_us.html` and `ARTICLE.en_us.html` files. For all the other families (non-Noto), if an article with images is added, the description should be overwritten by the Article. This means we should shift all the Description content into the Article and keep and empty the `DESCRIPTION.en_us.html` — note that dev-sandbox will be broken if you remove the description file, so don't.
-
-Here are some guidelines for how to prepare the `article/` directory and files:
-
-**Images**
-- Supported image formats: JPG, PNG, SVG, but there is a strong preference for JPG/SVG. JPEGs are optimized so that lower resolution images will be downloaded on smaller viewport sizes.
-- Max image size for SVG is 800 KB; for other formats, it is 1.75 MB (enforced by knowledge_graph.py GitHub workflow)
-- Width recommended: at least 1000px. No particular proportions are needed; the container will resize the image.
-- Resolution: 72dpi.
-
-**Allowed HTML elements:** Same as description with the addition of `<img>` and more elements including: 
-`<a>`, `<b>`, `<blockquote>`, `<code>`, `<em>`, `<figcaption>`, `<figure>`, `<hr>`, `<h3>`, `<h4>`, `<h5>`, `<i>`, `<img>`, `<li>`, `<p>`, `<pre>`, `<span>`, `<strong>`, `<ul>`, `<ol>`, `<sub>`
-**Forbidden HTML elements:** Remain the same, including:
-`<applet>`, `<base>`, `<embed>`, `<form>`, `<frame>`, `<frameset>`, `<head>`, `<iframe>`, `<link>`, `<math>`, `<meta>`, `<object>`, `<script>`, `<style>`, `<svg>`, `<template>`
