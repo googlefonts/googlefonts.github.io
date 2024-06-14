@@ -72,16 +72,71 @@ Allowed formats and file size limits for images:
 
 Other possibility: Add a Youtube link. 
 
+<br><br>
 
-## How the social medias posts will be written
+# SOCIAL MEDIA REQUIREMENTS
 
--   Type of release: New font (”New font!”) / Upgraded Font (“Good News!”).
--   Font Name and tag to author.
--   Key aspects of the font (axes and ranges included or special features).
--   Link to family on Google Fonts.
--   Link to a mini website if available.
+Here are formatting guidelines for different social media platforms. These are guides; it is not necessary to create image formats for each platform (however, square versions are specially welcome for Instagram).
 
-The person onboarding the project will collect images from the documentation directory, include them in a drive folder, write a little tweet according to a simple template, and then it will be reviewed and published when the font is released on the live server.
+Please visit Google Fonts profiles if you want some example:
+
+<a href="https://www.instagram.com/googlefonts/"> Instagram</a>  |  <a href="https://x.com/googlefonts"> X</a>  |  <a href="https://typo.social/@googlefonts"> Mastodon</a>  |  <a href="https://www.linkedin.com/company/google-fonts/"> LinkedIn</a>  |  <a href="https://www.threads.net/@googlefonts"> Thread</a>
+
+
+
+<div class="callout">
+
+- 1 to 10 images would be great
+- 1,600 x 900 px (recommended) + some square versions for Instagram
+- Minimum Size: 600 x 335 px
+- Recommended Ratio: between 2:1 and 1:1
+- Supported Formats: GIF, MP4, JPG, and PNG
+- Max Image Size: Up to 1.75 MB for videos and svg; 800 kb for photos and GIFs. 
+</div>
+
+### Reminder					
+We write the social media post according to the description of the font that is in the repo. Sometimes we need to reduce it a bit to fit with the social media specifications. If you prefer to provide us one, please follow this guide:				
+- Describe the font, the design space, the language support, etc. 
+- Provide us your social media profile if you have some, so we can tag you 
+
+#### Text length limits: <br>
+/ Twitter: 280 characters max.<br>
+/ Mastodon and Thread: 500 characters max. <br>
+/ Instagram: 2200 characters max. <br>
+/ LinkedIn: 3000 characters max. <br>
+
+<br>
+
+### Images formats and specifications per social media
+(These are some indications, all the formats are not mandatory)
+
+***Twitter***
+- 1 to 4 colorful images
+- Supported format: JPG, PNG, GIF
+- Recommended ratio: Ideally the images have either a square 1:1  or 16:9 ratio of 600 x 335px, that can be clicked and expanded up to 1200 x 675px.
+
+***Mastodon (Typo.Social)***
+- 1 to 4 colorful images
+- Supported formats: PNG, JPG, HEIF, WEBP
+- Recommended ratio: Ideally the images have either a square 1:1 or 16:9 ratio 3840 x 2160 px
+
+***Instagram***
+- 1 to 10 colorful images
+- Landscape: 1080 x 566 pixels / Portrait: 1080 x 1350 pixels / 
+- Square: 1080 x 1080 pixels. Recommended: Square
+images: jpeg, png / video: MOV, GIF, MP4 
+
+***LinkedIn***
+- 1 to 20 colorful images
+- Use a 1.91:1 ratio (1200 x 627 pixels). Image must be more than 200 pixels wide.
+- Images: jpeg, png / video: MOV, GIF, MP4 
+
+***Thread***
+- 1 to 10 colorful images
+- The maximum image height on Threads is 1424 pixels. Images taller than a 3:4 aspect ratio will be reduced in width to fit this image height. The maximum image display size on Threads is 1070 pixels wide by 1424 pixels tall. This 3:4 aspect ratio will give you the most visual impact, because it has the greatest number of pixels. 
+
+
+
 
 <div class="next-reading">
     Further reading:<br>
