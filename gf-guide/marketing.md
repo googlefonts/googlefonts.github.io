@@ -16,6 +16,7 @@ This guide provides specifications for the required images for your typographic 
 <div class="context-reading">
     Background reading:<br>
     <mark class="brown">team&nbsp;</mark> <a href="./description">Description file</a>
+    <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
 </div>
 
@@ -84,7 +85,7 @@ Please visit Google Fonts profiles if you want some examples:
 ### Post text					
 We write the social media post according to the font description in the repo's README file. Sometimes, we must reduce it to fit the social media specifications. If you prefer to provide us with one, please follow this guide:				
 - Describe the font, the design space, the language support, etc. 
-- Provide us with your social media profile if you have some so we can tag you. Person tags can be provided in the README.md or a .txt file in documentation dir.
+- Please provide us with your social media profile if you have some so we can tag you. Person tags can be provided in the README.md or a .txt file in documentation dir.
 
 #### Text length limits
 - Twitter: 500 characters max.
