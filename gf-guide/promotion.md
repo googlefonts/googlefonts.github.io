@@ -33,22 +33,22 @@ This guide provides specifications for the required images for your typographic 
 - Do not include images that could be considered sensitive or offensive for social or political reasons (nothing that could be related to violence of any kind).
 - 1 up to 8 images would be great.
 
-### Credits/content:
+### Credits/content
 
 - Please be sure that you have all the credits for the images.
 - Do not include images you don't own 100% of the rights to.
 - Do not add credits of any kind, not for third parties or yourself (the credits will already be included in the Designers section).
 - These images will be licensed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). 
 
-### Repository structure and the documentation folder
+### Where to alocate the images
 
 - Feel free to add these images to your repo's README.md section (from the /documentation folder).
-- Both the images and the source files of the images should be included in the promo folder under the documentation dir.
+- Both the images and the source files of the images should be included in an `article/` and a `social-assets` folders under the documentation directory. For more details, see the **Documentation** bullet in the [Upstream repository structure](./upstream/). 
 - An image-license.txt file must be included in the documentation directory. See the <a href="https://github.com/googlefonts/googlefonts-project-template/tree/main/documentation"> repository template</a>.
 
 <br><br>
 
-# IMAGES FOR THE ABOUT SECTION
+## Images for the About section
 
 The 'About' section in the specimen of your typeface on Google Fonts will give a more detailed presentation of the project, its origins, inspirations, and uses. Please look at the [Description File](./description.md) section of this Guide for more details.
 
@@ -68,7 +68,7 @@ Another possibility is to add a YouTube link.
 
 <br><br>
 
-## SOCIAL MEDIA SPECIFICATIONS
+## Social media especifications
 
 Here are formatting guidelines for different social media platforms. These are guides; it is not necessary to create image formats for each platform (however, square versions are especially welcome for Instagram).
 Please visit Google Fonts profiles if you want some examples:
