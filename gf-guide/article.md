@@ -42,7 +42,7 @@ Here are some guidelines for how to prepare the `article/` directory and files:
 - **Should not contain biography information.** This bio info should go in the [designer's credits](./profile). We accept credits if they are not mentioned in the credit section (for example, help on development, specific names of people involved if only a collective name is credited, etc.).
 - **It must include a hypertext link to the upstream repository.** That is the designer’s GitHub repository. This line of text usually goes at the end of the first paragraph, before the line that separates it from the added text when the article has a long text. 
 <br>
-You can copy the following line, and copy it at the bottom of the description file (don’t forget to adjust the URL):
+You can copy/paste the following line (don’t forget to adjust the URL):
 
     ``` code
     To contribute, see <a href="https://github.com/owner/fontname">github.com/owner/fontname</a>
