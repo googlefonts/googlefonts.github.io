@@ -128,3 +128,8 @@ This file follows the same requirements as the Article file with some exceptions
 - It can't include images, so the HTML elements `<img>` and `video` are not allowed.
 
 However, please bear in mind that following our new efforts to promote the fonts, the Description file is considered legacy.
+
+<div class="next-reading">
+    Further reading:<br>
+    <mark class="grey">templ</mark> <a href="./promotion">Promote your font</a>
+</div>
