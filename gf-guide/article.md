@@ -37,7 +37,7 @@ Here are some guidelines for how to prepare the `article/` directory and files:
 - **Should be written in the third person.**
 - **Copywriting should not be inappropriate, stereotypical, or offensive.** For example, "This family demonstrates a feminine energy with its fragile aspect" is unacceptable.
 - **The text length** should be around 500 words, and more than 100 characters.
-- **If the font is derived from another font** should mention the original with a URL to the font on GF if it exists.
+- **If the font is derived from another font,** it should mention the original with a URL to the font on GF if it exists.
 - **All links in it must be properly working.**
 - **Should not contain biography information.** This bio info should go in the [designer's credits](./profile). We accept credits if they are not mentioned in the credit section (for example, help on development, specific names of people involved if only a collective name is credited, etc.).
 - **It must include a hypertext link to the upstream repository.** That is the designer’s GitHub repository. This line of text usually goes at the end of the first paragraph, before the line that separates it from the added text when the article has a long text. 
