@@ -7,9 +7,9 @@
 
 <div class="callout">
 
-🦉 Both the <mark class="grey">ARTICLE.en_us.html</mark> and <mark class="grey">DESCRIPTION.en_us.html</mark> filea are used to bring the information that appears in the <code>#About</code> section on any specimen page of <a href="https://fonts.google.com">Google Fonts</a> to give further information about the font family.
+🦉 Both the <mark class="grey">ARTICLE.en_us.html</mark> and <mark class="grey">DESCRIPTION.en_us.html</mark> files are used to bring the information that appears in the <code>#About</code> section on any specimen page of <a href="https://fonts.google.com">Google Fonts</a> to provide further information about the font family.
 <br><br>
-Any of these files will be created by the team member onboarding the font. Thus, the actual file a designer should write carefully would be the <a href="./readmefile">README.md</a> file as the information in it will be crucial create a good <a href="https://fonts.google.com/specimen/Brygada+1918#about">#About</a> section.
+Any of these files will be created by the team member onboarding the font. Thus, the actual file a designer should write carefully is the <a href="./readmefile">README.md</a> file of the font's repository as the information in it will be crucial create a descriptive <a href="https://fonts.google.com/specimen/Kalnia#about">#About</a> section.
 
 </div>
 
@@ -25,7 +25,7 @@ Any of these files will be created by the team member onboarding the font. Thus,
 
 ## The Article
 
-The Article is a new expanded version of the `DESCRIPTION.en_us.html` file that can include images and longer-form information and content. It appears on the Google Fonts site as the main content in the About & License section. For example, see the About page for [Playpen Sans](https://fonts.google.com/specimen/Playpen+Sans/about), and then view the `ofl/gulzar` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/playpensans](https://github.com/google/fonts/tree/main/ofl/playpensans). 
+The Article is a new expanded version of the `DESCRIPTION.en_us.html` file that can include images and longer-form information and content. It appears on the Google Fonts site as the main content in the About & License section. For example, see the About page of [Playpen Sans](https://fonts.google.com/specimen/Playpen+Sans/about), and then view the `ofl/playpensans` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/playpensans](https://github.com/google/fonts/tree/main/ofl/playpensans). 
 
 The `ARTICLE.en_us.html` file and images should live in an `article/` directory alongside the `METDATA.pb` file in the root of the `ofl/fontname` directory. Typically, only the Noto fonts are expected to combine the `DESCRIPTION.en_us.html` and `ARTICLE.en_us.html` files. For all the other families (non-Noto), if an article with images is added, the description should be overwritten by the Article. This means we should shift all the Description content into the Article and delete the `DESCRIPTION.en_us.html`.
 
@@ -33,36 +33,37 @@ Here are some guidelines for how to prepare the `article/` directory and files:
 
 ### Requirements
 
--   **The text length** should be around 500 words, and more than 100 characters.
--   **All links in it must be properly working.**
--   **It must include a hypertext link to the upstream repository** — where the font project files are available (designer’s GitHub repository). This usually goes at the end of the first paragraph, before the line that separates it from the added text when the article has a long text. 
-
+- **Pay attention to the content** Feel free to write a comprehensive text that will pay tribute to your project. Here are added examples of 'About' sections on Google Fonts. <a href="https://fonts.google.com/specimen/Ojuju/about"> Ojuju</a> and <a href="https://fonts.google.com/specimen/Roboto+Flex/about"> Roboto Flex</a>.
+- **The text length** should be around 500 words, and more than 100 characters.
+- **If the font is derived from another font** it is suggested to mention it in the Description file.
+- **All links in it must be properly working.**
+- **It must include a hypertext link to the upstream repository** — that is the designer’s GitHub repository. This usually goes at the end of the first paragraph, before the line that separates it from the added text when the article has a long text. 
 <br>
-
 You can copy the following line, and copy it at the bottom of the description file (don’t forget to adjust the URL):
 
-``` code
-To contribute, see <a href="https://github.com/owner/fontname">github.com/owner/fontname</a>
-```
+    ``` code
+    To contribute, see <a href="https://github.com/owner/fontname">github.com/owner/fontname</a>
+    ```
 
--   **Text should be updated when the font is upgraded** to let people know what changed.
+-   **The text should be updated when the font is upgraded** to let people know what changed.
 
     <span style="border-bottom:0.05em solid">Example:</span>
 
     > This font was upgraded in July 2021 to expand language coverage. It is now supporting Greek and Cyrillic.
 -   **We only accept** **`.en_us`** **extension**, but you can definitely add a translation to the description in the case when the font is primarily targeting an audience reading a non-latin script.
-
-See [Zen+Antique#about](https://fonts.google.com/specimen/Zen+Antique#about) as an example, provided by this file [DESCRIPTION.en_us.html](https://github.com/google/fonts/blob/main/ofl/zenantique/DESCRIPTION.en_us.html).
+-   If the “first” script of your font is not Latin, we strongly recommend you to also provide a translation of the text using the actual main script. **This localised text must be in the same html snippet as the English text.**
 
 ### Format text with the font family
 
-You may format text with the font family by using HTML span tags with the `"autonym"` class.  This should not be used to style the entire document.  Use it sparingly to document available features in the font family.  For example, to style the text "THIS TEXT" with the font family, enter HTML like this:
+You may format text with the font family by using HTML span tags with the `"autonym"` class. This should not be used to style the entire document. Use it sparingly to document available features in the font family. For example, to style the text "THIS TEXT" with the font family, enter HTML like this:
 
 ```html
 <span class="autonym">THIS TEXT</span>
 ```
 
 ### Images
+
+Please refer to the [Promote yout font](./marketing.md) section of this Guide for a fully detailed information of these images. The following is a summarize of the main requirements.
 
 - Supported image formats: JPG, PNG, SVG, but there is a strong preference for JPG/SVG. JPEGs are optimized so that lower resolution images will be downloaded on smaller viewport sizes.
 - Max image size for SVG is 800 KB; for other formats, it is 1.75 MB (enforced by knowledge_graph.py GitHub workflow)
@@ -72,14 +73,13 @@ You may format text with the font family by using HTML span tags with the `"auto
 ### Allowed HTML elements
 
 -  `<a>`, `<blockquote>`, `<code>`, `<em>`, `<figcaption>`, `<figure>`, `<hr>`, `<h3>`, `<h4>`, `<h5>`, `<img>`, `<li>`, `<p>`, `<pre>`, `<span>`, `<strong>`, `<ul>`, `<ol>`, `<sub>`
-- The Article file can also include `<img>`
+- The Article file can also include `<img>` and `<video>`
 
  ### Forbidden HTML elements
  
 - `<applet>`, `<base>`, `<embed>`, `<form>`, `<frame>`, `<frameset>`, `<head>`, `<iframe>`, `<link>`, `<math>`, `<meta>`, `<object>`, `<script>`, `<style>`, `<svg>`, `<template>`
-- The Description file can't include `<img>`
-- **Other HTML elements:** These are generally **not allowed** either, and will be removed by the catalog web app.
-
+- The Description file can't include `<img>` and `<video>`
+- **Other HTML elements** are generally **not allowed** either, and will be removed by the catalog web app.
 
 ## Examples
 
@@ -89,8 +89,6 @@ See [Space+Grotesk#about](https://fonts.google.com/specimen/Space+Grotesk?query=
 
 
 ### With localised text
-
-If the “first” script of your font is not Latin, we strongly recommend you to also provide a translation of the description using the actual main script. **This localised text must be in the same html snippet as the english text.**
 
 See [Zen+Antique#about](https://fonts.google.com/specimen/Zen+Antique#about) as an example, provided by this file [DESCRIPTION.en_us.html](https://github.com/google/fonts/blob/main/ofl/zenantique/DESCRIPTION.en_us.html).
 
@@ -122,3 +120,11 @@ while Katakana and Kanji are slightly heavier, which gives the unique rhythm and
 >
 > このプロジェクトに参加して貢献したい方は、次の URL をご参照ください。*[github.com/googlefonts/zen-antique](https://github.com/googlefonts/zen-antique)*
 
+## The Description
+
+This file follows the same requirements as the Article file with some exceptions:
+
+- The content might be more succinct.
+- It can't include images, so the HTML elements `<img>` and `video` are not allowed.
+
+However, please bear in mind that following our new efforts to promote the fonts, the Description file is considered legacy.
