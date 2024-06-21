@@ -34,9 +34,12 @@ Here are some guidelines for how to prepare the `article/` directory and files:
 ### Requirements
 
 - **Pay attention to the content** Feel free to write a comprehensive text that will pay tribute to your project. Here are added examples of 'About' sections on Google Fonts. <a href="https://fonts.google.com/specimen/Ojuju/about"> Ojuju</a> and <a href="https://fonts.google.com/specimen/Roboto+Flex/about"> Roboto Flex</a>.
+- **Should be written in the third person**
+- **Copywriting should not be inappropriate, stereotypical, or offensive.** For example, "This family demonstrates a feminine energy with its fragile aspect" is unacceptable.
 - **The text length** should be around 500 words, and more than 100 characters.
-- **If the font is derived from another font** it is suggested to mention it in the Description file.
+- **If the font is derived from another font** should mention the original with a URL to the font on GF if it exists.
 - **All links in it must be properly working.**
+- **Should not contain biography information** This information should be in the [designer's credits](./profile). We accept credits if they are not mentionned in the credit section (for example help on development, specific names of people involved if only a collective name is credited etc.)
 - **It must include a hypertext link to the upstream repository** — that is the designer’s GitHub repository. This usually goes at the end of the first paragraph, before the line that separates it from the added text when the article has a long text. 
 <br>
 You can copy the following line, and copy it at the bottom of the description file (don’t forget to adjust the URL):
@@ -132,4 +135,5 @@ However, please bear in mind that following our new efforts to promote the fonts
 <div class="next-reading">
     Further reading:<br>
     <mark class="grey">templ</mark> <a href="./promotion">Promote your font</a>
+    <mark class="grey">templ</mark> <a href="./profile">Designer Profile</a>
 </div>

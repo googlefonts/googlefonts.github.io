@@ -99,7 +99,7 @@ Each file or dir has the following purpose:
 -   **[documentation](https://github.com/googlefonts/Unified-Font-Repository/tree/main/documentation)**
     <br>
     A directory that contains expanded information about the Family. You can eventually store in it your PDF specimen, screenshots or process definition, the pictures you use for the README.md. This dir my also include:
-    -  An `article` subdirectory with the images to be included in the [About](./description.md) section.
+    -  An `article` subdirectory with the images to be included in the [About](./article.md) section.
     -  An `social-assets` subdirectory with the promotional assets for the social media platforms.
     -  Please read more about this images in the [Promoting your font](promotion.md) section of this Guide.
     -  The `image-license.txt` file detailing the license for these images.

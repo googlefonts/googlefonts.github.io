@@ -15,7 +15,7 @@ This guide provides specifications for the required images for your typographic 
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="brown">team&nbsp;</mark> <a href="./description">Description file</a>
+    <mark class="brown">team&nbsp;</mark> <a href="./article">Article file</a>
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
 </div>
@@ -50,7 +50,7 @@ This guide provides specifications for the required images for your typographic 
 
 ## Images for the About section
 
-The 'About' section in the specimen of your typeface on Google Fonts will give a more detailed presentation of the project, its origins, inspirations, and uses. Please look at the [Description File](./description.md) section of this Guide for more details.
+The 'About' section in the specimen of your typeface on Google Fonts will give a more detailed presentation of the project, its origins, inspirations, and uses. Please look at the [Article file](./article.md) section of this Guide for more details.
 
 Max resolution allowed:
 Height: 1024 pixels
