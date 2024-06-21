@@ -9,7 +9,7 @@
 
 🦉 Both the <mark class="grey">ARTICLE.en_us.html</mark> and <mark class="grey">DESCRIPTION.en_us.html</mark> files are used to bring the information that appears in the <code>#About</code> section on any specimen page of <a href="https://fonts.google.com">Google Fonts</a> to provide further information about the font family.
 <br><br>
-Any of these files will be created by the team member onboarding the font. Thus, the actual file a designer should write carefully is the <a href="./readmefile">README.md</a> file of the font's repository as the information in it will be crucial create a descriptive <a href="https://fonts.google.com/specimen/Kalnia#about">#About</a> section.
+The team member onboarding the font will create any of these files. Thus, the actual file a designer should write carefully is the <a href="./readmefile">README.md</a> file of the font's repository, as the information in it will be crucial to create a descriptive <a href="https://fonts.google.com/specimen/Kalnia#about">#About</a> section.
 
 </div>
 
@@ -25,9 +25,9 @@ Any of these files will be created by the team member onboarding the font. Thus,
 
 ## The Article
 
-The Article is a new expanded version of the `DESCRIPTION.en_us.html` file that includes images and longer-form information and content. It appears on the Google Fonts site as the main content in the About & License section. For example, see the About page of [Playpen Sans](https://fonts.google.com/specimen/Playpen+Sans/about), and then view the `ofl/playpensans` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/playpensans](https://github.com/google/fonts/tree/main/ofl/playpensans). 
+The Article file is a new expanded version of the `DESCRIPTION.en_us.html` file that includes images and longer-form information and content. It appears on the Google Fonts site as the main content in the About & License section. For example, see the About page of [Playpen Sans](https://fonts.google.com/specimen/Playpen+Sans/about), and then view the `ofl/playpensans` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/playpensans](https://github.com/google/fonts/tree/main/ofl/playpensans). 
 
-The `ARTICLE.en_us.html` file and images should live in an `article/` directory alongside the `METDATA.pb` file in the root of the `ofl/fontname` directory. Typically, only the Noto fonts are expected to combine the `DESCRIPTION.en_us.html` and `ARTICLE.en_us.html` files. For all the other families (non-Noto), if an article with images is added, the description should be overwritten by the Article. This means we should shift all the Description content into the Article and delete the `DESCRIPTION.en_us.html`.
+The `ARTICLE.en_us.html` file and images should live in an `article/` directory alongside the `METADATA.pb` file in the root of the `ofl/fontname` directory. Typically, only the Noto fonts are expected to combine the `DESCRIPTION.en_us.html` and `ARTICLE.en_us.html` files. For all the other families (non-Noto), if an article with images is added, the description should be overwritten by the Article. This means that, in the case of adding expanded content and images, we should shift all the Description content to the Article and delete the `DESCRIPTION.en_us.html`.
 
 Here are some guidelines for how to prepare the `article/` directory and files:
 
@@ -39,7 +39,7 @@ Here are some guidelines for how to prepare the `article/` directory and files:
 - **The text length** should be around 500 words, and more than 100 characters.
 - **If the font is derived from another font** should mention the original with a URL to the font on GF if it exists.
 - **All links in it must be properly working.**
-- **Should not contain biography information** This information should be in the [designer's credits](./profile). We accept credits if they are not mentionned in the credit section (for example help on development, specific names of people involved if only a collective name is credited etc.)
+- **Should not contain biography information** This information should be in the [designer's credits](./profile). We accept credits if they are not mentioned in the credit section (for example, help on development, specific names of people involved if only a collective name is credited, etc.).
 - **It must include a hypertext link to the upstream repository** — that is the designer’s GitHub repository. This usually goes at the end of the first paragraph, before the line that separates it from the added text when the article has a long text. 
 <br>
 You can copy the following line, and copy it at the bottom of the description file (don’t forget to adjust the URL):
@@ -66,11 +66,11 @@ You may format text with the font family by using HTML span tags with the `"auto
 
 ### Images
 
-Please refer to the [Promote yout font](./promotion.md) section of this Guide for a fully detailed information of these images. The following is a summarize of the main specification for the required images.
+Please refer to the [Promote your font](./promotion.md) section of this Guide for fully detailed information on these images. The following summarizes the main specifications for the required images.
 
 - Supported image formats: JPG, PNG, SVG, but there is a strong preference for JPG/SVG. JPEGs are optimized so that lower resolution images will be downloaded on smaller viewport sizes.
 - Max image size for SVG is 800 KB; for other formats, it is 1.75 MB (enforced by knowledge_graph.py GitHub workflow)
-- Width recommended: at least 1000px. No particular proportions are needed; the container will resize the image.
+The recommended width is at least 1000px. You don't need any particular proportions; the container will resize the image.
 - Resolution: 72dpi.
 
 ### Allowed HTML elements
@@ -82,7 +82,7 @@ Please refer to the [Promote yout font](./promotion.md) section of this Guide fo
  
 - `<applet>`, `<base>`, `<embed>`, `<form>`, `<frame>`, `<frameset>`, `<head>`, `<iframe>`, `<link>`, `<math>`, `<meta>`, `<object>`, `<script>`, `<style>`, `<svg>`, `<template>`
 - The Description file can't include `<img>` and `<video>`
-- **Other HTML elements** are generally **not allowed** either, and will be removed by the catalog web app.
+- **Other HTML elements are generally not allowed** either, and the catalog web app will remove them.
 
 ## Examples
 
