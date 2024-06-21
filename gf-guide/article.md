@@ -33,14 +33,14 @@ Here are some guidelines for how to prepare the `article/` directory and files:
 
 ### Requirements
 
-- **Pay attention to the content** Feel free to write a comprehensive text that will pay tribute to your project. Here are added examples of 'About' sections on Google Fonts. <a href="https://fonts.google.com/specimen/Ojuju/about"> Ojuju</a> and <a href="https://fonts.google.com/specimen/Roboto+Flex/about"> Roboto Flex</a>.
-- **Should be written in the third person**
+- **Pay attention to the content.** Feel free to write a comprehensive text that will pay tribute to your project. Here are added examples of 'About' sections on Google Fonts. <a href="https://fonts.google.com/specimen/Ojuju/about"> Ojuju</a> and <a href="https://fonts.google.com/specimen/Roboto+Flex/about"> Roboto Flex</a>.
+- **Should be written in the third person.**
 - **Copywriting should not be inappropriate, stereotypical, or offensive.** For example, "This family demonstrates a feminine energy with its fragile aspect" is unacceptable.
 - **The text length** should be around 500 words, and more than 100 characters.
 - **If the font is derived from another font** should mention the original with a URL to the font on GF if it exists.
 - **All links in it must be properly working.**
-- **Should not contain biography information** This information should be in the [designer's credits](./profile). We accept credits if they are not mentioned in the credit section (for example, help on development, specific names of people involved if only a collective name is credited, etc.).
-- **It must include a hypertext link to the upstream repository** — that is the designer’s GitHub repository. This usually goes at the end of the first paragraph, before the line that separates it from the added text when the article has a long text. 
+- **Should not contain biography information.** This bio info should go in the [designer's credits](./profile). We accept credits if they are not mentioned in the credit section (for example, help on development, specific names of people involved if only a collective name is credited, etc.).
+- **It must include a hypertext link to the upstream repository.** That is the designer’s GitHub repository. This line of text usually goes at the end of the first paragraph, before the line that separates it from the added text when the article has a long text. 
 <br>
 You can copy the following line, and copy it at the bottom of the description file (don’t forget to adjust the URL):
 
@@ -52,9 +52,9 @@ You can copy the following line, and copy it at the bottom of the description fi
 
     <span style="border-bottom:0.05em solid">Example:</span>
 
-    > This font was upgraded in July 2021 to expand language coverage. It is now supporting Greek and Cyrillic.
--   **We only accept** **`.en_us`** **extension**, but you can definitely add a translation to the description in the case when the font is primarily targeting an audience reading a non-latin script.
--   If the “first” script of your font is not Latin, we strongly recommend you to also provide a translation of the text using the actual main script. **This localised text must be in the same html snippet as the English text.**
+    > This font was upgraded in July 2021 to expand its language coverage. It now supports Greek and Cyrillic.
+-   **We only accept** **`.en_us`** **extension**, but you can definitely add a translation to the description when the font primarily targets an audience reading a non-latin script.
+-   If the primary script of your font is not Latin, we strongly recommend you also provide a translation of the text using the actual main script. **This localised text must be in the same html snippet as the English text.**
 
 ### Format text with the font family
 
