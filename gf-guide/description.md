@@ -25,7 +25,7 @@ Any of these files will be created by the team member onboarding the font. Thus,
 
 ## The Article
 
-The Article is a new expanded version of the `DESCRIPTION.en_us.html` file that can include images and longer-form information and content. It appears on the Google Fonts site as the main content in the About & License section. For example, see the About page of [Playpen Sans](https://fonts.google.com/specimen/Playpen+Sans/about), and then view the `ofl/playpensans` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/playpensans](https://github.com/google/fonts/tree/main/ofl/playpensans). 
+The Article is a new expanded version of the `DESCRIPTION.en_us.html` file that includes images and longer-form information and content. It appears on the Google Fonts site as the main content in the About & License section. For example, see the About page of [Playpen Sans](https://fonts.google.com/specimen/Playpen+Sans/about), and then view the `ofl/playpensans` directory in the Google Fonts repo: [github.com/google/fonts/tree/main/ofl/playpensans](https://github.com/google/fonts/tree/main/ofl/playpensans). 
 
 The `ARTICLE.en_us.html` file and images should live in an `article/` directory alongside the `METDATA.pb` file in the root of the `ofl/fontname` directory. Typically, only the Noto fonts are expected to combine the `DESCRIPTION.en_us.html` and `ARTICLE.en_us.html` files. For all the other families (non-Noto), if an article with images is added, the description should be overwritten by the Article. This means we should shift all the Description content into the Article and delete the `DESCRIPTION.en_us.html`.
 
@@ -63,7 +63,7 @@ You may format text with the font family by using HTML span tags with the `"auto
 
 ### Images
 
-Please refer to the [Promote yout font](./marketing.md) section of this Guide for a fully detailed information of these images. The following is a summarize of the main requirements.
+Please refer to the [Promote yout font](./marketing.md) section of this Guide for a fully detailed information of these images. The following is a summarize of the main specification for the required images.
 
 - Supported image formats: JPG, PNG, SVG, but there is a strong preference for JPG/SVG. JPEGs are optimized so that lower resolution images will be downloaded on smaller viewport sizes.
 - Max image size for SVG is 800 KB; for other formats, it is 1.75 MB (enforced by knowledge_graph.py GitHub workflow)
