@@ -63,7 +63,7 @@ You may format text with the font family by using HTML span tags with the `"auto
 
 ### Images
 
-Please refer to the [Promote yout font](./marketing.md) section of this Guide for a fully detailed information of these images. The following is a summarize of the main specification for the required images.
+Please refer to the [Promote yout font](./promotion.md) section of this Guide for a fully detailed information of these images. The following is a summarize of the main specification for the required images.
 
 - Supported image formats: JPG, PNG, SVG, but there is a strong preference for JPG/SVG. JPEGs are optimized so that lower resolution images will be downloaded on smaller viewport sizes.
 - Max image size for SVG is 800 KB; for other formats, it is 1.75 MB (enforced by knowledge_graph.py GitHub workflow)
