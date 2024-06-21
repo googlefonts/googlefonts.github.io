@@ -123,7 +123,7 @@ Advanced content for experienced contributors or team members with the details o
 * <mark class="grey">templ</mark>
   [Designer Profile](profile.md) 
 * <mark class="grey">templ</mark>
-  [Promo / Marketing](marketing.md)
+  [Promote your font](promotion.md)
 * <mark class="purple">nerd&nbsp;</mark>
   [Lang repo](lang.md)
 * <mark class="brown">team&nbsp;</mark>
