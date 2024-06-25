@@ -414,7 +414,8 @@ Like issues, the PR must have labels to help understand the project and communic
     - <mark class=grey>I New font</mark>: this family has never been released before, therefore we will be careful of the quality of the design and the aspect of the font that can't be changed later such as the vertical metrics and the weight distribution etc.
     - <mark class=grey>I Font upgrade</mark>: this family has been released in the past, therefore we will be particularly careful about potential regressions.
     - <mark class=grey>I Small fix</mark>: this is not an outstanding upgrade, it fixes a bug, we don't need to communicate about it on social media. Or amends a previous one that was merged but didn't hit production.
-    - <mark class=grey>I Description/Metadata/OFL</mark>: doesn't modify a font file but one or several other files from a font directory.
+    - <mark class=grey>I Article/Description</mark>: doesn't modify a font file but the Description or Article files in the font directory.
+     - <mark class=grey>I Metadata/OFL</mark>: doesn't modify a font file but the Metadata or license files in a font directory.
     - <mark class=grey>I Designer</mark>: concerns the designer directory.
     - <mark class=grey>I Knowledge</mark>: concerns the Knowledge platform.
     - <mark class=grey>I Lang</mark>: pull changes from the subtree repo [googlefonts/languages](https://github.com/googlefonts/lang)
@@ -453,7 +454,7 @@ They either approve and merge or ask for changes —and signal that with labels.
 
     - <mark class=red>-- Glyphset issue</mark>: a problem some glyphs from the font.
     - <mark class=red>-- Needs lang/glyphset update</mark>: an update from the language or the character set definition of the API (more info about the subtrees `lang` and `glyphsets` below).
-    - <mark class=red>-- Needs Meta/Desc/License changes</mark>: problem with [METADATA.pb](./metadata.md), [Description.en_us.html](./description.md) or [OFL.txt](./license-file.md) files.
+    - <mark class=red>-- Needs Meta/Desc/License changes</mark>: problem with [METADATA.pb](./metadata.md), [ARTICLE.en_us.html or DESCRIPTION.en_us.html](./article.md) or [OFL.txt](./license-file.md) files.
     - <mark class=red>-- Needs upstream resolution</mark>: the issue can't be resolved without a fix in the upstream repository. 
     - <mark class=red>-- Regression</mark>: There are outstanding changes that need to be rollback or debated before merging. 
     - <mark class=red>-- API tofu</mark>: There would be tofu on the specimen page, either because a glyph from the sample text is missing from the font or the glyphset definition (nam files in `glyphsets` subtree), or because the sample text displays a glyph it shouldn't (textproto in `lang` subtree).
@@ -540,7 +541,7 @@ Check even if there is no FAILs reported by font bakery.
     - has primary script and languages
     - only Google listed as author
 
-**[Description.en_us.html](./description.md)**
+**[ARTICLE.en_us.html or DESCRIPTION.en_us.html](./article.md)**
 
 To check even if no FAILs reported by font bakery.
 
@@ -628,7 +629,7 @@ Once the PR updating the list is merged, the oncall team should be notified by m
 
 Most of the time the oncall engineer will push the text list without reading it, and they will push the entire font directory wether the change concern only one file or not. 
 
-For example pushing a change to a description or metadata orlicense file will result in re-pushing the font family. This can become tricky in the following situations:
+For example pushing a change to a article, description, metadata or license file will result in re-pushing the font family. This can become tricky in the following situations:
 
 - A change to a font file is blocked in sandbox waiting to be fixed before going further. Pushing further the PR that changes a non-font file would also push the blocked change of the font file.
 - The font directory was added retrospectively. This is the case for the old families before the existence of the google/fonts repository. It often happens that the `METADATA.pb` from these families were manually made and are containing errors such as an inconsistent family name with the font name key in `METADATA.pb` (for eg. an inconsistency such as `FontName` and `Font Name` would result in pushing a new family into the API). So even when only modifying a non-font file, the fontbakery report should be read carefully.

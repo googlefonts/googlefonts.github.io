@@ -123,7 +123,7 @@ You will have to fill up all needed informations directly from the Terminal usin
     ```
 
     → You obtain the link of the zip by right-clicking on it from the upstream repo.
-2.  The Packager will package all the files from the font upstream repository, commit and push them onto a new branch in the google/fonts repo. It will also create/update a `METADATA.pb`, and add a dummy `DESCRIPTION.en_us.html` if not already there.
+2.  The Packager will package all the files from the font upstream repository, commit and push them onto a new branch in the google/fonts repo. It will also create/update a `METADATA.pb`, and add a dummy `ARTICLE.en_us.html` if not already there.
     1.  If you add a new font, run:
 
         ``` code
@@ -135,7 +135,7 @@ You will have to fill up all needed informations directly from the Terminal usin
     
 
     2.  If you upgrade an existing font, first check in the font directory in the `ofl` folder (of the main branch) if there is already an upstream.yaml with the correct information. If not, proceed as if it was a new font. If yes, run `gftools packager "Font Name" path/to/local/google-fonts-repo -p`. Then choose the correct options. If the upstream.yaml didn’t have correct information, you can do as if you were adding a new font.
-3.  Update [DESCRIPTION.en_us.html](./description.md)) , check and eventually correct [METADATA.pb](./metadata.md) if needed. Commit and push to the branch that the Packager created. Everytime you commit and push something into the [google/fonts](https://github.com/google/fonts/pulls) repo, please specify `<Font Name> : <file> updated/added` in your commit message.
+3.  Update [DESCRIPTION.en_us.html or ARTICLE.en_us.html](./article.md), check and eventually correct [METADATA.pb](./metadata.md) if needed. Commit and push to the branch that the Packager created. Everytime you commit and push something into the [google/fonts](https://github.com/google/fonts/pulls) repo, please specify `<Font Name> : <file> updated/added` in your commit message.
 
 ### Method that allows editing before PR
 
@@ -143,7 +143,7 @@ If you use the previous method, and if you want to modify your PR, every time yo
 
 To avoid that, you can first use `-g` to package and commit on a new branch (but no PR), and in a second step, use `-p` in conjunction with `-b` to push a branch. So instead of specifying a `yaml` file as source (or a font name) you will specify a branch — this way the packager won’t force-push the fonts, it will only PR the branch as-is (because it is the source and not the target).
 
-Also, keep in mind that every push you make on a google/fonts PR, will trigger the continuous integration which generate QA reports. If the CI is triggerred multiple times at once, it can happens that it breaks. It is therefore wise to make all modifications to [metadata.pb](metadata.md) and [Description_en.html](description.md) beforehand, and push all the changes at once.
+Also, keep in mind that every push you make on a google/fonts PR, will trigger the continuous integration which generate QA reports. If the CI is triggerred multiple times at once, it can happens that it breaks. It is therefore wise to make all modifications to [metadata.pb](metadata.md) and [DESCRIPTION.html](article.md) beforehand, and push all the changes at once.
 
 To do so, follow this process:
 
