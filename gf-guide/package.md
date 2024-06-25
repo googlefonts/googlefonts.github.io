@@ -34,7 +34,7 @@ This is the process tha Packager allows to automate:
 2.  Creates a local branch of your local clone of google/fonts It should follow this scheme: `gftools_packager_ofl_fontname`.
 3.  If the font is new, it creates a new font family directory in the `ofl` directory. If the font is an upgrade, it updates the existing directory with the new elements.
 4.  Adds an `upstream.yaml` file with the location of the linked elements upstream.
-5.  Runs [gftools add-fonts](making-pr.md) on the fonts. That script creates or update [METADATA.pb](metadata.md). Packager also create a link to the source repo and commits at which the elements where taken to facilitates any updates. It also adds an empty [Description file](description.md) if not part of the upstream linked elements.
+5.  Runs [gftools add-fonts](making-pr.md) on the fonts. That script creates or update [METADATA.pb](metadata.md). Packager also create a link to the source repo and commits at which the elements where taken to facilitates any updates. It also adds an empty [ARTICLE.en_us.html file](article.md) if not part of the upstream linked elements.
 6.  Commits and pushes that package (step 1-4) onto the branch made at step 2.
 7.  Makes a Pull Request to `google/fonts` on a branch of the same name, and write the required description in comment:
 
