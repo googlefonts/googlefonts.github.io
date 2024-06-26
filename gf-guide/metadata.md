@@ -37,7 +37,7 @@ gftools add-font path/to/google/fonts/ofl/fontdirname
 
 The file uses [UTF-8](http://en.wikipedia.org/wiki/UTF-8) encoding.
 
-Below are two example `METADATA.pb` files, first for a family of static font files, and then for a family with variable font files, followed by a brief description of each key and possible values.
+Below are two examples of `METADATA.pb` files, first for a family of static font files, and then for a family with variable font files, followed by a brief description of each key and possible values.
 
 ### Example Static Fonts Family
 
