@@ -108,7 +108,7 @@ Each file or dir has the following purpose:
     <br>
     A directory containing the design source files and scripts used to build the fonts. Sources must not be kept in another directory.
 
-    There must be either a `config.yaml` or `build.sh` file that allows the fonts to be built in one command. For more context, you can read about the [Scalable font production] principle (https://googlefonts.github.io/gf-guide/production.html#scalable-font-production).
+    There must be either a `config.yaml` or `build.sh` file that allows the fonts to be built in one command. For more context, you can read about the [Scalable font production](https://googlefonts.github.io/gf-guide/production.html#scalable-font-production) principle.
 
     -   [config.yaml](https://github.com/googlefonts/Unified-Font-Repository/blob/main/sources/config.yaml)
         <br>
