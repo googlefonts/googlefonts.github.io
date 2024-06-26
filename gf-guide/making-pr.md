@@ -108,9 +108,9 @@ Now that you have the general scheme in mind, let’s dive into more details. Yo
     gftools add-font ofl/fontname
     ```
 >    **Note:**
->     -   If you add a font, this will create 2 files: a dummy description for the font in HTML format, and a `METADATA.pb` file which gives instructions to the API.
+>     -   If you add a font, this will create 2 files: a dummy article for the font in HTML format, and a `METADATA.pb` file which gives instructions to the API.
 >    -   If you upgrade the font, it will simply update `METADATA.pb`.
-6.  Open the [DESCRIPTION.en_us.html](description.md) and update it.
+6.  Open the [ARTICLE.en_us.html](article.md) and update it.
 7.  Open and check if [METADATA.pb](metadata.md) is not saying anything absurd.
 8.  When you are happy with everything, commit and push to the origin’s branch (same branch name you already created) with this message: `<FontName> : <font-version> added`.
 

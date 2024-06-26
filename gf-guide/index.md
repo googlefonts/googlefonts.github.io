@@ -117,7 +117,7 @@ Advanced content for experienced contributors or team members with the details o
 * <mark class="brown">team&nbsp;</mark>
   [METADATA file](metadata.md) 
 * <mark class="brown">team&nbsp;</mark>
-  [Article file](description.md)
+  [Article file](article.md)
 * <mark class="brown">team&nbsp;</mark>
   [Onboarder workflow guide](onboarder-workflow.md) 
 * <mark class="grey">templ</mark>
