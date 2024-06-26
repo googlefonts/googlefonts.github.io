@@ -16,6 +16,8 @@ Note that Packager will create a branch on <code>google/fonts</code> directly.
     Background reading:<br>
     <mark class="purple">nerd&nbsp;</mark> <a href="./googlefonts">google/fonts repository explained</a>
     <br>
+    <mark class="brown">team&nbsp;</mark> <a href="./metadata.md">METADATA file</a> 
+    <br>
     <mark class="purple">nerd&nbsp;</mark> <a href="./making-pr">Making a PR to Google Fonts</a>
 </div>
 
