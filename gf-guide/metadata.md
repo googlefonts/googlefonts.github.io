@@ -169,7 +169,7 @@ Example: `date_added: "2021-09-30"`
 
 ### designer
 
-The Ffll name of the type designers or foundries who designed the fonts. The order in which the names are listed here will determine the order of appareance in the About section in the font specimen page. (See below.) 
+The full name of the type designers or foundries who designed the fonts. The order in which the names are listed here will determine the order of appareance in the About section in the font specimen page. (See below.) 
 Each designer listed needs to have an entry in the library repo [/catalog/designers](https://github.com/google/fonts/tree/main/catalog/designers) tree; and each one needs to match a string in the `designer` key of `info.pb` files there.
 
 Examples:
