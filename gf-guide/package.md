@@ -61,7 +61,7 @@ Note that the font has to be in the same location as before, otherwise you would
     <br>
     Otherwise, if you are going to modify any of the files included in the package, please checout first to the `gftools_packager_ofl_fontname` branch and modify the files from there.
     <br>
-    At the end, you should have this kind of information:
+    At the end, you should have this kind of information (refer to the [Metadata](metadata.pb) section of this Guide to fin more details about the required fields):
 
     ``` code
     name: "Font Name"
