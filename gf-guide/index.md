@@ -126,8 +126,6 @@ Advanced content for experienced contributors or team members with the details o
   [Promote your font](promotion.md)
 * <mark class="purple">nerd&nbsp;</mark>
   [Lang repo](lang.md)
-* <mark class="brown">team&nbsp;</mark>
-  [Axis Registry repo](axis-registry.md)
    
 
 <!-- ## More info
