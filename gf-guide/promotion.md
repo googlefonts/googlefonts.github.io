@@ -43,7 +43,7 @@ This guide provides specifications for the required images for your typographic 
 ### Where to alocate the images
 
 - Feel free to add these images to your repo's README.md section (from the /documentation folder).
-- Both the images and the source files of the images should be included in an `article/` and a `social-assets` folders under the documentation directory. For more details, see the **Documentation** bullet in the [Upstream repository structure](./upstream/). 
+- The images should be included in an `article/` folders under the documentation directory. For more details, see the **Documentation** bullet in the [Upstream repository structure](./upstream/). 
 - An image-license.txt file must be included in the documentation directory. See the <a href="https://github.com/googlefonts/googlefonts-project-template/tree/main/documentation"> repository template</a>.
 
 <br><br>
