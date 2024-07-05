@@ -135,5 +135,6 @@ However, please bear in mind that following our new efforts to promote the fonts
 <div class="next-reading">
     Further reading:<br>
     <mark class="grey">templ</mark> <a href="./promotion">Promote your font</a>
+    <br>
     <mark class="grey">templ</mark> <a href="./profile">Designer Profile</a>
 </div>
