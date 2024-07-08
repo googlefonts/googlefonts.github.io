@@ -78,7 +78,7 @@ The recommended width is at least 1000px. You don't need any particular proporti
 -  `<a>`, `<blockquote>`, `<code>`, `<em>`, `<figcaption>`, `<figure>`, `<hr>`, `<h3>`, `<h4>`, `<h5>`, `<img>`, `<li>`, `<p>`, `<pre>`, `<span>`, `<strong>`, `<ul>`, `<ol>`, `<sub>`
 - The Article file can also include `<img>` and `<video>`
 
- ### Forbidden HTML elements
+### Forbidden HTML elements
  
 - `<applet>`, `<base>`, `<embed>`, `<form>`, `<frame>`, `<frameset>`, `<head>`, `<iframe>`, `<link>`, `<math>`, `<meta>`, `<object>`, `<script>`, `<style>`, `<svg>`, `<template>`
 - The Description file can't include `<img>` and `<video>`
