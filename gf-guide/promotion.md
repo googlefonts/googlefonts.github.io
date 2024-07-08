@@ -40,7 +40,7 @@ This guide provides specifications for the required images for your typographic 
 - Do not add credits of any kind, not for third parties or yourself (the credits will already be included in the Designers section).
 - These images will be licensed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). 
 
-### Where to alocate the images
+### Where to allocate the images
 
 - Feel free to add these images to your repo's README.md section (from the /documentation folder).
 - The images should be included in an `article/` folder under the documentation directory. For more details, see the **Documentation** bullet in the [Upstream repository structure](./upstream/). 
