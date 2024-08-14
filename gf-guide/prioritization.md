@@ -56,7 +56,7 @@ Target schedule: Quarterley, but can slip.
 
 ### P3: General Priority
 
-A nice project that [@davelab6](https://github.com/davelab6), [@chrissimpkins](https://github.com/chrissimpkins) or others in the Google Fonts team would like to ship sooner than later?
+A nice project that Google employees would like to ship sooner than later?
 
 An existing low usage family has a bug, and the fix will improve existing documents in a meaningful way?
 
@@ -89,6 +89,6 @@ This is a judgment call when evaluating the issue: If the answer isn't obvious, 
 
 ### How will we communicate onboarding priorities and known deadlines during our quarterly planning process?
 
-Chris will directly track, communicate and coordinate as needed, including maintaining an internal spreadsheet of priority P1 and P2 projects that is shared with the wider Google Fonts team at the beginning of each quarter, based on Github Issues tags.
-If the list requires updates during the current quarter, Chris will communicate changes to the Fonts team within one week of the plan update.
+A Google Fonts team [Program Manager](https://www.google.com/search?q=Program+Manager) will directly track, communicate and coordinate as needed, including maintaining an internal spreadsheet of priority P1 and P2 projects that is shared with the wider Google Fonts team at the beginning of each quarter, based on Github Issues tags.
+If the list requires updates during the current quarter, the Program Manager will communicate changes to the Google Fonts internal leadership team within one week of the plan update.
 One of the primary goals of this communication plan is to surface all known deadline driven onboarding work as early as possible to the team.
