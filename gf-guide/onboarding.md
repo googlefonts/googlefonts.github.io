@@ -18,13 +18,17 @@ Don't forget to search the issue tracker (using keywords) to see if your issue h
     <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+API+%2F+Website+%2F+Platform%2C+II+Tools+%2F+workflow+%2F+repo&template=4_anything-else.md&title=">Anything else</a></li>
 </ul>
 
-From time to time, Google Fonts provides financial and design assistance for projects. If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your Github profile page.)
+From time to time, Google Fonts provides financial and design assistance for projects.
+If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your Github profile page.)
 
 </div>
 
 <div class="context-reading">
-    Background reading:<br>
-     <mark class="blue">start</mark> <a href="./culture" style="font-weight:bold">Libre Fonts Culture</a>
+
+Background reading:  
+<mark class="blue">start→</mark> **[Libre Fonts Culture](./culture)**  
+<mark class="blue">nerd→</mark> **[Project Prioritization](./prioritization)**
+
 </div>
 
 ## Table of contents
@@ -143,14 +147,13 @@ You can find more about the technical aspect of adding a profile to google/fonts
 
 
 <div class="next-reading">
-    Further reading:<br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overal font requirements</a>
-    <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./static" style="font-weight:bold">Static fonts specifics</a>
-    <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
-    <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
-    <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a>
+    
+Further reading:  
+<mark class="green">**must→**</mark> **[Overall font requirements](./requirements)**  
+<mark class="green">**must→**</mark> **[Static fonts specifics](./static)**  
+<mark class="green">**must→**</mark> **[Variable fonts specifics](./variable)**  
+<mark class="green">**must→**</mark> **[Vertical metrics](./metrics)**  
+<mark class="green">**must→**</mark> **[Production requirements](./production)**  
+<mark class="blue">nerd→</mark> [Project Prioritization](./prioritization)
+
 </div>
