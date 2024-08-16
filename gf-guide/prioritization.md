@@ -8,7 +8,7 @@
 <div class="context-reading">
   
   Background reading:  
-     <mark class="blue">start</mark> **[Adding & Upgrading Fonts to Google Fonts](./onboarding)**</a>
+     <mark class="blue">start</mark> **[Adding & Upgrading Fonts to Google Fonts](./onboarding)**
      
 </div>
 
