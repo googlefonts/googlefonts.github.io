@@ -85,22 +85,22 @@ Don’t hesitate to search the Internet for how to install the SSH key properly 
 
 **A repository** (or “repo”) is a place to save the project’s files and work history, allowing you to share, review and track the project's development.
 
--   If you are working on a new project, you will need to [create a new repository](https://docs.github.com/en/get-started/quickstart/create-a-repo) using our template outlined below.
+-   If you are working on a new project, you must create a new repository using our template outlined below.
 -   If you contribute to an existing project, [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) it into your GitHub account and later return your changes using a [PR](https://docs.github.com/en/get-started/quickstart/github-flow#create-a-pull-request) (Pull Request).
 
 Both new repos and forked ones will be located in your GitHub account, and they are called the `remote` repositories because the “source” of the repository is hosted remotely on GitHub.
 
 The forked repo will be the `origin` remote location, while the source repo will be `upstream` remote location.
 
-After you have created or forked a repo, you will need to [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the repository to have a local copy on your computer so that you can access, edit, and later sync the files between locations.
+After you have created or forked a repo, you will need to *clone* the repository to have a local copy on your computer to access, edit, and later sync the files between locations. Be aware that Clone has a very specific word command meaning in Git, which in this environment is meaningful and differs from "duplicate" in a much more general sense. Please make yourself familiar with [Clonning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 Having the repository hosted remotely allows you to keep different copies of the same files that could be at different stages of development, and this also allows for multiple collaborators to be working on the same project in a planned and synchronized way.
 
 When working with source projects on GitHub, it's common to have multiple forks of the same project, each owned by different users. Each contributor works on their own fork, periodically contributing their changes to the upstream repository. Therefore, it is crucial to work organized and coordinated, but GitHub helps you to achieve that.
 
-→ **Create and name your repository**
+→ **Creating and naming your repository**
 
--   GF requires a [particular structure for the repository](upstream.md) however, we have provided a [repository template](upstream.md) that you can use to get started.
+-   GF requires a [particular structure for the repository](upstream.md) however, we have provided a [repository template](https://github.com/googlefonts/googlefonts-project-template) that you can use to get started.
 -   Ideally, the repository name matches the [Font Project name](onboarding.md).
 
 If you are a foundry or collaborative project:
