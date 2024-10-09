@@ -117,7 +117,7 @@ All the glyphs involved in the generation of accented letters use *Anchors*, whi
 Anchors are commonly represented as a red rhombus in the glyph view of the source file and are identified with a name. The name part should be shared among the base glyph and the mark glyph, but in the mark glyph there should be a preceding underscore. For example, there should be a `top` anchor in the base glyph and a corresponding `_top` anchor in the mark.
 This name schema is crucial for the positioning to work as expected - for example if the underscore is omitted in the mark glyph, it would not be attached to the base letter - so you must pay special care and attention to them.  
 
-**Requirements for combining marks:**
+### Requirements for combining marks
 
 - **They must have a zero width value once in the font binary `=0`**. While working on the source file, it is possible to use a positive width with positive sidebearings to facilitate access to the glyph. Then, if the glyphs have the anchors and the correct name, the tool generating the font will take care of changing the width to 0 to comply with the requirement that they must be zero value width glyphs (hence the name **nonspacing**).
 - The glyph name of combining marks should use the *comb* suffix, e.g. `acutecomb`, `gravecomb`. 
