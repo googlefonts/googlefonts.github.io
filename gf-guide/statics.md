@@ -189,7 +189,7 @@ Static fonts should be hinted using the latest version of [ttfautohint](https:/
 
 If you don’t use [gftools builder](build.md) (which autohint static fonts by default but you can turn off that option), you should run the fonts through `gftools fix-hinting` once the fonts have been hinted. If the fonts are unhinted, run the fonts through `gftools fix-nonhinting`.
 
-Fontmake does not support manual hinting from Glyphs. You can use use [VTT](https://docs.microsoft.com/en-us/typography/tools/vtt/) instead and you can patch a VTT program with [gftools builder](package.md) — see [Montserrat](https://github.com/googlefonts/Montserrat/tree/master/sources) as an example.
+Fontmake does not support manual hinting from Glyphs. You can use use [VTT](https://docs.microsoft.com/en-us/typography/tools/vtt/) instead and you can patch a VTT program with [gftools builder](https://googlefonts.github.io/gf-guide/build.html#gftools-builder) — see [Montserrat](https://github.com/googlefonts/Montserrat/tree/master/sources) as an example.
 
 ------------------------------------------------------------------------
 
