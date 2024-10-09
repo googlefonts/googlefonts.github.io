@@ -303,7 +303,7 @@ Typically this matches the value of the copyright notice in the first lines of t
 
 List of all character subsets available in Google Fonts API for the given font family. They are described as languages, but they are actually script sets.
 
-These subsets are defined in [GF Glyphsets repo](https://github.com/googlefonts/glyphsets/tree/main/Lib/glyphsets/encodings) —with the exception of the `menu` subset. 
+These subsets are defined in [GF Subsets repo](https://github.com/googlefonts/nam-files/tree/main/Lib/gfsubsets/data) (with the exception of the `menu` subset). 
 
 The `menu` subset is the characters of the font family name (defined above) and is used in font picker UIs to render the font name in itself. This subset is mandatory for all fonts.
 
