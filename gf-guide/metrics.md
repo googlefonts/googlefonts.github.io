@@ -257,10 +257,10 @@ The following vertical metric values may be applied to CJK fonts.
 | Attrib                                    | Value                                    | Example using 1000upm font |
 |-------------------------------------------|------------------------------------------|----------------------------|
 | OS/2.sTypoAscender                        | 0.88 \* font upm                         | 880                        |
-| OS/2.sTypoDescender                       | -0.12 \* font upm                        | -120                       |
+| OS/2.sTypoDescender                       | -0.12 \* font upm （should be negative） | -120                       |
 | OS/2.sTypoLineGap                         | 0                                        | 0                          |
 | hhea.ascender                             | Set to look comfortable (\~1.16 \* upm)  | 1160                       |
-| hhea.descender                            | Set to look comfortable (\~0.288 \* upm) | -288                       |
+| hhea.descender                            | Set to look comfortable (\~-0.288 \* upm, should be negative) | -288                       |
 | hhea.lineGap                              | 0                                        | 0                          |
 | OS/2.usWinAscent                          | Same as hhea.ascent                      | 1160                       |
 | OS/2.usWinDescent                         | abs(value) of hhea.descent               | 288                        |
