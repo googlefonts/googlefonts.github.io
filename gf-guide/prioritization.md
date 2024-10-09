@@ -35,7 +35,7 @@ This prioritization framework exists to created shared understanding of how Goog
 This shared understanding is primarily between the people active on this public repo, and the internal Google Fonts team members who are rarely or never seen on the public Github repos.
 
 It is refreshed during a quarterly planning process, led by a Google Fonts team [Program Manager](https://www.google.com/search?q=Program+Manager).
-The quarerly plan surfaces all known deadline-driven onboarding work as early as possible to the Google Fonts team, so that it is factored into internal quarterly resource allocation planning.
+The quarterly plan surfaces all known deadline-driven onboarding work as early as possible to the Google Fonts team, so that it is factored into internal quarterly resource allocation planning.
 
 Concretely: The Program Manager will directly track, communicate and coordinate as needed, including maintaining an internal spreadsheet of priority P1 and P2 projects that is shared with the wider Google Fonts team at the beginning of each quarter, based on Github Issues tags.
 If the list requires updates during the current quarter, the Program Manager will communicate changes to the Google Fonts internal leadership team within one week of the plan update.
