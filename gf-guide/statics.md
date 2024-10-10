@@ -9,13 +9,13 @@
 
 🐓  “Static” fonts is a way of saying traditional, <em>non-variable</em> fonts.
 <br><br>
-Before going further, make sure you read carefully the <a href="./requirements">overall fonts requirements</a>. And please refer to the <a href="./variable">requirements about Variable Fonts</a> if you are developping a VF.
+Before going further, make sure you read carefully the <a href="./requirements">overall fonts requirements</a>. And please refer to the <a href="./variable">requirements about Variable Fonts</a> if you are developing a VF.
 <br><br>
 Note that GF only onboards OTF-TTF files: <code>.ttf</code> — so TrueType fonts only! The upstream repo can of course contain OTF-CFF <code>.otf</code> fonts, as well as webfonts <code>.woff2</code>. GF redirects users to the upstream repo to find these files if they are not satisfied with the one served by the API.
 <br><br>
 If the font project consists only of static fonts (and does not include any VF whatsoever), then the statics available upstream will be the main font binaries and will be onboarded. In other cases, statics available in the upstream repository may not get onboarded by GF when:
 <ul>
-    <li>If a VF exists and the statics are autohinted, then only the variable font is onboarded. The API will generate statics fonts by instanciating the VF: they will be served to browsers which doesn’t support the variable font technology, and they will be available in a downloadable zip file (<code>download family</code> button in any specimen pages). Please read about the <a href="https://googlefonts.github.io/gf-guide/variable.html#instantiated-static-fonts">instantiated static fonts</a></li>
+    <li>If a VF exists and the statics are autohinted, then only the variable font is onboarded. The API will generate statics fonts by instantiating the VF: they will be served to browsers which don’t support the variable font technology, and they will be available in a downloadable zip file (<code>download family</code> button in any specimen pages). Please read about the <a href="https://googlefonts.github.io/gf-guide/variable.html#instantiated-static-fonts">instantiated static fonts</a></li>
     <li>If a VF exists and the statics are manually hinted, then both formats are onboarded.</li>
 </ul>
 
@@ -23,7 +23,7 @@ If the font project consists only of static fonts (and does not include any VF w
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overal font requirements</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overall font requirements</a>
 </div>
 
 ## Table of contents
@@ -33,7 +33,7 @@ If the font project consists only of static fonts (and does not include any VF w
 
 ## Supported Styles
 
-Google’s static fonts API supports up to 18 styles in one family: up to 9 weights (Thin–Black), + their matching Italics. The table below lists each style’s specific name table and bit settings.
+Google’s static fonts API supports up to 18 styles in one family: up to 9 weights (Thin–Black), + their matching Italics. The table below lists each style’s specific name tables and bit settings.
 
 `fontmake` doesn’t produce Mac names entries any more. If you must add the name for platform 1 (Mac), make sure they are the same as the one in Platform 3 (Windows).
 
@@ -72,7 +72,7 @@ In Glyphs.app, the `Family Name` in font info (or the `Localised Family Name` in
 
 ## Style linking
 
-Several tables in font files need to be set to enable proper style linking between Upright/Italic and Regular/Bold. You can look at the the Open Type spec for more info about the:
+Several tables in font files need to be set to enable proper style linking between Upright/Italic and Regular/Bold. You can look at the Open Type spec for more info about the:
 - [`post`](https://learn.microsoft.com/en-us/typography/opentype/spec/post) table, regarding `italic angle` value; 
 - [`OS/2`](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fss) table for the the `fsSelection` values; 
 - [`head`](https://learn.microsoft.com/en-us/typography/opentype/spec/head) table for `macStyle` values;
