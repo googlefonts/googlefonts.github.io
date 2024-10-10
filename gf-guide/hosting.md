@@ -13,7 +13,7 @@ Using Git is essential to track the history of a project.
 <br><br>
 <b>GitHub</b>
 <br>
-Is one of the various web providers of Git services (Bitbucket, GitLab, to name a few). Google Fonts requires to use GitHub since it includes various other features to help administer the workflow of a project that further simplify working and collaborating via Git.
+Is one of the various web providers of Git services (Bitbucket, GitLab, to name a few). Google Fonts requires the use of GitHub since it includes various other features to help administer the workflow of a project that further simplify working and collaborating via Git.
 
 </div>
 
@@ -33,7 +33,7 @@ Using GitHub means embracing GitHub culture. One of the main goals of using a VC
 
 When working on an open platform like GitHub, development should happen publicly, ideally from day one, allowing others to view work in progress, and enabling the public to point out issues during development instead of after the typical 1.0 release.
 
-Early feedback and contributions are some of the most valuable assets of open-source culture, as having multiple eyes on the project’s development leads to better tested and, therefore more robust projects.
+Early feedback and contributions are some of the most valuable assets of open-source culture, as having multiple eyes on the project’s development leads to better tested and, therefore, more robust projects.
 
 At [ATypI 2014](https://www.youtube.com/watch?v=DBz0rVUYNPA) David Lemon, the senior manager of the Adobe Type group, discussed how the Adobe Type team has benefited from libre fonts culture and said that Git and Github were some of the most positive aspects. Adobe used the “*publish early and often, gathering feedback”* approach of Libre projects in its [Vortice typeface project](https://blog.typekit.com/2015/03/04/introducing-vortice-and-the-adobe-type-concepts-program/).
 
@@ -85,25 +85,25 @@ Don’t hesitate to search the Internet for how to install the SSH key properly 
 
 **A repository** (or “repo”) is a place to save the project’s files and work history, allowing you to share, review and track the project's development.
 
--   If you are working on a new project, you will need to [create a new repository](https://docs.github.com/en/get-started/quickstart/create-a-repo) using our template outlined below.
+-   If you are working on a new project, you must create a new repository using our template outlined below.
 -   If you contribute to an existing project, [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) it into your GitHub account and later return your changes using a [PR](https://docs.github.com/en/get-started/quickstart/github-flow#create-a-pull-request) (Pull Request).
 
 Both new repos and forked ones will be located in your GitHub account, and they are called the `remote` repositories because the “source” of the repository is hosted remotely on GitHub.
 
 The forked repo will be the `origin` remote location, while the source repo will be `upstream` remote location.
 
-After you have created or forked a repo, you will need to [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the repository to have a local copy on your computer so that you can access, edit, and later sync the files between locations.
+After you have created or forked a repo, you will need to *clone* the repository to have a local copy on your computer to access, edit, and later sync the files between locations. Be aware that Clone has a very specific word command meaning in Git, which in this environment is meaningful and differs from "duplicate" in a much more general sense. Please make yourself familiar with [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 Having the repository hosted remotely allows you to keep different copies of the same files that could be at different stages of development, and this also allows for multiple collaborators to be working on the same project in a planned and synchronized way.
 
 When working with source projects on GitHub, it's common to have multiple forks of the same project, each owned by different users. Each contributor works on their own fork, periodically contributing their changes to the upstream repository. Therefore, it is crucial to work organized and coordinated, but GitHub helps you to achieve that.
 
-→ **Create and name your repository**
+→ **Creating and naming your repository**
 
--   GF requires a [particular structure for the repository](upstream.md) however, we have provided a [repository template](upstream.md) that you can use to get started.
+-   GF requires a [particular structure for the repository](upstream.md) however, we have provided a [repository template](https://github.com/googlefonts/googlefonts-project-template) that you can use to get started.
 -   Ideally, the repository name matches the [Font Project name](onboarding.md).
 
-If you are a foundry or collaborative project:
+If you are a foundry or working on a collaborative project:
 
 1.  Set up a [Github organization](https://help.github.com/articles/creating-a-new-organization-account/)
     -   [Github Blog: Introducing Organizations](https://github.com/blog/674-introducing-organizations)
@@ -124,7 +124,7 @@ If you are a foundry or collaborative project:
 
 → **Repositories vs. cloud syncing**
 
-If you are used to keeping design work synced to Dropbox, Google Drive, or iCloud, it is strongly advised you *exclude* your Git repos folder from this type of cloud syncing. If you start a project inside a cloud-synced area, then move that work into your git-repos area, make sure the syncing doesn't follow your content. General-purpose cloud syncing and Git have different purposes and can interfere with one another in strange ways.
+If you are used to keeping design work synced to Dropbox, Google Drive, or iCloud, it is strongly advised you *exclude* your Git repos folder from this type of cloud syncing. If you start a project inside a cloud-synced area, then move that work into your git-repos area, make sure the syncing doesn't follow your content. General-purpose cloud syncing and Git have different purposes and can interfere with each other in strange ways.
 
 ### Commits: manage progress and track changes
 
