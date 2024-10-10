@@ -106,7 +106,7 @@ As the name suggests, the combining diacritics are the marks actually used to co
 
 **Automatic alignment**
 
-When creating the precomposed characters in the source file, ideally, automatic alignment should be enabled consistently in the composite glyphs. This way they would get authomatically updated after any change on any of the components is performed.
+When creating the precomposed characters in the source file, ideally, automatic alignment should be enabled consistently in the composite glyphs. This way they would get automatically updated after any change on any of the components is performed.
 
 *Tip: When using `ufo2glyphs` to convert source files, use this argument to preserve alignments: `--enable-automatic-alignment`*
 
