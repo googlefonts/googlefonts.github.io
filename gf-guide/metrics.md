@@ -249,6 +249,7 @@ The values for CJK vertical metrics are based on a few core concepts:
     > Source Han/Noto CJK uses 880/-120 or 0.88/-0.12. Other usual pairs are 0.85/-0.15 and 0.8/-0.2. The factors may be modified to match the Latin part of the font.
 2. Line gaps should be set to 0 matching Latin font practice. See above [Requirement point 8](#8-linegap-values-must-be-0).
 3. hhea values should be set to look harmonized (excluding extreme vertical height symbols only used in vertical typesetting such as U+3031 and U+3032), including Latin parts (such as hanyu pinyin Ǚ). See above [Requirement point 10](#10-typohheaascender-value-should-leave-open-room-for-stacked-diacritics).
+    * Note that for multi-family fonts, the metrics across family should be consistent. See above [Requirement point 2](#2-vertical-metrics-must-be-consistent-across-a-family).
     > Source Han Sans/Noto Sans CJK uses 1160/-288.
 4. Disable OS/2.fsSelection bit 7 (Use_Typo_Metrics) as both sType* and usWin* are same.
 
