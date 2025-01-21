@@ -71,16 +71,21 @@ If you would like to include a new font family in the Google Fonts collection, w
     <br>
     A VCS open to public participation and actively maintained. Please read our [Github guide](hosting.md).
     
--   **The source files are available** in your preferred font editor format.
+-   **The source files are available** in your preferred font editor format. 
+These must be the "true" sources that are used for active development of the font, rather than an interchange format (such as `.ufo`, for the purposes of running `fonttools`). The file formats most commonly used are `.ufo` / `.ufoz`, `.glyphs` / `.glyphspackage`, `FontCreator`, `FontForge`, or `Fontlab`.
     <br>
-    The file formats most used are `UFO`, `.glyphs`, `.glyphspackage`, `fontforge` or `fontlab 7`.
-    <br><br>`.glyphspackage` is preferred over `.glyphs` due to it being easier to work with in version control (Git). `Fontlab V` files must be converted to another format because the software runs only on older OS versions. If you are using any font format other than `.glyphs`, `.glyphspackage`, and `.ufo`, include a build script that converts the sources to UFO, and include the UFO sources in the Git repository. Use **[Fontlab to UFO](https://pypi.org/project/vfb2ufo3/)** or **[FontForge to UFO](https://github.com/fontforge/sfd2ufo)** for example.
+    - In the case of `Glyphs`-based development,`.glyphspackage` is preferred over `.glyphs` due to it being easier to work with in version control (Git). 
+    - `Fontlab V` files must be converted to another format because the software runs only on older OS versions. 
+    - If you are using any font format other than `.glyphs`, `.glyphspackage`, and `.ufo`, you must include a build script that converts the sources to UFO, and include the `UFO` sources in the Git repository. For example:
+        - [Fontlab to UFO](https://pypi.org/project/vfb2ufo3/) (`.vfb`)
+        - [FontForge to UFO](https://github.com/fontforge/sfd2ufo)
+        - For formats that do not currently offer a script-based conversion method (such as `.vfc` for `Fontlab 7`+ and `.fcp` for `FontCreator`), please include both the source and an exported interchange file, such as `.ufo`, in the repository.
 
 -   **The build should follow the [Scalable Font Production principle](production.md).**
     <br>
-    Fonts are built using [Fontmake](https://github.com/googlefonts/fontmake), which can generate binaries from `UFO`. Fontmake can also convert `.glyphs` files to UFO, but if you are using any other font format, your build process should contain a step that converts the sources to UFO. Read the chapter about [building fonts](build.md) to know more about the build process.
+    Fonts are built using [Fontmake](https://github.com/googlefonts/fontmake), which can generate binaries from `UFO`. Fontmake can also convert `.glyphs` and `.glyphspackage` files to `.ufo`, but if you are using any other font format, your build process should contain a step that converts the sources to `UFO`. Read the chapter about [building fonts](build.md) to know more about the build process.
 
--   **All binary font files must be available in TTF format.**
+-   **All binary font files must be available in TTF format, either directly in the repository, or as a release.**
  
 -   **All font files should support, at least, the ["GF Latin Core"](https://github.com/googlefonts/glyphsets/blob/main/data/results/txt/nice-names/GF_Latin_Core.txt) glyph set.**
   
