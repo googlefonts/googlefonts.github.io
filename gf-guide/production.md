@@ -52,7 +52,7 @@ These must be the "true" sources that are used for active development of the fon
         - For formats that do not currently offer a script-based conversion method (such as `.vfc` for `Fontlab 7`+ and `.fcp` for `FontCreator`), please include both the source and an exported interchange file, such as `.ufo`, in the repository.
 
 
--   **Fonts should be built using open-source tools.** This ensures that they can be built under the same conditions on any platform. See [the chapter about building fonts](build.md) for more information. 
+-   **Fonts should be built using open-source tools.** This ensures that they can be built under the same conditions on any platform.
 
 -   **Fonts should be built in one step.** All GF font production tools can be run from the command line. This allows to use them to generate font families by running a single command.
     <br>
