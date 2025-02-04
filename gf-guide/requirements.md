@@ -35,7 +35,7 @@ Naming a font is pretty difficult, and not only because of the need of originalt
 For example, the hyphen is used to separate the family name from the style name in the file path; adding a hyphen to your family name may cause the QA tool to think that your style name is unconventional, and therefore fail the font. It will also break the file naming convention put in place across the entire collection (no foundy likes that). And finally, a user searching for the font in Google Fonts may not find it if they forget about the hyphen.
 
 - no camelCase, use spaces instead
-- no abbeviation/accronyms
+- no abbeviation/accronyms (exceptions allowed for companies, i.e. IBM Plex Sans, no exceptions for foundry names)
 - no all caps
 - only basic ASCII glyphs (A-Z, a-z, 0-9), ie no hyphens, underscores nor accented letters.
 - the combined length of family name and style name shall not go over 32 characters.
