@@ -30,14 +30,14 @@ For specific information on any of those cases, please read the pages with the r
 
 ## Font name
 
-Naming a font is pretty difficult, and not only because of the need of originalty and creativity. Google Fonts expects font names to comply with basic SEO and tooling limitations. 
+Naming a font is pretty difficult, and not only because of the need of originality and creativity. Google Fonts expects font names to comply with basic SEO and tooling limitations. 
 
-For example, the hyphen is used to separate the family name from the style name in the file path; adding a hyphen to your family name may cause the QA tool to think that your style name is unconventional, and therefore fail the font. It will also break the file naming convention put in place across the entire collection (no foundy likes that). And finally, a user searching for the font in Google Fonts may not find it if they forget about the hyphen.
+For example, the hyphen is used to separate the family name from the style name in the file path; adding a hyphen to your family name may cause the QA tool to think that your style name is unconventional, and therefore fail the font. It will also break the file naming convention put in place across the entire collection (no foundry likes that). And finally, a user searching for the font in Google Fonts may not find it if they forget about the hyphen.
 
 - no camelCase, use spaces instead
-- no abbeviation/accronyms
+- no abbreviations/acronyms
 - no all caps
-- only basic ASCII glyphs (A-Z, a-z, 0-9), ie no hyphens, underscores nor accented letters.
+- only basic ASCII glyphs (A-Z, a-z, 0-9), i.e., no hyphens, underscores, or accented letters.
 - the combined length of family name and style name shall not go over 32 characters.
 - the family name must not have "color" "colr" "colored" in the name, since that doesn't tell users what kind of treatment the color font technology provides (whereas e.g. words like "ink" or "fun" does), and invites filtering of color fonts based on having "color" in the family name, which is bad.
 
@@ -69,7 +69,7 @@ Current `1.230`, new `1.231`
 
 ## Font Embedding (fsType)
 
-[fsType](https://docs.microsoft.com/en-us/typography/opentype/spec/os2#fstype) is one of the parameters of the `OS/2` table in which the embeding permissions of a font are declared. For Libre Fonts it should be set to bit `0` (Installable embedding).
+[fsType](https://docs.microsoft.com/en-us/typography/opentype/spec/os2#fstype) is one of the parameters of the `OS/2` table in which the embedding permissions of a font are declared. For Libre Fonts it should be set to bit `0` (Installable embedding).
 
 This is how it should look like in the OS/2 table: `<fsType value="00000000 00000000"/>`
 
@@ -168,14 +168,14 @@ This system aims to give enough flexibility to define the intended scope of each
 
 Currently, the most used ones are:
 
--   [**GF Latin Kernel**](https://github.com/googlefonts/glyphsets/blob/main/GF_glyphsets/Latin/txt/nice-names/GF_Latin_Kernel.txt) is the minimum Latin set required to be included within fonts targeting non-latin scripts users. *Please note that since it matches the ASCII set, it only includes full support for the English language*.
+-   [**GF Latin Kernel**](https://github.com/googlefonts/glyphsets/blob/main/GF_glyphsets/Latin/txt/nice-names/GF_Latin_Kernel.txt) is the minimum Latin set required to be included within fonts targeting non-Latin scripts users. *Please note that since it matches the ASCII set, it only includes full support for the English language*.
 -   [**GF Latin Core**](https://github.com/googlefonts/glyphsets/blob/main/GF_glyphsets/Latin/txt/nice-names/GF_Latin_Core.txt) is the minimum set required to be included within any font family that addresses Latin based languages (*be it an open contribution or a commissioned font*). It includes the Latin Kernel plus additional glyphs to support the most widely used languages, including those encompassing Central and Western Latin based languages, among \~200 others.
 -   [**GF Latin Plus**](https://github.com/googlefonts/glyphsets/blob/main/GF_glyphsets/Latin/txt/nice-names/GF_Latin_Plus.txt) includes additional numerals sets (like numerators, denominators, inferior and superior), expanded math and currency symbols, as well as arrows and bullets in use in Google Docs.
 -   [**Latin Vietnamese**](https://github.com/googlefonts/glyphsets/blob/main/GF_glyphsets/Latin/txt/nice-names/GF_Latin_Vietnamese.txt) includes the extended marks and combined letters required to support the Vietnamese language. It requires to be combined with Latin Core for complete Latin + Vietnamese support.
 
 Find all the glyphsets definition and filter lists in the [Glyphsets repository](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets). Be aware that these glyphsets are still a work in progress and any advise or recommendation can be submitted using the [Glyphsets’ issue tracker](https://github.com/googlefonts/glyphsets/issues).
 
-## OpenType Features support
+## OpenType feature support
 
 ### Required Features
 
@@ -188,7 +188,7 @@ The default numerals (ASCII 0 to 9) should be proportional, and complemented by 
 The Google Fonts API currently does not support requesting the inclusion of optional (also known as discretionary, or opt-in) OpenType Features, such as Stylistic Sets (`salt`) or Small Caps (`smcp`, `c2sc`).
 Instead the glyphs contained in these features may be published as a separate family, as follows:
 
-The vertical metrics should be the same in each sibling family, and the "Use of Typo Metrics" flag should be set.
+The vertical metrics should be the same in each sibling family, and the "Use Typo Metrics" flag should be set.
 Please refer to the [Vertical Metrics](metrics.md) section for further details.
 
 - **Small Caps**
@@ -204,7 +204,7 @@ Please refer to the [Vertical Metrics](metrics.md) section for further details.
   `FamilyNameSC-StyleName.ttf` E.g. `CormorantSC-Infant.ttf`
 
   - The variant glyphs from the stylistic sets should substitute the base glyph from the original family in the new family, for the user to receive the intended Stylistic Set behavior.
-  -  The stylistic sets could be available in the downloadable version of the main font, but they are subsetted from the version served by the API. Thus, for a user experience matter, it is required to name each of the stylistic sets to match the name of the sibling family published. If you are using Glyphs font editor, please check the instructions on adding the names under the [Stylistic Sets Tutorial](https://glyphsapp.com/learn/stylistic-sets). 
+  -  The stylistic sets could be available in the downloadable version of the main font, but they are subsetted out of the version served by the API. Thus, for a user experience matter, it is required to name each of the stylistic sets to match the name of the sibling family published. If you are using Glyphs font editor, please check the instructions on adding the names under the [Stylistic Sets Tutorial](https://glyphsapp.com/learn/stylistic-sets). 
 
 
 <div class="next-reading">

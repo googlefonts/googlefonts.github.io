@@ -30,7 +30,7 @@ Note that Packager will create a branch on <code>google/fonts</code> directly.
 
 ### When used on a font family for the first time
 
-This is the process tha Packager allows to automate:
+This is the process the Packager is able to automate:
 
 1.  Takes elements from the upstream repo: fonts, OFL.txt, eventually the Article file if available. It can also package fonts from a `tag release`, which is quite practical.
 2.  Creates a local branch of your local clone of google/fonts It should follow this scheme: `gftools_packager_ofl_fontname`.
@@ -49,19 +49,19 @@ Once the font family has been packaged once with the Packager (and that PR has b
 
 Note that the font has to be in the same location as before, otherwise you would have to correct `METADATA.pb` first.
 
-## Adding a new fonts with Packager
+## Adding a new font with Packager
 
-1.  The Packager needs information about the dont project as well as to know where to find the necessary files (fonts, OFL etc), so we need to provide it in the `METADATA.pb` file to provide such info. Open your terminal and run:
+1.  The Packager needs information about the font project as well as to know where to find the necessary files (fonts, OFL, etc.), so we need to provide that info in the `METADATA.pb` file. Open your terminal and run:
 
     ``` code
     gftools packager "Font Name" path/to/local/google/fonts
     ```
 
-    This will create a `gftools_packager_ofl_fontname` branch; the `ofl/fontname` directory for the project with a `METADATA.pb` file draft. You will have to fill up all needed informations indirectly from the Terminal using vim or your favorite code editor.
+    This will create a `gftools_packager_ofl_fontname` branch; the `ofl/fontname` directory for the project with a `METADATA.pb` file draft. You will have to fill in all needed information indirectly from the Terminal using vim or your favorite code editor.
     <br>
-    To fill out the Metadata file, it is not necessary to checkout to the gftools branch, do it from the main branch of your local copy of the `google/fonts` repo.
+    To fill out the Metadata file, it is not necessary to checkout the gftools branch: do it from the main branch of your local copy of the `google/fonts` repo.
     <br>
-    Otherwise, if you are going to modify any of the files included in the package, please checout first to the `gftools_packager_ofl_fontname` branch and modify the files from there.
+    Otherwise, if you are going to modify any of the files included in the package, please first checkout the `gftools_packager_ofl_fontname` branch, then modify the files from there.
     <br>
     At the end, you should have this kind of information (refer to the [Metadata](metadata.pb) section of this Guide to fin more details about the required fields):
 
@@ -102,7 +102,7 @@ Note that the font has to be in the same location as before, otherwise you would
 
     → In `files` field the `source_file` is the file path for the files in the upstream repo, and the `dest_file` is the target file and location in `ofl/fontname` directory of `google/fonts` repository.
 
-    → This example above works if the upstream repository in having a `fonts` directory where the binaries are stored. If the fonts are in a zip file of a **tagged release**, and not in a font directory, you should use the `archive_url` field this way:
+    → This example above works if the upstream repository has a `fonts` directory where the binaries are stored. If the fonts are in a zip file of a **tagged release**, and not in a font directory, then you should use the `archive_url` field this way:
 
     ``` code
     repository_url: https://github.com/owner/Font-Name
@@ -114,33 +114,33 @@ Note that the font has to be in the same location as before, otherwise you would
 
     → You obtain the link of the zip by right-clicking on it from the upstream repo.
 
-2.  Once the `METADATA.pb` file has been filled out with all the required information, you can run the tool again adding the `-p` otion thatmakes a pull request to google fonts:
+2.  Once the `METADATA.pb` file has been filled out with all the required information, you can run the tool again, adding the `-p` otion, which makes a pull request to Google Fonts:
 
     ``` code
     gftools packager "Font Name" path/to/local/google/fonts -p
     ```
 
-The Packager will package all the files from the font upstream repository, commit and push them onto a new branch in the google/fonts repo. 
+The Packager will package all the files from the font's upstream repository, commit, and push them onto a new branch in the google/fonts repo. 
 
 ## Upgrading an existing font with Packager
 
-- If you upgrade an existing font, first check in the font directory in the `ofl` folder (of the main branch) if the `METADATA.pb` already contains the required information well set up. If not, update it following the above specifications. 
-  - The informations are correct: make sure the branch and file paths are still up to date.
+- If you upgrade an existing font, first check in the font directory in the `ofl` folder (of the main branch) if the `METADATA.pb` already contains the required information and that it is well set up. If not, update it following the above specifications. 
+  - The information is correct: make sure the branch and file paths are still up to date.
   - The source URL (or the archive URL) located in [METADATA.pb](metadata.md) is still correct.
 
-If yes, run the command for a to create the PR `gftools packager "Font Name" path/to/local/google-fonts-repo -p`.
+If yes, run this command to create the PR: `gftools packager "Font Name" path/to/local/google-fonts-repo -p`.
 
-- If you need to modify any file included in the package, checkout to the `gftools_packager_ofl_fontname` branch and modify them from there. For example, if you haven't done it directly in the upstream repo, update the [DESCRIPTION.en_us.html or ARTICLE.en_us.html](./article.md), commit in the branch that the Packager created.
+- If you need to modify any file included in the package, checkout the `gftools_packager_ofl_fontname` branch and modify them from there. For example, if you haven't done it directly in the upstream repo, update the [DESCRIPTION.en_us.html or ARTICLE.en_us.html](./article.md) and commit in the branch that the Packager created.
 
-- Checkout to the `main` branch of your local copy of the `google/fonts` repo and run the command ``gftools packager "Font Name" path/to/local/google-fonts-repo -p` again to update the PR with the added changes.
+- Checkout the `main` branch of your local copy of the `google/fonts` repo and run the command ``gftools packager "Font Name" path/to/local/google-fonts-repo -p` again to update the PR with the added changes.
 
 ### Method that allows editing before PR
 
 If you use the previous method, and if you want to modify your PR, every time you run `-p` argument in conjunction with a “font name”, you will actually re-package and override the PR (because it will ask you to do a force-push). This means that all your manual commits you may have done in between will be lost.
 
-To avoid that, you can first run it without `-p` to package and in a second step, use `-p`. 
+To avoid that, you can first run it without `-p` to package and, in a second step, use `-p`. 
 
-Also, keep in mind that every push you make on a google/fonts PR, will trigger the Continuous Integration CI workflow which generate QA reports. If the CI is triggerred multiple times at once, it can happens that it breaks. It is therefore wise to make all modifications to [METADATA.pb](metadata.md) and [ARTICLE.html](article.md) beforehand, and push all the changes at once.
+Also, keep in mind that every push you make on a google/fonts PR will trigger the Continuous Integration (CI) workflow which generate QA reports. If the CI is triggerred multiple times at once, it can happen that the CI workflow breaks. It is therefore wise to make all modifications to [METADATA.pb](metadata.md) and [ARTICLE.html](article.md) beforehand, and push all the changes at once.
 
 <div class="next-reading">
     Further reading:<br>

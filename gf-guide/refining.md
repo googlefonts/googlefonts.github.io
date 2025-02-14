@@ -19,7 +19,7 @@
     -   [Polish diacritics. How to?](https://www.twardoch.com/download/polishhowto/)
 -   **Vietnamese**
     -   [Vietnamese Typography recommendations](https://vietnamesetypography.com/type-recommendations/)
--   **Cyrilic**
+-   **Cyrillic**
     -   [Guides for designing Cyrillic letters Њ, Љ, Ћ, and Ђ](https://typedrawers.com/discussion/3502/guides-for-designing-cyrillic-letters-Њ-Љ-Ћ-and-Ђ)
 
     
@@ -32,6 +32,6 @@
 
     
 
-    -   [Cyrillize It!: A Guide on Cyrillic Typographyfor Graphic Designers](https://books.google.com.co/books/about/Cyrillize_It.html?id=M0KBzgEACAAJ&redir_esc=y)
+    -   [Cyrillize It!: A Guide on Cyrillic Typography for Graphic Designers](https://books.google.com.co/books/about/Cyrillize_It.html?id=M0KBzgEACAAJ&redir_esc=y)
 
 “The Unicode Standard” (Richard Ishida) is written for a general audience and “is good”.

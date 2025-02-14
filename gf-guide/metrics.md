@@ -9,7 +9,7 @@
 
 🐸 Vertical metrics are used to determine the space between two lines of text. Some metrics are meant for Mac, others for Windows, and they are interpreted differently according to web or desktop usage.
 <br><br>
-Throughout countless threads and discussions, GF decided to prioritize cross-platform compatibility and, in consequence, apply the following requirements. Read them carefully because once a family is onboarded, vertical metrics are meant to remain always the same to avoid regression, as mentioned in <a href="./onboarding">Adding & upgrading fonts to Google Fonts</a>.
+Throughout countless threads and discussions, GF decided to prioritize cross-platform compatibility and therfore to apply the following requirements. Read them carefully because once a family is onboarded, vertical metrics are meant to remain always the same to avoid regression, as mentioned in <a href="./onboarding">Adding & upgrading fonts to Google Fonts</a>.
 <br><br>
 Please note that the first metrics guidelines referred to in this guide are Latin-focused and probably will not fully work for other complex scripts, such as Burmese or Devanagari. CJK fonts (Chinese-Japanese-Korean scripts) are treated as special cases and should follow the instructions at the end of the document.
 
@@ -40,15 +40,15 @@ This is an overall best practice in design. When defining line spacing, it's imp
 
 Each font in a family must share the same vertical metrics values.
 
-This rule can be avoided if a font is being upgraded and previously had inconsistent family metrics. In this case, the aim should be to visually match the line spacing of each font but fix any clipping issues caused by incorrect `WinAscent` and `WinDescent` values.
+This rule can be avoided if a font is being upgraded and previously had inconsistent family metrics. In that case, the aim should be to visually match the line spacing of each font but fix any clipping issues caused by incorrect `WinAscent` and `WinDescent` values.
 
 #### 3. If the family is being updated, the line height must visually match the previous release
 
-Some applications do not allow users to control their fonts' line height/leading. Word processors and text editors are common culprits. It is essential their documents do not reflow.
+Some applications do not allow users to control the line height/leading of their fonts. Word processors and text editors are common culprits. It is essential their documents do not reflow.
 
 #### 4. The following vertical metric parameters must be set for each font in a family
 
-| OpenType spec (font binaries) | Glyphs.app Master customParameter | FontLab                | ufo3 fontinfo.plist      |
+| OpenType spec (font binaries) | Glyphs.app Master customParameter | FontLab                | UFO3 fontinfo.plist      |
 |-------------------------------|-----------------------------------|------------------------|--------------------------|
 | \[OS/2\] sTypoAscender        | typoAscender                      | \[OS/2\] TypoAscender  | openTypeOS2TypoAscender  |
 | \[OS/2\] sTypoDescender       | typoDescender                     | \[OS/2\] TypoDescender | openTypeOS2TypoDescender |
@@ -63,7 +63,7 @@ Some applications do not allow users to control their fonts' line height/leading
 
 #### 5. [Use_Typo_Metrics](https://www.microsoft.com/typography/otspec/os2.htm#fss) must be enabled
 
-This will force Microsoft Applications to use the `Typo` values instead of the `Win` values for line spacing. Doing this allows us to freely set the `Win` values to avoid clipping and control the line height with the `Typo` values. It has the added benefit of future line height compatibility. When adding a new script, we simply change the `Win` values to the latest `yMin` and `yMax` without worrying if the line height has changed. Note that the `Use_Typo_Metric` flag is also called `fsSelection bit 7 `(related to how it is set in the OS/2 table).
+This will force Microsoft Applications to use the `Typo` values instead of the `Win` values for line spacing. Doing this allows us to freely set the `Win` values to avoid clipping and control the line height with the `Typo` values. It has the added benefit of future line height compatibility. When adding a new script, we simply change the `Win` values to the new `yMin` and `yMax`, without needing to worry whether the line height has changed. Note that the `Use_Typo_Metric` flag is also called `fsSelection bit 7 `(related to how it is set in the OS/2 table).
 
 -   In Glyphs.app, set `Use_Typo_Metrics` custom parameter to `true` in the **Font** tab of **Font Info**.
 -   In RoboFont, this is under **Font Info \> OpenType \> OS/2 Table \> fsSelection \> USE_TYPO_METRICS**.
@@ -87,15 +87,15 @@ This rule can be avoided if a font is being upgraded and previously had inconsis
 
 #### 8. LineGap values must be 0
 
-The `LineGap` value is a space added to the line height created by the union of the `(typo/hhea)Ascender` and `(typo/hhea)Descender`. It is handled differently according to the environment. Most desktop apps will add This leading value above the text line. It will be shared above *and* under in web browsers and ignored in Windows if `Use_Typo_Metrics` is disabled. For better line spacing consistency across platforms, the `(typo/hhea)LineGap` values must be `0`.
+The `LineGap` value is a space added to the line height created by the union of the `(typo/hhea)Ascender` and `(typo/hhea)Descender`. It is handled differently according to the environment. Most desktop apps will add this leading value above the text line. It will be shared above *and* under in web browsers and ignored in Windows if `Use_Typo_Metrics` is disabled. For better line spacing consistency across platforms, the `(typo/hhea)LineGap` values must be `0`.
 
-#### 9. Uppercases should be centered in the text line 
+#### 9. Uppercase forms should be centered in the text line 
 
-For fonts whose primary script has uppercase letterforms, such as Latin, Greek, and Cyrillic, web designers will thank you if you manage to have the same space above and under capitals: `typoAscender—CapsHeight = abs(typoDescender)`. It will make it easier for them to set padding in buttons, for example.
+For fonts whose primary script has uppercase letterforms, such as Latin, Greek, and Cyrillic, web designers will thank you if you manage to have the same space above and under capitals: `typoAscender — CapsHeight = abs(typoDescender)`. This will make it easier for them to set padding in buttons, for example.
 
 #### 10. typo/hheaAscender value should leave open room for stacked diacritics.
 
-Following recent tests to confirm our vertical metrics policies, we now require the `(typo/hhea)Ascender` to be equal to `Abreveacute U+1EAE`. For families with multiple weights, you must use the tallest `Abreveacute U+1EAE` (e.g., in the Black master) as the reference point to guarantee uniform positioning across the entire font family.
+Following recent tests to confirm our vertical metrics policies, we now require that `(typo/hhea)Ascender` be equal to `Abreveacute U+1EAE`. For families with multiple weights, you must use the tallest `Abreveacute U+1EAE` (e.g., in the Black master) as the reference point to guarantee uniform positioning across the entire font family.
 
 Even if the font does not support Vietnamese yet, we strongly suggest estimating the ascenders value foreseeing the `Abreveacute U+1EAE` height based on two main reasons:
 
@@ -104,7 +104,7 @@ Even if the font does not support Vietnamese yet, we strongly suggest estimating
 
 #### 11. The sum of the font’s vertical metric values (absolute) should be 20-30% greater than the font’s UPM
 
-By default, DTP applications such as Indesign will set the line height to be 20% greater than the font’s size (10pt size / 12pt leading). For consistency, we recommend setting the vertical metric values so their sum is in a similar range, for example:
+By default, DTP applications such as InDesign will set the line height to be 20% greater than the font’s size (10pt size / 12pt leading). For consistency, we recommend setting the vertical metric values so their sum is in a similar range, for example:
 
 ``` code
 UPM = 1000
@@ -120,7 +120,7 @@ Exceptions are usually made if the font’s primary script isn’t Latin, Greek,
 
 ## Note
 
-**Please keep in mind that this calculation will need to be set according to the specificities of each font.**
+**Please keep in mind that this calculation will need to be set according to the specifics of each font.**
 
 -   The 120% suggested above is for compatibility with desktop publishing apps (like InDesign's automatic alignment ratio). Still, it can often be too tight if your font covers more languages than basic Latin, Greek, and Cyrillic or if you have a particular design with short ascenders.  
 -   Please pay careful attention to the design of diacritic marks, especially the [stacked diacritics](https://googlefonts.github.io/gf-guide/diacritics.html#stacked-diacritics). This way, you ensure the ascender value is not unnecessarily high. You could also determine an ideal line spacing and then draw the diacritics accordingly or adapt them to it.
@@ -138,7 +138,7 @@ Setting vertical metrics usually falls into the following two categories:
 
 Set these values to be the same across all masters to ensure that output instances have equal vertical metrics:
 
--   `typoAscender` and `hheaAscender` set to equal or higher than `Ắ`
+-   `typoAscender` and `hheaAscender` set equal to or higher than `Ắ`
 -   `typoLineGap` and `hheaLineGap` set to `0`
 - `typoDescender` and `hheaDescender` are set to visually leave Caps height centered in the line but lower than the deepest descender of the primary script.
 -   `winAscent` and `winDecent` set to `yMax` and `yMin` (the absolute highest and lowest point in the font)
@@ -185,7 +185,7 @@ On the other hand, if the `Abreveacute` height is very high, forcing the average
 
 Many font families receive upgrades, either by the original author or a third party. When character extensions modify the font's bounding box, the vertical metrics need to be recalculated.
 
-Imagine we have a previous v1.000 release. We're now adding Vietnamese. The version number has been bumped to V2.000. The font's bbox `yMax` has changed from `1000` to `1102` and `yMin` from `-200` to `-314`.
+Imagine we have a previous v1.000 release. We're now adding Vietnamese. The version number has been bumped to V2.000. The font's bounding box `yMax` has changed from `1000` to `1102` and `yMin` from `-200` to `-314`.
 
 v1.000 had the following family vertical metrics:
 
@@ -252,13 +252,13 @@ CJK vertical metrics are based on Source Han Sans and Noto CJK fonts.
 
 The following vertical metric values must be applied to all CJK fonts
 
-| Attrib                                    | Value                                    | Example using 1000upm font |
+| Attribute                                 | Value                                    | Example using 1000UPM font |
 |-------------------------------------------|------------------------------------------|----------------------------|
-| OS/2.sTypoAscender                        | 0.88 \* font upm                         | 880                        |
-| OS/2.sTypoDescender                       | -0.12 \* font upm                        | -120                       |
+| OS/2.sTypoAscender                        | 0.88 \* font UPM                         | 880                        |
+| OS/2.sTypoDescender                       | -0.12 \* font UPM                        | -120                       |
 | OS/2.sTypoLineGap                         | 0                                        | 0                          |
-| hhea.ascender                             | Set to look comfortable (\~1.16 \* upm)  | 1160                       |
-| hhea.descender                            | Set to look comfortable (\~0.288 \* upm) | -288                       |
+| hhea.ascender                             | Set to look comfortable (\~1.16 \* UPM)  | 1160                       |
+| hhea.descender                            | Set to look comfortable (\~0.288 \* UPM) | -288                       |
 | hhea.lineGap                              | 0                                        | 0                          |
 | OS/2.usWinAscent                          | Same as hhea.ascent                      | 1160                       |
 | OS/2.usWinDescent                         | abs(value) of hhea.descent               | 288                        |
@@ -278,7 +278,7 @@ Our decision to follow the Adobe schema was based on Dr. Ken Lunde’s comments 
 -   [Khaled vertical metrics schema](https://groups.google.com/d/msg/googlefonts-discuss/W4PHxnLk3JY/MYgVlQMjAwAJ)
 -   [Show Vertical Metrics](https://github.com/mekkablue/ShowVerticalMetrics) plug-in in GlyphsApp
 -   Mekkablue’s [Vertical Metrics Manager](https://github.com/mekkablue/Glyphs-Scripts/blob/master/Font%20Info/Vertical%20Metrics%20Manager.py)
--   [Impallari/testing](https://github.com/impallari/Font-Testing-Page): Font tester which has no css line-height property set ([live site](http://cyreal.org/Font-Testing-Page))
+-   [Impallari/testing](https://github.com/impallari/Font-Testing-Page): Font tester which has no CSS line-height property set ([live site](http://cyreal.org/Font-Testing-Page))
 -   [Diffenator2](https://github.com/googlefonts/diffenator2): Create diffing docs to compare local updated fonts against currently hosted versions on [fonts.google.com](http://fonts.google.com/)
 
 <!-- <div class="next-reading">

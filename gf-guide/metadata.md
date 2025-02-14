@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐸 The <mark class="grey">METADATA.pb</mark> file found in the Google Fonts <mark class="grey">library repo</mark> (<a href="https://github.com/google/fonts">github.com/google/fonts</a>) is a <a href="http://en.wikipedia.org/wiki/Protocol_buffers">Protocol Buffers</a> file that contains the main information about the font files served by Google Fonts, some of which typically corresponds to font file internal metadata.
+🐸 The <mark class="grey">METADATA.pb</mark> files found in the Google Fonts <mark class="grey">library repo</mark> (<a href="https://github.com/google/fonts">github.com/google/fonts</a>) are <a href="http://en.wikipedia.org/wiki/Protocol_buffers">Protocol Buffer</a> metadata files that contain key information about the font files served by Google Fonts, some of which typically corresponds to font file internal metadata.
 
 </div>
 
@@ -23,9 +23,9 @@
 
 ## History
 
-This documentation was initiated by [Adam Twardoch](https://github.com/twardoch) as a community contributor in 2015, and updated by [Dave Crossland](https://github.com/davelab6) as a member of the Google Fonts team in 2020. It is provided so that other font distributors (webfonts providers or font package maintainers) can better use the library repo repository structure.
+This documentation was initiated by [Adam Twardoch](https://github.com/twardoch) as a community contributor in 2015, and updated by [Dave Crossland](https://github.com/davelab6) as a member of the Google Fonts team in 2020. It is provided so that other font distributors (webfont providers or font package maintainers) can better use the library repo repository structure.
 
-This metadata is specifically used by Google Fonts for organization and display on the Google Fonts website. It may be useful for others to be able to make sense of the metadata files.
+This metadata is used specifically by Google Fonts for organization and display on the Google Fonts website. It may be useful for others to be able to make sense of the metadata files.
 
 ## Generation
 
@@ -37,7 +37,7 @@ gftools add-font path/to/google/fonts/ofl/fontdirname
 
 The file uses [UTF-8](http://en.wikipedia.org/wiki/UTF-8) encoding.
 
-Below are two examples of `METADATA.pb` files, first for a family of static font files, and then for a family with variable font files, followed by a brief description of each key and possible values.
+Below are two examples of `METADATA.pb` files: the first for a family of static font files, and the second for a family with variable font files, followed by a brief description of each key and possible values.
 
 ### Example Static Fonts Family
 
@@ -169,19 +169,19 @@ Example: `date_added: "2021-09-30"`
 
 ### designer
 
-The full name of the type designers or foundries who designed the fonts. The order in which the names are listed here will determine the order of appareance in the About section in the font specimen page. (See below.) 
+The full name of the type designers or foundries who designed the fonts. The order in which the names are listed here will determine the order of appearance in the About section of the font's specimen page (see below).
 Each designer listed needs to have an entry in the library repo [/catalog/designers](https://github.com/google/fonts/tree/main/catalog/designers) tree; and each one needs to match a string in the `designer` key of `info.pb` files there.
 
 Examples:
 
 -   `designer: "Principal Designer, Contributor, Contributor"` — In 2016 the catalog UI added a feature to show several named contributors on each font family 'About' section of the specimen page, where the value of this key is a comma separated list, and the first item in the list is shown the credit "Principal Design". See the following examples: [Rubik](https://fonts.google.com/specimen/Rubik), [Castoro](https://fonts.google.com/specimen/Castoro), [Pacifico](https://fonts.google.com/specimen/Pacifico)
 -   `designer: "Anja Meiners"` — An individual's name is preferred; typically there is an individual who is the principle designer of the typeface family, even if they are no longer the primary maintainer of the project
--   `designer: "TypeTogether"` — Sometimes, a formal organization designs a family and occupies the principal designer position. Then, the individual name of the credited designer is followed.
--   `designer: "Huerta Tipográfica"` — Non-ascii characters are supported as UTF-8
+-   `designer: "TypeTogether"` — Sometimes, a formal organization designs a family and occupies the principal designer position. Then, the individual names of the credited designers follow
+-   `designer: "Huerta Tipográfica"` — Non-ASCII characters are supported as UTF-8
 
 ### license
 
-Declares the license of the fonts in the family. It can contain one of 3 possible values, although all the new fonts added are expected to be licensed by OFL:
+Declares the license of the fonts in the family. It can be one of three possible values, although all new fonts added are expected to be licensed as OFL:
 
 -   `license: "APACHE2"`
 -   `license: "OFL"`
@@ -197,7 +197,7 @@ Typographic classifications, one of 5 possible values:
 -   `category: "HANDWRITING"`
 -   `category: "MONOSPACE"`
 
-In 2023, the `category` field was complemented with two new fields called `stroke` and `classifications`. The `category` field will continue to exist with no changes to its semantics. We are keeping this field as is because Google products like Workspace and Ads use it, and we don't want to affect those products.
+In 2023, the `category` field was augmented with two new fields called `stroke` and `classifications`. The `category` field will continue to exist with no changes to its semantics. We are keeping the `category` field as-is because Google products like Workspace and Ads use it, and we don't want to affect those products.
 
 This key is deprecated in the API (cf. below Stroke and Classification), but still mandatory to fill up in METADATA.pb
 
@@ -220,7 +220,7 @@ fonts {
 #### fonts — name
 
 Family name used to call the font from the Google Fonts API. This must match the `name` key used at the top level.
-This typically matches the font file's [`name table`](https://www.microsoft.com/typography/otspec/name.htm) ID 16, or if that does not exist, the ID 1. If multiple ID 16s or 1s exist, they must match.
+This typically matches the font file's [`name` table](https://www.microsoft.com/typography/otspec/name.htm) ID 16 &mdash; or, if that does not exist, ID 1. If multiple ID 16s or 1s exist, they must match.
 
 Example: `name: "Playpen Sans"`
 
@@ -285,19 +285,19 @@ For variable fonts, the naming scheme is the family name, then an alphabetically
 
 #### fonts — post_script_name
 
-Value of the font file's [`name table`](https://www.microsoft.com/typography/otspec/name.htm) ID 6. If multiple ID 6s exist, they must match. Example: `post_script_name: "PlaypenSans-Regular"`
+Value of the font file's [`name` table](https://www.microsoft.com/typography/otspec/name.htm) ID 6. If multiple ID 6s exist, they must match. Example: `post_script_name: "PlaypenSans-Regular"`
 
 Typically this matches the stem of the `filename`.
 
 #### fonts — full_name
 
-Value of the font file's [`name`](https://www.microsoft.com/typography/otspec/name.htm) table ID 4. If multiple ID 4s exist, they must match. Example: `full_name: "Playpen Sans Regular"`
+Value of the font file's [`name` table](https://www.microsoft.com/typography/otspec/name.htm) ID 4. If multiple ID 4s exist, they must match. Example: `full_name: "Playpen Sans Regular"`
 
 #### fonts — copyright
 
 Copyright notice. Example: `copyright: "Copyright 2023 The Playpen Sans Project Authors (https://github.com/TypeTogether/Playpen-Sans)"`
 
-Typically this matches the value of the copyright notice in the first lines of the license file. It also matches the font file [`name table`](https://www.microsoft.com/typography/otspec/name.htm) ID 0. If multiple ID 0s exist, they must match.
+Typically this matches the value of the copyright notice in the first lines of the license file. It also matches the font file [`name` table](https://www.microsoft.com/typography/otspec/name.htm) ID 0. If multiple ID 0s exist, they must match.
 
 ### subsets
 
@@ -322,7 +322,7 @@ primary_script: "Arab"
 
 ### Languages
 
-This key aims to restrict the number of languages shown in a specimen page. It is mandatory in all Noto fonts but not recommended in non-Nono fonts. It can be useful though when a font support the glyphs of a specific language only.
+This key aims to restrict the number of languages shown in a specimen page. It is mandatory in all Noto fonts but not recommended in non-Noto fonts. It can be useful, though, when a font support the glyphs of a specific language only.
 
 Example:
 
@@ -354,7 +354,7 @@ registry_default_overrides {
 
 ### source
 
-Indicates the upstream repo URL, files location and the commit at which the font was taken, this important for versioning, but also to keep a trace back the origin of the font since multiple forks can exist for one project.
+Indicates the upstream repo URL and the commit at which the font was taken, this important for versioning, but also to keep a trace back the origin of the font since multiple forks can exist for one project.
 
 If the source is a *tagged release*, then the source entry should look like this:
 
@@ -366,7 +366,7 @@ archive_url: "https://github.com/username/projectname/releases/download/v2.200/p
 ```
 ### display_name
 
-The `display_name` key is used when the font name should appear differently on the API. The main use of this key is for families which have abbreviated names as a convention, for example the Noto CJK. This is not necessarily clear for the user, so the `display_name` key is used to display an unabbreviated name on the specimen page.
+The `display_name` key is used when the font name should appear differently on the API. The main use of this key is for families which have abbreviated names as a convention &mdash; for example, the Noto CJK families. This is not necessarily clear for the user, so the `display_name` key is used to display an unabbreviated name on the specimen page.
 
 Example:
 ```code
@@ -385,7 +385,7 @@ display_name: "Noto Sans Phags-pa"
 
 ### minisite_url
 
-This key allows to link a mini website to the font's specimen page. It will appear on top of the page, under the font name, next to the designer's name. A minisite_url is expected to be mandatory for all the commisioned fonts.
+This key allows to link a mini website to the font's specimen page. It will appear on top of the page, under the font name, next to the designer's name. A minisite_url is expected to be mandatory for all commisioned fonts.
 
 Example:
 
@@ -394,9 +394,9 @@ minisite_url: "https://myfontwebsite.com"
 ```
 
 
-### classification
+### classifications
 
-The classification field is a complementary field that can be any combination of Handwriting, Display, Monospace, or Symbols, or it can not be set. So for example, if a font is Handwriting, Display and Monospace all at the same time, use all three. If it does not fit into any of those classifications, there is no need to use the field.
+The classifications field is a complementary field that can be any combination of Handwriting, Display, Monospace, or Symbols, or it can be left unset. So, for example, if a font is Handwriting, Display, and Monospace all at the same time, use all three. If it does not fit into any of those classifications, there is no need to use the field.
 
 -   `classifications: "HANDWRITING"`
 -   `classifications: "DISPLAY"`
@@ -413,7 +413,7 @@ The stroke field has a single value that is one of `SANS_SERIF`, `SERIF`, `SLAB_
 
 ### sample_text
 
-This key overrides the sample texts provided in the languages texprotos (that you can find in the [Lang](https://github.com/googlefonts/lang/tree/main/Lib/gflanguages/data/languages) repository). Therefore, the properties of these keys are the same as the ones in a lang textproto. Use it sparingly only for edge cases that would definitely need to specify a determined sample since this override will make this sample fixed, disabling the possibility of picking different languages on the type-tester section of the Specimen page. 
+This key overrides the sample texts provided in the languages texprotos (that you can find in the [Lang](https://github.com/googlefonts/lang/tree/main/Lib/gflanguages/data/languages) repository). Therefore, the properties of this key are the same as those in a lang textproto. Use it sparingly only for edge cases that would definitely need to specify a determined sample since this override will make this sample fixed, disabling the possibility of picking different languages on the type-tester section of the Specimen page. 
 
 If sample text is given within a sample text group (e.g. poster, specimen, masthead), all fields within that group must be provided.
 

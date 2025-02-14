@@ -2,7 +2,7 @@
 
 <a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
 
-# Hosting projects on Github
+# Hosting projects on GitHub
 {:.no_toc}
 
 <div class="callout">
@@ -35,9 +35,9 @@ When working on an open platform like GitHub, development should happen publicly
 
 Early feedback and contributions are some of the most valuable assets of open-source culture, as having multiple eyes on the project’s development leads to better tested and, therefore, more robust projects.
 
-At [ATypI 2014](https://www.youtube.com/watch?v=DBz0rVUYNPA) David Lemon, the senior manager of the Adobe Type group, discussed how the Adobe Type team has benefited from libre fonts culture and said that Git and Github were some of the most positive aspects. Adobe used the “*publish early and often, gathering feedback”* approach of Libre projects in its [Vortice typeface project](https://blog.typekit.com/2015/03/04/introducing-vortice-and-the-adobe-type-concepts-program/).
+At [ATypI 2014](https://www.youtube.com/watch?v=DBz0rVUYNPA) David Lemon, the senior manager of the Adobe Type group, discussed how the Adobe Type team has benefited from libre fonts culture and said that Git and GitHub were some of the most positive aspects. Adobe used the “*publish early and often, gathering feedback”* approach of Libre projects in its [Vortice typeface project](https://blog.typekit.com/2015/03/04/introducing-vortice-and-the-adobe-type-concepts-program/).
 
-## Github Account
+## GitHub Account
 
 The first step is to [create a GitHub account](https://github.com/join). This is done similarly to any other cloud service by providing basic information: name, user name, and password.
 
@@ -73,26 +73,26 @@ To avoid reentering your passphrase each time you use the SSH Key, you must [add
 
 ## Software for working with GitHub
 
--   The [**GitHub CLI**](https://cli.github.com/) [(Command Line Interface)](https://cli.github.com/) is a tool for using GitHub from the command line. It makes it possible to use all Github features using git commands from a Terminal prompt.
+-   The [**GitHub CLI**](https://cli.github.com/) [(Command Line Interface)](https://cli.github.com/) is a tool for using GitHub from the command line. It makes it possible to use all GitHub features using git commands from a Terminal prompt.
 -   [**GitHub Desktop**](https://desktop.github.com/) and **[Sourcetree](https://www.sourcetreeapp.com)** are open-source GUI applications for interacting with GitHub.
 -   There are also plugins for Glyphs and RoboFont which allow you to commit to GitHub on save.
 
 Don’t hesitate to search the Internet for how to install the SSH key properly according to your chosen environment, as it is different depending on your OS and software.
 
-## Github workflow
+## GitHub workflow
 
 ### Repositories: administer files, manage the work and collaborate with others
 
 **A repository** (or “repo”) is a place to save the project’s files and work history, allowing you to share, review and track the project's development.
 
--   If you are working on a new project, you must create a new repository using our template outlined below.
+-   If you are working on a new project, you will need to create a new repository using our template, as outlined below.
 -   If you contribute to an existing project, [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) it into your GitHub account and later return your changes using a [PR](https://docs.github.com/en/get-started/quickstart/github-flow#create-a-pull-request) (Pull Request).
 
 Both new repos and forked ones will be located in your GitHub account, and they are called the `remote` repositories because the “source” of the repository is hosted remotely on GitHub.
 
 The forked repo will be the `origin` remote location, while the source repo will be `upstream` remote location.
 
-After you have created or forked a repo, you will need to *clone* the repository to have a local copy on your computer to access, edit, and later sync the files between locations. Be aware that Clone has a very specific word command meaning in Git, which in this environment is meaningful and differs from "duplicate" in a much more general sense. Please make yourself familiar with [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+After you have created or forked a repo, you will need to *clone* the repository to have a local copy on your computer to access, edit, and later sync the files between locations. Be aware that "clone" has a very specific word command meaning in Git, which in this environment is meaningful and differs from "duplicate" in a much more general sense. Please make yourself familiar with [cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 Having the repository hosted remotely allows you to keep different copies of the same files that could be at different stages of development, and this also allows for multiple collaborators to be working on the same project in a planned and synchronized way.
 
@@ -105,18 +105,18 @@ When working with source projects on GitHub, it's common to have multiple forks 
 
 If you are a foundry or working on a collaborative project:
 
-1.  Set up a [Github organization](https://help.github.com/articles/creating-a-new-organization-account/)
-    -   [Github Blog: Introducing Organizations](https://github.com/blog/674-introducing-organizations)
+1.  Set up a [GitHub organization](https://help.github.com/articles/creating-a-new-organization-account/)
+    -   [GitHub Blog: Introducing Organizations](https://github.com/blog/674-introducing-organizations)
 
     
 
-    -   [Github Help: Setting up and managing organizations and teams](https://help.github.com/categories/setting-up-and-managing-organizations-and-teams/)
+    -   [GitHub Help: Setting up and managing organizations and teams](https://help.github.com/categories/setting-up-and-managing-organizations-and-teams/)
 
     
 
-    -   [Github Help: What's the difference between user and organization accounts?](https://help.github.com/articles/what-s-the-difference-between-user-and-organization-accounts/)
+    -   [GitHub Help: What's the difference between user and organization accounts?](https://help.github.com/articles/what-s-the-difference-between-user-and-organization-accounts/)
 2.  Create usernames for each person involved in the project.
-3.  Create each repo inside that organization. Github Organization examples:
+3.  Create each repo inside that organization. GitHub Organization examples:
 
 -   [github.com/rosettatype](https://github.com/rosettatype)
 -   [github.com/cadsondemak](https://github.com/cadsondemak)
@@ -124,7 +124,7 @@ If you are a foundry or working on a collaborative project:
 
 → **Repositories vs. cloud syncing**
 
-If you are used to keeping design work synced to Dropbox, Google Drive, or iCloud, it is strongly advised you *exclude* your Git repos folder from this type of cloud syncing. If you start a project inside a cloud-synced area, then move that work into your git-repos area, make sure the syncing doesn't follow your content. General-purpose cloud syncing and Git have different purposes and can interfere with each other in strange ways.
+If you are used to keeping design work synced to Dropbox, Google Drive, or iCloud, it is strongly advised you *exclude* your Git repos folder from this type of cloud syncing. If you start a project inside a cloud-synced area, then move that work into your git-repos area, make sure the syncing doesn't follow your content. General-purpose cloud syncing and Git have different purposes and can interfere with one another in strange ways.
 
 ### Commits: manage progress and track changes
 
@@ -133,7 +133,7 @@ Git detects which files have been changed. It allows you to be aware of those ch
 **Commits** are often referred to as a *snapshot* of the current changes and are a mechanism to make a labeled record of each step of the development. Registering these snapshots also makes it possible to roll back changes and return to a previous state of development if needed; this is the key concept of working with Git.
 
 -   We strongly suggest you learn to “Commit early, commit often” to keep small chunks of easy to define and understand changes. Make commits at meaningful points, e.g. one commit for updating the metadata, another for setting the metrics of your font, and a separate commit for changing a set of anchor positions.
--   It is important to provide a clear and meaningful message with each commit to make it easy for other users to track the process and know what each change was for. If in doubt, study [Montserrat’s commit history](https://github.com/JulietaUla/Montserrat/commits/master). The commit titles should be short, clear and specific, and not repeated. For example, a series of commits that are all titled “VF Update” is not helpful. This is important because GF tools will use the commit messages to generate release notes. (See eg <https://github.com/googlefonts/gftools/issues/544> for a discussion of this.)
+-   It is important to provide a clear and meaningful message with each commit to make it easy for other users to track the process and know what each change was for. If in doubt, study [Montserrat’s commit history](https://github.com/JulietaUla/Montserrat/commits/master). The commit titles should be short, clear and specific, and not repeated. For example, a series of commits that are all titled “VF Update” is not helpful. This is important because GF tools will use the commit messages to generate release notes. (See, e.g., <https://github.com/googlefonts/gftools/issues/544> for a discussion of this.)
 -   Tracking the changes in a list of commits also makes it easier to go back in the repository’s history and reverse or recover any step performed. One Thai type designer and web developer said this about his experience with Git:
 
 > *I used to hate Git because I didn’t understand why I had to use it… until I started working with agile methods. Since then, I’ve kept using Git even on projects that I work on alone because the commit messages help me remember things I did and why I did them on each project.*
@@ -168,9 +168,9 @@ If you run into a bug, question, or have a feature request for a project on GitH
 -   If you report an unknown issue, project owners will value your input.
 -   When addressing an issue on your own project, please do not close it when you think it is done; ask the person who reported it whether it is resolved, and close the issue once they have verified that it is fixed.
 
-Check out the complete [Github’s documentation about issues](https://docs.github.com/en/issues) to know more about them.
+Check out the complete [GitHub’s documentation about issues](https://docs.github.com/en/issues) to know more about them.
 
-### Github Actions: Continuous Integration testing of your work
+### GitHub Actions: Continuous Integration testing of your work
 
 **Continuous Integration** was originally defined as the process of merging the work of all developers of a project into the main source code repository regularly, up to several times per day. However, the term is mainly used for automated code testing and analyses, which are activated whenever a code merge occurs.
 
@@ -180,7 +180,7 @@ Our [Google Fonts project template](upstream.md), recommended as a starting poin
 
 Using GitHub Actions means that you can always get an up-to-date view of your fonts and their readiness for production, relying on Google Font’s latest versions of build tools.
 
-If you are not using our template, it is strongly suggested that you include at least a `Build & Test` action to check the building process is running ok to produce the fonts and test the resulting fonts with Fontbakery each time you push a change into a source file. Here is an [example of that action](https://github.com/Omnibus-Type/Texturina/blob/master/.github/workflows/build_and_check.yml).
+If you are not using our template, it is strongly suggested that you include at least a `Build & Test` action to check the building process is running okay to produce the fonts and test the resulting fonts with Fontbakery each time you push a change into a source file. Here is an [example of that action](https://github.com/Omnibus-Type/Texturina/blob/master/.github/workflows/build_and_check.yml).
 
 ### Using git with a code editor
 
@@ -216,8 +216,8 @@ git config core.ignorecase false
 
 ## Useful links
 
--   [Github Docs](https://docs.github.com/en)
--   [Github First Contributions](https://github.com/firstcontributions/first-contributions)
+-   [GitHub Docs](https://docs.github.com/en)
+-   [GitHub First Contributions](https://github.com/firstcontributions/first-contributions)
 -   [Git for type designers by Frank Grießhammer](https://github.com/davelab6/git-for-type-designers)
 -   [Learn the workings of Git, not just the commands](https://developer.ibm.com/technologies/web-development/tutorials/d-learn-workings-git/)
 -   [Best practices for managing issues](https://blog.zenhub.com/best-practices-for-github-issues/)

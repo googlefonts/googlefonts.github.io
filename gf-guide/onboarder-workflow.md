@@ -19,7 +19,7 @@ This means several things:
 
 The workflow described below was designed to ensure no lost products during the validation process, to facilitate the latter, and to keep people updated about the status of different projects. It requires active maintenance and regular updates from team members.
 <br>
-It also seemed important to keep the whole status of the repository in one place, mostly to avoid copy-pasting PR links all the time. Therefore, a complete Github-based workflow was chosen, making extensive use of the <a href="https://github.com/google/fonts/issues">issue tracker</a>, the <a href="https://github.com/google/fonts/milestones">milestones</a> feature, the <a href="https://github.com/google/fonts/projects">project boards</a>, and the <a href="https://github.com/google/fonts/actions">continuous integration system</a>.
+It also seemed important to keep the whole status of the repository in one place, mostly to avoid copy-pasting PR links all the time. Therefore, a complete GitHub-based workflow was chosen, making extensive use of the <a href="https://github.com/google/fonts/issues">issue tracker</a>, the <a href="https://github.com/google/fonts/milestones">milestones</a> feature, the <a href="https://github.com/google/fonts/projects">project boards</a>, and the <a href="https://github.com/google/fonts/actions">continuous integration system</a>.
 <br>
 This guide will help team members understand the validation process of a font family and the actions required from them to help that process.
 <br>
@@ -75,7 +75,7 @@ This graphic shows how a project travels from the google/fonts GitHub repository
 - Once the fonts are in the `dev-sandbox`, we can add them to the [to_sandbox.txt list](https://github.com/google/fonts/blob/main/to_sandbox.txt). The API engineers then push the list of families in `sandbox`. 
 - From there an onboarder can check if the fonts look alright in `sandbox`, and if that is the case, they can add them to the [to_production.txt list](https://github.com/google/fonts/blob/main/to_production.txt). The API engineers can then push the families onto the [fonts.google.com](https://fonts.google.com), available to the public.
 
-This process takes 2 to 4 weeks, because the push to sandbox or production only happens in alternance once a week — if not less.
+This process takes 2 to 4 weeks, because the push to sandbox or production only happens once every alternating week — if not less frequently.
 
 You see the importance of the issues and the pull requests (PR) in the graphic. We try to keep connected the issue and the PR that fixes it, but we do track them on different boards. The **Google Fonts board tracks the issues** (that are our link to the upstream repos), and the **Traffic Jam board tracks the PRs** (that are our link to the servers and the API).
 
@@ -95,7 +95,7 @@ Each issue that we intend to care for should be added to the Google Fonts projec
 <br>
 <figure>
 <img src="./images/onboarder-workflow/milestones-tab.png" style="width:2568px" alt="How the Milestone tab looks into the Google Fonts project board."/>
-<figcaption aria-hidden="true">Miletones</figcaption>
+<figcaption aria-hidden="true">Milestones</figcaption>
 </figure>
 <br>
 
@@ -144,7 +144,7 @@ We want one issue per font project because we allow a PR to change one font dire
 
 2. The *secondary category labels* (start with `II`) are **green** and allow to add **mandatory additional information**. 
 
-    Every <mark class=grey>new fonts</mark> issues should be labelled with a light-green label: 
+    Every <mark class=grey>new fonts</mark> issues should be labeled with a light-green label: 
 
     - <mark class=green>II Commissioned</mark>: any project Google financed partly or fully.
     - <mark class=green>II Submitted</mark> or <mark class=green>II Accepted</mark>. Commissioned projects have priority over accepted submitted projects.
@@ -162,7 +162,7 @@ We want one issue per font project because we allow a PR to change one font dire
     - <mark class=darkgreen>II Custom axes</mark>
     - <mark class=darkgreen>II Icon / symbols / not text</mark>
 
-3. The *teritary category labels* (start with `III`) are **orange** and allow to know more about the **type of upgrade**. Every <mark class=grey>Font upgrade</mark> issue should have an orange label:
+3. The *tertiary category labels* (start with `III`) are **orange** and allow to know more about the **type of upgrade**. Every <mark class=grey>Font upgrade</mark> issue should have an orange label:
 
     - <mark class=orange>III Expand glyphset</mark>
     - <mark class=orange>III Expand styles</mark>
@@ -231,7 +231,7 @@ This is how to set the progress status manually:
 
 - **The upstream repo must be linked to the issue.**
 
-    Sometimes, multiple sources of a font can exist on GitHub, or a source may be difficult to find. To make life easier for onboarders, a link to the source repo must be included. We try to ensure that the upstream is the original source of the font (typically, the repo was made by the font's designer), and not using some fork as a source. When an author is unresponding after giving consent to collaborate with Google Font, we may need to fork the project in the [googlefonts repository](https://github.com/googlefonts) so we can maintain it ourselves.
+    Sometimes, multiple sources of a font can exist on GitHub, or a source may be difficult to find. To make life easier for onboarders, a link to the source repo must be included. We try to ensure that the upstream is the original source of the font (typically, the repo was made by the font's designer), and not using some fork as a source. When an author is unresponsive after giving consent to collaborate with Google Font, we may need to fork the project in the [googlefonts repository](https://github.com/googlefonts) so we can maintain it ourselves.
 
 ## The closed issues
 
@@ -242,7 +242,7 @@ This is how to set the progress status manually:
 </figure>
 <br>
 
-The `Closed issues` tab allows to follow the status of each project once they have been merged and send to the `dev-sandbox`. Their status are: <mark class=pink>In Dev</mark>, <mark class=yellow>In Sanbox</mark> or <mark class=green>Live</mark>. If an issue occurs *before* it gets live, then the issue should be re-open and amended with a new PR.
+The `Closed issues` tab allows to follow the status of each project once they have been merged and send to the `dev-sandbox`. Their status are: <mark class=pink>In Dev</mark>, <mark class=yellow>In Sandbox</mark> or <mark class=green>Live</mark>. If an issue occurs *before* it gets live, then the issue should be re-open and amended with a new PR.
 
 
 ## Submissions to review
@@ -260,15 +260,15 @@ When an issue is placed in the "icebox" milestone, it is the responsibility of t
 
 ### Answering an issue
 
-Maintaining the repository means answering issues opened by users. Most of them are submissions to review or font bugs. Anything related to te API that seems important should be transferred to the on-call team through the dedicated group chat.
+Maintaining the repository means answering issues opened by users. Most of them are submissions to review or font bugs. Anything related to the API that seems important should be transferred to the on-call team through the dedicated group chat.
 
 This is how we proceed once a new font is proposed through the issue tracker:
 
 #### If the submission is not worth reviewing
 
-- Sometimes commercial fonts are submitted, or some user are spaming the repo: in this case we simply close the issue "as not planned" with a small cordial comment explaining why we consider this as spam. 
+- Sometimes commercial fonts are submitted, or some user are spamming the repo: in this case we simply close the issue "as not planned" with a small cordial comment explaining why we consider this as spam. 
 
-- Sometimes the font is clearly not professional and needs several month of practice and work by the designer: in that case we close the issue "as not planned" with a small paragraph with suggestion on how to improve the quality of the font —in addition of links to tutorial or some relevant chapters sof the GF guide.
+- Sometimes the font is clearly not professional and needs several month of practice and work by the designer: in that case we close the issue "as not planned" with a small paragraph with suggestion on how to improve the quality of the font —in addition of links to tutorial or some relevant chapters of the GF guide.
 
 <br>
 <figure>
@@ -305,7 +305,7 @@ Some labels have been created to quickly see **what's blocking** the issue, they
 
 #### When to close an issue
 
-Keeping issues unecessarily opened have several impacts:
+Keeping issues unnecessarily opened have several impacts:
 - it clogged the issue tracker
 - it drowns the important issues
 - it decreases the value and the worth given to an open issue
@@ -314,13 +314,13 @@ Keeping issues unecessarily opened have several impacts:
 - it discourages the users to open necessary issues
 - it adds to the mental charge of the repo maintainer
 
-We can therefore consider that leaving issues unecessarily opened is a proper mistreatment of the users, the team members and the pipeline.
+We can therefore consider that leaving issues unnecessarily opened is a proper mistreatment of the users, the team members and the pipeline.
 
 So when to close an issue?
 
-- If an issue gets labelled <mark class=grey>won't happen</mark>, it is more likely that it is for the best to close it to relieve the issue tracker from open issues. It can also be removed from the GF Project Board. 
+- If an issue gets labeled <mark class=grey>won't happen</mark>, it is more likely that it is for the best to close it to relieve the issue tracker from open issues. It can also be removed from the GF Project Board. 
 
-- If the issue is labelled <mark class=grey>blocked</mark>, it must be decided if an effort will be made to unblock it or not. If not, closing this issue is also for the best.
+- If the issue is labeled <mark class=grey>blocked</mark>, it must be decided if an effort will be made to unblock it or not. If not, closing this issue is also for the best.
 
 
 ## Onboarders' tabs
@@ -373,12 +373,12 @@ The second tab would group the PRs by `Lists` and sort them by `Labels`. It is p
 The `status` column is updated thanks to the `gftools push module`. It checks the servers against the font families and output which server displays which version. The `lists` column on the other hand is updated manually.
 
 1. <mark class=pink>In Dev</mark> / `no list tag`: these PRs were merged recently and not added to a list yet. You can add them the tag <mark class=blue>to_sandbox</mark> at the moment of preparing the lists, or <mark class=red>blocked</mark> if something is wrong after merging.
-2. <mark class=pink>In Dev</mark> / <mark class=blue>to_sanbox</mark>: the font has not yet been pushed to Sandbox.
+2. <mark class=pink>In Dev</mark> / <mark class=blue>to_sandbox</mark>: the font has not yet been pushed to Sandbox.
 3. <mark class=yellow>In Sandbox</mark> / <mark class=blue>to_sandbox</mark>: the font directory path has been effectively pushed to Sandbox. 
     - Check each item in Sandbox (see later section to know how to check them). 
     - If they pass, they can be added into the <mark class=purple>to_production</mark> list. 
     - You can also check the item on the list that have not been pushed and investigate why.
-    - If a PR had the label <mark class=grey>small fix</mark> it can mean that it is amending a blocked PR in Sanbox. We only need to track one PR per server, if two PRs for the same project are in the same server you can remove one from the project board (usually the one that amends the original one, or the one that contains the less files).
+    - If a PR had the label <mark class=grey>small fix</mark> it can mean that it is amending a blocked PR in Sandbox. We only need to track one PR per server, if two PRs for the same project are in the same server you can remove one from the project board (usually the one that amends the original one, or the one that contains the less files).
     - Check and update status and list of items that are not covered by the script (knowledge, language, etc)
 4. <mark class=yellow>In Sandbox</mark> / <mark class=purple>to_production</mark>, it has not been pushed to prod yet.
 5. <mark class=green>Live</mark> / <mark class=purple>to_production</mark>: it has been effectively pushed to prod. You can remove the list tag if nothing curious or abnormal occurs (such as something you know can't be live).
@@ -402,14 +402,14 @@ Every new PRs will be automatically added to the Traffic Jam board, except for t
 
 Font files should always be packaged with [Packager](./package.md). The first comment and the title are generated by the tool and it ensures the font has been packaged by the Packager and not manually. 
 
-Additional information can be added in the comment or the next to help the review. For example if something is expected to appear in the diff, it can spare time to the reviewer to know about it in advance. Eg: https://github.com/google/fonts/pull/6820#issuecomment-1741983529. 
+Additional information can be added in the comment or the next to help the review. For example if something is expected to appear in the diff, it can save time for the reviewer to know about it in advance. E.g.: https://github.com/google/fonts/pull/6820#issuecomment-1741983529. 
 
 
 #### Labels
 
 Like issues, the PR must have labels to help understand the project and communicate within the team. These labels should be set by the onboarder onboarding the font.
 
-1. All PRs should be labelled at least with a *primary category label* (startwith `I`). These labels are **grey** and inform about the **type of project**, typically: 
+1. All PRs should be labeled at least with a *primary category label* (starting with `I`). These labels are **grey** and inform about the **type of project**, typically: 
 
     - <mark class=grey>I New font</mark>: this family has never been released before, therefore we will be careful of the quality of the design and the aspect of the font that can't be changed later such as the vertical metrics and the weight distribution etc.
     - <mark class=grey>I Font upgrade</mark>: this family has been released in the past, therefore we will be particularly careful about potential regressions.
@@ -419,10 +419,10 @@ Like issues, the PR must have labels to help understand the project and communic
     - <mark class=grey>I Designer</mark>: concerns the designer directory.
     - <mark class=grey>I Knowledge</mark>: concerns the Knowledge platform.
     - <mark class=grey>I Lang</mark>: pull changes from the subtree repo [googlefonts/languages](https://github.com/googlefonts/lang)
-    - <mark class=grey>I Axis Registry</mark>: pull changes from the substree repo [googlefonts/axisregistry](https://github.com/googlefonts/axisregistry).
+    - <mark class=grey>I Axis Registry</mark>: pull changes from the subtree repo [googlefonts/axisregistry](https://github.com/googlefonts/axisregistry).
     - <mark class=grey>I Tools/workflow/repo</mark>: only affects the repository, it should not be tracked in Traffic Jam and its content should not be pushed to a server. For example, the PRs updating the push lists should be tagged with this label so it doesn't pollute the board.
 
-2. The *secondary category labels* (start with `II`) are **dark green** and allow to add **mandatory additional informations**. 
+2. The *secondary category labels* (start with `II`) are **dark green** and allow to add **mandatory additional information**. 
     
     When the primary language supported is a complex script (usually not Latin-Cyrillic-Greek), a dark-green label must inform us about it. This way the person checking the font in sandbox can make sure Latin is not displayed, but the actual primary script of the font: 
     
@@ -437,7 +437,7 @@ Like issues, the PR must have labels to help understand the project and communic
     - <mark class=darkgreen>II Custom axes</mark>
     - <mark class=darkgreen>II Icon / symbols / not text</mark>
 
-3. The *teritary category labels* (start with `III`) are **orange** and allow to know more about the **type of upgrade**. Every <mark class=grey>Font upgrade</mark> issue should have an orange label:
+3. The *tertiary category labels* (start with `III`) are **orange** and allow to know more about the **type of upgrade**. Every <mark class=grey>Font upgrade</mark> issue should have an orange label:
 
     - <mark class=orange>III Expand glyphset</mark>
     - <mark class=orange>III Expand styles</mark>
@@ -460,30 +460,30 @@ They either approve and merge or ask for changes —and signal that with labels.
     - <mark class=red>-- API tofu</mark>: There would be tofu on the specimen page, either because a glyph from the sample text is missing from the font or the glyphset definition (nam files in `glyphsets` subtree), or because the sample text displays a glyph it shouldn't (textproto in `lang` subtree).
 
 2. When in doubt, the reviewer can **call on someone else** or **ask for more details** to the onboarder with these **blue** labels:
-    - <mark class=blue>-- Needs manager's opinion</mark>: This is to apply when Chris and/or Dave are the only one to make a decision about the issue. It is better to list these in the "Pipeline meeting" doc to be sure they don't remained unnotinced.
+    - <mark class=blue>-- Needs manager's opinion</mark>: This is to apply when Chris and/or Dave are the only one to make a decision about the issue. It is better to list these in the "Pipeline meeting" doc to be sure they don't remained unnoticed.
     - <mark class=blue>-- Needs Confirmation</mark>: Something curious/weird has been noticed and we need a confirmation from the onboarder that it is on purpose and thus can be approved and merged (or not).
 
 #### Development (linked issue)
 
 This is the section of the PR panel where we link an issue. Sometimes it doesn't work, in that case ["closing" words](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) can be used in the first comment. For example, "Resolves #465".
 
-A Pull Request linked to an issue will automatically close the issue when the PR gets merged. Indeed we consider that when a project is part of the main branch of the gitub repo, the issue is not actively worked on anymore by the onboarder. Except if there is a problem in sandbox (in which case we would re-open the issue), the family will end up in the API and this is not something to track along with the issues to do and in progress. As a reminder, this repository is first and foremost the workspace of the onboarders, it is not meant to give hint on releases to users. 
+A Pull Request linked to an issue will automatically close the issue when the PR gets merged. Indeed we consider that when a project is part of the main branch of the GitHub repo, the issue is not actively worked on anymore by the onboarder. Except if there is a problem in sandbox (in which case we would re-open the issue), the family will end up in the API and this is not something to track along with the issues to do and in progress. As a reminder, this repository is first and foremost the workspace of the onboarders, it is not meant to give hint on releases to users. 
 
-#### The fontbakery report
+#### The Fontbakery report
 
-A new PR will trigger the CI and output a fontbakery report in comment of the PR. Ideally, there should not be any FAILs, and each WARN should be also checked to decide if they are unrelevant.
+A new PR will trigger the CI and output a Fontbakery report in comment of the PR. Ideally, there should not be any FAILs, and each WARN should be also checked to decide if they are irrelevant.
 
-It is also required to justify any fontbakery FAILS that should be ignored.
+It is also required to justify any Fontbakery FAILS that should be ignored.
 
-- If a exception is made, explain why and eventually linked to an issue where it was discussed and approved.
+- If an exception is made, explain why and eventually link to an issue where it was discussed and approved.
 - If it's a bug, link the issue reporting that bug to Fontbakery (create one if it doesn't exist).
-- If you don't know what a specific FAIL means, ask for help in the comment.
+- If you don't know what a specific FAIL means, ask for help in the comments.
 
-Fontbakery has already some exception lists when it comes to [RFN](https://github.com/fonttools/fontbakery/blob/main/Lib/fontbakery/data/googlefonts/reserved_font_name_exceptions.txt) and [abbreviated font names](https://github.com/fonttools/fontbakery/blob/main/Lib/fontbakery/data/googlefonts/abbreviations_familyname_exceptions.txt) and [camel-cased font name](https://github.com/fonttools/fontbakery/blob/main/Lib/fontbakery/data/googlefonts/camelcased_familyname_exceptions.txt). If the family name of the font is added there, then the FAIL should not yeld anymore (once next version of fontbakery released).
+Fontbakery has already some exception lists when it comes to [RFN](https://github.com/fonttools/fontbakery/blob/main/Lib/fontbakery/data/googlefonts/reserved_font_name_exceptions.txt) and [abbreviated font names](https://github.com/fonttools/fontbakery/blob/main/Lib/fontbakery/data/googlefonts/abbreviations_familyname_exceptions.txt) and [camel-cased font name](https://github.com/fonttools/fontbakery/blob/main/Lib/fontbakery/data/googlefonts/camelcased_familyname_exceptions.txt). If the family name of the font is added there, then the FAIL should not yield anymore (once next version of Fontbakery released).
 
 #### The visual QA
 
-You can find the dowloadable artifacts under `checks > Google Fonts QA > qa`. This zip file consist in proof and diff images to ensure also a QA by a human eyes. 
+You can find the downloadable artifacts under `checks > Google Fonts QA > qa`. This zip file consist in proof and diff images to ensure also a QA by a human eyes. 
 
 <br>
 <figure>
@@ -507,7 +507,7 @@ You can find the dowloadable artifacts under `checks > Google Fonts QA > qa`. Th
 <br>
 
 Check new fonts with the proof reports:
-- the design is consistent througout all styles
+- the design is consistent throughout all styles
 - outlines are quality
 - there are basic spacing and kerning
 - nothing weird is happening
@@ -531,11 +531,11 @@ Check even if there is no FAILs reported by font bakery.
 
 - Check all fields to ensure they make sense:
     - classification is correct according to font 
-    - no authors are forgotten (in case of fork, the oginal authors should be added except if they are against it)
-    - if the font name has to be abbriviated, add a `display_name` field
+    - no authors are forgotten (in case of fork, the original authors should be added except if they are against it)
+    - if the font name has to be abbreviated, add a `display_name` field
     - if the origin of the VF correspond to the default in Axis Registry (mostly for `opsz` axis)
     - has primary script if non LCG script
-    - all infos look correct and consistent
+    - all information looks correct and consistent
 - If Noto:
     - is_noto = True
     - has primary script and languages
@@ -548,10 +548,10 @@ To check even if no FAILs reported by font bakery.
 - correct typos
 - correct inconsistencies
 - correct if written at the first person (should be at the third)
-- correct if copywriting is undelicate, stereotyped or offensive (for eg. "This family demonstrates a feminine energy with its fragile aspect" is unacceptable)
+- correct if copywriting is indelicate, stereotyped or offensive (for example, "This family demonstrates a feminine energy with its fragile aspects" is unacceptable)
 - Forked project should mention the original with a URL to the font on GF if it exists.
 - Biography's element should be in the designer's bio
-- Credits should be in the credit. We accept credits in the description if there are not mentionned in the credit section (for eg. help on development, specific names of people involved if only a collective name is credited etc.)
+- Credits should be in the credit. We accept credits in the description if there are not mentioned in the credits section (for example, help on development, specific names of people involved if only a collective name is credited, etc.)
 
 **upstream.yaml**
 - is present
@@ -571,7 +571,7 @@ An onboarder on call is in charge of notifying the engineer on call about the ch
 
 2. The [to_production.txt](https://github.com/google/fonts/blob/main/to_production.txt) file lists the path that are ready to go to the live server after being validating in sandbox.
 
-3. The [to_delists.txt](https://github.com/google/fonts/blob/main/to_delist.txt) file lists all the files that we want to revome from the repository and that should not be displayed on [fonts.google.com](https://fonts.google.com) anymore. This file is not linked to any script though, completing it demands a manual intervention from the on call engineer.
+3. The [to_delists.txt](https://github.com/google/fonts/blob/main/to_delist.txt) file lists all the files that we want to remove from the repository and that should not be displayed on [fonts.google.com](https://fonts.google.com) anymore. This file is not linked to any script though, completing it demands a manual intervention from the on call engineer.
 
 A list looks like that:
 
@@ -603,7 +603,7 @@ Two tools are needed to prepare these lists.
 
 #### The push module
 
-The push module is used to organise the Traffic Jam board, ie. update the PR status and tag the proper list in order to prepare the generation of the push lists text files. 
+The push module is used to organise the Traffic Jam board, i.e., update the PR status and tag the proper list in order to prepare the generation of the push lists text files. 
 Everything that the push module does, you can do it manually from the Traffic Jam board —but it take ages.
 
 - It updates the server status automatically by comparing the font versions in the different servers.
@@ -614,9 +614,9 @@ Everything that the push module does, you can do it manually from the Traffic Ja
 
 #### `gftools gen-push-lists` script
 
-A script from gftool is used to generate the push lists text files. Make sure your main branch is in sync and run `gftools gen-push-lists path/to/fonts/repo`.
+A script from gftools is used to generate the push lists text files. Make sure your main branch is in sync and run `gftools gen-push-lists path/to/fonts/repo`.
 
-The script reads the Traffic Jam board to collect informations:
+The script reads the Traffic Jam board to collect information:
 
 - The PR labels allow to sort it by type of project. 
 - The PR URL is used to know what change was introduced and when.
@@ -625,18 +625,18 @@ The script reads the Traffic Jam board to collect informations:
 
 Once the list are created, it should be pushed to [google/fonts](https://github.com/google) thanks to a PR on another branch with a label <mark class=grey>Tool / Workflow / Repo</mark>. Chris should be assigned to review the PR and he will merge it. 
 
-Once the PR updating the list is merged, the oncall team should be notified by message in the group chat. 
+Once the PR updating the list is merged, the on-call team should be notified by message in the group chat. 
 
-Most of the time the oncall engineer will push the text list without reading it, and they will push the entire font directory wether the change concern only one file or not. 
+Most of the time the on-call engineer will push the text list without reading it, and they will push the entire font directory whether the change concerns only one file or many. 
 
-For example pushing a change to a article, description, metadata or license file will result in re-pushing the font family. This can become tricky in the following situations:
+For example, pushing a change to an article, description, metadata, or license file will result in re-pushing the font family. This can become tricky in the following situations:
 
 - A change to a font file is blocked in sandbox waiting to be fixed before going further. Pushing further the PR that changes a non-font file would also push the blocked change of the font file.
-- The font directory was added retrospectively. This is the case for the old families before the existence of the google/fonts repository. It often happens that the `METADATA.pb` from these families were manually made and are containing errors such as an inconsistent family name with the font name key in `METADATA.pb` (for eg. an inconsistency such as `FontName` and `Font Name` would result in pushing a new family into the API). So even when only modifying a non-font file, the fontbakery report should be read carefully.
+- The font directory was added retrospectively. This is the case for the old families before the existence of the google/fonts repository. It often happens that the `METADATA.pb` from these families were manually made and are containing errors such as an inconsistent family name with the font name key in `METADATA.pb` (e.g., an inconsistency such as `FontName` and `Font Name` would result in pushing a new family into the API). So even when only modifying a non-font file, the Fontbakery report should be read carefully.
 
 ### Checking the dev/sandbox/prod
 
-It is needed to check each pushed family to make sure that indeed the change was pushed, that it is displayed correctly, and to double-check check previous QA before sending to prod. Most problems could be avoided with a thorough QA before merging, but errors can always happen and the API has the advantage to reflect data errors visually.
+It is necessary to check each pushed family to make sure that indeed the change was pushed, that it is displayed correctly, and to double-check check previous QA before sending to prod. Most problems could be avoided with a thorough QA before merging, but errors can always happen and the API has the advantage to reflect data errors visually.
 
 - We usually check the dev-sandbox if we are in an experimenting phase with a special font family. 
 - We must check the sandbox after each push to sandbox and before preparing the to production list.
@@ -708,9 +708,9 @@ These are the thee subtrees on which an onboarder can interact and what they all
 The lang repo contains textprotos to define [script](https://github.com/googlefonts/lang/blob/main/Lib/gflanguages/data/scripts), [regions](https://github.com/googlefonts/lang/tree/main/Lib/gflanguages/data/regions) and [languages](https://github.com/googlefonts/lang/tree/main/Lib/gflanguages/data/languages).
 
 
-- The **scripts** directories contains textprotos which two keys, a script name to a script ID.
+- The **scripts** directories contain textprotos with two keys, a script name and a script ID.
 
-    Eg. `scripts/Arab.textproto`
+    E.g., `scripts/Arab.textproto`
 
     ```code
     id: "Arab"
@@ -719,18 +719,18 @@ The lang repo contains textprotos to define [script](https://github.com/googlefo
 
     This ID can be reflected in the font's `METADATA.pb`, to indicate the API to display the font's "primary script" over all the other available scripts contained in the font.
 
-    Eg. `primary_script: "Arab"`
+    E.g., `primary_script: "Arab"`
 
     <br>
     <figure>
     <img src="./images/onboarder-workflow/scheherazade.png" style="width:2568px" alt="" />
-    <figcaption aria-hidden="true">Scheherazade New displaying arabic script by default instead of Latin (random language selection or user's country specific).</figcaption>
+    <figcaption aria-hidden="true">Scheherazade New displaying Arabic script by default instead of Latin (random language selection or user's country specific).</figcaption>
     </figure>
     <br>
 
 - The **languages** directory contains textprotos which define several key entries for a specific language, but also the sample texts displayed in the specimen page. Each defined language uses the script ID to know to which script this language is linked to.
 
-    Eg. `languages/arz_Arab.textproto`
+    E.g., `languages/arz_Arab.textproto`
 
     ```code
     id: "arz_Arab"
@@ -766,7 +766,7 @@ The lang repo contains textprotos to define [script](https://github.com/googlefo
 
     It happens that a font contains only glyphs specific to a certain language of a script, and not all the languages of that script. It is the case for the Noto collection and some fonts from SIL. In this case, the languages are also defined in the font's `METADATA.pb` to avoid displaying tofu on the specimen page and prevent users from selecting a language that is not supported by the font.
 
-    Eg. `languages: "arz_Arab"  # Egyptian Arabic`
+    E.g., `languages: "arz_Arab"  # Egyptian Arabic`
 
 - The important keys in the textprotos of the **regions** directory are the region `ID` —which links the region to a language— and the `region_group` which is mirrored in the continent selection menu on the specimen page.
 
@@ -866,7 +866,7 @@ Find everything you need to know about the Axis Registry and the registration pr
 
 #### Releases and pull subtree
 
-1. We need regular releases because these subtrees are also modules used by gftools and fontbakery. For example, if Fontbakery fails a font because it doesn't display all glyphs of the language's sample text (although the codepoint is part of a nam file) then it can mean that there is no recent release of the glyphsets package.
+1. We need regular releases because these subtrees are also modules used by gftools and Fontbakery. For example, if Fontbakery fails a font because it doesn't display all glyphs of the language's sample text (although the codepoint is part of a nam file) then it can mean that there is no recent release of the glyphsets package.
 
 2. Changes to the `Lang` and `Axis Registry` repo need to be pulled into the `google/fonts` repo. The ideal would make a pull subtree at each release of the module to make the sync easier to verify.
 
@@ -878,6 +878,6 @@ Find everything you need to know about the Axis Registry and the registration pr
 
     `git subtree pull --prefix=lang https://github.com/googlefonts/lang.git main`
 
-    Once the main branch from the submodule is pulled, you will need to commit and push in a new branch upstream. Label the PR appropriately <mark class=grey>Axis Registry</mark> or <mark class=grey>Lang</mark> so it gets sorted correclty in the Traffic Jam board.
+    Once the main branch from the submodule is pulled, you will need to commit and push in a new branch upstream. Label the PR appropriately <mark class=grey>Axis Registry</mark> or <mark class=grey>Lang</mark> so it gets sorted correctly in the Traffic Jam board.
 
     **Important:** When merging a pull request in the google/fonts repo which contains a subtree pull, merge it using the "Create a merge commit" button and not the "Squash and merge" button. If we squash and merge, the subtree's history is squashed into a single commit which will cause merge conflicts for the next person who has to do a subtree pull. 

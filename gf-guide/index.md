@@ -6,7 +6,7 @@
 
 🦜 This guide aims to help people navigate the requirements and recommendations for contributing to <a href="https://fonts.google.com">Google Fonts</a>. The contents covered here range from general knowledge to contextualize the <i>what</i> and <i>why</i> of some of the requirements as well as the specifics regarding technical aspects with some suggestions on how to comply with them. It covers different levels of information for both newcomers and more experienced contributors.
 
-Therefore, <b>this documentation is not meant to be read at once</b>. If you are already familiar with some of the concepts, for example, some people are more empowered with the use of Github please you can skip some chapters and jump to the other bits that you may be looking for. The guidelines have been separated into small bits to facilitate the search of specific information that you would need at a specific stage of the font production.
+Therefore, <b>this documentation is not meant to be read at once</b>. If you are already familiar with some of the concepts, for example, some people are more empowered with the use of GitHub please you can skip some chapters and jump to the other bits that you may be looking for. The guidelines have been separated into small bits to facilitate the search of specific information that you would need at a specific stage of the font production.
 
 <ul>
   <li>If you are a <b>newcomer</b> and you want to <b>contribute</b> fonts to Google Fonts, whether commissioned or as a voluntary contribution, you should read the chapters marked with 
@@ -36,7 +36,7 @@ The most basic concepts, tools, or knowledge you will need to cover to begin con
 * <mark class="blue">start</mark>
   <b>[Installing the required tools](https://googlefonts.github.io/gf-guide/tools.html#installing-the-required-tools)</b> 
 * <mark class="yellow">learn</mark>
-  [Hosting projects on Github](hosting.md)
+  [Hosting projects on GitHub](hosting.md)
 
 ## The Upstream Repo: administrate your project files
 
@@ -93,7 +93,7 @@ Context, requirements, and tools to produce the fonts and get them ready for pub
 * <mark class="yellow">learn</mark>
   [Build the fonts](build.md) 
 * <mark class="yellow">learn</mark>
-  [Quality Aassurance tools and resources](qa.md)
+  [Quality Assurance tools and resources](qa.md)
 * <mark class="yellow">learn</mark>
   [Local testing](testing.md)   
 

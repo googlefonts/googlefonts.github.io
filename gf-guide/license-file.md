@@ -47,7 +47,7 @@ This page will give users some important requirements about the <mark class="gre
 
     -   Typically when the original RFN is respected; the font is itself based on a previous open source font, which had an RFN, and had to be renamed to start with—even though its new name is not under RFN license terms. In that case, the OFL text should mention the original RFN. See the [Lexend](https://github.com/googlefonts/lexend/blob/main/OFL.txt) project as an example.
     
-    -   In other cases, a legal agreement needs to be made between Google Fonts and the copyright holders. This is the case for all Adobe’s and SIL’s fonts for example. In that case you should get in contact with your Google Fonts point of contact to start the legal process of allowing GF to use the font name despite the RFN. This is usually done by email from an authorized representative of the rfn holder:
+    -   In other cases, a legal agreement needs to be made between Google Fonts and the copyright holders. This is the case for all Adobe’s and SIL’s fonts for example. In that case you should get in contact with your Google Fonts point of contact to start the legal process of allowing GF to use the font name despite the RFN. This is usually done by email from an authorized representative of the RFN holder:
 
 ``` code
 To: fonts@google.com

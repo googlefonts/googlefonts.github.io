@@ -33,7 +33,7 @@ If the font project consists only of static fonts (and does not include any VF w
 
 ## Supported Styles
 
-Google’s static fonts API supports up to 18 styles in one family: up to 9 weights (Thin–Black), + their matching Italics. The table below lists each style’s specific name tables and bit settings.
+Google’s static fonts API supports up to 18 styles in one family: up to 9 weights (Thin–Black), + their matching Italics. The table below lists each style’s specific name table entries and bit settings.
 
 `fontmake` doesn’t produce Mac names entries any more. If you must add the name for platform 1 (Mac), make sure they are the same as the one in Platform 3 (Windows).
 
@@ -72,15 +72,15 @@ In Glyphs.app, the `Family Name` in font info (or the `Localised Family Name` in
 
 ## Style linking
 
-Several tables in font files need to be set to enable proper style linking between Upright/Italic and Regular/Bold. You can look at the Open Type spec for more info about the:
+Several tables in font files need to be set to enable proper style linking between Upright/Italic and Regular/Bold. You can look at the OpenType spec for more info about the:
 - [`post`](https://learn.microsoft.com/en-us/typography/opentype/spec/post) table, regarding `italic angle` value; 
 - [`OS/2`](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fss) table for the the `fsSelection` values; 
 - [`head`](https://learn.microsoft.com/en-us/typography/opentype/spec/head) table for `macStyle` values;
 - [`name`](https://learn.microsoft.com/en-us/typography/opentype/spec/name) table regarding Name ID 2
 
-#### The `Name` table
+#### The `name` table
 
-We strictly follow the RIBBI convention for nameID2 (such as required in the [OpenType spec](https://learn.microsoft.com/en-us/typography/opentype/spec/name#name-ids)), to allow functional style linking in most environments (button Bold and Italic in desktop apps for example). This means that you can’t have another style name than `Regular`, `Italic`, `Bold`, `Bold Italic` in `name ID 2` (for any platform). Other style name should be appended to `name ID 1`. The “real” font family name that is impacting how a family is grouped in font menu is handled by the `name ID 16` and the “real” style names are in `name ID 17`.
+We strictly follow the RIBBI convention for `name ID 2` (such as required in the [OpenType spec](https://learn.microsoft.com/en-us/typography/opentype/spec/name#name-ids)), to allow functional style linking in most environments (button Bold and Italic in desktop apps for example). This means that you can’t have another style name than `Regular`, `Italic`, `Bold`, `Bold Italic` in `name ID 2` (for any platform). Other style name should be appended to `name ID 1`. The “real” font family name that is impacting how a family is grouped in font menu is handled by the `name ID 16` and the “real” style names are in `name ID 17`.
 
 For projects using Glyphs.app, the `Style Name` field in the set instances will be the one used for the `name ID 17`. The `name ID 2` will be set according to the style linking case and if the style name matches RIBBI. So don’t forget to tick the proper cases: `This instance is the [ ] Bold, [ ] Italic of: ___________`. You can leave the last field blank which suggests “Regular”, but all other styles need to be mentioned, for example: ExtraLight Italic is `[ ] Bold, [X] Italic of: ExtraLight`.
 
@@ -94,23 +94,23 @@ The following is a summary of the expected values for each style in all the tabl
 - **`post` table:** `<italicAngle value="0"/>`
 - **`OS/2` table:** 
     - `fsSelection` bit `6` [is REGULAR] should be `1`
-    - Eg. `<fsSelection value="00000000 01000000"/>`
+    - E.g., `<fsSelection value="00000000 01000000"/>`
 - **`head` table:** 
   - `macStyle` bit `1` [is ITALIC] should be `0`
-  - Eg. `<macStyle value="00000000 00000000"/>`
+  - E.g., `<macStyle value="00000000 00000000"/>`
 
 *In Glyphs.app: `This instance is the [ ] Bold, [ ] Italic of: ___________`*
 
 ### Italic
 
 - **name table:** `nameID2` is `Italic`.
-- **`post` table:** `italic angle` should be a negative value for a right leaning slope. Eg. `<italicAngle value="-12"/>`
+- **`post` table:** `italic angle` should be a negative value for a right leaning slope. E.g., `<italicAngle value="-12"/>`
 - **`OS/2` table:** 
     - `fsSelection` bit `0` [is ITALIC] should be `1`
-    - Eg. `<fsSelection value="00000000 00000001"/>`
+    - E.g., `<fsSelection value="00000000 00000001"/>`
 - **`head` table:** 
   - `macStyle` bit `1` [is ITALIC] should be `1`
-  - Eg. `<macStyle value="00000000 00000010"/>`
+  - E.g., `<macStyle value="00000000 00000010"/>`
 
 *In Glyphs.app: `This instance is the [ ] Bold, [X] Italic of: <Style Name>`*
 
@@ -120,25 +120,25 @@ The following is a summary of the expected values for each style in all the tabl
 - **`post` table:** `<italicAngle value="0"/>`
 - **`OS/2` table:** 
     - `fsSelection` bit `5` [is BOLD] should be `1`
-    - Eg. `<fsSelection value="00000000 00100000"/>`
+    - E.g., `<fsSelection value="00000000 00100000"/>`
 - **`head` table:** 
   - `macStyle` bit `0` [is BOLD] should be `1`
-  - Eg. `<macStyle value="00000000 00000001"/>`
+  - E.g., `<macStyle value="00000000 00000001"/>`
 
 *In Glyphs.app: `This instance is the [X] Bold, [ ] Italic of: ___________`*
 
 ### Bold Italic
 
 - **name table:** `nameID2` is `Bold Italic`.  
-- **`post` table:** `italic angle` should be a negative value for a right leaning slope. Eg. `<italicAngle value="-12"/>`
+- **`post` table:** `italic angle` should be a negative value for a right leaning slope. E.g., `<italicAngle value="-12"/>`
 - **`OS/2` table:** 
     - `fsSelection` bit `0` [is ITALIC] should be `1`
     - `fsSelection` bit `5` [is BOLD] should be `1`
-    - Eg. `<fsSelection value="00000000 00100001"/>`
+    - E.g., `<fsSelection value="00000000 00100001"/>`
 - **`head` table:** 
   - `macStyle` bit `0` [is BOLD] should be `1`
   - `macStyle` bit `1` [is ITALIC] should be `1`
-  - Eg. `<macStyle value="00000000 00000011"/>`
+  - E.g., `<macStyle value="00000000 00000011"/>`
 
 *In Glyphs.app: `This instance is the [X] Bold, [X] Italic of: <Style Name>`*
 
