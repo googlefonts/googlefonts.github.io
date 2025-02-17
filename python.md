@@ -84,7 +84,7 @@ In order to make this work, you will need to enable "Trusted publishing" for the
 
 Use `git tag -a` to make a new annotated tag, or `git tag -s` for a GPG-signed annotated tag, if you prefer.
 
-Name the new tag with with a leading 'v' followed by three MAJOR.MINOR.PATCH digits, using [semantic versioning](https://semver.org/). Look at the existing tags for examples.
+Name the new tag with a leading 'v' followed by three MAJOR.MINOR.PATCH digits, using [semantic versioning](https://semver.org/). Look at the existing tags for examples.
 
 In the tag message write some short release notes describing the changes since the previous tag.
 

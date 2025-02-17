@@ -45,7 +45,7 @@ As a general rule, <b>GF requires users to open an issue before submitting anyth
 
 -   Users should have [gftools](https://github.com/googlefonts/gftools) installed in a virtual environment (see [Google Fonts Tools](tools.md)).
 -   Users should have their [Git client configured](hosting.md) with an SSH key or HTTPS protocol. HTTPS is easier, but if you want to use our [Packaging tool](package.md) to make a pull request, you will need an SSH key.
--   Users should have read the [Contributor License Agreement](https://cla.developers.google.com/about) and should have signed it by clicking the “Manage your agreements” button at the bottom of the CLA page.
+-   Users should have read the [Contributor License Agreement](https://cla.developers.google.com/about) (CLA) and should have signed it by clicking the “Manage your agreements” button at the bottom of the CLA page.
 -   Users should make sure to set git to record commits with their name, and the email they signed the [Google CLA](https://opensource.google/documentation/reference/cla) with, otherwise, your pull requests will trigger a CLA-checker warning.
 
     These metadata can be set with your git GUI tool, otherwise manually with a CLI:

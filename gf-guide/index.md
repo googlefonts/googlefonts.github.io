@@ -100,7 +100,7 @@ Context, requirements, and tools to produce the fonts and get them ready for pub
 
 ## The google/fonts repository 
 
-Details on the Google Fonts repository that hosts the fonts projects already included in the Catalogue.
+Details on the Google Fonts repository that hosts the fonts projects already included in the Catalog.
 
 * <mark class="purple">nerd&nbsp;</mark>
   [google/fonts repository explained](googlefonts.md)

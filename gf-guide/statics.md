@@ -35,7 +35,7 @@ If the font project consists only of static fonts (and does not include any VF w
 
 Google’s static fonts API supports up to 18 styles in one family: up to 9 weights (Thin–Black), + their matching Italics. The table below lists each style’s specific name table entries and bit settings.
 
-`fontmake` doesn’t produce Mac names entries any more. If you must add the name for platform 1 (Mac), make sure they are the same as the one in Platform 3 (Windows).
+`fontmake` doesn’t produce Mac name entries any more. If you must add the name for platform 1 (Mac), make sure they are the same as the one in Platform 3 (Windows).
 
 | Filename                        | Family Name (ID 1, Win) | Subfamily Name (ID 2, Win) | Typographic Family Name (ID 16) | Typo Subfamily Name (ID 17) | OS/2 usWeightClass | OS/2 fsSelection | head macStyle |
 |---------------------------------|-------------------------|----------------------------|---------------------------------|-----------------------------|--------------------|------------------|---------------|
@@ -145,7 +145,7 @@ The following is a summary of the expected values for each style in all the tabl
 
 ## Unsupported styles
 
-If a family has styles which are not in the above table, they should be released as a separate/new family. To do this, append any unsupported style (e.g Condensed) to the family name, so it becomes part of the family name, rather than part of the style name. We frequently use this approach for [Condensed](https://fonts.google.com/?query=condensed) and [smallcap](https://fonts.google.com/?query=sc) sibling families. This way, we never have to use `name IDs 21/22` for the WWS convention.
+If a family has styles which are not in the above table, they should be released as a separate/new family. To do this, append any unsupported style (e.g Condensed) to the family name, so it becomes part of the family name, rather than part of the style name. We frequently use this approach for [Condensed](https://fonts.google.com/?query=condensed) and [smallcap](https://fonts.google.com/?query=sc) sibling families. This way, we never have to use `name ID 21`/`22` for the weight-width-slope (WWS) convention.
 
 For projects which use Glyphs.app, you can follow the example of [Archivo](https://github.com/Omnibus-Type/Archivo) which contains glyphs files that are set correctly. An additional field `Localised Family Name` should be added in all concerned instances in order to append the non supported style to the family name and override the one in font info.
 
@@ -203,7 +203,7 @@ Fontmake does not support manual hinting from Glyphs. You can use use [VTT](htt
 
 -   [Font Table Viewer](https://glyphsapp.com/tools/fonttableviewer)
 -   [DTL OT Master](https://www.fontmaster.nl/otmaster.html)
--   [ttx](https://fonttools.readthedocs.io/en/latest/ttx.html), a practical command line tool of [fonttools](https://github.com/fonttools/fonttools).
+-   [ttx](https://fonttools.readthedocs.io/en/latest/ttx.html), a practical command line tool of [FontTools](https://github.com/fonttools/fonttools).
 
 **Some font testing web pages allow you to view a selection of tables:**
 

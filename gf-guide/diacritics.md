@@ -17,7 +17,7 @@ This guide will give users an overview introduction to diacritics both from a de
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets)" style="font-weight:bold">Overall font files requirements/Glyphsets</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/requirements.html#glyph-sets" style="font-weight:bold">Overall font files requirements/Glyph sets</a>
 </div>
 
 ## Table of contents
@@ -68,7 +68,7 @@ These marks are only used as placeholder when typing for a combination of keys t
 - They should share the design of the `combining marks` ([see below](#combining-diacritical-marks---nonspacing)) for consistency reasons. To ensure this in a practical way, it is suggested to create them by using the combining marks as components in the source file.
 - They use the simple name of the mark, e.g. `acute` or `grave`.
 - They must have the correct Unicode codepoint in your source file to work properly.
-- Although they represent marks, they need to behave as though they are base glyphs; that is, in the GDEF table their "Glyph Class" should be 1. ("Base glyph") In the Glyphs "Font View" under the List mode, they should have `Category=Mark` and `Subcategory=Spacing`.
+- Although they represent marks, they need to behave as though they are base glyphs; that is, in the `GDEF` table their "Glyph Class" should be 1. ("Base glyph") In the Glyphs "Font View" under the List mode, they should have `Category=Mark` and `Subcategory=Spacing`.
 <br>
 <br>
 **Latin legacy marks list**
@@ -112,7 +112,7 @@ When creating the precomposed characters in the source file, ideally, automatic 
 
 ### Anchors
 
-All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another and play a key role in the identification of the glyph definition as well as the generation of the "Mark to base positioning" `mark` and the "Mark to mark positioning" `mkmk` GPOS features ([see below](#the-glyph-positioning-gpos-table)).
+All the glyphs involved in the generation of accented letters use *Anchors*, which are special points that allow the attachment of glyphs to one another and play a key role in the identification of the glyph definition as well as the generation of the "Mark to base positioning" (`mark`) and the "Mark to mark positioning" (`mkmk`) `GPOS` features ([see below](#the-glyph-positioning-gpos-table)).
 
 Anchors are commonly represented as a red rhombus in the glyph view of the source file and are identified with a name. The name part should be shared among the base glyph and the mark glyph, but in the mark glyph there should be a preceding underscore. For example, there should be a `top` anchor in the base glyph and a corresponding `_top` anchor in the mark.
 This name schema is crucial for the positioning to work as expected - for example if the underscore is omitted in the mark glyph, it would not be attached to the base letter - so you must pay special care and attention to them.  
@@ -125,9 +125,9 @@ This name schema is crucial for the positioning to work as expected - for exampl
 - They must include anchors named as explained above. To better manage the positions for specific language requirements, such as constructing stacked diacritics in Vietnamese, it maybe useful to use custom names: for example, `top_viet` and `_top_viet`, accordingly.
 - The amount of combining marks and precomposed glyphs required will be determined by the language support your font is intended. For Google Fonts see the [Glyphsets](https://googlefonts.github.io/gf-guide/requirements.html#glyphsets) definition.
 - They must be assigned the right Unicode codepoint in your source file to work properly. See the [Combining diacritical marks](https://unicode.org/charts/PDF/U0300.pdf) Unicode chart, that ranges from 0300 to 036F codepoints.
-- In the GDEF table, their "Glyph Class" should be 3 ("Mark glyph".) In the Glyphs "Glyph info" pane, they should have `Category=Mark` and `Subcategory=Nonspacing`.
+- In the `GDEF` table, their "Glyph Class" should be 3 ("Mark glyph".) In the Glyphs "Glyph info" pane, they should have `Category=Mark` and `Subcategory=Nonspacing`.
 
-Combining marks would be listed like this in the GDEF table:
+Combining marks would be listed like this in the `GDEF` table:
 
 ````code
   <ClassDef glyph="acutecomb" class="3"/>
@@ -255,26 +255,26 @@ For any glyph to be classified into the right class, the following must be ensur
 
 - The glyph name must be correct. For more context please read the [Glyphs app name tutorial](https://glyphsapp.com/learn/getting-your-glyph-names-right).
 - Every `combining mark` must have anchors, as well as the letters intended to become a `base letter`.
-- The anchors must have the right name (depending on the the schema explained above).
+- The anchors must have the right name (depending on the schema explained above).
 
 This identification is critical for the font compilers like Fontmake to process the correct glyph category and export functional fonts. If a glyph is not in the suitable class, you could correct it in the Glyphs font editor by using the “Glyph Info” pane and setting the Category and Subcategory fields described above. In Fontlab editor, you could inspect the "Glyph Panel" in the [OT Class](https://help.fontlab.com/fontlab-vi/Glyph-panel/#ot-class).
 
 
 ### The Glyph Positioning (GPOS) table
 
-GPOS table will use all the glyphs' X and Y position values to precisely control placement operations conditioned by the script and language the font supports, plus advanced typographic composition tasks such as kerning or superscripts.
+The `GPOS` table will use all the glyphs' X and Y position values to precisely control placement operations conditioned by the script and language the font supports, plus advanced typographic composition tasks such as kerning or superscripts.
 
 From the eight type of positioning actions that the table support, at least two are essential for the functioning of diacritic marks:
 
 - **Mark-to-base attachment** Controlled by the `mark` feature. *Positions combining marks with respect to base glyphs, as when positioning vowels, diacritical marks, or tone marks in Arabic, Hebrew, and Vietnamese.*
 - **Mark-to-mark attachment** Controlled by the `mkmk` feature. *Positions one mark relative to another, as when positioning tone marks with respect to vowel diacritical marks in Vietnamese.*
 
-Key factors for these GPOS features to work are:
+Key factors for these `GPOS` features to work are:
 
 - Having base and diacritics identified with the proper OT class.
 - Anchors on each needed glyph well placed and with the right name.
  
-For more context and details, please read the entire [GPOS](https://docs.microsoft.com/en-us/typography/opentype/spec/gpos) entry in the OT Spec.
+For more context and details, please read the entire [`GPOS`](https://docs.microsoft.com/en-us/typography/opentype/spec/gpos) entry in the OT Spec.
 
 ### The Glyph Substitution (GSUB) Table
 
@@ -288,7 +288,7 @@ Key factors for the [ccmp](https://simoncozens.github.io/feature-tags/#abvf) fea
 - Ensure the `ccmp` feature is included with all the necessary Lookups.
 - The `ccmp` feature need to be at the top of features list so that it gets processed prior to any other feature.
 
-For more context and details, please read the entire [GSUB](https://docs.microsoft.com/en-us/typography/opentype/spec/gsub) entry in the OT Spec.
+For more context and details, please read the entire [`GSUB`](https://docs.microsoft.com/en-us/typography/opentype/spec/gsub) entry in the OT Spec.
 
 
 ------------------------------------------------------------------------

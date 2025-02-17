@@ -279,7 +279,7 @@ This is how we proceed once a new font is proposed through the issue tracker:
 
 #### If the font is worth reviewing but some elements are missing 
 
-Such as sources, description in the README.md, etc., we simply ask the designer to provide those elements so we can review the font properly. 
+If elements such as sources, description in the `README.md` file, etc. are missing, we simply ask the designer to provide those elements so we can review the font properly. 
 
 #### If the font is worth reviewing and not missing element
 
@@ -603,7 +603,7 @@ Two tools are needed to prepare these lists.
 
 #### The push module
 
-The push module is used to organise the Traffic Jam board, i.e., update the PR status and tag the proper list in order to prepare the generation of the push lists text files. 
+The push module is used to organize the Traffic Jam board, i.e., update the PR status and tag the proper list in order to prepare the generation of the push lists text files. 
 Everything that the push module does, you can do it manually from the Traffic Jam board —but it take ages.
 
 - It updates the server status automatically by comparing the font versions in the different servers.
@@ -636,7 +636,7 @@ For example, pushing a change to an article, description, metadata, or license f
 
 ### Checking the dev/sandbox/prod
 
-It is necessary to check each pushed family to make sure that indeed the change was pushed, that it is displayed correctly, and to double-check check previous QA before sending to prod. Most problems could be avoided with a thorough QA before merging, but errors can always happen and the API has the advantage to reflect data errors visually.
+It is necessary to check each pushed family to make sure that indeed the change was pushed, that it is displayed correctly, and to double-check previous QA before sending to prod. Most problems could be avoided with a thorough QA before merging, but errors can always happen and the API has the advantage to reflect data errors visually.
 
 - We usually check the dev-sandbox if we are in an experimenting phase with a special font family. 
 - We must check the sandbox after each push to sandbox and before preparing the to production list.

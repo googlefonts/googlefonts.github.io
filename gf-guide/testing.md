@@ -123,7 +123,7 @@ Double-click on each style and check if:
 
 ### Variable Fonts
 
-- [Samsa](https://lorp.github.io/samsa/src/samsa-gui.html) displays all instances with propers names in the STAT sidebar section. Regular and other default names are Elided (in parenthesis), and there is style linking between Regular and Bold (400 → 700), and between Roman and Italic (0 → 1).
+- [Samsa](https://lorp.github.io/samsa/src/samsa-gui.html) displays all instances with proper names in the STAT sidebar section. Regular and other default names are Elided (in parenthesis), and there is style linking between Regular and Bold (400 → 700), and between Roman and Italic (0 → 1).
 - `avar` table displays the expected result (linear or not).
 - `fvar` table has the instances you want with proper names and proper coordinates (only weight instances with coordinates every 100 for GF).
 - Variation works properly (also glyphs with special layers).

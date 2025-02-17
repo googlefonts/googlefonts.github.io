@@ -67,7 +67,7 @@ To improve rendering, Windows’ rasterizer reads `TrueType hinting`, Apple's bu
     <figure>
     <img src="images/outlines/overlaying.svg" style="width:276px" />
     </figure>
--   **Overlapping:** The crossing of two independent contours is not such a problem in variable fonts, and generally merged during the generation of static binaries. If you want to control the result of the merging, it is better to do it yourself. If not, try to keep not-too-small-not-too-big overlapped area. Also try not to overlap more than 2 contours in the same area (contour crossing a contour itself crossing another contour creates confusion during generation and rendering). In any case, try to avoid overlapping shapes which cross a plain shape and a closed counter-shape (typically, Oslash should be manually merged for example).
+-   **Overlapping:** The crossing of two independent contours is not such a problem in variable fonts, and generally merged during the generation of static binaries. If you want to control the result of the merging, it is better to do it yourself. If not, try to keep not-too-small-not-too-big overlapped area. Also try not to overlap more than 2 contours in the same area (contour crossing a contour itself crossing another contour creates confusion during generation and rendering). In any case, try to avoid overlapping shapes which cross a plain shape and a closed counter-shape (typically, Oslash should be manually merged, for example).
 -   **Self-crossing:** Often known as open-corners, it is very helpful while designing and recommended for nice interpolations. They will be preserved for VF fonts and merged during generation to static binaries. To better control the result, pay attention to the size of it (not too big, not too small) as well as not leaving portions of it outside the main shape like the stem, since it can cause unwanted rendering issues. If you want to control the result of the merging, do it yourself, if not, the same advice as above.
 
 ### On-curve points (nodes)
@@ -85,9 +85,9 @@ To improve rendering, Windows’ rasterizer reads `TrueType hinting`, Apple's bu
 
 ### Components
 
--   **Transformed components:** It can happen that transformed components ((scaled, mirrored, stretched, rotated) are not processed correctly while generating variable ttf. This could cause issues like the original component is displayed instead, or unwanted fractional coordinates, as well as the wrong direction in outlines. Fontmake is supposed to decompose them during export, but the conversion of transformed outlines to quadratic curves could cause more quality issues.
+-   **Transformed components:** It can happen that transformed components ((scaled, mirrored, stretched, rotated) are not processed correctly while generating variable TTFs. This could cause issues like the original component is displayed instead, or unwanted fractional coordinates, as well as the wrong direction in outlines. Fontmake is supposed to decompose them during export, but the conversion of transformed outlines to quadratic curves could cause more quality issues.
 -   **Nested components:** Components referring to another component (nested, one inside the other) are not correctly interpreted by postscript printers.
--   **Overlapping components:** While generated ttf static binaries, Fontmake doesn't decompose overlapping components (except if one is transformed), which is good for Variable Fonts but can cause some issues in static TTFs for some renderers and printers. We therefore recommend to decompose at least one of the component, so it triggers the decomposition of the entire glyph during generation (and merging of overlapped contours for statics).
+-   **Overlapping components:** While generating TTF static binaries, Fontmake doesn't decompose overlapping components (except if one is transformed), which is good for Variable Fonts but can cause some issues in static TTFs for some renderers and printers. We therefore recommend to decompose at least one of the component, so it triggers the decomposition of the entire glyph during generation (and merging of overlapped contours for statics).
 
 # Don’ts
 

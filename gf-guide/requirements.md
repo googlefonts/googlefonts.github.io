@@ -113,7 +113,7 @@ These font info parameters are not optional and should follow the same scheme wi
 
 ## Trademarks
 
-Typically libre fonts are not subject to any trademarks.
+Typically, Libre fonts are not subject to any trademarks.
 
 **If you do not trademark your project name:**
 <br>
@@ -173,7 +173,7 @@ Currently, the most used ones are:
 -   [**GF Latin Plus**](https://github.com/googlefonts/glyphsets/blob/main/GF_glyphsets/Latin/txt/nice-names/GF_Latin_Plus.txt) includes additional numerals sets (like numerators, denominators, inferior and superior), expanded math and currency symbols, as well as arrows and bullets in use in Google Docs.
 -   [**Latin Vietnamese**](https://github.com/googlefonts/glyphsets/blob/main/GF_glyphsets/Latin/txt/nice-names/GF_Latin_Vietnamese.txt) includes the extended marks and combined letters required to support the Vietnamese language. It requires to be combined with Latin Core for complete Latin + Vietnamese support.
 
-Find all the glyphsets definition and filter lists in the [Glyphsets repository](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets). Be aware that these glyphsets are still a work in progress and any advise or recommendation can be submitted using the [Glyphsets’ issue tracker](https://github.com/googlefonts/glyphsets/issues).
+Find all the glyphsets definition and filter lists in the [Glyphsets repository](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets). Be aware that these glyphsets are still a work in progress and any advise or recommendation can be submitted using the [Glyphsets issue tracker](https://github.com/googlefonts/glyphsets/issues).
 
 ## OpenType feature support
 

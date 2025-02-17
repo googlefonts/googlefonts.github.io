@@ -144,7 +144,7 @@ To install Fontbakery, run the command:
 pip3 install -U fontbakery'[googlefonts]'
 ```
 
-Run `fontbakery --help` to get an overview of the usage of the fontbakery tool.
+Run `fontbakery --help` to get an overview of the usage of the Fontbakery tool.
 
 ### Google Fonts Tools (gftools)
 
@@ -189,7 +189,7 @@ Run the command `gftools qa --help` to overview all the scripts and [their usage
 
 ## Recap of your .bash_profile
 
-The `bash profile` (or `z profile` according to your shell script), is loaded before your Command Line Interface (CLI) loads your shell environment and contains all the startup configuration and preferences for your CLI. In Mac OSX, the file is hidden (starts with a `.`) in your home directory. You can display the hidden files (`shift`+`fn`+`cmd`+`.`) and open the file in a code editor. Otherwise, check on the Internet how to find and edit it.
+The `bash profile` (or `z profile` according to your shell script), is loaded before your Command Line Interface (CLI) loads your shell environment and contains all the startup configuration and preferences for your CLI. In macOS, the file is hidden (starts with a `.`) in your home directory. You can display the hidden files (`shift`+`fn`+`cmd`+`.`) and open the file in a code editor. Otherwise, check on the Internet how to find and edit it.
 
 Once you have set up `git` and all the other tools, your bash profile (or z profile according to your shell script) should look like this:
 

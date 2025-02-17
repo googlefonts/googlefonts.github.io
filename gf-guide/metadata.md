@@ -385,7 +385,7 @@ display_name: "Noto Sans Phags-pa"
 
 ### minisite_url
 
-This key allows to link a mini website to the font's specimen page. It will appear on top of the page, under the font name, next to the designer's name. A minisite_url is expected to be mandatory for all commisioned fonts.
+This key allows to link a mini website to the font's specimen page. It will appear on top of the page, under the font name, next to the designer's name. A `minisite_url` is expected to be mandatory for all commissioned fonts.
 
 Example:
 
@@ -428,7 +428,7 @@ Poster samples are used in presenting the font in GF catalog specimen poster com
 - `poster_md` is a phrase that has 8-12 chars.
 - `poster_lg` is a word that has 3-8 chars.
 
-Specimen samples are used as type ramp samples. The <nn> indicates the rendering size.
+Specimen samples are used as type ramp samples. The *&lt;nn&gt;* indicates the rendering size.
 
 - `specimen_48` is a sentence that has 60-70 chars.
 - `specimen_36` is a paragraph that has 100-120 chars.

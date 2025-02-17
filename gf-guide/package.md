@@ -114,7 +114,7 @@ Note that the font has to be in the same location as before, otherwise you would
 
     → You obtain the link of the zip by right-clicking on it from the upstream repo.
 
-2.  Once the `METADATA.pb` file has been filled out with all the required information, you can run the tool again, adding the `-p` otion, which makes a pull request to Google Fonts:
+2.  Once the `METADATA.pb` file has been filled out with all the required information, you can run the tool again, adding the `-p` option, which makes a pull request to Google Fonts:
 
     ``` code
     gftools packager "Font Name" path/to/local/google/fonts -p
@@ -140,7 +140,7 @@ If you use the previous method, and if you want to modify your PR, every time yo
 
 To avoid that, you can first run it without `-p` to package and, in a second step, use `-p`. 
 
-Also, keep in mind that every push you make on a google/fonts PR will trigger the Continuous Integration (CI) workflow which generate QA reports. If the CI is triggerred multiple times at once, it can happen that the CI workflow breaks. It is therefore wise to make all modifications to [METADATA.pb](metadata.md) and [ARTICLE.html](article.md) beforehand, and push all the changes at once.
+Also, keep in mind that every push you make on a google/fonts PR will trigger the Continuous Integration (CI) workflow which generate QA reports. If the CI is triggered multiple times at once, it can happen that the CI workflow breaks. It is therefore wise to make all modifications to [METADATA.pb](metadata.md) and [ARTICLE.html](article.md) beforehand, and push all the changes at once.
 
 <div class="next-reading">
     Further reading:<br>

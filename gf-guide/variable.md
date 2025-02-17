@@ -110,7 +110,7 @@ Any new variable font with a weight or width axes will need the instance’s coo
 
 ### `wght`
 
-[MS Spec wght info](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_wght)
+[MS Spec `wght` info](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_wght)
 
 | name       | wght coordinate value |
 |------------|----------------------:|
@@ -127,7 +127,7 @@ Any new variable font with a weight or width axes will need the instance’s coo
 
 ### `wdth`
 
-[MS Spec wdth info](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_wdth)
+[MS Spec `wdth` info](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_wdth)
 
 | name           | wdth coordinate value |
 |----------------|----------------------:|
@@ -143,7 +143,7 @@ Any new variable font with a weight or width axes will need the instance’s coo
 
 ### `opsz`
 
-[MS Spec opsz info](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_opsz)
+[MS Spec `opsz` info](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_opsz)
 
 | name | opsz coordinate value |
 |------|----------------------:|
@@ -258,15 +258,15 @@ The axis mapping is set up in Glyphs using the `Axis Location` parameter (has to
 
 Since version 3.2, GlyphsApp has been using **internal coordinates** as **design values** (output), and **external coordinates** as **user values** (input). Which is the opposite of how they were handling it before; designer may need to reverse there Axis Mapping when they upgrade.
 
-Now that we have a better understanding of the axis mapping concept, let’s see the three tables linked to the axis mapping that are particularly important to translate correctly the design space: the `AVAR`, the `STAT`, the `FVAR` tables.
+Now that we have a better understanding of the axis mapping concept, let’s see the three tables linked to the axis mapping that are particularly important to translate correctly the design space: the `avar`, the `STAT`, the `fvar` tables.
 
 ### The `avar` table
 
-[MS Spec avar table info](https://docs.microsoft.com/en-us/typography/opentype/spec/avar)
+[MS Spec `avar` table info](https://docs.microsoft.com/en-us/typography/opentype/spec/avar)
 
 This table normalizes the progression of the interpolation of one axis on a scale `-1:1`, the location of the font-origin being `0` (zero-origin). Basically, it takes the axis mapping and convert it so `max location = 1`, `default location = 0`, `min location = -1`.
 
-The `avar` has two goals:
+The `avar` normalization has two goals:
 
 -   It changes the “pace” of the interpolation.
 -   It allows the interpolation of instances following a *non-linear* progression.
@@ -279,7 +279,7 @@ To have a better understanding of these two complicated concepts, you can read t
 
 **Example: linear interpolation**
 
-In the case of a linear interpolation, normalised design and user values on a `-1:1` scale are **the same**. An `avar` table in that case is useless and is therefore not exported. Since the interpolation is “linear” all the design space, a simple cross product allows a software to find the location of interpolated instances.
+In the case of a linear interpolation, normalized design and user values on a `-1:1` scale are **the same**. An `avar` table in that case is useless and is therefore not exported. Since the interpolation is “linear” all the design space, a simple cross product allows a software to find the location of interpolated instances.
 
 <div id="58670f19-9bef-4b47-806e-bdbb85be6cc7" class="column-list">
 
@@ -324,7 +324,7 @@ A consequence of this interpolation is that you may not be happy with the pace o
 
 **Example: non-linear interpolation**
 
-Now let’s pretend that you want your Medium style actually thinner that what the machine could calculate itself, and so you locate it at `45` instead of `50`: you would have then to let the machine knows that it has to adapt the interpolation curve to reach that location. The AVAR table is here to give that factor.
+Now let’s pretend that you want your Medium style actually thinner that what the machine could calculate itself, and so you locate it at `45` instead of `50`: you would have then to let the machine knows that it has to adapt the interpolation curve to reach that location. The `avar` table is here to give that factor.
 
 <div id="4b113fbc-b8d6-4fe7-8801-582d3eb0d1d9" class="column-list">
 
@@ -366,7 +366,7 @@ Now let’s pretend that you want your Medium style actually thinner that what t
  </avar>
 ```
 
-|              | User coordinates | Normalised | Design coordinates | Normalised |
+|              | User coordinates | Normalized | Design coordinates | Normalized |
 |--------------|------------------|------------|--------------------|------------|
 | min          | 300              | -1         | 30                 | -1         |
 | default      | 400              | 0          | 40                 | 0          |
@@ -374,13 +374,13 @@ Now let’s pretend that you want your Medium style actually thinner that what t
 | interpolated | 600              | 0.6667     | 62                 | 0.73334    |
 | max          | 700              | 1          | 70                 | 1          |
 
-All of that is suppose to explain why Google Fonts recommend to set up an AVAR table in variable fonts having a weight axis—although it depends greatly on the design and the axis range.
+All of that is suppose to explain why Google Fonts recommend to set up an `avar` table in variable fonts having a weight axis—although it depends greatly on the design and the axis range.
 
 The hard compromise to make is often to find the right balance between what your instance should look like visually and the pace of the interpolation—indeed both factors can come in contradiction.
 
 ## Fvar instances
 
-GF only allows weight and italic particles for the instances in the `fvar` table of a variable font. If a font contains additional axes, they must not be mentioned in the instance names and the coordinates for each instance must be set to reasonable default. For example if your font contains a `wdth` axis, you don't want every instance's wdth coordinate value to be set to Condensed (`75`), you would set it to Normal (`100`).
+GF only allows weight and italic particles for the instances in the `fvar` table of a variable font. If a font contains additional axes, they must not be mentioned in the instance names and the coordinates for each instance must be set to reasonable default. For example if your font contains a `wdth` axis, you don't want every instance's `wdth` coordinate value to be set to Condensed (`75`), you would set it to Normal (`100`).
 
 Google Fonts only allows the following named instances:
 
@@ -483,7 +483,7 @@ A `STAT` table is defined by these fields:
 
 `gftools gen-stat` and the Builder allows you to have external config files which simplify the set up of the STAT table. Read the chapter about [how to build a font](build.md) to have a better understanding of this file.
 
-In 2021, only one desktop application use the STAT table: Microsoft Office for Mac (version 16.46, February 2021 update). However, InDesign, Sketch and other pro type setting applications provide sliders for users to select individual axis locations.
+In 2021, only one desktop application use the STAT table: Microsoft Office for Mac (version 16.46, February 2021 update). However, InDesign, Sketch, and other professional typesetting applications provide sliders for users to select individual axis locations.
 
 According to the Google Fonts specification, every instance that is allowed to be a part of the `fvar` table should also be listed in the STAT table with equivalent values and names. However, the STAT table can also include axis values with string labels which can add extra style variants. This means that fonts with a `wght` axis range of 1 to 1000 can have named instances in the STAT table for the 1 (Hairline) and 1000 (ExtraBlack) positions for desktop applications that could make use of this table information.
 
@@ -505,7 +505,7 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 ### Family does not exist on Google Fonts
 
--   RFonts should be unhinted (default setting of [gftools builder](https://googlefonts.github.io/gf-guide/build.html#gftools-builder)).
+-   Fonts should be unhinted (default setting of [gftools builder](https://googlefonts.github.io/gf-guide/build.html#gftools-builder)).
 -   Run fonts through `gftools fix-nonhinting` if you don’t use `gftools builder`.
 
 ### Family already exists on Google Fonts and has manual TT hinting
@@ -535,7 +535,7 @@ The manual hinting of variable font is a complicated process and the auto-hintin
 
 -   [Font Table Viewer](https://glyphsapp.com/tools/fonttableviewer)
 -   [DTL OT Master](https://www.fontmaster.nl/otmaster.html)
--   [ttx](https://fonttools.readthedocs.io/en/latest/ttx.html), a practical command line tool of [fonttools](https://github.com/fonttools/fonttools)
+-   [ttx](https://fonttools.readthedocs.io/en/latest/ttx.html), a practical command line tool of [FontTools](https://github.com/fonttools/fonttools)
 
 **Some font testing web pages allow you to view a selection of tables:**
 

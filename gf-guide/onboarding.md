@@ -133,7 +133,7 @@ To make sure users are correctly served the upgraded font:
 
 All of these requirements are to be navigated with the [statistics](https://fonts.google.com/fonts/stats?key=WebFonts2010) of use in mind; exceptions to compatibility requirements can be made for fonts that are not heavily served.
 
-If an upgrade is too much of a change, we can consider onboarding it as *a new font with a different family name.* We then decide if the old versions remain visible on the catalogue, and/or whether to make the old version unavailable for new users. This allows websites to be served with the old version that they already use, while new requests would get the upgraded versions.
+If an upgrade is too much of a change, we can consider onboarding it as *a new font with a different family name.* We then decide if the old versions remain visible on the catalog, and/or whether to make the old version unavailable for new users. This allows websites to be served with the old version that they already use, while new requests would get the upgraded versions.
 
 Since all the fonts available are licensed with permission to redistribute subject to the license terms, if you want to have more control over the version of the font you use you can self-host the font using a variety of third-party projects.
 

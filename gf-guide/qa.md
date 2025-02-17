@@ -54,7 +54,7 @@ Fontbakery is our primary quality assurance testing tool to make it easier to ch
 
 #### Log levels results
 
-The check results are categorised according to levels of relevance, ranging from ERROR to SKIP. The icons are helpers to identify the severity. Be calm! There-could be many of them. Get comfortable with receiving them and embrace them as a way to improve your font.
+The check results are categorized according to levels of relevance, ranging from ERROR to SKIP. The icons are helpers to identify the severity. Be calm! There-could be many of them. Get comfortable with receiving them and embrace them as a way to improve your font.
 
 - 💔 **ERROR** Is a problem with the program itself, not the fonts. For example a bug or a check that requires an internet connection. 
 If you get an Error, please give it a quick look to see which case it is. If it’s not an internet connection issue, please help us to improve the tool by reporting it in the [issue tracker of the Fontbakery repository](github.com/googlefonts/fontbakery/issues).

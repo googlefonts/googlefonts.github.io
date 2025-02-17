@@ -13,7 +13,7 @@ Using Git is essential to track the history of a project.
 <br><br>
 <b>GitHub</b>
 <br>
-Is one of the various web providers of Git services (Bitbucket, GitLab, to name a few). Google Fonts requires the use of GitHub since it includes various other features to help administer the workflow of a project that further simplify working and collaborating via Git.
+Is one of the various web providers of Git services (others include Bitbucket and GitLab, to name a few). Google Fonts requires the use of GitHub since it includes various other features to help administer the workflow of a project that further simplify working and collaborating via Git.
 
 </div>
 

@@ -74,7 +74,7 @@ The information you provide in your font project’s `README.md` is key for GF a
 
 -   **A mention to the license**
     <br>
-    It could be the same string required for the nameID 13, that you provide as "License description" from the Font Info pane in your source file:
+    It could be the same string required for the `name` ID 13, that you provide as "License description" from the Font Info pane in your source file:
     > *This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is in this repo* <span style="border-bottom:0.05em solid">*OFL.txt*</span> *and is also available with a FAQ at:* *<https://scripts.sil.org/OFL>.*
 
 ## Concrete examples

@@ -39,7 +39,7 @@ This page will give users some important requirements about the <mark class="gre
 
 -   **There is no Reserved Font Name (RFN) mention.**
 
-    The RFN is an optional element of the Open Font License that forbids a user to fork and modify an open-source font under the *same name*. Only the original version of the font can bear this name. This apply to the design as well as the metadata or the glyphset.
+    The RFN is an optional element of the Open Font License that forbids a user to fork and modify an open-source font under the *same name*. Only the original version of the font can bear this name. This apply to the design as well as the metadata or the glyph set.
 
     Since GF distributes a *subsetted* version of the font through the API, the font is not legally considered the same as the original one. Therefore GF wouldn’t be able to publish the font without renaming it. Certainly as a designer you would rather see GF use your preferred font name, rather than be forced to name it something else for the exact same design.
 
@@ -67,7 +67,7 @@ Firstname Last-name
 Company Name 
 ```
 
-Once the authorisation has been given, the font names should be added to [Fontbakery's exception list](https://github.com/googlefonts/fontbakery/blob/main/Lib/fontbakery/data/googlefonts/reserved_font_name_exceptions.txt) to avoid to fail the font.
+Once the authorization has been given, the font names should be added to [Fontbakery's exception list](https://github.com/googlefonts/fontbakery/blob/main/Lib/fontbakery/data/googlefonts/reserved_font_name_exceptions.txt) to avoid to fail the font.
 
 -   **All info between the font, the source, and the license should match.**
 -   **The OFL.txt file must use the same template as the rest of the Google Fonts Library.**
