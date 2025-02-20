@@ -98,7 +98,7 @@ These font info parameters are not optional and should follow the same scheme wi
 -   **The license string must be the same for all GF font projects:**
 
     ``` code
-    This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL
+    This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org
     ```
 
     If you are using the Glyphs font editor, add this string to a “License” entry in the “Font” tab of the Font Info panel.
@@ -106,7 +106,7 @@ These font info parameters are not optional and should follow the same scheme wi
 -   **The license URL must be the same for all GF fonts projects:**
 
     ``` code
-    https://scripts.sil.org/OFL
+    https://openfontlicense.org
     ```
 
     If you are using the Glyphs font editor, add this string to a “License URL” entry in the “Font” tab of the Font Info panel.
