@@ -90,7 +90,6 @@ Reproduce this step as many time you need tags.
 <br>
 
 
-Here you can find a demo, showing more features.
 
 
 
