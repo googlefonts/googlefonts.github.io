@@ -28,16 +28,15 @@ A new step has therefore been added to the font onboarding process, managed by t
 
 ## How tags are working?
 
-The user can now select from the **filters** a selection of tags, categorized `into` different *main groups*.
-<mark class=green>II Commissioned</mark>:
+The user can now select a selection of tags from the filters, categorized into different main groups:
 
-- Feeling
-- Appearance
-- Calligraphy
-- Serif
-- Sans Serif
-- Technology
-- Seasonal
+- **Feeling** 
+- **Appearance**
+- **Calligraphy**
+- **Serif**
+- **Sans Serif**
+- **Technology**
+- **Seasonal**
 
 The selected categories and the number of fonts matching these criteria are then displayed at the top of the selection.
 
@@ -48,27 +47,50 @@ The selected categories and the number of fonts matching these criteria are then
 </figure>
 <br>
 
-The subcategories are the following ones:
-
-- **Feeling**
-- **Appearance**
-- **Calligraphy**
-- **Serif**
-- **Sans Serif**
-- **Technology**
-- **Seasonal**
-
 
 
 ## The process
 
-- On ajoute les tags lorsqu'il s'agit d'une nouvelle font
-- On ouvre l'outil, avec une image de la fonte à côté pour avoir le design en tête
-- On choisit catégorie par catégorie, puis on applique une valeur pour chaque tag choisi
-- On télécharge le .csv
-- on ouvre un PR et on copie colle les nouvelles valeurs, rangée dans l'ordre alphabétique
-- On précise dans le PR les tags ajouté + on peut ajouter une image de la fonte pour que le reviewer puisse avoir en tête le design
 
+The addition of tags to a new font is done when the PR for the font is ready on the Google Fonts repo, just like for designer profiles. Typically, between 2 and 6 tags are assigned per font, aiming to diversify the types of tags (each font would have at least one or two filters based on appearance or feeling, and a tag related to serifs, for example). After selecting a tag, such as `Cute`, a percentage must then be defined to sort the fonts relative to one another. *GF Tagger* displays a list of fonts associated with each tag, allowing for comparison and proper assignment of values.
+
+**How to define tags for a new font?**
+
+
+1. Open [GF Tagger](https://google.github.io/fonts/tags.html), and keep the font beside to have the design in mind.
+2. In `Add Family`, add the name of the new font family your are tagging.
+3. Pick a tag you need to define the font, and add a value next to the font family name. By adding it, you will see it appears as a line, in `History`.
+Reproduce this step as many time you need tags. 
+<br>
+<figure>
+<img src="./images/onboarder-workflow/tags-process1.png" style="width:2568px" alt="Screenshot of an issue from google/fonts issue tracker." />
+<figcaption aria-hidden="true">GF Tagger (March 2025)</figcaption>
+</figure>
+<br>
+4. Once you have all the tags you need, do `Export CSV` and copy past the lines corresponding to your font.
+<br>
+<figure>
+<img src="./images/onboarder-workflow/tags-process2.png" style="width:2568px" alt="Screenshot of an issue from google/fonts issue tracker." />
+<figcaption aria-hidden="true">CSV file (families.csv)</figcaption>
+</figure>
+<br>
+5. In GF Tagger, clic on `Open PR`, and copy paste your values on the CSV file. Be careful to add them in an alphabetical order.
+<br>
+<figure>
+<img src="./images/onboarder-workflow/tags-process3.png" style="width:2568px" alt="Screenshot of an issue from google/fonts issue tracker." />
+<figcaption aria-hidden="true">CSV file to update</figcaption>
+</figure>
+<br>
+6. Commit your changes and open a pull request, with some additionnal informations useful for the reviewer (font PR corresponding, image of the font, etc.)
+<br>
+<figure>
+<img src="./images/onboarder-workflow/tags-process4.png" style="width:2568px" alt="Screenshot of an issue from google/fonts issue tracker." />
+<figcaption aria-hidden="true">PR to open on the GF repo</figcaption>
+</figure>
+<br>
+
+
+Here you can find a demo, showing more features.
 
 
 
