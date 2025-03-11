@@ -252,7 +252,6 @@ Vertical metrics for CJK fonts are based on the font emBox values. This ensures 
 
 The following metrics are a distinct split from the standard approach of setting vertical metrics for CJK fonts, which normally set the `sTypo` metrics to align with the emBox values. This is also how the [OT spec recommendations](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#stypoascender) are written. However, following [investigation into performance of CJK fonts](https://github.com/google/fonts/issues/8911) under the primary scenarios that Google Fonts prioritizes, the following new metrics have been established:
 
-
 | Attrib                                    | Value                                    | Example using Iansui       |
 |-------------------------------------------|------------------------------------------|----------------------------|
 | OS/2.sTypoAscender                        | ideoEmBoxTop \+ (10–20% \* emBox)/2      | 940                        |
@@ -266,7 +265,7 @@ The following metrics are a distinct split from the standard approach of setting
 | OS/2.fsSelection bit 7 (Use_Typo_Metrics) | Set / enabled                            | ✅                         |
 | BASE table                                | Required                                 |                            |
 
-For `sTypoAscender` and `sTypoDescender`, a range of values is acceptable, per the designer's perspective and specific needs. Generally ~18% tends to produce good results, but depending on the project, wider or narrower metrics may be required. 
+In the case of `sTypoAscender` and `sTypoDescender`, a range of values is acceptable, per the designer's perspective and specific needs. Generally ~18% tends to produce good results, but depending on the project, wider or narrower metrics may be required. 
 
 **Note** If the font is being built with `makeotf`, be aware that Adobe\'s default settings expect `sTypoMetrics` to match the emBox. Unless glyph heights are manually set for all glyphs, the `vmtx` values will not be set properly. As such, it may be easier to set vertical metrics as usual in the source, and adjust in post-production.
 
@@ -280,21 +279,21 @@ In addition to the above metrics, CJK fonts are now required to include a `BASE`
 For a standard square emBox font (1000 units wide for a 1000 UPM font), such as Iansui, the following BASE table was added to the `.fea` file. 
 ```
 table BASE {
- HorizAxis.BaseTagList 					icfb  icft  ideo  romn;
- HorizAxis.BaseScriptList 	DFLT  ideo   -83  843   -120  0,
-                            hani  ideo   -67  827   -120  0,
-                            kana  ideo   -67  827   -120  0,
-                            latn  romn   -67  827   -120  0,
-                            cyrl  romn   -67  827   -120  0,
-                            grek  romn   -67  827   -120  0;
+  HorizAxis.BaseTagList                 icfb  icft  ideo   romn;
+  HorizAxis.BaseScriptList  DFLT  ideo   -67   827  -120      0,
+                            hani  ideo   -67   827  -120      0,
+                            kana  ideo   -67   827  -120      0,
+                            latn  romn   -67   827  -120      0,
+                            cyrl  romn   -67   827  -120      0,
+                            grek  romn   -67   827  -120      0,
 
-  VertAxis.BaseTagList					icfb  icft  ideo  romn;
-  VertAxis.BaseScriptList	DFLT  ideo  37    963   0     120,
-                            hani  ideo  53    947   0     120,
-                            kana  ideo  53    947   0     120,
-                            latn  romn  53    947   0     120,
-                            cyrl  romn  53    947   0     120,
-                            grek  romn  53    947   0     120;
+  VertAxis.BaseTagList                  icfb  icft  ideo  romn;
+  VertAxis.BaseScriptList   DFLT  ideo    53   947     0   120,
+                            hani  ideo    53   947     0   120,
+                            kana  ideo    53   947     0   120,
+                            latn  romn    53   947     0   120,
+                            cyrl  romn    53   947     0   120,
+                            grek  romn    53   947     0   120,
 } BASE;
 ```
 The BASE tags above are:
