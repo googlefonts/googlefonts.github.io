@@ -252,7 +252,7 @@ Vertical metrics for CJK fonts are based on the font emBox values. This ensures 
 
 The following metrics are a distinct split from the standard approach of setting vertical metrics for CJK fonts, which normally set the `sTypo` metrics to align with the emBox values. This is also how the [OT spec recommendations](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#stypoascender) are written. However, following [investigation into performance of CJK fonts](https://github.com/google/fonts/issues/8911) under the primary scenarios that Google Fonts prioritizes, the following new metrics have been established:
 
-| Attrib                                    | Value                                    | Example using Iansui       |
+| Attrib                                    | Value                                    | Example using [Iansui](https://github.com/ButTaiwan/iansui)       |
 |-------------------------------------------|------------------------------------------|----------------------------|
 | OS/2.sTypoAscender                        | ideoEmBoxTop \+ (10–20% \* emBox)/2      | 940                        |
 | OS/2.sTypoDescender                       | ideoEmBoxBottom \- (10–20% \* emBox)/2   | -180                       |
@@ -300,12 +300,12 @@ The BASE tags above are:
 
 - `icfb`: Ideographic character face bottom edge (in HorizAxis) / left edge (in VertAxis)
 - `icft`: Ideographic character face top edge (in HorizAxis) / right edge (in VertAxis)
-- `ideo`: ideographic em-box bottom edge (in HorizAxis) / left edge (in VertAxis)
+- `ideo`: ideographic emBox bottom edge (in HorizAxis) / left edge (in VertAxis)
 - `romn`: Latin baseline. Usually 0 in HorizAxis, inverse of ideo in VertAxis
 
 Some additional tags which may be useful can be reviewed on the [official documentation](https://learn.microsoft.com/en-us/typography/opentype/spec/baselinetags). 
 
-In the case of a design that is narrower than the usual square emBox, it is recommended to also include `idtp` to mark the top edge (opposite of `ideo`). For example, WD XL Lubrifont, which has an advance width of 765, has the following base table:
+In the case of a design that is narrower than the usual square emBox, it is recommended to also include `idtp` to mark the top edge of the emBox (opposite of `ideo`). For example, [WD XL Lubrifont](https://github.com/NightFurySL2001/WD-XL-font), which has an advance width of 765, has the following base table:
 
 ```
 table BASE {
