@@ -11,7 +11,6 @@
 <p>
 A new step has therefore been added to the font onboarding process, managed by the font onboarders, involving the use of a specially designed tool (*GF Tagger*, written by Marc Foley ✌️) to facilitate the addition of tags.
 
-
 </div>
 
 <div class="context-reading">
