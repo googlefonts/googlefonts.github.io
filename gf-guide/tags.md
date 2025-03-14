@@ -83,6 +83,21 @@ After selecting a tag (e.g., `Cute`), a percentage value must be assigned to ran
 <br>
 
 
+## Collection-Wide Tagging
 
 
+Onboarders may be asked to add and populate a new tag category. This involves reviewing each family to determine if it fits the new category and creating a tag if applicable.
 
+**How to Create and Populate a New Category?**
+
+1. In `Add Tag`, enter the new tag name, which should include both the category and subcategory, starting with a `/` (e.g., `/Expressive/Funky`), then click the `Add` button.
+
+2. Click `Edit > Insert Placeholder Tags`. A placeholder tag will appear for each family in the collection.
+
+3. Review each placeholder tag and either delete irrelevant ones or assign a percentage score.
+
+To speed up the process, use the up/down arrow keys to navigate between tags or press "!/@" to blur inactive tags (Zen mode). Press "Esc" to exit Zen mode.
+
+4. Once tagging is complete, remove placeholder tags by clicking `Edit > Remove Placeholder Tags`.
+
+5. Open a PR as described in Step 4 of the previous section.
