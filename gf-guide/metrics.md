@@ -330,40 +330,41 @@ table BASE {
 Note the `idtp` value in the VertAxis is present to indicate the narrower width. 
 
 ### vhea and vmtx tables
+In order for the `vmtx` and `vhea` tables to be generated via `fontTools`, vert-specific metrics must be set in the source prior to build. 
 
-Most build systems (such as `makeotf` & `glyphsLib`) expect the `sTypoMetrics` to align with the font em-box, and use the `sTypoMetrics` to determine values in the `vmtx` and `vhea` tables. 
+In `Glyphs`, these are:
+- `vheaVertAscender`
+- `vheaVertDescender`
+- `vheaLineGap`
 
-For the `vmtx` table, the `advanceHeight` value should align with the em-box height (usually the font UPM). If it doesn't, then the values (both `advanceHeight` and `topSideBearing`) in the table will need to be corrected using a post-production script. 
+If building from `.ufo`, these are:
+- `openTypeVheaVertTypoAscender`
+- `openTypeVheaVertDescender`
+- `openTypeVheaLineGap`
 
-The `vhea` table also includes several fields that are determined based on the data from the `vmtx` table. However, once the `vmtx` table is corrected, these values can be recalculated by `fontTools`.
+`vheaVertAscender` is the distance from the center of the glyph to the left edge (generally 500 for a `1000UPM` font).
+`vheaVertDescender` is the distance from the center of the glyph to the right edge (generally -500 for a `1000UPM` font).
+`vheaLineGap` is the horizontal space between lines of text.
 
-Here is an example script that will address these issues:
+Most build systems (such as `makeotf` & `glyphsLib`) expect the `sTypoMetrics` to align with the font em-box, and use the `sTypoMetrics` to determine values in the `vmtx` and `vhea` tables. So the advancedHeight set in the `vmtx` table will be larger than the intended em-box value, leading to undesireable space when the font is set vertically. 
+
+**Solutions**  
+It is possible to add in an override method into the `.fea` file which can correct for this issue. For example:
 
 ```
-import glob
-from pathlib import Path
-from fontTools.ttLib import TTFont
-from fontTools.ttLib.tables._v_h_e_a import table__v_h_e_a
-
-for file in Path("fonts").glob("**/*.ttf"):
-	font = TTFont(file)
-
-	#Calculate the adjustment to the sTypo metrics versus the em-box. (this assumes sTypo is set based on em-box)
-	glyphHeight = font["OS/2"].sTypoAscender - font["OS/2"].sTypoDescender 
-	newHeight = font["head"].unitsPerEm
-	adjustment = int((glyphHeight - newHeight) / 2)
-
-	#if this adjustment value is 0, as in to say the sTypo values are set aligned with the em-box, then no adjustments will occur. 
-	
-	for i in font["vmtx"].metrics:
-		# want to make sure that if a glyph height is set differently that we don't modify it. Only the ones that match sTypo.
-		if font["vmtx"].metrics[i][0] == glyphHeight:
-			font["vmtx"].metrics[i] = (newHeight,font["vmtx"].metrics[i][1]-adjustment)
-	
-	table__v_h_e_a.recalc(font["vhea"],font)
-	font.save(file)
+table vmtx {
+    VertOriginY uni30FC.vert 830;
+    VertAdvanceY uni30FC.vert 900;
+} vmtx;
 ```
 
+However, this approach (unless scripted), is cumbersome for a font on the scale of CJK. 
+
+Two alternate options using a post-production script:
+
+1) Insert the incorrect `sTypo` data into the font, then correct the font metrics afterwards. The downside of this approach is that the source is not accurate to the output of the font. 
+
+2) Use the correct `sTypo` data in the font, then correct the `vhea` and `vmtx` tables in post-production to follow the em-box data. While this approach is not ideal either, once the toolchains catch up, the post-production script can be removed and the output will remain the same. 
 
 
 ------------------------------------------------------------------------
