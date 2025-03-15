@@ -252,22 +252,23 @@ Vertical metrics for CJK fonts are based on the font emBox values. This ensures 
 
 The following metrics are a distinct split from the standard approach of setting vertical metrics for CJK fonts, which normally set the `sTypo` metrics to align with the emBox values. This is also how the [OT spec recommendations](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#stypoascender) are written. However, following [investigation into performance of CJK fonts](https://github.com/google/fonts/issues/8911) under the primary scenarios that Google Fonts prioritizes, the following new metrics have been established:
 
-| Attrib                                    | Value                                    | Example using [Iansui](https://github.com/ButTaiwan/iansui)       |
+| Attrib                                    | Value                                    | Example using a 1000 UPM font such as [Iansui](https://github.com/ButTaiwan/iansui)       |
 |-------------------------------------------|------------------------------------------|----------------------------|
 | OS/2.sTypoAscender                        | ideoEmBoxTop \+ (10–20% \* emBox)/2      | 940                        |
 | OS/2.sTypoDescender                       | ideoEmBoxBottom \- (10–20% \* emBox)/2   | -180                       |
 | OS/2.sTypoLineGap                         | 0                                        | 0                          |
-| hhea.ascender                             | OS/2.sTypeAscender                       | 940                        |
+| hhea.ascender                             | OS/2.sTypoAscender                       | 940                        |
 | hhea.descender                            | OS/2.sTypoDescender                      | -180                       |
 | hhea.lineGap                              | 0                                        | 0                          |
 | OS/2.usWinAscent                          | Font bbox yMax                           | 1066                       |
 | OS/2.usWinDescent                         | Font bbox yMin                           | 273                        |
 | OS/2.fsSelection bit 7 (Use_Typo_Metrics) | Set / enabled                            | ✅                         |
 | BASE table                                | Required                                 |                            |
+| vhea / vmtx tables                        | Required                                 |                            |
 
 In the case of `sTypoAscender` and `sTypoDescender`, a range of values is acceptable, per the designer's perspective and specific needs. Generally ~18% tends to produce good results, but depending on the project, wider or narrower metrics may be required. 
 
-**Note** If the font is being built with `makeotf`, be aware that Adobe\'s default settings expect `sTypoMetrics` to match the emBox. Unless glyph heights are manually set for all glyphs, the `vmtx` values will not be set properly. As such, it may be easier to set vertical metrics as usual in the source, and adjust in post-production.
+Unfortunately, many typesetting environments still expect that the `sTypoMetrics` will align with the emBox. As such, the `BASE` table and `vhea` / `vmtx` tables are now required. See sections below. 
 
 These metrics were established based on investigations into improving metrics performance of CJK fonts across the library. Please see the following issue for more information:
 -   <https://github.com/google/fonts/issues/8911>
@@ -276,7 +277,7 @@ These metrics were established based on investigations into improving metrics pe
 
 In addition to the above metrics, CJK fonts are now required to include a `BASE` table (https://learn.microsoft.com/en-us/typography/opentype/spec/baselinetags) to ensure broad compatibility. 
 
-For a standard square emBox font (1000 units wide for a 1000 UPM font), such as Iansui, the following BASE table was added to the `.fea` file. 
+For a standard square emBox font (1000 units / 1000UPM), such as [Iansui](https://github.com/ButTaiwan/iansui), the following BASE table is added to the `.fea` file. 
 ```
 table BASE {
   HorizAxis.BaseTagList                 icfb  icft  ideo   romn;
@@ -305,7 +306,7 @@ The BASE tags above are:
 
 Some additional tags which may be useful can be reviewed on the [official documentation](https://learn.microsoft.com/en-us/typography/opentype/spec/baselinetags). 
 
-In the case of a design that is narrower than the usual square emBox, it is recommended to also include `idtp` to mark the top edge of the emBox (opposite of `ideo`). For example, [WD XL Lubrifont](https://github.com/NightFurySL2001/WD-XL-font), which has an advance width of 765, has the following base table:
+In the case of a design that varies from the standard square emBox, you must also include `idtp` to mark the 'top' / 'right' edge of the emBox (opposite of `ideo`). For example, [WD XL Lubrifont](https://github.com/NightFurySL2001/WD-XL-font), which has a rectangular emBox with an advance width of 765, has the following base table:
 
 ```
 table BASE {
@@ -326,7 +327,44 @@ table BASE {
                             grek  romn    49   716     0   765     0;
 } BASE;
 ```
-Note the `idtp` value in the VertAxis is present to indicaate the narrower width. 
+Note the `idtp` value in the VertAxis is present to indicate the narrower width. 
+
+### vhea and vmtx tables
+
+Most build systems (such as `makeotf` & `glyphsLib`) expect the `sTypoMetrics` to align with the font emBox, and use the `sTypoMetrics` to determine values in the `vmtx` and `vhea` tables. 
+
+For the `vmtx` table, the `advanceHeight` value should align with the emBox height (usually the font UPM). If it doesn't, then the values (both `advanceHeight` and `topSideBearing`) in the table will need to be corrected using a post-production script. 
+
+The `vhea` table also includes several fields that are determined based on the data from the `vmtx` table. However, once the `vmtx` table is corrected, these values can be recalculated by `fontTools`.
+
+Here is an example script that will address these issues:
+
+```
+import glob
+from pathlib import Path
+from fontTools.ttLib import TTFont
+from fontTools.ttLib.tables._v_h_e_a import table__v_h_e_a
+
+for file in Path("fonts").glob("**/*.ttf"):
+	font = TTFont(file)
+
+	#Calculate the adjustment to the sTypo metrics versus the emBox. (this assumes sTypo is set based on emBox)
+	glyphHeight = font["OS/2"].sTypoAscender - font["OS/2"].sTypoDescender 
+	newHeight = font["head"].unitsPerEm
+	adjustment = int((glyphHeight - newHeight) / 2)
+
+	#if this adjustment value is 0, as in to say the sTypo values are set aligned with the emBox, then no adjustments will occur. 
+	
+	for i in font["vmtx"].metrics:
+		# want to make sure that if a glyph height is set differently that we don't modify it. Only the ones that match sTypo.
+		if font["vmtx"].metrics[i][0] == glyphHeight:
+			font["vmtx"].metrics[i] = (newHeight,font["vmtx"].metrics[i][1]-adjustment)
+	
+	table__v_h_e_a.recalc(font["vhea"],font)
+	font.save(file)
+```
+
+
 
 ------------------------------------------------------------------------
 
