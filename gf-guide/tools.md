@@ -33,11 +33,11 @@ Font developers are expected to understand the following:
 
 See the useful links section at the bottom of this page to bring you up to speed.
 
-**Note:** If you are not familiar with the concepts listed above, and do not wish to learn about them, we recommend you to try following the [github repository requirements](https://googlefonts.github.io/gf-guide/upstream.html) as closely as possible, as well as the [font file requirements](https://googlefonts.github.io/gf-guide/requirements.html), and a GF Team Member will help you with the tooling and building process of your font.
+**Note:** If you are not familiar with the concepts listed above, and do not wish to learn about them, we recommend you to try following the [GitHub repository requirements](https://googlefonts.github.io/gf-guide/upstream.html) as closely as possible, as well as the [font file requirements](https://googlefonts.github.io/gf-guide/requirements.html), and a GF Team Member will help you with the tooling and building process of your font.
 
 ## Setting up a working environment
 
-Most of these tools are Python-based, but you may need to install some other tools before. *Each OS's specificities* *can’t be detailed here; therefore, it is your responsibility to search the Internet to find the right way to install and use these tools according to your own environment.*
+Most of these tools are Python-based, but you may need to install some other tools before. *Specifics for every OS* *can’t be detailed here; therefore, it is your responsibility to search the Internet to find the right way to install and use these tools according to your own environment.*
 
 To work with Google Fonts, you would need to install at least:
 
@@ -65,7 +65,7 @@ Homebrew is a package manager for Unix utilities that you can use in macOS so yo
 
 [Install Homebrew](https://brew.sh/#install), and don’t forget to run the two commands at the end of the installation, which will set your PATH environment variable.
 
-On macOS, you will need the Apple developer tools: either Xcode, which is optional and requires a lot of space (\~20Gb) or the light version of it, the [Command Line Tools](https://developer.apple.com/download/all/). These tools are needed to install the GCC (GNU Compiler Collection). Homebrew is supposed to install the XCode Command Line Tools directly, so at this stage, check if it successfully installed them by running: `xcode-select -p`.
+On macOS, you will need the Apple developer tools: either XCode, which is optional and requires a lot of space (\~20Gb) or the light version of it, the [Command Line Tools](https://developer.apple.com/download/all/). These tools are needed to install the GCC (GNU Compiler Collection). Homebrew is supposed to install the XCode Command Line Tools directly, so at this stage, check if it successfully installed them by running: `xcode-select -p`.
 
 ### Python 3
 
@@ -122,7 +122,7 @@ It is strongly suggested to create and work under a [Python Virtual Environment]
 
 You can install as many virtual environments as you want; in each project directory or your user home directory if you intend to use the same virtual environment for all your projects. Command-line tools often have settings to run a command automatically when a new window opens; you could activate one virtual environment this way and avoid having to type it every time.
 
-It is *not* recommended to install virtual environments in clouds, drives, dropbox, etc.
+It is *not* recommended to install virtual environments in clouds, drives, Dropbox, etc.
 
 ## Installing the required tools
 
@@ -144,7 +144,7 @@ To install Fontbakery, run the command:
 pip3 install -U fontbakery'[googlefonts]'
 ```
 
-Run `fontbakery --help` to get an overview of the usage of the fontbakery tool.
+Run `fontbakery --help` to get an overview of the usage of the Fontbakery tool.
 
 ### Google Fonts Tools (gftools)
 
@@ -189,7 +189,7 @@ Run the command `gftools qa --help` to overview all the scripts and [their usage
 
 ## Recap of your .bash_profile
 
-The `bash profile` (or `z profile` according to your shell script), is loaded before your Command Line Interface (CLI) loads your shell environment and contains all the startup configuration and preferences for your CLI. In Mac OSX, the file is hidden (starts with a `.`) in your home directory. You can display the hidden files (`shift`+`fn`+`cmd`+`.`) and open the file in a code editor. Otherwise, check on the Internet how to find and edit it.
+The `bash profile` (or `z profile` according to your shell script), is loaded before your Command Line Interface (CLI) loads your shell environment and contains all the startup configuration and preferences for your CLI. In macOS, the file is hidden (starts with a `.`) in your home directory. You can display the hidden files (`shift`+`fn`+`cmd`+`.`) and open the file in a code editor. Otherwise, check on the Internet how to find and edit it.
 
 Once you have set up `git` and all the other tools, your bash profile (or z profile according to your shell script) should look like this:
 
@@ -221,7 +221,7 @@ export BSTACK_ACCESS_KEY="key"
 
 ## Useful Links
 
--   [Bash shell comands cheat-sheet](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
+-   [Bash shell commands cheat-sheet](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
 -   [What is a virtual environment](https://realpython.com/python-virtual-environments-a-primer/)
 -   [What is a CLI](https://www.w3schools.com/whatis/whatis_cli.asp)
 -   [What is shell](https://www.tutorialspoint.com/unix/unix-what-is-shell.htm)
@@ -232,7 +232,7 @@ export BSTACK_ACCESS_KEY="key"
 
 <div class="next-reading">
     Further reading:<br>
-    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on GitHub</a>
   <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
 </div>

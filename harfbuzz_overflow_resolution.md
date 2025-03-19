@@ -1,6 +1,6 @@
 # Introduction
 
-Several tables in the opentype format are formed internally by a graph of subtables. Parent node's
+Several tables in the OpenType format are formed internally by a graph of subtables. Parent node's
 reference their children through the use of positive offsets, which are typically 16 bits wide.
 Since offsets are always positive this forms a directed acyclic graph. For storage in the font file
 the graph must be given a topological ordering and then the subtables packed in serial according to
@@ -9,7 +9,7 @@ subtable and a child is more then 65,535 bytes then it's not possible for the of
 edge.
 
 For many fonts with complex layout rules (such as Arabic) it's not unusual for the tables containing
-layout rules ([GSUB/GPOS](https://docs.microsoft.com/en-us/typography/opentype/spec/gsub)) to be
+layout rules ([GSUB/GPOS](https://docs.microsoft.com/en-us/typography/OpenType/spec/gsub)) to be
 larger than 65kb. As a result these types of fonts are susceptible to offset overflows when
 serializing to the binary font format.
 
@@ -28,22 +28,22 @@ In general there isn't a simple solution to produce an optimal topological order
 Finding an ordering which doesn't overflow is a NP hard problem. Existing solutions use heuristics
 which attempt a combination of the above strategies to attempt to find a non-overflowing configuration.
    
-The harfbuzz subsetting library
+The HarfBuzz subsetting library
 [includes a repacking algorithm](https://github.com/harfbuzz/harfbuzz/blob/main/src/hb-repacker.hh)
 which is used to resolve offset overflows that are present in the subsetted tables it produces. This
-document provides a deep dive into how the harfbuzz repacking algorithm works.
+document provides a deep dive into how the HarfBuzz repacking algorithm works.
 
 Other implementations exist, such as in
 [fontTools](https://github.com/fonttools/fonttools/blob/7af43123d49c188fcef4e540fa94796b3b44e858/Lib/fontTools/ttLib/tables/otBase.py#L72), however these are not covered in this document.
 
 # Foundations
 
-There's four key pieces to the harfbuzz approach:
+There's four key pieces to the HarfBuzz approach:
 
-*  Subtable Graph: a table's internal structure is abstraced out into a lightweight graph
+*  Subtable Graph: a table's internal structure is abstracted out into a lightweight graph
    representation where each subtable is a node and each offset forms an edge. The nodes only need
    to know how many bytes the corresponding subtable occupies. This lightweight representation can
-   be easily modified to test new ordering's and strategies as the repacking algorithm iterates.
+   be easily modified to test new orderings and strategies as the repacking algorithm iterates.
 
 *  [Topological sorting algorithm](https://en.wikipedia.org/wiki/Topological_sorting): an algorithm
    which given a graph gives a linear sorting of the nodes such that all offsets will be positive.
@@ -54,7 +54,7 @@ There's four key pieces to the harfbuzz approach:
    to calculate the final position of each subtable and then check if any offsets to it will
    overflow.
    
-*  Offset resolution strategies: given a particular occurence of an overflow these strategies
+*  Offset resolution strategies: given a particular occurrence of an overflow these strategies
    modify the graph to attempt to resolve the overflow.
    
 # High Level Algorithm
@@ -73,7 +73,7 @@ The actual code for this processing loop can be found [here](https://github.com/
 
 # Topological Sorting Algorithms
 
-The harfbuzz repacker uses two different algorithms for topological sorting:
+The HarfBuzz repacker uses two different algorithms for topological sorting:
 *  [Kahn's Algorithm](https://en.wikipedia.org/wiki/Topological_sorting#Kahn's_algorithm)
 *  Sorting by shortest distance
 
@@ -106,7 +106,7 @@ to be as fast as possible. There's a few things that are done to speed up subseq
 operations:
 
 *  The number of incoming edges to each node is cached. This is required by the Kahn's algorithm
-   portion of boths sorts. Where possible when the graph is modified we manually update the cached
+   portion of both sorts. Where possible when the graph is modified we manually update the cached
    edge counts of affected nodes.
    
 *  The distance to each node is cached. Where possible when the graph is modified we manually update
@@ -115,17 +115,17 @@ operations:
 Caching these values allows the repacker to avoid recalculating them for the full graph on each
 iteration.
 
-The other important factor to speed is a fast priority queue which is a core datastructure to
+The other important factor to speed is a fast priority queue which is a core data structure to
 the topological sorting algorithm. Currently a basic heap based queue is used. Heap based queue's
 don't support fast priority decreases, but that can be worked around by just adding redundant entries
-to the priority queue and filtering the older ones out when poppping off entries. This is based
+to the priority queue and filtering the older ones out when popping off entries. This is based
 on the recommendations in
 [a study of the practical performance of priority queues in Dijkstra's algorithm](https://www3.cs.stonybrook.edu/~rezaul/papers/TR-07-54.pdf)
 
 # Offset Resolution Strategies
 
 For each overflow in each iteration the algorithm will attempt to apply offset overflow resolution
-strategies to eliminate the overflow. The type of strategy applied is dependant on the characteristics
+strategies to eliminate the overflow. The type of strategy applied is dependent on the characteristics
 of the overflowing link:
 
 *  If the overflowing offset is pointing to a subtable with more than one incoming edge: duplicate
@@ -137,14 +137,14 @@ of the overflowing link:
    
 # Test Cases
 
-The harfbuzz repacker has tests defined using generic graphs: https://github.com/harfbuzz/harfbuzz/blob/main/src/test-repacker.cc
+The HarfBuzz repacker has tests defined using generic graphs: https://github.com/harfbuzz/harfbuzz/blob/main/src/test-repacker.cc
    
-# Future Improvments
+# Future Improvements
 
 The above resolution strategies are not sufficient to resolve all overflows. For example consider
 the case where a single subtable is 65k and the graph structure requires an offset to point over it.
 
-The current harfbuzz implementation is suitable for the vast majority of subsetting related overflows.
+The current HarfBuzz implementation is suitable for the vast majority of subsetting related overflows.
 Subsetting related overflows are typically easy to solve since all subsets are derived from a font
 that was originally overflow free. A more general purpose version of the algorithm suitable for font
 creation purposes will likely need some additional offset resolution strategies:

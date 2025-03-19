@@ -41,10 +41,10 @@ Bear in mind:
 
 ### Usage in external office apps
 
-*MS Word, Powerpoint, LibreOffice Writer, LibreOffice Impress…*
+*MS Word, PowerPoint, LibreOffice Writer, LibreOffice Impress…*
 
 - Fonts are grouped in menu by family name and all instances appear in weight order.
-    - If VF, at least 1 instance appears in dropdown menu (font origin), but since late 2021 version of MS Office (Mac OS 11.\*) all of them should appear.
+    - If VF, at least 1 instance appears in drop-down menu (font origin), but since late 2021 version of MS Office (Mac OS 11.\*) all of them should appear.
 - Style linking works properly (bold and italic button or regular, italic button for all other cuts).
     - In MS Word, when style linking is absent or not working properly, you will see a fake bold or fake italic, watch carefully for that
 - Fonts are displayed correctly.
@@ -58,8 +58,8 @@ Bear in mind:
 
 InDesign, Illustrator, Photoshop (Sketch, Figma, Affinity, CorelDRAW…)
 
-- All styles appear in weight order in dropdown menu.
-- Instances are accessible through dropdown menu.
+- All styles appear in weight order in drop-down menu.
+- Instances are accessible through drop-down menu.
 - Instances are displayed correctly.
 - Sliders work properly (try from an upright instance and then with an italic instance).
 - No unexpected behavior during variation.
@@ -76,7 +76,7 @@ InDesign, Illustrator, Photoshop (Sketch, Figma, Affinity, CorelDRAW…)
 
 *TextEdit / Pages…*
 
-- Font appear in font dropdown menu, all styles appear in style dropdown menu; default style is first on the list and then in weight order.
+- Fonts appear in font drop-down menu, all styles appear in style drop-down menu; default style is first on the list and then in weight order.
 - Style linking works properly (cmd+b, cmd+i).
 - Fonts are displayed correctly.
 
@@ -97,10 +97,10 @@ Double-click on each style and check if:
 
 ### Usage in Office apps
 
-*MS Word, Powerpoint, LibreOffice Writer, LibreOffice Impress…*
+*MS Word, PowerPoint, LibreOffice Writer, LibreOffice Impress…*
 
-- Upright fonts appear in alphabetical order in dropdown menu (except for Bold and Italic instances that are activated only the B and I buttons).
-  -  If VF, at least 1 instance appears in dropdown menu (font origin), but since 2022 version of MS Office (Windows 11) all of them should appear.
+- Upright fonts appear in alphabetical order in drop-down menu (except for Bold and Italic instances that are activated only the B and I buttons).
+  -  If VF, at least one instance appears in drop-down menu (the font origin), although, since the 2022 version of MS Office (Windows 11), all of the instances should appear.
 - Style linking works properly (bold and italic button or regular, italic button for all other cuts).
   -  In MS Word, when style linking is absent or not working properly, you will see a fake bold or fake italic, watch carefully for that
 - Fonts are displayed correctly.
@@ -118,20 +118,20 @@ Double-click on each style and check if:
 
 - Fonts are display correctly.
 - Fonts have kerning.
-- Linespacing looks okay (not too lose, not too tight).
+- Line-spacing looks okay (not too lose, not too tight).
 - No clipping.
 
 ### Variable Fonts
 
-- [Samsa](https://lorp.github.io/samsa/src/samsa-gui.html) displays all instances with propers names in the STAT sidebar section. Regular and other default names are Elided (in parenthesis), and there is style linking between Regular and Bold (400 → 700), and between Roman and Italic (0 → 1).
-- AVAR table display the expected result (linear or not).
-- FVAR table has the instances you want with proper name and proper coordinates (only weight instances with coordinates every 100 for GF).
+- [Samsa](https://lorp.github.io/samsa/src/samsa-gui.html) displays all instances with proper names in the STAT sidebar section. Regular and other default names are Elided (in parenthesis), and there is style linking between Regular and Bold (400 → 700), and between Roman and Italic (0 → 1).
+- `avar` table displays the expected result (linear or not).
+- `fvar` table has the instances you want with proper names and proper coordinates (only weight instances with coordinates every 100 for GF).
 - Variation works properly (also glyphs with special layers).
 - Kerning too.
 
 ## Compatibility
 
-If your fonts of different formats have the same naming, you will have to test formats one by one, restarting the computer between each to avoid cache issues and conflicts. If they have a different naming system, eg. `NameCFF.otf`, `NameTT.ttf`, `NameVF.ttf`, test their compatibility when installed on the same machine.
+If your fonts of different formats have the same naming, you will have to test formats one by one, restarting the computer between each to avoid cache issues and conflicts. If they have a different naming system, e/g., `NameCFF.otf`, `NameTT.ttf`, `NameVF.ttf`, test their compatibility when installed on the same machine.
 
 - No conflicts during installation.
 - All fonts are displayed in the fonts folder with their respective naming.
@@ -175,7 +175,7 @@ What to check:
       <li><a href="https://www.axis-praxis.org/specimens/__DEFAULT__" target="_blank">Axis-Praxis</a> 
       and <a href="https://www.axis-praxis.org/samsa/" target="_blank">Samsa</a></li>
       <li><a href="http://www.rosaliewagner.com/font-testing/index.php" target="_blank">Impallari Testing Pages</a></li>
-      <li><a href="https://dinamodarkroom.com/gauntlet/" target="_blank">Dinamo Font Gautlet</a></li>
+      <li><a href="https://dinamodarkroom.com/gauntlet/" target="_blank">Dinamo Font Gauntlet</a></li>
       <li><a href="https://typetools.typenetwork.com" target="_blank">Type Network’s Tools</a></li>
       <li><a href="https://idiotproofed.com/" target="_blank">Idiot Proof</a></li>
       <li><a href="https://www.fontspecimen.com/" target="_blank">Monotype’s interactive font specimen</a></li>

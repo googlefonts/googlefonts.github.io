@@ -32,12 +32,12 @@
 ### Why does this prioritization framework exist?
 
 This prioritization framework exists to created shared understanding of how Google Fonts allocates finite resource - and in proportion to the amount of work available, very limited resources - for onboarding new and updated font projects to Google Fonts.
-This shared understanding is primarily between the people active on this public repo, and the internal Google Fonts team members who are rarely or never seen on the public Github repos.
+This shared understanding is primarily between the people active on this public repo, and the internal Google Fonts team members who are rarely or never seen on the public GitHub repos.
 
 It is refreshed during a quarterly planning process, led by a Google Fonts team [Program Manager](https://www.google.com/search?q=Program+Manager).
 The quarterly plan surfaces all known deadline-driven onboarding work as early as possible to the Google Fonts team, so that it is factored into internal quarterly resource allocation planning.
 
-Concretely: The Program Manager will directly track, communicate and coordinate as needed, including maintaining an internal spreadsheet of priority P1 and P2 projects that is shared with the wider Google Fonts team at the beginning of each quarter, based on Github Issues tags.
+Concretely: The Program Manager will directly track, communicate and coordinate as needed, including maintaining an internal spreadsheet of priority P1 and P2 projects that is shared with the wider Google Fonts team at the beginning of each quarter, based on GitHub Issues tags.
 If the list requires updates during the current quarter, the Program Manager will communicate changes to the Google Fonts internal leadership team within one week of the plan update.
 
 ### What distinguishes P1 vs P2?
@@ -49,5 +49,5 @@ Realistically this rarely happens, but in such cases, we communicate the priorit
 ### What does “high usage” mean?
 
 It depends.
-An issue can move from P3 to P2 to P1 based on the severity of the problem, combined with the popularity in context (eg, popularity in CSS API, or Android Downloadable Fonts, within Workspace editors, etc).
+An issue can move from P3 to P2 to P1 based on the severity of the problem, combined with the popularity in context (e.g., popularity in CSS API, or Android Downloadable Fonts, within Workspace editors, etc).
 This is a judgment call when evaluating the issue: If the answer isn't obvious, whoever is assigning priorities should consult with their manager.

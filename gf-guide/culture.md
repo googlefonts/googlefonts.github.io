@@ -2,7 +2,7 @@
 
 <a href="./index"><button class="button button-i">&larr; GF Guide Index</button></a>
 
-# Libre Font Culture
+# Libre Font culture
 {:.no_toc}
 
 <div class="callout">
@@ -11,7 +11,7 @@
 <br><br>
 Since fonts are software, Google Fonts works at the intersection of the two communities and, for many reasons, has embraced the Libre software culture to promote the creation, development, and distribution of typefaces. This culture encourages participation and learning while facilitating sharing and collaboration through the openness of the work and a more flexible licensing schema.
 <br><br>
-It is helpful for type designers to understand the typical operation of a software project. This page aims to help type designers involved in starting or participating in Libre Font projects to know how libre software projects operate.
+It is helpful for type designers to understand the typical operation of a software project. This page aims to help type designers involved in starting or participating in Libre Font projects to know how Libre software projects operate.
 
 </div>
 
@@ -22,7 +22,7 @@ It is helpful for type designers to understand the typical operation of a softwa
 
 ## Four Freedoms
 
-As part of the Open Source initiative, Libre Fonts Movement is rooted in the four freedoms of Free Software. The concept of *freedom* refers to more than just open availability and monetary cost but is at the core of the movement. This is the reason we use the term *libre*, rather than “free,” to avoid the unwanted associations with “free” as in “gratis.”
+As part of the Open Source initiative, Libre Fonts movement is rooted in the four freedoms of Free Software. The concept of *freedom* refers to more than just open availability and monetary cost but is at the core of the movement. This is the reason we use the term *libre*, rather than “free,” to avoid the unwanted associations with “free” as in “gratis.”
 
 The Four Freedoms are intended to establish and preserve the aim of giving the users the power over tools such as software or, in this case, fonts, and they also help contextualize some of the requirements.
 
@@ -91,7 +91,7 @@ These are some links where you could find more detailed information about this C
     Further reading:<br>
     <mark class="blue">start</mark> <a href="./tools" style="font-weight:bold">Tools, dependencies and knowledge required</a>
   <br>
-    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on GitHub</a>
   <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
 </div>

@@ -156,7 +156,7 @@ Using a `yaml` file with more detailed instructions is a preferred option to hav
 gftools builder config.yaml
 ```
 
-### Config file for simple font
+### Config file for a simple font
 
 For Example: [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono/blob/master/sources/config.yaml)
 
@@ -184,7 +184,7 @@ buildOTF: false
 
 → Note that the `ital` axis shouldn’t be in the source files if the Roman is separated for from the Italic. Although, the axis order is here to describe the entire design space of the family, so the `ital` should be mentioned to properly set up the style linking between the two files, as well as a complete `STAT` table.
 
-### Config file for complex font
+### Config file for a complex font
 
 For example: [Texturina](https://github.com/Omnibus-Type/Texturina/blob/master/sources/config.yaml), [Montserrat](https://github.com/googlefonts/Montserrat/blob/master/sources/config.yml), [Roboto Serif](https://github.com/googlefonts/roboto-serif/blob/main/sources/config.yml).
 

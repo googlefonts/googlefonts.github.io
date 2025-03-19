@@ -38,7 +38,7 @@ dynamic = ["version"]
 name = "mypackage"
 description = "Some clever fonts thing"
 
-# Packages should have a README.md, which should be used for the pypi
+# Packages should have a README.md, which should be used for the PyPI
 # long description.
 readme = "README.md"
 
@@ -76,15 +76,15 @@ To automate the release with GitHub actions, use an action configuration
 called `.github/workflows/publish-release.yml`. (Copy the [example action](https://github.com/googlefonts/gftools/blob/main/.github/workflows/publish-release.yml) from `gftools` and modify as appropriate.) In addition to the basic build/test, this action will:
 
 * Create a new GitHub release every time a tag is pushed
-* Deploy the new release to Pypi.
+* Deploy the new release to PyPI.
 
-In order to make this work, you will need to enable "Trusted publishing" for the repository in [Pypi](https://pypi.org/manage/projects/). This enables the release automation to publish the package.
+In order to make this work, you will need to enable "Trusted publishing" for the repository in [PyPI](https://pypi.org/manage/projects/). This enables the release automation to publish the package.
 
 ### Make a release
 
 Use `git tag -a` to make a new annotated tag, or `git tag -s` for a GPG-signed annotated tag, if you prefer.
 
-Name the new tag with with a leading 'v' followed by three MAJOR.MINOR.PATCH digits, using [semantic versioning](https://semver.org/). Look at the existing tags for examples.
+Name the new tag with a leading 'v' followed by three MAJOR.MINOR.PATCH digits, using [semantic versioning](https://semver.org/). Look at the existing tags for examples.
 
 In the tag message write some short release notes describing the changes since the previous tag.
 

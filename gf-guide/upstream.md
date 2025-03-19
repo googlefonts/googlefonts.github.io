@@ -7,14 +7,14 @@
 
 <div class="callout">
 
-🐰 Font projects must be hosted on GitHub (or another VCS) and their repositories must be public. Google Fonts accepts private repositories while a project is still in progress, but they must be public once completed.
+🐰 Font projects must be hosted on GitHub (or another VCS), and the repositories must be public. Google Fonts accepts private repositories while a project is still in progress, but they must be public once completed.
 <br><br>
 This guide will help users understand what and why the requested directories, files, and documents are needed in a Google Fonts project.
 <br><br>
 Before starting this reading, make sure that:
 <ul>
     <li><a href="./culture">You have become familiar with Libre Font culture</a></li>
-    <li><a href="./hosting">You already know how to use Github</a></li>
+    <li><a href="./hosting">You already know how to use GitHub</a></li>
     <li><a href="./tools">You have installed all the required tools</a></li>
 </ul>
 
@@ -22,7 +22,7 @@ Before starting this reading, make sure that:
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on GitHub</a>
 </div>
 
 ## Table of contents
@@ -32,11 +32,11 @@ Before starting this reading, make sure that:
 
 ## The Google Fonts Project Template repo
 
-If you read this before you have created your project Github repo, you would like to use the [Google Fonts project template](https://github.com/googlefonts/googlefonts-project-template) repo to start with everything set up for you.
+If you read this before you have created your project GitHub repo, you would like to use the [Google Fonts project template](https://github.com/googlefonts/googlefonts-project-template) repo to start with everything set up for you.
 
-The template is based on [Raphael Bastide’s UFR](https://github.com/unified-font-repository/Unified-Font-Repository) and was adapted to meet Google Fonts' needs. Its purpose is to help type designers set up their repo of open-source fonts — especially if they want to publish them on Google Fonts. A unified structure throughout all the repositories helps GF automate the fonts' quality assurance and onboarding processes in the catalog.
+The template is based on [Raphael Bastide’s UFR](https://github.com/unified-font-repository/Unified-Font-Repository) and was adapted to meet Google Fonts' needs. Its purpose is to help type designers set up their repo of open-source fonts — especially if they want to publish them on Google Fonts. A unified structure throughout all the repositories helps GF automate the fonts' quality assurance and onboarding processes into the catalog.
 
-But there is more: the project template incorporates [GitHub Actions](https://docs.github.com/en/actions) to provide users with many automation.
+But there is more: the project template incorporates [GitHub Actions](https://docs.github.com/en/actions) to provide users with many automations.
 
 -   The actions will build the font files from the source, use Fontbakery for the Quality Analysis test of the fonts, generate HTML proof sheets, publish them with the test results to HTML files, and generate an *artifact* containing all the files that it has built.
 -   You can download the latest artifact (produced fonts) by visiting the Actions tab of your repository.
@@ -76,7 +76,7 @@ Be aware that the scripts and automated actions provided by the Google Fonts pro
 └── .gitignore
 ```
 
-Each file or dir has the following purpose:
+These files and directories have the following purposes:
 
 *An example is provided for each file (from this Guide or other repositories). Please use these templates and modify what you need.*
 
@@ -94,11 +94,11 @@ Each file or dir has the following purpose:
 
 -   **[README.md](readmefile.md)**
     <br>
-    Contains information about the font family and instructions on how to build the family. You should take particular care of this file, and you must add at least one image and a short description of your font project.
+    Contains information about the font family and instructions on how to build the family. You should take particular care with this file, and you also must add at least one image and a short description of your font project.
 
 -   **[documentation](https://github.com/googlefonts/Unified-Font-Repository/tree/main/documentation)**
     <br>
-    A directory that contains expanded information about the Family. Optionally, you can store in it your PDF specimen, screenshots or process definition, and the pictures you use for the README.md. This dir may also include:
+    A directory that contains expanded information about the Family. Optionally, you can store in it your PDF specimen, screenshots or process definition, and the pictures you use for the README.md. This directory may also include:
     -  An `article` subdirectory with the images to be included in the [About](./article.md) section.
     -  A `social-assets` subdirectory with the promotional assets for the social media platforms.
     -  Please read more about these images in the [Promoting your font](promotion.md) section of this Guide.
@@ -108,7 +108,7 @@ Each file or dir has the following purpose:
     <br>
     A directory containing the design source files and scripts used to build the fonts. Sources must not be kept in another directory.
 
-    There must be either a `config.yaml` or `build.sh` file that allows the fonts to be built in one command. For more context, you can read about the [Scalable font production](https://googlefonts.github.io/gf-guide/production.html#scalable-font-production) principle.
+    There must be either a `config.yaml` or a `build.sh` file that allows the fonts to be built in one command. For more context, you can read about the [Scalable font production](https://googlefonts.github.io/gf-guide/production.html#scalable-font-production) principle.
 
     -   [config.yaml](https://github.com/googlefonts/Unified-Font-Repository/blob/main/sources/config.yaml)
         <br>
@@ -124,21 +124,21 @@ Each file or dir has the following purpose:
 
 -   **[requirements.txt](https://github.com/googlefonts/Unified-Font-Repository/blob/main/requirements.txt)**
     <br>
-    File listing the Python packages (and their version if necessary) used for a project so that any user can easily install the necessary packages and replicate the production process.
+    File listing the Python packages (and their version if necessary) used for a project, so that any user can easily install the necessary packages and replicate the production process.
 
 -   **[.gitignore](https://github.com/googlefonts/Unified-Font-Repository/blob/main/.gitignore)**
     <br>
-    File specifying untracked files that Git should ignore. Since [the tools](tools.md) should be installed under a virtual environment dedicated to this repository, the `.gitignore` should include the env (or the name of your virtual environment you are using, for example, `venv` or `env`). Indeed, it is better not to push your virtual environment to Github and keep it local. You can add `.DS_Store` to the list of untracked files to keep collaboration between Mac and Windows users. If you use `.glyphs` sources, `*(Autosave)*` is also a relevant addition.
+    File specifying untracked files that Git should ignore. Since [the tools](tools.md) should be installed under a virtual environment dedicated to this repository, the `.gitignore` should include the env (or the name of your virtual environment you are using, for example, `venv` or `env`). Indeed, it is better not to push your virtual environment to GitHub and keep it local. You can add `.DS_Store` to the list of untracked files to keep collaboration between Mac and Windows users. If you use `.glyphs` sources, `*(Autosave)*` is also a relevant addition.
 
 -   **Releases should be tagged**; [Montserrat does this well](https://github.com/JulietaUla/Montserrat/releases).
 
-The files and directories listed above are mandatory. However, we don't mind if you include further docs and dirs, but they should have a clear purpose (such as a `scripts` directory, for example).
+The files and directories listed above are mandatory. However, we don't mind if you include additional files and directories, but they should have a clear purpose (such as a `scripts` directory, for example).
 
 ------------------------------------------------------------------------
 
 ## Useful links
 
--   [Github release explained](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+-   [GitHub releases explained](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 -   [How to use requirements.txt files](https://pip.pypa.io/en/stable/user_guide/#requirements-files)
 
 <div class="next-reading">

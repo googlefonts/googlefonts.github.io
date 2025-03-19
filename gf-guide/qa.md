@@ -38,13 +38,13 @@ For the rest of this chapter, it would be better if you have basic knowledge of:
 
 ## Tools 
 
-### Checking the font tabes
+### Checking the font tables
 
 Beyond the visible outlines of a typeface, each font binary is composed of an ensemble of [required tables](https://learn.microsoft.com/en-us/typography/opentype/spec/otff#font-tables). These tables store fundamental metadata for the font to transmit operating information to the different environments (OS, applications, browsers) and, therefore, for it to function properly in all of them.
 
 Hence, it is important to inspect them to verify all the information is as expected. You can make use of the following 
 
--   [TTX](https://fonttools.readthedocs.io/en/latest/ttx.html) open xml file, a human readible version of the font tables;
+-   [TTX](https://fonttools.readthedocs.io/en/latest/ttx.html) open XML file, a human-readable version of the font tables;
 -   [Font table viewer](https://glyphsapp.com/tools/fonttableviewer) to turn the UFOs into FontTools objects;
 -   [DTL OT Master](https://www.fontmaster.nl/otmaster.html) to also edit them.
 
@@ -54,7 +54,7 @@ Fontbakery is our primary quality assurance testing tool to make it easier to ch
 
 #### Log levels results
 
-The check results are categorised according to levels of relevance, ranging from ERROR to SKIP. The icons are helpers to identify the severity. Be calm! There-could be many of them. Get comfortable with receiving them and embrace them as a way to improve your font.
+The check results are categorized according to levels of relevance, ranging from ERROR to SKIP. The icons are helpers to identify the severity. Be calm! There-could be many of them. Get comfortable with receiving them and embrace them as a way to improve your font.
 
 - 💔 **ERROR** Is a problem with the program itself, not the fonts. For example a bug or a check that requires an internet connection. 
 If you get an Error, please give it a quick look to see which case it is. If it’s not an internet connection issue, please help us to improve the tool by reporting it in the [issue tracker of the Fontbakery repository](github.com/googlefonts/fontbakery/issues).
@@ -84,7 +84,7 @@ Main profiles are:
 
     - **Google Fonts Profile** is currently the largest one, which includes also the checks from the Open Type, Universal, and other vendor-specific checks (such Adobe). 
 
-    To onboard fonts to Google Fonts they must pass the checks of this profile. Sometimes users consider a reported fail inapropriate, but remember that a FAIL for the googlefonts profile may be only specific to Google Fonts API, not all environments.
+    To onboard fonts to Google Fonts they must pass the checks of this profile. Sometimes users consider a reported fail inappropriate, but remember that a FAIL for the googlefonts profile may be only specific to Google Fonts API, not all environments.
 
     The command to run this profiles is:
 
@@ -104,7 +104,7 @@ Some foundries created their own profile to have vendor-specific checks. This is
 
 ### Proofing with Diffenator2
 
-Diffenator2 is a tool allows you to generate html with real words to proof the font functioning, and also to compare two different versions of a font.
+Diffenator2 is a tool allows you to generate HTML with real words to proof the font functioning, and also to compare two different versions of a font.
 
 To see the available options run one of the following commands:
 

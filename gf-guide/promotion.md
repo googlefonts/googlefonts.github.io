@@ -68,7 +68,7 @@ Another possibility is to add a YouTube link.
 
 <br><br>
 
-## Social media especifications
+## Social media specifications
 
 Here are formatting guidelines for different social media platforms. These are guides; it is not necessary to create image formats for each platform (however, square versions are especially welcome for Instagram).
 Please visit Google Fonts profiles if you want some examples:
@@ -85,7 +85,7 @@ Please visit Google Fonts profiles if you want some examples:
 ### Post text					
 We write the social media post according to the font description in the repo's README file. Sometimes, we must reduce it to fit the social media specifications. If you prefer to provide us with one, please follow this guide:				
 - Describe the font, the design space, the language support, etc. 
-- Please provide us with your social media profile if you have some so we can tag you. Person tags can be provided in the README.md or a .txt file in documentation dir.
+- Please provide us with your social media profile if you have some so we can tag you. Person tags can be provided in the README.md or a .txt file in documentation directory.
 
 #### Text length limits
 - Twitter: 500 characters max.

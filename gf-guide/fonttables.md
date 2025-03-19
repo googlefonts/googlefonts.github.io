@@ -96,7 +96,7 @@
 -   `sbix` Standard bitmap graphics
 -   `SVG `The SVG (Scalable Vector Graphics) table
 
-## Other opentype tables
+## Other OpenType tables
 
 -   `DSIG` Digital signature
 -   `hdmx` Horizontal device metrics

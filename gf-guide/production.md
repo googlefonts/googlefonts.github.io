@@ -9,7 +9,7 @@
 
 🐰 <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> (GF) designates in fact two things. First, it is a <b>directory</b> of fonts, which can be downloaded and used locally on your machine. Second, it is also an <b>API</b> that delivers a web service: this means a website can request fonts, and Google Fonts delivers them to the website. In that second case, the fonts are hosted by Google Fonts and not by the website’s own server. 
 <br><br>
-This section will help users to understand the implications of publishing fonts on the Google Fonts platform, and will review the basic font production considerings and requirements that are mandatory for any Font to be included in the Catalog.
+This section will help users to understand the implications of publishing fonts on the Google Fonts platform, and will review the basic font production considerations and requirements that are mandatory for any Font to be included in the Catalog.
 
 </div>
 
@@ -65,7 +65,7 @@ Fonts to be onboarded to Google Fonts are expected to abide by the following req
 
 <div class="next-reading">
     Further reading:<br>
-    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on GitHub</a>
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
     <br>

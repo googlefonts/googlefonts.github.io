@@ -27,7 +27,7 @@ As a general rule, <b>GF requires users to open an issue before submitting anyth
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on Github</a>
+    <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on GitHub</a>
     <br>
     <mark class="blue">start</mark> <a href="./required-knowledge" style="font-weight:bold">Knowledge, tools and dependencies required</a>
     <br>
@@ -45,7 +45,7 @@ As a general rule, <b>GF requires users to open an issue before submitting anyth
 
 -   Users should have [gftools](https://github.com/googlefonts/gftools) installed in a virtual environment (see [Google Fonts Tools](tools.md)).
 -   Users should have their [Git client configured](hosting.md) with an SSH key or HTTPS protocol. HTTPS is easier, but if you want to use our [Packaging tool](package.md) to make a pull request, you will need an SSH key.
--   Users should have read the [Contributor License Agreement](https://cla.developers.google.com/about) and should have signed it by clicking the “Manage your agreements” button at the bottom of the CLA page.
+-   Users should have read the [Contributor License Agreement](https://cla.developers.google.com/about) (CLA) and should have signed it by clicking the “Manage your agreements” button at the bottom of the CLA page.
 -   Users should make sure to set git to record commits with their name, and the email they signed the [Google CLA](https://opensource.google/documentation/reference/cla) with, otherwise, your pull requests will trigger a CLA-checker warning.
 
     These metadata can be set with your git GUI tool, otherwise manually with a CLI:
@@ -78,9 +78,9 @@ Now all remotes are connected with your local repo and they are all in sync.
 
 ## Making a pull request to GF
 
-You’ve completed the initial set-up to make a pull request to the `google/fonts` repo, and the font you want to submit follows all the requirements in terms of both its hosting (in a public git repository) and engineering (passes fontbakery checks). Now you want to submit it to Google Fonts.
+You’ve completed the initial set-up to make a pull request to the `google/fonts` repo, and the font you want to submit follows all the requirements in terms of both its hosting (in a public git repository) and engineering (passes Fontbakery checks). Now you want to submit it to Google Fonts.
 
-The `google/fonts` repository is a **big** repository. It contains more than a thousand fonts. A lot of people have forked it, and a lot of people are contributing to it. So we don’t commit and push directly into the main branch — and this is also mandatory for your own fork and clone. Instead, we create a new branch, and make a pull request from this branch. The rule is that one Pull Request will relate to one changed directory changed. (eg. one PR will deal with updates to `ofl/castoro`, but a separate PR must be made for updates to `ofl/lexend`.)
+The `google/fonts` repository is a **big** repository. It contains more than a thousand fonts. A lot of people have forked it, and a lot of people are contributing to it. So we don’t commit and push directly into the main branch — and this is also mandatory for your own fork and clone. Instead, we create a new branch, and make a pull request from this branch. The rule is that one Pull Request will relate to one changed directory changed. (e.g., one PR will deal with updates to `ofl/castoro`, but a separate PR must be made for updates to `ofl/lexend`.)
 
 They are several workflows possible, but we recommend this one when it comes to making manual pull requests to `google/fonts`:
 

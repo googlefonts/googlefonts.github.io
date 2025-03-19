@@ -19,7 +19,7 @@ Don't forget to search the issue tracker (using keywords) to see if your issue h
 </ul>
 
 From time to time, Google Fonts provides financial and design assistance for projects.
-If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your Github profile page.)
+If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your GitHub profile page.)
 
 </div>
 
@@ -69,7 +69,7 @@ If you would like to include a new font family in the Google Fonts collection, w
     
 -   **The project must be developed on GitHub or similar platform.**
     <br>
-    A VCS open to public participation and actively maintained. Please read our [Github guide](hosting.md).
+    A VCS open to public participation and actively maintained. Please read our [GitHub guide](hosting.md).
     
 -   **The source files are available** in your preferred font editor format.
     <br>
@@ -133,7 +133,7 @@ To make sure users are correctly served the upgraded font:
 
 All of these requirements are to be navigated with the [statistics](https://fonts.google.com/fonts/stats?key=WebFonts2010) of use in mind; exceptions to compatibility requirements can be made for fonts that are not heavily served.
 
-If an upgrade is too much of a change, we can consider onboarding it as *a new font with a different family name.* We then decide if the old versions remain visible on the catalogue, and/or whether to make the old version unavailable for new users. This allows websites to be served with the old version that they already use, while new requests would get the upgraded versions.
+If an upgrade is too much of a change, we can consider onboarding it as *a new font with a different family name.* We then decide if the old versions remain visible on the catalog, and/or whether to make the old version unavailable for new users. This allows websites to be served with the old version that they already use, while new requests would get the upgraded versions.
 
 Since all the fonts available are licensed with permission to redistribute subject to the license terms, if you want to have more control over the version of the font you use you can self-host the font using a variety of third-party projects.
 

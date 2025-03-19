@@ -53,8 +53,8 @@ You can copy/paste the following line (don’t forget to adjust the URL):
     <span style="border-bottom:0.05em solid">Example:</span>
 
     > This font was upgraded in July 2021 to expand its language coverage. It now supports Greek and Cyrillic.
--   **We only accept** **`.en_us`** **extension**, but you can definitely add a translation to the description when the font primarily targets an audience reading a non-latin script.
--   If the primary script of your font is not Latin, we strongly recommend you also provide a translation of the text using the actual main script. **This localised text must be in the same html snippet as the English text.**
+-   **We only accept** **`.en_us`** **extension**, but you can definitely add a translation to the description when the font primarily targets an audience reading a non-Latin script.
+-   If the primary script of your font is not Latin, we strongly recommend you also provide a translation of the text using the actual main script. **This localized text must be in the same HTML snippet as the English text.**
 
 ### Format text with the font family
 
@@ -86,16 +86,16 @@ The recommended width is at least 1000px. You don't need any particular proporti
 
 ## Examples
 
-### Without localised text
+### Without localized text
 
 See [Space+Grotesk#about](https://fonts.google.com/specimen/Space+Grotesk?query=Space+Grotesk#about) provided by [DESCRIPTION.en_us.html](https://github.com/floriankarsten/space-grotesk/blob/master/DESCRIPTION.en_us.html) as an example: it gives plenty of links (mini-website, original authors, referenced font published in GF), and follows all requirements.
 
 
-### With localised text
+### With localized text
 
 See [Zen+Antique#about](https://fonts.google.com/specimen/Zen+Antique#about) as an example, provided by this file [DESCRIPTION.en_us.html](https://github.com/google/fonts/blob/main/ofl/zenantique/DESCRIPTION.en_us.html).
 
-**Html snippet**
+**HTML snippet**
 
 ``` code
 <p>Zen Antique features two kinds of Antique Japanese with Kanji.
