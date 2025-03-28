@@ -64,7 +64,8 @@ Allowed formats and file size limits for images:
 - `JPG` max size: 800 kb
 - `PNG` max size: 800 kb
 
-Another possibility is to add a YouTube link. 
+Another possibility is to add a `YouTube` link. 
+
 
 <br><br>
 
