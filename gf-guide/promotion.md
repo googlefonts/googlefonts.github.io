@@ -64,18 +64,7 @@ Allowed formats and file size limits for images:
 - `JPG` max size: 800 kb
 - `PNG` max size: 800 kb
 
-- For the `MP4` video inclusion, it must follow this format:
-
-   `<video autoplay muted src="your-video-name.mp4" type="video/mp4"></video>`
-
-   You can see this case as reference: <a href="https://github.com/google/fonts/blob/main/ofl/danfo/article/ARTICLE.en_us.html">Danfo</a>
-
-
-- Another possibility is to add a `YouTube` link. This option requires a cover image to display as preview, and needs to follow the following format:
-
-   `<a href="https://youtu.be/videoIDnumber>"><img src="your-cover-image.png" /></a>`
-
-   `<p><em><a href="https://youtu.be/videoIDnumber">Watch the introduction video on YouTube</a></em</p>`
+Another possibility is to add a `YouTube` link. 
 
 
 <br><br>
