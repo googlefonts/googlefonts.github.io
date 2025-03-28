@@ -38,5 +38,5 @@ This guide will give users all the detailed information related to Color fonts G
 
 * [Introduction to COLRv1 on the Chrome blog](https://developer.chrome.com/blog/colrv1-fonts/)
 * [Introduction to COLRv1 by Simon Cozens](https://simoncozens.github.io/colrv1-rocks/)
-* [Open source color fonts on GF](https://fonts.google.com/?coloronly=true)
+* [Open source color fonts on GF]([https://fonts.google.com/?coloronly=true](https://fonts.google.com/?categoryFilters=Technology:%2FTechnology%2FColor))
 * [Nano Emoji](https://github.com/googlefonts/nanoemoji) (compiles SVGs to color font)
