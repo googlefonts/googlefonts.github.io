@@ -133,5 +133,5 @@ Unless absolutely necessary, avoid over-complicated outline drawing. One example
     Further reading:<br>
     <mark class="yellow">learn</mark> <a href="./diacritics">Diacritics</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing">QA - Local testing</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing" style="font-weight:bold">QA - Local testing</a>
 </div>
