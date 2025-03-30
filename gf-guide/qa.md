@@ -25,7 +25,7 @@ For the rest of this chapter, it would be better if you have basic knowledge of:
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overall font files requirements</a>
     <br>
-    <mark class="yellow">learn</mark> <a href="./build" style="font-weight:bold">Build the fonts</a> 
+    <mark class="yellow">learn</mark> <a href="./build">Build the fonts</a> 
     <br>
 
 </div>
@@ -177,9 +177,9 @@ However, you could:
 
 <div class="next-reading">
     Further reading:<br>
-    <mark class="yellow">learn</mark> <a href="./testing" style="font-weight:bold">Local Testing</a>
+    <mark class="yellow">learn</mark> <a href="./testing">Local Testing</a>
     <br>
-    <mark class="yellow">learn</mark> <a href="./outlines" style="font-weight:bold">Outline quality</a>
+    <mark class="yellow">learn</mark> <a href="./outlines">Outline quality</a>
     <br>
-    <mark class="yellow">learn</mark> <a href="./diacritics" style="font-weight:bold">Diacritics requirements</a>
+    <mark class="yellow">learn</mark> <a href="./diacritics">Diacritics requirements</a>
 </div>

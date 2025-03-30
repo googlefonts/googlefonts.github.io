@@ -24,11 +24,8 @@ If you would like to discuss this, please mention that you would like someone to
 </div>
 
 <div class="context-reading">
-
-Background reading:  
-<mark class="blue">start→</mark> **[Libre Fonts Culture](./culture)**  
-<mark class="blue">nerd→</mark> **[Project Prioritization](./prioritization)**
-
+    Background reading:<br>
+    <mark class="blue">start→</mark> <a href="./culture" style="font-weight:bold">Libre Fonts Culture</a>
 </div>
 
 ## Table of contents
@@ -146,14 +143,12 @@ You can request the addition or modification of your name, bio, and image using 
 You can find more about the technical aspect of adding a profile to google/fonts repo by reading the [Designer Profile chapter](profile.md). -->
 
 
-<div class="next-reading">
-    
-Further reading:  
-<mark class="green">**must→**</mark> **[Overall font requirements](./requirements)**  
-<mark class="green">**must→**</mark> **[Static fonts specifics](./static)**  
-<mark class="green">**must→**</mark> **[Variable fonts specifics](./variable)**  
-<mark class="green">**must→**</mark> **[Vertical metrics](./metrics)**  
-<mark class="green">**must→**</mark> **[Production requirements](./production)**  
-<mark class="blue">nerd→</mark> [Project Prioritization](./prioritization)
-
+<div class="next-reading">    
+    Further reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overall font requirements </a><br> 
+    <mark class="green"><b>must&rarr;</b></mark><a href="./static" style="font-weight:bold">Static fonts specifics</a><br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a><br> 
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a><br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a><br>  
+    <mark class="blue">nerd→</mark> <a href="./prioritization">Project Prioritization</a>
 </div>
