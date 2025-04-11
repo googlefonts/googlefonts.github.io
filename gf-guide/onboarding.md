@@ -15,7 +15,7 @@ Don't forget to search the issue tracker (using keywords) to see if your issue h
     <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+New+Font%2C+%3E+Submission&template=1_add-font.md&title=Add+%5BFont+Name%5D">Submitting a new OFL Font</a></li>
     <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+Font+Upgrade&template=2_update-font.md&title=Update+%5BFont+Name%5D">Submitting an upgrade to an existing font</a></li>
     <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+Font+Bug&template=3_font-bug.md&title=">Reporting a problem with a font</a></li>
-    <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+API+%2F+Website+%2F+Platform%2C+II+Tools+%2F+workflow+%2F+repo&template=4_anything-else.md&title=">Anything else</a>/li>
+    <li><a href="https://github.com/google/fonts/issues/new?assignees=&labels=II+API+%2F+Website+%2F+Platform%2C+II+Tools+%2F+workflow+%2F+repo&template=4_anything-else.md&title=">Anything else</a></li>
 </ul>
 
 From time to time, Google Fonts provides financial and design assistance for projects.
