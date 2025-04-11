@@ -8,7 +8,7 @@
 <div class="callout">
 
 🐸  Any contributions to Google Fonts should be first submitted through the <a href="https://github.com/google/fonts/issues">Google Fonts issue tracker</a>.
-<br><br>
+
 Don't forget to search the issue tracker (using keywords) to see if your issue has already been raised before opening a new one. The following links can be used to create different kinds of issues:
 
 <ul>
@@ -19,16 +19,16 @@ Don't forget to search the issue tracker (using keywords) to see if your issue h
 </ul>
 
 From time to time, Google Fonts provides financial and design assistance for projects.
-If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your Github profile page.)
+If you would like to discuss this, please mention that you would like someone to contact you privately when filing an issue (and have contact details on your Github profile page).
 
 </div>
 
 <div class="context-reading">
-
-Background reading:  
-<mark class="blue">start→</mark> **[Libre Fonts Culture](./culture)**  
-<mark class="blue">nerd→</mark> **[Project Prioritization](./prioritization)**
-
+Background reading:<br />
+<ul>
+    <li><mark class="blue">start→</mark> [Libre Fonts Culture](./culture)</li>
+    <li><mark class="blue">nerd→</mark> [Project Prioritization](./prioritization)</li>
+</ul>
 </div>
 
 ## Table of contents
@@ -54,6 +54,8 @@ If you would like to include a new font family in the Google Fonts collection, w
 - **The Open Font License should not have any Reserved Font Names ([why](https://github.com/simoncozens/silson/issues/1)).**
   
 - **The copyright holders must all have filled in the** **[Google Contributor's License Agreement](https://cla.developers.google.com/)** **forms.**
+
+- **The font family name should not include any sensitive, sexual, stereotype, annoying or otherwise objectional words.**
  
 - **The font family name should not include any copyright holder's full names.**
 
