@@ -8,16 +8,17 @@
 <div class="callout">
 
 🐝 Since 2024, you can find different typographic categories on <a href="https://fonts.google.com/">Google Fonts</a> , making it easier to sort fonts and allowing users to refine their search.
-<p>
+
 A new step has therefore been added to the font onboarding process, managed by the font onboarders, involving the use of a specially designed tool (*GF Tagger*, written by Marc Foley ✌️) to facilitate the addition of tags.
 
 </div>
 
 <div class="context-reading">
-    Background reading:<br>
-    <mark class="purple">nerd&nbsp;</mark> <a href="./googlefonts">google/fonts repository explained</a>
-    <br>
-    <mark class="purple">nerd&nbsp;</mark> <a href="./making-pr">Making a PR to Google Fonts</a>
+Background reading:<br />
+<ul>
+    <li><mark class="blue">start→</mark> [Libre Fonts Culture](./culture)</li>
+    <li><mark class="blue">nerd→</mark> [Project Prioritization](./prioritization)</li>
+</ul>
 </div>
 
 ## Table of contents
