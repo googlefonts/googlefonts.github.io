@@ -27,14 +27,14 @@ You can request the addition or modification of your name, bio, and image using 
 
 ## How to write the biography
 
--   **Fill up the** **[AUTHORS.txt](authors.md)** **file carefully.**
+-   **Fill up the [AUTHORS.txt and CONTRIBUTORS.txt](authors.md) files carefully.**
     <br>
-    All the names present in [AUTHORS.txt](authors.md) will be credited in the font’s specimen page on Google Fonts. The names should be written with all necessary signs and marks to be considered correct.
+    All the names present in these 2 files will be used to author credits shown on the font’s Google Fonts catalog specimen page. The names should be written with all necessary signs and marks to be considered correct in these files.
 -   **There is one bio per designer and per foundry mentioned.**
--   **The text should be around 100 words** (so it should be more than 200 characters and less than 1000 characters).
+-   **The text should be around 100 words** (so it should be more than 200 characters and less than 1,000 characters).
 -   **The text must be written in the 3rd person.**
--   **We recommend one or two links directing to a webpage or social media.**
--   **Bio must be written in English and names translated in Latin script.**
+-   **We recommend one or two links directing to a homepage or social media account.**
+-   **Biography text must be written in English, and names translated to Latin script.**
 
 ### Designer section &rarr; Foundry information
 
@@ -49,7 +49,7 @@ The Foundry information is not mandatory for every project, but for those that l
 
 **Example:**
 
-> *Based in New York and London, Commercial Type is a joint venture between Paul Barnes and Christian Schwartz, who have collaborated since 2004 on various typeface projects, beginning with the award-winning Guardian Egyptian, through to typefaces for clients worldwide including Vanity Fair; Helsingin Sanomat; T, The New York Times Style Magazine; MoMA; Visa; and Chobani. Commercial Type has also published typefaces that have helped to define the look of the last 10 years, including Graphik, Druk, and Dala Floda.* [*commercialtype.com*](https://commercialtype.com)
+> *Based in New York and London, Commercial Type is a joint venture between Paul Barnes and Christian Schwartz, who have collaborated since 2004 on various typeface projects, beginning with the award-winning Guardian Egyptian, through to typefaces for clients worldwide including Vanity Fair; Helsingin Sanomat; T, The New York Times Style Magazine; MoMA; Visa; and Chobani. Commercial Type has also published typefaces that have helped to define the look of the last 10 years, including Graphik, Druk, and Dala Floda. [commercialtype.com](https://commercialtype.com)*
 
 ### Designer section &rarr; Designer information
 
@@ -62,7 +62,7 @@ The Foundry information is not mandatory for every project, but for those that l
 
 **Example:**
 
-> *Greg Gazdowicz (b. 1988) hails from the suburbs of Gaithersburg, Maryland. He studied graphic design at the Maryland Institute College of Art, then completed the Type@Cooper Extended program in 2014, months after joining the design staff of Commercial Type. Greg has designed custom typefaces for Mailchimp, La Republica, Google, and New York magazine, and has released several families through Commercial Type, including Robinson and the ambitious Terza family.* [*Twitter*](http://www.twitter.com/)
+> *Greg Gazdowicz (b. 1988) hails from the suburbs of Gaithersburg, Maryland. He studied graphic design at the Maryland Institute College of Art, then completed the Type@Cooper Extended program in 2014, months after joining the design staff of Commercial Type. Greg has designed custom typefaces for Mailchimp, La Republica, Google, and New York magazine, and has released several families through Commercial Type, including Robinson and the ambitious Terza family. [Twitter](http://www.twitter.com/)*
 
 ## Registering a designer profile
 
