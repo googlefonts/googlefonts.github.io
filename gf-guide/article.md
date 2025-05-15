@@ -80,8 +80,14 @@ There are two options to include videos in the Article file: `MP4` with a max fi
 - For the `MP4` video inclusion, it must follow this format:
 
    `<video autoplay muted src="your-video-name.mp4" type="video/mp4"></video>`
+   
+   or, if you need to loop it:
+   
+   `<video loop autoplay muted src="video1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>`
 
-   You can see this case as reference: <a href="https://github.com/google/fonts/blob/main/ofl/danfo/article/ARTICLE.en_us.html">Danfo</a>
+   You can see these cases as reference: <a href="https://github.com/google/fonts/blob/main/ofl/danfo/article/ARTICLE.en_us.html">Danfo</a>, <a href="https://github.com/google/fonts/blob/main/ofl/savate/article/ARTICLE.en_us.html">Savate</a> 
 
 
 - For the `YouTube` link, this option requires a cover image to display as preview, and must follow the following format:
