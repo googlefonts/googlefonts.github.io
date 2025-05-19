@@ -60,7 +60,7 @@ Feel free to choose the ratio you want!
 
 Allowed formats and file size limits for images:
 - `MP4` and `svg` max size: 1,75 MB
-- `GIF` max size: 800 kb (`MP4` videos are preferred; generally fewer bytes)
+- `GIF` max size: 800 kb (`MP4` videos are preferred; generally fewer bytes, generate from gif with `ffmpeg -i foo.gif foo.mp4`)
 - `JPG` max size: 800 kb
 - `PNG` max size: 800 kb
 
