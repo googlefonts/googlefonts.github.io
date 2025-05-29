@@ -248,26 +248,124 @@ If the font is already hosted on [fonts.google.com](http://fonts.google.com/), y
 
 ## CJK Vertical Metrics
 
-CJK vertical metrics are based on Source Han Sans and Noto CJK fonts.
+Vertical metrics for CJK fonts are based on the font em-box values. This ensures that the ideographs (or syllables) are properly positioned in the center of the em-box both in horizontal and vertical typesetting. 
 
-The following vertical metric values must be applied to all CJK fonts
+The following metrics are a distinct split from the standard approach of setting vertical metrics for CJK fonts, which normally set the `sTypo` metrics to align with the em-box values. This is also how the [OT spec recommendations](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#stypoascender) are written. However, following [investigation into performance of CJK fonts](https://github.com/google/fonts/issues/8911) under the primary scenarios that Google Fonts prioritizes, the following new metrics have been established:
 
-| Attrib                                    | Value                                    | Example using 1000upm font |
+| Attrib                                    | Value                                    | Example using a 1000 UPM font such as [Iansui](https://github.com/ButTaiwan/iansui)       |
 |-------------------------------------------|------------------------------------------|----------------------------|
-| OS/2.sTypoAscender                        | 0.88 \* font upm                         | 880                        |
-| OS/2.sTypoDescender                       | -0.12 \* font upm                        | -120                       |
+| OS/2.sTypoAscender                        | ideoEmBoxTop \+ (10–20% \* em-box)/2      | 940                        |
+| OS/2.sTypoDescender                       | ideoEmBoxBottom \- (10–20% \* em-box)/2   | -180                       |
 | OS/2.sTypoLineGap                         | 0                                        | 0                          |
-| hhea.ascender                             | Set to look comfortable (\~1.16 \* upm)  | 1160                       |
-| hhea.descender                            | Set to look comfortable (\~0.288 \* upm) | -288                       |
+| hhea.ascender                             | OS/2.sTypoAscender                       | 940                        |
+| hhea.descender                            | OS/2.sTypoDescender                      | -180                       |
 | hhea.lineGap                              | 0                                        | 0                          |
-| OS/2.usWinAscent                          | Same as hhea.ascent                      | 1160                       |
-| OS/2.usWinDescent                         | abs(value) of hhea.descent               | 288                        |
-| OS/2.fsSelection bit 7 (Use_Typo_Metrics) | Do not set / disabled                    | 0                          |
+| OS/2.usWinAscent                          | Font bbox yMax                           | 1066                       |
+| OS/2.usWinDescent                         | Font bbox yMin                           | 273                        |
+| OS/2.fsSelection bit 7 (Use_Typo_Metrics) | Set / enabled                            | ✅                         |
+| BASE table                                | Required                                 |                            |
+| vhea / vmtx tables                        | Required                                 |                            |
 
-Our decision to follow the Adobe schema was based on Dr. Ken Lunde’s comments and his release notes on Source Han Sans:
+In the case of `sTypoAscender` and `sTypoDescender`, a range of values is acceptable, per the designer's perspective and specific needs. Generally ~18% tends to produce good results, but depending on the project, wider or narrower metrics may be required. 
 
--   <https://github.com/source-foundry/font-line/issues/2>
--   [SourceHanSansReadMe.pdf](https://github.com/adobe-fonts/source-han-sans/raw/release/SourceHanSansReadMe.pdf)
+Unfortunately, many typesetting environments still expect that the `sTypoMetrics` will align with the em-box. As such, the `BASE` table and `vhea` / `vmtx` tables are now required. See sections below. 
+
+These metrics were established based on investigations into improving metrics performance of CJK fonts across the library. Please see the following issue for more information:
+-   <https://github.com/google/fonts/issues/8911>
+
+### Base Table
+
+In addition to the above metrics, CJK fonts are now required to include a `BASE` table (https://learn.microsoft.com/en-us/typography/opentype/spec/baselinetags) to ensure broad compatibility. 
+
+For a standard square em-box font (1000 units / 1000UPM), such as [Iansui](https://github.com/ButTaiwan/iansui), the following BASE table is added to the `.fea` file. 
+```
+table BASE {
+  HorizAxis.BaseTagList                 icfb  icft  ideo   romn;
+  HorizAxis.BaseScriptList  DFLT  ideo   -67   827  -120      0,
+                            hani  ideo   -67   827  -120      0,
+                            kana  ideo   -67   827  -120      0,
+                            latn  romn   -67   827  -120      0,
+                            cyrl  romn   -67   827  -120      0,
+                            grek  romn   -67   827  -120      0,
+
+  VertAxis.BaseTagList                  icfb  icft  ideo  romn;
+  VertAxis.BaseScriptList   DFLT  ideo    53   947     0   120,
+                            hani  ideo    53   947     0   120,
+                            kana  ideo    53   947     0   120,
+                            latn  romn    53   947     0   120,
+                            cyrl  romn    53   947     0   120,
+                            grek  romn    53   947     0   120,
+} BASE;
+```
+The BASE tags above are:
+
+- `icfb`: Ideographic character face bottom edge (in HorizAxis) / left edge (in VertAxis)
+- `icft`: Ideographic character face top edge (in HorizAxis) / right edge (in VertAxis)
+- `ideo`: ideographic em-box bottom edge (in HorizAxis) / left edge (in VertAxis)
+- `romn`: Latin baseline. Usually 0 in HorizAxis, inverse of ideo in VertAxis
+
+Some additional tags which may be useful can be reviewed on the [official documentation](https://learn.microsoft.com/en-us/typography/opentype/spec/baselinetags). 
+
+In the case of a design that varies from the standard square em-box, you must also include `idtp` to mark the 'top' / 'right' edge of the em-box (opposite of `ideo`). For example, [WD XL Lubrifont](https://github.com/NightFurySL2001/WD-XL-font), which has a rectangular em-box with an advance width of 765, has the following base table:
+
+```
+table BASE {
+  HorizAxis.BaseTagList                 icfb  icft  ideo  idtp  romn;
+  HorizAxis.BaseScriptList  DFLT  ideo  -104   814  -120   880     0,
+                            hani  ideo  -104   814  -120   880     0,
+                            kana  ideo  -104   814  -120   880     0,
+                            latn  romn  -104   814  -120   880     0,
+                            cyrl  romn  -104   814  -120   880     0,
+                            grek  romn  -104   814  -120   880     0;
+
+  VertAxis.BaseTagList                  icfb  icft  ideo  idtp  romn;
+  VertAxis.BaseScriptList   DFLT  ideo    49   716     0   765     0,
+                            hani  ideo    49   716     0   765     0,
+                            kana  ideo    49   716     0   765     0,
+                            latn  romn    49   716     0   765     0,
+                            cyrl  romn    49   716     0   765     0,
+                            grek  romn    49   716     0   765     0;
+} BASE;
+```
+Note the `idtp` value in the VertAxis is present to indicate the narrower width. 
+
+### vhea and vmtx tables
+In order for the `vmtx` and `vhea` tables to be generated via `fontTools`, vert-specific metrics must be set in the source prior to build. 
+
+In `Glyphs`, these are:
+- `vheaVertAscender`
+- `vheaVertDescender`
+- `vheaLineGap`
+
+If building from `.ufo`, these are:
+- `openTypeVheaVertTypoAscender`
+- `openTypeVheaVertDescender`
+- `openTypeVheaLineGap`
+
+`vheaVertAscender` is the distance from the center of the glyph to the left edge (generally 500 for a `1000UPM` font).
+`vheaVertDescender` is the distance from the center of the glyph to the right edge (generally -500 for a `1000UPM` font).
+`vheaLineGap` is the horizontal space between lines of text.
+
+Most build systems (such as `makeotf` & `glyphsLib`) expect the `sTypoMetrics` to align with the font em-box, and use the `sTypoMetrics` to determine values in the `vmtx` and `vhea` tables. So the advancedHeight set in the `vmtx` table will be larger than the intended em-box value, leading to undesireable space when the font is set vertically. 
+
+**Solutions**  
+It is possible to add in an override method into the `.fea` file which can correct for this issue. For example:
+
+```
+table vmtx {
+    VertOriginY uni30FC.vert 830;
+    VertAdvanceY uni30FC.vert 900;
+} vmtx;
+```
+
+However, this approach (unless scripted), is cumbersome for a font on the scale of CJK. 
+
+Two alternate options using a post-production script:
+
+1) Insert the incorrect `sTypo` data into the font, then correct the font metrics afterwards. The downside of this approach is that the source is not accurate to the output of the font. 
+
+2) Use the correct `sTypo` data in the font, then correct the `vhea` and `vmtx` tables in post-production to follow the em-box data. While this approach is not ideal either, once the toolchains catch up, the post-production script can be removed and the output will remain the same. 
+
 
 ------------------------------------------------------------------------
 
