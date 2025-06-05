@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐸  This guide will help user to test their font locally to confirm quality-assurance. We recommend to test your font on the latest stable version of your OS and apps.
+This guide will help user to test their font locally to confirm quality-assurance. We recommend to test your font on the latest stable version of your OS and apps.
 <br><br>
 Bear in mind:
 <ul>
