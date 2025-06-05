@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🦦 Understanding the what are the font tables and what they do is a core skill in font engineering.
+Understanding the what are the font tables and what they do is a core skill in font engineering.
 <br><br>
 <b>You can view the name tables using these tools:</b>
 <ul>

@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐰 A font is not finished just because it has been released. From time to time, you may want to update your design; users may find and report issues with the font that need to be addressed, or Google may commission you to update your own or someone else’s font.
+A font is not finished just because it has been released. From time to time, you may want to update your design; users may find and report issues with the font that need to be addressed, or Google may commission you to update your own or someone else’s font.
 <br><br>
 This guide will help designers to adopt good habits while maintaining their work within a GitHub repository.
 

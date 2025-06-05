@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🦕 Because of our commitment to <a href="./cuture">Libre font culture</a>, all Google Fonts projects must be built using a reproducible, libre toolchain. We do not onboard binaries exported from font editors.
+Because of our commitment to <a href="./cuture">Libre font culture</a>, all Google Fonts projects must be built using a reproducible, libre toolchain. We do not onboard binaries exported from font editors.
 
 This chapter aims to guide designers in building their font binaries using open-source tools as per our production requirements. Everything related to font file settings is detailed in the <a href="https://googlefonts.github.io/gf-guide/index#pre-production-getting-your-fonts-ready-for-gf">Pre-production</a> section of this guide, and for practicality, that information will not be repeated here.
 <br><br>

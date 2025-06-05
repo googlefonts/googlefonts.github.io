@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🦥 The variable font technology has existed for a long time, but the format is actually quite recent (2016). It took time for OS and Apps to support this format, and some still did not make the step. In general, GF does not quite recommend the use of variable fonts in documents made to be printed.
+The variable font technology has existed for a long time, but the format is actually quite recent (2016). It took time for OS and Apps to support this format, and some still did not make the step. In general, GF does not quite recommend the use of variable fonts in documents made to be printed.
 <br><br>
 This guide will give users all the detailed information related to Variable fonts GF requirements. If you are developing a <em>Static</em> font project, please refere to the specifics on statics section.
 

@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐸  Any contributions to Google Fonts should be first submitted through the <a href="https://github.com/google/fonts/issues">Google Fonts issue tracker</a>.
+Any contributions to Google Fonts should be first submitted through the <a href="https://github.com/google/fonts/issues">Google Fonts issue tracker</a>.
 
 Don't forget to search the issue tracker (using keywords) to see if your issue has already been raised before opening a new one. The following links can be used to create different kinds of issues:
 

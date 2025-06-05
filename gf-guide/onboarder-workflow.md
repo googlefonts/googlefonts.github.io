@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐝 Google Fonts has become too big to be maintained as a simple community repository. The platform is now an API distributing and serving more than a thousand font families, and GF has started to see itself as a proper open-source foundry.
+Google Fonts has become too big to be maintained as a simple community repository. The platform is now an API distributing and serving more than a thousand font families, and GF has started to see itself as a proper open-source foundry.
 
 This means several things:
 

@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐸 In order to submit a new family or an upgrade of an existing family on <a href="https://fonts.google.com/">fonts.google.com</a>, we must add or update the files held in the <a href="https://github.com/google/fonts">google/fonts</a> repository. This guide will help users submit Pull Requests (PR) which can then be reviewed and merged by a team member.
+In order to submit a new family or an upgrade of an existing family on <a href="https://fonts.google.com/">fonts.google.com</a>, we must add or update the files held in the <a href="https://github.com/google/fonts">google/fonts</a> repository. This guide will help users submit Pull Requests (PR) which can then be reviewed and merged by a team member.
 <br><br>
 
 <!-- Before submitting your pull request, make sure you have read the following documentations:

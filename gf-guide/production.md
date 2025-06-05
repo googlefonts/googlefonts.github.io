@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐰 <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> (GF) designates in fact two things. First, it is a <b>directory</b> of fonts, which can be downloaded and used locally on your machine. Second, it is also an <b>API</b> that delivers a web service: this means a website can request fonts, and Google Fonts delivers them to the website. In that second case, the fonts are hosted by Google Fonts and not by the website’s own server. 
+<a href="https://fonts.google.com/" target="_blank">Google Fonts</a> (GF) designates in fact two things. First, it is a <b>directory</b> of fonts, which can be downloaded and used locally on your machine. Second, it is also an <b>API</b> that delivers a web service: this means a website can request fonts, and Google Fonts delivers them to the website. In that second case, the fonts are hosted by Google Fonts and not by the website’s own server. 
 <br><br>
 This section will help users to understand the implications of publishing fonts on the Google Fonts platform, and will review the basic font production considerings and requirements that are mandatory for any Font to be included in the Catalog.
 

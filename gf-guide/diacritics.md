@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐳 A diacritic is a mark used in combination with a base letter for many purposes, such as modifying the pronunciation by extending a basic alphabet to include more phonemes; adding stress that could differentiate similar words, hence meanings; and, in some languages, adding or modifying a vowel in a word.
+A diacritic is a mark used in combination with a base letter for many purposes, such as modifying the pronunciation by extending a basic alphabet to include more phonemes; adding stress that could differentiate similar words, hence meanings; and, in some languages, adding or modifying a vowel in a word.
 <br><br>
 Many diacritics are separated from the base letter, and can be placed above, below, aside, or through it; while other diacritics connect to the base. 
 <br><br>

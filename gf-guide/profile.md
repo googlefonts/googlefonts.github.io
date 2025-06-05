@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🦥  This guide is a technical review of the different requirements related to the <a href="https://github.com/google/fonts/tree/main/catalog/designers">catalog/designers</a> directory in the <a href="https://github.com/google/fonts">google/fonts</a> repo.
+This guide is a technical review of the different requirements related to the <a href="https://github.com/google/fonts/tree/main/catalog/designers">catalog/designers</a> directory in the <a href="https://github.com/google/fonts">google/fonts</a> repo.
 <br><br>
 Each credited entity on Google Fonts should have a registered profile in <a href="https://github.com/google/fonts/tree/main/catalog/designers">google/fonts/catalog/designers</a>. This profile appears in the <code>Designer</code> subsection in the <a href="https://fonts.google.com/specimen/Praise?sort=date#about">about</a> section of the specimen page.
 <br><br>

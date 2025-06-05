@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐯 Quality Assurance is an essential factor in Google Fonts. On the one hand, we expect the submitted fonts to follow the best standards and conventions of type design. On the other hand, committed to the understanding of fonts as software, we need to ensure that they fulfill the technical requirements of the major OS, applications, and browsers.
+Quality Assurance is an essential factor in Google Fonts. On the one hand, we expect the submitted fonts to follow the best standards and conventions of type design. On the other hand, committed to the understanding of fonts as software, we need to ensure that they fulfill the technical requirements of the major OS, applications, and browsers.
 <br><br>
 This chapter aims to guide designers to have a more automated approach of their binaries quality assurance. We recommend you install all the tools in a virtual environment, to avoid conflict between packages. Further information is detailed in the <a href="./tools">Tools and Dependencies section</a>. 
 <br><br>
