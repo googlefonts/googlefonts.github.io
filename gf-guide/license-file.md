@@ -66,8 +66,8 @@ I hereby grant permission in perpetuity to Google LLC and affiliates to use the 
 trademarks and Reserved Font Names declared in my SIL Open Font Licence notices 
 for fonts served via Google Fonts:
 
-- Font Name 1
-- Font Name 2
+- Reserved Font Name 1
+- Reserved Font Name 2
 
 Best Regards,
 Firstname Last-name
