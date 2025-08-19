@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐝 Since 2024, you can find different typographic categories on <a href="https://fonts.google.com/">Google Fonts</a> , making it easier to sort fonts and allowing users to refine their search.
+Since 2024, you can find different typographic categories on <a href="https://fonts.google.com/">Google Fonts</a> , making it easier to sort fonts and allowing users to refine their search.
 
 A new step has therefore been added to the font onboarding process, managed by the font onboarders, involving the use of a specially designed tool (*GF Tagger*, written by Marc Foley ✌️) to facilitate the addition of tags.
 

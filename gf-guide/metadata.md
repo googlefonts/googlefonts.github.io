@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐸 The <mark class="grey">METADATA.pb</mark> file found in the Google Fonts <mark class="grey">library repo</mark> (<a href="https://github.com/google/fonts">github.com/google/fonts</a>) is a <a href="http://en.wikipedia.org/wiki/Protocol_buffers">Protocol Buffers</a> file that contains the main information about the font files served by Google Fonts, some of which typically corresponds to font file internal metadata.
+The <mark class="grey">METADATA.pb</mark> file found in the Google Fonts <mark class="grey">library repo</mark> (<a href="https://github.com/google/fonts">github.com/google/fonts</a>) is a <a href="http://en.wikipedia.org/wiki/Protocol_buffers">Protocol Buffers</a> file that contains the main information about the font files served by Google Fonts, some of which typically corresponds to font file internal metadata.
 
 </div>
 

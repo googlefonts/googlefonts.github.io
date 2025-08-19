@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐸 Vertical metrics are used to determine the space between two lines of text. Some metrics are meant for Mac, others for Windows, and they are interpreted differently according to web or desktop usage.
+Vertical metrics are used to determine the space between two lines of text. Some metrics are meant for Mac, others for Windows, and they are interpreted differently according to web or desktop usage.
 <br><br>
 Throughout countless threads and discussions, GF decided to prioritize cross-platform compatibility and, in consequence, apply the following requirements. Read them carefully because once a family is onboarded, vertical metrics are meant to remain always the same to avoid regression, as mentioned in <a href="./onboarding">Adding & upgrading fonts to Google Fonts</a>.
 <br><br>

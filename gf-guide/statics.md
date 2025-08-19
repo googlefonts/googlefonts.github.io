@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐓  “Static” fonts is a way of saying traditional, <em>non-variable</em> fonts.
+“Static” fonts is a way of saying traditional, <em>non-variable</em> fonts.
 <br><br>
 Before going further, make sure you read carefully the <a href="./requirements">overall fonts requirements</a>. And please refer to the <a href="./variable">requirements about Variable Fonts</a> if you are developing a VF.
 <br><br>

@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🦤 Authors and contributors are people or industries participating into a project either because they paid for it, they employed people who created and produced it, or because they are the people who made it.
+Authors and contributors are people or industries participating into a project either because they paid for it, they employed people who created and produced it, or because they are the people who made it.
 
 <ul>
     <li> The list of authors generally includes the creators and all the possible copyright holders (such as the company employing the actual creators). This may differ according to the copyright laws of the author’s country; better to inform yourself if the project was commissioned by an instiution or a company.</li>

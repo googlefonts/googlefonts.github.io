@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🦥  The following guidelines apply to all fonts, regardless of their format (static or variable fonts) or if you want to add a new font or update one already included in the catalog.
+The following guidelines apply to all fonts, regardless of their format (static or variable fonts) or if you want to add a new font or update one already included in the catalog.
 <br><br>
 For specific information on any of those cases, please read the pages with the requirements on them. before continuing.
 

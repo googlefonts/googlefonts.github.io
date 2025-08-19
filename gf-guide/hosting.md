@@ -6,7 +6,7 @@
 {:.no_toc}
 
 <div class="callout">
-🐰 <b>Git</b>
+<b>Git</b>
 <br>
 Git is an open-source Version Control System (VCS) that runs on your local machine. It is a powerful tool that allows you to save discrete versions of a project as you work on it and makes it possible for collaborators to work together on code-based projects (including fonts) in a controlled manner.
 Using Git is essential to track the history of a project.

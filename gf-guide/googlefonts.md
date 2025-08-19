@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🦉 <a href="https://github.com/google/fonts" target="_blank">google/fonts</a> is the GitHub repository that is used as a staging area to upload font families to <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>. 
+<a href="https://github.com/google/fonts" target="_blank">google/fonts</a> is the GitHub repository that is used as a staging area to upload font families to <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>. 
 <br><br>
 Once your project is ready, and you are sure it meets all the font and production requirements; as well as you have located your files in a GitHub repository that follows the required structure, then the definitive step to contributing your font to Google Fonts is to submit it as a Pull Request to google/fonts repository.
 <br><br>

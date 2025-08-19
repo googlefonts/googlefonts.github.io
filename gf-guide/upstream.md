@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐰 Font projects must be hosted on GitHub (or another VCS) and their repositories must be public. Google Fonts accepts private repositories while a project is still in progress, but they must be public once completed.
+Font projects must be hosted on GitHub (or another VCS) and their repositories must be public. Google Fonts accepts private repositories while a project is still in progress, but they must be public once completed.
 <br><br>
 This guide will help users understand what and why the requested directories, files, and documents are needed in a Google Fonts project.
 <br><br>

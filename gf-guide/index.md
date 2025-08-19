@@ -4,7 +4,7 @@
 
 <div class="callout">
 
-🦜 This guide aims to help people navigate the requirements and recommendations for contributing to <a href="https://fonts.google.com">Google Fonts</a>. The contents covered here range from general knowledge to contextualize the <i>what</i> and <i>why</i> of some of the requirements as well as the specifics regarding technical aspects with some suggestions on how to comply with them. It covers different levels of information for both newcomers and more experienced contributors.
+This guide aims to help people navigate the requirements and recommendations for contributing to <a href="https://fonts.google.com">Google Fonts</a>. The contents covered here range from general knowledge to contextualize the <i>what</i> and <i>why</i> of some of the requirements as well as the specifics regarding technical aspects with some suggestions on how to comply with them. It covers different levels of information for both newcomers and more experienced contributors.
 
 Therefore, <b>this documentation is not meant to be read at once</b>. If you are already familiar with some of the concepts, for example, some people are more empowered with the use of Github please you can skip some chapters and jump to the other bits that you may be looking for. The guidelines have been separated into small bits to facilitate the search of specific information that you would need at a specific stage of the font production.
 

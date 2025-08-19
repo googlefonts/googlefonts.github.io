@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐸  Make sure your font is ready for production by fulfilling the check-list below. Design is not particularly judged here, we are talking from the point of view of the technical quality aspect of a font, i.e: OS, browsers, apps and printers will be able to read the font file and display it as the designer intended.
+Make sure your font is ready for production by fulfilling the check-list below. Design is not particularly judged here, we are talking from the point of view of the technical quality aspect of a font, i.e: OS, browsers, apps and printers will be able to read the font file and display it as the designer intended.
 <br><br>
 Note that some font editors or export tools will partly do the job for you. Always test your exported fonts in different environments, open them in a font editor, or run a Fontbakery report on them, to make sure that everything looks like what you want.
 <br><br>

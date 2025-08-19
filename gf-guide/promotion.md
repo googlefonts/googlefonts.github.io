@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🦕 Fonts are carefully designed and offer a visual aid in communication, so the best way to display your project's advantages and subtle or powerful features is through images. That's why we now include images on every font's Specimen page on Google Fonts. 
+Fonts are carefully designed and offer a visual aid in communication, so the best way to display your project's advantages and subtle or powerful features is through images. That's why we now include images on every font's Specimen page on Google Fonts. 
 <br><br>
 This guide provides specifications for the required images for your typographic project published on Google Fonts. They will be added to the <a href="https://fonts.google.com/specimen/Ojuju/about">'About'</a> section of the specimen page, and, when a font is released for the first time on Google Fonts or if it benefited from a major upgrade, we can use them to promote the font on social media platforms (Mastodon, LinkedIn, Twitter, Instagram).
 

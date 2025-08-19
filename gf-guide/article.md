@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🦉 Both the <mark class="grey">ARTICLE.en_us.html</mark> and <mark class="grey">DESCRIPTION.en_us.html</mark> files are used to bring the information that appears in the <code>#About</code> section on any specimen page of <a href="https://fonts.google.com">Google Fonts</a> to provide further information about the font family.
+Both the <mark class="grey">ARTICLE.en_us.html</mark> and <mark class="grey">DESCRIPTION.en_us.html</mark> files are used to bring the information that appears in the <code>#About</code> section on any specimen page of <a href="https://fonts.google.com">Google Fonts</a> to provide further information about the font family.
 <br><br>
 The team member onboarding the font will create any of these files. Thus, the actual file a designer should write carefully is the <a href="./readmefile">README.md</a> file of the font's repository, as the information in it will be crucial to create a descriptive <a href="https://fonts.google.com/specimen/Kalnia#about">#About</a> section.
 

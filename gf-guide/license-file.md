@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🐰 Google initially accepted several libre licenses such as <mark class="grey">OFL</mark>, <mark class="grey">UFL</mark> and <mark class="grey">Apache</mark>.
+Google initially accepted several libre licenses such as <mark class="grey">OFL</mark>, <mark class="grey">UFL</mark> and <mark class="grey">Apache</mark>.
 But today only the OFL is accepted, and that has been the case for many years now.
 <br><br>
 This page flags some important requirements about the <mark class="grey">OFL</mark> license, as well as a template to copy-paste into your repo.

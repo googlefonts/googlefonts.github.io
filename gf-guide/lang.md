@@ -6,7 +6,7 @@
 {:.no_toc}
 
 <div class="callout">
-🦜 <a href="https://github.com/googlefonts/lang" target="_blank">googlefonts/lang</a> is the GitHub repository that defines the foundation for the *lang metadata system* 
+<a href="https://github.com/googlefonts/lang" target="_blank">googlefonts/lang</a> is the GitHub repository that defines the foundation for the *lang metadata system* 
 <br><br>
 This section specifies the main concepts of the system and provides information on how if influences the displaying of the font in the Catalog.
 </div>

@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🦦  <a href="https://github.com/googlefonts/gftools/tree/main/docs/gftools-packager">gftools packager</a> is the tool team members use to package fonts from the upstream repo to ship then to <a href="https://github.com/google/fonts">google/fonts</a> repo. It basically replaces <a href="./making-pr">Making a PR to GF</a> process. It saves a lot of time, and prevent lots of human mistakes.
+<a href="https://github.com/googlefonts/gftools/tree/main/docs/gftools-packager">gftools packager</a> is the tool team members use to package fonts from the upstream repo to ship then to <a href="https://github.com/google/fonts">google/fonts</a> repo. It basically replaces <a href="./making-pr">Making a PR to GF</a> process. It saves a lot of time, and prevent lots of human mistakes.
 <br><br>
 Note that Packager will create a branch on <code>google/fonts</code> directly. 
 </div>
