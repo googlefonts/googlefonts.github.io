@@ -158,20 +158,24 @@ Named sizes like "Display", "Text", "Micro" etc are not allowed, because they ar
 
 As of May 2023, the download ZIPs available from fonts.google.com will only create just 2-5 sets of static fonts from your optical size range, using values in the axis registry, and a "clamping" heuristic codenamed the "green dot algorithm." It is helpful for users to have the same named styles available as static fonts in the ZIP also available as named styles in the STAT table.
 
-### `ital` **/** `slnt`
+### `ital` **and** `slnt`
 
-GF only supports the `ital` axis as a boolean (`0`/`1`) value to link two separate VFs (Roman/Italic) in the STAT table. And slant axis if the font is not meant to have italic instances.
+GF does not support the Italic `ital` axis as such.
+The API offers families the appearance of an Italic axis, as a boolean (`0` or `1`) value, that in reality is two separate VF files (a Roman and an Italic) that are linked as one family in their STAT table data.
+So if you have one VF with an `ital` axis today, that can not be onboarded (and if was, the italics would not be served by the GF API).
 
-**→ GF doesn’t support the ital axis within one VF as a variation axis.**
+GF does support the Slant `slnt` axis, and when the font is meant to have italic or oblique styles that interpolate with the upright Roman styles, this axis must be used.
+So to enable italic instances to be served by the GF API, you must deliver either **two variable font files** or **retag it as `slnt`**.
+This is due to uneven support in web browsers, which Stephen Nixon documented thoroughly for GF in [arrowtype.github.io/vf-slnt-test](https://arrowtype.github.io/vf-slnt-test)
 
-So if you have one VF with `slant` or `ital` axis, it won’t have italics served by GF API. If you want italic instances served by the GF API, then you will have to deliver **two variable font files**.
-
-e.g. `Texturina[wght].ttf` and `Texturina-Italic[wght].ttf`
+e.g. `FamilyName[wght].ttf` and `FamilyName-Italic[wght].ttf` or `FamilyName[slnt,wght].ttf`
 
 Style linking between these two files will be preserved by:
 
--   The [post-script name ID 25](https://adobe-type-tools.github.io/font-tech-notes/pdfs/5902.AdobePSNameGeneration.pdf) for Adobe Indesign, which (for now) requires this scheme: `FontName` for the Roman font, and `FontNameItalic` for the Italic font. The [Builder](build.md) will set that up for you using default settings and/or your STAT table values.
+-   The [post-script name ID 25](https://adobe-type-tools.github.io/font-tech-notes/pdfs/5902.AdobePSNameGeneration.pdf) for Adobe InDesign, which (for now) requires this scheme: `FamilyName` for the Roman font, and `FamilyNameItalic` for the Italic font.
 -   The `ital` axis in the `STAT` table.
+
+The [Builder](build.md) will set those both, by default.
 
 As well as the style-linking bits used to link static fonts explained in [this section](./statics#style-linking):
 -   The italic style bits in the `head` and `OS/2` table
