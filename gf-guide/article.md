@@ -74,8 +74,12 @@ The Article file supports images, which must live in the `article/` directory al
 - Recommended width: at least 1000px. You don't need any particular proportions; the container will resize the image.
 - Resolution: 72dpi.
 - Maximum file size: 800 KB for SVG; 1.75 MB for other formats (enforced by the `knowledge_graph.py` GitHub workflow).
+- Maximum resolution allowed: 1024 px (height) × 2048 px (width). Feel free to choose the ratio you want!
 
 The images in this repository are licensed under the CC https://creativecommons.org/licenses/by-sa/4.0/. This license mention must be present in the repository, inside the `documentation` folder (see [Promote your font](./promotion.md) for details).
+
+
+
 
 #### Videos
 
