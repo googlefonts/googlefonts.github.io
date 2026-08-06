@@ -47,7 +47,7 @@ Fonts to be onboarded to Google Fonts are expected to abide by the following req
     <br><br>`.glyphspackage` is preferred over `.glyphs` due to it being easier to work with in version control (Git). `Fontlab V` files must be converted to another format because the software runs only on older OS versions. If you are using any font format other than `.glyphs`, `.glyphspackage`, and `.ufo`, include a build script that converts the sources to UFO, and include the UFO sources in the Git repository. Use **[Fontlab to UFO](https://pypi.org/project/vfb2ufo3/)** or **[FontForge to UFO](https://github.com/fontforge/sfd2ufo)** for example.
 
 
--   **Fonts should be built using open-source tools**.** This ensures that they can be built under the same conditions on any platform.
+-   **Fonts should be built using open-source tools.** This ensures that they can be built under the same conditions on any platform.
 
 -   **Fonts should be built in one step.** All GF font production tools can be run from the command line. This allows to use them to generate font families by running a single command.
     <br>
