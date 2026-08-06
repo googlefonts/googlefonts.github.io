@@ -109,13 +109,28 @@ Find more information about the requirements for these files in [the designer pr
 
 Google Fonts supports all the [Microsoft registered axes](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg) for variable fonts, but it has its own [Axis Registry](https://github.com/googlefonts/axisregistry), which defines the names, ranges, and defaults of additional axes supported by the API. This registry is used to generate the static instances of each variable family (which you can find in the downloadable zip file); the API will generate only those locations registered in the registry.
 
-This directory is a git subtree that is automatically updated with changes in the [googlefonts/axisregistry](https://github.com/googlefonts/axisregistry) repository.  The contents of this directory should not be changed in commits that are pushed to the [google/fonts](https://github.com/google/fonts) repository.  Rather, make edits in a pull request on the [googlefonts/axisregistry](https://github.com/googlefonts/axisregistry) repository.  [google/fonts](https://github.com/google/fonts) repository maintainers can then pull the git subtree changes in to the `axisregistry` directory by executing the following command from the root of [google/fonts](https://github.com/google/fonts):
+This directory is a git subtree that is automatically updated with changes in the [googlefonts/axisregistry](https://github.com/googlefonts/axisregistry) repository.  The contents of this directory should not be changed in commits that are pushed to the [google/fonts](https://github.com/google/fonts) repository.  Rather, make edits in a pull request on the [googlefonts/axisregistry](https://github.com/googlefonts/axisregistry) repository. 
 
-```code
-git subtree pull --prefix=axisregistry https://github.com/googlefonts/axisregistry.git main
+Once you have a set of changes and wish to make a new release, the procedure is as follows:
+
+* Ensure that the `Cargo.toml` file has the latest version number for the release you are about to make. The version number is in the format `0.X.Y` where `X` is the minor version and `Y` is the patch version. The minor version should be incremented when new features are added, and the patch version should be incremented when bug fixes are made. Update the version number and commit it.
+* Make a release of axisregistry by pushing an annotated tag in the `googlefonts/axisregistry` directory:
+
+```
+% cd axisregistry
+% git tag -a v0.X.Y
+(fill in the release notes in your editor)
+% git push --tags
 ```
 
-Once the main branch from the submodule is pulled, you will need to push in a new branch upstream.
+* The GitHub action should do the rest:
+  * Make a release of the Python package to PyPI.
+  * Make a release of the Rust crate to crates.io.
+  * Make a subtree pull request in the `google/fonts` repository.
+
+
+**Important:** When merging the pull request in the google/fonts repo which contains a subtree pull, merge it using the "Create a merge commit" button and not the "Squash and merge" button. If we squash and merge, the subtree's history is squashed into a single commit which will cause merge conflicts for the next person who has to do a subtree pull. 
+
 
 **Important:** When merging a pull request in the google/fonts repo which contains a subtree pull, merge it using the "Create a merge commit" button and not the "Squash and merge" button. If we squash and merge, the subtree's history is squashed into a single commit which will cause merge conflicts for the next person who has to do a subtree pull. 
 
@@ -133,6 +148,7 @@ This directory is a git subtree that is automatically updated with changes in th
 
 Once you have a set of changes that you want to be merged into `google/fonts`, the procedure is:
 
+* Ensure that the `Cargo.toml` file has the latest version number for the release you are about to make. The version number is in the format `0.X.Y` where `X` is the minor version and `Y` is the patch version. The minor version should be incremented when new features are added, and the patch version should be incremented when bug fixes are made. Update the version number and commit it.
 * Make a release of gflanguages by pushing an annotated tag in the `googlefonts/lang` directory:
 
 ```
@@ -142,22 +158,11 @@ Once you have a set of changes that you want to be merged into `google/fonts`, t
 % git push --tags
 ```
 
-* Switch to the `google/fonts` repository, and create a new branch:
+* The GitHub action should do the rest:
+  * Make a release of the Python package to PyPI.
+  * Make a release of the Rust crate to crates.io.
+  * Make a subtree pull request in the `google/fonts` repository.
 
-```
-% cd ../fonts
-% git checkout -b lang-v0.X.Y
-```
-
-* Pull the git subtree changes into the `lang` directory by executing the following command in the root of the [google/fonts](https://github.com/google/fonts) repository:
-
-```
-% git subtree pull --prefix=lang https://github.com/googlefonts/lang.git main
-```
-
-* Create a new `google/fonts` pull request for this branch.
-
-* Label the pull request with `| Lang` so that the push-list script will know what kind of paths are expected in the push lists.
 
 **Important:** When merging the pull request in the google/fonts repo which contains a subtree pull, merge it using the "Create a merge commit" button and not the "Squash and merge" button. If we squash and merge, the subtree's history is squashed into a single commit which will cause merge conflicts for the next person who has to do a subtree pull. 
 
