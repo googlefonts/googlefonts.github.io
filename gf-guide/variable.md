@@ -131,6 +131,7 @@ Any new variable font with a weight or width axes will need the instance’s coo
 
 | name           | wdth coordinate value |
 |----------------|----------------------:|
+| SuperCondensed |  25.0                 |
 | UltraCondensed |  50.0                 |
 | ExtraCondensed |  62.5                 |
 | Condensed      |  75.0                 |
