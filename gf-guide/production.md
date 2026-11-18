@@ -41,10 +41,16 @@ Google Fonts is doing its best to ensure that publishing or updating fonts are u
 
 Fonts to be onboarded to Google Fonts are expected to abide by the following requisites:
 
--   **The design source files (plus scripts) are available** in your preferred font editor format.
+-   **The source files are available** in your preferred font editor format.
     <br>
-    The file formats most used are `UFO`, `.glyphs`, `.glyphspackage`, `fontforge` or `fontlab 7`.
-    <br><br>`.glyphspackage` is preferred over `.glyphs` due to it being easier to work with in version control (Git). `Fontlab V` files must be converted to another format because the software runs only on older OS versions. If you are using any font format other than `.glyphs`, `.glyphspackage`, and `.ufo`, include a build script that converts the sources to UFO, and include the UFO sources in the Git repository. Use **[Fontlab to UFO](https://pypi.org/project/vfb2ufo3/)** or **[FontForge to UFO](https://github.com/fontforge/sfd2ufo)** for example.
+    These must be the "true" sources that are used for active development of the font, rather than an interchange format (for example, a `.ufo` exported only to run the build tools). The file formats most commonly used are `.ufo` / `.ufoz`, `.glyphs` / `.glyphspackage`, `FontCreator`, `FontForge`, or `FontLab`.
+
+    - In the case of `Glyphs`-based development, `.glyphspackage` is preferred over `.glyphs` due to it being easier to work with in version control (Git).
+    - `FontLab V` (`.vfb`) files must be converted to another format because the software runs only on older OS versions.
+    - If you are using any font format other than `.glyphs`, `.glyphspackage`, and `.ufo`, you must include a build script that converts the sources to UFO, and include the `UFO` sources in the Git repository. For example:
+        - [FontLab to UFO](https://pypi.org/project/vfb2ufo3/) (`.vfb`)
+        - [FontForge to UFO](https://github.com/fontforge/sfd2ufo) (`.sfd`)
+        - For formats that do not currently offer a script-based conversion method (such as `.vfc` for `FontLab 7`+ and `.fcp` for `FontCreator`), please include both the source and an exported interchange file, such as `.ufo`, in the repository.
 
 
 -   **Fonts should be built using open-source tools.** This ensures that they can be built under the same conditions on any platform.
