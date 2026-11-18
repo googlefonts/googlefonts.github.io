@@ -244,7 +244,7 @@ The Typo Metrics need to inherit the v1.000 Win values. The WinAscent and WinDes
 2.  Repeat the process for each weight/style if values are not unique in v1.000
 3.  Enable Use_Typo_Metrics
 
-If the font is already hosted on [fonts.google.com](http://fonts.google.com/), you can confirm the upgraded vertical metrics visually match by using [diffenator2](https://github.com/googlefonts/diffenator2) with the command `diffenator2 diff -fb font1.ttf -fa font2.ttf -o out_dir` where `-fb` stands for `--fonts-before` and `-fa` for `--fonts-after`.
+If the font is already hosted on [fonts.google.com](http://fonts.google.com/), you can confirm the upgraded vertical metrics visually match by using [diffenator3](https://github.com/googlefonts/diffenator3) with the command `diffenator3 --html --output out_dir font_before.ttf font_after.ttf`, where the first font is the version currently hosted on Google Fonts and the second one is your updated version.
 
 ## CJK Vertical Metrics
 
@@ -377,7 +377,7 @@ Two alternate options using a post-production script:
 -   [Show Vertical Metrics](https://github.com/mekkablue/ShowVerticalMetrics) plug-in in GlyphsApp
 -   Mekkablue’s [Vertical Metrics Manager](https://github.com/mekkablue/Glyphs-Scripts/blob/master/Font%20Info/Vertical%20Metrics%20Manager.py)
 -   [Impallari/testing](https://github.com/impallari/Font-Testing-Page): Font tester which has no CSS line-height property set ([live site](http://cyreal.org/Font-Testing-Page))
--   [Diffenator2](https://github.com/googlefonts/diffenator2): Create diffing docs to compare local updated fonts against currently hosted versions on [fonts.google.com](http://fonts.google.com/)
+-   [Diffenator3](https://github.com/googlefonts/diffenator3): Create diffing docs to compare local updated fonts against currently hosted versions on [fonts.google.com](http://fonts.google.com/)
 
 <!-- <div class="next-reading">
     Further reading:<br>

@@ -143,8 +143,8 @@ Manual hinting is often applied from 8ppm to 21ppm. Overshoot suppression until 
 
 How to prepare hinted rendering to review:
 
--   Install [gftools-qa](https://github.com/googlefonts/gftools#readme) and look at the image-waterfall output of diffbrowser.
--   Use `gftools gen-html` and upload 2 versions of generated fonts (hinted and unhinted) to look at if the font is better with or without hinting.
+-   Install [gftools qa](./tools#gftools-qa) and look at the HTML proofs it generates in different browsers.
+-   Use [`diff3proof`](./qa#proofing-with-diffenator3) with the `--sample-mode waterfall` option on 2 versions of the generated fonts (hinted and unhinted) to see if the font is better with or without hinting: `diff3proof --sample-mode waterfall --output out/hinting Family-Regular-unhinted.ttf Family-Regular.ttf`.
 
 What to check:
 

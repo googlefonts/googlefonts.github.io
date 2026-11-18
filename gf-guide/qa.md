@@ -105,25 +105,30 @@ Main profiles are:
   To run only some checks, or to exclude some of them, use the `-c` (`--checkid`) and `-x` (`--exclude-checkid`) options. Run `fontspector --help` to see all the available options.
 
 
+### Proofing with Diffenator3
 
-### Proofing with Diffenator2
+[Diffenator3](https://github.com/googlefonts/diffenator3) is a Rust port of Diffenator2. It comes with two command-line tools:
 
-Diffenator2 is a tool allows you to generate HTML with real words to proof the font functioning, and also to compare two different versions of a font.
+-   `diffenator3` compares two versions of a font (for example your new version against the one currently served by Google Fonts) and reports the differences in tables, glyphs, kerning and rendered words, in text, JSON or HTML format:
 
-To see the available options run one of the following commands:
+    `diffenator3 --html --output out/diffenator path/to/old/Family[wght].ttf path/to/new/Family[wght].ttf`
 
- `diffenator2 proof --help` or `diffenator2 diff --help`
+-   `diff3proof` generates HTML proof pages with real words to check how the fonts render in different browsers. It also works with a single font, which is useful when onboarding a new family:
 
-You can also check for install instructions and more options in its [GitHub repository](https://github.com/googlefonts/diffenator2).
+    `diff3proof --output out/proof path/fonts/Family[wght].ttf`
+
+To see all the available options, run `diffenator3 --help` or `diff3proof --help`. Install instructions are available in the [Tools and Dependencies section](./tools#gftools-qa) and in the [GitHub repository](https://github.com/googlefonts/diffenator3). Diffenator3 also has a [web version](https://googlefonts.github.io/diffenator3) to compare two fonts in your browser.
 
 
-### Using Gftools QA
+### Using gftools QA
 
-`gftools qa` wraps `gftools gen-html`, `diffenator3` and `fontspector`. It also generates a .pdf that report interpolation issues.
+`gftools qa` wraps `fontspector`, `diffenator3`, `diff3proof` and an interpolation checker, which generates a PDF reporting interpolation issues in variable fonts.
 
 From your fonts directory, you can run:
-`gftools qa -f *.ttf -a --rust`
-add `-gfb` if you want to have a diff with previous published version on Google Fonts. 
+
+`gftools qa -f *.ttf -a -o qa`
+
+Add `-gfb` (`--googlefonts-before`) if you want to have a diff with the previous version published on Google Fonts. The reports are written in the directory given with `-o` (`out` by default).
 
 
 ## Outlines and type design
