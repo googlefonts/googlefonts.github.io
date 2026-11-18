@@ -100,7 +100,7 @@ Following recent tests to confirm our vertical metrics policies, we now require 
 Even if the font does not support Vietnamese yet, we strongly suggest estimating the ascenders value foreseeing the `Abreveacute U+1EAE` height based on two main reasons:
 
 **Once the font is published, the vertical metric values cannot be modified.** By implementing the above approach, we can keep the option of updating the font in the future to support additional languages like Vietnamese.
-- Certain Mac applications, including TextEdit, determine the height of the first line of text by either the `Agrave U+00C0` height or the font's `hheaAscender`, whichever is taller (for additional information on this topic, please refer to this issue: <https://github.com/googlefonts/fontbakery/issues/3170>). So `Agrave U+00C0` is a required minimum, and `Abreveacute U+1EAE` is a strongly recommended minimum.
+- Certain Mac applications, including TextEdit, determine the height of the first line of text by either the `Agrave U+00C0` height or the font's `hheaAscender`, whichever is taller (for additional information on this topic, please refer to this issue: <https://github.com/fonttools/fontbakery/issues/3170>). So `Agrave U+00C0` is a required minimum, and `Abreveacute U+1EAE` is a strongly recommended minimum.
 
 #### 11. The sum of the font’s vertical metric values (absolute) should be 20-30% greater than the font’s UPM
 

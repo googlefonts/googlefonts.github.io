@@ -57,7 +57,7 @@ Fonts to be onboarded to Google Fonts are expected to abide by the following req
 
 -   **Projects are kept in a version control system.** Since GF only releases Open Source fonts, each released family is expected to be [hosted in GitHub](./hosting) and have its own [upstream repository](./upstream).
 
--   **CI ([Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)) should be used for build and testing purposes,** **[applied to fonts](https://simoncozens.github.io/tdd-for-otl/).** GF main repository [github.com/google/fonts](https://github.com/google/fonts) uses CI. When new fonts are pushed, the CI will run a test suite (`gftools qa`, which is a wrapper around [Fontbakery](https://github.com/googlefonts/fontbakery) and various other proofing scripts), and the results will be reviewed.
+-   **CI ([Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)) should be used for build and testing purposes,** **[applied to fonts](https://simoncozens.github.io/tdd-for-otl/).** GF main repository [github.com/google/fonts](https://github.com/google/fonts) uses CI. When new fonts are pushed, the CI will run a test suite (`gftools qa`, which is a wrapper around [Fontspector](https://github.com/fonttools/fontspector) and various other proofing tools), and the results will be reviewed.
 
 -   **Issues and reported Fails should be fixed before publishing or upgrading.**
 

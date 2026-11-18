@@ -547,7 +547,7 @@ If an important regression is introduced, we should decide to either accept it a
 
 **[METADATA.pb](./metadata.md)**
 
-Check even if there is no FAILs reported by font bakery.
+Check even if there are no FAILs reported by Fontspector.
 
 - Check all fields to ensure they make sense:
     - classification is correct according to font 

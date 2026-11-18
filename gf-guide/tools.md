@@ -37,13 +37,13 @@ See the useful links section at the bottom of this page to bring you up to speed
 
 ## Setting up a working environment
 
-Most of these tools are Python-based, but you may need to install some other tools before. *Specifics for every OS* *can’t be detailed here; therefore, it is your responsibility to search the Internet to find the right way to install and use these tools according to your own environment.*
+Most of these tools are Python-based (Fontspector, our QA tool, is a standalone program written in Rust), but you may need to install some other tools before. *Specifics for every OS* *can’t be detailed here; therefore, it is your responsibility to search the Internet to find the right way to install and use these tools according to your own environment.*
 
 To work with Google Fonts, you would need to install at least:
 
 -   [**Python 3.10**](https://www.python.org/downloads/) or above — to be able to run all the other tools
 -   [**gftools**](https://github.com/googlefonts/gftools) — a set of tools used for working with the Google Fonts collection
--   [**Fontbakery**](https://github.com/googlefonts/fontbakery) — a command-line tool for checking the quality of font projects.
+-   [**Fontspector**](https://github.com/fonttools/fontspector) — a command-line tool for checking the quality of font projects. It replaces Fontbakery, which was used previously.
 
 ### Shell and command-line
 
@@ -134,17 +134,28 @@ A [requirements.txt](upstream.md) file listing all the needed tools and dependen
 pip install -r requirements.txt
 ```
 
-### Fontbakery
+### Fontspector
 
-Fontbakery is a quality assurance (QA) testing tool. It runs a series of checks on the technical correctness of the exported fonts based on a vendor’s profile. You can find more documentation about it in the GitHub repository [googlefonts/fontbakery](https://github.com/googlefonts/fontbakery).
+Fontspector is the quality assurance (QA) testing tool used by Google Fonts. It runs a series of checks on the technical correctness of the exported fonts based on a vendor’s profile. It is a Rust port of Fontbakery, the Python tool previously used by Google Fonts, and it is much faster. You can find more documentation about it in the GitHub repository [fonttools/fontspector](https://github.com/fonttools/fontspector).
 
-To install Fontbakery, run the command:
+Unlike the other tools on this page, Fontspector is not a Python package, so it is not installed with `pip` or listed in your `requirements.txt` file. It is distributed as a single executable file which contains all the checks and profiles.
 
-``` code
-pip3 install -U fontbakery'[googlefonts]'
-```
+If you only want to check a few fonts, you don't need to install anything: the [web version of Fontspector](https://fonttools.github.io/fontspector/) provides almost all the features of the command-line tool. It runs entirely in your browser, and your fonts are not uploaded anywhere.
 
-Run `fontbakery --help` to get an overview of the usage of the Fontbakery tool.
+To install the command-line tool, you can either:
+
+-   Download the binary for your system from the [latest release](https://github.com/fonttools/fontspector/releases/latest) (in the “Assets” section: `aarch64-apple-darwin` for Apple Silicon Macs, `x86_64-apple-darwin` for Intel Macs, `x86_64-pc-windows-gnu` for Windows, `x86_64-unknown-linux-gnu` for Linux). Unpack the archive and move the `fontspector` file into a directory listed in your `PATH` (for example `/usr/local/bin/` or `~/bin` on macOS and Linux; run `echo $PATH` to see these directories).
+-   Or download and install it with [cargo-binstall](https://github.com/cargo-bins/cargo-binstall) (which can be installed with `brew install cargo-binstall` on macOS):
+
+    ``` code
+    cargo-binstall fontspector
+    ```
+
+To check that everything is working, run `fontspector --list-checks`, which should output the list of available checks, and `fontspector --help` to get an overview of the usage of the tool.
+
+On macOS, a downloaded binary may be blocked the first time because it is not code-signed (“fontspector can't be opened because it is from an unidentified developer”). In this case, open `System Settings` > `Privacy & Security` and click on “Open Anyway” next to the message about `fontspector`. You only need to do this once.
+
+More details, including how to build Fontspector from source, are available in its [installation guide](https://github.com/fonttools/fontspector/blob/main/INSTALLATION.md). The usage of Fontspector for Google Fonts is described in the [QA section](qa.md) of this Guide.
 
 ### Google Fonts Tools (gftools)
 

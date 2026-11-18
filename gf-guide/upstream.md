@@ -38,7 +38,7 @@ The template is based on [Raphael Bastide’s UFR](https://github.com/unified-fo
 
 But there is more: the project template incorporates [GitHub Actions](https://docs.github.com/en/actions) to provide users with many automations.
 
--   The actions will build the font files from the source, use Fontbakery for the Quality Analysis test of the fonts, generate HTML proof sheets, publish them with the test results to HTML files, and generate an *artifact* containing all the files that it has built.
+-   The actions will build the font files from the source, use Fontspector for the Quality Assurance tests of the fonts, generate HTML proof sheets, publish them with the test results to HTML files, and generate an *artifact* containing all the files that it has built.
 -   You can download the latest artifact (produced fonts) by visiting the Actions tab of your repository.
 
 This is particularly practical if you don’t want to run [gftools](https://github.com/googlefonts/gftools) by yourself: your GitHub repo is doing it for you! The downside is that it is harder to customize for GitHub beginners or people who don’t want to get their hands dirty in some code, and so it may be harder to use for a project that doesn’t follow this exact template.

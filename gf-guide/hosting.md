@@ -180,7 +180,7 @@ Our [Google Fonts project template](upstream.md), recommended as a starting poin
 
 Using GitHub Actions means that you can always get an up-to-date view of your fonts and their readiness for production, relying on Google Font’s latest versions of build tools.
 
-If you are not using our template, it is strongly suggested that you include at least a `Build & Test` action to check the building process is running okay to produce the fonts and test the resulting fonts with Fontbakery each time you push a change into a source file. Here is an [example of that action](https://github.com/Omnibus-Type/Texturina/blob/master/.github/workflows/build_and_check.yml).
+If you are not using our template, it is strongly suggested that you include at least a `Build & Test` action to check the building process is running okay to produce the fonts and test the resulting fonts with Fontspector each time you push a change into a source file. The [fonttools/setup-fontspector](https://github.com/fonttools/setup-fontspector) action installs Fontspector in a GitHub Actions workflow; you can use the [workflow of the project template](https://github.com/googlefonts/googlefonts-project-template/blob/main/.github/workflows/build.yaml) as an example.
 
 ### Using git with a code editor
 

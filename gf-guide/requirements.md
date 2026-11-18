@@ -41,7 +41,7 @@ For example, the hyphen is used to separate the family name from the style name 
 - the combined length of family name and style name shall not go over 32 characters.
 - the family name must not have "color" "colr" "colored" in the name, since that doesn't tell users what kind of treatment the color font technology provides (whereas e.g. words like "ink" or "fun" does), and invites filtering of color fonts based on having "color" in the family name, which is bad.
 
-Any exception to these rules shall be discussed and validated prior to onboarding, and listed in [Fontbakery's exceptions lists](https://github.com/googlefonts/fontbakery/tree/main/Lib/fontbakery/data/googlefonts) to avoid FAILS.
+Any exception to these rules shall be discussed and validated prior to onboarding, and listed in [Fontspector's exceptions lists](https://github.com/fonttools/fontspector/tree/main/profile-googlefonts/resources) to avoid FAILS.
 
 ## Font versioning
 

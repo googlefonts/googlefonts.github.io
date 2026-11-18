@@ -50,24 +50,28 @@ Hence, it is important to inspect them to verify all the information is as expec
 
 ### Checking with Fontspector
 
-Fontbakery was previously our primary quality assurance testing tool. We now use Fontspector, a Rust-based tool, which makes it easier to ensure that font projects are optimal and that the fonts are reliable before being delivered to users.
+[Fontspector](https://github.com/fonttools/fontspector) is our primary quality assurance testing tool. It is a Rust port of Fontbakery, which Google Fonts used previously, and runs the same kind of checks much faster. It helps to ensure that font projects are optimal and that the fonts are reliable before being delivered to users.
+
+See the [Tools and Dependencies section](./tools#fontspector) to install it. To check a few fonts without installing anything, you can also use the [web version of Fontspector](https://fonttools.github.io/fontspector/), which runs in your browser without uploading your fonts.
 
 #### Log levels results
 
-The check results are categorised according to levels of relevance, ranging from ERROR to SKIP. The icons are helpers to identify the severity. Be calm! There could be many of them. Get comfortable with receiving them and embrace them as a way to improve your font.
+The check results are categorised according to levels of relevance, ranging from ERROR to SKIP. The icons used in the HTML and Markdown reports help to identify the severity. Be calm! There could be many of them. Get comfortable with receiving them and embrace them as a way to improve your font.
 
-- 💔 **ERROR** Is a problem with the program itself, not the fonts. For example a bug or a check that requires an internet connection. 
+- 💥 **ERROR** Is a problem with the program itself, not the fonts. For example a bug, or a check that requires an internet connection. 
 If you get an Error, please give it a quick look to see which case it is. If it’s not an internet connection issue, please help us to improve the tool by reporting it in the [issue tracker of the Fontspector repository](https://github.com/fonttools/fontspector/issues).
+
+- ☠ **FATAL** Is a critical defect of the font that would break the font-serving infrastructure. It **must be fixed**.
 
 - 🔥 **FAIL** Is a problem with the font that **must be fixed**. 
 
 - ⚠️ **WARN** Is something worth warning about the font but requires human judgment. It might be something expected by design decision but needs to be considered.
 
-- 💤 **SKIP** Happens when the check does not apply to the given font (for example a static font check will not run when you give it a variable font - like it happens with the overlapping contours check)
+- ⏩ **SKIP** Happens when the check does not apply to the given font (for example a check for static fonts will not run when you give it a variable font).
 
 - ℹ️ **INFO** Simply prints something useful for information purposes. For example, there is an INFO check that tells you what is the file size impact of hinting on a font.
 
-- 🍞 **PASS** Means the font looks good for the given checking routine.
+- ✅ **PASS** Means the font looks good for the given checking routine.
 
 
 #### Profiles
@@ -76,27 +80,30 @@ Checks are separated into different collections called profiles (and a profile c
 
 Main profiles are:
 
-- **OpenType Specification.** Checking routines are directly mapped to the requirements of the OpenType specification table by table.
+- **OpenType Specification** (`opentype`). Checking routines are directly mapped to the requirements of the OpenType specification table by table.
 
-- **Universal.** Collects checks for good practices not formalized by the Open Type spec, but broadly accepted among the type-design community.
+- **Universal** (`universal`). Collects checks for good practices not formalized by the OpenType spec, but broadly accepted among the type-design community. It includes the OpenType profile.
 
-- **Vendor Specific.** Requirements that are not useful for everyone but something that is a specific vendor need. 
+- **Vendor Specific.** Requirements that are not useful for everyone but something that is a specific vendor need (for example `iso15008` or `fontwerk`).
 
-- **Google Fonts Profile** is currently the largest one, which includes also the checks from the Open Type, Universal, and other vendor-specific checks (such Adobe). 
+- **Google Fonts Profile** (`googlefonts`) is currently the largest one: it includes all the checks from the Universal profile (and therefore from the OpenType profile), plus the checks specific to Google Fonts. 
 
     To onboard fonts to Google Fonts they must pass the checks of this profile. Sometimes users consider a reported fail inappropriate, but remember that a FAIL for the googlefonts profile may be only specific to Google Fonts API, not all environments.
 
-    The command to run this profiles is:
+    The command to run this profile is:
 
-    `fontspector -p googlefonts path/fonts/Family-*.ttf` 
+    `fontspector --profile googlefonts path/fonts/Family-*.ttf` 
 
-    There is also an option to filter the check result by log-level. For a font to be published in GF it should be at least from Warn level. There is also an option to generate a output file of the report in Markdown format:
+    By default, only the results from the WARN level and above are displayed; you can change this with the `-l` (`--loglevel`) option. For a font to be published on Google Fonts, you should at least review all the WARN results, and fix all the FAILs. You can also write the report to a file, in Markdown (`--ghmarkdown`), HTML (`--html`) or JSON (`--json`) format:
     
-    `fontspector -p googlefonts -l warn --ghmarkdown report.md path/fonts/Family-*.ttf`
+    `fontspector --profile googlefonts -l warn --ghmarkdown report.md --html report.html path/fonts/Family-*.ttf`
 
-  To see all the commands available in a profile run:
+  To see all the checks available in a profile run:
   
-   `fontspector -p [profile] -L` 
+   `fontspector --profile [profile] --list-checks` 
+
+  To run only some checks, or to exclude some of them, use the `-c` (`--checkid`) and `-x` (`--exclude-checkid`) options. Run `fontspector --help` to see all the available options.
+
 
 
 ### Proofing with Diffenator2
@@ -139,9 +146,9 @@ However, you could:
 
 <div id="col1">
     <ul>
-		<li><a href="https://github.com/fonttools/fontspector/blob/main/USING.md" target="_blanck">Fontspector's documentation</a></li>    
-      <li><a href="https://font-bakery.readthedocs.io/en/stable/" target="_blanck">Fontbakery's documentation</a></li>
-      <li><a hfer="https://github.com/microsoft/Font-Validator" target="_blank">Microsoft's font validator</a> is the official font checking tools for Microsoft environment.</li>
+      <li><a href="https://github.com/fonttools/fontspector/blob/main/USING.md" target="_blank">Fontspector's documentation</a></li>
+      <li><a href="https://fonttools.github.io/fontspector/" target="_blank">Fontspector's web version</a></li>
+      <li><a href="https://github.com/microsoft/Font-Validator" target="_blank">Microsoft's font validator</a> is the official font checking tool for Microsoft environment.</li>
     </ul>
   <b>Type Design</b>
     <ul>

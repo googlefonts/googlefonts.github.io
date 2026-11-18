@@ -74,7 +74,7 @@ Firstname Last-name
 Company Name 
 ```
 
-Once the authorization has been given, the font names should be added to [Fontbakery's exception list](https://github.com/googlefonts/fontbakery/blob/main/Lib/fontbakery/data/googlefonts/reserved_font_name_exceptions.txt) to avoid to fail the font.
+Once the authorization has been given, the font names should be added to [Fontspector's exception list](https://github.com/fonttools/fontspector/blob/main/profile-googlefonts/resources/reserved_font_name_exceptions.txt) to avoid failing the font.
 
 -   **All info between the font, the source, and the license should match.**
 -   **The OFL.txt file must use the same template as the rest of the Google Fonts Library.**

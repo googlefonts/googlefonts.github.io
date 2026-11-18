@@ -90,7 +90,7 @@ If you would like to include a new font family in the Google Fonts collection, w
   
 -   **All font files should follow the [Overall font files requirements](requirements.md).**
 
--   **All font files should pass the [FontBakery](https://github.com/googlefonts/fontbakery) checks for the [googlefonts profile](https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html).** Please read the [QA section](qa.md) of the Google Fonts guide for more information on quality assurance requirements.
+-   **All font files should pass the [Fontspector](https://github.com/fonttools/fontspector) checks for the `googlefonts` profile.** Please read the [QA section](qa.md) of the Google Fonts guide for more information on quality assurance requirements.
 
 -   **All font source files should follow the [outline quality guide](outlines.md).**
 
