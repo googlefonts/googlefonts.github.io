@@ -69,7 +69,7 @@ Fonts to be onboarded to Google Fonts are expected to abide by the following req
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing">QA - Local testing</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing" style="font-weight:bold">QA - Local testing</a>
     <br>
     <mark class="yellow">learn</mark> <a href="./build">Build the fonts</a>
 </div>

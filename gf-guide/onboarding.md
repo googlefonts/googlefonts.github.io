@@ -24,11 +24,10 @@ If you would like to discuss this, please mention that you would like someone to
 </div>
 
 <div class="context-reading">
-Background reading:<br />
-<ul>
-    <li><mark class="blue">start→</mark> [Libre Fonts Culture](./culture)</li>
-    <li><mark class="blue">nerd→</mark> [Project Prioritization](./prioritization)</li>
-</ul>
+    Background reading:<br>
+    <mark class="blue">start</mark> <a href="./culture" style="font-weight:bold">Libre Fonts Culture</a>
+    <br>
+    <mark class="purple">nerd&nbsp;</mark> <a href="./prioritization">Project Prioritization</a>
 </div>
 
 ## Table of contents
@@ -151,18 +150,18 @@ You can find more about the technical aspect of adding a profile to google/fonts
 
 <div class="next-reading">
     Further reading:<br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements">Overall font requirements</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overall font requirements</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing">QA - Local testing</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing" style="font-weight:bold">QA - Local testing</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./statics">Static fonts specifics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./statics" style="font-weight:bold">Static fonts specifics</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable">Variable fonts specifics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics">Vertical metrics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./production">Production requirement</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a>
     <br>
-    <mark class="blue"><b>must&rarr;</b></mark> <a href="./prioritization">Project Prioritization</a>
+    <mark class="purple">nerd&nbsp;</mark> <a href="./prioritization">Project Prioritization</a>
 </div>
 
