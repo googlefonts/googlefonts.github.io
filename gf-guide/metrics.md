@@ -200,7 +200,7 @@ winAscent = 1000
 winDescent = 200
 ```
 
-*Notice each set set adds up to 1200, if the negative integers are converted to positive. This should lead to consistent metrics across each platform*
+*Notice each set adds up to 1200, if the negative integers are converted to positive. This should lead to consistent metrics across each platform*
 
 There are two cases that can occur.
 
@@ -346,7 +346,7 @@ If building from `.ufo`, these are:
 `vheaVertDescender` is the distance from the center of the glyph to the right edge (generally -500 for a `1000UPM` font).
 `vheaLineGap` is the horizontal space between lines of text.
 
-Most build systems (such as `makeotf` & `glyphsLib`) expect the `sTypoMetrics` to align with the font em-box, and use the `sTypoMetrics` to determine values in the `vmtx` and `vhea` tables. So the advancedHeight set in the `vmtx` table will be larger than the intended em-box value, leading to undesireable space when the font is set vertically. 
+Most build systems (such as `makeotf` & `glyphsLib`) expect the `sTypoMetrics` to align with the font em-box, and use the `sTypoMetrics` to determine values in the `vmtx` and `vhea` tables. So the advancedHeight set in the `vmtx` table will be larger than the intended em-box value, leading to undesirable space when the font is set vertically. 
 
 **Solutions**  
 It is possible to add in an override method into the `.fea` file which can correct for this issue. For example:

@@ -152,13 +152,13 @@ In such cases, a glyph substitution should make the dot disappear for example by
         <td>
             <figure>
                 <img src="images/diacritics/diac-softdotted-fail.gif" style="width:60px">
-                <figcaption style="font-size:0.8em"><i>Incorrect behavior of <tt>i-cy</tt> with <tt>acutecomb</tt> (і́), without the appropriate glyph substition.</i></figcaption>
+                <figcaption style="font-size:0.8em"><i>Incorrect behavior of <tt>i-cy</tt> with <tt>acutecomb</tt> (і́), without the appropriate glyph substitution.</i></figcaption>
             </figure>
         </td>
         <td>
             <figure>
                  <img src="images/diacritics/diac-softdotted.gif" style="width:60px">
-                 <figcaption style="font-size:0.8em"><i>Expected behavior of <tt>i-cy</tt> with <tt>acutecomb</tt> (і́), with the appropriate glyph substition.</i></figcaption>
+                 <figcaption style="font-size:0.8em"><i>Expected behavior of <tt>i-cy</tt> with <tt>acutecomb</tt> (і́), with the appropriate glyph substitution.</i></figcaption>
             </figure>
         </td>
     </tr>

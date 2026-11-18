@@ -83,7 +83,7 @@ Derived from 1.3 and 1.4. If there is no other registered axis that matches the 
 
 ## Axis Requirements
 
-The following are the requirements for a new custom axis to be registered, with expanded details about the <a haref="https://github.com/googlefonts/axisregistry#axis-metadata-fields" taget=_blank>Axis Metadata Fields</a> that should be included in the `.textproto` file for the axis.
+The following are the requirements for a new custom axis to be registered, with expanded details about the <a href="https://github.com/googlefonts/axisregistry#axis-metadata-fields" target=_blank>Axis Metadata Fields</a> that should be included in the `.textproto` file for the axis.
 
 - #### An existing font project introducing the axis
 There should be a production-ready VF project with the new axis. Axes can't be defined up front without a variable font family that requires the axis.

@@ -120,7 +120,7 @@ These files and directories have the following purposes:
         
 -   [**fonts**](requirements.md)
     <br>
-    A directory containing font binaries or subdirectories for each font format. If your project provides multiple formats, do not include them all in one folder. Create a folder for each format e.g `fonts/otf`, `fonts/ttf`, `fonts/webfonts`. The [Builder](build.md) told does that by default.
+    A directory containing font binaries or subdirectories for each font format. If your project provides multiple formats, do not include them all in one folder. Create a folder for each format e.g `fonts/otf`, `fonts/ttf`, `fonts/webfonts`. The [Builder](build.md) tool does that by default.
 
 -   **[requirements.txt](https://github.com/googlefonts/Unified-Font-Repository/blob/main/requirements.txt)**
     <br>

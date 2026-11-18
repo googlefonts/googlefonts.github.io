@@ -194,7 +194,7 @@ Run the command `gftools qa --help` to have an overview of the tool and its opti
 
 ## Recap of your .bash_profile
 
-The `bash profile` (or `z profile` according to your shell script), is loaded before your Command Line Interface (CLI) loads your shell environment and contains all the startup configuration and preferences for your CLI. In macOS, the file is hidden (starts with a `.`) in your home directory. You can display the hidden files (`shift`+`fn`+`cmd`+`.`) and open the file in a code editor. Otherwise, check on the Internet how to find and edit it.
+The `bash profile` (or `z profile` according to your shell script), is loaded before your Command Line Interface (CLI) loads your shell environment and contains all the startup configuration and preferences for your CLI. In macOS, the file is hidden (starts with a `.`) in your home directory. You can display the hidden files (`cmd`+`shift`+`.` in the Finder) and open the file in a code editor. Otherwise, check on the Internet how to find and edit it.
 
 Once you have set up `git` and all the other tools, your bash profile (or z profile according to your shell script) should look like this:
 

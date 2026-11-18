@@ -145,7 +145,7 @@ As a developer or a team member, you may want to know the process for registerin
     This is a common usage:
 
     ``` code
-    gftools add-designer path/to/local/designer/dir "José María Ribagorda" --img_path path/to/josemariaribagorda.png --spreadsheet path/to/speadsheet.xls
+    gftools add-designer path/to/local/designer/dir "José María Ribagorda" --img_path path/to/josemariaribagorda.png --spreadsheet path/to/spreadsheet.xls
     ```
 
     -  If you don’t use the `--spreadsheet` argument, then the script will insert a blank `bio.html` that you will have to update manually.
