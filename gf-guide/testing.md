@@ -20,7 +20,7 @@ Bear in mind:
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./static" style="font-weight:bold">Static fonts specifics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./statics" style="font-weight:bold">Static fonts specifics</a>
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
 </div>

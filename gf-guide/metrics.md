@@ -30,7 +30,7 @@ Please note that the first metrics guidelines referred to in this guide are Lati
 ## Requirements for all fonts **(except CJK)**
 
 The following rules apply to all new font families and should be enforced for upgraded font families when possible. 
-For font families designed for Chinese, Japanese, and Korean (CJK), please refer to the ([CJK Vertical Metrics section below](#CJK-vertical-metrics).)
+For font families designed for Chinese, Japanese, and Korean (CJK), please refer to the [CJK Vertical Metrics section below](#cjk-vertical-metrics).
 
 #### 1. Vertical metrics must not be calculated by the font editor automatically
 

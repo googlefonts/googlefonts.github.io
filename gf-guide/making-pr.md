@@ -29,7 +29,7 @@ As a general rule, <b>GF requires users to open an issue before submitting anyth
     Background reading:<br>
     <mark class="yellow">learn</mark> <a href="./hosting">Hosting projects on GitHub</a>
     <br>
-    <mark class="blue">start</mark> <a href="./required-knowledge" style="font-weight:bold">Knowledge, tools and dependencies required</a>
+    <mark class="blue">start</mark> <a href="./tools#required-knowledge" style="font-weight:bold">Knowledge, tools and dependencies required</a>
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./onboarding" style="font-weight:bold">Adding & upgrading fonts to Google Fonts</a>
     <br>

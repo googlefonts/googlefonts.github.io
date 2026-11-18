@@ -73,13 +73,13 @@ If the family is a variable font family, another directory called `static` can b
 
 ``` code
 .
-├── DESCRIPTION.en_us.html
+├── article/ARTICLE.en_us.html
 ├── METADATA.pb
 ├── License (OFL.txt, UFL.txt, License.txt)
 ├── FontFamily[axis].ttf
 ├── static
 │   ├── FontFamily-Regular.ttf
-│       └── FontFamily-Bold.ttf
+│   └── FontFamily-Bold.ttf
 └── upstream.yaml
 ```
 
@@ -168,7 +168,7 @@ Once you have a set of changes that you want to be merged into `google/fonts`, t
 
 <div class="next-reading">
     Further reading:<br>
-    <mark class="brown">team&nbsp;</mark> <a href="./description">Description file</a>
+    <mark class="brown">team&nbsp;</mark> <a href="./article">Article file</a>
   <br>
     <mark class="brown">team&nbsp;</mark> <a href="./profile">Designer profile</a>
   <br>

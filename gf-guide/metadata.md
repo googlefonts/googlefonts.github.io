@@ -501,9 +501,9 @@ ordered_sample_glyphs {
 
 <div class="next-reading">
     Further reading:<br>
-    <mark class="grey">templ</mark> <a href="./license">Designer profile</a>
+    <mark class="grey">templ</mark> <a href="./profile">Designer profile</a>
     <br>
-    <mark class="grey">templ</mark> <a href="./license">License file</a>
+    <mark class="grey">templ</mark> <a href="./license-file">License file</a>
     <br>
     <mark class="grey">templ</mark> <a href="./authors">Authors and Contributors</a>
     <br>

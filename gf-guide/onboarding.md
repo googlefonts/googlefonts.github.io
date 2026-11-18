@@ -155,7 +155,7 @@ You can find more about the technical aspect of adding a profile to google/fonts
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./testing">QA - Local testing</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./static">Static fonts specifics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./statics">Static fonts specifics</a>
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./variable">Variable fonts specifics</a>
     <br>

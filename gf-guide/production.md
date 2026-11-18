@@ -17,7 +17,7 @@ This section will help users to understand the implications of publishing fonts 
     Background reading:<br>
     <mark class="blue">start</mark> <a href="./culture" style="font-weight:bold">Libre Font Culture</a>
     <br>
-    <mark class="blue">start</mark> <a href="./required-knowledge" style="font-weight:bold">Knowledge, tools and dependencies required</a>
+    <mark class="blue">start</mark> <a href="./tools#required-knowledge" style="font-weight:bold">Knowledge, tools and dependencies required</a>
 </div>
 
 ## Table of contents

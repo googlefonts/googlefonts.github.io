@@ -17,7 +17,7 @@ This guide will give users a short introduction to font’s outline from a techn
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets)" style="font-weight:bold">Overall font files requirements/Glyphsets</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/requirements.html#glyph-sets" style="font-weight:bold">Overall font files requirements/Glyphsets</a>
 </div>
 
 ## Table of contents

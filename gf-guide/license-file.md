@@ -184,5 +184,5 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
     Further reading:<br>
     <mark class="grey">templ</mark> <a href="./authors">Authors and Contributors</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./readme" style="font-weight:bold">README file</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./readmefile" style="font-weight:bold">README file</a>
 </div>
