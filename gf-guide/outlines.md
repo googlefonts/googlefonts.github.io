@@ -9,7 +9,7 @@
 
 🐸  Make sure your font is ready for production by fulfilling the check-list below. Design is not particularly judged here, we are talking from the point of view of the technical quality aspect of a font, i.e: OS, browsers, apps and printers will be able to read the font file and display it as the designer intended.
 <br><br>
-Note that some font editors or export tools will partly do the job for you. Always test your exported fonts in different environments, open them in a font editor, or run a Fontbakery report on them, to make sure that everything looks like what you want.
+Note that some font editors or export tools will partly do the job for you. Always test your exported fonts in different environments, open them in a font editor, or run a [Fontspector](qa.md#checking-with-fontspector) report on them, to make sure that everything looks like what you want.
 <br><br>
 This guide will give users a short introduction to font’s outline from a technical perspective. With that knowledge, we will see how to prepare them so they appear the best on screen.
 
@@ -17,7 +17,7 @@ This guide will give users a short introduction to font’s outline from a techn
 
 <div class="context-reading">
     Background reading:<br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/requirements.html#glyphsets)" style="font-weight:bold">Overall font files requirements/Glyphsets</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="https://googlefonts.github.io/gf-guide/requirements.html#glyph-sets" style="font-weight:bold">Overall font files requirements/Glyphsets</a>
 </div>
 
 ## Table of contents
@@ -27,7 +27,7 @@ This guide will give users a short introduction to font’s outline from a techn
 
 ## Basic terminology
 
-A `glyph` is a representation of a `character` in terms of shape and design. In digital type design, we usually draw glyphs using `vector graphics`; the ones called `Bézier curves`. The vector graphics have that advantage of preserving their shapes whatever the rendering size, because they are described by `points coordinates`, that can be scaled up and down without loosing any information. But remember, vectors are just *numbers*. What you see is the `rendering` of vectors graphics. On screen, they need to be translated into pixels —this is called the `rasterization process`— and in print, they need to be translated into `points` —actual `dots`.
+A `glyph` is a representation of a `character` in terms of shape and design. In digital type design, we usually draw glyphs using `vector graphics`; the ones called `Bézier curves`. The vector graphics have that advantage of preserving their shapes whatever the rendering size, because they are described by `points coordinates`, that can be scaled up and down without losing any information. But remember, vectors are just *numbers*. What you see is the `rendering` of vectors graphics. On screen, they need to be translated into pixels —this is called the `rasterization process`— and in print, they need to be translated into `points` —actual `dots`.
 
 A `Bézier curve` is a `segment` whose length and position is defined by of two points called `on-curve` points. The curvature of that segment is controlled by additional points called `off-curve points` (because they are *off* the curve), or `control points` (because they *control* the curvature). Their position is relative to an on-curve point. Hence why they are often represented as small `handles` linked an on-curve point. A `curve-sergment` has a curvature and therefore off-curve points, a `line-segment` is flat and therefore doesn’t need off-curve points.
 
@@ -133,5 +133,5 @@ Unless absolutely necessary, avoid over-complicated outline drawing. One example
     Further reading:<br>
     <mark class="yellow">learn</mark> <a href="./diacritics">Diacritics</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing">QA - Local testing</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing" style="font-weight:bold">QA - Local testing</a>
 </div>

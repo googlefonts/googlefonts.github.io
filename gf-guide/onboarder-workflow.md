@@ -220,7 +220,7 @@ This is how to set the progress status manually:
 <br>
 
 <figure>
-<img src="./images/onboarder-workflow/status-milestone.png" style="width:2568px" alt="Progress status from teh milestone tab" />
+<img src="./images/onboarder-workflow/status-milestone.png" style="width:2568px" alt="Progress status from the milestone tab" />
 <figcaption aria-hidden="true">How to set a status from the Milestone tab.</figcaption>
 </figure>
 
@@ -499,7 +499,7 @@ It is also required to justify any Fontspector FAILS that should be ignored.
 - If it's a bug, link the issue reporting that bug to Fontspector (create one if it doesn't exist).
 - If you don't know what a specific FAIL means, ask for help in the comment.
 
-Fontspector has already some exception lists when it comes to [RFN](https://github.com/fonttools/fontspector/blob/main/profile-googlefonts/resources/reserved_font_name_exceptions.txt) and [abbreviated font names](https://github.com/fonttools/fontspector/blob/main/profile-googlefonts/resources/abbreviations_familyname_exceptions.txt) and [camel-case font name](https://github.com/fonttools/fontspector/blob/main/profile-googlefonts/resources/camelcased_familyname_exceptions.txt). If the family name of the font is added there, then the FAIL should not yeild anymore (once next version of Fontspector released).
+Fontspector has already some exception lists when it comes to [RFN](https://github.com/fonttools/fontspector/blob/main/profile-googlefonts/resources/reserved_font_name_exceptions.txt) and [abbreviated font names](https://github.com/fonttools/fontspector/blob/main/profile-googlefonts/resources/abbreviations_familyname_exceptions.txt) and [camel-case font name](https://github.com/fonttools/fontspector/blob/main/profile-googlefonts/resources/camelcased_familyname_exceptions.txt). If the family name of the font is added there, then the FAIL should not yield anymore (once next version of Fontspector released).
 
 #### The visual QA
 
@@ -547,7 +547,7 @@ If an important regression is introduced, we should decide to either accept it a
 
 **[METADATA.pb](./metadata.md)**
 
-Check even if there is no FAILs reported by font bakery.
+Check even if there are no FAILs reported by Fontspector.
 
 - Check all fields to ensure they make sense:
     - classification is correct according to font 

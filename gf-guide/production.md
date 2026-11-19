@@ -17,7 +17,7 @@ This section will help users to understand the implications of publishing fonts 
     Background reading:<br>
     <mark class="blue">start</mark> <a href="./culture" style="font-weight:bold">Libre Font Culture</a>
     <br>
-    <mark class="blue">start</mark> <a href="./required-knowledge" style="font-weight:bold">Knowledge, tools and dependencies required</a>
+    <mark class="blue">start</mark> <a href="./tools#required-knowledge" style="font-weight:bold">Knowledge, tools and dependencies required</a>
 </div>
 
 ## Table of contents
@@ -41,10 +41,16 @@ Google Fonts is doing its best to ensure that publishing or updating fonts are u
 
 Fonts to be onboarded to Google Fonts are expected to abide by the following requisites:
 
--   **The design source files (plus scripts) are available** in your preferred font editor format.
+-   **The source files are available** in your preferred font editor format.
     <br>
-    The file formats most used are `UFO`, `.glyphs`, `.glyphspackage`, `fontforge` or `fontlab 7`.
-    <br><br>`.glyphspackage` is preferred over `.glyphs` due to it being easier to work with in version control (Git). `Fontlab V` files must be converted to another format because the software runs only on older OS versions. If you are using any font format other than `.glyphs`, `.glyphspackage`, and `.ufo`, include a build script that converts the sources to UFO, and include the UFO sources in the Git repository. Use **[Fontlab to UFO](https://pypi.org/project/vfb2ufo3/)** or **[FontForge to UFO](https://github.com/fontforge/sfd2ufo)** for example.
+    These must be the "true" sources that are used for active development of the font, rather than an interchange format (for example, a `.ufo` exported only to run the build tools). The file formats most commonly used are `.ufo` / `.ufoz`, `.glyphs` / `.glyphspackage`, `FontCreator`, `FontForge`, or `FontLab`.
+
+    - In the case of `Glyphs`-based development, `.glyphspackage` is preferred over `.glyphs` due to it being easier to work with in version control (Git).
+    - `FontLab V` (`.vfb`) files must be converted to another format because the software runs only on older OS versions.
+    - If you are using any font format other than `.glyphs`, `.glyphspackage`, and `.ufo`, you must include a build script that converts the sources to UFO, and include the `UFO` sources in the Git repository. For example:
+        - [FontLab to UFO](https://pypi.org/project/vfb2ufo3/) (`.vfb`)
+        - [FontForge to UFO](https://github.com/fontforge/sfd2ufo) (`.sfd`)
+        - For formats that do not currently offer a script-based conversion method (such as `.vfc` for `FontLab 7`+ and `.fcp` for `FontCreator`), please include both the source and an exported interchange file, such as `.ufo`, in the repository.
 
 
 -   **Fonts should be built using open-source tools.** This ensures that they can be built under the same conditions on any platform.
@@ -57,7 +63,7 @@ Fonts to be onboarded to Google Fonts are expected to abide by the following req
 
 -   **Projects are kept in a version control system.** Since GF only releases Open Source fonts, each released family is expected to be [hosted in GitHub](./hosting) and have its own [upstream repository](./upstream).
 
--   **CI ([Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)) should be used for build and testing purposes,** **[applied to fonts](https://simoncozens.github.io/tdd-for-otl/).** GF main repository [github.com/google/fonts](https://github.com/google/fonts) uses CI. When new fonts are pushed, the CI will run a test suite (`gftools qa`, which is a wrapper around [Fontbakery](https://github.com/googlefonts/fontbakery) and various other proofing scripts), and the results will be reviewed.
+-   **CI ([Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)) should be used for build and testing purposes,** **[applied to fonts](https://simoncozens.github.io/tdd-for-otl/).** GF main repository [github.com/google/fonts](https://github.com/google/fonts) uses CI. When new fonts are pushed, the CI will run a test suite (`gftools qa`, which is a wrapper around [Fontspector](https://github.com/fonttools/fontspector) and various other proofing tools), and the results will be reviewed.
 
 -   **Issues and reported Fails should be fixed before publishing or upgrading.**
 
@@ -69,7 +75,7 @@ Fonts to be onboarded to Google Fonts are expected to abide by the following req
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./upstream" style="font-weight:bold">Upstream repository structure</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing">QA - Local testing</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing" style="font-weight:bold">QA - Local testing</a>
     <br>
     <mark class="yellow">learn</mark> <a href="./build">Build the fonts</a>
 </div>

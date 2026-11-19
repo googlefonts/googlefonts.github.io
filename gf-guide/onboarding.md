@@ -24,11 +24,10 @@ If you would like to discuss this, please mention that you would like someone to
 </div>
 
 <div class="context-reading">
-Background reading:<br />
-<ul>
-    <li><mark class="blue">start→</mark> [Libre Fonts Culture](./culture)</li>
-    <li><mark class="blue">nerd→</mark> [Project Prioritization](./prioritization)</li>
-</ul>
+    Background reading:<br>
+    <mark class="blue">start</mark> <a href="./culture" style="font-weight:bold">Libre Fonts Culture</a>
+    <br>
+    <mark class="purple">nerd&nbsp;</mark> <a href="./prioritization">Project Prioritization</a>
 </div>
 
 ## Table of contents
@@ -77,20 +76,26 @@ If you would like to include a new font family in the Google Fonts collection, w
     
 -   **The source files are available** in your preferred font editor format.
     <br>
-    The file formats most used are `UFO`, `.glyphs`, `.glyphspackage`, `fontforge` or `fontlab 7`.
-    <br><br>`.glyphspackage` is preferred over `.glyphs` due to it being easier to work with in version control (Git). `Fontlab V` files must be converted to another format because the software runs only on older OS versions. If you are using any font format other than `.glyphs`, `.glyphspackage`, and `.ufo`, include a build script that converts the sources to UFO, and include the UFO sources in the Git repository. Use **[Fontlab to UFO](https://pypi.org/project/vfb2ufo3/)** or **[FontForge to UFO](https://github.com/fontforge/sfd2ufo)** for example.
+    These must be the "true" sources that are used for active development of the font, rather than an interchange format (for example, a `.ufo` exported only to run the build tools). The file formats most commonly used are `.ufo` / `.ufoz`, `.glyphs` / `.glyphspackage`, `FontCreator`, `FontForge`, or `FontLab`.
+
+    - In the case of `Glyphs`-based development, `.glyphspackage` is preferred over `.glyphs` due to it being easier to work with in version control (Git).
+    - `FontLab V` (`.vfb`) files must be converted to another format because the software runs only on older OS versions.
+    - If you are using any font format other than `.glyphs`, `.glyphspackage`, and `.ufo`, you must include a build script that converts the sources to UFO, and include the `UFO` sources in the Git repository. For example:
+        - [FontLab to UFO](https://pypi.org/project/vfb2ufo3/) (`.vfb`)
+        - [FontForge to UFO](https://github.com/fontforge/sfd2ufo) (`.sfd`)
+        - For formats that do not currently offer a script-based conversion method (such as `.vfc` for `FontLab 7`+ and `.fcp` for `FontCreator`), please include both the source and an exported interchange file, such as `.ufo`, in the repository.
 
 -   **The build should follow the [Scalable Font Production principle](production.md).**
     <br>
-    Fonts are built using [Fontmake](https://github.com/googlefonts/fontmake), which can generate binaries from `UFO`. Fontmake can also convert `.glyphs` files to UFO, but if you are using any other font format, your build process should contain a step that converts the sources to UFO. Read the chapter about [building fonts](build.md) to know more about the build process.
+    Fonts are built using [Fontmake](https://github.com/googlefonts/fontmake), which can generate binaries from `UFO`. Fontmake can also convert `.glyphs` and `.glyphspackage` files to `.ufo`, but if you are using any other font format, your build process should contain a step that converts the sources to `UFO`. Read the chapter about [building fonts](build.md) to know more about the build process.
 
--   **All binary font files must be available in TTF format.**
+-   **All binary font files must be available in TTF format, either directly in the repository, or as a release.**
  
 -   **All font files should support, at least, the ["GF Latin Core"](https://github.com/googlefonts/glyphsets/blob/main/data/results/txt/nice-names/GF_Latin_Core.txt) glyph set.**
   
 -   **All font files should follow the [Overall font files requirements](requirements.md).**
 
--   **All font files should pass the [FontBakery](https://github.com/googlefonts/fontbakery) checks for the [googlefonts profile](https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html).** Please read the [QA section](qa.md) of the Google Fonts guide for more information on quality assurance requirements.
+-   **All font files should pass the [Fontspector](https://github.com/fonttools/fontspector) checks for the `googlefonts` profile.** Please read the [QA section](qa.md) of the Google Fonts guide for more information on quality assurance requirements.
 
 -   **All font source files should follow the [outline quality guide](outlines.md).**
 
@@ -151,18 +156,18 @@ You can find more about the technical aspect of adding a profile to google/fonts
 
 <div class="next-reading">
     Further reading:<br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements">Overall font requirements</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./requirements" style="font-weight:bold">Overall font requirements</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing">QA - Local testing</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./testing" style="font-weight:bold">QA - Local testing</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./static">Static fonts specifics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./statics" style="font-weight:bold">Static fonts specifics</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable">Variable fonts specifics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics">Vertical metrics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./production">Production requirement</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a>
     <br>
-    <mark class="blue"><b>must&rarr;</b></mark> <a href="./prioritization">Project Prioritization</a>
+    <mark class="purple">nerd&nbsp;</mark> <a href="./prioritization">Project Prioritization</a>
 </div>
 

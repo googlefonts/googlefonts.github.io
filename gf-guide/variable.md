@@ -66,7 +66,7 @@ A variable font is simply a static font that has some additional tables (`fvar`,
 
 Type designers tend to conceive of the variable font as consisting of a bunch of “master fonts” which can then be interpolated between. But in fact, there is only a single master, and what the designer thinks of as additional masters are just sets of instructions to move points around (the famous delta points). That single master is the *font origin*, or in the OpenType Specification the *zero origin*.
 
-Often font developers are unaware of what the font origin is within their fonts. They will then complain that Fontbakery is failing many checks. It is recommended that font developers read the [Microsoft OpenType Font Variations Overview](https://docs.microsoft.com/en-us/typography/opentype/spec/otvaroverview) to better understand how a variable font works.
+Often font developers are unaware of what the font origin is within their fonts. They will then complain that Fontspector is failing many checks. It is recommended that font developers read the [Microsoft OpenType Font Variations Overview](https://docs.microsoft.com/en-us/typography/opentype/spec/otvaroverview) to better understand how a variable font works.
 
 The important thing to know is that the font origin will be the actual default instance displayed in environments that don’t support the variable font format (and the only accessible instance for some other). For example, if the font origin of the font is the `Thin` style, then in some environments, only the `Thin` instance will be displayed. GF tends to seek consistency between the name and the displayed font: so the full name of the variable font would be `Font Name Thin`. That way, if variable font specific tables are to be removed, the resulting static font would have matching bits and name records.
 
@@ -158,20 +158,24 @@ Named sizes like "Display", "Text", "Micro" etc are not allowed, because they ar
 
 As of May 2023, the download ZIPs available from fonts.google.com will only create just 2-5 sets of static fonts from your optical size range, using values in the axis registry, and a "clamping" heuristic codenamed the "green dot algorithm." It is helpful for users to have the same named styles available as static fonts in the ZIP also available as named styles in the STAT table.
 
-### `ital` **/** `slnt`
+### `ital` **and** `slnt`
 
-GF only supports the `ital` axis as a Boolean (`0`/`1`) value to link two separate VFs (Roman/Italic) in the STAT table. And slant axis if the font is not meant to have italic instances.
+GF does not support the Italic `ital` axis as a variation axis within one VF.
+The API offers families the appearance of an Italic axis, as a Boolean (`0` or `1`) value, that in reality is two separate VF files (a Roman and an Italic) that are linked as one family in their STAT table data.
+So if you have one VF with an `ital` axis today, it cannot be onboarded (and if it was, the italics would not be served by the GF API).
 
-**→ GF doesn’t support the ital axis within one VF as a variation axis.**
+GF does support the Slant `slnt` axis, and when the font is meant to have italic or oblique styles that interpolate with the upright Roman styles, this axis must be used.
+So to enable italic instances to be served by the GF API, you must deliver either **two variable font files**, or **one variable font file with the axis retagged as `slnt`**.
+This is due to uneven support in web browsers, which Stephen Nixon documented thoroughly for GF in [arrowtype.github.io/vf-slnt-test](https://arrowtype.github.io/vf-slnt-test).
 
-So if you have one VF with `slant` or `ital` axis, it won’t have italics served by GF API. If you want italic instances served by the GF API, then you will have to deliver **two variable font files**.
+e.g. `FamilyName[wght].ttf` and `FamilyName-Italic[wght].ttf`, or `FamilyName[slnt,wght].ttf`
 
-e.g. `Texturina[wght].ttf` and `Texturina-Italic[wght].ttf`
+When you deliver two files, style linking between them will be preserved by:
 
-Style linking between these two files will be preserved by:
-
--   The [post-script name ID 25](https://adobe-type-tools.github.io/font-tech-notes/pdfs/5902.AdobePSNameGeneration.pdf) for Adobe InDesign, which (for now) requires this scheme: `FontName` for the Roman font, and `FontNameItalic` for the Italic font. The [Builder](build.md) will set that up for you using default settings and/or your STAT table values.
+-   The [post-script name ID 25](https://adobe-type-tools.github.io/font-tech-notes/pdfs/5902.AdobePSNameGeneration.pdf) for Adobe InDesign, which (for now) requires this scheme: `FamilyName` for the Roman font, and `FamilyNameItalic` for the Italic font.
 -   The `ital` axis in the `STAT` table.
+
+The [Builder](build.md) will set both of them by default.
 
 As well as the style-linking bits used to link static fonts explained in [this section](./statics#style-linking):
 -   The italic style bits in the `head` and `OS/2` table

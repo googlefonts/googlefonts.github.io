@@ -7,7 +7,7 @@
 
 <div class="callout">
 
-🕷 Type designers are familiar with the five axes already defined by Microsoft in the OpenType specification. However, for each new variable font that type designer develops, it often introduces new axes. In order for a family introducing new custom axes to be added to the Google Fonts API and Catalog, each axis it offers must be “registered” – it must have a definition in the <a href="github.com/googlefonts/axisregistry" target=_blank> GF Axis Registry</a>. 
+🕷 Type designers are familiar with the five axes already defined by Microsoft in the OpenType specification. However, for each new variable font that type designer develops, it often introduces new axes. In order for a family introducing new custom axes to be added to the Google Fonts API and Catalog, each axis it offers must be “registered” – it must have a definition in the <a href="https://github.com/googlefonts/axisregistry" target=_blank> GF Axis Registry</a>. 
 <br><br>
 The requirements and principles of axis definition have been established mainly by a cross-functional group of fonts team members by Q3 2022. This protocol provides a guide to handling it within the font project as part of the onboarding process to Google Fonts. It offers detailed information on the required information, how to define it, and the required steps.
 
@@ -83,7 +83,7 @@ Derived from 1.3 and 1.4. If there is no other registered axis that matches the 
 
 ## Axis Requirements
 
-The following are the requirements for a new custom axis to be registered, with expanded details about the <a haref="https://github.com/googlefonts/axisregistry#axis-metadata-fields" taget=_blank>Axis Metadata Fields</a> that should be included in the `.textproto` file for the axis.
+The following are the requirements for a new custom axis to be registered, with expanded details about the <a href="https://github.com/googlefonts/axisregistry#axis-metadata-fields" target=_blank>Axis Metadata Fields</a> that should be included in the `.textproto` file for the axis.
 
 - #### An existing font project introducing the axis
 There should be a production-ready VF project with the new axis. Axes can't be defined up front without a variable font family that requires the axis.

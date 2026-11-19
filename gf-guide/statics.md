@@ -74,7 +74,7 @@ In Glyphs.app, the `Family Name` in font info (or the `Localised Family Name` in
 
 Several tables in font files need to be set to enable proper style linking between Upright/Italic and Regular/Bold. You can look at the OpenType spec for more info about the:
 - [`post`](https://learn.microsoft.com/en-us/typography/opentype/spec/post) table, regarding `italic angle` value; 
-- [`OS/2`](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fss) table for the the `fsSelection` values; 
+- [`OS/2`](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#fss) table for the `fsSelection` values; 
 - [`head`](https://learn.microsoft.com/en-us/typography/opentype/spec/head) table for `macStyle` values;
 - [`name`](https://learn.microsoft.com/en-us/typography/opentype/spec/name) table regarding Name ID 2
 
@@ -189,7 +189,7 @@ Static fonts should be hinted using the latest version of [ttfautohint](https:/
 
 If you don’t use [gftools builder](build.md) (which autohint static fonts by default but you can turn off that option), you should run the fonts through `gftools fix-hinting` once the fonts have been hinted. If the fonts are unhinted, run the fonts through `gftools fix-nonhinting`.
 
-Fontmake does not support manual hinting from Glyphs. You can use use [VTT](https://docs.microsoft.com/en-us/typography/tools/vtt/) instead and you can patch a VTT program with [gftools builder](https://googlefonts.github.io/gf-guide/build.html#gftools-builder) — see [Montserrat](https://github.com/googlefonts/Montserrat/tree/master/sources) as an example.
+Fontmake does not support manual hinting from Glyphs. You can use [VTT](https://docs.microsoft.com/en-us/typography/tools/vtt/) instead and you can patch a VTT program with [gftools builder](https://googlefonts.github.io/gf-guide/build.html#gftools-builder) — see [Montserrat](https://github.com/googlefonts/Montserrat/tree/master/sources) as an example.
 
 ------------------------------------------------------------------------
 

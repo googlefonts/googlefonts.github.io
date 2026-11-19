@@ -30,7 +30,7 @@ Please note that the first metrics guidelines referred to in this guide are Lati
 ## Requirements for all fonts **(except CJK)**
 
 The following rules apply to all new font families and should be enforced for upgraded font families when possible. 
-For font families designed for Chinese, Japanese, and Korean (CJK), please refer to the ([CJK Vertical Metrics section below](#CJK-vertical-metrics).)
+For font families designed for Chinese, Japanese, and Korean (CJK), please refer to the [CJK Vertical Metrics section below](#cjk-vertical-metrics).
 
 #### 1. Vertical metrics must not be calculated by the font editor automatically
 
@@ -100,7 +100,7 @@ Following recent tests to confirm our vertical metrics policies, we now require 
 Even if the font does not support Vietnamese yet, we strongly suggest estimating the ascenders value foreseeing the `Abreveacute U+1EAE` height based on two main reasons:
 
 **Once the font is published, the vertical metric values cannot be modified.** By implementing the above approach, we can keep the option of updating the font in the future to support additional languages like Vietnamese.
-- Certain Mac applications, including TextEdit, determine the height of the first line of text by either the `Agrave U+00C0` height or the font's `hheaAscender`, whichever is taller (for additional information on this topic, please refer to this issue: <https://github.com/googlefonts/fontbakery/issues/3170>). So `Agrave U+00C0` is a required minimum, and `Abreveacute U+1EAE` is a strongly recommended minimum.
+- Certain Mac applications, including TextEdit, determine the height of the first line of text by either the `Agrave U+00C0` height or the font's `hheaAscender`, whichever is taller (for additional information on this topic, please refer to this issue: <https://github.com/fonttools/fontbakery/issues/3170>). So `Agrave U+00C0` is a required minimum, and `Abreveacute U+1EAE` is a strongly recommended minimum.
 
 #### 11. The sum of the font’s vertical metric values (absolute) should be 20-30% greater than the font’s UPM
 
@@ -200,7 +200,7 @@ winAscent = 1000
 winDescent = 200
 ```
 
-*Notice each set set adds up to 1200, if the negative integers are converted to positive. This should lead to consistent metrics across each platform*
+*Notice each set adds up to 1200, if the negative integers are converted to positive. This should lead to consistent metrics across each platform*
 
 There are two cases that can occur.
 
@@ -244,7 +244,7 @@ The Typo Metrics need to inherit the v1.000 Win values. The WinAscent and WinDes
 2.  Repeat the process for each weight/style if values are not unique in v1.000
 3.  Enable Use_Typo_Metrics
 
-If the font is already hosted on [fonts.google.com](http://fonts.google.com/), you can confirm the upgraded vertical metrics visually match by using [diffenator2](https://github.com/googlefonts/diffenator2) with the command `diffenator2 diff -fb font1.ttf -fa font2.ttf -o out_dir` where `-fb` stands for `--fonts-before` and `-fa` for `--fonts-after`.
+If the font is already hosted on [fonts.google.com](http://fonts.google.com/), you can confirm the upgraded vertical metrics visually match by using [diffenator3](https://github.com/googlefonts/diffenator3) with the command `diffenator3 --html --output out_dir font_before.ttf font_after.ttf`, where the first font is the version currently hosted on Google Fonts and the second one is your updated version.
 
 ## CJK Vertical Metrics
 
@@ -346,7 +346,7 @@ If building from `.ufo`, these are:
 `vheaVertDescender` is the distance from the center of the glyph to the right edge (generally -500 for a `1000UPM` font).
 `vheaLineGap` is the horizontal space between lines of text.
 
-Most build systems (such as `makeotf` & `glyphsLib`) expect the `sTypoMetrics` to align with the font em-box, and use the `sTypoMetrics` to determine values in the `vmtx` and `vhea` tables. So the advancedHeight set in the `vmtx` table will be larger than the intended em-box value, leading to undesireable space when the font is set vertically. 
+Most build systems (such as `makeotf` & `glyphsLib`) expect the `sTypoMetrics` to align with the font em-box, and use the `sTypoMetrics` to determine values in the `vmtx` and `vhea` tables. So the advancedHeight set in the `vmtx` table will be larger than the intended em-box value, leading to undesirable space when the font is set vertically. 
 
 **Solutions**  
 It is possible to add in an override method into the `.fea` file which can correct for this issue. For example:
@@ -377,7 +377,7 @@ Two alternate options using a post-production script:
 -   [Show Vertical Metrics](https://github.com/mekkablue/ShowVerticalMetrics) plug-in in GlyphsApp
 -   Mekkablue’s [Vertical Metrics Manager](https://github.com/mekkablue/Glyphs-Scripts/blob/master/Font%20Info/Vertical%20Metrics%20Manager.py)
 -   [Impallari/testing](https://github.com/impallari/Font-Testing-Page): Font tester which has no CSS line-height property set ([live site](http://cyreal.org/Font-Testing-Page))
--   [Diffenator2](https://github.com/googlefonts/diffenator2): Create diffing docs to compare local updated fonts against currently hosted versions on [fonts.google.com](http://fonts.google.com/)
+-   [Diffenator3](https://github.com/googlefonts/diffenator3): Create diffing docs to compare local updated fonts against currently hosted versions on [fonts.google.com](http://fonts.google.com/)
 
 <!-- <div class="next-reading">
     Further reading:<br>

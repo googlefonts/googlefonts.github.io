@@ -37,13 +37,13 @@ See the useful links section at the bottom of this page to bring you up to speed
 
 ## Setting up a working environment
 
-Most of these tools are Python-based, but you may need to install some other tools before. *Specifics for every OS* *can’t be detailed here; therefore, it is your responsibility to search the Internet to find the right way to install and use these tools according to your own environment.*
+Most of these tools are Python-based (Fontspector, our QA tool, is a standalone program written in Rust), but you may need to install some other tools before. *Specifics for every OS* *can’t be detailed here; therefore, it is your responsibility to search the Internet to find the right way to install and use these tools according to your own environment.*
 
 To work with Google Fonts, you would need to install at least:
 
 -   [**Python 3.10**](https://www.python.org/downloads/) or above — to be able to run all the other tools
 -   [**gftools**](https://github.com/googlefonts/gftools) — a set of tools used for working with the Google Fonts collection
--   [**Fontbakery**](https://github.com/googlefonts/fontbakery) — a command-line tool for checking the quality of font projects.
+-   [**Fontspector**](https://github.com/fonttools/fontspector) — a command-line tool for checking the quality of font projects. It replaces Fontbakery, which was used previously.
 
 ### Shell and command-line
 
@@ -134,17 +134,28 @@ A [requirements.txt](upstream.md) file listing all the needed tools and dependen
 pip install -r requirements.txt
 ```
 
-### Fontbakery
+### Fontspector
 
-Fontbakery is a quality assurance (QA) testing tool. It runs a series of checks on the technical correctness of the exported fonts based on a vendor’s profile. You can find more documentation about it in the GitHub repository [googlefonts/fontbakery](https://github.com/googlefonts/fontbakery).
+Fontspector is the quality assurance (QA) testing tool used by Google Fonts. It runs a series of checks on the technical correctness of the exported fonts based on a vendor’s profile. It is a Rust port of Fontbakery, the Python tool previously used by Google Fonts, and it is much faster. You can find more documentation about it in the GitHub repository [fonttools/fontspector](https://github.com/fonttools/fontspector).
 
-To install Fontbakery, run the command:
+Unlike the other tools on this page, Fontspector is not a Python package, so it is not installed with `pip` or listed in your `requirements.txt` file. It is distributed as a single executable file which contains all the checks and profiles.
 
-``` code
-pip3 install -U fontbakery'[googlefonts]'
-```
+If you only want to check a few fonts, you don't need to install anything: the [web version of Fontspector](https://fonttools.github.io/fontspector/) provides almost all the features of the command-line tool. It runs entirely in your browser, and your fonts are not uploaded anywhere.
 
-Run `fontbakery --help` to get an overview of the usage of the Fontbakery tool.
+To install the command-line tool, you can either:
+
+-   Download the binary for your system from the [latest release](https://github.com/fonttools/fontspector/releases/latest) (in the “Assets” section: `aarch64-apple-darwin` for Apple Silicon Macs, `x86_64-apple-darwin` for Intel Macs, `x86_64-pc-windows-gnu` for Windows, `x86_64-unknown-linux-gnu` for Linux). Unpack the archive and move the `fontspector` file into a directory listed in your `PATH` (for example `/usr/local/bin/` or `~/bin` on macOS and Linux; run `echo $PATH` to see these directories).
+-   Or download and install it with [cargo-binstall](https://github.com/cargo-bins/cargo-binstall) (which can be installed with `brew install cargo-binstall` on macOS):
+
+    ``` code
+    cargo-binstall fontspector
+    ```
+
+To check that everything is working, run `fontspector --list-checks`, which should output the list of available checks, and `fontspector --help` to get an overview of the usage of the tool.
+
+On macOS, a downloaded binary may be blocked the first time because it is not code-signed (“fontspector can't be opened because it is from an unidentified developer”). In this case, open `System Settings` > `Privacy & Security` and click on “Open Anyway” next to the message about `fontspector`. You only need to do this once.
+
+More details, including how to build Fontspector from source, are available in its [installation guide](https://github.com/fonttools/fontspector/blob/main/INSTALLATION.md). The usage of Fontspector for Google Fonts is described in the [QA section](qa.md) of this Guide.
 
 ### Google Fonts Tools (gftools)
 
@@ -160,19 +171,17 @@ Run the command `gftools --help` to overview all the scripts and [their usage](b
 
 ### gftools qa
 
-`gftools qa` is a tool intended for more experienced users that wraps several font QA tools, including Fontbakery, with the `googlefonts` profile. It allows to check fonts against a version already distributed by Google Fonts and create HTML pages that proof the fonts in different environments.
+`gftools qa` is a tool intended for more experienced users that wraps several font QA tools: Fontspector (with the `googlefonts` profile), [Diffenator3](https://github.com/googlefonts/diffenator3) (`diffenator3` and `diff3proof`) and an interpolation checker. It allows to check fonts against a version already distributed by Google Fonts and create HTML pages to proof the fonts in different browsers.
 
-To use `gftools qa`, you will need to generate a [Google Fonts API key](https://developers.google.com/fonts/docs/developer_api#identifying_your_application_to_google). You will then need to create a new text file located on your system at `~/.gf-api-key` (where \~ is your home directory), containing the following:
+`gftools qa` calls these tools from the command line, so the `fontspector`, `diffenator3` and `diff3proof` executables need to be installed and available in your `PATH`:
 
-``` code
-[Credentials]
-key = your-newly-generated-googlefonts-api-key
-```
+-   Install Fontspector as explained [above](#fontspector).
+-   Download `diffenator3` and `diff3proof` from the [latest Diffenator3 release](https://github.com/googlefonts/diffenator3/releases/latest) and place them in your `PATH`, as for Fontspector.
 
-You will need to install `Harfbuzz`, `Cairo`, `FreeType` and `pkg-config`:
+The interpolation checks need `pkg-config` and `Cairo`, which can be installed with Homebrew on macOS:
 
 ``` code
-brew install cairo freetype harfbuzz pkg-config
+brew install cairo pkg-config
 ```
 
 Finally, you can install `gftools qa`:
@@ -181,15 +190,11 @@ Finally, you can install `gftools qa`:
 pip install 'gftools[qa]'
 ```
 
-Run `gftools qa --help` to have an overview of the usage of the tool.
-
-For Google Fonts team members, `gftools qa` uses [Browserstack](https://www.browserstack.com) to generate images of the HTML proof pages on different rendering environments (web browsers and operating systems). *This requires additional credentials; if you are a new team member, you need to ask for credentials by email.* The HTML pages can be opened in different web browsers for external users to proof the fonts.
-
-Run the command `gftools qa --help` to overview all the scripts and [their usage](qa.md).
+Run the command `gftools qa --help` to have an overview of the tool and its options, and see the [QA section](qa.md) for its usage.
 
 ## Recap of your .bash_profile
 
-The `bash profile` (or `z profile` according to your shell script), is loaded before your Command Line Interface (CLI) loads your shell environment and contains all the startup configuration and preferences for your CLI. In macOS, the file is hidden (starts with a `.`) in your home directory. You can display the hidden files (`shift`+`fn`+`cmd`+`.`) and open the file in a code editor. Otherwise, check on the Internet how to find and edit it.
+The `bash profile` (or `z profile` according to your shell script), is loaded before your Command Line Interface (CLI) loads your shell environment and contains all the startup configuration and preferences for your CLI. In macOS, the file is hidden (starts with a `.`) in your home directory. You can display the hidden files (`cmd`+`shift`+`.` in the Finder) and open the file in a code editor. Otherwise, check on the Internet how to find and edit it.
 
 Once you have set up `git` and all the other tools, your bash profile (or z profile according to your shell script) should look like this:
 
@@ -201,20 +206,8 @@ export PATH
 # PATH for homebrew
 eval "$(path/to/homebrew/directory shellenv)"
 
-# GF API KEY
-export GF_API_KEY="your_gf_api_key_here"
-
 # GITHUB TOKEN
 export GH_TOKEN="your_github_token_here"
-
-## Following only applies to team members using gftools qa:
-
-# GF REGRESSION TOKEN
-export GFR_TOKEN="token"
-
-# Browserstack credentials
-export BSTACK_USERNAME="username"
-export BSTACK_ACCESS_KEY="key"
 ```
 
 ------------------------------------------------------------------------
